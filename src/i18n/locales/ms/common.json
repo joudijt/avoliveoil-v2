@@ -1,0 +1,148 @@
+{
+  "seo": {
+    "title": "Arabian Village | Minyak Zaitun Palestin Premium, Perahan Sejuk",
+    "description": "Arabian Village menawarkan minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun. Ketahui ritual harian kami, standard kualiti, serta pilihan runcit dan borong."
+  },
+  "nav": {
+    "home": "Laman Utama",
+    "ourStory": "Kisah Kami",
+    "shop": "Beli-belah",
+    "journey": "Perjalanan",
+    "contact": "Hubungi Kami",
+    "shopNow": "Tempah Botol Anda"
+  },
+  "hero": {
+    "headlineWords": [
+      { "text": "Minyak", "gold": true },
+      { "text": "Zaitun", "gold": true },
+      { "text": "Palestin", "gold": false },
+      { "text": "Tulen", "gold": false }
+    ],
+    "sub": "Minyak zaitun perahan sejuk yang tidak diproses, dihasilkan secara tradisional sejak turun-temurun.",
+    "shopNow": "Tempah Botol Anda",
+    "discoverStory": "Temui Kisah Kami",
+    "scroll": "Tatal"
+  },
+  "scrollStory": {
+    "kicker": "Ritual",
+    "title": "Tradisi Turun-Temurun",
+    "leftCards": [
+      { "order": "01", "title": "PEMAKANAN HARIAN", "text": "Di kaki bukit Palestin, minyak zaitun sentiasa menjadi sebahagian daripada kehidupan seharian." },
+      { "order": "02", "title": "KESIHATAN SEMULA JADI", "text": "Tambahan semula jadi dan mudah kepada rutin kesihatan harian, seperti sejak dahulu." }
+    ],
+    "rightCards": [
+      { "order": "03", "title": "TENAGA & VITALITI", "text": "Satu sudu setiap pagi — ritual mudah yang bertahan sepanjang zaman." },
+      { "order": "04", "title": "TRADISI KELUARGA", "text": "Tabiat harian yang kecil, diwarisi turun-temurun dan masih disayangi hari ini." }
+    ]
+  },
+  "bottleOpening": {
+    "kicker": "Perahan Sejuk Pertama",
+    "title": "Dihasilkan Secara Tradisional",
+    "body": "Setiap botol bermula dengan cara yang sama sejak dahulu — diperah dalam beberapa jam selepas dituai, tanpa dipanaskan, tanpa tergesa-gesa. Kaedah tradisional turun-temurun untuk cara memasak yang lebih sihat."
+  },
+  "ingredients": {
+    "kicker": "Kaya Secara Semula Jadi Dengan",
+    "title": "Minyak Zaitun dalam Bentuk Paling Tulen",
+    "items": [
+      { "title": "Polifenol", "desc": "Makanan semula jadi yang mudah, telah menyokong kesihatan manusia sejak turun-temurun.", "icon": "olive" },
+      { "title": "Lemak Sihat", "desc": "Dihasilkan daripada zaitun pilihan, diperah sejuk untuk mengekalkan kebaikan semula jadinya.", "icon": "snow" },
+      { "title": "Nutrien Semula Jadi", "desc": "Tulen dan tidak diproses, disimpan dengan teliti untuk mengekalkan nutrien dan rasanya.", "icon": "leaf" },
+      { "title": "Kesihatan Jantung", "desc": "Menyokong kesihatan jantung sebagai tambahan semula jadi kepada hidangan harian anda.", "icon": "drop" },
+      { "title": "Tenaga Semula Jadi", "desc": "Memberikan tenaga semula jadi — tambahan mudah untuk gaya hidup sihat.", "icon": "medal" }
+    ]
+  },
+  "productShowcase": {
+    "kicker": "Koleksi Kami",
+    "title": "Setiap Hasil Tuaian, Dibotolkan",
+    "products": {
+      "reserve": { "name": "Pilihan Simpanan", "description": "Tuaian terhad dengan rasa berani dan kukuh, untuk peminat minyak zaitun extra virgin yang pekat." },
+      "organic": { "name": "Dusun Organik", "description": "Organik bertauliah, ditanam secara lestari dan diperah dengan cara tradisional yang tulen." },
+      "classic": { "name": "Arabian Village Klasik", "description": "Perahan sejuk pertama tandatangan kami — minyak zaitun premium untuk dapur harian anda." },
+      "family": { "name": "Ladang Keluarga", "description": "Tiga generasi daripada dusun yang sama, dibotolkan dengan penjagaan yang sama." },
+      "gold": { "name": "Tuaian Emas", "description": "Tuaian awal dengan rasa lada yang berani, digemari peminat minyak zaitun sejati." }
+    }
+  },
+  "purchasePath": {
+    "kicker": "Pengalaman",
+    "title": "Bagaimana Anda Ingin Mengalami Arabian Village?",
+    "individualCard": {
+      "title": "Peribadi",
+      "desc": "Untuk sesiapa yang mahukan minyak zaitun Palestin premium sebagai sebahagian rutin harian yang lebih sihat.",
+      "button": "Teruskan sebagai Individu"
+    },
+    "partnerCard": {
+      "title": "Perniagaan / Borong",
+      "desc": "Untuk peruncit dan perniagaan yang bersedia menawarkan minyak zaitun premium tulen kepada pelanggan mereka.",
+      "button": "Teruskan sebagai Rakan Kongsi"
+    },
+    "individualModal": {
+      "title": "Lengkapkan Ritual Anda",
+      "sub": "Pilih platform kegemaran anda untuk mendapatkan botol anda.",
+      "shopee": "Teruskan ke Shopee",
+      "tiktok": "Teruskan ke TikTok Shop",
+      "footnote": "Semua platform adalah rasmi dan disahkan."
+    },
+    "partnerModal": {
+      "title": "Menjadi Rakan Pengedar",
+      "sub": "Tinggalkan butiran anda dan pasukan kami akan menghubungi anda dengan harga borong dan ketersediaan.",
+      "name": "Nama",
+      "businessName": "Nama Perniagaan",
+      "phone": "Telefon / WhatsApp",
+      "location": "Lokasi",
+      "volume": "Jumlah Bulanan (Pilihan)",
+      "submit": "Mohon Akses"
+    }
+  },
+  "oliveJourney": {
+    "kicker": "Proses Kami",
+    "title": "Dari Pokok ke Botol",
+    "scenes": [
+      { "key": "tree", "title": "Pokok Zaitun", "caption": "berakar di bumi Palestin sejak generasi lalu, subur di bawah suria Mediterranean." },
+      { "key": "growing", "title": "Zaitun Membesar", "caption": "masak perlahan-lahan, mengumpul kekayaan yang membentuk minyak zaitun terbaik." },
+      { "key": "harvest", "title": "Zaitun Dituai dengan Tangan", "caption": "dipetik pada waktu yang tepat oleh petani berpengalaman." },
+      { "key": "extraction", "title": "Perahan Sejuk Pertama", "caption": "perahan pertama, dihargai kerana kekayaan dan kualiti semula jadinya." },
+      { "key": "filtering", "title": "Tulen dan Tidak Diproses", "caption": "disimpan dengan teliti untuk mengekalkan nutrien dan rasa semula jadinya." },
+      { "key": "testing", "title": "Ujian Kualiti", "caption": "diuji keasidan dan ketulenan untuk menjamin kualiti extra virgin sebenar." },
+      { "key": "bottling", "title": "Pembotolan", "caption": "dibotolkan satu demi satu pada kesegaran optimum." },
+      { "key": "final", "title": "Hasilnya", "caption": "minyak zaitun dalam bentuk paling tulen." }
+    ]
+  },
+  "statistics": {
+    "items": [
+      { "value": 100, "suffix": "%", "label": "Semula Jadi" },
+      { "value": 5000, "suffix": "+", "label": "Pelanggan Gembira" },
+      { "value": 20, "suffix": "+", "label": "Tahun Pengalaman" }
+    ],
+    "premiumQuality": "Kualiti Premium"
+  },
+  "testimonials": {
+    "kicker": "Digemari di Seluruh Dunia",
+    "title": "Apa Kata Pelanggan",
+    "items": [
+      { "quote": "Minyak zaitun extra virgin paling kaya yang pernah saya rasa — kualiti perahan pertama yang sebenar.", "name": "Layla H.", "place": "Amman" },
+      { "quote": "Tiba dengan pembungkusan cantik, dan rasanya di dapur lebih sedap daripada rupanya.", "name": "Omar K.", "place": "Kuala Lumpur" },
+      { "quote": "Kini satu-satunya minyak zaitun di meja keluarga kami — tiada tandingan.", "name": "Sara M.", "place": "Dubai" }
+    ]
+  },
+  "faq": {
+    "kicker": "Soalan",
+    "title": "Soalan Lazim",
+    "items": [
+      { "q": "Apakah yang membezakan minyak zaitun Arabian Village?", "a": "Ia adalah minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun, dari pokok ke botol." },
+      { "q": "Adakah minyak ini diperah sejuk?", "a": "Ya. Minyak zaitun Arabian Village diperah sejuk dan tidak diproses untuk mengekalkan kualiti dan rasa semula jadinya." },
+      { "q": "Bagaimana saya menggunakannya setiap hari?", "a": "Arabian Village menganjurkan ritual harian yang mudah selama 60 saat — mengambil minyak zaitun sebagai sebahagian daripada rutin kesihatan semula jadi." },
+      { "q": "Dari manakah zaitun ini berasal?", "a": "Zaitun kami diperoleh daripada Palestin dan diperah menggunakan kaedah tradisional turun-temurun." },
+      { "q": "Adakah anda menawarkan pilihan borong atau perniagaan?", "a": "Ya. Arabian Village menawarkan pilihan ritual peribadi untuk individu, serta pilihan perniagaan/borong untuk peruncit dan rakan kongsi." },
+      { "q": "Di mana saya boleh membeli minyak zaitun Arabian Village?", "a": "Minyak zaitun Arabian Village tersedia terus melalui laman ini, dengan pilihan runcit dan borong, serta melalui rakan runcit seperti Berkat Madinah Store di Malaysia." }
+    ]
+  },
+  "footer": {
+    "tagline": "Memelihara warisan minyak zaitun Palestin melalui pertanian lestari dan kaedah perahan sejuk tradisional.",
+    "navigate": "Navigasi",
+    "stayInTouch": "Kekal Berhubung",
+    "newsletterText": "Berita tuaian, resipi dan akses awal, sekali-sekala.",
+    "emailPlaceholder": "E-mel anda",
+    "join": "Sertai",
+    "rights": "Hak cipta terpelihara."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "seo": {
+    "title": "Arabian Village | Premium Palestinian Olive Oil, Cold-Pressed",
+    "description": "Arabian Village offers pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed through generations. Discover the daily ritual, quality standards, and retail and wholesale options."
+  },
+  "nav": {
+    "home": "Home",
+    "ourStory": "Our Story",
+    "shop": "Shop",
+    "journey": "Journey",
+    "contact": "Contact",
+    "shopNow": "Secure Your Bottle"
+  },
+  "hero": {
+    "headlineWords": [
+      { "text": "Pure", "gold": false },
+      { "text": "Palestinian", "gold": false },
+      { "text": "Olive", "gold": true },
+      { "text": "Oil", "gold": true }
+    ],
+    "sub": "Cold-pressed, unprocessed olive oil made the traditional way for generations.",
+    "shopNow": "Secure Your Bottle",
+    "discoverStory": "Discover Our Story",
+    "scroll": "Scroll"
+  },
+  "scrollStory": {
+    "kicker": "The Ritual",
+    "title": "A Tradition Passed Through Generations",
+    "leftCards": [
+      { "order": "01", "title": "DAILY NOURISHMENT", "text": "In the hills of Palestine, olive oil has always been part of daily life." },
+      { "order": "02", "title": "NATURAL WELLNESS", "text": "A simple, natural addition to a daily wellness routine, the way it's always been." }
+    ],
+    "rightCards": [
+      { "order": "03", "title": "ENERGY & VITALITY", "text": "One spoon in the morning — a simple ritual that has stood the test of time." },
+      { "order": "04", "title": "FAMILY TRADITION", "text": "Small daily habits, passed down through generations and still cherished today." }
+    ]
+  },
+  "bottleOpening": {
+    "kicker": "First Cold Press",
+    "title": "Crafted the Traditional Way",
+    "body": "Every bottle begins with a process that has been passed down through generations. A careful approach that values quality, patience, and respect for the olive."
+  },
+  "ingredients": {
+    "kicker": "Naturally Rich In",
+    "title": "Olive Oil in Its Purest Form",
+    "items": [
+      { "title": "Polyphenols", "desc": "Simple, natural foods that have supported people for generations.", "icon": "olive" },
+      { "title": "Healthy Fats", "desc": "Made from carefully selected olives, cold-pressed to preserve their natural goodness.", "icon": "snow" },
+      { "title": "Natural Nutrients", "desc": "Pure and unprocessed, carefully preserved to maintain its natural nutrients and flavor.", "icon": "leaf" },
+      { "title": "Heart Health", "desc": "Supports heart health as a simple, natural addition to your daily meals.", "icon": "drop" },
+      { "title": "Natural Energy", "desc": "Provides natural energy — a simple addition to a healthy lifestyle.", "icon": "medal" }
+    ]
+  },
+  "productShowcase": {
+    "kicker": "Our Collection",
+    "title": "Every Harvest, Bottled",
+    "products": {
+      "reserve": { "name": "Reserve Selection", "description": "A limited harvest, bold and full-bodied for lovers of robust extra virgin olive oil." },
+      "organic": { "name": "Organic Grove", "description": "Certified organic and sustainably farmed, pressed the pure, traditional way." },
+      "classic": { "name": "Arabian Village Classic", "description": "Our signature first cold press — the everyday premium olive oil for your kitchen." },
+      "family": { "name": "Family Estate", "description": "Three generations of the same Mediterranean groves, bottled with the same care." },
+      "gold": { "name": "Gold Harvest", "description": "An early harvest with a bold, peppery finish loved by connoisseurs." }
+    }
+  },
+  "purchasePath": {
+    "kicker": "Experience",
+    "title": "How Would You Like to Experience Arabian Village?",
+    "individualCard": {
+      "title": "Personal",
+      "desc": "For individuals who want premium Palestinian olive oil as part of their daily routine.",
+      "button": "Continue as Individual"
+    },
+    "partnerCard": {
+      "title": "Business / Wholesale",
+      "desc": "For businesses looking to offer authentic premium olive oil to their customers.",
+      "button": "Continue as Partner"
+    },
+    "individualModal": {
+      "title": "Complete Your Ritual",
+      "sub": "Select your preferred platform to receive your bottle.",
+      "shopee": "Continue to Shopee",
+      "tiktok": "Continue to TikTok Shop",
+      "footnote": "All platforms are official and verified."
+    },
+    "partnerModal": {
+      "title": "Become a Distribution Partner",
+      "sub": "Leave your details and the team will reach out with wholesale pricing and availability.",
+      "name": "Name",
+      "businessName": "Business Name",
+      "phone": "Phone / WhatsApp",
+      "location": "Location",
+      "volume": "Monthly Volume (Optional)",
+      "submit": "Request Access"
+    }
+  },
+  "oliveJourney": {
+    "kicker": "Our Process",
+    "title": "From Tree to Bottle",
+    "scenes": [
+      { "key": "tree", "title": "The Olive Tree", "caption": "rooted in Palestinian soil for generations, thriving under the Mediterranean sun." },
+      { "key": "growing", "title": "Olives Growing", "caption": "ripening slowly, gathering the richness that makes great olive oil." },
+      { "key": "harvest", "title": "Hand-Harvested Olives", "caption": "picked at the right time by experienced farmers." },
+      { "key": "extraction", "title": "First Cold Press", "caption": "the first extraction, valued for its natural richness and quality." },
+      { "key": "filtering", "title": "Pure and Unprocessed", "caption": "carefully preserved to maintain its natural nutrients and flavor." },
+      { "key": "testing", "title": "Quality Testing", "caption": "tested for acidity and purity to guarantee true extra virgin quality." },
+      { "key": "bottling", "title": "Bottling", "caption": "sealed bottle by bottle at the peak of freshness." },
+      { "key": "final", "title": "The Result", "caption": "olive oil in its most natural form." }
+    ]
+  },
+  "statistics": {
+    "items": [
+      { "value": 100, "suffix": "%", "label": "Natural" },
+      { "value": 5000, "suffix": "+", "label": "Happy Customers" },
+      { "value": 20, "suffix": "+", "label": "Years Experience" }
+    ],
+    "premiumQuality": "Premium Quality"
+  },
+  "testimonials": {
+    "kicker": "Loved Worldwide",
+    "title": "What People Say",
+    "items": [
+      { "quote": "Hands down the richest, most authentic extra virgin olive oil I've tried.", "name": "Layla H.", "place": "Amman" },
+      { "quote": "Beautifully packaged and even better in the kitchen — real cold-pressed flavor.", "name": "Omar K.", "place": "Kuala Lumpur" },
+      { "quote": "Our family's everyday olive oil now — nothing else compares.", "name": "Sara M.", "place": "Dubai" }
+    ]
+  },
+  "faq": {
+    "kicker": "Questions",
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "What makes Arabian Village olive oil different?", "a": "It is pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed down through generations, from tree to bottle." },
+      { "q": "Is the olive oil cold-pressed?", "a": "Yes. Arabian Village olive oil is cold-pressed and unprocessed to preserve its natural quality and flavour." },
+      { "q": "How should I use it daily?", "a": "Arabian Village promotes a simple 60-second daily ritual of taking the olive oil as part of a natural daily wellness routine." },
+      { "q": "Where do the olives come from?", "a": "The olives are sourced from Palestine and pressed using traditional methods carried through generations." },
+      { "q": "Do you offer wholesale or business options?", "a": "Yes. Arabian Village offers both a personal ritual option for individuals and a business/wholesale option for retailers and partners." },
+      { "q": "Where can I buy Arabian Village olive oil?", "a": "Arabian Village olive oil is available directly through this site, with retail and wholesale options, and through retail partners such as Berkat Madinah Store in Malaysia." }
+    ]
+  },
+  "footer": {
+    "tagline": "Preserving the heritage of Palestinian olive oil through sustainable farming and traditional cold-pressing methods.",
+    "navigate": "Navigate",
+    "stayInTouch": "Stay in touch",
+    "newsletterText": "Harvest news, recipes and early access, occasionally.",
+    "emailPlaceholder": "Your email",
+    "join": "Join",
+    "rights": "All rights reserved."
+  }
+}
