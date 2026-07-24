@@ -1,5 +1,4 @@
-// TODO: replace with the real production domain once this site is deployed.
-export const SITE_URL = 'https://arabianvillage.com';
+export const SITE_URL = 'https://avoliveoil.com';
 export const SITE_NAME = 'Arabian Village';
 export const OG_IMAGE_PATH = '/og-image.jpg';
 

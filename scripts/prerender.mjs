@@ -21,13 +21,25 @@ async function main() {
   const server = await preview({ preview: { port: PORT, strictPort: true } });
   const base = `http://localhost:${PORT}`;
 
-  const browser = await puppeteer.launch({ headless: true });
-  const page = await browser.newPage();
+  // headless: 'shell' (chrome-headless-shell) on purpose. With the default
+  // full headless Chrome 150, browser.newPage() hangs and dies on the 30 s
+  // protocol timeout on Windows. Reusing the about:blank tab the browser
+  // already opened avoids newPage() entirely.
+  const browser = await puppeteer.launch({
+    headless: 'shell',
+    args: ['--no-sandbox', '--disable-dev-shm-usage'],
+  });
+  const openPages = await browser.pages();
+  const page = openPages[0] ?? (await browser.newPage());
 
   try {
     for (const route of ROUTES) {
-      await page.goto(`${base}${route}`, { waitUntil: 'networkidle0', timeout: 30000 });
-      await page.waitForSelector('body[data-app-ready="true"]', { timeout: 20000 });
+      // Don't wait for networkidle0 — the page ships ~25 MB of imagery and the
+      // hero/journey sections keep requests in flight, so the network never
+      // goes quiet for 500 ms. data-app-ready is the real signal that the app
+      // finished rendering (the loading timeline runs ~5 s); wait on that.
+      await page.goto(`${base}${route}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
+      await page.waitForSelector('body[data-app-ready="true"]', { timeout: 60000 });
       const html = await page.content();
 
       const outDir = join(distDir, route);
