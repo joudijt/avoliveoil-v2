@@ -1,15 +1,47 @@
 {
   "seo": {
-    "title": "Arabian Village | Minyak Zaitun Palestin Premium, Perahan Sejuk",
-    "description": "Arabian Village menawarkan minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun. Ketahui ritual harian kami, standard kualiti, serta pilihan runcit dan borong."
+    "home": {
+      "title": "Arabian Village | Minyak Zaitun Palestin Premium, Perahan Sejuk",
+      "description": "Arabian Village menawarkan minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun. Ketahui ritual harian kami, standard kualiti, serta pilihan runcit dan borong."
+    },
+    "products": {
+      "title": "Produk Kami | Minyak Zaitun Palestin Organik 500ml — Arabian Village",
+      "description": "Kenali Minyak Zaitun Palestin Organik Arabian Village: perahan sejuk pertama, tuaian baharu, keasidan bawah 0.028%. Lihat rasa, standard kualiti, dan rasa akan datang."
+    },
+    "shop": {
+      "title": "Di Mana Untuk Beli | Shopee, TikTok Shop & Berkat Madinah Store — Arabian Village",
+      "description": "Tempah minyak zaitun Palestin Arabian Village dari platform kegemaran anda: Berkat Madinah Store, Shopee, atau TikTok Shop. Penghantaran pantas dan dipercayai di seluruh Malaysia."
+    },
+    "whyUs": {
+      "title": "Kenapa Kami | Arabian Village & Berkat Madinah Store",
+      "description": "Ketahui apa yang membezakan minyak zaitun Arabian Village, dan mengapa kami bangga diedarkan di Malaysia oleh Berkat Madinah Store — dipercayai sejak 2010 dengan lebih 500,000 pelanggan."
+    },
+    "contact": {
+      "title": "Hubungi Kami | Arabian Village",
+      "description": "Hubungi Arabian Village untuk pertanyaan produk, harga borong, atau peluang perkongsian."
+    },
+    "blog": {
+      "title": "Blog | Arabian Village",
+      "description": "Resipi, panduan minyak zaitun, dan kisah kesihatan daripada Arabian Village — akan datang."
+    }
   },
   "nav": {
     "home": "Laman Utama",
-    "ourStory": "Kisah Kami",
+    "products": "Produk",
     "shop": "Beli-belah",
-    "journey": "Perjalanan",
+    "whyUs": "Kenapa Kami?",
     "contact": "Hubungi Kami",
-    "shopNow": "Tempah Botol Anda"
+    "blog": "Blog",
+    "shopNow": "Tempah Botol Anda",
+    "menu": "Menu",
+    "close": "Tutup menu"
+  },
+  "breadcrumb": {
+    "products": "Produk",
+    "shop": "Beli-belah",
+    "whyUs": "Kenapa Kami?",
+    "contact": "Hubungi Kami",
+    "blog": "Blog"
   },
   "hero": {
     "headlineWords": [
@@ -56,7 +88,7 @@
     "title": "Setiap Hasil Tuaian, Dibotolkan",
     "products": {
       "reserve": { "name": "Pilihan Simpanan", "description": "Tuaian terhad dengan rasa berani dan kukuh, untuk peminat minyak zaitun extra virgin yang pekat." },
-      "organic": { "name": "Dusun Organik", "description": "Organik bertauliah, ditanam secara lestari dan diperah dengan cara tradisional yang tulen." },
+      "organic": { "name": "Dusun Organik", "description": "Organik, ditanam secara lestari dan diperah dengan cara tradisional yang tulen." },
       "classic": { "name": "Arabian Village Klasik", "description": "Perahan sejuk pertama tandatangan kami — minyak zaitun premium untuk dapur harian anda." },
       "family": { "name": "Ladang Keluarga", "description": "Tiga generasi daripada dusun yang sama, dibotolkan dengan penjagaan yang sama." },
       "gold": { "name": "Tuaian Emas", "description": "Tuaian awal dengan rasa lada yang berani, digemari peminat minyak zaitun sejati." }
@@ -76,11 +108,11 @@
       "button": "Teruskan sebagai Rakan Kongsi"
     },
     "individualModal": {
-      "title": "Lengkapkan Ritual Anda",
+      "title": "Tempah Botol Anda",
       "sub": "Pilih platform kegemaran anda untuk mendapatkan botol anda.",
+      "madinah": "Teruskan ke Berkat Madinah Store",
       "shopee": "Teruskan ke Shopee",
-      "tiktok": "Teruskan ke TikTok Shop",
-      "footnote": "Semua platform adalah rasmi dan disahkan."
+      "tiktok": "Teruskan ke TikTok Shop"
     },
     "partnerModal": {
       "title": "Menjadi Rakan Pengedar",
@@ -133,8 +165,324 @@
       { "q": "Bagaimana saya menggunakannya setiap hari?", "a": "Arabian Village menganjurkan ritual harian yang mudah selama 60 saat — mengambil minyak zaitun sebagai sebahagian daripada rutin kesihatan semula jadi." },
       { "q": "Dari manakah zaitun ini berasal?", "a": "Zaitun kami diperoleh daripada Palestin dan diperah menggunakan kaedah tradisional turun-temurun." },
       { "q": "Adakah anda menawarkan pilihan borong atau perniagaan?", "a": "Ya. Arabian Village menawarkan pilihan ritual peribadi untuk individu, serta pilihan perniagaan/borong untuk peruncit dan rakan kongsi." },
-      { "q": "Di mana saya boleh membeli minyak zaitun Arabian Village?", "a": "Minyak zaitun Arabian Village tersedia terus melalui laman ini, dengan pilihan runcit dan borong, serta melalui rakan runcit seperti Berkat Madinah Store di Malaysia." }
+      { "q": "Di mana saya boleh membeli minyak zaitun Arabian Village?", "a": "Minyak zaitun Arabian Village tersedia terus melalui laman ini, dengan pilihan runcit dan borong, serta melalui pengedar rasmi kami, Berkat Madinah Store, di Malaysia." }
     ]
+  },
+  "productsPage": {
+    "kicker": "Produk Kami",
+    "title": "Minyak Zaitun Palestin Organik",
+    "intro": "Satu tuaian sebenar, dihasilkan dengan betul. Setiap botol Arabian Village diperah sejuk dalam beberapa jam selepas dipetik, daripada dusun organik di Palestin — tanpa haba, tanpa bahan kimia, tanpa jalan pintas.",
+    "product": {
+      "name": "Minyak Zaitun Palestin Organik — 500ml",
+      "tagline": "Perahan Sejuk Pertama · Tuaian Baharu · Extra Virgin",
+      "description": "Botol tandatangan kami: 100% zaitun Palestin, dituai dengan tangan dan diperah sejuk dalam beberapa jam untuk mengekalkan aromanya, polifenolnya, dan rasa lada-rumput semula jadinya. Organik dan halal.",
+      "highlights": [
+        {
+          "label": "Keasidan",
+          "value": "Bawah 0.028%"
+        },
+        {
+          "label": "Perahan",
+          "value": "Perahan Sejuk Pertama"
+        },
+        {
+          "label": "Tuaian",
+          "value": "Tuaian Baharu"
+        },
+        {
+          "label": "Asal",
+          "value": "100% Palestin"
+        },
+        {
+          "label": "Jenis",
+          "value": "Extra Virgin"
+        },
+        {
+          "label": "Saiz",
+          "value": "500ml"
+        }
+      ]
+    },
+    "benefitsKicker": "Kenapa Botol Ini",
+    "comingSoon": {
+      "kicker": "Akan Datang",
+      "title": "Lebih Banyak Rasa Akan Menyusul",
+      "text": "Ini baru permulaan koleksi kami. Kami sedang menyediakan tuaian dan rasa baharu — nantikan pengumuman tidak lama lagi, atau ikuti media sosial kami.",
+      "items": [
+        {
+          "title": "Rasa Baharu",
+          "desc": "Pengumuman tidak lama lagi."
+        },
+        {
+          "title": "Tuaian Simpanan Terhad",
+          "desc": "Pengumuman tidak lama lagi."
+        },
+        {
+          "title": "Set Hadiah & Bundle",
+          "desc": "Pengumuman tidak lama lagi."
+        }
+      ]
+    },
+    "links": {
+      "shopTitle": "Bersedia Untuk Menempah?",
+      "shopText": "Dapatkan minyak zaitun Arabian Village di Shopee, TikTok Shop, atau melalui pengedar rasmi kami di Malaysia.",
+      "shopCta": "Lihat Tempat Membeli",
+      "whyUsCta": "Kenapa Pilih Arabian Village"
+    },
+    "faq": {
+      "kicker": "Soalan Produk",
+      "title": "Soalan Lazim",
+      "items": [
+        {
+          "q": "Bagaimana saya menyimpan minyak zaitun Arabian Village?",
+          "a": "Simpan di tempat sejuk dan gelap, jauh daripada cahaya matahari dan haba secara langsung. Selepas dibuka, gunakan dalam beberapa bulan untuk rasa terbaik."
+        },
+        {
+          "q": "Berapa lama jangka hayatnya?",
+          "a": "Belum dibuka, minyak ini kekal segar sehingga 18 bulan. Tarikh tuaian dicetak pada setiap label."
+        },
+        {
+          "q": "Adakah minyak zaitun Arabian Village halal?",
+          "a": "Ya. Sebagai produk berasaskan tumbuhan, bebas alkohol dan tiada bahan berasaskan haiwan, ia adalah halal."
+        },
+        {
+          "q": "Apakah maksud \"keasidan bawah 0.028%\"?",
+          "a": "Ia adalah ukuran ketulenan yang diuji makmal — semakin rendah keasidan, semakin segar dan berkualiti tinggi minyak zaitun extra virgin tersebut. Minyak kami jauh di bawah paras minimum extra virgin."
+        },
+        {
+          "q": "Boleh saya gunakan untuk memasak, atau hanya untuk perasa?",
+          "a": "Kedua-duanya. Minyak zaitun extra virgin perahan sejuk pertama seperti kami adalah serba boleh — sesuai untuk hidangan akhir, sos salad, celupan, dan memasak pada suhu sederhana."
+        },
+        {
+          "q": "Adakah rasa atau saiz tambahan akan tersedia?",
+          "a": "Ya — kami sedang membangunkan tuaian dan format baharu. Halaman produk ini akan dikemas kini sebaik sahaja bersedia."
+        }
+      ]
+    }
+  },
+  "shopPage": {
+    "kicker": "Pilih Kedai Anda",
+    "title": "Tempah Dari Platform Kegemaran Anda",
+    "subtitle": "Minyak zaitun Arabian Village tersedia melalui pengedar rasmi kami di Malaysia dan platform yang telah anda percayai.",
+    "cards": {
+      "madinah": {
+        "title": "Berkat Madinah Store",
+        "desc": "Rakan pengedaran rasmi kami di Malaysia sejak awal — kedai halal yang dipercayai, melayani lebih 500,000 pelanggan, dengan keseluruhan rangkaian Arabian Village.",
+        "button": "Beli di Berkat Madinah Store"
+      },
+      "tiktok": {
+        "title": "TikTok Shop",
+        "desc": "Beli-belah rangkaian penuh Arabian Village terus di TikTok Shop, dengan penghantaran pantas ke seluruh Malaysia.",
+        "button": "Beli-belah di TikTok"
+      },
+      "shopee": {
+        "title": "Shopee",
+        "desc": "Lebih suka Shopee? Dapatkan minyak zaitun Arabian Village yang sama di kedai rasmi Shopee kami.",
+        "button": "Beli-belah di Shopee"
+      }
+    },
+    "faq": {
+      "kicker": "Soalan Tempahan",
+      "title": "Soalan Lazim",
+      "items": [
+        {
+          "q": "Platform mana yang perlu saya guna untuk menempah?",
+          "a": "Ketiga-tiga platform adalah rasmi dan disahkan. Pilih platform yang anda sudah guna dan percaya — harga dan produknya sama."
+        },
+        {
+          "q": "Adakah anda menghantar ke seluruh Malaysia?",
+          "a": "Ya, Berkat Madinah Store dan penyenaraian platform kami menghantar ke seluruh Malaysia."
+        },
+        {
+          "q": "Adakah anda menghantar ke luar negara?",
+          "a": "Arabian Village menghantar ke seluruh dunia melalui laman utama kami; masa dan kadar penghantaran berbeza mengikut destinasi dan dipaparkan semasa checkout."
+        },
+        {
+          "q": "Apakah kaedah pembayaran yang diterima?",
+          "a": "Setiap platform (Shopee, TikTok Shop, Berkat Madinah Store) menyokong kaedah pembayaran tempatan standard, termasuk kad dan e-dompet."
+        },
+        {
+          "q": "Berapa lama masa penghantaran?",
+          "a": "Masa penghantaran bergantung kepada platform dan lokasi anda — biasanya beberapa hari bekerja dalam Malaysia."
+        },
+        {
+          "q": "Bolehkah saya membeli secara pukal untuk perniagaan saya?",
+          "a": "Ya. Perniagaan boleh memohon harga borong terus daripada Arabian Village — lihat halaman Hubungi Kami untuk pertanyaan borong."
+        }
+      ]
+    }
+  },
+  "whyUsPage": {
+    "kicker": "Kenapa Kami",
+    "title": "Kenapa Pilih Arabian Village",
+    "intro": "Minyak zaitun Palestin tulen, dijual melalui pengedar rasmi yang telah dipercayai rakyat Malaysia. Inilah yang menyokong setiap botol.",
+    "reasons": [
+      {
+        "title": "Asal Palestin Yang Boleh Disahkan",
+        "desc": "Setiap botol datang daripada dusun Palestin, sesetengahnya berusia berabad-abad, dituai dengan tangan oleh keluarga yang sama sejak turun-temurun."
+      },
+      {
+        "title": "Perahan Sejuk Pertama Sebenar",
+        "desc": "Diperah secara mekanikal dalam beberapa jam selepas tuaian, tanpa haba atau bahan kimia, untuk melindungi aroma dan nutrien."
+      },
+      {
+        "title": "Organik & Halal Semula Jadi",
+        "desc": "Ditanam dan diproses menggunakan kaedah pertanian organik, dan halal secara semula jadi — berasaskan tumbuhan tanpa bahan daripada haiwan."
+      },
+      {
+        "title": "Tradisi Yang Masih Hidup",
+        "desc": "Kaedah perahan sejuk dan dusun keluarga yang sama, diwarisi turun-temurun, bukan jalan pintas kilang."
+      }
+    ],
+    "partner": {
+      "kicker": "Pengedar Rasmi Kami",
+      "title": "Berkat Madinah Store",
+      "desc": "Di Malaysia, minyak zaitun Arabian Village diedarkan secara rasmi oleh Berkat Madinah Store — \"The Origin of Arabic Food\". Sejak 2010, Berkat Madinah telah membina namanya atas produk makanan Arab halal yang tulen daripada sumber dipercayai, merentasi borong, runcit, serta restoran dan kafenya sendiri.",
+      "stats": [
+        {
+          "value": "2010",
+          "label": "Ditubuhkan"
+        },
+        {
+          "value": "500,000+",
+          "label": "Pelanggan Dilayan"
+        },
+        {
+          "value": "5★",
+          "label": "Penilaian Pelanggan"
+        },
+        {
+          "value": "6,000+",
+          "label": "Produk, 12+ Kategori"
+        }
+      ],
+      "text": "Selain minyak zaitun, Berkat Madinah Store turut membawa kurma, rempah, kacang dan biji, buah-buahan kering, teh dan kopi, dan banyak lagi — diimport daripada 15+ negara, dengan jenama agensi eksklusif serta jenama persendiriannya sendiri. Arabian Village berbangga menjadi sebahagian daripada kategori Minyak Zaitun mereka.",
+      "cta": "Lawati Berkat Madinah Store"
+    },
+    "flavors": {
+      "kicker": "Minyak Zaitun Kami",
+      "title": "Tuaian Hari Ini, Rasa Masa Depan",
+      "desc": "Buat masa ini, kami menumpukan segalanya kepada satu botol yang sempurna: Minyak Zaitun Palestin Organik, 500ml, perahan sejuk pertama. Rasa dan tuaian baharu sedang dalam persediaan — lihat kisah produk penuh di halaman Produk kami.",
+      "cta": "Terokai Produk Kami"
+    },
+    "faq": {
+      "kicker": "Kepercayaan & Sumber",
+      "title": "Soalan Lazim",
+      "items": [
+        {
+          "q": "Kenapa beli Arabian Village berbanding jenama minyak zaitun lain?",
+          "a": "Asal Palestin yang boleh disahkan, perahan sejuk pertama sebenar dalam beberapa jam selepas tuaian, dan kualiti organik — dijual melalui pengedar yang telah dipercayai rakyat Malaysia."
+        },
+        {
+          "q": "Siapakah Berkat Madinah Store?",
+          "a": "Berkat Madinah Store adalah syarikat makanan Arab halal Malaysia yang ditubuhkan pada 2010, melayani lebih 500,000 pelanggan dengan reputasi 5 bintang, dan rakan pengedaran rasmi kami untuk minyak zaitun Palestin di Malaysia."
+        },
+        {
+          "q": "Adakah minyak zaitun Arabian Village organik?",
+          "a": "Ya, zaitun kami ditanam dan diproses menggunakan kaedah pertanian organik."
+        },
+        {
+          "q": "Adakah minyak zaitun Arabian Village halal?",
+          "a": "Ya. Ia adalah produk berasaskan tumbuhan tanpa bahan daripada haiwan, halal secara semula jadi."
+        },
+        {
+          "q": "Di mana saya boleh menjumpai produk Arabian Village secara fizikal?",
+          "a": "Melalui cawangan runcit Berkat Madinah Store di seluruh Malaysia, serta dalam talian melalui Berkat Madinah Store, Shopee, dan TikTok Shop."
+        },
+        {
+          "q": "Adakah Arabian Village akan menawarkan lebih banyak produk pada masa depan?",
+          "a": "Ya — rasa dan tuaian baharu sedang dibangunkan. Lawati halaman Produk kami untuk maklumat terkini."
+        }
+      ]
+    }
+  },
+  "contactPage": {
+    "kicker": "Hubungi Kami",
+    "title": "Hubungi Arabian Village",
+    "intro": "Ada soalan tentang minyak zaitun kami, harga borong, atau idea perkongsian? Kami ingin mendengar daripada anda.",
+    "info": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+60 11-1111 9912"
+      },
+      "email": {
+        "label": "E-mel",
+        "value": "cs@madinah.com.my"
+      },
+      "address": {
+        "label": "Alamat",
+        "value": "Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman, 68000 Ampang Jaya, Selangor"
+      }
+    },
+    "form": {
+      "title": "Hantar Mesej Kepada Kami",
+      "name": "Nama",
+      "email": "E-mel",
+      "subject": "Subjek",
+      "message": "Mesej",
+      "submit": "Hantar Mesej"
+    },
+    "faq": {
+      "kicker": "Sebelum Anda Menghubungi",
+      "title": "Soalan Lazim",
+      "items": [
+        {
+          "q": "Berapa cepat saya akan mendapat respons?",
+          "a": "Kami cuba membalas semua pertanyaan secepat mungkin pada hari bekerja."
+        },
+        {
+          "q": "Saya berminat dengan borong atau pengedaran — siapa yang perlu saya hubungi?",
+          "a": "Gunakan borang hubungan di halaman ini, atau pilihan Perniagaan/Borong di laman utama kami, dengan nama perniagaan dan jumlah dijangka anda."
+        },
+        {
+          "q": "Bolehkah saya bertanya tentang pesanan yang saya buat di Shopee atau TikTok Shop?",
+          "a": "Untuk pertanyaan khusus pesanan, sila hubungi platform tersebut (Shopee/TikTok Shop) atau Berkat Madinah Store secara terus, kerana mereka mengendalikan penghantaran."
+        },
+        {
+          "q": "Adakah anda menerima pertanyaan media atau akhbar?",
+          "a": "Ya, sila gunakan borang hubungan dan pilih subjek yang sesuai untuk pertanyaan anda."
+        },
+        {
+          "q": "Bolehkah saya melawat Arabian Village secara fizikal?",
+          "a": "Minyak zaitun Arabian Village tersedia secara fizikal melalui cawangan runcit Berkat Madinah Store di Malaysia."
+        },
+        {
+          "q": "Adakah anda menerima maklum balas produk?",
+          "a": "Sudah tentu — kami ingin mendengar daripada anda. Gunakan borang hubungan untuk berkongsi pengalaman anda."
+        }
+      ]
+    }
+  },
+  "blogPage": {
+    "kicker": "Jurnal",
+    "title": "Blog Arabian Village",
+    "intro": "Resipi, panduan minyak zaitun, dan kisah kesihatan daripada dusun kami ke dapur anda — kami sedang menyediakan artikel pertama kami.",
+    "tags": [
+      "Resipi",
+      "Panduan Minyak Zaitun",
+      "Kesihatan & Kesejahteraan"
+    ],
+    "comingSoon": {
+      "badge": "Akan Datang",
+      "title": "Artikel Pertama Kami Sedang Disediakan",
+      "text": "Kami sedang menulis kisah pertama kami tentang memasak dengan minyak zaitun Arabian Village, memahami kualiti perahan sejuk pertama, dan ritual kesihatan harian yang mudah. Nantikan tidak lama lagi."
+    }
+  },
+  "whatsapp": {
+    "label": "Berbual dengan kami di WhatsApp",
+    "formIntro": "Salam Arabian Village, saya ingin berhubung:",
+    "wholesaleIntro": "Salam Arabian Village, saya berminat menjadi rakan pengedaran:",
+    "newsletterIntro": "Salam Arabian Village, sila tambah saya ke senarai berita:",
+    "fields": {
+      "name": "Nama",
+      "email": "E-mel",
+      "subject": "Subjek",
+      "message": "Mesej",
+      "businessName": "Nama Perniagaan",
+      "phone": "Telefon / WhatsApp",
+      "location": "Lokasi",
+      "volume": "Jumlah Bulanan"
+    }
   },
   "footer": {
     "tagline": "Memelihara warisan minyak zaitun Palestin melalui pertanian lestari dan kaedah perahan sejuk tradisional.",

@@ -76,9 +76,13 @@ export function BottleOpening() {
           style={{ background: 'radial-gradient(80% 60% at 50% 20%, rgba(184,138,42,0.14) 0%, rgba(46,58,36,0) 70%)' }}
         />
 
-        <div className="relative z-10 grid h-full w-full content-center grid-cols-1 items-center gap-6 px-6 sm:gap-8 lg:grid-cols-2 lg:px-16">
+        <div className="relative z-10 grid h-full w-full content-center grid-cols-1 items-center gap-6 px-6 sm:gap-8 md:px-16 lg:grid-cols-2">
           <div className="relative flex h-full items-center justify-center">
-            <div ref={bottleRef} className="relative" style={{ width: 'min(28vh, 220px)', aspectRatio: '343 / 1683' }}>
+            <div
+              ref={bottleRef}
+              className="relative w-[110px] sm:w-[min(28vh,220px)]"
+              style={{ aspectRatio: '343 / 1683' }}
+            >
               <img
                 src={bottleImg}
                 alt="Arabian Village Palestinian Olive Oil bottle, open and pouring"
@@ -88,7 +92,7 @@ export function BottleOpening() {
 
               <div
                 ref={streamRef}
-                className="absolute left-1/2 top-[1%] z-0 w-[7%] -translate-x-1/2 rounded-b-full"
+                className="absolute left-1/2 top-[1%] z-0 hidden w-[7%] -translate-x-1/2 rounded-b-full sm:block"
                 style={{
                   height: '340%',
                   background: 'linear-gradient(180deg, #e8c15a 0%, #b88a2a 55%, #8a6a1f 100%)',
@@ -102,7 +106,7 @@ export function BottleOpening() {
                   ref={(el) => {
                     dropRefs.current[i] = el;
                   }}
-                  className="absolute z-0 rounded-full"
+                  className="absolute z-0 hidden rounded-full sm:block"
                   style={{
                     top: '30%',
                     left: `calc(50% + ${d.x}px)`,
@@ -115,7 +119,7 @@ export function BottleOpening() {
 
               <div
                 ref={poolRef}
-                className="absolute left-1/2 z-0 -translate-x-1/2 rounded-full"
+                className="absolute left-1/2 z-0 hidden -translate-x-1/2 rounded-full sm:block"
                 style={{
                   top: '132%',
                   width: '260%',

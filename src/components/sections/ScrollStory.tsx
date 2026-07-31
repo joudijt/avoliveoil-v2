@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import cinematicBottleImg from '../../assets/images/olive-oil-cinematic-flow-nobg.png';
+import storyPortraitImg from '../../assets/images/woman-holding-bottle-nobg.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,8 +51,8 @@ function Card({
  * everything stays put and scrolls away normally.
  *
  * Below lg (phone/tablet) the 4 cards render as one evenly-spaced column
- * in order 01→04 with a simple fade/slide-up reveal, with the cinematic
- * bottle image sitting between card 02 and 03. At lg+ the cards split
+ * in order 01→04 with a simple fade/slide-up reveal, with the product
+ * portrait image sitting between card 02 and 03. At lg+ the cards split
  * left/right around that same image via explicit grid placement on the
  * same DOM order rather than a separate markup branch, so there's only
  * one set of card refs to animate.
@@ -125,8 +125,8 @@ export function ScrollStory() {
           ))}
 
           <img
-            src={cinematicBottleImg}
-            alt="Arabian Village olive oil pouring"
+            src={storyPortraitImg}
+            alt="Woman holding a bottle of Arabian Village organic Palestinian olive oil"
             className="h-[45vh] w-auto object-contain lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:h-[65vh]"
             style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
           />

@@ -1,15 +1,47 @@
 {
   "seo": {
-    "title": "Arabian Village | Premium Palestinian Olive Oil, Cold-Pressed",
-    "description": "Arabian Village offers pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed through generations. Discover the daily ritual, quality standards, and retail and wholesale options."
+    "home": {
+      "title": "Arabian Village | Premium Palestinian Olive Oil, Cold-Pressed",
+      "description": "Arabian Village offers pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed through generations. Discover the daily ritual, quality standards, and retail and wholesale options."
+    },
+    "products": {
+      "title": "Our Products | Organic Palestinian Olive Oil 500ml — Arabian Village",
+      "description": "Meet Arabian Village Organic Palestinian Olive Oil: first cold press, new harvest, acidity below 0.028%. See flavor notes, quality standards, and the flavors coming next."
+    },
+    "shop": {
+      "title": "Where to Buy | Shopee, TikTok Shop & Berkat Madinah Store — Arabian Village",
+      "description": "Order Arabian Village Palestinian olive oil from your favourite platform: Berkat Madinah Store, Shopee, or TikTok Shop. Fast, trusted delivery across Malaysia."
+    },
+    "whyUs": {
+      "title": "Why Choose Us | Arabian Village & Berkat Madinah Store",
+      "description": "Why Arabian Village olive oil is different, and why we're proud to be distributed in Malaysia by Berkat Madinah Store — trusted since 2010 with 500,000+ customers served."
+    },
+    "contact": {
+      "title": "Contact Us | Arabian Village",
+      "description": "Get in touch with Arabian Village for product questions, wholesale enquiries, or partnership opportunities."
+    },
+    "blog": {
+      "title": "Blog | Arabian Village",
+      "description": "Recipes, olive oil guides, and wellness stories from Arabian Village — coming soon."
+    }
   },
   "nav": {
     "home": "Home",
-    "ourStory": "Our Story",
+    "products": "Products",
     "shop": "Shop",
-    "journey": "Journey",
+    "whyUs": "Why Us?",
     "contact": "Contact",
-    "shopNow": "Secure Your Bottle"
+    "blog": "Blog",
+    "shopNow": "Secure Your Bottle",
+    "menu": "Menu",
+    "close": "Close menu"
+  },
+  "breadcrumb": {
+    "products": "Products",
+    "shop": "Shop",
+    "blog": "Blog",
+    "whyUs": "Why Us?",
+    "contact": "Contact"
   },
   "hero": {
     "headlineWords": [
@@ -56,7 +88,7 @@
     "title": "Every Harvest, Bottled",
     "products": {
       "reserve": { "name": "Reserve Selection", "description": "A limited harvest, bold and full-bodied for lovers of robust extra virgin olive oil." },
-      "organic": { "name": "Organic Grove", "description": "Certified organic and sustainably farmed, pressed the pure, traditional way." },
+      "organic": { "name": "Organic Grove", "description": "Organic and sustainably farmed, pressed the pure, traditional way." },
       "classic": { "name": "Arabian Village Classic", "description": "Our signature first cold press — the everyday premium olive oil for your kitchen." },
       "family": { "name": "Family Estate", "description": "Three generations of the same Mediterranean groves, bottled with the same care." },
       "gold": { "name": "Gold Harvest", "description": "An early harvest with a bold, peppery finish loved by connoisseurs." }
@@ -76,11 +108,11 @@
       "button": "Continue as Partner"
     },
     "individualModal": {
-      "title": "Complete Your Ritual",
+      "title": "Reserve Your Bottle",
       "sub": "Select your preferred platform to receive your bottle.",
+      "madinah": "Continue to Berkat Madinah Store",
       "shopee": "Continue to Shopee",
-      "tiktok": "Continue to TikTok Shop",
-      "footnote": "All platforms are official and verified."
+      "tiktok": "Continue to TikTok Shop"
     },
     "partnerModal": {
       "title": "Become a Distribution Partner",
@@ -133,8 +165,324 @@
       { "q": "How should I use it daily?", "a": "Arabian Village promotes a simple 60-second daily ritual of taking the olive oil as part of a natural daily wellness routine." },
       { "q": "Where do the olives come from?", "a": "The olives are sourced from Palestine and pressed using traditional methods carried through generations." },
       { "q": "Do you offer wholesale or business options?", "a": "Yes. Arabian Village offers both a personal ritual option for individuals and a business/wholesale option for retailers and partners." },
-      { "q": "Where can I buy Arabian Village olive oil?", "a": "Arabian Village olive oil is available directly through this site, with retail and wholesale options, and through retail partners such as Berkat Madinah Store in Malaysia." }
+      { "q": "Where can I buy Arabian Village olive oil?", "a": "Arabian Village olive oil is available directly through this site, with retail and wholesale options, and through our official distributor, Berkat Madinah Store, in Malaysia." }
     ]
+  },
+  "productsPage": {
+    "kicker": "Our Product",
+    "title": "Organic Palestinian Olive Oil",
+    "intro": "One real harvest, done properly. Every bottle of Arabian Village olive oil is first cold pressed within hours of picking, from organic groves in Palestine — no heat, no chemicals, no shortcuts.",
+    "product": {
+      "name": "Organic Palestinian Olive Oil — 500ml",
+      "tagline": "First Cold Press · New Harvest · Extra Virgin",
+      "description": "Our signature bottle: 100% Palestinian olives, hand-harvested and cold-pressed within hours to lock in aroma, polyphenols, and a naturally peppery, grassy finish. Organic and halal.",
+      "highlights": [
+        {
+          "label": "Acidity",
+          "value": "Below 0.028%"
+        },
+        {
+          "label": "Press",
+          "value": "First Cold Press"
+        },
+        {
+          "label": "Harvest",
+          "value": "New Harvest"
+        },
+        {
+          "label": "Origin",
+          "value": "100% Palestine"
+        },
+        {
+          "label": "Type",
+          "value": "Extra Virgin"
+        },
+        {
+          "label": "Size",
+          "value": "500ml"
+        }
+      ]
+    },
+    "benefitsKicker": "Why This Bottle",
+    "comingSoon": {
+      "kicker": "Coming Soon",
+      "title": "More Flavors on the Way",
+      "text": "This is just the beginning of our collection. We're preparing new harvests and flavor profiles — check back soon, or follow our socials for the announcement.",
+      "items": [
+        {
+          "title": "New Flavor Profile",
+          "desc": "Announcement coming soon."
+        },
+        {
+          "title": "Limited Reserve Harvest",
+          "desc": "Announcement coming soon."
+        },
+        {
+          "title": "Gift & Bundle Sets",
+          "desc": "Announcement coming soon."
+        }
+      ]
+    },
+    "links": {
+      "shopTitle": "Ready to Order?",
+      "shopText": "Find Arabian Village olive oil on Shopee, TikTok Shop, or through our official Malaysia distributor.",
+      "shopCta": "See Where to Buy",
+      "whyUsCta": "Why Choose Arabian Village"
+    },
+    "faq": {
+      "kicker": "Product Questions",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How should I store Arabian Village olive oil?",
+          "a": "Keep it in a cool, dark place away from direct sunlight and heat. Once opened, use within a few months for the best flavor."
+        },
+        {
+          "q": "What is the shelf life?",
+          "a": "Unopened, the oil stays fresh for up to 18 months. The harvest date is printed on every label."
+        },
+        {
+          "q": "Is Arabian Village olive oil halal?",
+          "a": "Yes. As a plant-based, alcohol-free product with no animal-derived ingredients, it is halal."
+        },
+        {
+          "q": "What does \"acidity below 0.028%\" mean?",
+          "a": "It's a lab-tested purity measure — the lower the acidity, the fresher and higher-grade the extra virgin olive oil. Ours is well below the extra virgin threshold."
+        },
+        {
+          "q": "Can I use it for cooking, or only for dressing?",
+          "a": "Both. First cold pressed extra virgin olive oil like ours is versatile — great for finishing dishes, salad dressings, dipping, and cooking at moderate temperatures."
+        },
+        {
+          "q": "Will there be more flavors or sizes available?",
+          "a": "Yes — we're developing new harvests and formats. This product page will be updated as soon as they're ready."
+        }
+      ]
+    }
+  },
+  "shopPage": {
+    "kicker": "Choose Your Store",
+    "title": "Order From Your Favourite Platform",
+    "subtitle": "Arabian Village olive oil is available through our official Malaysia distributor and on the marketplaces you already trust.",
+    "cards": {
+      "madinah": {
+        "title": "Berkat Madinah Store",
+        "desc": "Our official distribution partner in Malaysia since day one — a trusted halal grocer serving over 500,000 customers, with the full Arabian Village range.",
+        "button": "Shop at Berkat Madinah Store"
+      },
+      "tiktok": {
+        "title": "TikTok Shop",
+        "desc": "Shop Arabian Village directly on TikTok Shop, with fast nationwide delivery across Malaysia.",
+        "button": "Shop on TikTok"
+      },
+      "shopee": {
+        "title": "Shopee",
+        "desc": "Prefer Shopee? Find the same Arabian Village olive oil on our Shopee storefront.",
+        "button": "Shop on Shopee"
+      }
+    },
+    "faq": {
+      "kicker": "Ordering Questions",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Which platform should I order from?",
+          "a": "All three are official and verified. Choose whichever platform you already use and trust — pricing and the product are the same."
+        },
+        {
+          "q": "Do you deliver across Malaysia?",
+          "a": "Yes, Berkat Madinah Store and our marketplace listings deliver nationwide across Malaysia."
+        },
+        {
+          "q": "Do you ship internationally?",
+          "a": "Arabian Village ships worldwide from our main site; delivery times and rates vary by destination and are shown at checkout."
+        },
+        {
+          "q": "What payment methods are accepted?",
+          "a": "Each platform (Shopee, TikTok Shop, Berkat Madinah Store) supports its own standard local payment methods, including cards and e-wallets."
+        },
+        {
+          "q": "How long does delivery take?",
+          "a": "Delivery times depend on the platform and your location — typically a few business days within Malaysia."
+        },
+        {
+          "q": "Can I buy in bulk or for my business?",
+          "a": "Yes. Businesses can apply for wholesale pricing directly with Arabian Village — see our Contact page for wholesale enquiries."
+        }
+      ]
+    }
+  },
+  "whyUsPage": {
+    "kicker": "Why Us",
+    "title": "Why Choose Arabian Village",
+    "intro": "Authentic Palestinian olive oil, sold through an official distributor Malaysians already trust. Here's what stands behind every bottle.",
+    "reasons": [
+      {
+        "title": "Traceable Palestinian Origin",
+        "desc": "Every bottle comes from Palestinian groves, some centuries old, hand-harvested by the same families for generations."
+      },
+      {
+        "title": "True First Cold Press",
+        "desc": "Pressed mechanically within hours of harvest, without heat or chemicals, to protect aroma and nutrients."
+      },
+      {
+        "title": "Organic & Halal by Nature",
+        "desc": "Grown and processed using organic farming methods, and halal by nature — plant-based with no animal-derived ingredients."
+      },
+      {
+        "title": "A Living Tradition",
+        "desc": "The same cold-press methods and family groves passed down through generations, not a factory shortcut."
+      }
+    ],
+    "partner": {
+      "kicker": "Our Official Distributor",
+      "title": "Berkat Madinah Store",
+      "desc": "In Malaysia, Arabian Village olive oil is officially distributed by Berkat Madinah Store — \"The Origin of Arabic Food.\" Since 2010, Berkat Madinah has built its name on authentic, halal Arab food products from trusted sources, across wholesale, retail, and its own restaurants and cafés.",
+      "stats": [
+        {
+          "value": "2010",
+          "label": "Established"
+        },
+        {
+          "value": "500,000+",
+          "label": "Customers Served"
+        },
+        {
+          "value": "5★",
+          "label": "Customer Rating"
+        },
+        {
+          "value": "6,000+",
+          "label": "Products, 12+ Categories"
+        }
+      ],
+      "text": "Beyond olive oil, Berkat Madinah Store carries dates, spices, nuts and seeds, dried fruits, teas and coffees, and more — imported from 15+ countries, with both exclusive agency brands and its own private labels. Arabian Village is proud to be part of their Olive Oil category.",
+      "cta": "Visit Berkat Madinah Store"
+    },
+    "flavors": {
+      "kicker": "Our Olive Oil",
+      "title": "Today's Harvest, Tomorrow's Flavors",
+      "desc": "Right now, we pour everything into one bottle done right: Organic Palestinian Olive Oil, 500ml, first cold pressed. New flavors and harvests are already in the works — see the full product story on our Products page.",
+      "cta": "Explore Our Product"
+    },
+    "faq": {
+      "kicker": "Trust & Sourcing",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Why buy Arabian Village instead of another olive oil brand?",
+          "a": "Traceable Palestinian origin, true first cold press within hours of harvest, and organic quality — sold through a distributor Malaysians already know and trust."
+        },
+        {
+          "q": "Who is Berkat Madinah Store?",
+          "a": "Berkat Madinah Store is a Malaysian halal Arab food company established in 2010, serving over 500,000 customers with a 5-star reputation, and our official distribution partner for Palestinian olive oil in Malaysia."
+        },
+        {
+          "q": "Is Arabian Village olive oil organic?",
+          "a": "Yes, our olives are grown and processed using organic farming methods."
+        },
+        {
+          "q": "Is Arabian Village olive oil halal?",
+          "a": "Yes. It's a plant-based product with no animal-derived ingredients, halal by nature."
+        },
+        {
+          "q": "Where can I find Arabian Village products in person?",
+          "a": "Through Berkat Madinah Store's retail branches across Malaysia, as well as online via Berkat Madinah Store, Shopee, and TikTok Shop."
+        },
+        {
+          "q": "Will Arabian Village offer more products in the future?",
+          "a": "Yes — new flavors and harvests are in development. Visit our Products page for the latest."
+        }
+      ]
+    }
+  },
+  "contactPage": {
+    "kicker": "Get In Touch",
+    "title": "Contact Arabian Village",
+    "intro": "Questions about our olive oil, wholesale pricing, or a partnership idea? We'd like to hear from you.",
+    "info": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+60 11-1111 9912"
+      },
+      "email": {
+        "label": "Email",
+        "value": "cs@madinah.com.my"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman, 68000 Ampang Jaya, Selangor"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "faq": {
+      "kicker": "Before You Reach Out",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How quickly will I get a response?",
+          "a": "We aim to respond to all enquiries as quickly as possible during business days."
+        },
+        {
+          "q": "I'm interested in wholesale or distribution — who do I contact?",
+          "a": "Use the contact form on this page, or the Business/Wholesale option on our homepage, with your business name and expected volume."
+        },
+        {
+          "q": "Can I ask about an order I placed on Shopee or TikTok Shop?",
+          "a": "For order-specific questions, please contact the platform (Shopee/TikTok Shop) or Berkat Madinah Store directly, since they handle fulfillment."
+        },
+        {
+          "q": "Do you offer media or press enquiries?",
+          "a": "Yes, please use the contact form and select an appropriate subject for your enquiry."
+        },
+        {
+          "q": "Can I visit Arabian Village in person?",
+          "a": "Arabian Village olive oil is available in person through Berkat Madinah Store's retail branches in Malaysia."
+        },
+        {
+          "q": "Do you take product feedback?",
+          "a": "Absolutely — we'd love to hear from you. Use the contact form to share your experience."
+        }
+      ]
+    }
+  },
+  "blogPage": {
+    "kicker": "Journal",
+    "title": "The Arabian Village Blog",
+    "intro": "Recipes, olive oil guides, and wellness stories from our groves to your kitchen — we're preparing our first articles now.",
+    "tags": [
+      "Recipes",
+      "Olive Oil Guide",
+      "Wellness & Health"
+    ],
+    "comingSoon": {
+      "badge": "Coming Soon",
+      "title": "Our First Articles Are on the Way",
+      "text": "We're writing our first stories on cooking with Arabian Village olive oil, understanding first cold press quality, and simple daily wellness rituals. Check back soon."
+    }
+  },
+  "whatsapp": {
+    "label": "Chat with us on WhatsApp",
+    "formIntro": "Hello Arabian Village, I'd like to get in touch:",
+    "wholesaleIntro": "Hello Arabian Village, I'm interested in becoming a distribution partner:",
+    "newsletterIntro": "Hello Arabian Village, please add me to your newsletter:",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "businessName": "Business Name",
+      "phone": "Phone / WhatsApp",
+      "location": "Location",
+      "volume": "Monthly Volume"
+    }
   },
   "footer": {
     "tagline": "Preserving the heritage of Palestinian olive oil through sustainable farming and traditional cold-pressing methods.",

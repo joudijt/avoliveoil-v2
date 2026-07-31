@@ -164,9 +164,16 @@ export function Hero() {
             >
               {t('hero.shopNow')}
             </a>
-            <button className="rounded-full border border-olive-dark/25 px-9 py-3.5 text-sm font-medium tracking-wide text-olive-dark transition-all duration-300 hover:border-gold hover:text-gold">
+            <a
+              href="#journey"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToHash('#journey');
+              }}
+              className="rounded-full border border-olive-dark/25 px-9 py-3.5 text-center text-sm font-medium tracking-wide text-olive-dark transition-all duration-300 hover:border-gold hover:text-gold"
+            >
               {t('hero.discoverStory')}
-            </button>
+            </a>
           </div>
         </div>
 

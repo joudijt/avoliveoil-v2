@@ -7,17 +7,26 @@ interface FaqItem {
   a: string;
 }
 
-export function FAQ() {
+interface FAQProps {
+  /** Defaults to the homepage's faq.* keys when omitted. */
+  kicker?: string;
+  title?: string;
+  items?: FaqItem[];
+}
+
+export function FAQ({ kicker, title, items }: FAQProps) {
   const { t } = useTranslation();
-  const faqs = t('faq.items', { returnObjects: true }) as FaqItem[];
+  const faqs = items ?? (t('faq.items', { returnObjects: true }) as FaqItem[]);
+  const resolvedKicker = kicker ?? t('faq.kicker');
+  const resolvedTitle = title ?? t('faq.title');
   const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section className="relative w-full bg-bg px-6 py-28 md:px-16 md:py-32">
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('faq.kicker')}</p>
-          <h2 className="mx-auto mt-3 text-4xl text-olive-dark md:text-5xl">{t('faq.title')}</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-gold">{resolvedKicker}</p>
+          <h2 className="mx-auto mt-3 text-4xl text-olive-dark md:text-5xl">{resolvedTitle}</h2>
         </div>
 
         <div className="mt-16 divide-y divide-olive-dark/10 border-t border-b border-olive-dark/10">

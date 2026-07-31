@@ -7,7 +7,7 @@ import growingImg from '../../assets/images/journey-02-growing.png';
 import harvestImg from '../../assets/images/journey-03-harvest.png';
 import extractionImg from '../../assets/images/journey-04-extraction.png';
 import filteringImg from '../../assets/images/journey-05-filtering.png';
-import testingImg from '../../assets/images/journey-06-testing.png';
+import testingImg from '../../assets/images/journey-06-testing.webp';
 import bottlingImg from '../../assets/images/journey-07-bottling.png';
 import finalImg from '../../assets/images/journey-08-final.png';
 

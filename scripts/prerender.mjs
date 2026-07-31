@@ -14,7 +14,9 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
-const ROUTES = ['/en', '/ar', '/ms'];
+const LANGS = ['en', 'ar', 'ms'];
+const PAGES = ['', 'products', 'shop', 'why-us', 'contact', 'blog'];
+const ROUTES = LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`)));
 const PORT = 4173;
 
 async function main() {

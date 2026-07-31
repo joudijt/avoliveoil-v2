@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 import { Loading } from '../components/sections/Loading';
 import { Hero } from '../components/sections/Hero';
 import { ScrollStory } from '../components/sections/ScrollStory';
@@ -15,8 +17,10 @@ import { Footer } from '../components/ui/Footer';
 import { useLenis } from '../hooks/useLenis';
 
 export function HomePage() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   useLenis(!loading);
+  const faqs = t('faq.items', { returnObjects: true }) as { q: string; a: string }[];
 
   // Marks the DOM as fully rendered (past the loading screen) so the
   // build-time prerender script knows when to snapshot — see
@@ -33,8 +37,9 @@ export function HomePage() {
 
   return (
     <>
+      <SEO page="home" faqs={faqs} includeProductSchema />
       {loading && <Loading onDone={() => setLoading(false)} />}
-      <Navbar />
+      {!loading && <Navbar />}
       <main>
         <Hero />
         <ScrollStory />

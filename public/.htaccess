@@ -22,6 +22,9 @@ DirectorySlash Off
   # Language roots -> prerendered snapshot, no redirect, slash optional
   RewriteRule ^(en|ar|ms)/?$ /$1/index.html [L]
 
+  # Prerendered sub-pages -> their own snapshot, same slash-optional rule
+  RewriteRule ^(en|ar|ms)/(products|shop|why-us|contact|blog)/?$ /$1/$2/index.html [L]
+
   # Real files and real directories win (keeps /en /ar /ms prerendered HTML)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
