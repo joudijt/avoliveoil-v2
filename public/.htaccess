@@ -25,6 +25,13 @@ DirectorySlash Off
   # Prerendered sub-pages -> their own snapshot, same slash-optional rule
   RewriteRule ^(en|ar|ms)/(products|shop|why-us|contact|blog)/?$ /$1/$2/index.html [L]
 
+  # Blog articles: /<lang>/blog/<slug> is also a prerendered directory. Slugs are
+  # lowercase ASCII with hyphens in every language, so one pattern covers all
+  # three. The -f guard means an unknown slug falls through to the SPA shell
+  # (which redirects to the blog index) instead of returning a hard 404.
+  RewriteCond %{DOCUMENT_ROOT}/$1/blog/$2/index.html -f
+  RewriteRule ^(en|ar|ms)/blog/([a-z0-9-]+)/?$ /$1/blog/$2/index.html [L]
+
   # Real files and real directories win (keeps /en /ar /ms prerendered HTML)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

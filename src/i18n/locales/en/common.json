@@ -21,8 +21,8 @@
       "description": "Get in touch with Arabian Village for product questions, wholesale enquiries, or partnership opportunities."
     },
     "blog": {
-      "title": "Blog | Arabian Village",
-      "description": "Recipes, olive oil guides, and wellness stories from Arabian Village — coming soon."
+      "title": "Olive Oil Guides for Malaysia | Arabian Village Blog",
+      "description": "Practical olive oil guides for Malaysian kitchens: why olive oil is growing here, the health benefits of extra virgin olive oil, and how to choose an authentic bottle."
     }
   },
   "nav": {
@@ -456,16 +456,27 @@
   "blogPage": {
     "kicker": "Journal",
     "title": "The Arabian Village Blog",
-    "intro": "Recipes, olive oil guides, and wellness stories from our groves to your kitchen — we're preparing our first articles now.",
+    "intro": "Olive oil guides, buying advice, and wellness stories from our groves to your kitchen — written for Malaysian homes.",
     "tags": [
-      "Recipes",
       "Olive Oil Guide",
+      "Buying Guide",
       "Wellness & Health"
     ],
-    "comingSoon": {
-      "badge": "Coming Soon",
-      "title": "Our First Articles Are on the Way",
-      "text": "We're writing our first stories on cooking with Arabian Village olive oil, understanding first cold press quality, and simple daily wellness rituals. Check back soon."
+    "readMore": "Read the guide"
+  },
+  "articlePage": {
+    "quickAnswer": "The short answer",
+    "contents": "In this article",
+    "readingTime": "{{count}} min read",
+    "tags": "Tags",
+    "faqKicker": "Questions",
+    "faqTitle": "Frequently Asked Questions",
+    "related": "Keep reading",
+    "backToBlog": "Back to all articles",
+    "cta": {
+      "title": "Taste the difference for yourself",
+      "text": "Arabian Village is first cold pressed extra virgin olive oil from centuries-old Palestinian groves, distributed in Malaysia by {{store}}.",
+      "button": "Where to buy"
     }
   },
   "whatsapp": {

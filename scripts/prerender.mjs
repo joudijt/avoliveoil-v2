@@ -8,7 +8,7 @@
 // shell.
 import { preview } from 'vite';
 import puppeteer from 'puppeteer';
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -16,7 +16,21 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
 const LANGS = ['en', 'ar', 'ms'];
 const PAGES = ['', 'products', 'shop', 'why-us', 'contact', 'blog'];
-const ROUTES = LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`)));
+
+// Blog article slugs differ per language, so they come from the shared table
+// rather than a cartesian product. src/content/articles/index.ts asserts the
+// app's own slugs match this file, so a stale entry fails loudly at runtime
+// instead of silently prerendering a route the SPA cannot serve.
+const ARTICLE_SLUGS = JSON.parse(
+  readFileSync(join(__dirname, '..', 'src/content/articles/slugs.json'), 'utf-8')
+);
+
+const ROUTES = [
+  ...LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`))),
+  ...LANGS.flatMap((lang) =>
+    Object.values(ARTICLE_SLUGS).map((perLang) => `/${lang}/blog/${perLang[lang]}`)
+  ),
+];
 const PORT = 4173;
 
 async function main() {

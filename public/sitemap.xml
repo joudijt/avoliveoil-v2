@@ -28,7 +28,6 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://avoliveoil.com/en/products</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/products" />
@@ -56,7 +55,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://avoliveoil.com/en/shop</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/shop" />
@@ -84,7 +82,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://avoliveoil.com/en/why-us</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/why-us" />
@@ -112,7 +109,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://avoliveoil.com/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/contact" />
@@ -140,15 +136,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://avoliveoil.com/en/blog</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog" />
     <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog" />
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://avoliveoil.com/ar/blog</loc>
@@ -156,8 +151,8 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog" />
     <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog" />
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://avoliveoil.com/ms/blog</loc>
@@ -165,7 +160,97 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog" />
     <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/ar/blog/why-olive-oil-is-becoming-popular-in-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/ms/blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/ar/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/ms/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/ar/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avoliveoil.com/ms/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://avoliveoil.com/ar/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://avoliveoil.com/ms/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia" />
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -6,6 +6,7 @@ import { ShopPage } from './pages/ShopPage';
 import { WhyUsPage } from './pages/WhyUsPage';
 import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
+import { ArticlePage } from './pages/ArticlePage';
 import { WhatsAppButton } from './components/ui/WhatsAppButton';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="why-us" element={<WhyUsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="blog" element={<BlogPage />} />
+          <Route path="blog/:slug" element={<ArticlePage />} />
         </Route>
         <Route path="*" element={<Navigate to="/en" replace />} />
       </Routes>

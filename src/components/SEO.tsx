@@ -1,7 +1,16 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { SITE_URL, SITE_NAME, OG_IMAGE_PATH, OG_LOCALES } from '../config/site';
+import {
+  SITE_URL,
+  SITE_NAME,
+  OG_IMAGE_PATH,
+  OG_LOCALES,
+  INSTAGRAM_URL,
+  FACEBOOK_URL,
+  SHOPEE_URL,
+  TIKTOK_SHOP_URL,
+} from '../config/site';
 
 interface FaqItem {
   q: string;
@@ -14,7 +23,7 @@ export interface BreadcrumbItem {
   path: string;
 }
 
-export type Page = 'home' | 'products' | 'shop' | 'why-us' | 'contact' | 'blog';
+export type Page = 'home' | 'products' | 'shop' | 'why-us' | 'contact' | 'blog' | 'article';
 
 const ALL_LANGS = ['en', 'ar', 'ms'] as const;
 
@@ -25,6 +34,8 @@ const PAGE_SLUG: Record<Page, string> = {
   'why-us': 'why-us',
   contact: 'contact',
   blog: 'blog',
+  // Articles have a different slug per language, so they always pass `pathByLang`.
+  article: 'blog',
 };
 
 const SEO_KEY: Record<Page, string> = {
@@ -34,7 +45,21 @@ const SEO_KEY: Record<Page, string> = {
   'why-us': 'whyUs',
   contact: 'contact',
   blog: 'blog',
+  article: 'blog',
 };
+
+/** Everything an article page adds on top of the standard per-page metadata. */
+export interface ArticleMeta {
+  headline: string;
+  description: string;
+  /** Site-root-relative, e.g. '/og/blog-something.jpg'. */
+  imagePath: string;
+  datePublished: string;
+  dateModified: string;
+  section: string;
+  tags: string[];
+  keywords: string[];
+}
 
 interface SEOProps {
   page: Page;
@@ -44,6 +69,16 @@ interface SEOProps {
   faqs?: FaqItem[];
   /** Emits Product JSON-LD (home + products page). */
   includeProductSchema?: boolean;
+  /**
+   * Per-language path under /:lang, for pages whose URL segment is translated.
+   * Drives canonical, hreflang and og:url. Falls back to PAGE_SLUG when omitted.
+   */
+  pathByLang?: Record<string, string>;
+  /** Replaces the i18n `seo.<page>.title` / `.description` lookup. */
+  titleOverride?: string;
+  descriptionOverride?: string;
+  /** Emits BlogPosting JSON-LD and switches og:type to `article`. */
+  article?: ArticleMeta;
 }
 
 /**
@@ -52,26 +87,39 @@ interface SEOProps {
  * i18n copy, canonical path, and structured data — every page/language
  * combination gets its own title/description/schema.
  */
-export function SEO({ page, breadcrumbs, faqs, includeProductSchema }: SEOProps) {
+export function SEO({
+  page,
+  breadcrumbs,
+  faqs,
+  includeProductSchema,
+  pathByLang,
+  titleOverride,
+  descriptionOverride,
+  article,
+}: SEOProps) {
   const { t } = useTranslation();
   const { lang = 'en' } = useParams<{ lang: string }>();
 
   const seoKey = SEO_KEY[page];
-  const title = t(`seo.${seoKey}.title`);
-  const description = t(`seo.${seoKey}.description`);
+  const title = titleOverride ?? t(`seo.${seoKey}.title`);
+  const description = descriptionOverride ?? t(`seo.${seoKey}.description`);
 
-  const slug = PAGE_SLUG[page];
-  const pathFor = (l: string) => (slug ? `${SITE_URL}/${l}/${slug}` : `${SITE_URL}/${l}`);
+  const pathFor = (l: string) => {
+    const slug = pathByLang?.[l] ?? PAGE_SLUG[page];
+    return slug ? `${SITE_URL}/${l}/${slug}` : `${SITE_URL}/${l}`;
+  };
   const canonical = pathFor(lang);
-  const ogImage = `${SITE_URL}${OG_IMAGE_PATH}`;
+  const ogImage = `${SITE_URL}${article?.imagePath ?? OG_IMAGE_PATH}`;
 
   const organizationSchema = {
     '@context': 'https://schema.org',
+    '@id': `${SITE_URL}/#organization`,
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.svg`,
-    sameAs: [],
+    // Real, owned profiles only — sameAs is an identity claim, not a link list.
+    sameAs: [INSTAGRAM_URL, FACEBOOK_URL, SHOPEE_URL, TIKTOK_SHOP_URL],
   };
 
   const websiteSchema = {
@@ -106,6 +154,35 @@ export function SEO({ page, breadcrumbs, faqs, includeProductSchema }: SEOProps)
         }
       : null;
 
+  /**
+   * BlogPosting rather than a bare Article: these are dated editorial posts on a
+   * brand blog. The author is the organisation, not an invented byline — a
+   * fabricated Person here would be a straightforward EEAT lie.
+   */
+  const articleSchema = article
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+        headline: article.headline,
+        description: article.description,
+        image: [ogImage],
+        datePublished: article.datePublished,
+        dateModified: article.dateModified,
+        inLanguage: lang,
+        articleSection: article.section,
+        keywords: article.keywords.join(', '),
+        isAccessibleForFree: true,
+        author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+        publisher: {
+          '@type': 'Organization',
+          '@id': `${SITE_URL}/#organization`,
+          name: SITE_NAME,
+          logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
+        },
+      }
+    : null;
+
   const breadcrumbSchema =
     breadcrumbs && breadcrumbs.length > 0
       ? {
@@ -135,7 +212,7 @@ export function SEO({ page, breadcrumbs, faqs, includeProductSchema }: SEOProps)
       ))}
       <link rel="alternate" hrefLang="x-default" href={pathFor('en')} />
 
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={article ? 'article' : 'website'} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -146,14 +223,24 @@ export function SEO({ page, breadcrumbs, faqs, includeProductSchema }: SEOProps)
         <meta key={l} property="og:locale:alternate" content={OG_LOCALES[l]} />
       ))}
 
+      {article && <meta property="article:published_time" content={article.datePublished} />}
+      {article && <meta property="article:modified_time" content={article.dateModified} />}
+      {article && <meta property="article:section" content={article.section} />}
+      {article?.tags.map((tag) => <meta key={tag} property="article:tag" content={tag} />)}
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={article?.headline ?? title} />
+
+      {article && <meta name="keywords" content={article.keywords.join(', ')} />}
+      {article && <meta name="author" content={SITE_NAME} />}
 
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
       {productSchema && <script type="application/ld+json">{JSON.stringify(productSchema)}</script>}
+      {articleSchema && <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>}
       {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
     </Helmet>

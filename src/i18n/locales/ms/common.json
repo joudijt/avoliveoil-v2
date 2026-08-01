@@ -21,8 +21,8 @@
       "description": "Hubungi Arabian Village untuk pertanyaan produk, harga borong, atau peluang perkongsian."
     },
     "blog": {
-      "title": "Blog | Arabian Village",
-      "description": "Resipi, panduan minyak zaitun, dan kisah kesihatan daripada Arabian Village — akan datang."
+      "title": "Panduan Minyak Zaitun untuk Malaysia | Blog Arabian Village",
+      "description": "Panduan minyak zaitun yang praktikal untuk dapur Malaysia: kenapa ia semakin popular di sini, manfaat minyak zaitun dara, dan cara memilih botol yang asli."
     }
   },
   "nav": {
@@ -456,16 +456,27 @@
   "blogPage": {
     "kicker": "Jurnal",
     "title": "Blog Arabian Village",
-    "intro": "Resipi, panduan minyak zaitun, dan kisah kesihatan daripada dusun kami ke dapur anda — kami sedang menyediakan artikel pertama kami.",
+    "intro": "Panduan minyak zaitun, nasihat pembelian, dan kisah kesihatan daripada dusun kami ke dapur anda — ditulis untuk rumah di Malaysia.",
     "tags": [
-      "Resipi",
       "Panduan Minyak Zaitun",
+      "Panduan Pembeli",
       "Kesihatan & Kesejahteraan"
     ],
-    "comingSoon": {
-      "badge": "Akan Datang",
-      "title": "Artikel Pertama Kami Sedang Disediakan",
-      "text": "Kami sedang menulis kisah pertama kami tentang memasak dengan minyak zaitun Arabian Village, memahami kualiti perahan sejuk pertama, dan ritual kesihatan harian yang mudah. Nantikan tidak lama lagi."
+    "readMore": "Baca panduan"
+  },
+  "articlePage": {
+    "quickAnswer": "Jawapan ringkas",
+    "contents": "Dalam artikel ini",
+    "readingTime": "Bacaan {{count}} minit",
+    "tags": "Tag",
+    "faqKicker": "Soalan",
+    "faqTitle": "Soalan Lazim",
+    "related": "Baca seterusnya",
+    "backToBlog": "Kembali ke semua artikel",
+    "cta": {
+      "title": "Rasa sendiri bezanya",
+      "text": "Arabian Village ialah minyak zaitun dara perahan sejuk pertama dari kebun Palestin berusia ratusan tahun, diedarkan di Malaysia oleh {{store}}.",
+      "button": "Di mana untuk membeli"
     }
   },
   "whatsapp": {
