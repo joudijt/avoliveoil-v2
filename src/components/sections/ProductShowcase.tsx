@@ -43,21 +43,29 @@ export function ProductShowcase() {
         <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('productShowcase.kicker')}</p>
         <h2 className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">{t('productShowcase.title')}</h2>
 
-        <div className="mt-20 flex flex-wrap items-end justify-center gap-4 md:gap-2">
+        {/* Mobile: fixed 2-up grid, top-aligned so the equal-height bottles line up regardless of
+            how many lines each description wraps to. Desktop keeps the bottom-aligned flex row,
+            where the taller centre bottle needs its base on the same line as the others. */}
+        <div className="mt-20 grid grid-cols-2 items-start justify-center gap-x-2 gap-y-10 md:flex md:flex-wrap md:items-end md:gap-2">
           {PRODUCTS.map((product, i) => {
             const isCenter = i === center;
             const text = productText[product.id];
+            // Odd product count leaves the last card alone on its mobile row — let it span both
+            // columns so it stays centred instead of hugging the row start.
+            const isMobileOrphan = PRODUCTS.length % 2 === 1 && i === PRODUCTS.length - 1;
             return (
               <div
                 key={product.id}
                 ref={(el) => {
                   cardRefs.current[i] = el;
                 }}
-                className="group relative flex flex-col items-center px-3"
+                className={`group relative flex min-w-0 flex-col items-center px-1 md:px-3 ${
+                  isMobileOrphan ? 'col-span-2 md:col-span-1' : ''
+                }`}
                 style={{ animation: `product-bob ${5 + (i % 3)}s ease-in-out ${i * 0.4}s infinite` }}
               >
                 <div
-                  className={`relative flex items-end justify-center transition-transform duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 h-[30vh] ${
+                  className={`relative flex w-full items-end justify-center transition-transform duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 h-[26vh] md:h-[30vh] ${
                     isCenter ? 'lg:h-[50vh]' : 'lg:h-[36vh]'
                   }`}
                 >
@@ -65,14 +73,14 @@ export function ProductShowcase() {
                   <img
                     src={product.image}
                     alt={text.name}
-                    className="relative h-full w-auto object-contain transition-transform duration-500 group-hover:rotate-3"
+                    className="relative h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:rotate-3"
                     style={{ filter: 'drop-shadow(0 20px 20px rgba(46,58,36,0.18))' }}
                   />
                 </div>
                 <p className={`mt-4 text-sm text-olive-dark ${isCenter ? 'font-medium' : 'font-light text-olive-dark/70'}`}>
                   {text.name}
                 </p>
-                <p className="mt-1 max-w-[160px] text-xs font-light text-brown/60">{text.description}</p>
+                <p className="mt-1 max-w-full text-xs font-light text-brown/60 md:max-w-[160px]">{text.description}</p>
               </div>
             );
           })}
