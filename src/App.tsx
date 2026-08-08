@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { LangLayout } from './routes/LangLayout';
+import { ScrollToTop } from './routes/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { ProductsPage } from './pages/ProductsPage';
 import { ShopPage } from './pages/ShopPage';
@@ -12,6 +13,7 @@ import { WhatsAppButton } from './components/ui/WhatsAppButton';
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Navigate to="/en" replace />} />
         <Route path="/:lang" element={<LangLayout />}>

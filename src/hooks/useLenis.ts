@@ -28,6 +28,17 @@ export function scrollToHash(hash: string) {
 }
 
 /**
+ * Jumps Lenis to the top with no easing. Used on route changes, where the
+ * new page should already be at its top rather than visibly scrolling
+ * there. No-op when Lenis isn't mounted (every page except HomePage, and
+ * HomePage itself while its loading screen is up) — the caller pairs this
+ * with a plain window.scrollTo for those cases.
+ */
+export function scrollToTopImmediate() {
+  activeLenis?.scrollTo(0, { immediate: true });
+}
+
+/**
  * Wires Lenis smooth scroll into GSAP's ticker so ScrollTrigger stays in
  * sync with the eased scroll position instead of raw native scroll.
  */
