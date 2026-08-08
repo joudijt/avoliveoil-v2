@@ -69,7 +69,7 @@ export function BottleOpening() {
   }, [isAr]);
 
   return (
-    <section id="bottle-opening" ref={sectionRef} className="relative h-[300vh] w-full">
+    <section id="bottle-opening" ref={sectionRef} className="relative h-[170vh] w-full">
       <div ref={pinRef} className="relative h-screen w-full overflow-hidden bg-olive-dark">
         <div
           className="pointer-events-none absolute inset-0"
