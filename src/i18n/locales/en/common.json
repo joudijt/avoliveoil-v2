@@ -129,14 +129,12 @@
     "kicker": "Our Process",
     "title": "From Tree to Bottle",
     "scenes": [
-      { "key": "tree", "title": "The Olive Tree", "caption": "rooted in Palestinian soil for generations, thriving under the Mediterranean sun." },
-      { "key": "growing", "title": "Olives Growing", "caption": "ripening slowly, gathering the richness that makes great olive oil." },
-      { "key": "harvest", "title": "Hand-Harvested Olives", "caption": "picked at the right time by experienced farmers." },
-      { "key": "extraction", "title": "First Cold Press", "caption": "the first extraction, valued for its natural richness and quality." },
-      { "key": "filtering", "title": "Pure and Unprocessed", "caption": "carefully preserved to maintain its natural nutrients and flavor." },
-      { "key": "testing", "title": "Quality Testing", "caption": "tested for acidity and purity to guarantee true extra virgin quality." },
-      { "key": "bottling", "title": "Bottling", "caption": "sealed bottle by bottle at the peak of freshness." },
-      { "key": "final", "title": "The Result", "caption": "olive oil in its most natural form." }
+      { "key": "grove", "title": "The Olive Tree", "caption": "rooted in Palestinian soil for generations, thriving under the Mediterranean sun." },
+      { "key": "sunset", "title": "Olives Growing", "caption": "ripening slowly, gathering the richness that makes great olive oil." },
+      { "key": "picking", "title": "Hand-Harvested Olives", "caption": "picked at the right time by experienced farmers." },
+      { "key": "crates", "title": "The Day's Harvest", "caption": "crate after crate, gathered and kept whole before pressing." },
+      { "key": "carrying", "title": "Carried to the Press", "caption": "moved from the grove to the mill while the fruit is still fresh." },
+      { "key": "press", "title": "First Cold Press", "caption": "the first extraction, valued for its natural richness and quality." }
     ]
   },
   "statistics": {

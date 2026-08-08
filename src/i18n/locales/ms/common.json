@@ -129,14 +129,12 @@
     "kicker": "Proses Kami",
     "title": "Dari Pokok ke Botol",
     "scenes": [
-      { "key": "tree", "title": "Pokok Zaitun", "caption": "berakar di bumi Palestin sejak generasi lalu, subur di bawah suria Mediterranean." },
-      { "key": "growing", "title": "Zaitun Membesar", "caption": "masak perlahan-lahan, mengumpul kekayaan yang membentuk minyak zaitun terbaik." },
-      { "key": "harvest", "title": "Zaitun Dituai dengan Tangan", "caption": "dipetik pada waktu yang tepat oleh petani berpengalaman." },
-      { "key": "extraction", "title": "Perahan Sejuk Pertama", "caption": "perahan pertama, dihargai kerana kekayaan dan kualiti semula jadinya." },
-      { "key": "filtering", "title": "Tulen dan Tidak Diproses", "caption": "disimpan dengan teliti untuk mengekalkan nutrien dan rasa semula jadinya." },
-      { "key": "testing", "title": "Ujian Kualiti", "caption": "diuji keasidan dan ketulenan untuk menjamin kualiti extra virgin sebenar." },
-      { "key": "bottling", "title": "Pembotolan", "caption": "dibotolkan satu demi satu pada kesegaran optimum." },
-      { "key": "final", "title": "Hasilnya", "caption": "minyak zaitun dalam bentuk paling tulen." }
+      { "key": "grove", "title": "Pokok Zaitun", "caption": "berakar di bumi Palestin sejak generasi lalu, subur di bawah suria Mediterranean." },
+      { "key": "sunset", "title": "Zaitun Membesar", "caption": "masak perlahan-lahan, mengumpul kekayaan yang membentuk minyak zaitun terbaik." },
+      { "key": "picking", "title": "Zaitun Dituai dengan Tangan", "caption": "dipetik pada waktu yang tepat oleh petani berpengalaman." },
+      { "key": "crates", "title": "Hasil Tuaian Hari Itu", "caption": "bakul demi bakul, dikumpul dan dijaga elok sebelum diperah." },
+      { "key": "carrying", "title": "Dibawa ke Kilang Perah", "caption": "dipindah dari kebun ke kilang semasa buah masih segar." },
+      { "key": "press", "title": "Perahan Sejuk Pertama", "caption": "perahan pertama, dihargai kerana kekayaan dan kualiti semula jadinya." }
     ]
   },
   "statistics": {

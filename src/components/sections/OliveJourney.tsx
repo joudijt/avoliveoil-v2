@@ -2,14 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import treeImg from '../../assets/images/journey-01-tree.png';
-import growingImg from '../../assets/images/journey-02-growing.png';
-import harvestImg from '../../assets/images/journey-03-harvest.png';
-import extractionImg from '../../assets/images/journey-04-extraction.png';
-import filteringImg from '../../assets/images/journey-05-filtering.png';
-import testingImg from '../../assets/images/journey-06-testing.webp';
-import bottlingImg from '../../assets/images/journey-07-bottling.png';
-import finalImg from '../../assets/images/journey-08-final.png';
+import groveImg from '../../assets/images/journey-01-grove.webp';
+import sunsetImg from '../../assets/images/journey-02-sunset.webp';
+import pickingImg from '../../assets/images/journey-03-picking.webp';
+import cratesImg from '../../assets/images/journey-04-crates.webp';
+import carryingImg from '../../assets/images/journey-05-carrying.webp';
+import pressImg from '../../assets/images/journey-06-press.webp';
 
 interface JourneyScene {
   key: string;
@@ -18,28 +16,24 @@ interface JourneyScene {
 }
 
 const PHOTOS: Record<string, string> = {
-  tree: treeImg,
-  growing: growingImg,
-  harvest: harvestImg,
-  extraction: extractionImg,
-  filtering: filteringImg,
-  testing: testingImg,
-  bottling: bottlingImg,
-  final: finalImg,
+  grove: groveImg,
+  sunset: sunsetImg,
+  picking: pickingImg,
+  crates: cratesImg,
+  carrying: carryingImg,
+  press: pressImg,
 };
 
 export function OliveJourney() {
   const { t } = useTranslation();
   const journey = t('oliveJourney.scenes', { returnObjects: true }) as JourneyScene[];
   const [index, setIndex] = useState(0);
-  const imgRef = useRef<HTMLImageElement>(null);
   const captionRef = useRef<HTMLParagraphElement>(null);
 
   const scene = journey[index];
   const go = (delta: number) => setIndex((i) => (i + delta + journey.length) % journey.length);
 
   useEffect(() => {
-    gsap.fromTo(imgRef.current, { opacity: 0, scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'power2.out' });
     gsap.fromTo(captionRef.current, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
   }, [index]);
 
@@ -74,12 +68,18 @@ export function OliveJourney() {
 
         <div className="order-1 md:order-2">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-olive-dark/10 shadow-[0_15px_40px_rgba(46,58,36,0.12)]">
-            <img
-              ref={imgRef}
-              src={PHOTOS[scene.key]}
-              alt={scene.title}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+            {journey.map((s, i) => (
+              <img
+                key={s.key}
+                src={PHOTOS[s.key]}
+                alt={s.title}
+                aria-hidden={i !== index}
+                decoding="async"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-out ${
+                  i === index ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            ))}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-olive-dark/40 via-transparent to-transparent" />
 
             <button
