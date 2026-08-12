@@ -32,6 +32,13 @@ DirectorySlash Off
   RewriteCond %{DOCUMENT_ROOT}/$1/blog/$2/index.html -f
   RewriteRule ^(en|ar|ms)/blog/([a-z0-9-]+)/?$ /$1/blog/$2/index.html [L]
 
+  # Product detail pages: /<lang>/products/<slug> is also a prerendered
+  # directory, same contract as the blog articles above. Without this rule the
+  # request falls through to the -d passthrough and Apache 301s to the
+  # trailing-slash URL, contradicting the slash-less canonicals.
+  RewriteCond %{DOCUMENT_ROOT}/$1/products/$2/index.html -f
+  RewriteRule ^(en|ar|ms)/products/([a-z0-9-]+)/?$ /$1/products/$2/index.html [L]
+
   # Real files and real directories win (keeps /en /ar /ms prerendered HTML)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
