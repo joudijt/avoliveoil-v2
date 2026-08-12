@@ -70,6 +70,11 @@ interface SEOProps {
   /** Emits Product JSON-LD (home + products page). */
   includeProductSchema?: boolean;
   /**
+   * Per-product name/description for the Product JSON-LD. Implies
+   * includeProductSchema; used by the infused product detail pages.
+   */
+  productMeta?: { name: string; description: string };
+  /**
    * Per-language path under /:lang, for pages whose URL segment is translated.
    * Drives canonical, hreflang and og:url. Falls back to PAGE_SLUG when omitted.
    */
@@ -92,6 +97,7 @@ export function SEO({
   breadcrumbs,
   faqs,
   includeProductSchema,
+  productMeta,
   pathByLang,
   titleOverride,
   descriptionOverride,
@@ -130,16 +136,17 @@ export function SEO({
     inLanguage: lang,
   };
 
-  const productSchema = includeProductSchema
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: `${SITE_NAME} — First Cold Pressed Palestinian Olive Oil`,
-        description: t('seo.products.description'),
-        brand: { '@type': 'Brand', name: SITE_NAME },
-        image: ogImage,
-      }
-    : null;
+  const productSchema =
+    includeProductSchema || productMeta
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: productMeta?.name ?? `${SITE_NAME} — First Cold Pressed Palestinian Olive Oil`,
+          description: productMeta?.description ?? t('seo.products.description'),
+          brand: { '@type': 'Brand', name: SITE_NAME },
+          image: ogImage,
+        }
+      : null;
 
   const faqSchema =
     faqs && faqs.length > 0

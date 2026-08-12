@@ -7,6 +7,7 @@ import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import bottleImg from '../assets/images/bottle-cutout.png';
+import { INFUSED_PRODUCTS } from '../data/infusedProducts';
 
 interface Highlight {
   label: string;
@@ -85,6 +86,38 @@ export function ProductsPage() {
                   <h3 className="text-xs uppercase tracking-[0.2em] text-gold">{h.label}</h3>
                   <p className="mt-2 text-sm font-medium text-olive-dark">{h.value}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-20 md:px-16 md:py-28">
+          <div className="mx-auto max-w-5xl text-start">
+            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('infusedPage.kicker')}</p>
+            <h2 className="mt-3 max-w-2xl text-3xl text-olive-dark md:text-4xl">
+              {t('infusedPage.collectionTitle')}
+            </h2>
+            <p className="mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+              {t('infusedPage.collectionIntro')}
+            </p>
+
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {INFUSED_PRODUCTS.map((product) => (
+                <Link
+                  key={product.id}
+                  to={`/${lang}/products/${product.slug}`}
+                  className="group rounded-2xl border border-olive-dark/10 bg-cream p-6 text-start transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]"
+                >
+                  <span className="inline-block rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
+                    {t('infusedPage.comingSoonBadge')}
+                  </span>
+                  <h3 className="mt-4 text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold">
+                    {t(`infusedPage.products.${product.id}.name`)}
+                  </h3>
+                  <p className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
+                    {t(`infusedPage.products.${product.id}.tagline`)}
+                  </p>
+                </Link>
               ))}
             </div>
           </div>

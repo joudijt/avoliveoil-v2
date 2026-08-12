@@ -45,10 +45,22 @@
   },
   "hero": {
     "headlineWords": [
-      { "text": "Pure", "gold": false },
-      { "text": "Palestinian", "gold": false },
-      { "text": "Olive", "gold": true },
-      { "text": "Oil", "gold": true }
+      {
+        "text": "Pure",
+        "gold": false
+      },
+      {
+        "text": "Palestinian",
+        "gold": false
+      },
+      {
+        "text": "Olive",
+        "gold": true
+      },
+      {
+        "text": "Oil",
+        "gold": true
+      }
     ],
     "sub": "Cold-pressed, unprocessed olive oil made the traditional way for generations.",
     "shopNow": "Secure Your Bottle",
@@ -59,12 +71,28 @@
     "kicker": "The Ritual",
     "title": "A Tradition Passed Through Generations",
     "leftCards": [
-      { "order": "01", "title": "DAILY NOURISHMENT", "text": "In the hills of Palestine, olive oil has always been part of daily life." },
-      { "order": "02", "title": "NATURAL WELLNESS", "text": "A simple, natural addition to a daily wellness routine, the way it's always been." }
+      {
+        "order": "01",
+        "title": "DAILY NOURISHMENT",
+        "text": "In the hills of Palestine, olive oil has always been part of daily life."
+      },
+      {
+        "order": "02",
+        "title": "NATURAL WELLNESS",
+        "text": "A simple, natural addition to a daily wellness routine, the way it's always been."
+      }
     ],
     "rightCards": [
-      { "order": "03", "title": "ENERGY & VITALITY", "text": "One spoon in the morning — a simple ritual that has stood the test of time." },
-      { "order": "04", "title": "FAMILY TRADITION", "text": "Small daily habits, passed down through generations and still cherished today." }
+      {
+        "order": "03",
+        "title": "ENERGY & VITALITY",
+        "text": "One spoon in the morning — a simple ritual that has stood the test of time."
+      },
+      {
+        "order": "04",
+        "title": "FAMILY TRADITION",
+        "text": "Small daily habits, passed down through generations and still cherished today."
+      }
     ]
   },
   "bottleOpening": {
@@ -76,22 +104,57 @@
     "kicker": "Naturally Rich In",
     "title": "Olive Oil in Its Purest Form",
     "items": [
-      { "title": "Polyphenols", "desc": "Simple, natural foods that have supported people for generations.", "icon": "olive" },
-      { "title": "Healthy Fats", "desc": "Made from carefully selected olives, cold-pressed to preserve their natural goodness.", "icon": "snow" },
-      { "title": "Natural Nutrients", "desc": "Pure and unprocessed, carefully preserved to maintain its natural nutrients and flavor.", "icon": "leaf" },
-      { "title": "Heart Health", "desc": "Supports heart health as a simple, natural addition to your daily meals.", "icon": "drop" },
-      { "title": "Natural Energy", "desc": "Provides natural energy — a simple addition to a healthy lifestyle.", "icon": "medal" }
+      {
+        "title": "Polyphenols",
+        "desc": "Simple, natural foods that have supported people for generations.",
+        "icon": "olive"
+      },
+      {
+        "title": "Healthy Fats",
+        "desc": "Made from carefully selected olives, cold-pressed to preserve their natural goodness.",
+        "icon": "snow"
+      },
+      {
+        "title": "Natural Nutrients",
+        "desc": "Pure and unprocessed, carefully preserved to maintain its natural nutrients and flavor.",
+        "icon": "leaf"
+      },
+      {
+        "title": "Heart Health",
+        "desc": "Supports heart health as a simple, natural addition to your daily meals.",
+        "icon": "drop"
+      },
+      {
+        "title": "Natural Energy",
+        "desc": "Provides natural energy — a simple addition to a healthy lifestyle.",
+        "icon": "medal"
+      }
     ]
   },
   "productShowcase": {
     "kicker": "Our Collection",
     "title": "Every Harvest, Bottled",
     "products": {
-      "reserve": { "name": "Reserve Selection", "description": "A limited harvest, bold and full-bodied for lovers of robust extra virgin olive oil." },
-      "organic": { "name": "Organic Grove", "description": "Organic and sustainably farmed, pressed the pure, traditional way." },
-      "classic": { "name": "Arabian Village Classic", "description": "Our signature first cold press — the everyday premium olive oil for your kitchen." },
-      "family": { "name": "Family Estate", "description": "Three generations of the same Mediterranean groves, bottled with the same care." },
-      "gold": { "name": "Gold Harvest", "description": "An early harvest with a bold, peppery finish loved by connoisseurs." }
+      "reserve": {
+        "name": "Reserve Selection",
+        "description": "A limited harvest, bold and full-bodied for lovers of robust extra virgin olive oil."
+      },
+      "organic": {
+        "name": "Organic Grove",
+        "description": "Organic and sustainably farmed, pressed the pure, traditional way."
+      },
+      "classic": {
+        "name": "Arabian Village Classic",
+        "description": "Our signature first cold press — the everyday premium olive oil for your kitchen."
+      },
+      "family": {
+        "name": "Family Estate",
+        "description": "Three generations of the same Mediterranean groves, bottled with the same care."
+      },
+      "gold": {
+        "name": "Gold Harvest",
+        "description": "An early harvest with a bold, peppery finish loved by connoisseurs."
+      }
     }
   },
   "purchasePath": {
@@ -129,19 +192,55 @@
     "kicker": "Our Process",
     "title": "From Tree to Bottle",
     "scenes": [
-      { "key": "grove", "title": "The Olive Tree", "caption": "rooted in Palestinian soil for generations, thriving under the Mediterranean sun." },
-      { "key": "sunset", "title": "Olives Growing", "caption": "ripening slowly, gathering the richness that makes great olive oil." },
-      { "key": "picking", "title": "Hand-Harvested Olives", "caption": "picked at the right time by experienced farmers." },
-      { "key": "crates", "title": "The Day's Harvest", "caption": "crate after crate, gathered and kept whole before pressing." },
-      { "key": "carrying", "title": "Carried to the Press", "caption": "moved from the grove to the mill while the fruit is still fresh." },
-      { "key": "press", "title": "First Cold Press", "caption": "the first extraction, valued for its natural richness and quality." }
+      {
+        "key": "grove",
+        "title": "The Olive Tree",
+        "caption": "rooted in Palestinian soil for generations, thriving under the Mediterranean sun."
+      },
+      {
+        "key": "sunset",
+        "title": "Olives Growing",
+        "caption": "ripening slowly, gathering the richness that makes great olive oil."
+      },
+      {
+        "key": "picking",
+        "title": "Hand-Harvested Olives",
+        "caption": "picked at the right time by experienced farmers."
+      },
+      {
+        "key": "crates",
+        "title": "The Day's Harvest",
+        "caption": "crate after crate, gathered and kept whole before pressing."
+      },
+      {
+        "key": "carrying",
+        "title": "Carried to the Press",
+        "caption": "moved from the grove to the mill while the fruit is still fresh."
+      },
+      {
+        "key": "press",
+        "title": "First Cold Press",
+        "caption": "the first extraction, valued for its natural richness and quality."
+      }
     ]
   },
   "statistics": {
     "items": [
-      { "value": 100, "suffix": "%", "label": "Natural" },
-      { "value": 5000, "suffix": "+", "label": "Happy Customers" },
-      { "value": 20, "suffix": "+", "label": "Years Experience" }
+      {
+        "value": 100,
+        "suffix": "%",
+        "label": "Natural"
+      },
+      {
+        "value": 5000,
+        "suffix": "+",
+        "label": "Happy Customers"
+      },
+      {
+        "value": 20,
+        "suffix": "+",
+        "label": "Years Experience"
+      }
     ],
     "premiumQuality": "Premium Quality"
   },
@@ -149,21 +248,51 @@
     "kicker": "Loved Worldwide",
     "title": "What People Say",
     "items": [
-      { "quote": "Hands down the richest, most authentic extra virgin olive oil I've tried.", "name": "Layla H.", "place": "Amman" },
-      { "quote": "Beautifully packaged and even better in the kitchen — real cold-pressed flavor.", "name": "Omar K.", "place": "Kuala Lumpur" },
-      { "quote": "Our family's everyday olive oil now — nothing else compares.", "name": "Sara M.", "place": "Dubai" }
+      {
+        "quote": "Hands down the richest, most authentic extra virgin olive oil I've tried.",
+        "name": "Layla H.",
+        "place": "Amman"
+      },
+      {
+        "quote": "Beautifully packaged and even better in the kitchen — real cold-pressed flavor.",
+        "name": "Omar K.",
+        "place": "Kuala Lumpur"
+      },
+      {
+        "quote": "Our family's everyday olive oil now — nothing else compares.",
+        "name": "Sara M.",
+        "place": "Dubai"
+      }
     ]
   },
   "faq": {
     "kicker": "Questions",
     "title": "Frequently Asked Questions",
     "items": [
-      { "q": "What makes Arabian Village olive oil different?", "a": "It is pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed down through generations, from tree to bottle." },
-      { "q": "Is the olive oil cold-pressed?", "a": "Yes. Arabian Village olive oil is cold-pressed and unprocessed to preserve its natural quality and flavour." },
-      { "q": "How should I use it daily?", "a": "Arabian Village promotes a simple 60-second daily ritual of taking the olive oil as part of a natural daily wellness routine." },
-      { "q": "Where do the olives come from?", "a": "The olives are sourced from Palestine and pressed using traditional methods carried through generations." },
-      { "q": "Do you offer wholesale or business options?", "a": "Yes. Arabian Village offers both a personal ritual option for individuals and a business/wholesale option for retailers and partners." },
-      { "q": "Where can I buy Arabian Village olive oil?", "a": "Arabian Village olive oil is available directly through this site, with retail and wholesale options, and through our official distributor, Berkat Madinah Store, in Malaysia." }
+      {
+        "q": "What makes Arabian Village olive oil different?",
+        "a": "It is pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed down through generations, from tree to bottle."
+      },
+      {
+        "q": "Is the olive oil cold-pressed?",
+        "a": "Yes. Arabian Village olive oil is cold-pressed and unprocessed to preserve its natural quality and flavour."
+      },
+      {
+        "q": "How should I use it daily?",
+        "a": "Arabian Village promotes a simple 60-second daily ritual of taking the olive oil as part of a natural daily wellness routine."
+      },
+      {
+        "q": "Where do the olives come from?",
+        "a": "The olives are sourced from Palestine and pressed using traditional methods carried through generations."
+      },
+      {
+        "q": "Do you offer wholesale or business options?",
+        "a": "Yes. Arabian Village offers both a personal ritual option for individuals and a business/wholesale option for retailers and partners."
+      },
+      {
+        "q": "Where can I buy Arabian Village olive oil?",
+        "a": "Arabian Village olive oil is available directly through this site, with retail and wholesale options, and through our official distributor, Berkat Madinah Store, in Malaysia."
+      }
     ]
   },
   "productsPage": {
@@ -501,5 +630,168 @@
     "emailPlaceholder": "Your email",
     "join": "Join",
     "rights": "All rights reserved."
+  },
+  "infusedPage": {
+    "kicker": "Infused Collection",
+    "collectionTitle": "Infused Extra Virgin Olive Oil",
+    "collectionIntro": "Six new expressions of our first cold pressed Palestinian olive oil, slow-infused with whole herbs, flowers and spices. Explore each flavor below — a preview of what is coming to the shelf.",
+    "comingSoonBadge": "Coming Soon",
+    "notesTitle": "Flavor & Aroma",
+    "benefitsTitle": "Why You'll Love It",
+    "usesTitle": "How to Use It",
+    "otherTitle": "Explore the Rest of the Collection",
+    "backToProducts": "View All Products",
+    "cta": {
+      "title": "Taste the Original While You Wait",
+      "text": "The infused collection is in final preparation. Our classic first cold pressed Palestinian olive oil is available today — or write to us to hear first when the new flavors arrive.",
+      "shopCta": "Shop the Classic Oil",
+      "contactCta": "Get Notified"
+    },
+    "products": {
+      "lavender-chamomile": {
+        "name": "Lavender & Chamomile Infused Extra Virgin Olive Oil",
+        "tagline": "Calm, floral and golden",
+        "seoTitle": "Lavender & Chamomile Infused Extra Virgin Olive Oil | Arabian Village",
+        "seoDescription": "Cold-pressed Palestinian extra virgin olive oil slow-infused with lavender and chamomile blossoms. Soft floral aroma and a honeyed finish — beautiful over desserts, fruit and warm bread.",
+        "description": "Our first cold pressed Palestinian olive oil, slow-infused with whole lavender and chamomile blossoms. The result is a gentle, floral oil with a honeyed calm — made for slow evenings and sweet plates.",
+        "imageAlt": "Bottle of Arabian Village lavender and chamomile infused extra virgin olive oil",
+        "notes": [
+          "Soft floral lavender aroma",
+          "Honeyed chamomile finish",
+          "Smooth, buttery texture"
+        ],
+        "benefits": [
+          "Whole blossoms, slow-infused — never flavored with extracts",
+          "First cold pressed Palestinian olive oil base",
+          "No artificial flavors, colors or additives",
+          "Bottled in small batches for freshness"
+        ],
+        "uses": [
+          "Drizzle over cakes, fresh fruit or yogurt for a floral finish.",
+          "Whisk with lemon and honey into a delicate salad dressing.",
+          "Serve with warm bread and a spoon of honey at tea time."
+        ]
+      },
+      "blackseed": {
+        "name": "Blackseed Infused Extra Virgin Olive Oil",
+        "tagline": "The seed of blessing, in golden oil",
+        "seoTitle": "Blackseed Infused Extra Virgin Olive Oil | Arabian Village",
+        "seoDescription": "Palestinian extra virgin olive oil infused with blackseed (habbat al-barakah, Nigella sativa). Warm, peppery and earthy — a heritage pairing for breakfast tables and dips.",
+        "description": "Two treasures of the region in one bottle: our cold-pressed Palestinian olive oil infused with blackseed — habbat al-barakah. Warm, peppery and quietly earthy, it is a pairing generations have trusted at the breakfast table.",
+        "imageAlt": "Bottle of Arabian Village blackseed infused extra virgin olive oil",
+        "notes": [
+          "Warm, peppery bite",
+          "Earthy, herbal depth",
+          "A whisper of cumin-like aroma"
+        ],
+        "benefits": [
+          "Genuine Nigella sativa seeds, slow-infused",
+          "First cold pressed Palestinian olive oil base",
+          "No artificial flavors, colors or additives",
+          "Bottled in small batches for freshness"
+        ],
+        "uses": [
+          "Drizzle over labneh, hummus or fresh cheese.",
+          "Take a morning spoonful with honey, the traditional way.",
+          "Finish lentil soups and warm grain dishes."
+        ]
+      },
+      "turmeric-black-pepper": {
+        "name": "Turmeric & Black Pepper Infused Extra Virgin Olive Oil",
+        "tagline": "Golden warmth with a peppery kick",
+        "seoTitle": "Turmeric & Black Pepper Infused Extra Virgin Olive Oil | Arabian Village",
+        "seoDescription": "Palestinian extra virgin olive oil infused with turmeric root and cracked black pepper. Deep golden color and earthy warmth — made for dressings, marinades and roasted vegetables.",
+        "description": "Turmeric root and cracked black pepper, slow-infused in our first cold pressed Palestinian olive oil. A deep golden oil with earthy warmth and a clean peppery finish that wakes up everyday cooking.",
+        "imageAlt": "Bottle of Arabian Village turmeric and black pepper infused extra virgin olive oil",
+        "notes": [
+          "Deep golden color",
+          "Earthy turmeric warmth",
+          "Clean black-pepper finish"
+        ],
+        "benefits": [
+          "Real turmeric root and cracked peppercorns, slow-infused",
+          "First cold pressed Palestinian olive oil base",
+          "No artificial flavors, colors or additives",
+          "Bottled in small batches for freshness"
+        ],
+        "uses": [
+          "Whisk into golden salad dressings and marinades.",
+          "Drizzle over roasted vegetables and rice.",
+          "Stir into soups and stews just before serving."
+        ]
+      },
+      "rosemary-basil": {
+        "name": "Rosemary & Basil Infused Extra Virgin Olive Oil",
+        "tagline": "The Mediterranean garden in a bottle",
+        "seoTitle": "Rosemary & Basil Infused Extra Virgin Olive Oil | Arabian Village",
+        "seoDescription": "Palestinian extra virgin olive oil infused with rosemary and sweet basil. Pine-fresh, green and bright — made for bread dipping, pasta and grilled dishes.",
+        "description": "Sprigs of rosemary and sweet basil leaves, slow-infused in our first cold pressed Palestinian olive oil. Pine-fresh and green, it turns a plate of warm bread into the start of a Mediterranean meal.",
+        "imageAlt": "Bottle of Arabian Village rosemary and basil infused extra virgin olive oil",
+        "notes": [
+          "Pine-fresh rosemary aroma",
+          "Sweet, green basil notes",
+          "Bright herbal finish"
+        ],
+        "benefits": [
+          "Whole rosemary sprigs and basil leaves, slow-infused",
+          "First cold pressed Palestinian olive oil base",
+          "No artificial flavors, colors or additives",
+          "Bottled in small batches for freshness"
+        ],
+        "uses": [
+          "Pour into a dish for bread dipping.",
+          "Toss with pasta, grilled chicken or fish.",
+          "Finish tomato salads and roasted potatoes."
+        ]
+      },
+      "fennel-anise": {
+        "name": "Fennel & Anise Infused Extra Virgin Olive Oil",
+        "tagline": "Sweet, aromatic and gently spiced",
+        "seoTitle": "Fennel & Anise Infused Extra Virgin Olive Oil | Arabian Village",
+        "seoDescription": "Palestinian extra virgin olive oil infused with fennel and anise seeds. Sweet, aromatic, licorice-like notes — beautiful with seafood, citrus salads and baking.",
+        "description": "Fennel and anise seeds, slow-infused in our first cold pressed Palestinian olive oil. Gently sweet and aromatic with a licorice-like perfume, it flatters seafood, citrus and anything from the oven.",
+        "imageAlt": "Bottle of Arabian Village fennel and anise infused extra virgin olive oil",
+        "notes": [
+          "Sweet licorice-like aroma",
+          "Fresh fennel crispness",
+          "Warm, rounded finish"
+        ],
+        "benefits": [
+          "Whole fennel and anise seeds, slow-infused",
+          "First cold pressed Palestinian olive oil base",
+          "No artificial flavors, colors or additives",
+          "Bottled in small batches for freshness"
+        ],
+        "uses": [
+          "Drizzle over grilled fish and seafood.",
+          "Brighten citrus and shaved-fennel salads.",
+          "Brush over flatbreads and savory pastries before baking."
+        ]
+      },
+      "wild-thyme": {
+        "name": "Wild Thyme Infused Extra Virgin Olive Oil",
+        "tagline": "Za'atar heritage, straight from the hills",
+        "seoTitle": "Wild Thyme Infused Extra Virgin Olive Oil | Arabian Village",
+        "seoDescription": "Palestinian extra virgin olive oil infused with wild thyme (za'atar). Intense, savory and peppery — the classic companion for warm bread, labneh and manakish.",
+        "description": "Wild thyme gathered the traditional way, slow-infused in our first cold pressed Palestinian olive oil. Intensely savory with a peppery mountain finish — the oldest pairing on the Levantine breakfast table.",
+        "imageAlt": "Bottle of Arabian Village wild thyme infused extra virgin olive oil",
+        "notes": [
+          "Intense wild thyme aroma",
+          "Savory, herbal depth",
+          "Peppery mountain finish"
+        ],
+        "benefits": [
+          "True wild thyme (za'atar), slow-infused",
+          "First cold pressed Palestinian olive oil base",
+          "No artificial flavors, colors or additives",
+          "Bottled in small batches for freshness"
+        ],
+        "uses": [
+          "Dip warm bread — the classic za'atar-and-oil breakfast.",
+          "Drizzle over labneh, halloumi or fresh salads.",
+          "Brush onto manakish and flatbreads before baking."
+        ]
+      }
+    }
   }
 }

@@ -25,11 +25,18 @@ const ARTICLE_SLUGS = JSON.parse(
   readFileSync(join(__dirname, '..', 'src/content/articles/slugs.json'), 'utf-8')
 );
 
+// Infused product slugs are language-invariant; src/data/infusedProducts.ts
+// asserts its entries match this file, same contract as the article slugs.
+const INFUSED_SLUGS = JSON.parse(
+  readFileSync(join(__dirname, '..', 'src/data/infusedSlugs.json'), 'utf-8')
+);
+
 const ROUTES = [
   ...LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`))),
   ...LANGS.flatMap((lang) =>
     Object.values(ARTICLE_SLUGS).map((perLang) => `/${lang}/blog/${perLang[lang]}`)
   ),
+  ...LANGS.flatMap((lang) => INFUSED_SLUGS.map((slug) => `/${lang}/products/${slug}`)),
 ];
 const PORT = 4173;
 

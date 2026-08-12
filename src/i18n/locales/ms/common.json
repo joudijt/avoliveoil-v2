@@ -45,10 +45,22 @@
   },
   "hero": {
     "headlineWords": [
-      { "text": "Minyak", "gold": true },
-      { "text": "Zaitun", "gold": true },
-      { "text": "Palestin", "gold": false },
-      { "text": "Tulen", "gold": false }
+      {
+        "text": "Minyak",
+        "gold": true
+      },
+      {
+        "text": "Zaitun",
+        "gold": true
+      },
+      {
+        "text": "Palestin",
+        "gold": false
+      },
+      {
+        "text": "Tulen",
+        "gold": false
+      }
     ],
     "sub": "Minyak zaitun perahan sejuk yang tidak diproses, dihasilkan secara tradisional sejak turun-temurun.",
     "shopNow": "Tempah Botol Anda",
@@ -59,12 +71,28 @@
     "kicker": "Ritual",
     "title": "Tradisi Turun-Temurun",
     "leftCards": [
-      { "order": "01", "title": "PEMAKANAN HARIAN", "text": "Di kaki bukit Palestin, minyak zaitun sentiasa menjadi sebahagian daripada kehidupan seharian." },
-      { "order": "02", "title": "KESIHATAN SEMULA JADI", "text": "Tambahan semula jadi dan mudah kepada rutin kesihatan harian, seperti sejak dahulu." }
+      {
+        "order": "01",
+        "title": "PEMAKANAN HARIAN",
+        "text": "Di kaki bukit Palestin, minyak zaitun sentiasa menjadi sebahagian daripada kehidupan seharian."
+      },
+      {
+        "order": "02",
+        "title": "KESIHATAN SEMULA JADI",
+        "text": "Tambahan semula jadi dan mudah kepada rutin kesihatan harian, seperti sejak dahulu."
+      }
     ],
     "rightCards": [
-      { "order": "03", "title": "TENAGA & VITALITI", "text": "Satu sudu setiap pagi — ritual mudah yang bertahan sepanjang zaman." },
-      { "order": "04", "title": "TRADISI KELUARGA", "text": "Tabiat harian yang kecil, diwarisi turun-temurun dan masih disayangi hari ini." }
+      {
+        "order": "03",
+        "title": "TENAGA & VITALITI",
+        "text": "Satu sudu setiap pagi — ritual mudah yang bertahan sepanjang zaman."
+      },
+      {
+        "order": "04",
+        "title": "TRADISI KELUARGA",
+        "text": "Tabiat harian yang kecil, diwarisi turun-temurun dan masih disayangi hari ini."
+      }
     ]
   },
   "bottleOpening": {
@@ -76,22 +104,57 @@
     "kicker": "Kaya Secara Semula Jadi Dengan",
     "title": "Minyak Zaitun dalam Bentuk Paling Tulen",
     "items": [
-      { "title": "Polifenol", "desc": "Makanan semula jadi yang mudah, telah menyokong kesihatan manusia sejak turun-temurun.", "icon": "olive" },
-      { "title": "Lemak Sihat", "desc": "Dihasilkan daripada zaitun pilihan, diperah sejuk untuk mengekalkan kebaikan semula jadinya.", "icon": "snow" },
-      { "title": "Nutrien Semula Jadi", "desc": "Tulen dan tidak diproses, disimpan dengan teliti untuk mengekalkan nutrien dan rasanya.", "icon": "leaf" },
-      { "title": "Kesihatan Jantung", "desc": "Menyokong kesihatan jantung sebagai tambahan semula jadi kepada hidangan harian anda.", "icon": "drop" },
-      { "title": "Tenaga Semula Jadi", "desc": "Memberikan tenaga semula jadi — tambahan mudah untuk gaya hidup sihat.", "icon": "medal" }
+      {
+        "title": "Polifenol",
+        "desc": "Makanan semula jadi yang mudah, telah menyokong kesihatan manusia sejak turun-temurun.",
+        "icon": "olive"
+      },
+      {
+        "title": "Lemak Sihat",
+        "desc": "Dihasilkan daripada zaitun pilihan, diperah sejuk untuk mengekalkan kebaikan semula jadinya.",
+        "icon": "snow"
+      },
+      {
+        "title": "Nutrien Semula Jadi",
+        "desc": "Tulen dan tidak diproses, disimpan dengan teliti untuk mengekalkan nutrien dan rasanya.",
+        "icon": "leaf"
+      },
+      {
+        "title": "Kesihatan Jantung",
+        "desc": "Menyokong kesihatan jantung sebagai tambahan semula jadi kepada hidangan harian anda.",
+        "icon": "drop"
+      },
+      {
+        "title": "Tenaga Semula Jadi",
+        "desc": "Memberikan tenaga semula jadi — tambahan mudah untuk gaya hidup sihat.",
+        "icon": "medal"
+      }
     ]
   },
   "productShowcase": {
     "kicker": "Koleksi Kami",
     "title": "Setiap Hasil Tuaian, Dibotolkan",
     "products": {
-      "reserve": { "name": "Pilihan Simpanan", "description": "Tuaian terhad dengan rasa berani dan kukuh, untuk peminat minyak zaitun extra virgin yang pekat." },
-      "organic": { "name": "Dusun Organik", "description": "Organik, ditanam secara lestari dan diperah dengan cara tradisional yang tulen." },
-      "classic": { "name": "Arabian Village Klasik", "description": "Perahan sejuk pertama tandatangan kami — minyak zaitun premium untuk dapur harian anda." },
-      "family": { "name": "Ladang Keluarga", "description": "Tiga generasi daripada dusun yang sama, dibotolkan dengan penjagaan yang sama." },
-      "gold": { "name": "Tuaian Emas", "description": "Tuaian awal dengan rasa lada yang berani, digemari peminat minyak zaitun sejati." }
+      "reserve": {
+        "name": "Pilihan Simpanan",
+        "description": "Tuaian terhad dengan rasa berani dan kukuh, untuk peminat minyak zaitun extra virgin yang pekat."
+      },
+      "organic": {
+        "name": "Dusun Organik",
+        "description": "Organik, ditanam secara lestari dan diperah dengan cara tradisional yang tulen."
+      },
+      "classic": {
+        "name": "Arabian Village Klasik",
+        "description": "Perahan sejuk pertama tandatangan kami — minyak zaitun premium untuk dapur harian anda."
+      },
+      "family": {
+        "name": "Ladang Keluarga",
+        "description": "Tiga generasi daripada dusun yang sama, dibotolkan dengan penjagaan yang sama."
+      },
+      "gold": {
+        "name": "Tuaian Emas",
+        "description": "Tuaian awal dengan rasa lada yang berani, digemari peminat minyak zaitun sejati."
+      }
     }
   },
   "purchasePath": {
@@ -129,19 +192,55 @@
     "kicker": "Proses Kami",
     "title": "Dari Pokok ke Botol",
     "scenes": [
-      { "key": "grove", "title": "Pokok Zaitun", "caption": "berakar di bumi Palestin sejak generasi lalu, subur di bawah suria Mediterranean." },
-      { "key": "sunset", "title": "Zaitun Membesar", "caption": "masak perlahan-lahan, mengumpul kekayaan yang membentuk minyak zaitun terbaik." },
-      { "key": "picking", "title": "Zaitun Dituai dengan Tangan", "caption": "dipetik pada waktu yang tepat oleh petani berpengalaman." },
-      { "key": "crates", "title": "Hasil Tuaian Hari Itu", "caption": "bakul demi bakul, dikumpul dan dijaga elok sebelum diperah." },
-      { "key": "carrying", "title": "Dibawa ke Kilang Perah", "caption": "dipindah dari kebun ke kilang semasa buah masih segar." },
-      { "key": "press", "title": "Perahan Sejuk Pertama", "caption": "perahan pertama, dihargai kerana kekayaan dan kualiti semula jadinya." }
+      {
+        "key": "grove",
+        "title": "Pokok Zaitun",
+        "caption": "berakar di bumi Palestin sejak generasi lalu, subur di bawah suria Mediterranean."
+      },
+      {
+        "key": "sunset",
+        "title": "Zaitun Membesar",
+        "caption": "masak perlahan-lahan, mengumpul kekayaan yang membentuk minyak zaitun terbaik."
+      },
+      {
+        "key": "picking",
+        "title": "Zaitun Dituai dengan Tangan",
+        "caption": "dipetik pada waktu yang tepat oleh petani berpengalaman."
+      },
+      {
+        "key": "crates",
+        "title": "Hasil Tuaian Hari Itu",
+        "caption": "bakul demi bakul, dikumpul dan dijaga elok sebelum diperah."
+      },
+      {
+        "key": "carrying",
+        "title": "Dibawa ke Kilang Perah",
+        "caption": "dipindah dari kebun ke kilang semasa buah masih segar."
+      },
+      {
+        "key": "press",
+        "title": "Perahan Sejuk Pertama",
+        "caption": "perahan pertama, dihargai kerana kekayaan dan kualiti semula jadinya."
+      }
     ]
   },
   "statistics": {
     "items": [
-      { "value": 100, "suffix": "%", "label": "Semula Jadi" },
-      { "value": 5000, "suffix": "+", "label": "Pelanggan Gembira" },
-      { "value": 20, "suffix": "+", "label": "Tahun Pengalaman" }
+      {
+        "value": 100,
+        "suffix": "%",
+        "label": "Semula Jadi"
+      },
+      {
+        "value": 5000,
+        "suffix": "+",
+        "label": "Pelanggan Gembira"
+      },
+      {
+        "value": 20,
+        "suffix": "+",
+        "label": "Tahun Pengalaman"
+      }
     ],
     "premiumQuality": "Kualiti Premium"
   },
@@ -149,21 +248,51 @@
     "kicker": "Digemari di Seluruh Dunia",
     "title": "Apa Kata Pelanggan",
     "items": [
-      { "quote": "Minyak zaitun extra virgin paling kaya yang pernah saya rasa — kualiti perahan pertama yang sebenar.", "name": "Layla H.", "place": "Amman" },
-      { "quote": "Tiba dengan pembungkusan cantik, dan rasanya di dapur lebih sedap daripada rupanya.", "name": "Omar K.", "place": "Kuala Lumpur" },
-      { "quote": "Kini satu-satunya minyak zaitun di meja keluarga kami — tiada tandingan.", "name": "Sara M.", "place": "Dubai" }
+      {
+        "quote": "Minyak zaitun extra virgin paling kaya yang pernah saya rasa — kualiti perahan pertama yang sebenar.",
+        "name": "Layla H.",
+        "place": "Amman"
+      },
+      {
+        "quote": "Tiba dengan pembungkusan cantik, dan rasanya di dapur lebih sedap daripada rupanya.",
+        "name": "Omar K.",
+        "place": "Kuala Lumpur"
+      },
+      {
+        "quote": "Kini satu-satunya minyak zaitun di meja keluarga kami — tiada tandingan.",
+        "name": "Sara M.",
+        "place": "Dubai"
+      }
     ]
   },
   "faq": {
     "kicker": "Soalan",
     "title": "Soalan Lazim",
     "items": [
-      { "q": "Apakah yang membezakan minyak zaitun Arabian Village?", "a": "Ia adalah minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun, dari pokok ke botol." },
-      { "q": "Adakah minyak ini diperah sejuk?", "a": "Ya. Minyak zaitun Arabian Village diperah sejuk dan tidak diproses untuk mengekalkan kualiti dan rasa semula jadinya." },
-      { "q": "Bagaimana saya menggunakannya setiap hari?", "a": "Arabian Village menganjurkan ritual harian yang mudah selama 60 saat — mengambil minyak zaitun sebagai sebahagian daripada rutin kesihatan semula jadi." },
-      { "q": "Dari manakah zaitun ini berasal?", "a": "Zaitun kami diperoleh daripada Palestin dan diperah menggunakan kaedah tradisional turun-temurun." },
-      { "q": "Adakah anda menawarkan pilihan borong atau perniagaan?", "a": "Ya. Arabian Village menawarkan pilihan ritual peribadi untuk individu, serta pilihan perniagaan/borong untuk peruncit dan rakan kongsi." },
-      { "q": "Di mana saya boleh membeli minyak zaitun Arabian Village?", "a": "Minyak zaitun Arabian Village tersedia terus melalui laman ini, dengan pilihan runcit dan borong, serta melalui pengedar rasmi kami, Berkat Madinah Store, di Malaysia." }
+      {
+        "q": "Apakah yang membezakan minyak zaitun Arabian Village?",
+        "a": "Ia adalah minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun, dari pokok ke botol."
+      },
+      {
+        "q": "Adakah minyak ini diperah sejuk?",
+        "a": "Ya. Minyak zaitun Arabian Village diperah sejuk dan tidak diproses untuk mengekalkan kualiti dan rasa semula jadinya."
+      },
+      {
+        "q": "Bagaimana saya menggunakannya setiap hari?",
+        "a": "Arabian Village menganjurkan ritual harian yang mudah selama 60 saat — mengambil minyak zaitun sebagai sebahagian daripada rutin kesihatan semula jadi."
+      },
+      {
+        "q": "Dari manakah zaitun ini berasal?",
+        "a": "Zaitun kami diperoleh daripada Palestin dan diperah menggunakan kaedah tradisional turun-temurun."
+      },
+      {
+        "q": "Adakah anda menawarkan pilihan borong atau perniagaan?",
+        "a": "Ya. Arabian Village menawarkan pilihan ritual peribadi untuk individu, serta pilihan perniagaan/borong untuk peruncit dan rakan kongsi."
+      },
+      {
+        "q": "Di mana saya boleh membeli minyak zaitun Arabian Village?",
+        "a": "Minyak zaitun Arabian Village tersedia terus melalui laman ini, dengan pilihan runcit dan borong, serta melalui pengedar rasmi kami, Berkat Madinah Store, di Malaysia."
+      }
     ]
   },
   "productsPage": {
@@ -501,5 +630,168 @@
     "emailPlaceholder": "E-mel anda",
     "join": "Sertai",
     "rights": "Hak cipta terpelihara."
+  },
+  "infusedPage": {
+    "kicker": "Koleksi Infusi",
+    "collectionTitle": "Minyak Zaitun Dara Ekstra Infusi",
+    "collectionIntro": "Enam rasa baharu daripada minyak zaitun Palestin perahan sejuk pertama kami, diinfusi perlahan dengan herba, bunga dan rempah asli. Terokai setiap rasa di bawah — pratonton apa yang bakal tiba.",
+    "comingSoonBadge": "Akan Datang",
+    "notesTitle": "Rasa & Aroma",
+    "benefitsTitle": "Kenapa Anda Akan Menyukainya",
+    "usesTitle": "Cara Penggunaan",
+    "otherTitle": "Terokai Koleksi Yang Lain",
+    "backToProducts": "Lihat Semua Produk",
+    "cta": {
+      "title": "Nikmati Yang Asli Sementara Menunggu",
+      "text": "Koleksi infusi kini dalam persiapan akhir. Minyak zaitun Palestin klasik perahan sejuk pertama kami tersedia hari ini — atau hubungi kami untuk menjadi yang pertama tahu apabila rasa baharu tiba.",
+      "shopCta": "Beli Minyak Klasik",
+      "contactCta": "Maklumkan Saya"
+    },
+    "products": {
+      "lavender-chamomile": {
+        "name": "Minyak Zaitun Dara Ekstra Infusi Lavender & Kamomil",
+        "tagline": "Tenang, berbunga dan keemasan",
+        "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Lavender & Kamomil | Arabian Village",
+        "seoDescription": "Minyak zaitun dara ekstra Palestin perahan sejuk, diinfusi perlahan dengan bunga lavender dan kamomil. Aroma bunga yang lembut dan akhiran semanis madu — sesuai untuk pencuci mulut, buah dan roti panas.",
+        "description": "Minyak zaitun Palestin perahan sejuk pertama kami, diinfusi perlahan dengan bunga lavender dan kamomil asli. Hasilnya minyak berbunga yang lembut dengan ketenangan semanis madu — untuk malam yang santai dan hidangan manis.",
+        "imageAlt": "Botol minyak zaitun dara ekstra Arabian Village infusi lavender dan kamomil",
+        "notes": [
+          "Aroma lavender lembut berbunga",
+          "Akhiran kamomil semanis madu",
+          "Tekstur licin seperti mentega"
+        ],
+        "benefits": [
+          "Bunga asli, diinfusi perlahan — tanpa perisa ekstrak",
+          "Asasnya minyak zaitun Palestin perahan sejuk pertama",
+          "Tiada perisa, pewarna atau bahan tambahan tiruan",
+          "Dibotolkan dalam kelompok kecil untuk kesegaran"
+        ],
+        "uses": [
+          "Titiskan ke atas kek, buah segar atau yogurt untuk sentuhan berbunga.",
+          "Pukul bersama lemon dan madu menjadi dresing salad yang lembut.",
+          "Hidangkan dengan roti panas dan sesudu madu di waktu minum petang."
+        ]
+      },
+      "blackseed": {
+        "name": "Minyak Zaitun Dara Ekstra Infusi Habbatus Sauda",
+        "tagline": "Biji yang berkat, dalam minyak keemasan",
+        "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Habbatus Sauda | Arabian Village",
+        "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan habbatus sauda (Nigella sativa). Hangat, berlada dan bersahaja — gandingan warisan untuk meja sarapan dan pencicah.",
+        "description": "Dua khazanah rantau ini dalam satu botol: minyak zaitun perahan sejuk kami diinfusi dengan habbatus sauda. Hangat, berlada dengan kedalaman bersahaja — gandingan yang dipercayai turun-temurun di meja sarapan.",
+        "imageAlt": "Botol minyak zaitun dara ekstra Arabian Village infusi habbatus sauda",
+        "notes": [
+          "Pedas lada yang hangat",
+          "Kedalaman herba bersahaja",
+          "Bisikan aroma seakan jintan"
+        ],
+        "benefits": [
+          "Biji Nigella sativa tulen, diinfusi perlahan",
+          "Asasnya minyak zaitun Palestin perahan sejuk pertama",
+          "Tiada perisa, pewarna atau bahan tambahan tiruan",
+          "Dibotolkan dalam kelompok kecil untuk kesegaran"
+        ],
+        "uses": [
+          "Titiskan ke atas labneh, hummus atau keju segar.",
+          "Ambil sesudu di waktu pagi bersama madu, cara tradisional.",
+          "Sempurnakan sup lentil dan hidangan bijirin panas."
+        ]
+      },
+      "turmeric-black-pepper": {
+        "name": "Minyak Zaitun Dara Ekstra Infusi Kunyit & Lada Hitam",
+        "tagline": "Kehangatan keemasan dengan sentakan lada",
+        "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Kunyit & Lada Hitam | Arabian Village",
+        "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan akar kunyit dan lada hitam tumbuk. Warna keemasan pekat dan kehangatan bersahaja — untuk dresing, perapan dan sayur panggang.",
+        "description": "Akar kunyit dan lada hitam tumbuk, diinfusi perlahan dalam minyak zaitun perahan sejuk pertama kami. Minyak keemasan pekat dengan kehangatan bersahaja dan akhiran lada yang bersih — menyegarkan masakan harian.",
+        "imageAlt": "Botol minyak zaitun dara ekstra Arabian Village infusi kunyit dan lada hitam",
+        "notes": [
+          "Warna keemasan pekat",
+          "Kehangatan kunyit bersahaja",
+          "Akhiran lada hitam yang bersih"
+        ],
+        "benefits": [
+          "Akar kunyit asli dan biji lada tumbuk, diinfusi perlahan",
+          "Asasnya minyak zaitun Palestin perahan sejuk pertama",
+          "Tiada perisa, pewarna atau bahan tambahan tiruan",
+          "Dibotolkan dalam kelompok kecil untuk kesegaran"
+        ],
+        "uses": [
+          "Pukul menjadi dresing salad keemasan dan perapan.",
+          "Titiskan ke atas sayur panggang dan nasi.",
+          "Kacau ke dalam sup dan stu sejurus sebelum dihidang."
+        ]
+      },
+      "rosemary-basil": {
+        "name": "Minyak Zaitun Dara Ekstra Infusi Rosemary & Selasih",
+        "tagline": "Taman Mediterranean dalam sebotol",
+        "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Rosemary & Selasih | Arabian Village",
+        "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan rosemary dan selasih manis. Segar, hijau dan cerah — untuk mencicah roti, pasta dan hidangan panggang.",
+        "description": "Tangkai rosemary dan daun selasih manis, diinfusi perlahan dalam minyak zaitun perahan sejuk pertama kami. Segar seperti hutan pain dan hijau — menjadikan sepinggan roti panas permulaan jamuan Mediterranean.",
+        "imageAlt": "Botol minyak zaitun dara ekstra Arabian Village infusi rosemary dan selasih",
+        "notes": [
+          "Aroma rosemary segar seperti pain",
+          "Nota selasih manis kehijauan",
+          "Akhiran herba yang cerah"
+        ],
+        "benefits": [
+          "Tangkai rosemary dan daun selasih asli, diinfusi perlahan",
+          "Asasnya minyak zaitun Palestin perahan sejuk pertama",
+          "Tiada perisa, pewarna atau bahan tambahan tiruan",
+          "Dibotolkan dalam kelompok kecil untuk kesegaran"
+        ],
+        "uses": [
+          "Tuang ke dalam pinggan kecil untuk mencicah roti.",
+          "Gaul bersama pasta, ayam panggang atau ikan.",
+          "Sempurnakan salad tomato dan kentang panggang."
+        ]
+      },
+      "fennel-anise": {
+        "name": "Minyak Zaitun Dara Ekstra Infusi Adas & Jintan Manis",
+        "tagline": "Manis, harum dan berempah lembut",
+        "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Adas & Jintan Manis | Arabian Village",
+        "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan biji adas dan jintan manis. Nota manis dan harum seakan likuoris — sesuai dengan makanan laut, salad sitrus dan pembakaran.",
+        "description": "Biji adas dan jintan manis, diinfusi perlahan dalam minyak zaitun perahan sejuk pertama kami. Manis lembut dan harum dengan wangian seakan likuoris — memuji makanan laut, sitrus dan apa sahaja dari ketuhar.",
+        "imageAlt": "Botol minyak zaitun dara ekstra Arabian Village infusi adas dan jintan manis",
+        "notes": [
+          "Aroma manis seakan likuoris",
+          "Kesegaran adas yang rangup",
+          "Akhiran hangat dan bulat"
+        ],
+        "benefits": [
+          "Biji adas dan jintan manis asli, diinfusi perlahan",
+          "Asasnya minyak zaitun Palestin perahan sejuk pertama",
+          "Tiada perisa, pewarna atau bahan tambahan tiruan",
+          "Dibotolkan dalam kelompok kecil untuk kesegaran"
+        ],
+        "uses": [
+          "Titiskan ke atas ikan bakar dan makanan laut.",
+          "Cerahkan salad sitrus dan hirisan adas.",
+          "Sapu pada roti leper dan pastri sebelum dibakar."
+        ]
+      },
+      "wild-thyme": {
+        "name": "Minyak Zaitun Dara Ekstra Infusi Timi Liar (Za'atar)",
+        "tagline": "Warisan za'atar, terus dari perbukitan",
+        "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Timi Liar (Za'atar) | Arabian Village",
+        "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan timi liar (za'atar). Pekat, gurih dan berlada — teman klasik roti panas, labneh dan manakish.",
+        "description": "Timi liar yang dipetik cara tradisional, diinfusi perlahan dalam minyak zaitun perahan sejuk pertama kami. Gurih pekat dengan akhiran pergunungan berlada — gandingan tertua di meja sarapan Syam.",
+        "imageAlt": "Botol minyak zaitun dara ekstra Arabian Village infusi timi liar za'atar",
+        "notes": [
+          "Aroma timi liar yang pekat",
+          "Kedalaman herba yang gurih",
+          "Akhiran pergunungan berlada"
+        ],
+        "benefits": [
+          "Timi liar (za'atar) tulen, diinfusi perlahan",
+          "Asasnya minyak zaitun Palestin perahan sejuk pertama",
+          "Tiada perisa, pewarna atau bahan tambahan tiruan",
+          "Dibotolkan dalam kelompok kecil untuk kesegaran"
+        ],
+        "uses": [
+          "Cicah roti panas — sarapan klasik minyak dan za'atar.",
+          "Titiskan ke atas labneh, halloumi atau salad segar.",
+          "Sapu pada manakish dan roti leper sebelum dibakar."
+        ]
+      }
+    }
   }
 }

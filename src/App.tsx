@@ -3,6 +3,7 @@ import { LangLayout } from './routes/LangLayout';
 import { ScrollToTop } from './routes/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { ProductsPage } from './pages/ProductsPage';
+import { InfusedProductPage } from './pages/InfusedProductPage';
 import { ShopPage } from './pages/ShopPage';
 import { WhyUsPage } from './pages/WhyUsPage';
 import { ContactPage } from './pages/ContactPage';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/:lang" element={<LangLayout />}>
           <Route index element={<HomePage />} />
           <Route path="products" element={<ProductsPage />} />
+          <Route path="products/:slug" element={<InfusedProductPage />} />
           <Route path="shop" element={<ShopPage />} />
           <Route path="why-us" element={<WhyUsPage />} />
           <Route path="contact" element={<ContactPage />} />
