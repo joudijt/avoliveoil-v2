@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run build:llms && tsc -b && vite build",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "prerender": "node scripts/prerender.mjs",
     "build:prerender": "npm run build && npm run prerender",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:llms": "node scripts/build-llms.mjs",
+    "check:llms": "node scripts/build-llms.mjs --check"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

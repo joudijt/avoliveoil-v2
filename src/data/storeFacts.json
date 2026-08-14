@@ -1,0 +1,99 @@
+{
+  "_comment": "Single source of truth for every checkable fact about the seller, the branches and the prices. Imported by src/config/site.ts (pages + JSON-LD) and read by scripts/build-llms.mjs (llms*.txt). Plain JSON because the generator is .mjs and cannot import .ts — same pattern as infusedSlugs.json. Never retype any value below into content; add a placeholder to the llms templates instead.",
+  "seller": {
+    "name": "Berkat Madinah Store",
+    "nameMs": "Berkat Madinah Store",
+    "nameAr": "متجر بركات المدينة",
+    "tagline": "The Origin of Arabic Food",
+    "url": "https://madinah.com.my/en/",
+    "email": "cs@madinah.com.my",
+    "whatsappDisplay": "+60 11-1111 9912",
+    "whatsappE164": "+601111119912",
+    "whatsappDigits": "601111119912",
+    "foundedYear": 2010,
+    "shopeeUrl": "https://shopee.com.my/arabianvillagemalaysia",
+    "tiktokShopUrl": "https://vt.tiktok.com/ZSX2MbR9G/?page=TikTokShop"
+  },
+  "scale": {
+    "customersServed": 500000,
+    "customersServedDisplay": "500,000+",
+    "employees": "150+",
+    "products": "6,000+",
+    "categories": "12+",
+    "sourceCountries": "15+",
+    "customerRating": 5
+  },
+  "hours": {
+    "opens": "08:00",
+    "closes": "24:00",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "displayEn": "8:00 am – 12:00 midnight, Monday through Sunday",
+    "displayMs": "8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad",
+    "displayAr": "من 8:00 صباحاً حتى 12:00 منتصف الليل، من الاثنين إلى الأحد",
+    "note": "Festive days such as Hari Raya can differ — confirm on WhatsApp."
+  },
+  "branches": [
+    {
+      "id": "ampang",
+      "labelEn": "Ampang Jaya",
+      "labelMs": "Ampang Jaya",
+      "labelAr": "أمبانج جايا",
+      "street": "Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman",
+      "postalCode": "68000",
+      "locality": "Ampang Jaya",
+      "region": "Selangor",
+      "country": "MY",
+      "stocksBrand": true,
+      "isLarger": false
+    },
+    {
+      "id": "batu-caves",
+      "labelEn": "Batu Caves / Prima Seri Gombak",
+      "labelMs": "Batu Caves / Prima Seri Gombak",
+      "labelAr": "باتو كيفز / بريما سري غومباك",
+      "street": "32, Jalan Prima SG 2, Prima Seri Gombak",
+      "postalCode": "68100",
+      "locality": "Batu Caves",
+      "region": "Selangor",
+      "country": "MY",
+      "stocksBrand": true,
+      "isLarger": true
+    }
+  ],
+  "restaurant": {
+    "street": "1541, Persiaran Putra Sulaiman, Taman Putra Sulaiman",
+    "postalCode": "68000",
+    "locality": "Ampang",
+    "region": "Selangor",
+    "country": "MY",
+    "note": "No trading name was supplied by the owner — do not invent one."
+  },
+  "prices": {
+    "currency": "MYR",
+    "ml250": {
+      "amount": "59.00",
+      "display": "RM59.00",
+      "perLitreDisplay": "RM236"
+    },
+    "ml500": {
+      "amount": "103.00",
+      "display": "RM103.00",
+      "perLitreDisplay": "RM206"
+    },
+    "appliesTo": "Same price by size for the classic oil and for every flavour of the Infused Collection (owner answer Q12, read as price-by-size — see docs/llms-rebuild-spec.md)."
+  },
+  "compliance": {
+    "market": "Malaysia",
+    "ruleEn": "Malaysian Food Regulations 1985, Regulation 18(6): food may not be labelled or advertised as preventing, alleviating, treating or curing any disease. Benefit words appear in the keyword lists as terms people search for — never as a claim about this product.",
+    "ruleMs": "Peraturan-Peraturan Makanan 1985, Peraturan 18(6): makanan tidak boleh dilabel atau diiklankan sebagai mencegah, melegakan, merawat atau menyembuhkan sebarang penyakit. Perkataan khasiat muncul dalam senarai kata kunci sebagai apa yang orang cari — bukan sebagai dakwaan tentang produk ini.",
+    "ruleAr": "لوائح الأغذية الماليزية 1985، المادة 18(6): لا يجوز وصف أي غذاء أو الإعلان عنه على أنه يمنع مرضاً أو يخففه أو يعالجه أو يشفيه. وكلمات الفوائد ترد في قوائم الكلمات المفتاحية بوصفها ما يبحث عنه الناس — لا بوصفها ادّعاءً عن هذا المنتج."
+  }
+}

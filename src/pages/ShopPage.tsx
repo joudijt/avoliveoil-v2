@@ -9,7 +9,7 @@ import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Modal } from '../components/ui/Modal';
 import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
-import { SHOPEE_URL, TIKTOK_SHOP_URL } from '../config/site';
+import { SHOPEE_URL, TIKTOK_SHOP_URL, MADINAH_NAME } from '../config/site';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
 interface FaqItem {
@@ -49,7 +49,14 @@ export function ShopPage() {
   useMarkAppReady();
   const [partnerOpen, setPartnerOpen] = useState(false);
 
-  const faqItems = t('shopPage.faq.items', { returnObjects: true }) as FaqItem[];
+  /**
+   * i18next does not interpolate inside `returnObjects`, so the seller name is
+   * substituted here — it still comes from config, never from translated copy.
+   */
+  const faqItems = (t('shopPage.faq.items', { returnObjects: true }) as FaqItem[]).map((item) => ({
+    q: item.q.replace(/\{\{store\}\}/g, MADINAH_NAME),
+    a: item.a.replace(/\{\{store\}\}/g, MADINAH_NAME),
+  }));
 
   return (
     <>
@@ -65,7 +72,7 @@ export function ShopPage() {
               {t('shopPage.title')}
             </h1>
             <p className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
-              {t('shopPage.subtitle')}
+              {t('shopPage.subtitle', { store: MADINAH_NAME })}
             </p>
           </div>
 

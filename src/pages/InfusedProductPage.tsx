@@ -6,6 +6,7 @@ import { Footer } from '../components/ui/Footer';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { INFUSED_PRODUCTS, findInfusedProduct } from '../data/infusedProducts';
+import { PRICES, MADINAH_NAME } from '../config/site';
 
 const ALL_LANGS = ['en', 'ar', 'ms'] as const;
 
@@ -66,8 +67,12 @@ export function InfusedProductPage() {
                 {t(`${key}.description`)}
               </p>
               <span className="mt-6 inline-block rounded-full bg-gold/15 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
-                {t('infusedPage.comingSoonBadge')}
+                {t('infusedPage.availableBadge', { store: MADINAH_NAME })}
               </span>
+              {/* Prices from storeFacts.json — same numbers as the JSON-LD offer and llms.txt. */}
+              <p className="mt-4 text-lg font-medium text-olive-dark">
+                250ml — {PRICES.ml250.display} · 500ml — {PRICES.ml500.display}
+              </p>
             </div>
             <div className="flex items-center justify-center">
               <img
@@ -132,9 +137,11 @@ export function InfusedProductPage() {
         {/* -------------------------------------------------------------- cta */}
         <section className="bg-olive-dark px-6 py-20 text-center md:px-16 md:py-28">
           <div className="mx-auto max-w-2xl">
-            <h2 className="text-3xl text-cream md:text-4xl">{t('infusedPage.cta.title')}</h2>
+            <h2 className="text-3xl text-cream md:text-4xl">
+              {t('infusedPage.cta.title', { store: MADINAH_NAME })}
+            </h2>
             <p className="mt-4 font-body text-base font-light leading-relaxed text-cream/70">
-              {t('infusedPage.cta.text')}
+              {t('infusedPage.cta.text', { store: MADINAH_NAME })}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link

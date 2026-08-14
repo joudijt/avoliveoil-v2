@@ -6,7 +6,7 @@
     },
     "products": {
       "title": "Our Products | Organic Palestinian Olive Oil 500ml — Arabian Village",
-      "description": "Meet Arabian Village Organic Palestinian Olive Oil: first cold press, new harvest, acidity below 0.028%. See flavor notes, quality standards, and the flavors coming next."
+      "description": "Arabian Village Organic Palestinian Olive Oil: first cold press, new harvest, acidity below 0.028%. Classic and six infused flavours, 250ml RM59 and 500ml RM103, at Berkat Madinah Store."
     },
     "shop": {
       "title": "Where to Buy | Shopee, TikTok Shop & Berkat Madinah Store — Arabian Village",
@@ -232,14 +232,15 @@
         "label": "Natural"
       },
       {
-        "value": 5000,
+        "value": 500000,
         "suffix": "+",
-        "label": "Happy Customers"
+        "label": "Customers at Berkat Madinah"
       },
       {
-        "value": 20,
+        "value": 0,
+        "fromFoundedYear": true,
         "suffix": "+",
-        "label": "Years Experience"
+        "label": "Years Since 2010"
       }
     ],
     "premiumQuality": "Premium Quality"
@@ -300,7 +301,7 @@
     "title": "Organic Palestinian Olive Oil",
     "intro": "One real harvest, done properly. Every bottle of Arabian Village olive oil is first cold pressed within hours of picking, from organic groves in Palestine — no heat, no chemicals, no shortcuts.",
     "product": {
-      "name": "Organic Palestinian Olive Oil — 500ml",
+      "name": "Organic Palestinian Olive Oil",
       "tagline": "First Cold Press · New Harvest · Extra Virgin",
       "description": "Our signature bottle: 100% Palestinian olives, hand-harvested and cold-pressed within hours to lock in aroma, polyphenols, and a naturally peppery, grassy finish. Organic and halal.",
       "highlights": [
@@ -326,30 +327,13 @@
         },
         {
           "label": "Size",
-          "value": "500ml"
+          "value": "250ml & 500ml"
         }
-      ]
+      ],
+      "priceLabel": "Price",
+      "priceNote": "At {{store}} — the only place Arabian Village is sold in Malaysia."
     },
     "benefitsKicker": "Why This Bottle",
-    "comingSoon": {
-      "kicker": "Coming Soon",
-      "title": "More Flavors on the Way",
-      "text": "This is just the beginning of our collection. We're preparing new harvests and flavor profiles — check back soon, or follow our socials for the announcement.",
-      "items": [
-        {
-          "title": "New Flavor Profile",
-          "desc": "Announcement coming soon."
-        },
-        {
-          "title": "Limited Reserve Harvest",
-          "desc": "Announcement coming soon."
-        },
-        {
-          "title": "Gift & Bundle Sets",
-          "desc": "Announcement coming soon."
-        }
-      ]
-    },
     "links": {
       "shopTitle": "Ready to Order?",
       "shopText": "Find Arabian Village olive oil on Shopee, TikTok Shop, or through our official Malaysia distributor.",
@@ -382,15 +366,22 @@
         },
         {
           "q": "Will there be more flavors or sizes available?",
-          "a": "Yes — we're developing new harvests and formats. This product page will be updated as soon as they're ready."
+          "a": "The range today is the classic oil plus six infused flavours, each in 250ml and 500ml. Nothing further is in preparation — if that changes, this page will say so."
         }
       ]
+    },
+    "whereToBuy": {
+      "kicker": "Where to Buy",
+      "title": "Stocked at {{store}}",
+      "text": "{{store}} is the only seller of Arabian Village in Malaysia. Both branches carry the classic oil and all six infused flavours; the Shopee and TikTok Shop listings are the same shop's own online counters.",
+      "hours": "Open 8:00 am – 12:00 midnight, seven days a week",
+      "whatsappCta": "Order on WhatsApp"
     }
   },
   "shopPage": {
     "kicker": "Choose Your Store",
     "title": "Order From Your Favourite Platform",
-    "subtitle": "Arabian Village olive oil is available through our official Malaysia distributor and on the marketplaces you already trust.",
+    "subtitle": "Arabian Village olive oil is sold exclusively by {{store}} — in store, on WhatsApp, and through the store's own online counters.",
     "cards": {
       "madinah": {
         "title": "Berkat Madinah Store",
@@ -414,7 +405,7 @@
       "items": [
         {
           "q": "Which platform should I order from?",
-          "a": "All three are official and verified. Choose whichever platform you already use and trust — pricing and the product are the same."
+          "a": "All of them lead to the same seller. {{store}} is the only seller of Arabian Village in Malaysia; its Shopee and TikTok Shop counters are that same shop online, at the same price. Choose whichever you already use, or visit the branch in Ampang Jaya or Batu Caves."
         },
         {
           "q": "Do you deliver across Malaysia?",
@@ -634,18 +625,17 @@
   "infusedPage": {
     "kicker": "Infused Collection",
     "collectionTitle": "Infused Extra Virgin Olive Oil",
-    "collectionIntro": "Six new expressions of our first cold pressed Palestinian olive oil, slow-infused with whole herbs, flowers and spices. Explore each flavor below — a preview of what is coming to the shelf.",
-    "comingSoonBadge": "Coming Soon",
+    "collectionIntro": "Six expressions of our first cold pressed Palestinian olive oil, slow-infused with whole herbs, flowers and spices. All six are on the shelf at {{store}} — explore each flavour below.",
     "notesTitle": "Flavor & Aroma",
     "benefitsTitle": "Why You'll Love It",
     "usesTitle": "How to Use It",
     "otherTitle": "Explore the Rest of the Collection",
     "backToProducts": "View All Products",
     "cta": {
-      "title": "Taste the Original While You Wait",
-      "text": "The infused collection is in final preparation. Our classic first cold pressed Palestinian olive oil is available today — or write to us to hear first when the new flavors arrive.",
-      "shopCta": "Shop the Classic Oil",
-      "contactCta": "Get Notified"
+      "title": "Where to Buy the Infused Collection",
+      "text": "Every flavour is stocked at {{store}} in Ampang Jaya and Batu Caves, open 8:00 am to midnight every day. Message the WhatsApp line to check a specific flavour before you travel.",
+      "shopCta": "Where to Buy",
+      "contactCta": "Contact Us"
     },
     "products": {
       "lavender-chamomile": {
@@ -792,6 +782,7 @@
           "Brush onto manakish and flatbreads before baking."
         ]
       }
-    }
+    },
+    "availableBadge": "Now at {{store}}"
   }
 }

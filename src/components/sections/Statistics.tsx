@@ -3,13 +3,23 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaCrown } from 'react-icons/fa';
+import { STORE } from '../../config/site';
 
 gsap.registerPlugin(ScrollTrigger);
+
+/** Computed, not stored: the prerendered value is refreshed by every build. */
+const YEARS_TRADING = new Date().getFullYear() - STORE.seller.foundedYear;
 
 interface StatItem {
   value: number;
   suffix: string;
   label: string;
+  /**
+   * Years-trading tiles derive their number from the seller's founding year in
+   * storeFacts.json instead of carrying a hardcoded count that silently rots one
+   * new year at a time. A stat nobody recomputes becomes a false claim.
+   */
+  fromFoundedYear?: boolean;
 }
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
@@ -51,7 +61,10 @@ export function Statistics() {
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 text-center sm:grid-cols-2 md:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label}>
-            <Counter value={s.value} suffix={s.suffix} />
+            <Counter
+              value={s.fromFoundedYear ? YEARS_TRADING : s.value}
+              suffix={s.suffix}
+            />
             <p className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{s.label}</p>
           </div>
         ))}

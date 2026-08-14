@@ -6,7 +6,7 @@
     },
     "products": {
       "title": "Produk Kami | Minyak Zaitun Palestin Organik 500ml — Arabian Village",
-      "description": "Kenali Minyak Zaitun Palestin Organik Arabian Village: perahan sejuk pertama, tuaian baharu, keasidan bawah 0.028%. Lihat rasa, standard kualiti, dan rasa akan datang."
+      "description": "Minyak Zaitun Palestin Organik Arabian Village: perahan sejuk pertama, tuaian baharu, keasidan bawah 0.028%. Klasik dan enam rasa infusi, 250ml RM59 dan 500ml RM103, di Berkat Madinah Store."
     },
     "shop": {
       "title": "Di Mana Untuk Beli | Shopee, TikTok Shop & Berkat Madinah Store — Arabian Village",
@@ -232,14 +232,15 @@
         "label": "Semula Jadi"
       },
       {
-        "value": 5000,
+        "value": 500000,
         "suffix": "+",
-        "label": "Pelanggan Gembira"
+        "label": "Pelanggan Berkat Madinah"
       },
       {
-        "value": 20,
+        "value": 0,
+        "fromFoundedYear": true,
         "suffix": "+",
-        "label": "Tahun Pengalaman"
+        "label": "Tahun Sejak 2010"
       }
     ],
     "premiumQuality": "Kualiti Premium"
@@ -300,7 +301,7 @@
     "title": "Minyak Zaitun Palestin Organik",
     "intro": "Satu tuaian sebenar, dihasilkan dengan betul. Setiap botol Arabian Village diperah sejuk dalam beberapa jam selepas dipetik, daripada dusun organik di Palestin — tanpa haba, tanpa bahan kimia, tanpa jalan pintas.",
     "product": {
-      "name": "Minyak Zaitun Palestin Organik — 500ml",
+      "name": "Minyak Zaitun Palestin Organik",
       "tagline": "Perahan Sejuk Pertama · Tuaian Baharu · Extra Virgin",
       "description": "Botol tandatangan kami: 100% zaitun Palestin, dituai dengan tangan dan diperah sejuk dalam beberapa jam untuk mengekalkan aromanya, polifenolnya, dan rasa lada-rumput semula jadinya. Organik dan halal.",
       "highlights": [
@@ -326,30 +327,13 @@
         },
         {
           "label": "Saiz",
-          "value": "500ml"
+          "value": "250ml & 500ml"
         }
-      ]
+      ],
+      "priceLabel": "Harga",
+      "priceNote": "Di {{store}} — satu-satunya tempat Arabian Village dijual di Malaysia."
     },
     "benefitsKicker": "Kenapa Botol Ini",
-    "comingSoon": {
-      "kicker": "Akan Datang",
-      "title": "Lebih Banyak Rasa Akan Menyusul",
-      "text": "Ini baru permulaan koleksi kami. Kami sedang menyediakan tuaian dan rasa baharu — nantikan pengumuman tidak lama lagi, atau ikuti media sosial kami.",
-      "items": [
-        {
-          "title": "Rasa Baharu",
-          "desc": "Pengumuman tidak lama lagi."
-        },
-        {
-          "title": "Tuaian Simpanan Terhad",
-          "desc": "Pengumuman tidak lama lagi."
-        },
-        {
-          "title": "Set Hadiah & Bundle",
-          "desc": "Pengumuman tidak lama lagi."
-        }
-      ]
-    },
     "links": {
       "shopTitle": "Bersedia Untuk Menempah?",
       "shopText": "Dapatkan minyak zaitun Arabian Village di Shopee, TikTok Shop, atau melalui pengedar rasmi kami di Malaysia.",
@@ -382,15 +366,22 @@
         },
         {
           "q": "Adakah rasa atau saiz tambahan akan tersedia?",
-          "a": "Ya — kami sedang membangunkan tuaian dan format baharu. Halaman produk ini akan dikemas kini sebaik sahaja bersedia."
+          "a": "Rangkaian hari ini ialah minyak klasik berserta enam rasa infusi, setiap satu dalam 250ml dan 500ml. Tiada apa-apa lagi sedang disediakan — jika berubah, halaman ini akan menyatakannya."
         }
       ]
+    },
+    "whereToBuy": {
+      "kicker": "Di Mana Nak Beli",
+      "title": "Ada di {{store}}",
+      "text": "{{store}} ialah satu-satunya penjual Arabian Village di Malaysia. Kedua-dua cawangan menyimpan minyak klasik dan kesemua enam rasa infusi; penyenaraian Shopee dan TikTok Shop ialah kaunter dalam talian kedai yang sama.",
+      "hours": "Buka 8:00 pagi – 12:00 tengah malam, tujuh hari seminggu",
+      "whatsappCta": "Pesan melalui WhatsApp"
     }
   },
   "shopPage": {
     "kicker": "Pilih Kedai Anda",
     "title": "Tempah Dari Platform Kegemaran Anda",
-    "subtitle": "Minyak zaitun Arabian Village tersedia melalui pengedar rasmi kami di Malaysia dan platform yang telah anda percayai.",
+    "subtitle": "Minyak zaitun Arabian Village dijual secara eksklusif oleh {{store}} — di kedai, melalui WhatsApp, dan melalui kaunter dalam talian kedai itu sendiri.",
     "cards": {
       "madinah": {
         "title": "Berkat Madinah Store",
@@ -414,7 +405,7 @@
       "items": [
         {
           "q": "Platform mana yang perlu saya guna untuk menempah?",
-          "a": "Ketiga-tiga platform adalah rasmi dan disahkan. Pilih platform yang anda sudah guna dan percaya — harga dan produknya sama."
+          "a": "Semuanya membawa kepada penjual yang sama. {{store}} ialah satu-satunya penjual Arabian Village di Malaysia; kaunter Shopee dan TikTok Shop ialah kedai yang sama dalam talian, pada harga yang sama. Pilih mana yang anda sudah guna, atau kunjungi cawangan di Ampang Jaya atau Batu Caves."
         },
         {
           "q": "Adakah anda menghantar ke seluruh Malaysia?",
@@ -634,18 +625,17 @@
   "infusedPage": {
     "kicker": "Koleksi Infusi",
     "collectionTitle": "Minyak Zaitun Dara Ekstra Infusi",
-    "collectionIntro": "Enam rasa baharu daripada minyak zaitun Palestin perahan sejuk pertama kami, diinfusi perlahan dengan herba, bunga dan rempah asli. Terokai setiap rasa di bawah — pratonton apa yang bakal tiba.",
-    "comingSoonBadge": "Akan Datang",
+    "collectionIntro": "Enam rasa daripada minyak zaitun Palestin perahan sejuk pertama kami, diinfusi perlahan dengan herba, bunga dan rempah asli. Kesemua enam ada di rak {{store}} — terokai setiap rasa di bawah.",
     "notesTitle": "Rasa & Aroma",
     "benefitsTitle": "Kenapa Anda Akan Menyukainya",
     "usesTitle": "Cara Penggunaan",
     "otherTitle": "Terokai Koleksi Yang Lain",
     "backToProducts": "Lihat Semua Produk",
     "cta": {
-      "title": "Nikmati Yang Asli Sementara Menunggu",
-      "text": "Koleksi infusi kini dalam persiapan akhir. Minyak zaitun Palestin klasik perahan sejuk pertama kami tersedia hari ini — atau hubungi kami untuk menjadi yang pertama tahu apabila rasa baharu tiba.",
-      "shopCta": "Beli Minyak Klasik",
-      "contactCta": "Maklumkan Saya"
+      "title": "Di Mana Nak Beli Koleksi Infusi",
+      "text": "Setiap rasa ada di {{store}}, cawangan Ampang Jaya dan Batu Caves, buka 8:00 pagi hingga tengah malam setiap hari. WhatsApp dahulu untuk semak rasa tertentu sebelum anda bergerak.",
+      "shopCta": "Di Mana Nak Beli",
+      "contactCta": "Hubungi Kami"
     },
     "products": {
       "lavender-chamomile": {
@@ -792,6 +782,7 @@
           "Sapu pada manakish dan roti leper sebelum dibakar."
         ]
       }
-    }
+    },
+    "availableBadge": "Kini di {{store}}"
   }
 }

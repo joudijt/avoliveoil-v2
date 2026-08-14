@@ -8,15 +8,11 @@ import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import bottleImg from '../assets/images/bottle-cutout.png';
 import { INFUSED_PRODUCTS } from '../data/infusedProducts';
+import { PRICES, STORE, STORE_BRANCHES, MADINAH_NAME } from '../config/site';
 
 interface Highlight {
   label: string;
   value: string;
-}
-
-interface ComingSoonItem {
-  title: string;
-  desc: string;
 }
 
 interface FaqItem {
@@ -30,7 +26,6 @@ export function ProductsPage() {
   useMarkAppReady();
 
   const highlights = t('productsPage.product.highlights', { returnObjects: true }) as Highlight[];
-  const comingSoonItems = t('productsPage.comingSoon.items', { returnObjects: true }) as ComingSoonItem[];
   const faqItems = t('productsPage.faq.items', { returnObjects: true }) as FaqItem[];
 
   return (
@@ -77,6 +72,16 @@ export function ProductsPage() {
               {t('productsPage.product.description')}
             </p>
 
+            {/* Price comes from storeFacts.json via config, never from translated copy —
+                the same values the JSON-LD offers and llms.txt publish. */}
+            <p className="mt-6 text-lg font-medium text-olive-dark">
+              <span className="text-gold">{t('productsPage.product.priceLabel')}</span>{' '}
+              250ml — {PRICES.ml250.display} · 500ml — {PRICES.ml500.display}
+            </p>
+            <p className="mt-1 font-body text-sm font-light text-brown/70">
+              {t('productsPage.product.priceNote', { store: MADINAH_NAME })}
+            </p>
+
             <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
               {highlights.map((h) => (
                 <div
@@ -98,7 +103,7 @@ export function ProductsPage() {
               {t('infusedPage.collectionTitle')}
             </h2>
             <p className="mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
-              {t('infusedPage.collectionIntro')}
+              {t('infusedPage.collectionIntro', { store: MADINAH_NAME })}
             </p>
 
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -109,7 +114,7 @@ export function ProductsPage() {
                   className="group rounded-2xl border border-olive-dark/10 bg-cream p-6 text-start transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]"
                 >
                   <span className="inline-block rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
-                    {t('infusedPage.comingSoonBadge')}
+                    {t('infusedPage.availableBadge', { store: MADINAH_NAME })}
                   </span>
                   <h3 className="mt-4 text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold">
                     {t(`infusedPage.products.${product.id}.name`)}
@@ -123,30 +128,46 @@ export function ProductsPage() {
           </div>
         </section>
 
+        {/* The "more flavours / gift sets coming soon" block was removed: the owner
+            confirmed there is no seventh flavour and no bundle in preparation, and an
+            announcement nobody can honour is an invented promise. Where to buy replaces it. */}
         <section className="bg-[#E8E2D7] px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-5xl text-start">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('productsPage.comingSoon.kicker')}</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-gold">
+              {t('productsPage.whereToBuy.kicker')}
+            </p>
             <h2 className="mt-3 max-w-2xl text-3xl text-olive-dark md:text-4xl">
-              {t('productsPage.comingSoon.title')}
+              {t('productsPage.whereToBuy.title', { store: MADINAH_NAME })}
             </h2>
-            <p className="mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
-              {t('productsPage.comingSoon.text')}
+            <p className="mt-4 max-w-2xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+              {t('productsPage.whereToBuy.text', { store: MADINAH_NAME })}
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-              {comingSoonItems.map((item) => (
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {STORE_BRANCHES.map((branch) => (
                 <div
-                  key={item.title}
-                  className="rounded-2xl border border-dashed border-olive-dark/20 bg-bg/60 p-8 text-start"
+                  key={branch.id}
+                  className="rounded-2xl border border-olive-dark/10 bg-bg/70 p-8 text-start"
                 >
-                  <span className="inline-block rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
-                    {t('productsPage.comingSoon.kicker')}
-                  </span>
-                  <h3 className="mt-4 text-lg text-olive-dark">{item.title}</h3>
-                  <p className="mt-2 text-sm font-light text-brown/60">{item.desc}</p>
+                  <h3 className="text-lg text-olive-dark">{branch.labelEn}</h3>
+                  <p className="mt-2 font-body text-sm font-light leading-relaxed text-brown/70">
+                    {branch.street}, {branch.postalCode} {branch.locality}, {branch.region}
+                  </p>
+                  <p className="mt-3 text-sm font-medium text-olive-dark">
+                    {t('productsPage.whereToBuy.hours')}
+                  </p>
                 </div>
               ))}
             </div>
+
+            <a
+              href={`https://wa.me/${STORE.seller.whatsappDigits}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-block rounded-full bg-olive-dark px-8 py-3 text-sm uppercase tracking-[0.2em] text-cream transition-colors duration-300 hover:bg-gold"
+            >
+              {t('productsPage.whereToBuy.whatsappCta')}
+            </a>
           </div>
         </section>
 

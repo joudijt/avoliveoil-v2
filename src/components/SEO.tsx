@@ -10,6 +10,12 @@ import {
   FACEBOOK_URL,
   SHOPEE_URL,
   TIKTOK_SHOP_URL,
+  STORE,
+  STORE_BRANCHES,
+  STORE_HOURS,
+  PRICES,
+  MADINAH_NAME,
+  MADINAH_URL,
 } from '../config/site';
 
 interface FaqItem {
@@ -136,6 +142,49 @@ export function SEO({
     inLanguage: lang,
   };
 
+  /**
+   * The seller, as a real place. Emitted on every page because "where do I buy this"
+   * is the question this site exists to answer, and because llms.txt makes the same
+   * exclusivity claim — an assistant that cross-checks the two must find them
+   * identical. Values come from storeFacts.json, never typed here.
+   */
+  const sellerSchema = {
+    '@context': 'https://schema.org',
+    '@id': `${SITE_URL}/#seller`,
+    '@type': 'GroceryStore',
+    name: MADINAH_NAME,
+    slogan: STORE.seller.tagline,
+    url: MADINAH_URL,
+    email: STORE.seller.email,
+    telephone: STORE.seller.whatsappE164,
+    foundingDate: String(STORE.seller.foundedYear),
+    priceRange: `${PRICES.ml250.display}–${PRICES.ml500.display}`,
+    sameAs: [SHOPEE_URL, TIKTOK_SHOP_URL, INSTAGRAM_URL, FACEBOOK_URL],
+    location: STORE_BRANCHES.map((b) => ({
+      '@type': 'GroceryStore',
+      name: `${MADINAH_NAME} — ${b.labelEn}`,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: b.street,
+        postalCode: b.postalCode,
+        addressLocality: b.locality,
+        addressRegion: b.region,
+        addressCountry: b.country,
+      },
+      telephone: STORE.seller.whatsappE164,
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: STORE_HOURS.days,
+        opens: STORE_HOURS.opens,
+        closes: STORE_HOURS.closes,
+      },
+    })),
+  };
+
+  /**
+   * Offers carry the real price and name the seller, so the JSON-LD, the page copy
+   * and llms.txt all state the same number. `offerCount` covers the two sizes.
+   */
   const productSchema =
     includeProductSchema || productMeta
       ? {
@@ -145,6 +194,16 @@ export function SEO({
           description: productMeta?.description ?? t('seo.products.description'),
           brand: { '@type': 'Brand', name: SITE_NAME },
           image: ogImage,
+          offers: {
+            '@type': 'AggregateOffer',
+            priceCurrency: PRICES.currency,
+            lowPrice: PRICES.ml250.amount,
+            highPrice: PRICES.ml500.amount,
+            offerCount: 2,
+            availability: 'https://schema.org/InStock',
+            seller: { '@id': `${SITE_URL}/#seller` },
+            areaServed: 'MY',
+          },
         }
       : null;
 
@@ -245,6 +304,7 @@ export function SEO({
       {article && <meta name="author" content={SITE_NAME} />}
 
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(sellerSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
       {productSchema && <script type="application/ld+json">{JSON.stringify(productSchema)}</script>}
       {articleSchema && <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>}
