@@ -287,7 +287,10 @@ const OUT = join(ROOT, 'AI-FACTS.yml');
 let final = text;
 if (existsSync(OUT)) {
   const prev = readFileSync(OUT, 'utf8');
-  const m = prev.match(/^\s*indexnow_key:\s*(\S+)\s*$/m);
+  // [ \t] not \s — \s matches the newline, so `indexnow_key:` with an empty
+  // value captured the next line's `blocked_paths:` as the key and IndexNow
+  // answered 422 InvalidRequestParameters.
+  const m = prev.match(/^[ \t]*indexnow_key:[ \t]*(\S+)[ \t]*$/m);
   if (m) final = text.replace('  indexnow_key:\n', `  indexnow_key: ${m[1]}\n`);
 }
 

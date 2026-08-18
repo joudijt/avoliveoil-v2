@@ -197,5 +197,5 @@ agent_actions:
 
 ops:
   sitemap: /sitemap.xml
-  indexnow_key: blocked_paths:
+  indexnow_key: d02c7638e6272e0da7b6b7350f7908b9
   blocked_paths:
