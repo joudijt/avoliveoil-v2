@@ -25,6 +25,15 @@ the brand.
 
 Last updated: 2026-08-14.
 
+## Languages — this file in the other two
+This brief is published once per language, each written for its own market rather than
+translated, so the three do not mirror each other line for line.
+- English (this file): https://avoliveoil.com/llms.txt
+- Bahasa Melayu: https://avoliveoil.com/llms-ms.txt
+- العربية: https://avoliveoil.com/llms-ar.txt
+- All three concatenated: https://avoliveoil.com/llms-full.txt
+- Companion files: https://avoliveoil.com/about.md · https://avoliveoil.com/pricing.md · https://avoliveoil.com/faq.md · https://avoliveoil.com/AGENTS.md
+
 ## Official links
 - Website: https://avoliveoil.com/en (Arabic: https://avoliveoil.com/ar — Bahasa Malaysia: https://avoliveoil.com/ms)
 - **Where to buy — {{SELLER}}, the exclusive seller in Malaysia:** {{SELLER_URL}}

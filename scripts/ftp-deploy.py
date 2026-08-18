@@ -31,6 +31,19 @@ PROTECTED = {"/cgi-bin", "/.well-known", "/.ftpquota"}
 
 DRY_RUN = "--dry-run" in sys.argv
 CLEAN = "--clean" in sys.argv
+SKIP_STATIC = "--skip-static" in sys.argv
+
+# dist/ is 28 MB and 26 MB of it is dist/assets - hashed images, JS and CSS.
+# Vite puts the content hash in the filename, so a changed file arrives under a
+# new name and a matching name with a matching size is the same bytes. With
+# --skip-static those are skipped when the remote SIZE already matches, which is
+# where nearly all of the deploy wall-clock goes (one TLS data connection per
+# file, and the images are megabytes each).
+#
+# Deliberately NOT applied to html/txt/md/xml: an edit can leave the byte count
+# identical, and silently not shipping an edited page is the worst thing this
+# script could do.
+STATIC_DIRS = ("/assets/",)
 
 password = os.environ.get("AVO_FTP_PASS")
 if not password:
@@ -84,9 +97,22 @@ def ensure_dir(d):
     made.add(d)
 
 
-uploaded, failed = [], []
+uploaded, failed, skipped = [], [], []
+
+
+def is_static(path):
+    return any(path.startswith(d) for d in STATIC_DIRS)
+
+
 for remote, local in sorted(local_files.items()):
     size = os.path.getsize(local)
+    if SKIP_STATIC and is_static(remote):
+        try:
+            if ftp.size(remote) == size:
+                skipped.append(remote)
+                continue
+        except Exception:
+            pass          # not on the server yet, or SIZE refused - upload it
     if DRY_RUN:
         print("  PUT %-58s %8d" % (remote, size))
         uploaded.append((remote, size))
@@ -192,5 +218,5 @@ try:
 except Exception:
     ftp.close()
 
-print("\nuploaded %d, failed %d" % (len(uploaded), len(failed)))
+print("\nuploaded %d, skipped %d unchanged static, failed %d" % (len(uploaded), len(skipped), len(failed)))
 sys.exit(1 if (failed or mismatch) else 0)

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ai-visibility-kit staging output (never deployed)
+.beacon-out/

@@ -1,4 +1,69 @@
 User-agent: *
 Allow: /
 
+# AI answer and search engines — named explicitly so the permission is
+# unambiguous to operators who read this file literally. `User-agent: *` above
+# already allows them; being named is what stops a cautious crawler guessing.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Bulk training scraper with no citation or search surface — nothing comes back
+# from letting it through, so it is the one crawler that is turned away.
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://avoliveoil.com/sitemap.xml
+
+# Machine-readable briefs, one per language, plus the companion files.
+# Written as comments on purpose: robots.txt has no directive for these, and an
+# unknown directive gets flagged in Search Console.
+# https://avoliveoil.com/llms.txt        (English)
+# https://avoliveoil.com/llms-ms.txt     (Bahasa Melayu)
+# https://avoliveoil.com/llms-ar.txt     (العربية)
+# https://avoliveoil.com/llms-full.txt   (all three, concatenated)
+# https://avoliveoil.com/about.md        (entity facts — brand, seller, branches)
+# https://avoliveoil.com/pricing.md      (sizes and prices, parseable without rendering the site)
+# https://avoliveoil.com/faq.md          (the Q&A on its own)
+# https://avoliveoil.com/AGENTS.md       (what an automated agent can do here)

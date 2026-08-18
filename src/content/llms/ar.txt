@@ -25,6 +25,15 @@
 
 آخر تحديث: 2026-08-14.
 
+## اللغات — هذا الملف باللغتين الأخريين
+يُنشر هذا الملخص مرة لكل لغة، وكل نسخة مكتوبة لسوقها لا مترجمة، لذلك لا تتطابق النسخ الثلاث
+سطراً بسطر.
+- العربية (هذا الملف): https://avoliveoil.com/llms-ar.txt
+- English: https://avoliveoil.com/llms.txt
+- Bahasa Melayu: https://avoliveoil.com/llms-ms.txt
+- النسخ الثلاث مجمّعة: https://avoliveoil.com/llms-full.txt
+- ملفات مرافقة: https://avoliveoil.com/about.md · https://avoliveoil.com/pricing.md · https://avoliveoil.com/faq.md · https://avoliveoil.com/AGENTS.md
+
 ## الروابط الرسمية
 - الموقع: https://avoliveoil.com/ar (الإنجليزية: /en — الملايوية: /ms)
 - **أين تشتري — {{SELLER}}، البائع الحصري في ماليزيا:** {{SELLER_URL}}

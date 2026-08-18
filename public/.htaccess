@@ -44,6 +44,15 @@ DirectorySlash Off
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
+  # A path with a file extension is an asset, not a route. Real ones were served
+  # by the -f/-d passthrough above, so anything reaching here does not exist and
+  # must say so. Without this the SPA fallback answers 200 with the 442-byte
+  # shell for every missing asset — a soft 404 that a crawler, a schema
+  # validator and a link checker all read as a real page. Verified live
+  # 2026-08-18: /faq.md returned 200 text/html before this rule existed.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule \.[A-Za-z0-9]{2,5}$ - [R=404,L]
+
   # Everything else -> SPA shell
   RewriteRule ^ /index.html [L]
 </IfModule>
@@ -79,5 +88,17 @@ DirectorySlash Off
 
 AddType text/plain .txt
 AddDefaultCharset UTF-8
+
+# Markdown surfaces (/about.md, /pricing.md, /faq.md, /AGENTS.md). Without a type
+# the host serves .md as application/octet-stream, which makes a browser download
+# the file and makes some crawlers skip it. This box (the same one Sihatree runs
+# on) has been seen to drop the charset from AddType on later requests, so
+# mod_headers re-sets it after the type is chosen.
+AddType "text/markdown; charset=UTF-8" .md
+<IfModule mod_headers.c>
+  <FilesMatch "\.md$">
+    Header set Content-Type "text/markdown; charset=UTF-8"
+  </FilesMatch>
+</IfModule>
 
 ErrorDocument 404 /index.html

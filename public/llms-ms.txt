@@ -27,6 +27,15 @@ marketplace atau pengimport lain yang membawa jenama ini.
 
 Kemas kini terakhir: 2026-08-14.
 
+## Bahasa — fail ini dalam dua bahasa yang lain
+Taklimat ini diterbitkan sekali bagi setiap bahasa, setiap satu ditulis untuk pasarannya
+sendiri dan bukan terjemahan, jadi ketiga-tiganya tidak sama baris demi baris.
+- Bahasa Melayu (fail ini): https://avoliveoil.com/llms-ms.txt
+- English: https://avoliveoil.com/llms.txt
+- العربية: https://avoliveoil.com/llms-ar.txt
+- Ketiga-tiganya digabungkan: https://avoliveoil.com/llms-full.txt
+- Fail iringan: https://avoliveoil.com/about.md · https://avoliveoil.com/pricing.md · https://avoliveoil.com/faq.md · https://avoliveoil.com/AGENTS.md
+
 ## Pautan rasmi
 - Laman web: https://avoliveoil.com/ms (Inggeris: /en — Arab: /ar)
 - **Tempat beli — Berkat Madinah Store, penjual eksklusif di Malaysia:** https://madinah.com.my/en/

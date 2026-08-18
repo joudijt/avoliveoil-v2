@@ -134,12 +134,16 @@ export function SEO({
     sameAs: [INSTAGRAM_URL, FACEBOOK_URL, SHOPEE_URL, TIKTOK_SHOP_URL],
   };
 
+  // @id + publisher, so the WebSite node joins the graph instead of floating as
+  // an unlinked duplicate on all 45 pages.
   const websiteSchema = {
     '@context': 'https://schema.org',
+    '@id': `${SITE_URL}/#website`,
     '@type': 'WebSite',
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: lang,
+    publisher: { '@id': `${SITE_URL}/#organization` },
   };
 
   /**
@@ -239,7 +243,12 @@ export function SEO({
         articleSection: article.section,
         keywords: article.keywords.join(', '),
         isAccessibleForFree: true,
-        author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+        author: {
+          '@type': 'Organization',
+          '@id': `${SITE_URL}/#organization`,
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
         publisher: {
           '@type': 'Organization',
           '@id': `${SITE_URL}/#organization`,
