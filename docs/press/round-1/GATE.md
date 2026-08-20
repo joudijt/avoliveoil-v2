@@ -104,3 +104,36 @@ first time. Each would have shipped to Google.
   all 24 article/language pairs and the index in each `llms.txt` is complete.
 - The pre-existing article `evoo-health-benefits-families` remains live and unchanged, per D8.
   It is a health-benefits article on a site otherwise held to a zero-claims standard.
+
+---
+
+## Deployed and verified live — 2026-08-20
+
+`npm run build:prerender` → `python scripts/ftp-deploy.py --skip-static`.
+
+| Check | Result |
+|---|---|
+| Upload | **94 uploaded, 53 unchanged static skipped, 0 failed** |
+| Remote SIZE verification | **94 checked, 0 mismatched** |
+| 15 new articles, live vs local **bytes** | **15/15 identical** |
+| 30 new image assets, live vs local bytes | **30/30 identical** |
+| `sitemap.xml`, `llms.txt`, `llms-ms.txt`, `llms-ar.txt`, `robots.txt` | all byte-identical |
+| OG card fetched | `image/jpeg`, JPEG magic bytes — a real file, not the SPA shell |
+| PRESS gate against **live URLs** | **0 failures** (includes the fetched og:image check) |
+| `ai:gate` | **12 passed, 0 failures**, 1 warning — its own rate limit, a known quirk |
+| IndexNow | **60 URLs accepted** |
+
+**A partial deploy reported success first.** An earlier invocation was passed `--help`, which this
+script does not recognise — it parses flags with `"--flag" in sys.argv` — so it silently began a
+full upload instead, was cut short, and **exited 0 having transferred 21 of 147 files**. The log
+tail looked like an ordinary run. Only counting files against the local set caught it. This is why
+a deploy is verified by comparing bytes, never by an exit code or a status line.
+
+## Open, not fixed by this round
+
+- Inline images ship without `width`/`height`, so they can shift layout while loading. Pre-existing
+  pattern in `ArticleBody.tsx`, flagged as WARN on every article.
+- The 26 MB of unoptimised PNG in the original build is untouched. This round added 2.17 MB of
+  WebP, well inside its ceiling, but the site's overall weight problem is unchanged.
+- Mobile hero at 375 px is still broken and was not re-checked in a browser.
+- The invented testimonials in `en/common.json` are still live, per D8.
