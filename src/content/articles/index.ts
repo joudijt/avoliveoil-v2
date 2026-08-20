@@ -23,7 +23,10 @@ const BY_LANG: Record<ArticleLang, Article[]> = {
  * a mismatch would otherwise show up as a prerendered route that 404s in the SPA,
  * or a sitemap URL nobody can reach.
  */
-const SLUGS = slugTable as Record<string, Record<ArticleLang, string>>;
+// Partial on purpose: an article written for one market has no counterpart in
+// the others, so its entry carries only the languages it was actually written
+// in. Everything downstream already treats a missing slug as undefined.
+const SLUGS = slugTable as Record<string, Partial<Record<ArticleLang, string>>>;
 
 for (const lang of ARTICLE_LANGS) {
   for (const article of BY_LANG[lang]) {

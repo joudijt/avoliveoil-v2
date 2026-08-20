@@ -33,8 +33,14 @@ const INFUSED_SLUGS = JSON.parse(
 
 const ROUTES = [
   ...LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`))),
+  // Only the languages an article was actually written in. Without the filter
+  // this emitted `/ar/blog/undefined` for every single-language article, and
+  // puppeteer would dutifully snapshot the SPA's not-found fallback into a real
+  // file that the deploy would then publish.
   ...LANGS.flatMap((lang) =>
-    Object.values(ARTICLE_SLUGS).map((perLang) => `/${lang}/blog/${perLang[lang]}`)
+    Object.values(ARTICLE_SLUGS)
+      .filter((perLang) => perLang[lang])
+      .map((perLang) => `/${lang}/blog/${perLang[lang]}`)
   ),
   ...LANGS.flatMap((lang) => INFUSED_SLUGS.map((slug) => `/${lang}/products/${slug}`)),
 ];

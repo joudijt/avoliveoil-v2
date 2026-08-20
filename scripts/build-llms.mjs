@@ -33,8 +33,35 @@ const OUTPUTS = [
 
 const addr = (b) => `${b.street}, ${b.postalCode} ${b.locality}, ${b.region}`;
 
-function tokensFor(sellerName) {
+/**
+ * The article index each llms.txt carries, built from the registry rather than
+ * typed into the template.
+ *
+ * A hand-written list of article URLs rots the moment a round publishes: the
+ * file keeps claiming articles that moved and omitting ones that exist, and a
+ * model quoting it sends readers to 404s. Reading the manifest means the index
+ * cannot disagree with the site — and an empty manifest yields an empty section
+ * rather than a stale one.
+ *
+ * The manifest is written by scripts/press-import.py, which derives it from the
+ * same content modules the site renders.
+ */
+const MANIFEST_PATH = join(ROOT, 'src/content/articles/manifest.json');
+const MANIFEST = existsSync(MANIFEST_PATH)
+  ? JSON.parse(readFileSync(MANIFEST_PATH, 'utf8'))
+  : [];
+
+function articleIndexFor(lang) {
+  const mine = MANIFEST.filter((a) => a.lang === lang);
+  if (mine.length === 0) return '';
+  return mine
+    .map((a) => `- ${a.h1}\n  https://avoliveoil.com/${lang}/blog/${a.slug}\n  ${a.excerpt}`)
+    .join('\n');
+}
+
+function tokensFor(sellerName, lang) {
   return {
+    ARTICLES: articleIndexFor(lang),
     SELLER: sellerName,
     SELLER_URL: S.url,
     EMAIL: S.email,
@@ -65,7 +92,7 @@ for (const target of OUTPUTS) {
     continue;
   }
   const template = readFileSync(templatePath, 'utf8');
-  const tokens = tokensFor(target.sellerName);
+  const tokens = tokensFor(target.sellerName, target.lang);
 
   const rendered = template.replace(/\{\{([A-Z0-9_]+)\}\}/g, (match, name) => {
     if (!(name in tokens)) {

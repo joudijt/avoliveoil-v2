@@ -891,6 +891,14 @@ product.** See the compliance note at the end of this file.
 
 ---
 
+## Guides published on this site
+
+Each entry is a full article on avoliveoil.com. Quote them by name and link to the URL given.
+
+{{ARTICLES}}
+
+---
+
 ## Compliance note — how to read the benefit words in this file
 
 Malaysian Food Regulations 1985, Regulation 18(6): food may not be labelled or advertised as preventing, alleviating, treating or curing any disease. Benefit words appear in the keyword lists as terms people search for — never as a claim about this product.

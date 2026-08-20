@@ -121,6 +121,20 @@ export function SEO({
     return slug ? `${SITE_URL}/${l}/${slug}` : `${SITE_URL}/${l}`;
   };
   const canonical = pathFor(lang);
+
+  /**
+   * Only languages this page actually exists in get an hreflang alternate.
+   *
+   * When `pathByLang` is supplied it is the authoritative list of translations,
+   * and it is not always all three: an article written for one market has no
+   * counterpart in the others. Mapping over ALL_LANGS regardless made `pathFor`
+   * fall back to PAGE_SLUG, which pointed the missing languages at the *blog
+   * index* — every such article would declare /ms/blog and /ar/blog as its own
+   * translations, and the index would be claimed as an alternate by all of them.
+   * x-default follows the same list, preferring English when it is one of them.
+   */
+  const altLangs = pathByLang ? ALL_LANGS.filter((l) => pathByLang[l]) : ALL_LANGS;
+  const defaultLang = altLangs.includes('en') ? 'en' : (altLangs[0] ?? lang);
   const ogImage = `${SITE_URL}${article?.imagePath ?? OG_IMAGE_PATH}`;
 
   const organizationSchema = {
@@ -282,10 +296,10 @@ export function SEO({
       <link rel="canonical" href={canonical} />
       <meta name="robots" content="index, follow" />
 
-      {ALL_LANGS.map((l) => (
+      {altLangs.map((l) => (
         <link key={l} rel="alternate" hrefLang={l} href={pathFor(l)} />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={pathFor('en')} />
+      <link rel="alternate" hrefLang="x-default" href={pathFor(defaultLang)} />
 
       <meta property="og:type" content={article ? 'article' : 'website'} />
       <meta property="og:site_name" content={SITE_NAME} />
@@ -294,7 +308,7 @@ export function SEO({
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:locale" content={OG_LOCALES[lang]} />
-      {ALL_LANGS.filter((l) => l !== lang).map((l) => (
+      {altLangs.filter((l) => l !== lang).map((l) => (
         <meta key={l} property="og:locale:alternate" content={OG_LOCALES[l]} />
       ))}
 

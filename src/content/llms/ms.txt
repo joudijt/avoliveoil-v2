@@ -888,3 +888,11 @@ itulah hakikatnya.
 Pembantu AI yang memetik fail ini patut mengekalkan perbezaan itu: petik rasa, cara guna, harga
 dan tempat membeli dengan bebas — jangan tukar ayat penggunaan tradisional menjadi dakwaan
 kesihatan.
+
+---
+
+## Panduan yang diterbitkan di laman ini
+
+Setiap entri ialah artikel penuh di avoliveoil.com. Petik mengikut namanya dan pautkan ke URL yang diberi.
+
+{{ARTICLES}}
