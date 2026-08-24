@@ -162,7 +162,7 @@ def ts(value) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2)
 
 
-def to_ts_object(draft: dict, image_keys: dict) -> str:
+def to_ts_object(draft: dict, image_keys: dict, round_no: str = "1") -> str:
     hero_key, inline_key = image_keys[draft["id"]]
     sections = []
     for section in draft["sections"]:
@@ -199,7 +199,7 @@ def to_ts_object(draft: dict, image_keys: dict) -> str:
     }
     body = ts(obj)
     indented = "\n".join(("  " + line) if line else line for line in body.splitlines())
-    return "  /* ---------------- PRESS round 1 ---------------- */\n" + indented + ","
+    return f"  /* ---------------- PRESS round {round_no} ---------------- */\n" + indented + ","
 
 
 def main() -> int:
@@ -254,24 +254,42 @@ def main() -> int:
     new_keys = [k for pair in image_keys.values() for k in pair
                 if f"'{k}'" not in types_src]
     if new_keys:
-        union_add = "\n" + "\n".join(f"  | '{k}'" for k in new_keys)
-        types_src = types_src.replace("  | 'kampungBottle';", "  | 'kampungBottle'" + union_add + ";")
+        # Append before the union's terminating `;`, not after whichever member the
+        # previous round left last — that anchor only survives one round.
+        union_add = "\n".join(f"  | '{k}'" for k in new_keys)
+        match = re.search(r"(export type ImageKey =(?:\s*\|[^;]+?))(;)", types_src, re.S)
+        if not match:
+            print("FAIL types.ts — could not find the ImageKey union terminator")
+            return 1
+        types_src = types_src[:match.end(1)] + "\n" + union_add + types_src[match.end(1):]
         types_path.write_text(types_src, encoding="utf-8")
 
     images_path = ARTICLES / "images.ts"
     images_src = images_path.read_text(encoding="utf-8")
     imports, entries = [], []
     for article_id, (hero, inline) in image_keys.items():
-        if f"\n  {hero}," not in images_src:
-            imports.append(f"import {hero} from '../../assets/images/press/{article_id}-hero.webp';")
-            entries.append(f"  {hero},")
-        if f"\n  {inline}," not in images_src:
-            imports.append(f"import {inline} from '../../assets/images/press/{article_id}-inline.webp';")
-            entries.append(f"  {inline},")
-    if imports:
-        anchor = "import kampungBottle from '../../assets/images/malaysian-woman-bottle-kampung.webp';"
-        images_src = images_src.replace(anchor, anchor + "\n\n" + "\n".join(imports))
-        images_src = images_src.replace("  kampungBottle,\n};", "  kampungBottle,\n" + "\n".join(entries) + "\n};")
+        for key, slot in ((hero, "hero"), (inline, "inline")):
+            line = f"import {key} from '../../assets/images/press/{article_id}-{slot}.webp';"
+            # Guard the import and the map entry separately: a round that added one but
+            # not the other must be able to finish the job without duplicating either.
+            if line not in images_src:
+                imports.append(line)
+            if f"\n  {key}," not in images_src:
+                entries.append(f"  {key},")
+    if imports or entries:
+        if imports:
+            last_import = list(re.finditer(r"^import .+;$", images_src, re.M))[-1]
+            images_src = (images_src[:last_import.end()] + "\n" + "\n".join(imports)
+                          + images_src[last_import.end():])
+        if entries:
+            # Append before the map's closing `};`, whatever the last entry happens to be.
+            match = re.search(r"(export const ARTICLE_IMAGES: Record<ImageKey, string> = \{.*?)(\n\};)",
+                              images_src, re.S)
+            if not match:
+                print("FAIL images.ts — could not find the ARTICLE_IMAGES terminator")
+                return 1
+            images_src = (images_src[:match.end(1)] + "\n" + "\n".join(entries)
+                          + images_src[match.end(1):])
         images_path.write_text(images_src, encoding="utf-8")
 
     # ---- content modules ------------------------------------------------
@@ -281,10 +299,10 @@ def main() -> int:
             continue
         module = ARTICLES / f"{lang}.ts"
         src = module.read_text(encoding="utf-8")
-        if "PRESS round 1" in src:
-            print(f"SKIP {lang}.ts — already carries a PRESS round-1 block")
+        if f"PRESS round {args.round}" in src:
+            print(f"SKIP {lang}.ts — already carries a PRESS round-{args.round} block")
             continue
-        block = "\n".join(to_ts_object(d, image_keys) for d in mine)
+        block = "\n".join(to_ts_object(d, image_keys, args.round) for d in mine)
         idx = src.rstrip().rfind("\n];")
         if idx == -1:
             print(f"FAIL {lang}.ts — could not find the closing `];`")
