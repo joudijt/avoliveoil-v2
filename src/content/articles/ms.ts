@@ -2246,6 +2246,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Hubungi pengedar rasmi",
         "path": "contact",
         "description": "WhatsApp, dua cawangan dan waktu buka Berkat Madinah Store untuk sebarang soalan bahan atau dokumen."
+      },
+      {
+        "label": "Minyak zaitun habbatus sauda",
+        "path": "blog/minyak-zaitun-habbatus-sauda-apa-yang-perlu-tahu",
+        "description": "Apa itu minyak zaitun infusi habbatus sauda, cara membacanya pada label, dan penggunaannya di dapur."
       }
     ]
   },
@@ -2782,6 +2787,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli di Malaysia",
         "path": "shop",
         "description": "Kaunter di Ampang Jaya dan Batu Caves, serta Shopee dan TikTok Shop milik Berkat Madinah."
+      },
+      {
+        "label": "Zaitun dalam Al-Quran",
+        "path": "blog/pokok-zaitun-dalam-al-quran-dan-warisan-palestin",
+        "description": "Sebutan pokok zaitun dalam Al-Quran dan warisan ladang keluarga Palestin."
       }
     ]
   },
@@ -3047,6 +3057,901 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
+      },
+      {
+        "label": "Minyak zaitun untuk salad",
+        "path": "blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
+        "description": "Sos salad, kerabu dan hidangan sejuk — di mana minyak yang tidak dipanaskan paling menyerlah."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 2 ---------------- */
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "slug": "minyak-zaitun-habbatus-sauda-apa-yang-perlu-tahu",
+    "seoTitle": "Minyak Zaitun Habbatus Sauda: Apa Yang Perlu Tahu",
+    "metaTitle": "Minyak Zaitun Habbatus Sauda: Apa Yang Perlu Tahu",
+    "metaDescription": "Minyak zaitun habbatus sauda: apa itu minyak infusi, cara ia dibuat, rasanya, tempatnya di dapur Malaysia, bacaan bahan, harga RM59 dan RM103.",
+    "focusKeyword": "minyak zaitun habbatus sauda",
+    "relatedKeywords": [
+      "minyak zaitun habbatus sauda arabian village",
+      "minyak zaitun infusi habbatus sauda",
+      "habbatus sauda dan minyak zaitun",
+      "minyak zaitun nigella sativa",
+      "minyak zaitun dara ekstra infusi",
+      "harga minyak zaitun habbatus sauda",
+      "minyak zaitun berperisa",
+      "infused olive oil malaysia",
+      "minyak zaitun habbatus sauda halal",
+      "beli minyak zaitun habbatus sauda",
+      "minyak zaitun untuk mencicah",
+      "minyak zaitun 500ml harga"
+    ],
+    "category": "Panduan Produk",
+    "tags": [
+      "Habbatus Sauda",
+      "Infused Collection",
+      "Minyak Zaitun Dara",
+      "Dapur Malaysia",
+      "Arabian Village"
+    ],
+    "h1": "Minyak Zaitun Habbatus Sauda: Apa Yang Ada Di Dalam Botol",
+    "excerpt": "Apa itu minyak zaitun yang diinfusi habbatus sauda, bagaimana ia dibuat, rasanya, dan di mana ia sesuai dalam dapur Malaysia.",
+    "keyTakeaway": "Minyak zaitun habbatus sauda ialah minyak zaitun dara ekstra perahan sejuk yang diinfusi dengan biji Nigella sativa. Ia satu minyak, bukan campuran dua botol, dan bukan kapsul. Rasanya hangat dan berlada, paling menjadi sebagai minyak akhir untuk pencicah, perapan, nasi dan sayur panggang.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunHabbatusSaudaHero",
+      "alt": "Botol 500 ml minyak zaitun Arabian Village di atas para batu dalam kebun zaitun yang disimbah cahaya, sebelah tangan di kanan dan dahan zaitun di hadapan kiri"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-habbatus-sauda.jpg",
+    "intro": [
+      "Carian untuk minyak zaitun habbatus sauda biasanya datang daripada orang yang sudah kenal kedua-dua bahan itu berasingan. Zaitun di rak dapur, habbatus sauda dalam balang.",
+      "Yang jarang dijelaskan ialah apa sebenarnya yang ada di dalam botol apabila keduanya digabungkan.",
+      "Artikel ini menjawab bahagian produk: apa itu minyak infusi, cara ia dibuat, rasanya, tempatnya di dapur Malaysia, harga dan tempat belinya."
+    ],
+    "sections": [
+      {
+        "heading": "Apa itu minyak zaitun habbatus sauda?",
+        "id": "apa-itu-minyak-zaitun-habbatus-sauda",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun habbatus sauda ialah minyak zaitun dara ekstra yang diinfusi dengan biji habbatus sauda, atau Nigella sativa. Ia bukan dua minyak yang dicampur di dalam satu botol, dan bukan minyak yang diperah daripada biji. Asasnya kekal minyak zaitun perahan sejuk; biji itu menyumbang rasa dan aroma."
+          },
+          {
+            "type": "p",
+            "text": "Artikel ini bercakap tentang produk dan penggunaannya di dapur sahaja: apa yang ada di dalam botol, dan cara ia dimasak."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunHabbatusSaudaInline",
+            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+          }
+        ]
+      },
+      {
+        "heading": "Bagaimana infusi dibuat, dan bezanya dengan campur sendiri",
+        "id": "cara-infusi-dibuat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Infusi bermaksud biji habbatus sauda dibiarkan di dalam minyak zaitun perahan sejuk sehingga minyak itu mengambil rasa dan aromanya. Prosesnya perlahan dan tanpa haba tinggi, kerana haba merosakkan rasa minyak zaitun dara. Hasilnya satu minyak yang seimbang, bukan dua lapisan rasa yang duduk berasingan di dalam botol."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Kepekatan terkawal. Kelompok kecil diinfusi dengan nisbah yang sama, jadi botol bulan depan berasa seperti botol hari ini.",
+              "Tiada perisa, pewarna atau bahan tambahan tiruan. Minyak zaitun dan biji sahaja.",
+              "Biji yang dibiar terendam di rumah terus mengeluarkan rasa dan membawa lembapan masuk. Minyak yang diinfusi lalu ditapis tidak."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunHabbatusSaudaInline",
+            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+          }
+        ]
+      },
+      {
+        "heading": "Infusi, minyak habbatus sauda tulen dan kapsul: apa bezanya",
+        "id": "beza-infusi-tulen-kapsul",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga produk yang sangat berbeza sering dicari dengan istilah yang sama. Minyak zaitun infusi ialah bahan dapur berperisa. Minyak habbatus sauda tulen diperah terus daripada biji dan rasanya jauh lebih tajam. Kapsul pula dijual sebagai suplemen, bukan sebagai bahan masakan."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Produk",
+              "Apa itu",
+              "Di mana ia digunakan"
+            ],
+            "rows": [
+              [
+                "Minyak zaitun infusi habbatus sauda",
+                "Minyak zaitun dara ekstra dengan biji Nigella sativa diinfusi ke dalamnya",
+                "Pencicah, perapan, nasi, sayur panggang"
+              ],
+              [
+                "Minyak habbatus sauda tulen",
+                "Diperah terus daripada biji, tanpa asas zaitun",
+                "Rasa sangat pekat, jarang jadi minyak masak"
+              ],
+              [
+                "Kapsul habbatus sauda",
+                "Biji dalam bentuk suplemen berbungkus",
+                "Bukan bahan dapur"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunHabbatusSaudaInline",
+            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+          }
+        ]
+      },
+      {
+        "heading": "Rasanya bagaimana, dan tempatnya di dapur Malaysia",
+        "id": "rasa-dan-dapur-malaysia",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rasanya hangat dan berlada dengan kedalaman herba yang bersahaja, serta sedikit bau seakan jintan. Ia jauh lebih lembut daripada biji yang dikunyah terus. Kerana rasa itu sudah ada di dalam minyak, botol ini paling menjadi sebagai minyak akhir: dititiskan ke atas hidangan siap, bukan ke dalam kuali."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Dititiskan ke atas hummus, labneh atau keju segar, dicicah dengan roti.",
+              "Dalam perapan ayam atau ikan sebelum dipanggang, bersama garam, lada hitam dan limau.",
+              "Dikacau ke dalam nasi yang baru ditanak, sesudu sebelum dihidang.",
+              "Ke atas sayur panggang seperti terung dan kembang kol, sebaik keluar dari ketuhar.",
+              "Sebagai sos salad ringkas bersama cuka atau limau kasturi."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunHabbatusSaudaInline",
+            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+          },
+          {
+            "type": "p",
+            "text": "Untuk soal api dan haba, rujuk [panduan memasak dengan minyak zaitun](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          }
+        ]
+      },
+      {
+        "heading": "Membaca senarai bahan dan status halalnya",
+        "id": "bahan-dan-status-halal",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Senarai bahan sebuah minyak infusi sepatutnya pendek. Untuk versi ini, ia minyak zaitun dara ekstra dan biji Nigella sativa, tanpa perisa, pewarna atau bahan tambahan tiruan. Kedua-duanya bahan tumbuhan, jadi tiada unsur haiwan dan tiada alkohol pembawa perisa yang perlu dipersoalkan pada botol."
+          },
+          {
+            "type": "note",
+            "title": "Sebelum bayar",
+            "text": "Kalau anda mahu pengesahan bertulis, minta penjual tunjukkan dokumen untuk kelompok yang anda beli. Butiran penuh ada dalam [status halal minyak zaitun](/blog/status-halal-minyak-zaitun)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunHabbatusSaudaInline",
+            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+          }
+        ]
+      },
+      {
+        "heading": "Harga dan di mana hendak beli",
+        "id": "harga-dan-tempat-beli",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Harganya sama seperti setiap botol lain dalam Infused Collection: RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml. Ditukar kepada seliter, itu RM236 berbanding RM206. Botol besar lebih jimat setiap mililiter, dan perbandingan seliter itulah cara paling jujur menilai dua botol yang berlainan saiz."
+          },
+          {
+            "type": "p",
+            "text": "Halaman produk penuh: [minyak zaitun infusi habbatus sauda](/products/infused-extra-virgin-olive-oil-blackseed)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunHabbatusSaudaInline",
+            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Berkat Madinah Store ialah pengedar rasmi dan satu-satunya di Malaysia, dengan dua cawangan yang menyimpan jenama ini.",
+              "Ampang Jaya: Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman, 68000 Ampang Jaya, Selangor.",
+              "Batu Caves, cawangan lebih besar: 32, Jalan Prima SG 2, Prima Seri Gombak, 68100 Batu Caves, Selangor.",
+              "Buka 8:00 pagi hingga 12:00 tengah malam setiap hari. Hari raya boleh berbeza, sahkan di WhatsApp +60 11-1111 9912.",
+              "Dalam talian, Shopee dan TikTok Shop dikendalikan oleh Berkat Madinah sendiri."
+            ]
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun habbatus sauda ialah satu botol minyak zaitun dara ekstra yang sudah berperisa, bukan gabungan dua produk. Layan ia seperti minyak akhir: sesudu di atas pencicah, di dalam perapan, atau ke atas nasi dan sayur panggang."
+        },
+        {
+          "type": "p",
+          "text": "Kalau ini botol infusi pertama anda, mulakan dengan 250 ml. Lihat [seluruh Infused Collection](/products) atau tanya stok di [halaman hubungi kami](/contact)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Adakah minyak zaitun habbatus sauda sama dengan minyak habbatus sauda tulen?",
+        "a": "Tidak. Yang ini minyak zaitun dara ekstra yang diinfusi dengan biji, jadi asasnya minyak zaitun. Minyak habbatus sauda tulen diperah terus daripada biji dan rasanya jauh lebih pekat."
+      },
+      {
+        "q": "Boleh ke minyak ini digunakan untuk menumis?",
+        "a": "Boleh pada api sederhana, tetapi haba menghilangkan aroma yang anda bayar. Guna minyak zaitun biasa untuk kuali, dan simpan botol infusi ini untuk curahan terakhir di pinggan."
+      },
+      {
+        "q": "Rasanya terlalu kuat untuk masakan Melayu?",
+        "a": "Rasanya hangat dan berlada, bukan menyengat. Sesudu cukup untuk satu pinggan. Ia paling ketara pada hidangan yang tidak berempah berat: nasi, ayam panggang dan pencicah."
+      },
+      {
+        "q": "Ada perisa atau pewarna tiruan di dalam botol?",
+        "a": "Tiada. Infused Collection menggunakan minyak zaitun perahan sejuk dan botani sebenar sahaja. Senarai bahan pada botol sepatutnya pendek dan boleh dibaca sekali pandang."
+      },
+      {
+        "q": "Berapa harganya, dan saiz mana patut saya mula?",
+        "a": "RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml. Kalau ini kali pertama anda mencuba minyak berperisa, mulakan dengan 250 ml sebelum ambil botol besar."
+      },
+      {
+        "q": "Bagaimana cara menyimpannya di dapur Malaysia?",
+        "a": "Jauhkan daripada haba, cahaya dan udara. Tutup rapat selepas guna dan simpan di dalam almari yang sejuk dan gelap, bukan di rak sebelah dapur."
+      },
+      {
+        "q": "Adakah minyak zaitun habbatus sauda halal?",
+        "a": "Bahannya minyak zaitun dan biji Nigella sativa, kedua-duanya daripada tumbuhan, tanpa unsur haiwan atau alkohol pembawa perisa. Untuk pengesahan bertulis, minta dokumen daripada penjual."
+      },
+      {
+        "q": "Di mana ia dijual di Malaysia?",
+        "a": "Di dua cawangan Berkat Madinah Store, di Ampang Jaya dan Batu Caves, serta melalui Shopee dan TikTok Shop yang dikendalikan kedai yang sama."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun infusi habbatus sauda",
+        "path": "products/infused-extra-virgin-olive-oil-blackseed",
+        "description": "Halaman produk penuh: senarai bahan, saiz 250 ml dan 500 ml, dan nota rasa."
+      },
+      {
+        "label": "Infused Collection dan minyak zaitun dara",
+        "path": "products",
+        "description": "Enam botani dalam Infused Collection, serta minyak zaitun dara ekstra asal Palestin."
+      },
+      {
+        "label": "Status halal minyak zaitun",
+        "path": "blog/status-halal-minyak-zaitun",
+        "description": "Apa yang perlu dibaca pada botol dan apa yang boleh ditanya kepada penjual."
+      },
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "RM59 dan RM103, perbandingan seliter, dan apa yang ada di sebalik harga itu."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Api, takat asap dan sukatan untuk dapur Malaysia harian."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 2 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-salad",
+    "slug": "minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
+    "seoTitle": "Minyak Zaitun untuk Salad: Sos dan Hidangan Sejuk",
+    "metaTitle": "Minyak Zaitun untuk Salad: Sos dan Hidangan Sejuk",
+    "metaDescription": "Nisbah sos tiga banding satu, tiga campuran dengan limau kasturi, madu dan mustard, padanan kerabu dan ulam, kos sehidangan, dan cara simpan botol.",
+    "focusKeyword": "minyak zaitun untuk salad",
+    "relatedKeywords": [
+      "olive oil untuk salad",
+      "sos salad minyak zaitun",
+      "salad dressing minyak zaitun",
+      "minyak zaitun mentah",
+      "cara buat sos salad sendiri",
+      "minyak zaitun dengan limau kasturi",
+      "minyak zaitun untuk kerabu",
+      "minyak zaitun untuk ulam",
+      "minyak zaitun extra virgin salad",
+      "vinaigrette ala Malaysia",
+      "harga minyak zaitun 250ml",
+      "minyak zaitun infused rosemary basil"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun untuk Salad",
+      "Sos dan Perapan",
+      "Kerabu dan Ulam",
+      "Dapur Malaysia",
+      "Infused Collection"
+    ],
+    "h1": "Minyak Zaitun untuk Salad dan Hidangan Sejuk di Meja Malaysia",
+    "excerpt": "Nisbah sos yang mudah diingat, tiga campuran daripada bahan yang dapur kita sudah ada, dan berapa sebenarnya kos satu hidangan.",
+    "keyTakeaway": "Minyak zaitun untuk salad digunakan mentah, jadi rasanya kekal seperti dalam botol. Mulakan dengan tiga bahagian minyak kepada satu bahagian masam — jus limau kasturi atau cuka — kemudian garam dan sedikit madu. Nisbah itu cukup untuk salad, kerabu, ulam dan perapan sejuk.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukSaladHero",
+      "alt": "Wanita bertudung hijau memegang botol minyak zaitun Arabian Village di hadapan rumah kampung kayu, dengan semangkuk buah zaitun hijau dan hitam serta bakul rotan di atas meja"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-salad.jpg",
+    "intro": [
+      "Kebanyakan orang beli minyak zaitun untuk kuali. Sedangkan tempat ia paling ketara bukan di atas api, tetapi di dalam mangkuk salad yang sejuk.",
+      "Sebabnya mudah. Minyak yang tidak dipanaskan kekal seperti masa ia keluar dari botol — pahit sedikit di hujung lidah, pedas halus di kerongkong.",
+      "Artikel ini pasal minyak zaitun untuk salad: satu nisbah, tiga campuran, padanan kerabu dan ulam, dan kos sehidangan."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa salad tempat minyak zaitun paling menonjol",
+        "id": "kenapa-salad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sebab tiada haba yang mengubahnya. Rasa minyak zaitun dara datang daripada sebatian yang lembut terhadap suhu, jadi apa yang anda hidu di mulut botol itulah yang sampai ke pinggan. Dalam sos salad, minyak bukan sekadar pembawa — ia salah satu perisa utama, sama seperti garam dan limau."
+          },
+          {
+            "type": "p",
+            "text": "Untuk penggunaan berhaba pula, ada peraturannya sendiri dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          }
+        ]
+      },
+      {
+        "heading": "Nisbah asas: tiga bahagian minyak, satu bahagian masam",
+        "id": "nisbah-asas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga sudu besar minyak zaitun kepada satu sudu besar bahan masam. Itu konvensyen dapur yang dipakai di mana-mana, dan ia berkesan sebab masam yang terlalu banyak akan menenggelamkan sayur. Kacau garam ke dalam bahan masam dahulu supaya ia larut, baru masukkan minyak sambil dipukul."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Perah satu sudu besar jus limau kasturi atau cuka ke dalam mangkuk kecil.",
+              "Masukkan secubit garam dan kacau sehingga larut.",
+              "Titiskan tiga sudu besar minyak zaitun sambil dipukul dengan garfu.",
+              "Rasa dengan sehelai daun salad, bukan dengan sudu."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          },
+          {
+            "type": "note",
+            "title": "Kalau ia terpisah",
+            "text": "Itu normal. Setengah sudu kecil mustard atau madu mengikatnya lebih lama. Kalau tiada, kacau semula sebelum tuang."
+          }
+        ]
+      },
+      {
+        "heading": "Tiga campuran daripada bahan yang dapur kita sudah ada",
+        "id": "tiga-campuran",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga versi daripada nisbah yang sama, tanpa perlu membeli apa-apa yang pelik. Yang pertama untuk salad harian, kedua untuk sayur yang lebih tebal seperti timun dan kobis, ketiga untuk perapan ayam atau ikan sebelum dipanggang. Semuanya menggunakan tiga sudu besar minyak."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Limau kasturi dan madu** — jus dua biji limau kasturi, setengah sudu kecil madu, secubit garam. Ringan dan wangi.",
+              "**Cuka dan mustard** — satu sudu besar cuka, setengah sudu kecil mustard, sedikit lada hitam. Lebih tajam, tahan lebih lama dalam mangkuk.",
+              "**Bawang dan cili** — satu sudu besar cuka, bawang merah dihiris nipis, cili merah dibuang biji."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          }
+        ]
+      },
+      {
+        "heading": "Kerabu, ulam dan hidangan sejuk yang lain",
+        "id": "kerabu-dan-ulam",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kerabu dan sos salad sebenarnya keluarga yang sama: sayur mentah, bahan masam, garam dan lemak. Bezanya kerabu selalunya guna kelapa parut atau santan. Tukar sebahagian daripadanya dengan minyak zaitun dan rasa kerabu jadi lebih ringan, tetapi kekerasan sayur itu masih terasa."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Kerabu timun atau mangga muda — minyak zaitun menggantikan sebahagian santan.",
+              "Ulam raja, pegaga dan kacang botol — cicah dengan minyak bercampur limau, bukan disiram.",
+              "Salad kentang atau pasta sejuk — gaul minyak semasa masih suam supaya ia melekat."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          }
+        ]
+      },
+      {
+        "heading": "Perisa infusion mana untuk salad mana",
+        "id": "infusion-untuk-salad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Infused Collection ialah minyak zaitun sejuk-tekan yang sama, diserapkan dengan botani untuk memasak. Dalam hidangan sejuk perisanya lebih ketara sebab tiada haba yang melembutkannya. Guna sedikit dahulu, kacau, kemudian tambah kalau perlu. Enam pilihan itu berharga sama seperti minyak klasik mengikut saiz botol."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Perisa",
+              "Padanan sejuk"
+            ],
+            "rows": [
+              [
+                "Rosemary-basil",
+                "Salad tomato, pasta sejuk, roti cicah"
+              ],
+              [
+                "Wild thyme",
+                "Kerabu timun, telur rebus, keju putih"
+              ],
+              [
+                "Fennel-anise",
+                "Salad buah, epal dan lobak"
+              ],
+              [
+                "Turmeric-black pepper",
+                "Perapan ayam sejuk, salad kentang"
+              ],
+              [
+                "Lavender-chamomile",
+                "Salad buah dan hidangan manis"
+              ],
+              [
+                "Blackseed",
+                "Ulam, roti dan buah zaitun"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          },
+          {
+            "type": "p",
+            "text": "Semua enam ada di halaman [produk](/products), termasuk [rosemary-basil](/products/infused-extra-virgin-olive-oil-rosemary-basil)."
+          }
+        ]
+      },
+      {
+        "heading": "Berapa kos satu hidangan",
+        "id": "kos-satu-hidangan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Botol 250 ml berharga RM59.00, iaitu RM236 seliter. Daripada situ senang dikira: satu sudu besar lebih kurang 15 ml. Sos untuk empat orang guna tiga sudu besar minyak, jadi kos minyak dalam mangkuk itu lebih rendah daripada yang orang sangka."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Sukatan",
+              "Isi padu",
+              "Kos pada RM236 seliter"
+            ],
+            "rows": [
+              [
+                "Satu sudu besar",
+                "15 ml",
+                "RM3.54"
+              ],
+              [
+                "Sos untuk empat orang",
+                "45 ml",
+                "RM10.62"
+              ],
+              [
+                "Sekali hidang",
+                "kira-kira 11 ml",
+                "RM2.66"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          },
+          {
+            "type": "p",
+            "text": "Botol 500 ml pada RM103.00 turun kepada RM206 seliter — lebih murah setiap titis, kalau rumah anda memang habiskan botol."
+          }
+        ]
+      },
+      {
+        "heading": "Menyimpan botol yang dibuka dalam dapur panas",
+        "id": "simpan-botol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cahaya, haba dan udara yang merosakkan rasa minyak zaitun, dan dapur Malaysia ada ketiga-tiganya sekali gus. Kaca gelap sudah menahan sebahagian daripada cahaya itu. Selebihnya bergantung pada tempat anda letakkan botol, seberapa rapat tutupnya selepas guna, dan berapa lama botol itu sudah terbuka."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Jauhkan dari dapur gas, ketuhar dan tingkap yang terkena matahari petang.",
+              "Tutup rapat selepas guna — udara yang perlahan-lahan menumpulkan rasa.",
+              "Simpan dalam kabinet tertutup, bukan di atas rak terbuka sebelah kuali.",
+              "Kalau rumah jarang guna, pilih 250 ml supaya botol habis semasa rasanya masih tajam."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSaladInline",
+            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Mula dengan satu mangkuk",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Tak perlu tukar seluruh cara masak. Ambil satu mangkuk kecil, satu sudu besar jus limau kasturi, secubit garam dan tiga sudu besar minyak. Pukul, rasa, siram atas sayur yang ada."
+        },
+        {
+          "type": "p",
+          "text": "Kalau nisbah itu menjadi, barulah fikir pasal perisa dan saiz botol. [Lihat tempat membeli](/shop) untuk cawangan Berkat Madinah."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Minyak zaitun jenis mana sesuai untuk salad?",
+        "a": "Extra virgin, sebab ia tidak ditapis dan rasanya kekal. Minyak yang ditapis memang lebih neutral, tetapi dalam sos salad ia tidak menyumbang apa-apa rasa."
+      },
+      {
+        "q": "Berapa nisbah minyak dengan cuka untuk sos salad?",
+        "a": "Tiga bahagian minyak kepada satu bahagian bahan masam. Kalau anda suka lebih tajam, naikkan bahan masam sedikit demi sedikit dan rasa setiap kali sebelum menambah lagi."
+      },
+      {
+        "q": "Boleh guna limau kasturi ganti cuka?",
+        "a": "Boleh, dan ia lebih dekat dengan selera kita. Jus limau kasturi lebih wangi dan kurang tajam daripada cuka. Perah segar sebelum guna."
+      },
+      {
+        "q": "Kenapa sos salad saya terpisah selepas beberapa minit?",
+        "a": "Minyak dan air memang tidak bercampur lama. Setengah sudu kecil mustard atau madu membantu mengikatnya. Kalau tiada, kacau semula dengan garfu sebelum tuang."
+      },
+      {
+        "q": "Boleh guna minyak zaitun dalam kerabu?",
+        "a": "Boleh. Gantikan sebahagian kelapa parut atau santan dengan minyak zaitun dan tambah limau. Rasa kerabu jadi lebih ringan tetapi tekstur sayur mentah itu tidak berubah."
+      },
+      {
+        "q": "Perlu ke simpan minyak zaitun dalam peti sejuk?",
+        "a": "Tidak perlu. Kabinet tertutup yang jauh dari dapur sudah memadai. Dalam peti sejuk minyak akan berkabus dan pekat, dan perlu kembali ke suhu bilik sebelum dituang."
+      },
+      {
+        "q": "Berapa harga minyak zaitun Arabian Village?",
+        "a": "RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml — harga yang sama mengikut saiz untuk minyak klasik dan setiap perisa Infused Collection."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun sejuk-tekan asal Palestin dalam saiz 250 ml dan 500 ml, serta enam perisa Infused Collection."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Bila minyak zaitun menjadi di dalam kuali dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "Perbandingan seliter antara saiz 250 ml dan 500 ml, dan apa yang ada di sebalik harga itu."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 2 ---------------- */
+  {
+    "id": "zaitun-dalam-al-quran",
+    "slug": "pokok-zaitun-dalam-al-quran-dan-warisan-palestin",
+    "seoTitle": "Zaitun dalam Al-Quran dan Warisan Ladang Palestin",
+    "metaTitle": "Zaitun dalam Al-Quran dan Warisan Ladang Palestin",
+    "metaDescription": "Ayat yang menyebut zaitun dalam Al-Quran, lengkap dengan surah dan nombor ayat, serta kisah ladang keluarga dan musim tuaian zaitun di Palestin.",
+    "focusKeyword": "zaitun dalam al quran",
+    "relatedKeywords": [
+      "pokok zaitun dalam al quran",
+      "ayat tentang zaitun",
+      "surah at-tin buah zaitun",
+      "surah an-nur pokok zaitun",
+      "zaitun disebut dalam al quran",
+      "buah tin dan zaitun",
+      "pokok zaitun palestin",
+      "ladang zaitun keluarga",
+      "musim tuaian zaitun",
+      "minyak zaitun palestin",
+      "warisan zaitun palestin",
+      "minyak zaitun satu sumber"
+    ],
+    "category": "Warisan",
+    "tags": [
+      "zaitun dalam al quran",
+      "warisan palestin",
+      "ladang zaitun",
+      "musim tuaian"
+    ],
+    "h1": "Zaitun dalam Al-Quran dan warisan ladang zaitun Palestin",
+    "excerpt": "Ayat-ayat yang menyebut zaitun dalam Al-Quran beserta rujukan surah dan nombor ayat, dan kisah ladang keluarga di Palestin yang menjaga pokok itu turun-temurun.",
+    "keyTakeaway": "Zaitun disebut namanya dalam beberapa tempat di dalam Al-Quran, antaranya Surah At-Tin 95:1, Surah An-Nur 24:35, Surah Al-An'am 6:99 dan 6:141, serta Surah An-Nahl 16:11. Di Palestin pula, pokok yang sama menjadi tanaman keluarga yang dituai setiap musim luruh dan diwarisi turun-temurun.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressZaitunDalamAlQuranHero",
+      "alt": "Pokok zaitun tua berbatang berlingkar di lereng bukit ketika senja, perkampungan batu berbumbung tanah liat dan laut di latar belakang, beberapa biji zaitun hijau di atas batu rata"
+    },
+    "ogImage": "/og/blog-zaitun-dalam-al-quran.jpg",
+    "intro": [
+      "Pokok zaitun bukan nama asing bagi pembaca Muslim di Malaysia. Namanya muncul dalam beberapa surah, dan buahnya sudah dikenali di rantau Mediterranean lama sebelum minyaknya sampai ke rak kedai di sini.",
+      "Artikel ini mengumpulkan rujukan zaitun dalam Al-Quran mengikut surah dan nombor ayat, supaya anda boleh menyemaknya sendiri dalam mushaf. Selepas itu ia beralih kepada sisi yang jarang ditulis: ladang keluarga di Palestin, musim tuaian pada musim luruh, dan bagaimana sebotol minyak satu sumber sampai ke meja keluarga di Malaysia."
+    ],
+    "sections": [
+      {
+        "heading": "Di mana zaitun disebut dalam Al-Quran?",
+        "id": "sebutan-dalam-al-quran",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Zaitun disebut namanya dalam beberapa tempat di dalam Al-Quran. Antaranya Surah At-Tin ayat 1, Surah An-Nur ayat 35, Surah Al-An'am ayat 99 dan ayat 141, serta Surah An-Nahl ayat 11. Dalam kebanyakan tempat itu, zaitun muncul bersama tanaman lain yang dikenali penduduk rantau tersebut, seperti buah tin, anggur, delima dan kurma."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Surah",
+              "Rujukan",
+              "Disebut bersama"
+            ],
+            "rows": [
+              [
+                "At-Tin",
+                "95:1",
+                "Buah tin"
+              ],
+              [
+                "An-Nur",
+                "24:35",
+                "Perumpamaan pelita dan pokok zaitun"
+              ],
+              [
+                "Al-An'am",
+                "6:99",
+                "Anggur dan delima"
+              ],
+              [
+                "Al-An'am",
+                "6:141",
+                "Kurma, tanaman dan delima"
+              ],
+              [
+                "An-Nahl",
+                "16:11",
+                "Tanaman, pokok kurma dan anggur"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressZaitunDalamAlQuranInline",
+            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+          },
+          {
+            "type": "p",
+            "text": "Nombor pertama ialah nombor surah dan nombor kedua ialah nombor ayat. Setiap petikan di bawah ialah terjemahan makna, bukan teks Arabnya."
+          }
+        ]
+      },
+      {
+        "heading": "Surah At-Tin (95:1) dan Surah An-Nur (24:35)",
+        "id": "at-tin-dan-an-nur",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Surah At-Tin dibuka dengan menyebut dua buah sekali gus: “Demi buah tin dan buah zaitun” (At-Tin 95:1). Dalam Surah An-Nur pula, sebahagian daripada ayat 35 menyebut pelita “yang dinyalakan daripada pokok yang banyak berkatnya, iaitu pokok zaitun yang bukan di timur dan bukan di barat” (An-Nur 24:35)."
+          },
+          {
+            "type": "p",
+            "text": "Ayat 35 Surah An-Nur panjang, dan yang dipetik di sini hanyalah bahagian yang menyebut pokok zaitun. Untuk membacanya penuh, rujuk mushaf atau terjemahan rasmi yang anda pegang."
+          },
+          {
+            "type": "image",
+            "src": "pressZaitunDalamAlQuranInline",
+            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+          },
+          {
+            "type": "note",
+            "title": "Cara membaca rujukan ayat",
+            "text": "95:1 bermaksud surah ke-95, ayat pertama. Menulis rujukan begitu memudahkan sesiapa menyemak semula ayat itu sendiri."
+          }
+        ]
+      },
+      {
+        "heading": "Zaitun dalam Surah Al-An'am dan Surah An-Nahl",
+        "id": "al-anam-dan-an-nahl",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga ayat lagi menyebut zaitun sebagai hasil yang tumbuh dari bumi. Surah Al-An'am ayat 99 menyebut “kebun-kebun anggur, dan zaitun serta delima, yang serupa dan yang tidak serupa”. Ayat 141 dalam surah yang sama menyebut pokok kurma dan tanaman yang berbeza-beza rasanya, bersama zaitun dan delima. Surah An-Nahl ayat 11 pula menyebut tanaman, zaitun, pokok kurma dan anggur."
+          },
+          {
+            "type": "p",
+            "text": "Nama itu kekal sampai hari ini. Dalam bahasa Arab, buahnya disebut zaytun dan minyaknya zayt az-zaytun. Dalam bahasa Melayu kita menyebutnya zaitun dan minyak zaitun."
+          },
+          {
+            "type": "image",
+            "src": "pressZaitunDalamAlQuranInline",
+            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Pokok zaitun dalam kehidupan keluarga Palestin",
+        "id": "warisan-keluarga-palestin",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Di Palestin, ladang zaitun selalunya milik keluarga dan diwarisi turun-temurun. Petaknya kecil, letaknya di lereng berbatu, dan sebahagian pokoknya lebih tua daripada keluarga yang menjaganya hari ini. Minyak zaitun di rumah begitu bukan barang mewah. Ia minyak harian: untuk mencelup roti, untuk memasak, dan disimpan dalam tin besar sepanjang tahun."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Ladang keluarga: petak kecil yang dijaga beberapa generasi dalam satu keluarga.",
+              "Pokok tua: batang berlingkar dan berongga, tanda pokok yang sudah lama hidup.",
+              "Simpanan setahun: hasil satu musim disimpan dalam tin dan digunakan sehingga musim berikutnya.",
+              "Kerja bersama: tuaian dibuat beramai-ramai, bukan oleh seorang."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressZaitunDalamAlQuranInline",
+            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu pokok zaitun muncul dalam cerita keluarga di sana, bukan hanya di ladang."
+          }
+        ]
+      },
+      {
+        "heading": "Musim tuaian zaitun dan kerja di ladang",
+        "id": "musim-tuaian",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Musim tuaian zaitun di rantau Mediterranean jatuh pada musim luruh, secara amnya sekitar Oktober hingga November. Tarikh tepatnya berubah setiap tahun mengikut cuaca dan kematangan buah. Buah dikutip dengan tangan atau disikat turun ke atas jaring yang dibentang di bawah pokok, kemudian dibawa ke kilang perahan secepat mungkin."
+          },
+          {
+            "type": "p",
+            "text": "Masa antara petik dan perah penting kerana buah yang tertunggu lama mula berubah. Perahan sejuk bermaksud minyak dipisahkan tanpa haba tambahan, jadi rasa dan bau buah itu kekal dalam minyaknya. Perjalanan penuh dari ladang ke botol ditulis dalam [minyak zaitun Palestin dari ladang ke botol](/blog/minyak-zaitun-palestin-dari-ladang-ke-botol)."
+          },
+          {
+            "type": "image",
+            "src": "pressZaitunDalamAlQuranInline",
+            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Dari ladang Palestin ke meja keluarga Malaysia",
+        "id": "dari-ladang-ke-meja-malaysia",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun Arabian Village ialah minyak zaitun dara extra perahan sejuk satu sumber dari Palestin. Di Malaysia ia diedarkan oleh Berkat Madinah Store, pengedar rasmi dan satu-satunya. Botol 250 ml berharga RM59.00 dan botol 500 ml RM103.00, iaitu harga yang sama mengikut saiz untuk minyak klasik dan setiap rasa Koleksi Infusi."
+          },
+          {
+            "type": "p",
+            "text": "Kedai itu ada dua cawangan, di Ampang Jaya dan di Batu Caves (Prima Seri Gombak), dan cawangan Batu Caves lebih besar. Waktu buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad. Hari perayaan seperti Hari Raya boleh berbeza, jadi sahkan dahulu melalui WhatsApp. Kaunter Shopee dan TikTok Shop juga dikendalikan oleh Berkat Madinah sendiri, bukan penjual lain."
+          },
+          {
+            "type": "image",
+            "src": "pressZaitunDalamAlQuranInline",
+            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+          },
+          {
+            "type": "p",
+            "text": "Alamat penuh dan cara menghubungi kedai ada di [halaman kedai](/shop), dan botol serta saiz yang ada boleh dilihat di [halaman produk](/products)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Teks, ladang dan sebotol minyak",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Rujukan zaitun dalam Al-Quran mudah disemak sendiri: At-Tin 95:1, An-Nur 24:35, Al-An'am 6:99 dan 6:141, serta An-Nahl 16:11. Bacalah terus dari mushaf, bukan dari petikan orang."
+        },
+        {
+          "type": "p",
+          "text": "Selebihnya ialah cerita manusia: keluarga, ladang berbatu, dan musim tuaian yang berulang setiap musim luruh. Sebotol minyak satu sumber ialah cara paling ringkas untuk membawa sedikit daripada cerita itu ke dapur sendiri."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Ayat mana yang menyebut zaitun dalam Al-Quran?",
+        "a": "Antaranya Surah At-Tin 95:1, Surah An-Nur 24:35, Surah Al-An'am 6:99 dan 6:141, serta Surah An-Nahl 16:11."
+      },
+      {
+        "q": "Apa maksud rujukan seperti 95:1?",
+        "a": "Nombor pertama ialah nombor surah dan nombor kedua ialah nombor ayat. Jadi 95:1 bermaksud Surah At-Tin, ayat pertama."
+      },
+      {
+        "q": "Adakah Surah An-Nur menyebut pokok zaitun?",
+        "a": "Ya. Sebahagian daripada ayat 35 menyebut pelita yang dinyalakan daripada pokok zaitun. Ayat itu panjang, jadi eloklah dibaca penuh dalam mushaf."
+      },
+      {
+        "q": "Adakah artikel ini menerangkan tafsir ayat?",
+        "a": "Tidak. Di sini ayat hanya dipetik dengan rujukan surah dan nombor ayatnya. Untuk tafsir, rujuk kitab tafsir atau orang yang berkelayakan."
+      },
+      {
+        "q": "Bila musim tuaian zaitun berlangsung?",
+        "a": "Pada musim luruh di rantau Mediterranean, secara amnya sekitar Oktober hingga November, bergantung kepada cuaca dan kematangan buah tahun itu."
+      },
+      {
+        "q": "Dari mana asal minyak zaitun Arabian Village?",
+        "a": "Dari Palestin. Ia minyak zaitun dara extra perahan sejuk satu sumber, bukan adunan minyak dari beberapa buah negara."
+      },
+      {
+        "q": "Berapa harganya di Malaysia dan di mana boleh beli?",
+        "a": "RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml, melalui Berkat Madinah Store di Ampang Jaya dan Batu Caves, atau kaunter Shopee dan TikTok Shop mereka."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Palestin: dari ladang ke botol",
+        "path": "blog/minyak-zaitun-palestin-dari-ladang-ke-botol",
+        "description": "Musim tuaian, perahan sejuk dan perjalanan minyak satu sumber sehingga sampai ke botol."
+      },
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak klasik perahan sejuk dan enam rasa Koleksi Infusi, semuanya asal Palestin."
+      },
+      {
+        "label": "Kenapa kami pilih satu sumber",
+        "path": "why-us",
+        "description": "Bagaimana satu asal dan satu pengedar menjadikan label pada botol itu boleh disemak."
+      },
+      {
+        "label": "Tempat membeli di Malaysia",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu buka, serta kaunter dalam talian rasmi."
       }
     ]
   },

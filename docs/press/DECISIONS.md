@@ -24,3 +24,15 @@ under delegation is marked **assumed**, never *approved*.
 | D12 **assumed** | Round payload ceiling of **6 MB** | The build already ships 26 MB, almost all unoptimised PNG. An unbounded image round would make every article slower than the page it is trying to outrank |
 | D13 **assumed** | Articles are **single-language, not translated sets** | PRESS non-negotiable 4 and the `llms.txt` seven-rule standard. Each `id` therefore appears in one language module and one `slugs.json` entry |
 | D14 | Search Console data is **absent** from this round | The property is not connected. Volumes only. Recorded so the plan is not read as being informed by live ranking data |
+
+## Round 2 decisions — 2026-08-25
+
+| # | Decision | Source |
+|---|---|---|
+| D15 | **3 articles per language, 9 in all** — the split is a user ruling this round, overriding the demand-led split of D6 | User, 2026-08-25: "3 articles for each lang" |
+| D16 | **No image is generated. Every image is cropped from the site's own photography** | User, 2026-08-25: "user picture from the current webiste do not generate new one" |
+| D17 | The PRESS flow itself was changed to match: Stage 4 is now **reuse-first** — inventory the repo's photos, look at each one, assign by subject, crop locally, and generate only what nothing existing can fill | User, 2026-08-25: "maybe u change a bit in the flow of press regarding this generating the pic" |
+| D18 **assumed** | Heroes ship at exactly **1280×720**, because `ArticlePage.tsx` declares that size. Round 1's 1024×576 files made that declaration false | The declaration is in the template; matching it is cheaper than changing it, and no round-1 file is touched |
+| D19 **assumed** | `minyak-zaitun-habbatus-sauda` targets the **product** question, never the health question, although the demand behind that keyword is health-shaped | D11 and Reg. 18(6). The alternative was to leave the largest unclaimed Malay term unserved |
+| D20 **assumed** | The Quran article quotes **Quranic verses only — no hadith**, and attaches no health, spiritual or efficacy claim to the product | A hadith citation needed an owner ruling on suburhoney and none has been given here |
+| D21 **assumed** | Competitor brand terms are not targeted, though `minyak zaitun olive house` (590/mo) is the largest remaining Malay head term | The site's standing brand-neutral rule |

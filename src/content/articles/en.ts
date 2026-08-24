@@ -1192,6 +1192,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy and current prices",
         "path": "shop",
         "description": "Branch counters, opening hours, and the price of every size and flavour."
+      },
+      {
+        "label": "Olive oil vs pomace oil",
+        "path": "blog/olive-oil-vs-pomace-oil-what-the-grades-mean",
+        "description": "What pomace, refined and \"extra light\" mean on a label, and how the grades differ."
       }
     ]
   },
@@ -1441,6 +1446,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah branches, Shopee storefront and TikTok Shop."
+      },
+      {
+        "label": "Olive oil smoke point",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "How much heat olive oil takes, compared with the oils a Malaysian kitchen already uses."
       }
     ]
   },
@@ -1912,6 +1922,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy",
         "path": "shop",
         "description": "Berkat Madinah branches and online counters across Malaysia."
+      },
+      {
+        "label": "Cooking with olive oil",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where extra virgin belongs in a Malaysian kitchen, and what a pour actually costs."
       }
     ]
   },
@@ -2160,6 +2175,858 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Branch counters in Ampang Jaya and Batu Caves, plus Berkat Madinah's own Shopee and TikTok Shop."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 2 ---------------- */
+  {
+    "id": "olive-oil-for-cooking",
+    "slug": "how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+    "seoTitle": "Olive Oil for Cooking: A Malaysian Kitchen Guide",
+    "metaTitle": "Olive Oil for Cooking: A Malaysian Kitchen Guide",
+    "metaDescription": "Olive oil for cooking in a Malaysian kitchen: where it works, how much to pour, what a tablespoon costs at RM236 a litre, and classic versus infused.",
+    "focusKeyword": "olive oil for cooking",
+    "relatedKeywords": [
+      "cooking with extra virgin olive oil",
+      "can you cook with extra virgin olive oil",
+      "olive oil for tumis",
+      "olive oil for cooking malaysia",
+      "extra virgin olive oil malaysia",
+      "how much olive oil to use",
+      "olive oil for roasting vegetables",
+      "olive oil for marinade",
+      "infused olive oil cooking",
+      "olive oil for salad dressing",
+      "olive oil price per litre malaysia",
+      "how to store olive oil"
+    ],
+    "category": "Cooking & recipes",
+    "tags": [
+      "cooking",
+      "extra virgin olive oil",
+      "malaysia",
+      "kitchen guide"
+    ],
+    "h1": "Olive Oil for Cooking: How to Use It in a Malaysian Kitchen",
+    "excerpt": "A practical guide to olive oil for cooking in a Malaysian kitchen, from tumis and roasting to what a tablespoon actually costs.",
+    "keyTakeaway": "Olive oil for cooking suits most of a Malaysian kitchen: tumis, roasting, marinades, rice and anything served cold. Use about half what you would pour of a neutral oil. At RM236 a litre a tablespoon costs roughly RM3.54, so the price lands per dish, not per bottle.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressOliveOilForCookingHero",
+      "alt": "A bottle of Arabian Village Palestinian olive oil for cooking standing on a weathered wooden table, green and dark olives and olive leaves scattered at its base, an olive grove blurred in warm late light behind"
+    },
+    "ogImage": "/og/blog-olive-oil-for-cooking.jpg",
+    "intro": [
+      "Extra virgin olive oil is not a quiet swap for palm or corn oil. It has a taste, and that taste ends up in the food.",
+      "This is a kitchen guide. Where it works in Malaysian cooking, how much to pour, what a pour costs at RM236 a litre, and when to reach for an infused bottle instead."
+    ],
+    "sections": [
+      {
+        "heading": "Is olive oil for cooking worth it in a Malaysian kitchen?",
+        "id": "is-it-worth-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Yes, for most of what a Malaysian kitchen does daily. Tumis, roasting, marinades, rice and anything finished cold sit comfortably inside its range. Olive oil for cooking behaves differently from a neutral oil: it carries flavour instead of hiding, so use it where that flavour is wanted, and use less than you expect."
+          },
+          {
+            "type": "p",
+            "text": "Where it fits less well is a wok on a hard flame. Heat limits are their own subject, and [what heat olive oil can take](/blog/olive-oil-smoke-point-what-heat-it-can-take) covers the numbers."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForCookingInline",
+            "alt": "Weathered hands pouring olive oil from a dark bottle into a small speckled ceramic dipping bowl on a rough wooden table, a linen cloth and bread to the right"
+          }
+        ]
+      },
+      {
+        "heading": "What changes when you cook with extra virgin",
+        "id": "what-changes",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Three things change. The dish picks up a peppery, grassy note that a neutral oil never adds. Onions and garlic brown a little more slowly and more evenly. And quantity starts to matter, because a heavy hand tastes heavy: one tablespoon of a good oil reads as seasoning, three reads as a mistake."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Flavour** — green, faintly bitter, with a peppery catch at the back of the throat.",
+              "**Colour** — vegetables roast to a deeper gold.",
+              "**Texture** — dressings cling instead of sliding off.",
+              "**Quantity** — start with half a neutral oil's measure."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForCookingInline",
+            "alt": "Weathered hands pouring olive oil from a dark bottle into a small speckled ceramic dipping bowl on a rough wooden table, a linen cloth and bread to the right"
+          }
+        ]
+      },
+      {
+        "heading": "Where olive oil for cooking works in Malaysian dishes",
+        "id": "where-it-works",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Everywhere the heat is moderate and the oil is meant to be tasted. Tumis for a sambal base or a plate of stir-fried sayur. Roasting ayam, potatoes, terung or pumpkin. Marinades for grilled fish. A spoon forked through rice once it has steamed. Salads, kerabu and ulam, where nothing is heated at all."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Use",
+              "How",
+              "How much"
+            ],
+            "rows": [
+              [
+                "Tumis",
+                "Medium flame, warm pan",
+                "1 tbsp for two"
+              ],
+              [
+                "Roasting vegetables",
+                "Tossed on the tray",
+                "2 tbsp per tray"
+              ],
+              [
+                "Marinade, fish or chicken",
+                "With salt and lime",
+                "2 tbsp per kilo"
+              ],
+              [
+                "Rice after steaming",
+                "Forked through, off heat",
+                "1 tsp per cup"
+              ],
+              [
+                "Dressing, kerabu, ulam",
+                "Three parts oil, one acid",
+                "3 tbsp per bowl"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForCookingInline",
+            "alt": "Weathered hands pouring olive oil from a dark bottle into a small speckled ceramic dipping bowl on a rough wooden table, a linen cloth and bread to the right"
+          }
+        ]
+      },
+      {
+        "heading": "What does olive oil for cooking cost per dish?",
+        "id": "cost-per-dish",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Less than the shelf price suggests, because you pour teaspoons and tablespoons rather than cups. Arabian Village is **RM59.00 for 250 ml** and **RM103.00 for 500 ml**, which is RM236 and RM206 a litre. Divide by a thousand and a millilitre costs about 24 sen from the small bottle, 21 sen from the large."
+          },
+          {
+            "type": "table",
+            "head": [
+              "What you pour",
+              "Volume",
+              "From 250 ml",
+              "From 500 ml"
+            ],
+            "rows": [
+              [
+                "A teaspoon, finishing a plate",
+                "5 ml",
+                "RM1.18",
+                "RM1.03"
+              ],
+              [
+                "A tablespoon, tumis for two",
+                "15 ml",
+                "RM3.54",
+                "RM3.09"
+              ],
+              [
+                "Two tablespoons, a roasting tray",
+                "30 ml",
+                "RM7.08",
+                "RM6.18"
+              ],
+              [
+                "A quarter cup, marinade or dressing",
+                "60 ml",
+                "RM14.16",
+                "RM12.36"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForCookingInline",
+            "alt": "Weathered hands pouring olive oil from a dark bottle into a small speckled ceramic dipping bowl on a rough wooden table, a linen cloth and bread to the right"
+          }
+        ]
+      },
+      {
+        "heading": "Classic oil or an infusion?",
+        "id": "classic-or-infusion",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Reach for the classic when the oil should not decide the dish: roasting, tumis, rice, a dressing you are seasoning yourself. Reach for an infusion when you want one clear flavour to arrive without chopping anything. The [Infused Collection](/products) is six botanicals in the same cold-pressed base, priced the same by size."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Wild thyme** — roast potatoes, flatbread, a dipping bowl.",
+              "**Rosemary-basil** — grilled chicken, tomato salads, pasta.",
+              "**Turmeric-black pepper** — rice, roasted cauliflower, lentils.",
+              "**[Blackseed](/products/infused-extra-virgin-olive-oil-blackseed)** — dips, labneh, warm bread.",
+              "**Fennel-anise** — fish, slaws, carrot dishes.",
+              "**Lavender-chamomile** — fruit, yoghurt, light bakes."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForCookingInline",
+            "alt": "Weathered hands pouring olive oil from a dark bottle into a small speckled ceramic dipping bowl on a rough wooden table, a linen cloth and bread to the right"
+          }
+        ]
+      },
+      {
+        "heading": "Buying and keeping a bottle you cook from every day",
+        "id": "buying-and-keeping",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Buy the size you will finish in two or three months, then keep it away from the two things that age it fastest, heat and light. A dark bottle in a closed cupboard holds up far better than a clear one standing beside the hob in a kitchen that never really cools down."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Store it in a cupboard, not above the stove.",
+              "Close the cap after every pour. Air dulls it.",
+              "250 ml for a few times a week, 500 ml for daily cooking.",
+              "Fresh oil smells green and grassy; tired oil smells flat or waxy."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForCookingInline",
+            "alt": "Weathered hands pouring olive oil from a dark bottle into a small speckled ceramic dipping bowl on a rough wooden table, a linen cloth and bread to the right"
+          },
+          {
+            "type": "p",
+            "text": "In Malaysia the brand is carried by **Berkat Madinah Store**, its official distributor, at Ampang Jaya and the larger Batu Caves branch in Prima Seri Gombak. Both open 8:00 am to midnight daily. [Where to buy](/shop) has the addresses."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Cook with it, do not save it",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A bottle kept for special occasions goes stale before anyone gets to it. Olive oil for cooking earns its price on weeknights: the roasting tray, the tumis, the spoon forked through rice. Open the next bottle before the last runs dry."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can I use extra virgin olive oil for everyday cooking?",
+        "a": "Yes. Tumis, roasting, shallow pan work, marinades and cold dishes are all ordinary uses for it. The one place to think twice is sustained high-heat frying."
+      },
+      {
+        "q": "How much olive oil should I use per dish?",
+        "a": "Roughly half what you would pour of a neutral oil. A tablespoon is enough to tumis for two, two tablespoons dress a roasting tray, a teaspoon finishes a plate."
+      },
+      {
+        "q": "Is cooking with olive oil expensive in Malaysia?",
+        "a": "Per bottle it looks dear, per dish it is not. At RM236 a litre a tablespoon is about RM3.54, and about RM3.09 from the 500 ml bottle."
+      },
+      {
+        "q": "Can I use olive oil for tumis?",
+        "a": "Yes, on a medium flame. Warm the pan, add the oil, then the onion and garlic. They colour more evenly than in a neutral oil, so allow an extra minute."
+      },
+      {
+        "q": "Should the infused oils be cooked with or only drizzled?",
+        "a": "Both. They are culinary infusions in a cold-pressed base, so they roast and marinate like the classic oil. Their flavour reads clearest when the oil goes in late."
+      },
+      {
+        "q": "Where can I buy it in Malaysia?",
+        "a": "From Berkat Madinah Store, the official distributor: its Ampang Jaya branch or the larger Batu Caves outlet in Prima Seri Gombak, plus its own Shopee and TikTok Shop counters."
+      }
+    ],
+    "related": [
+      {
+        "label": "The Arabian Village range",
+        "path": "products",
+        "description": "The classic oil and all six infused flavours, with current prices."
+      },
+      {
+        "label": "What cold-pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "How the oil in your pan was extracted, and why it matters to the taste."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "The label checks worth making before you cook from a new bottle."
+      },
+      {
+        "label": "Where to buy",
+        "path": "shop",
+        "description": "Berkat Madinah branches, opening hours and online counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 2 ---------------- */
+  {
+    "id": "olive-oil-smoke-point",
+    "slug": "olive-oil-smoke-point-what-heat-it-can-take",
+    "seoTitle": "Olive Oil Smoke Point: What Heat It Can Take",
+    "metaTitle": "Olive Oil Smoke Point: What Heat It Can Take",
+    "metaDescription": "Olive oil smoke point, explained: approximate ranges by grade, why freshness moves the number, and which Malaysian cooking methods stay under it.",
+    "focusKeyword": "olive oil smoke point",
+    "relatedKeywords": [
+      "extra virgin olive oil smoke point",
+      "smoke point of olive oil in celsius",
+      "can you fry with olive oil",
+      "olive oil cooking temperature",
+      "refined olive oil smoke point",
+      "pomace oil smoke point",
+      "olive oil for tumis",
+      "does olive oil burn easily",
+      "free fatty acid olive oil",
+      "olive oil deep frying",
+      "cooking oil smoke point comparison",
+      "high heat cooking oil malaysia"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "smoke point",
+      "cooking with olive oil",
+      "extra virgin",
+      "kitchen guide"
+    ],
+    "h1": "Olive Oil Smoke Point: What Heat It Can Actually Take",
+    "excerpt": "The olive oil smoke point is a range rather than a fixed number, and freshness moves it more than the grade on the label does.",
+    "keyTakeaway": "The olive oil smoke point is a range, not a number: roughly 190 to 210°C for extra virgin, higher for refined grades. Freshness and free fatty acid content move it more than the label does. Tumis, roasting and shallow-frying stay under it; a long deep-fry and a hard wok flame do not.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressOliveOilSmokePointHero",
+      "alt": "A Malaysian man in a black songkok, seated at a wooden bench, nosing olive oil from a cobalt-blue tasting glass, with a glass flask of oil, a rack of sample tubes and a microscope on the bench and olive branches behind him."
+    },
+    "ogImage": "/og/blog-olive-oil-smoke-point.jpg",
+    "intro": [
+      "Smoke point is the temperature at which an oil stops sitting quietly in the pan and starts giving off a steady haze. For extra virgin olive oil the figure gets repeated with a confidence nobody should have, because it is not one number. It is a range, and the range moves.",
+      "Here are the approximate figures for the olive oil grades and for the oils a Malaysian kitchen already keeps, what moves the number, and which everyday methods stay under it."
+    ],
+    "sections": [
+      {
+        "heading": "What a smoke point actually is",
+        "id": "what-a-smoke-point-is",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A smoke point is the temperature at which an oil begins to give off a continuous visible haze instead of a clean shimmer. What you are watching is the smallest, most volatile parts of the oil breaking away first. It is not a cliff edge: the aroma flattens well before anything smokes, which is why it matters more for extra virgin."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSmokePointInline",
+            "alt": "Close view of the tasting bench: a hand holding a cobalt-blue tasting glass at the top left, a glass flask of yellow-green olive oil and a row of empty sample tubes in front of a microscope."
+          }
+        ]
+      },
+      {
+        "heading": "Olive oil smoke point figures, and how they compare",
+        "id": "smoke-point-figures-compared",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Published figures put extra virgin olive oil at roughly 190 to 210°C, with refined grades higher, because refining strips out the compounds that break down first. Read every figure below as an approximate range for the category, not a reading taken from your own bottle."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Oil",
+              "Approximate range",
+              "What it tastes of"
+            ],
+            "rows": [
+              [
+                "Extra virgin olive oil",
+                "190-210°C",
+                "Fruity, peppery"
+              ],
+              [
+                "Refined olive oil (pure or light)",
+                "220-240°C",
+                "Almost nothing"
+              ],
+              [
+                "Olive pomace oil",
+                "around 240°C",
+                "Neutral"
+              ],
+              [
+                "Palm cooking oil",
+                "around 230°C",
+                "Neutral"
+              ],
+              [
+                "Virgin coconut oil",
+                "175-200°C",
+                "Coconut"
+              ],
+              [
+                "Refined sunflower oil",
+                "around 225°C",
+                "Neutral"
+              ],
+              [
+                "Canola oil",
+                "200-230°C",
+                "Neutral"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSmokePointInline",
+            "alt": "Close view of the tasting bench: a hand holding a cobalt-blue tasting glass at the top left, a glass flask of yellow-green olive oil and a row of empty sample tubes in front of a microscope."
+          }
+        ]
+      },
+      {
+        "heading": "Freshness moves the number more than the grade does",
+        "id": "freshness-moves-the-number",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Free fatty acids break down first, and an oil gathers them as it ages and as air, light and warmth work on it. A fresh, low-acidity extra virgin oil takes more heat than a tired one that has stood open beside the stove since March. The grade on the label describes a starting condition."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Time.** Every month an opened bottle spends in a warm kitchen moves it the same way.",
+              "**Light.** Clear glass on a bright shelf ages an oil faster than dark glass in a cupboard.",
+              "**Air.** A half-empty bottle is half full of air, and the oil reacts with it.",
+              "**Reuse.** Oil already fried in starts lower."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSmokePointInline",
+            "alt": "Close view of the tasting bench: a hand holding a cobalt-blue tasting glass at the top left, a glass flask of yellow-green olive oil and a row of empty sample tubes in front of a microscope."
+          }
+        ]
+      },
+      {
+        "heading": "Which Malaysian cooking methods stay under it",
+        "id": "malaysian-cooking-methods",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most of what happens in a Malaysian kitchen sits comfortably inside the range. Tumis over a moderate flame runs near 120 to 160°C once the pan is loaded, and oven roasting at 180 to 200°C is fine. What goes past it is a long deep-fry and wok work on a hard flame."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tumis for a rempah, onions or garlic: inside the range, and the oil carries the aromatics.",
+              "Roasting vegetables or chicken at 180 to 200°C: inside the range.",
+              "Shallow-frying fish or telur mata: inside it, unless the pan is left dry and smoking between batches.",
+              "A long deep-fry of pisang goreng or keropok: past it, and costly by the litre.",
+              "Wok on a full flame: past it, well past it."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSmokePointInline",
+            "alt": "Close view of the tasting bench: a hand holding a cobalt-blue tasting glass at the top left, a glass flask of yellow-green olive oil and a row of empty sample tubes in front of a microscope."
+          },
+          {
+            "type": "p",
+            "text": "Olive oil is a pan oil with a ceiling, and most home cooking sits below it. For where it fits across a week of meals, read [how to cook with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen)."
+          }
+        ]
+      },
+      {
+        "heading": "How to tell when the oil has gone past it",
+        "id": "how-to-tell",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "You do not need a thermometer, because the pan tells you. A thin continuous haze lifting off the surface, a sharp smell where a fruity one was, and oil that has gone thin and runs too freely are the three signals. A shimmer is normal. Steady smoke means you are late."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Take the pan off the heat and give it thirty seconds before adding anything.",
+              "If it smoked hard, tip that oil out rather than cook in it.",
+              "Add the ingredients sooner: cold food drops the temperature at once.",
+              "Never leave a pan of oil heating while you chop."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSmokePointInline",
+            "alt": "Close view of the tasting bench: a hand holding a cobalt-blue tasting glass at the top left, a glass flask of yellow-green olive oil and a row of empty sample tubes in front of a microscope."
+          }
+        ]
+      },
+      {
+        "heading": "Is reheating the oil worth it?",
+        "id": "reheating-olive-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "At **RM236 a litre** for the 250 ml bottle, filling a pot with extra virgin oil and straining it to use again is a poor trade. Each round leaves the oil darker, thicker and quieter in the nose, and lower than it was. Keep a cheap oil for volume frying and the extra virgin for the pan."
+          },
+          {
+            "type": "p",
+            "text": "A better habit: cook with a modest amount, then finish the plate with a drizzle off the heat. The heated oil cooks, the raw oil carries the flavour."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSmokePointInline",
+            "alt": "Close view of the tasting bench: a hand holding a cobalt-blue tasting glass at the top left, a glass flask of yellow-green olive oil and a row of empty sample tubes in front of a microscope."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Extra virgin sits around 190 to 210°C, refined grades higher, and a fresh bottle takes more heat than an old one. Tumis, roast and shallow-fry in it. Leave the long deep-fry and the roaring wok to something cheaper."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the smoke point of extra virgin olive oil?",
+        "a": "Published ranges put it around 190 to 210°C. The figure depends on how fresh the oil is and how low its free fatty acid content is."
+      },
+      {
+        "q": "Can I fry with extra virgin olive oil?",
+        "a": "Shallow-frying and pan-frying sit inside the range. A long deep-fry on a hard flame does not, and at RM236 a litre it is an expensive way to fill a pot."
+      },
+      {
+        "q": "Does refined olive oil have a higher smoke point?",
+        "a": "Yes. Refining removes the free fatty acids and aromatic compounds that break down first, which lifts the figure and takes the flavour with it."
+      },
+      {
+        "q": "What happens to the flavour when olive oil smokes?",
+        "a": "It flattens. The fruit and pepper go first and the food picks that up. If a pan has smoked hard, tip the oil out."
+      },
+      {
+        "q": "Why does olive oil smoke in my wok?",
+        "a": "A wok on a full flame clears 250°C before anything is added, above the range for any olive oil. Use a lower flame, or another oil for wok work."
+      },
+      {
+        "q": "Does storing the bottle well change the smoke point?",
+        "a": "Indirectly. Warmth, light and air raise free fatty acid content over time, so a bottle kept dark, capped and away from the stove holds its tolerance longer."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Single-origin Palestinian cold-pressed oil, RM59.00 for 250 ml and RM103.00 for 500 ml."
+      },
+      {
+        "label": "What cold-pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "How the oil is extracted, and why that is the reason it behaves the way it does in a pan."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "What to read on the label and the bottle before you pay for it."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the two online counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 2 ---------------- */
+  {
+    "id": "olive-oil-vs-pomace-oil",
+    "slug": "olive-oil-vs-pomace-oil-what-the-grades-mean",
+    "seoTitle": "Olive Oil vs Pomace Oil: What the Grades Mean",
+    "metaTitle": "Olive Oil vs Pomace Oil: What the Grades Mean",
+    "metaDescription": "Pomace oil is pulled with solvent from the paste left after pressing. How it differs from extra virgin, and what pure and light really mean on a label.",
+    "focusKeyword": "olive oil vs pomace oil",
+    "relatedKeywords": [
+      "olive oil pomace oil",
+      "olive oil vs olive pomace oil",
+      "what is pomace oil",
+      "pomace oil for cooking",
+      "refined olive oil for cooking",
+      "extra light olive oil vs extra virgin olive oil",
+      "pure olive oil meaning",
+      "olive oil grades explained",
+      "light olive oil vs extra virgin",
+      "is pomace oil real olive oil",
+      "olive oil labels Malaysia",
+      "extra virgin olive oil Malaysia"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "olive oil grades",
+      "pomace oil",
+      "extra virgin",
+      "olive oil labels",
+      "buying guide"
+    ],
+    "h1": "Olive oil vs pomace oil: what the grades on the label mean",
+    "excerpt": "Pomace oil, refined olive oil and extra virgin all start as the same fruit but leave the mill by very different routes, and this guide shows what changes at each step and how to read it off a Malaysian label.",
+    "keyTakeaway": "Pomace oil is not a lower grade of olive oil. It is pulled with solvent from the paste left over after pressing, then refined until it is neutral. Extra virgin comes from the fruit itself, mechanically, and keeps its taste. Pure, light and extra light are refined oils with a little virgin oil blended back.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressOliveOilVsPomaceOilHero",
+      "alt": "Olive paste extruding from the stainless steel mouth of a mill while a ribbon of bright green-gold oil pours into an open steel vat, storage tanks behind"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-pomace-oil.jpg",
+    "intro": [
+      "Two bottles sit side by side on a Malaysian shelf. Both say olive oil. One costs several times the other, and the cheaper one carries a second word: pure, light, or pomace.",
+      "Those words are not decoration. Each names a different route out of the fruit, and the price follows the route."
+    ],
+    "sections": [
+      {
+        "heading": "What is pomace oil, and how is it different from olive oil?",
+        "id": "what-is-pomace-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pomace oil is made from what is left once the olives have already given up their oil. That cake of skins, pulp and crushed stones still holds a little oil, too little to press out. Pomace oil is what a second, chemical extraction recovers from it."
+          },
+          {
+            "type": "p",
+            "text": "So the gap is not one of degree. It is a different raw material, which is why pomace oil is named separately on a label."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsPomaceOilInline",
+            "alt": "Oil pouring from a stainless steel pipe into an open vat in a processing room, a pressure gauge and steel tanks around it"
+          }
+        ]
+      },
+      {
+        "heading": "How pomace oil is extracted and refined",
+        "id": "how-pomace-is-made",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The wet pomace is dried, then washed with a food-grade solvent, usually hexane, which dissolves the last of the oil out of the solids. The solvent is evaporated off. What is recovered is crude and not edible, so it is refined with heat, alkali and filtering until it is pale and neutral."
+          },
+          {
+            "type": "p",
+            "text": "Refining is the same rescue used on virgin oil that failed its grade. It strips the free fatty acids, and with them the aroma compounds behind the green smell and the peppery catch. Extraction itself is covered in [what cold pressed olive oil really means](/blog/what-cold-pressed-olive-oil-really-means)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsPomaceOilInline",
+            "alt": "Oil pouring from a stainless steel pipe into an open vat in a processing room, a pressure gauge and steel tanks around it"
+          }
+        ]
+      },
+      {
+        "heading": "What pure, light and extra light actually mean",
+        "id": "pure-light-extra-light",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "None of the three is a step above virgin. Pure olive oil, often sold as plain olive oil, is refined oil with a little virgin oil blended back for taste and colour. Light and extra light describe how pale and mild the result is, not calories."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Extra virgin** — a grade earned on lab and taste checks.",
+              "**Virgin** — same route, one step down, minor defects allowed.",
+              "**Pure or classic** — refined oil with virgin blended back.",
+              "**Light and extra light** — that blend, paler and milder.",
+              "**Pomace** — a different raw material, solvent-extracted."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsPomaceOilInline",
+            "alt": "Oil pouring from a stainless steel pipe into an open vat in a processing room, a pressure gauge and steel tanks around it"
+          }
+        ]
+      },
+      {
+        "heading": "Olive oil vs pomace oil: the grades side by side",
+        "id": "grades-compared",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Read the table across, not down. The first column is what the oil is made from and how, the second is what that leaves in the bottle, and the third is where the price sits against the rest. None of it is about brand."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Grade",
+              "How it is made",
+              "Taste",
+              "Price"
+            ],
+            "rows": [
+              [
+                "Extra virgin",
+                "Fresh fruit, mechanical only",
+                "Fruity, bitter, peppery",
+                "Highest"
+              ],
+              [
+                "Virgin",
+                "Same route, fruit less perfect",
+                "Milder, less clean",
+                "High"
+              ],
+              [
+                "Refined",
+                "Faulty virgin oil, neutralised by heat",
+                "Almost none",
+                "Middle"
+              ],
+              [
+                "Pure, light, extra light",
+                "Refined oil, some virgin blended back",
+                "Faint at most",
+                "Middle"
+              ],
+              [
+                "Pomace",
+                "Leftover paste, solvent, then refining",
+                "Neutral",
+                "Lowest"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsPomaceOilInline",
+            "alt": "Oil pouring from a stainless steel pipe into an open vat in a processing room, a pressure gauge and steel tanks around it"
+          }
+        ]
+      },
+      {
+        "heading": "Where each grade belongs in a kitchen",
+        "id": "kitchen-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Refined and pomace oils are bought for volume and neutrality: deep-frying, greasing trays, cooking where no oil flavour is wanted. Extra virgin is bought for the opposite reason. Its value is the taste, so it belongs where you can still taste it — finishing, dressing, dipping and gentle heat."
+          },
+          {
+            "type": "p",
+            "text": "That is how to read the price. Arabian Village extra virgin is RM59.00 for 250 ml and RM103.00 for 500 ml, or RM236 and RM206 a litre. Pomace costs a fraction of that, because it does a fraction of the job. More in [olive oil price in Malaysia](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsPomaceOilInline",
+            "alt": "Oil pouring from a stainless steel pipe into an open vat in a processing room, a pressure gauge and steel tanks around it"
+          }
+        ]
+      },
+      {
+        "heading": "How to tell which one is in the bottle in front of you",
+        "id": "reading-the-label",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The grade has to be printed somewhere, so start with the words, not the glass. Colour tells you almost nothing: it follows the olive variety, the ripeness at harvest and the filtering. A deep green oil is not automatically extra virgin, and a pale one is not automatically refined."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Find the grade in full, not just the words olive oil.",
+              "Read pure, light and pomace as refined unless told otherwise.",
+              "Prefer one named country of origin over a blend.",
+              "Look for a harvest or best-before date, and dark glass.",
+              "Compare price per litre, not per bottle."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsPomaceOilInline",
+            "alt": "Oil pouring from a stainless steel pipe into an open vat in a processing room, a pressure gauge and steel tanks around it"
+          },
+          {
+            "type": "p",
+            "text": "More checks before you pay are in [how to choose authentic extra virgin olive oil](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Olive oil vs pomace oil is not a good bottle against a bad one. They are two products with two jobs. Pomace is cheap, neutral fat from a by-product. Extra virgin is fruit juice, and you pay extra for flavour."
+        },
+        {
+          "type": "p",
+          "text": "Read the grade before the price. Arabian Village is a single-origin Palestinian cold-pressed [extra virgin olive oil](/products)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is pomace oil real olive oil?",
+        "a": "It comes from olives, but not from the fruit as pressed. It is recovered with solvent from the residue, then refined. Labelling rules require it to be sold under its own name."
+      },
+      {
+        "q": "Can you cook with pomace oil?",
+        "a": "You can. It is refined, neutral and stable, which is why kitchens that fry in volume use it. It brings no flavour of its own, so the case for extra virgin does not apply."
+      },
+      {
+        "q": "Is extra light olive oil lower in calories?",
+        "a": "No. Light and extra light describe colour and taste after refining. Every culinary oil carries the same energy per gram. A lighter olive oil is lighter only in flavour."
+      },
+      {
+        "q": "Why is pomace oil so much cheaper?",
+        "a": "It is made from a by-product that would otherwise be fuel or compost, recovered in bulk and refined continuously. The fruit was already paid for by the first extraction."
+      },
+      {
+        "q": "Does pure olive oil mean nothing was added?",
+        "a": "Not as most shoppers read it. Pure olive oil is refined oil with a small share of virgin oil blended back for taste. The word marks the absence of other seed oils."
+      },
+      {
+        "q": "What grade is Arabian Village olive oil?",
+        "a": "A single-origin Palestinian cold-pressed extra virgin olive oil, sold at RM59.00 for 250 ml and RM103.00 for 500 ml through Berkat Madinah Store, its only distributor in Malaysia."
+      }
+    ],
+    "related": [
+      {
+        "label": "What cold pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "The extraction method behind the extra virgin grade, and what the phrase does not promise."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "What to check on the bottle before you pay for it."
+      },
+      {
+        "label": "Olive oil price in Malaysia",
+        "path": "blog/olive-oil-price-in-malaysia-what-you-are-paying-for",
+        "description": "Why a per-litre comparison is the only honest way to compare two bottles."
+      },
+      {
+        "label": "The Arabian Village range",
+        "path": "products",
+        "description": "Single-origin Palestinian extra virgin olive oil and the six-botanical Infused Collection."
       }
     ]
   },

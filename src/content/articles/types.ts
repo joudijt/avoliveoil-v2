@@ -67,7 +67,25 @@ export type ImageKey =
   | 'pressZaytZaytunFalastiniHero'
   | 'pressZaytZaytunFalastiniInline'
   | 'pressZaytZaytunLilTabkhHero'
-  | 'pressZaytZaytunLilTabkhInline';
+  | 'pressZaytZaytunLilTabkhInline'
+  | 'pressHifzZaytAlzaytunHero'
+  | 'pressHifzZaytAlzaytunInline'
+  | 'pressMinyakZaitunHabbatusSaudaHero'
+  | 'pressMinyakZaitunHabbatusSaudaInline'
+  | 'pressMinyakZaitunUntukSaladHero'
+  | 'pressMinyakZaitunUntukSaladInline'
+  | 'pressOliveOilForCookingHero'
+  | 'pressOliveOilForCookingInline'
+  | 'pressOliveOilSmokePointHero'
+  | 'pressOliveOilSmokePointInline'
+  | 'pressOliveOilVsPomaceOilHero'
+  | 'pressOliveOilVsPomaceOilInline'
+  | 'pressSierZaytAlzaytunMalaysiaHero'
+  | 'pressSierZaytAlzaytunMalaysiaInline'
+  | 'pressZaitunDalamAlQuranHero'
+  | 'pressZaitunDalamAlQuranInline'
+  | 'pressZaytAlzaytunKualaLumpurHero'
+  | 'pressZaytAlzaytunKualaLumpurInline';
 
 export interface FaqItem {
   q: string;

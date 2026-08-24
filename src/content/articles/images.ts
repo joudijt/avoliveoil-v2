@@ -13,6 +13,25 @@ import finalBottle from '../../assets/images/journey-08-final.png';
 import womanHoldingBottle from '../../assets/images/woman-holding-bottle-nobg.webp';
 import kampungBottle from '../../assets/images/malaysian-woman-bottle-kampung.webp';
 
+import pressHifzZaytAlzaytunHero from '../../assets/images/press/hifz-zayt-alzaytun-hero.webp';
+import pressHifzZaytAlzaytunInline from '../../assets/images/press/hifz-zayt-alzaytun-inline.webp';
+import pressMinyakZaitunHabbatusSaudaHero from '../../assets/images/press/minyak-zaitun-habbatus-sauda-hero.webp';
+import pressMinyakZaitunHabbatusSaudaInline from '../../assets/images/press/minyak-zaitun-habbatus-sauda-inline.webp';
+import pressMinyakZaitunUntukSaladHero from '../../assets/images/press/minyak-zaitun-untuk-salad-hero.webp';
+import pressMinyakZaitunUntukSaladInline from '../../assets/images/press/minyak-zaitun-untuk-salad-inline.webp';
+import pressOliveOilForCookingHero from '../../assets/images/press/olive-oil-for-cooking-hero.webp';
+import pressOliveOilForCookingInline from '../../assets/images/press/olive-oil-for-cooking-inline.webp';
+import pressOliveOilSmokePointHero from '../../assets/images/press/olive-oil-smoke-point-hero.webp';
+import pressOliveOilSmokePointInline from '../../assets/images/press/olive-oil-smoke-point-inline.webp';
+import pressOliveOilVsPomaceOilHero from '../../assets/images/press/olive-oil-vs-pomace-oil-hero.webp';
+import pressOliveOilVsPomaceOilInline from '../../assets/images/press/olive-oil-vs-pomace-oil-inline.webp';
+import pressSierZaytAlzaytunMalaysiaHero from '../../assets/images/press/sier-zayt-alzaytun-malaysia-hero.webp';
+import pressSierZaytAlzaytunMalaysiaInline from '../../assets/images/press/sier-zayt-alzaytun-malaysia-inline.webp';
+import pressZaitunDalamAlQuranHero from '../../assets/images/press/zaitun-dalam-al-quran-hero.webp';
+import pressZaitunDalamAlQuranInline from '../../assets/images/press/zaitun-dalam-al-quran-inline.webp';
+import pressZaytAlzaytunKualaLumpurHero from '../../assets/images/press/zayt-alzaytun-kuala-lumpur-hero.webp';
+import pressZaytAlzaytunKualaLumpurInline from '../../assets/images/press/zayt-alzaytun-kuala-lumpur-inline.webp';
+
 import pressBeliMinyakZaitunKlHero from '../../assets/images/press/beli-minyak-zaitun-kl-hero.webp';
 import pressBeliMinyakZaitunKlInline from '../../assets/images/press/beli-minyak-zaitun-kl-inline.webp';
 import pressColdPressedOliveOilExplainedHero from '../../assets/images/press/cold-pressed-olive-oil-explained-hero.webp';
@@ -92,4 +111,22 @@ export const ARTICLE_IMAGES: Record<ImageKey, string> = {
   pressZaytZaytunFalastiniInline,
   pressZaytZaytunLilTabkhHero,
   pressZaytZaytunLilTabkhInline,
+  pressHifzZaytAlzaytunHero,
+  pressHifzZaytAlzaytunInline,
+  pressMinyakZaitunHabbatusSaudaHero,
+  pressMinyakZaitunHabbatusSaudaInline,
+  pressMinyakZaitunUntukSaladHero,
+  pressMinyakZaitunUntukSaladInline,
+  pressOliveOilForCookingHero,
+  pressOliveOilForCookingInline,
+  pressOliveOilSmokePointHero,
+  pressOliveOilSmokePointInline,
+  pressOliveOilVsPomaceOilHero,
+  pressOliveOilVsPomaceOilInline,
+  pressSierZaytAlzaytunMalaysiaHero,
+  pressSierZaytAlzaytunMalaysiaInline,
+  pressZaitunDalamAlQuranHero,
+  pressZaitunDalamAlQuranInline,
+  pressZaytAlzaytunKualaLumpurHero,
+  pressZaytAlzaytunKualaLumpurInline,
 };
