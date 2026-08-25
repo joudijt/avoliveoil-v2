@@ -48,3 +48,33 @@ under delegation is marked **assumed**, never *approved*.
 | D26 **assumed** | Where a generated image did not match what was asked for, **the alt text describes the real frame**, not the brief's intent. Four alt texts were rewritten this way | An alt text that describes an image the page is not showing is a worse defect than a weak lead image |
 | D27 **assumed** | The published **"tested below 0.028%"** acidity claim is **escalated to the owner, not deleted**. It appears 46 times across 10 shipped surfaces, has no support in `storeFacts.json`, and is hardcoded in `scripts/ai/facts-sync.mjs`. Removing a published product claim is an owner decision | The new Arabic acidity article's advice — that a number with no test date and no named lab is marketing copy — stands as written, and the contradiction is reported rather than hidden |
 | D28 **assumed** | Where a new article contradicted a live one, the **new article moved**, in every case: Arabic frying reuse, the Malay fridge rule, the English shelf-life figures, the marinade quantity. No published claim was rewritten to accommodate a draft | Round 3's job is to add pages, not to silently restate what the site already tells people |
+
+## Round 4 decisions — 2026-08-25
+
+| # | Decision | Source |
+|---|---|---|
+| D29 | **6 articles per language, 18 in all** — a user ruling this round, the same override D15 and D22 made | User, 2026-08-25: "press 6 articles each lang" |
+| D30 **assumed** | Malay is taken as **exhausted for a third consecutive round**. The six Malay terms this round run at **0–10/mo** and that is recorded as the truth rather than dressed up. Everything above 100/mo is still a competitor brand (D21) or inside the health cluster (D11) | Keyword Planner, geo 2458, pulled 2026-08-25 |
+| D31 **assumed** | Two large Arabic clusters are **discarded, not targeted**: the `زيت الزيتون والليمون على الريق` family (every query wants a health claim — D11) and the `معصرة زيتون` family (buyers of milling machinery, not of oil — unaddressable volume, Stage 1 rule 3) | The pull returned both as the largest Arabic families available |
+| D32 **assumed** | **The free generator cannot stage a kitchen still life.** Four of the first five came back wrong — a fried egg for the coconut comparison, a teacup for the cake article, three dishes for "four ramekins". Every generated prompt was rewritten to be **bottle-led, grove-led or equipment-led**, and **all eighteen inlines are repo photographs**, not generated | Pass 1 of `round-4/gen`, recorded in `round-4/IMAGE-INVENTORY.md`. Round 3 saw the same failure at a lower rate |
+| D33 **assumed** | `zayt-alzaytun-almukarrar` takes a **repo frame** after two generation attempts. The provider will not render a pale oil beside a green one, which is the article's entire distinction, and shipping two identical green tumblers would have contradicted the text | Two rejected generations, both looked at |
+| D34 | **The brief itself carried a false checkable fact and the writers caught it.** `BRIEF.md` told two writers that coconut oil "sets solid" at 28–32 °C. It melts at about 24 °C, so at a Malaysian counter temperature it is liquid or a soft paste and only sets in an air-conditioned room. Both the Malay and the English writer refused the brief's wording independently and wrote it correctly | Writer report, 2026-08-25, verified against both drafts. Recorded because the round's own instructions were the source of the error |
+| D35 **assumed** | **Cross-language topical twins are allowed** where each came out of its own language's demand pull — coconut comparison, bitter taste and the bottle each appear in two languages. They are separated by angle and examples, never translated. Anything closer would breach PRESS non-negotiable 4 | D13, plus the live precedent of the round-3 salad pair |
+
+## Round 4 escalations — raised to the owner, not decided by the round
+
+| # | Item | Why it is not a content decision |
+|---|---|---|
+| D36 **open** | **The product page fails two tests this round publishes.** `zayt-zaytun-baladi` and `zayt-alzaytun-hasab-balad-almansha` tell the reader that a seller who cannot name the mill, the region or the cultivar has told them nothing. `llms-ar.txt` and the product copy publish none of the three. The consumer advice is correct and stays; the gap is on the product side | Adding a mill or region to the product page is a factual claim about the supply chain that only the owner can make |
+| D37 **open** | **The organic claim has no certifier.** `llms-ar.txt` calls the product عضوي four times (lines 64, 268, 453, 521) and `llms.txt` carries the same in English, with no certifying body and no certificate number anywhere. This round's `zayt-zaytun-baladi` publishes the standard — a named body and a number on the label — which the site's own claim does not meet. Same shape as **D27** and escalated the same way: reported, not deleted | Removing or substantiating a published product claim is an owner decision |
+| D38 **open** | **English cannibalisation between `olive-oil-substitute` and `olive-oil-for-baking`.** Both carry the butter-to-oil conversion, both target the conversion query, and their FAQs are near duplicates. Shipped as written | Collapsing them is a rewrite of two published articles, not an edit; the owner may prefer two pages |
+
+Also carried forward from round 3 and still open: **D27**, the published "tested below 0.028%"
+acidity claim, hardcoded in `scripts/ai/facts-sync.mjs` and appearing 46 times across ten surfaces.
+No round-4 article repeats it.
+
+Two pre-existing corpus disagreements this round makes conspicuous, both cheap to fix and both
+left alone because they are edits to live articles rather than to the round: the live cooking
+article's "two or three months" opened against the eight-week rule everywhere else, and the live
+smoke-point article's "120 to 160 °C" tumis range against the 140–180 °C `llms.txt` publishes.
+

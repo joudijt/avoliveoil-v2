@@ -919,6 +919,11 @@ export const MS_ARTICLES: Article[] = [
         path: 'shop',
         description: 'Berkat Madinah Store, Shopee dan TikTok Shop — setiap saluran rasmi.',
       },
+      {
+        "label": "Cara kenal minyak zaitun palsu",
+        "path": "blog/cara-kenal-minyak-zaitun-palsu",
+        "description": "Bagaimana minyak dipalsukan, dan ujian rumah mana yang sebenarnya mitos."
+      }
     ],
   },
   /* ---------------- PRESS round 1 ---------------- */
@@ -1195,6 +1200,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Sahkan waktu operasi melalui WhatsApp",
         "path": "contact",
         "description": "Waktu boleh berbeza pada hari raya — tanya dahulu sebelum bergerak."
+      },
+      {
+        "label": "Beli minyak zaitun online di Malaysia",
+        "path": "blog/beli-minyak-zaitun-online-di-malaysia",
+        "description": "Apa yang perlu ada pada penyenaraian sebelum anda bayar."
       }
     ]
   },
@@ -2008,6 +2018,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Apa itu minyak zaitun pomace",
         "path": "blog/apa-itu-minyak-zaitun-pomace",
         "description": "Hampas, pelarut dan penapisan — kenapa harganya jauh lebih murah."
+      },
+      {
+        "label": "Rasa minyak zaitun: pahit dan pedas",
+        "path": "blog/rasa-minyak-zaitun-pahit-dan-pedas",
+        "description": "Kenapa minyak muda terasa pahit dan pedas di tekak, dan bila ia tanda rosak."
       }
     ]
   },
@@ -2547,6 +2562,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli di Malaysia",
         "path": "shop",
         "description": "Kaunter Berkat Madinah Store di Ampang Jaya dan Batu Caves, serta saluran dalam talian rasminya."
+      },
+      {
+        "label": "Maksud minyak zaitun tulen",
+        "path": "blog/maksud-minyak-zaitun-tulen",
+        "description": "Istilah pemasaran lawan istilah gred, dan apa yang sebenarnya dijamin."
       }
     ]
   },
@@ -5408,6 +5428,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Kaunter Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
+      },
+      {
+        "label": "Minyak zaitun vs minyak kelapa",
+        "path": "blog/minyak-zaitun-vs-minyak-kelapa",
+        "description": "Dua minyak yang ada dalam dapur Malaysia, dibandingkan sebagai lemak masakan."
       }
     ]
   },
@@ -5686,6 +5711,1675 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
+      },
+      {
+        "label": "Minyak zaitun untuk kek dan bakeri",
+        "path": "blog/minyak-zaitun-untuk-kek-dan-bakeri",
+        "description": "Penukaran mentega kepada minyak, dan kek mana sesuai dengan minyak dara."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "beli-minyak-zaitun-online",
+    "slug": "beli-minyak-zaitun-online-di-malaysia",
+    "seoTitle": "Beli Minyak Zaitun Online: Semak Sebelum Bayar",
+    "metaTitle": "Beli Minyak Zaitun Online: Semak Sebelum Bayar",
+    "metaDescription": "Apa yang perlu ada pada penyenaraian sebelum anda bayar, risiko kotak dalam cuaca panas, pembungkusan yang sepatutnya, dan senarai semak enam langkah.",
+    "focusKeyword": "beli minyak zaitun online",
+    "relatedKeywords": [
+      "beli minyak zaitun online malaysia",
+      "beli minyak zaitun dalam talian",
+      "beli olive oil online",
+      "minyak zaitun extra virgin online",
+      "kedai online minyak zaitun",
+      "penghantaran minyak zaitun",
+      "pembungkusan botol kaca penghantaran",
+      "tarikh tuai minyak zaitun",
+      "senarai semak beli minyak zaitun",
+      "harga minyak zaitun seliter"
+    ],
+    "category": "Panduan membeli",
+    "tags": [
+      "Beli Minyak Zaitun Online",
+      "Panduan Membeli",
+      "Penghantaran",
+      "Pembungkusan",
+      "Malaysia"
+    ],
+    "h1": "Beli minyak zaitun online di Malaysia: apa yang perlu disemak sebelum bayar",
+    "excerpt": "Penyenaraian dalam talian tidak boleh dipegang dan tidak boleh dirasa. Empat perkara yang mesti ada padanya, kotak dalam cuaca panas kita, dan senarai semak sebelum tekan butang bayar.",
+    "keyTakeaway": "Beli minyak zaitun online dengan selamat bermula pada penyenaraian: negara asal yang dinamakan, gred yang ditulis, saiz botol, dan satu tarikh. Selepas itu barulah soal penghantaran — kotak berlapis, botol kaca gelap, dan penjual yang ada kedai fizikal serta nombor yang menjawab kalau botol sampai pecah atau salah.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressBeliMinyakZaitunOnlineHero",
+      "alt": "Kotak penghantaran kadbod di atas meja kayu dengan dua biji zaitun di sebelahnya"
+    },
+    "ogImage": "/og/blog-beli-minyak-zaitun-online.jpg",
+    "intro": [
+      "Membeli minyak zaitun dalam talian menjimatkan perjalanan, tetapi anda kehilangan dua perkara yang ada di kedai: botol di tangan dan orang yang boleh ditanya.",
+      "Yang tinggal cuma gambar penyenaraian, beberapa baris teks, dan sebuah kotak yang akan bergerak dalam cuaca panas.",
+      "Jadi kerja menyemak berpindah ke hadapan — sebelum bayar, bukan selepas kotak sampai."
+    ],
+    "sections": [
+      {
+        "heading": "Apa yang perlu ada pada penyenaraian sebelum anda bayar",
+        "id": "apa-perlu-ada-pada-penyenaraian",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Penyenaraian yang lengkap menyebut empat perkara sekurang-kurangnya: negara asal yang dinamakan, gred minyak, saiz botol dalam mililiter, dan satu tarikh — tarikh tuai kalau ada, atau tarikh luput. Kalau tajuk penyenaraian panjang dengan kata pujian tetapi keempat-empat perkara itu tiada, itu sendiri satu jawapan tentang siapa yang menjualnya. Gambar cantik bukan maklumat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Negara asal yang dinamakan** — satu negara, bukan \"Mediterranean\" atau \"EU\".",
+              "**Gred** — extra virgin, virgin atau ditapis, ditulis dengan jelas.",
+              "**Saiz botol dalam mililiter** — supaya harga seliter boleh dikira sendiri.",
+              "**Tarikh tuai atau tarikh luput** — satu tarikh sebenar, bukan \"stok baru\".",
+              "**Jenis bekas** — kaca gelap atau tin, bukan botol jernih."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBeliMinyakZaitunOnlineInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Senarai semak sebelum tekan butang bayar",
+        "id": "senarai-semak-sebelum-bayar",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Enam semakan ini mengambil masa kurang seminit dan menjimatkan satu pemulangan. Baca tajuk penyenaraian sampai habis, buka bahagian penerangan, besarkan gambar label, dan cari nama penjual. Kalau mana-mana daripadanya kosong, tanya penjual dahulu melalui ruang mesej sebelum bayar, bukan selepas kotak sampai di pintu."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Gred dan negara asal tertulis pada penyenaraian, bukan hanya pada gambar.",
+              "Saiz botol dinyatakan, dan harga seliter dikira sendiri sebelum membanding.",
+              "Ada tarikh tuai atau tarikh luput yang boleh dibaca.",
+              "Gambar label boleh dibesarkan sehingga teks kecilnya terbaca.",
+              "Nama penjual, alamat kedai dan nombor yang menjawab ada di halaman kedai.",
+              "Dasar pemulangan untuk botol pecah atau bocor tertulis."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBeliMinyakZaitunOnlineInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Risiko penghantaran dalam cuaca panas Malaysia",
+        "id": "penghantaran-cuaca-panas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun tidak suka haba dan cahaya, dan sebuah kotak dalam talian menemui kedua-duanya. Bahagian belakang van yang berhenti di bawah matahari tengah hari jauh lebih panas daripada udara di luar, dan kotak yang ditinggalkan di depan pintu petang itu terus terdedah. Perjalanan singkat tidak merosakkan minyak; perjalanan panjang dan panas mempercepatkan penuaannya."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Botol kaca jernih menerima cahaya sepanjang perjalanan.",
+              "Kotak yang menunggu berjam-jam di depan pintu — pesan pada hari anda ada di rumah.",
+              "Bawa masuk kotak terus, dan simpan botol dalam almari gelap yang jauh dari dapur."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBeliMinyakZaitunOnlineInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Pembungkusan yang sepatutnya anda terima",
+        "id": "pembungkusan-yang-sepatutnya",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kotak yang baik kelihatan membosankan: botol berbalut kertas atau buih, ruang kosong diisi supaya botol tidak bergolek, tutup dimeterai, dan kotak luar cukup tebal untuk ditindan. Botol kaca berat, dan sudut kotak yang lembik ialah tempat ia pecah. Kalau kotak sampai berminyak di bahagian bawah, ambil gambar sebelum membukanya."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Apa yang sampai",
+              "Apa maknanya",
+              "Apa perlu dibuat"
+            ],
+            "rows": [
+              [
+                "Botol berbalut, ruang kosong diisi",
+                "Penjual biasa menghantar kaca",
+                "Simpan kotak sehingga botol dibuka"
+              ],
+              [
+                "Botol longgar dalam kotak kosong",
+                "Pembungkusan tidak dirancang",
+                "Rakam video buka kotak"
+              ],
+              [
+                "Meterai tutup sudah koyak",
+                "Botol pernah dibuka atau bocor",
+                "Hubungi penjual sebelum digunakan"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBeliMinyakZaitunOnlineInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa penjual yang ada kedai fizikal lebih mudah dituntut",
+        "id": "penjual-ada-kedai-fizikal",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Penjual yang ada alamat kedai, waktu operasi dan nombor telefon yang menjawab boleh dicari semula minggu depan. Kalau botol sampai pecah atau salah rasa, ada tempat untuk anda pergi dan ada orang yang namanya terikat pada barang itu. Akaun dalam talian tanpa alamat tidak memberi anda apa-apa untuk dituntut."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village di Malaysia diedarkan oleh Berkat Madinah Store, dua cawangan di Selangor. Tiada penjual sah yang lain di Malaysia. Kaunter Shopee dan TikTok Shop untuk jenama ini ialah kaunter milik kedai itu sendiri, bukan penjual pihak ketiga — stok yang sama, pintu masuk yang berbeza. Saiz ada pada [halaman produk](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressBeliMinyakZaitunOnlineInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Bila lebih baik beli di kedai",
+        "id": "bila-lebih-baik-beli-di-kedai",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pergi ke kedai apabila anda mahu memegang botol, membaca label kecil dengan mata sendiri, atau bertanya bila stok itu masuk. Kedai juga menang apabila anda membeli untuk hadiah dan mahu botol yang sempurna, atau apabila cuaca sedang panas terik dan anda tidak mahu kotak menunggu di luar pintu."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Beli dalam talian untuk pembelian ulangan jenama yang sudah anda kenal rasanya.",
+              "Beli di kedai untuk botol pertama, untuk hadiah, dan apabila anda mahu bertanya.",
+              "Untuk cawangan dan waktu operasi, lihat [halaman tempat membeli](/shop)."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBeliMinyakZaitunOnlineInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Bayar selepas semakan lulus",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Membeli dalam talian bukan risiko dengan sendirinya. Yang berisiko ialah membayar untuk penyenaraian yang tidak memberitahu anda negara asal, gred, saiz botol mahupun tarikh tuai atau tarikh luput."
+        },
+        {
+          "type": "p",
+          "text": "Semak keempat-empatnya dan lihat siapa penjualnya. Untuk saiz botol, lihat [senarai produk](/products)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Selamat ke beli minyak zaitun online di Malaysia?",
+        "a": "Selamat kalau anda beli daripada kedai rasmi jenama atau pengedarnya, dan penyenaraian itu menyebut negara asal, gred, saiz botol dan satu tarikh. Yang menjadikannya berisiko bukan pembelian dalam talian, tetapi penyenaraian yang senyap tentang empat perkara itu."
+      },
+      {
+        "q": "Apa perlu disemak pada penyenaraian sebelum bayar?",
+        "a": "Empat perkara: negara asal yang dinamakan, gred yang ditulis, saiz botol dalam mililiter, dan tarikh tuai atau tarikh luput. Tambah satu lagi kalau boleh — gambar label yang cukup jelas untuk dibesarkan dan dibaca."
+      },
+      {
+        "q": "Panas dalam van penghantaran boleh merosakkan minyak zaitun?",
+        "a": "Haba dan cahaya mempercepatkan penuaan minyak zaitun, dan bahagian belakang van yang berhenti di bawah matahari tengah hari memang panas. Satu perjalanan singkat bukan masalah besar; kotak yang menunggu berjam-jam di depan pintu itu yang perlu dielakkan."
+      },
+      {
+        "q": "Pembungkusan macam mana yang sepatutnya untuk botol kaca?",
+        "a": "Botol berbalut kertas atau buih, ruang kosong dalam kotak diisi supaya botol tidak bergolek, tutup bermeterai, dan kotak luar yang cukup tebal. Simpan kotak dan resit sehingga botol dibuka dan rasanya disemak di rumah."
+      },
+      {
+        "q": "Kaunter Shopee dan TikTok Shop itu penjual pihak ketiga?",
+        "a": "Bukan. Untuk jenama ini, kaunter Shopee dan TikTok Shop itu dikendalikan oleh Berkat Madinah Store sendiri, kedai yang sama dengan stok yang sama seperti di cawangan mereka. Pintu masuknya sahaja yang berbeza."
+      },
+      {
+        "q": "Kenapa penjual yang ada kedai fizikal lebih mudah dituntut?",
+        "a": "Sebab ada alamat, waktu operasi dan nombor yang menjawab. Kalau botol sampai pecah, bocor atau bukan yang dipesan, anda tahu ke mana hendak pergi dan siapa yang bertanggungjawab pada barang itu."
+      },
+      {
+        "q": "Bila lebih baik beli di kedai daripada dalam talian?",
+        "a": "Untuk botol pertama sesuatu jenama, untuk hadiah, dan apabila anda mahu bertanya bila stok itu masuk. Selepas anda kenal rasanya dan tahu saiz yang sesuai, pembelian ulangan dalam talian lebih mudah."
+      }
+    ],
+    "related": [
+      {
+        "label": "Di mana beli minyak zaitun di Kuala Lumpur",
+        "path": "blog/di-mana-beli-minyak-zaitun-di-kuala-lumpur",
+        "description": "Membeli di kedai fizikal di Lembah Klang: apa nak cari pada botol dan apa nak tanya kakitangan."
+      },
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "Apa yang anda bayar sebenarnya, dan cara membanding harga seliter antara gred yang sama."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin, saiz botol dan Koleksi Infusi enam rasa."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Berkat Madinah Store, cawangan Ampang Jaya dan Batu Caves, serta kaunter dalam talian mereka sendiri."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "minyak-zaitun-palsu",
+    "slug": "cara-kenal-minyak-zaitun-palsu",
+    "seoTitle": "Minyak Zaitun Palsu: Ujian Peti Sejuk Itu Mitos",
+    "metaTitle": "Minyak Zaitun Palsu: Ujian Peti Sejuk Itu Mitos",
+    "metaDescription": "Bagaimana minyak zaitun dipalsukan, kenapa ujian peti sejuk dan ujian warna tidak membuktikan apa-apa, dan lima butiran yang memang boleh disemak.",
+    "focusKeyword": "minyak zaitun palsu",
+    "relatedKeywords": [
+      "cara kenal minyak zaitun palsu",
+      "minyak zaitun asli atau palsu",
+      "ujian minyak zaitun peti sejuk",
+      "minyak zaitun tiruan",
+      "minyak zaitun dicampur",
+      "minyak zaitun ditapis dijual sebagai dara",
+      "label minyak zaitun mengelirukan",
+      "tarikh tuaian minyak zaitun",
+      "warna minyak zaitun",
+      "harga minyak zaitun seliter",
+      "ujian rumah minyak zaitun"
+    ],
+    "category": "Panduan Pembeli",
+    "tags": [
+      "Ketulenan",
+      "Label Makanan",
+      "Panduan Pembeli",
+      "Extra Virgin",
+      "Mitos Dapur"
+    ],
+    "h1": "Minyak zaitun palsu: cara ia dipalsukan dan ujian mana yang menipu anda",
+    "excerpt": "Minyak dicampur, minyak ditapis dijual sebagai dara, label yang pandai berdiam. Dan tiga ujian dapur yang viral tetapi tidak membuktikan satu apa pun.",
+    "keyTakeaway": "Minyak zaitun palsu lebih kerap bermaksud penggantian gred daripada racun: minyak murah dicampur masuk, minyak ditapis dijual pada harga dara, tuaian lama dilabel semula. Ujian peti sejuk, ujian pelita dan ujian warna tidak memisahkan yang tulen daripada yang tidak. Yang boleh disemak ialah tarikh tuaian, asal usul, botol, harga seliter dan penjual.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunPalsuHero",
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja makmal, dengan kelalang sampel dan mikroskop di belakangnya."
+    },
+    "ogImage": "/og/blog-minyak-zaitun-palsu.jpg",
+    "intro": [
+      "Setiap kali harga minyak zaitun naik, video ujian rumah pun naik sekali di media sosial.",
+      "Yang paling laris ialah ujian peti sejuk: masuk botol, tunggu semalaman, tengok ia beku atau tidak. Malangnya ujian itu tidak membuktikan apa-apa.",
+      "Di sini kita asingkan dua perkara — bagaimana minyak zaitun benar-benar dipalsukan, dan ujian mana yang sekadar cerita."
+    ],
+    "sections": [
+      {
+        "heading": "Apa maksud minyak zaitun palsu?",
+        "id": "apa-maksud-palsu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun palsu jarang bermaksud racun dalam botol. Yang jauh lebih biasa ialah penggantian: minyak biji yang murah dicampur ke dalam botol berlabel dara, minyak ditapis yang sudah hilang rasa dijual pada harga extra virgin, atau minyak tuaian lama dilabel semula sebagai stok baharu. Isunya harga dan gred, bukan keselamatan."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itulah ujian yang mencari sesuatu yang dramatik selalu gagal. Tiada apa-apa yang dramatik untuk dicari."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPalsuInline",
+            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+          }
+        ]
+      },
+      {
+        "heading": "Tiga cara sebotol dipalsukan",
+        "id": "cara-dipalsukan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pemalsuan berlaku pada tiga titik dalam rantaian bekalan: di tangki pencampur, di kilang penapis, dan di mesin cetak label. Ketiga-tiganya menghasilkan botol yang kelihatan normal di rak, berbau lemah apabila dibuka, dan berharga sedikit lebih murah daripada jiran-jirannya di rak yang sama."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Campuran dengan minyak murah.** Minyak biji bunga matahari, kanola atau soya dimasukkan dalam nisbah yang tidak dikesan oleh lidah biasa. Rasa buah dan pedas menjadi tumpul.",
+              "**Minyak ditapis dijual sebagai dara.** Penapisan membuang bau, rasa dan warna daripada minyak yang gagal ujian deria. Hasilnya murah dan hampir neutral.",
+              "**Label yang pandai berdiam.** \"Dibungkus di\", \"premium\", \"gold\" — semuanya sah, dan tidak satu pun menjanjikan gred, tuaian atau ladang."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPalsuInline",
+            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+          }
+        ]
+      },
+      {
+        "heading": "Ujian peti sejuk ialah mitos",
+        "id": "ujian-peti-sejuk",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Memasukkan minyak zaitun ke dalam peti sejuk untuk melihat sama ada ia membeku tidak membuktikan ketulenan. Minyak dara yang tulen boleh kekal cair, boleh menjadi berkabus, atau boleh membeku separa — bergantung pada varieti zaitun, kandungan lilin semula jadi dan suhu peti sejuk anda. Minyak ditapis berkelakuan sama."
+          },
+          {
+            "type": "p",
+            "text": "Ujian itu mengukur takat beku, dan takat beku bukan ukuran gred. Dua botol dara tulen daripada dua varieti berbeza boleh memberi dua keputusan berbeza pada malam yang sama."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPalsuInline",
+            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+          },
+          {
+            "type": "note",
+            "title": "Peti sejuk bukan tempat simpan",
+            "text": "Simpan dalam almari gelap dan sejuk, jauh daripada dapur. Berkabus ketika sejuk memang normal dan minyak kembali jernih pada suhu bilik."
+          }
+        ]
+      },
+      {
+        "heading": "Ujian pelita dan ujian warna",
+        "id": "ujian-pelita-dan-warna",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ujian pelita mendakwa minyak tulen akan menyala dengan sumbu, dan ujian warna mendakwa hijau pekat bermakna mutu tinggi. Kedua-duanya tidak berdiri. Hampir setiap minyak sayuran di rak pasar raya menyala dengan sumbu, dan warna minyak zaitun ditentukan oleh varieti serta kematangan buah ketika dituai."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Pelita.** Minyak kanola dan minyak bunga matahari membakar dengan baik. Nyalaan tidak menyebut apa-apa tentang gred.",
+              "**Warna.** Penilai profesional menggunakan gelas rasa berwarna biru supaya warna tidak mempengaruhi mereka. Itu sahaja sudah menjawab.",
+              "**Kesan pada kertas.** Semua minyak meninggalkan tompok berminyak. Tiada gred boleh dibaca daripada tompok itu.",
+              "**Rasa dan bau** pula memang berguna, dan caranya ada dalam [cara memilih minyak zaitun dara asli](/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia)."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPalsuInline",
+            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+          }
+        ]
+      },
+      {
+        "heading": "Tanda lawan makna",
+        "id": "tanda-lawan-makna",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kebanyakan tanda yang dikongsi dalam kumpulan WhatsApp ialah tanda tanpa makna, sementara tanda yang benar-benar bermakna duduk dalam cetakan kecil di belakang botol. Jadual ini meletakkan kedua-duanya bersebelahan. Baca lajur kanan dahulu, kerana lajur kiri itu yang paling laris dikongsi orang."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Tanda",
+              "Apa ia bermakna"
+            ],
+            "rows": [
+              [
+                "Membeku dalam peti sejuk",
+                "Tiada makna. Varieti dan suhu yang menentukan."
+              ],
+              [
+                "Kekal cair dalam peti sejuk",
+                "Tiada makna juga. Sebahagian minyak dara memang begitu."
+              ],
+              [
+                "Menyala dalam pelita",
+                "Tiada makna. Hampir semua minyak sayuran menyala."
+              ],
+              [
+                "Warna hijau pekat",
+                "Varieti dan kematangan buah, bukan gred."
+              ],
+              [
+                "Tarikh tuaian dicetak",
+                "Berguna. Usia minyak boleh disemak."
+              ],
+              [
+                "Satu negara asal dinamakan",
+                "Berguna. \"Dibungkus di\" membenarkan campuran banyak sumber."
+              ],
+              [
+                "Harga separuh rak yang sama",
+                "Amaran. Ada langkah dalam rantaian yang dilangkau."
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPalsuInline",
+            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+          }
+        ]
+      },
+      {
+        "heading": "Lima butiran yang boleh disemak",
+        "id": "yang-boleh-disemak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiada ujian dapur yang menggantikan makmal, tetapi ada lima butiran yang boleh anda semak dalam satu minit di depan rak. Kelimanya berkongsi satu ciri: setiap satu menuntut seseorang di hujung sana sanggup bertanggungjawab, dan penjual yang menyembunyikan sesuatu biasanya gagal pada lebih daripada satu."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "**Tarikh tuaian**, bukan sekadar tarikh luput. Minyak zaitun jus buah yang segar, jadi usianya lebih bermakna.",
+              "**Satu negara asal yang dinamakan.** Palestin, Tunisia, Sepanyol — satu tempat, bukan senarai benua.",
+              "**Kaca gelap atau tin.** Botol jernih di bawah lampu kedai menua paling cepat.",
+              "**Harga seliter yang munasabah.** Tukar setiap botol kepada harga seliter sebelum membanding.",
+              "**Penjual yang boleh dihubungi.** Kriterianya penuh dalam [cara menilai jenama minyak zaitun](/blog/cara-menilai-jenama-minyak-zaitun)."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPalsuInline",
+            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Semak label, bukan peti sejuk",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ujian yang viral menarik kerana ia pantas dan kelihatan saintifik. Yang berkesan lebih membosankan: baca belakang botol, banding harga seliter, dan rasa minyak itu sendiri."
+        },
+        {
+          "type": "p",
+          "text": "Minyak zaitun dara Arabian Village datang dari Palestin dengan asal usul yang dinamakan — lihat [halaman produk](/products) atau [cawangan Berkat Madinah Store](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Betul ke minyak zaitun asli mesti membeku dalam peti sejuk?",
+        "a": "Tidak. Minyak dara yang tulen boleh kekal cair, berkabus atau membeku separa bergantung pada varieti zaitun dan suhu peti sejuk itu. Minyak ditapis pun berkelakuan sama, jadi ujian itu tidak memisahkan apa-apa."
+      },
+      {
+        "q": "Kalau minyak menyala dalam pelita, itu tanda ia tulen?",
+        "a": "Tidak. Hampir semua minyak sayuran menyala apabila ada sumbu. Minyak kanola, minyak bunga matahari dan minyak zaitun ditapis semuanya membakar dengan baik, jadi nyalaan tidak menyebut apa-apa tentang gred atau ketulenan botol itu."
+      },
+      {
+        "q": "Warna hijau pekat bermakna minyak lebih baik?",
+        "a": "Tidak. Warna datang daripada varieti zaitun dan kematangan buah ketika dituai, kadangkala daripada pewarna. Penilai profesional menggunakan gelas rasa biru supaya warna langsung tidak mempengaruhi penilaian mereka, dan itu sudah cukup menjawab soalan ini."
+      },
+      {
+        "q": "Minyak zaitun yang murah semestinya palsu?",
+        "a": "Tidak semestinya. Harga rendah selalunya bermakna gred berbeza, bukan penipuan. Minyak dara ada lantai kos kerana lima hingga sepuluh kilogram zaitun menghasilkan satu liter sahaja. Banding harga seliter, bukan sebotol."
+      },
+      {
+        "q": "Ujian rumah mana yang paling berbaloi dibuat?",
+        "a": "Merasa dan menghidu. Minyak dara yang segar berbau buah, terasa sedikit pahit, dan pedas di pangkal tekak. Hambar, berlilin atau berbau krayon lama bermakna minyak sudah tua atau sudah ditapis."
+      },
+      {
+        "q": "Apa yang perlu dicari pada label sebelum membayar?",
+        "a": "Tarikh tuaian, satu negara asal yang dinamakan, perkataan gred yang tepat, kaca gelap atau tin, dan penjual yang boleh dihubungi. Lima butiran itu lebih bermakna daripada mana-mana ujian dapur yang tersebar di media sosial."
+      }
+    ],
+    "related": [
+      {
+        "label": "Cara memilih minyak zaitun dara asli di Malaysia",
+        "path": "blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia",
+        "description": "Perkataan gred pada label, tarikh tuaian, ujian rasa dua minit di rumah, dan perangkap yang perlu dielak."
+      },
+      {
+        "label": "Cara menilai jenama minyak zaitun",
+        "path": "blog/cara-menilai-jenama-minyak-zaitun",
+        "description": "Lima kriteria yang boleh anda periksa sendiri di depan rak, tanpa bergantung pada senarai nama jenama."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, berserta Koleksi Infusi enam rasa."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian rasmi Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "minyak-zaitun-tulen",
+    "slug": "maksud-minyak-zaitun-tulen",
+    "seoTitle": "Minyak Zaitun Tulen: Maksud Sebenar pada Label",
+    "metaTitle": "Minyak Zaitun Tulen: Maksud Sebenar pada Label",
+    "metaDescription": "\"Tulen\" bukan gred rasmi. Gred ialah extra virgin, virgin dan minyak ditapis. Jadual istilah pemasaran lawan istilah gred, dan apa nak baca pada label.",
+    "focusKeyword": "minyak zaitun tulen",
+    "relatedKeywords": [
+      "maksud minyak zaitun tulen",
+      "minyak zaitun asli",
+      "minyak zaitun original",
+      "pure olive oil maksud",
+      "extra virgin vs pure olive oil",
+      "beza minyak zaitun dara dan biasa",
+      "minyak zaitun premium",
+      "perahan sejuk pertama",
+      "label minyak zaitun",
+      "gred minyak zaitun",
+      "minyak zaitun light"
+    ],
+    "category": "Panduan Pembeli",
+    "tags": [
+      "Minyak Zaitun Tulen",
+      "Gred Minyak Zaitun",
+      "Label dan Istilah",
+      "Panduan Pembeli",
+      "Extra Virgin"
+    ],
+    "h1": "Maksud \"Minyak Zaitun Tulen\": Perkataan Pemasaran atau Gred?",
+    "excerpt": "Perkataan tulen tiada takrif undang-undang, dan \"pure olive oil\" di pasaran antarabangsa bermaksud campuran ditapis. Jadual istilah pemasaran lawan istilah gred.",
+    "keyTakeaway": "Minyak zaitun tulen ialah perkataan pemasaran, bukan gred. Gred yang lazim di rak runcit ada empat: extra virgin, virgin, minyak zaitun ditapis, dan pomace. Lebih mengelirukan lagi, \"pure olive oil\" di pasaran antarabangsa bermaksud campuran minyak ditapis dengan sedikit minyak dara, jadi botol bertanda pure sebenarnya kurang dara, bukan lebih.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunTulenHero",
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak zaitun hijau mengalir ke dalam tangki di bawah."
+    },
+    "ogImage": "/og/blog-minyak-zaitun-tulen.jpg",
+    "intro": [
+      "Di rak kedai, perkataan \"tulen\" muncul pada botol demi botol minyak zaitun.",
+      "Ia berbunyi seperti satu jaminan, tetapi ia bukan gred, dan tiada pihak berkuasa menetapkan apa yang layak dipanggil tulen.",
+      "Yang menentukan isi botol ialah gred di sebelahnya. Artikel ini mengasingkan dua jenis perkataan itu."
+    ],
+    "sections": [
+      {
+        "heading": "\"Tulen\" bukan gred — jadi apa maksudnya?",
+        "id": "tulen-bukan-gred",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dalam bahasa harian, tulen bermaksud tidak dicampur: minyak zaitun sahaja, tanpa minyak lain dimasukkan. Itu maksud yang munasabah, tetapi ia bukan kategori undang-undang. Gred rasmi yang sampai ke rak runcit hanya tiga: extra virgin, virgin, dan minyak zaitun ditapis. Perkataan tulen tidak muncul dalam senarai itu, dan tiada makmal boleh mengujinya."
+          },
+          {
+            "type": "p",
+            "text": "Gred menerangkan cara minyak dikeluarkan daripada buah dan had keasidannya. Perinciannya ada dalam [panduan gred minyak zaitun](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunTulenInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa \"pure olive oil\" bermaksud kurang dara, bukan lebih",
+        "id": "pure-olive-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Di pasaran antarabangsa, \"pure olive oil\" ialah nama dagang untuk satu campuran: minyak zaitun ditapis, dengan sedikit minyak dara dimasukkan semula untuk mengembalikan warna dan rasa. Botol bertanda pure sebenarnya kurang dara daripada botol extra virgin di sebelahnya. Pembeli di Malaysia membaca pure sebagai tulen, dan di situlah salah fahamnya bermula."
+          },
+          {
+            "type": "note",
+            "title": "Ujian pantas di rak",
+            "text": "Cari perkataan gred, bukan perkataan pujian. Botol yang menulis \"olive oil\" atau \"pure\" tanpa perkataan virgin ialah campuran yang mengandungi minyak ditapis."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunTulenInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Istilah pemasaran lawan istilah gred",
+        "id": "istilah-lawan-gred",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cara paling mudah membaca label ialah mengasingkan perkataan yang membawa makna undang-undang daripada perkataan yang membawa perasaan. Extra virgin, virgin dan ditapis ada takrif serta had yang boleh diuji. Tulen, asli, original, premium dan natural tiada takrif sebegitu, dan sesiapa sahaja boleh mencetaknya pada mana-mana botol."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Perkataan pada botol",
+              "Ada takrif rasmi?",
+              "Apa ia beritahu"
+            ],
+            "rows": [
+              [
+                "Tulen",
+                "Tidak",
+                "Dakwaan penjual bahawa minyak tidak dicampur"
+              ],
+              [
+                "Asli",
+                "Tidak",
+                "Sama seperti tulen; bergantung pada bukti lain"
+              ],
+              [
+                "Original",
+                "Tidak",
+                "Perkataan jenama, bukan maklumat isi botol"
+              ],
+              [
+                "Premium",
+                "Tidak",
+                "Kedudukan harga, bukan ukuran kualiti"
+              ],
+              [
+                "Natural",
+                "Tidak",
+                "Semua minyak zaitun jus buah; perkataan kosong"
+              ],
+              [
+                "First press / perahan pertama",
+                "Tidak",
+                "Hari ini semua minyak dara satu perahan sahaja"
+              ],
+              [
+                "Perahan sejuk",
+                "Sebahagian",
+                "Kaedah pengekstrakan; bukan gred dengan sendirinya"
+              ],
+              [
+                "Extra virgin",
+                "Ya",
+                "Perahan mekanikal, keasidan bebas 0.8% atau kurang"
+              ],
+              [
+                "Virgin",
+                "Ya",
+                "Kaedah sama, had keasidan lebih longgar"
+              ],
+              [
+                "Pure / olive oil",
+                "Ya",
+                "Campuran ditapis dengan sedikit minyak dara"
+              ],
+              [
+                "Light / extra light",
+                "Ya",
+                "Campuran ditapis; merujuk warna dan rasa"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunTulenInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang perlu dibaca pada label",
+        "id": "baca-label",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Label yang jujur memberitahu empat perkara dalam satu pandangan: gred yang tepat, negara asal yang dinamakan, tarikh tuai atau tarikh pembotolan, dan siapa yang boleh dihubungi kalau ada masalah. Kalau ruang label habis untuk perkataan pujian dan keempat-empat itu tiada, botol itu bercakap tentang dirinya, bukan minyaknya."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Cari perkataan gred yang tepat, extra virgin atau virgin, bukan sekadar olive oil.",
+              "Semak satu negara asal yang dinamakan, bukan campuran pelbagai negara yang kabur.",
+              "Cari tarikh tuai; kalau hanya ada tarikh luput, tanya bila minyak itu diperah.",
+              "Lihat bekasnya: kaca gelap atau tin melindungi minyak daripada cahaya lampu rak.",
+              "Pastikan ada nama pengimport atau penjual yang boleh dihubungi di Malaysia."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunTulenInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "\"Tulen\" masih berguna, tetapi bukan sebagai bukti",
+        "id": "tulen-sebagai-soalan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Perkataan tulen tetap ada tempatnya dalam percakapan harian: pembeli menggunakannya untuk bertanya sama ada minyak itu sudah dicampur dengan minyak biji yang lebih murah. Soalan itu memang munasabah. Cuma jawapannya tidak boleh datang daripada perkataan yang sama pada label; ia datang daripada gred, asal usul dan harga yang masuk akal."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tanya gred: jawapan extra virgin boleh disemak pada label, jawapan tulen tidak.",
+              "Tanya asal: satu negara yang dinamakan lebih bermakna daripada wilayah yang kabur.",
+              "Tanya harga seliter: minyak dara ada lantai kos, dan harga yang terlalu rendah biasanya bermakna gred berbeza. Lihat [saiz dan harga](/products)."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunTulenInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Beza tulen dengan organik dan halal",
+        "id": "tulen-organik-halal",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga perkataan ini selalu berdiri bersebelahan pada botol yang sama, tetapi hanya dua daripadanya boleh disemak oleh orang luar. Organik dan halal disokong oleh badan pensijilan, nombor sijil dan senarai awam. Tulen pula tiada badan, tiada nombor dan tiada senarai; ia kekal sebagai kata-kata penjual."
+          },
+          {
+            "type": "p",
+            "text": "Apa yang sebenarnya disahkan oleh perkataan organik diterangkan dalam [maksud minyak zaitun organik](/blog/minyak-zaitun-organik-apa-maksudnya)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunTulenInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Baca gred dahulu, perkataan lain kemudian",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Perkataan tulen memberitahu apa yang penjual mahu anda rasa. Perkataan gred memberitahu apa yang ada dalam botol, dan hanya satu daripada dua itu boleh disemak."
+        },
+        {
+          "type": "p",
+          "text": "Mulakan dengan gred, kemudian tarikh tuai dan asal usul. [Lihat tempat membeli](/shop) untuk cawangan Berkat Madinah Store."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Adakah \"minyak zaitun tulen\" satu gred rasmi?",
+        "a": "Bukan. Gred ditetapkan oleh piawaian perdagangan antarabangsa, dan yang sampai ke rak runcit ialah extra virgin, virgin serta minyak zaitun ditapis. Tulen ialah perkataan pemasaran tanpa takrif, tanpa had yang boleh diuji, dan tanpa pihak yang mengesahkannya."
+      },
+      {
+        "q": "Adakah \"pure olive oil\" lebih tulen daripada extra virgin?",
+        "a": "Sebaliknya. Pure olive oil ialah nama dagang untuk campuran minyak ditapis dengan sedikit minyak dara dimasukkan semula. Botol yang bertanda pure mengandungi kurang minyak dara berbanding botol extra virgin, walaupun perkataannya berbunyi lebih meyakinkan kepada pembeli Malaysia."
+      },
+      {
+        "q": "Kalau botol hanya tertulis \"olive oil\", itu apa?",
+        "a": "Itu biasanya campuran yang sama seperti pure: minyak ditapis dengan sedikit minyak dara. Ketiadaan perkataan virgin pada label ialah maklumatnya. Minyak begitu lebih neutral rasanya dan lebih murah seliter berbanding minyak dara."
+      },
+      {
+        "q": "Adakah \"perahan sejuk pertama\" membuktikan minyak itu bagus?",
+        "a": "Ia menerangkan kaedah, bukan gred. Perahan sejuk bermakna minyak diekstrak secara mekanikal tanpa haba tambahan, dan itu perbezaan sebenar daripada minyak ditapis. Namun ia sendiri tidak membuktikan kualiti; gred, tarikh tuai dan rasa yang membuktikannya."
+      },
+      {
+        "q": "Bagaimana nak tahu minyak saya sudah bercampur minyak lain?",
+        "a": "Ujian rumah tidak menjawab soalan itu, dan ujian peti sejuk pula mitos. Yang boleh anda semak ialah gred pada label, negara asal yang dinamakan, tarikh tuai, harga seliter yang munasabah, dan penjual yang boleh dihubungi."
+      },
+      {
+        "q": "Berbaloi ke bayar lebih untuk botol bertanda premium?",
+        "a": "Premium tiada takrif, jadi ia tidak menambah apa-apa maklumat pada harga. Bandingkan gred yang sama, saiz yang sama dan harga seliter. Kalau dua botol sama-sama extra virgin, perkataan premium pada salah satunya tidak mengubah apa-apa."
+      },
+      {
+        "q": "Adakah minyak zaitun \"light\" lebih ringan?",
+        "a": "Light merujuk warna dan rasa selepas penapisan, bukan tekstur atau berat minyak. Ia campuran ditapis yang hampir hilang aroma zaitunnya. Kalau anda mahu rasa buah, pahit dan pedas, perkataan yang dicari ialah extra virgin."
+      }
+    ],
+    "related": [
+      {
+        "label": "Apa itu minyak zaitun extra virgin dan gred lain",
+        "path": "blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain",
+        "description": "Gred extra virgin, virgin, ditapis dan pomace, dan apa yang berubah pada rasa serta harga."
+      },
+      {
+        "label": "Minyak zaitun organik: apa maksudnya",
+        "path": "blog/minyak-zaitun-organik-apa-maksudnya",
+        "description": "Apa yang disahkan oleh pensijilan organik, dan apa yang tidak disahkannya."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-kek",
+    "slug": "minyak-zaitun-untuk-kek-dan-bakeri",
+    "seoTitle": "Minyak Zaitun untuk Kek: Jadual Tukar Mentega",
+    "metaTitle": "Minyak Zaitun untuk Kek: Jadual Tukar Mentega",
+    "metaDescription": "Ganti mentega dengan minyak zaitun pada tiga suku isi padu. Jadual penukaran, kek yang sesuai dengan minyak dara, dan satu nisbah kek oren.",
+    "focusKeyword": "minyak zaitun untuk kek",
+    "relatedKeywords": [
+      "kek minyak zaitun",
+      "ganti mentega dengan minyak zaitun",
+      "nisbah minyak zaitun kek",
+      "olive oil untuk kek",
+      "kek lemon minyak zaitun",
+      "kek oren minyak zaitun",
+      "minyak zaitun untuk bakeri",
+      "kek span minyak zaitun",
+      "berapa ml minyak ganti mentega",
+      "resepi kek minyak zaitun"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun untuk Kek",
+      "Bakeri",
+      "Panduan Dapur",
+      "Dapur Malaysia",
+      "Extra Virgin"
+    ],
+    "h1": "Minyak Zaitun untuk Kek: Penukaran Mentega dan Kek yang Sesuai",
+    "excerpt": "Nisbah tiga suku isi padu, jadual penukaran mentega kepada minyak, kek yang menerima rasa minyak dara, dan satu nisbah kek oren yang sudah dikira.",
+    "keyTakeaway": "Minyak zaitun untuk kek menggantikan mentega pada kira-kira tiga suku isi padu, jadi 100 gram mentega menjadi lebih kurang 75 mililiter minyak. Kek yang terhasil kekal lembap lebih lama kerana minyak tidak memejal apabila sejuk. Kek coklat, lemon dan oren menerima minyak dara yang kuat rasanya, manakala kek span dan kek pandan lebih baik dengan minyak yang lembut.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukKekHero",
+      "alt": "Sebotol kaca minyak zaitun hijau di atas meja kayu dapur dengan cahaya siang dari tingkap"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-kek.jpg",
+    "intro": [
+      "Kek minyak zaitun jarang muncul dalam buku resepi Melayu kerana dapur kita membesar dengan mentega dan marjerin.",
+      "Tukarannya pun bukan satu lawan satu. Di bawah ada jadual penukaran, kek yang sesuai dengan minyak dara yang kuat rasanya, dan satu nisbah kek oren yang sudah dikira."
+    ],
+    "sections": [
+      {
+        "heading": "Boleh ke buat kek dengan minyak zaitun?",
+        "id": "boleh-ke-buat-kek",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Boleh, dan kaedahnya lebih pendek daripada kek mentega. Minyak zaitun masuk ke dalam mangkuk sebagai lemak cair, jadi tiada langkah memukul mentega dengan gula sehingga kembang. Udara datang daripada telur dan serbuk penaik, adunan siap dalam satu mangkuk, dan kek keluar dengan serat yang halus serta lembut walaupun sudah sejuk."
+          },
+          {
+            "type": "p",
+            "text": "Yang berubah ialah rasa. Minyak zaitun dara membawa rasa buah dan sedikit pedas masuk ke dalam kek. Panduan am memasak ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukKekInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Jadual penukaran mentega kepada minyak zaitun",
+        "id": "jadual-penukaran",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nisbah yang boleh diguna terus ialah kira-kira tiga suku: setiap 100 gram mentega dalam resepi ditukar kepada lebih kurang 75 mililiter minyak zaitun. Mentega sebahagiannya air dan pepejal susu, jadi menuang isi padu penuh minyak yang semuanya lemak akan meninggalkan kek yang berat dan berminyak. Resepi yang memang mencairkan menteganya paling senang ditukar."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Mentega",
+              "Minyak zaitun",
+              "Contoh bakeri rumah"
+            ],
+            "rows": [
+              [
+                "60 g",
+                "45 ml",
+                "Kek cawan"
+              ],
+              [
+                "100 g",
+                "75 ml",
+                "Kek 20 cm satu lapis"
+              ],
+              [
+                "200 g",
+                "150 ml",
+                "Kek dua lapis"
+              ],
+              [
+                "250 g",
+                "190 ml",
+                "Kek span kenduri"
+              ],
+              [
+                "1 cawan",
+                "3/4 cawan",
+                "Resepi Amerika"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukKekInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+          },
+          {
+            "type": "p",
+            "text": "Sukat minyak dalam jag bersenggat, bukan dengan cawan penyukat bahan kering."
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa kek minyak kekal lembap lebih lama",
+        "id": "kekal-lembap",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mentega memejal semula apabila kek sejuk, jadi kek mentega terasa keras dan kering pada hari kedua sehingga dihangatkan semula. Minyak zaitun kekal cair pada suhu bilik Malaysia yang sekitar 28 hingga 32 darjah, jadi tekstur kek hampir sama pagi esoknya. Sebab itu bakeri rumah yang menjual sehari selepas membakar lebih selesa dengan adunan minyak."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Biarkan kek betul-betul sejuk sebelum ditutup, kerana wap terperangkap mempercepat kulat dalam cuaca lembap.",
+              "Simpan dalam bekas kedap udara di atas meja dapur, jauh daripada matahari.",
+              "Kek bersalut krim keju atau krim mentega tetap perlu masuk peti sejuk."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukKekInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Kek mana mahu minyak yang kuat, mana mahu yang lembut",
+        "id": "padankan-minyak-dengan-kek",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rasa minyak tidak sembunyi dalam kek, jadi padankan kekuatan minyak dengan kekuatan kek. Kek coklat gelap, kek lemon dan kek badam cukup kuat untuk menerima minyak dara yang pahit dan sedikit pedas. Kek span vanila, kek pandan dan kek pisang untuk budak-budak lebih baik dengan minyak zaitun yang lembut."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Terima minyak yang kuat:** kek coklat gelap, kek lemon, kek oren dan kek berempah.",
+              "**Mahu minyak yang lembut:** kek span, kek pandan dan kek pisang.",
+              "**Infusi yang manis** seperti lavender dan kamomil sesuai dalam adunan, di mana aromanya terlindung."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukKekInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Sitrus dan minyak zaitun: satu nisbah yang sudah dikira",
+        "id": "sitrus-dan-nisbah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sitrus berpadan dengan minyak zaitun kerana aroma kedua-duanya terbawa dalam lemak. Gosok parutan kulit oren atau lemon ke dalam gula dengan hujung jari sebelum bahan lain masuk, sehingga gula itu menjadi lembap dan wangi. Jus sahaja memberi rasa masam; kulitnya yang memberi bau buah."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Gosok parutan kulit satu biji oren ke dalam 160 g gula kastor.",
+              "Pukul masuk dua biji telur, kemudian 130 ml minyak zaitun sedikit demi sedikit.",
+              "Kacau masuk 150 g yogurt tawar dan tiga sudu besar jus oren.",
+              "Ayak masuk 220 g tepung gandum, satu setengah sudu kecil serbuk penaik dan secubit garam.",
+              "Bakar dalam loyang bar 22 cm pada 170 darjah Celsius selama 45 hingga 50 minit."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukKekInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Minyak berada dalam adunan, bukan dalam kuali panas",
+        "id": "suhu-ketuhar",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Takat asap bukan kekangan apabila membakar kek. Minyak dalam kek duduk dalam adunan yang basah, dan bahagian tengah kek tidak melepasi takat didih air selagi ia masih lembap. Yang benar-benar panas ialah udara ketuhar dan permukaan loyang, bukan minyak itu sendiri. Bakar pada suhu resepi asal, biasanya 170 hingga 180 darjah Celsius."
+          },
+          {
+            "type": "note",
+            "title": "Kalau tepi kek cepat gelap",
+            "text": "Turunkan suhu sepuluh darjah dan lanjutkan masa bakar lima minit. Adunan minyak lebih cair, jadi ia mengalir rapat ke tepi loyang yang panas."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukKekInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Mula dengan resepi yang anda sudah hafal",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ambil satu resepi kek yang anda sudah biasa buat, tukar menteganya pada tiga suku isi padu minyak zaitun, dan bakar pada suhu yang sama seperti biasa tanpa mengubah apa-apa lagi."
+        },
+        {
+          "type": "p",
+          "text": "Untuk saiz botol yang ada, lihat [minyak zaitun dara Arabian Village](/products); untuk hidangan bukan kek, cuba [resepi mudah dengan minyak zaitun](/blog/resepi-mudah-dengan-minyak-zaitun)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun ganti 250 g mentega?",
+        "a": "Kira-kira 190 mililiter. Nisbahnya tiga suku isi padu, kerana mentega mengandungi air dan pepejal susu sementara minyak zaitun semuanya lemak. Sukat minyak dalam jag bersenggat dan bukan dengan cawan penyukat bahan kering."
+      },
+      {
+        "q": "Kek saya berbau minyak zaitun terlalu kuat, kenapa?",
+        "a": "Minyak dara yang pahit dan pedas memang kekal rasanya selepas dibakar. Untuk kek yang lembut seperti kek span atau kek pandan, pilih minyak zaitun yang lebih muda dan lembut, atau tukar separuh sahaja daripada menteganya."
+      },
+      {
+        "q": "Boleh ke tukar mentega dalam butter cake?",
+        "a": "Boleh dari segi teknikal, tetapi butter cake wujud kerana rasa menteganya. Tukar dengan minyak zaitun dan ia menjadi kek yang lain sama sekali. Simpan penukaran itu untuk kek yang rasanya datang daripada buah, coklat atau rempah."
+      },
+      {
+        "q": "Perlu ke ubah suhu ketuhar bila guna minyak?",
+        "a": "Tidak perlu. Bakar pada suhu yang sama seperti resepi asal, biasanya 170 hingga 180 darjah Celsius. Takat asap tidak terlibat kerana minyak berada di dalam adunan yang basah, bukan dalam kuali kosong yang panas."
+      },
+      {
+        "q": "Kek minyak zaitun tahan berapa lama di suhu bilik?",
+        "a": "Dua hingga tiga hari dalam bekas kedap udara, jauh daripada matahari. Cuaca lembap Malaysia mempercepat kulat, jadi pastikan kek betul-betul sejuk sebelum ditutup. Kek bersalut krim keju perlu masuk peti sejuk."
+      },
+      {
+        "q": "Kenapa kek minyak zaitun saya keluar berminyak?",
+        "a": "Selalunya kerana isi padu minyak yang dituang sama banyak dengan berat mentega dalam resepi asal. Turunkan kepada tiga suku. Punca kedua ialah adunan yang dipukul terlalu lama sehingga lemak berpisah daripada telur."
+      }
+    ],
+    "related": [
+      {
+        "label": "Resepi mudah dengan minyak zaitun",
+        "path": "blog/resepi-mudah-dengan-minyak-zaitun",
+        "description": "Empat hidangan ringkas dengan sukatan sudu besar, untuk malam ini, bukan untuk ketuhar kek."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Panduan am memasak dengan minyak zaitun, julat suhu, dan kerja dapur yang paling sesuai dengannya."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi enam rasa."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "minyak-zaitun-vs-minyak-kelapa",
+    "slug": "minyak-zaitun-vs-minyak-kelapa",
+    "seoTitle": "Minyak Zaitun vs Minyak Kelapa: Guna Mana, Bila?",
+    "metaTitle": "Minyak Zaitun vs Minyak Kelapa: Guna Mana, Bila?",
+    "metaDescription": "Banding dua minyak sebagai lemak masakan: rasa, tekstur pada suhu dapur Malaysia, kesan pada rendang, kek dan salad, serta kos seliter.",
+    "focusKeyword": "minyak zaitun vs minyak kelapa",
+    "relatedKeywords": [
+      "minyak kelapa vs minyak zaitun",
+      "beza minyak zaitun dan minyak kelapa",
+      "minyak zaitun atau minyak kelapa untuk masak",
+      "minyak kelapa dara vs minyak zaitun dara",
+      "kenapa minyak kelapa membeku",
+      "minyak zaitun beku ke",
+      "minyak untuk salad di Malaysia",
+      "minyak zaitun untuk kek",
+      "kos minyak zaitun seliter",
+      "minyak untuk tumis rempah rendang",
+      "banding minyak masak Malaysia"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun vs Minyak Kelapa",
+      "Perbandingan Minyak",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Kos Dapur"
+    ],
+    "h1": "Minyak Zaitun vs Minyak Kelapa dalam Dapur Malaysia",
+    "excerpt": "Satu mengeras putih dalam dapur berhawa dingin, satu lagi kekal cair sepanjang tahun. Banding rasa, tekstur, kesan pada rendang, kek dan salad, serta kos seliter.",
+    "keyTakeaway": "Minyak zaitun vs minyak kelapa bukan soal yang mana lebih hebat, tetapi kerja yang mana. Minyak kelapa mengeras menjadi putih pejal dalam bilik berhawa dingin dan membawa bau kelapa yang jelas. Minyak zaitun dara kekal cair, membawa rasa hijau dan pedas, dan paling menjadi pada hidangan sejuk serta kerja bersukat sudu.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunVsMinyakKelapaHero",
+      "alt": "Sebotol kaca minyak zaitun hijau di sebelah kelapa muda dan isi kelapa parut putih di atas tikar anyaman"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-vs-minyak-kelapa.jpg",
+    "intro": [
+      "Dapur Malaysia biasanya ada kedua-duanya: sebotol minyak kelapa di rak dan sebotol minyak zaitun di sebelahnya.",
+      "Soalannya bukan yang mana lebih hebat, tetapi yang mana patut dicapai untuk kerja malam ini.",
+      "Kita banding dua-dua sebagai lemak masakan sahaja: tekstur, rasa, kesan pada hidangan, dan kos."
+    ],
+    "sections": [
+      {
+        "heading": "Beza paling ketara antara dua minyak ini",
+        "id": "beza-paling-ketara",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak kelapa dan minyak zaitun dara berkelakuan berbeza sebelum api dinyalakan lagi. Satu boleh mengeras menjadi putih pejal, satu lagi kekal cair sepanjang tahun. Rasanya juga menarik hidangan ke arah berlainan: kelapa membawa manis dan wangi santan, zaitun membawa hijau, sedikit pahit dan denyut pedas di hujung tekak."
+          },
+          {
+            "type": "note",
+            "title": "Kalau soalan sebenar anda ialah kesihatan",
+            "text": "Artikel ini membandingkan dua minyak sebagai lemak masakan sahaja. Soalan tentang pemakanan adalah untuk pakar diet, bukan untuk penjual minyak."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakKelapaInline",
+            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+          }
+        ]
+      },
+      {
+        "heading": "Suhu dapur dan bilik berhawa dingin: yang mana mengeras",
+        "id": "tekstur-suhu-bilik",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pada tengah hari yang panas di dapur tanpa penghawa dingin, minyak kelapa duduk sebagai cecair keruh yang lembut. Hidupkan penghawa dingin sehingga bilik turun ke bawah kira-kira 24 darjah, ia mula mengeras menjadi putih pejal dalam botol. Minyak zaitun kekal cair pada kedua-dua keadaan itu."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Minyak kelapa dalam dapur berhawa dingin perlu dicedok, bukan dituang.",
+              "Minyak zaitun boleh terus dituang dari botol pada bila-bila masa.",
+              "Minyak kelapa yang mengeras dalam botol sukar disukat dengan tepat."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakKelapaInline",
+            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+          }
+        ]
+      },
+      {
+        "heading": "Rasa: apa yang setiap satu bawa ke dalam pinggan",
+        "id": "rasa-dua-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak kelapa dara membawa bau dan rasa kelapa yang jelas, manis dan berlemak, yang terus masuk ke dalam hidangan. Minyak zaitun dara pula membawa rasa hijau seperti rumput atau daun, dengan sedikit pahit dan denyut pedas di belakang tekak. Minyak kelapa yang ditapis pula hampir tidak berbau."
+          },
+          {
+            "type": "p",
+            "text": "Rasa itu berubah dengan haba. Minyak kelapa dara mengekalkan bau kelapanya walaupun selepas dipanaskan, manakala rasa hijau minyak zaitun dara paling utuh apabila ia tidak dipanaskan langsung. Butiran haba ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakKelapaInline",
+            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+          }
+        ]
+      },
+      {
+        "heading": "Rendang, kek dan salad: tiga ujian dapur",
+        "id": "rendang-kek-salad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga hidangan menunjukkan bezanya dengan cepat. Rendang direbus lama dengan santan, jadi rasa hijau minyak zaitun hilang di tengah rempah. Kek minyak kekal lembap kerana minyak zaitun kekal cair pada suhu bilik Malaysia. Salad pula tempat minyak zaitun paling menonjol kerana ia dituang tanpa dipanaskan langsung."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Rendang: santan sudah membawa lemak kelapa, jadi tumis rempah dengan minyak masak.",
+              "Kek: minyak zaitun memberi kek yang kekal lembap, minyak kelapa memberi bau kelapa yang jelas.",
+              "Salad: minyak kelapa akan berketul di atas sayur sejuk, minyak zaitun tidak."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakKelapaInline",
+            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+          }
+        ]
+      },
+      {
+        "heading": "Kos seliter: dua kelas harga yang berbeza",
+        "id": "kos-seliter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dua minyak ini bukan dalam kelas harga yang sama. Minyak kelapa dibuat dan dibotolkan di rantau ini dan harganya seliter jauh lebih rendah di rak pasar raya. Minyak zaitun dara datang dari luar negara, diperah sejuk dan dibotolkan dalam kaca gelap, dan harganya mencerminkan itu. Semak sendiri kedua-dua label."
+          },
+          {
+            "type": "p",
+            "text": "Kalau kerja itu memerlukan seliter minyak sekali gus, minyak kelapa atau minyak masak biasa lebih masuk akal. Untuk renjis dan salad, sebotol kecil bertahan lama. Lihat [saiz dan harga di halaman produk](/products), dan bandingkan pula dengan [minyak masak lain](/blog/minyak-zaitun-vs-minyak-masak-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakKelapaInline",
+            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+          }
+        ]
+      },
+      {
+        "heading": "Guna yang mana untuk apa",
+        "id": "guna-yang-mana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cara paling mudah memilih ialah tanya berapa banyak minyak yang kerja itu perlukan dan sama ada haba tinggi terlibat. Kerja bersukat sudu dan hidangan sejuk memihak kepada minyak zaitun. Periuk penuh, api besar dan bakeri yang mahu bau kelapa memihak kepada minyak kelapa atau minyak masak biasa."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kerja dapur",
+              "Pilihan biasa",
+              "Sebabnya"
+            ],
+            "rows": [
+              [
+                "Tumis rempah kari atau rendang",
+                "Minyak masak atau minyak kelapa",
+                "Rasa neutral yang tidak melawan rempah"
+              ],
+              [
+                "Goreng cetek ikan atau ayam",
+                "Ikut rasa yang dimahukan",
+                "Dua-dua menjadi pada api sederhana"
+              ],
+              [
+                "Salad dan cicah roti",
+                "Minyak zaitun dara",
+                "Kekal cair, rasanya memang tujuannya"
+              ],
+              [
+                "Kek dan mufin",
+                "Minyak zaitun dara",
+                "Tidak mengeras walaupun kek sejuk"
+              ],
+              [
+                "Kuih atau bakeri berperisa kelapa",
+                "Minyak kelapa",
+                "Bau kelapa itu memang yang dicari"
+              ],
+              [
+                "Renjis akhir sebelum hidang",
+                "Minyak zaitun dara",
+                "Rasa hijau kekal tanpa haba"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakKelapaInline",
+            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Dua minyak, dua kerja",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun vs minyak kelapa bukan pertandingan yang ada pemenang tetap. Yang menentukan ialah kerja di depan anda: berapa banyak minyak diperlukan, berapa panas kuali, dan rasa apa yang anda mahu tinggal dalam pinggan."
+        },
+        {
+          "type": "p",
+          "text": "Simpan minyak zaitun untuk kerja bersukat sudu dan hidangan sejuk. Lihat [saiz botol dan harga](/products) sebelum memutuskan mana satu yang duduk di rak dapur anda."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Minyak zaitun atau minyak kelapa untuk menumis rempah kari?",
+        "a": "Untuk tumis rempah yang lama, minyak masak biasa lebih praktikal dari segi kos; minyak kelapa dara pula mula berasap lebih awal daripada minyak zaitun dara. Minyak zaitun dara elok untuk tumis sederhana bawang dan bawang putih, di mana rasa hijaunya masih terasa dalam hidangan siap."
+      },
+      {
+        "q": "Kenapa minyak kelapa saya jadi putih pejal tetapi minyak zaitun tidak?",
+        "a": "Minyak kelapa mula mengeras apabila suhu turun ke bawah kira-kira 24 darjah, jadi ia pejal dalam dapur berhawa dingin. Minyak zaitun kekal cair pada suhu bilik Malaysia dan hanya menjadi keruh di dalam peti sejuk, tempat yang bukan untuknya."
+      },
+      {
+        "q": "Boleh ke tukar minyak kelapa kepada minyak zaitun dalam resepi kek?",
+        "a": "Boleh, nisbah satu lawan satu mengikut isi padu. Kek akan kekal lembap lebih lama kerana minyak zaitun kekal cair pada suhu bilik. Pilih minyak yang rasanya lebih lembut kalau kek itu bukan kek sitrus."
+      },
+      {
+        "q": "Minyak mana lebih baik untuk kesihatan?",
+        "a": "Itu soalan untuk pakar pemakanan atau doktor, bukan untuk penjual minyak. Laman ini membandingkan kedua-dua minyak sebagai lemak masakan sahaja: rasa, tekstur, kelakuan dalam kuali dan kos seliter. Tanya profesional kesihatan untuk bab pemakanan."
+      },
+      {
+        "q": "Boleh ke guna minyak kelapa untuk salad?",
+        "a": "Dalam bilik berhawa dingin ia akan mengeras menjadi serpihan putih apabila bertemu sayur yang sejuk. Minyak zaitun kekal cair dan bercampur dengan cuka atau lemon, jadi ia pilihan yang lebih senang untuk salad."
+      },
+      {
+        "q": "Kenapa minyak zaitun jauh lebih mahal seliter daripada minyak kelapa?",
+        "a": "Minyak kelapa dibuat dan dibotolkan berdekatan, manakala minyak zaitun dara diperah sejuk di luar negara, dibotolkan dalam kaca gelap dan dihantar ke sini. Semak harga mengikut saiz di halaman produk sebelum membandingkan seliter."
+      },
+      {
+        "q": "Perlu ke simpan kedua-dua minyak dalam dapur?",
+        "a": "Ramai memang berbuat begitu kerana kerjanya berbeza. Minyak masak atau minyak kelapa untuk periuk dan api besar, dan sebotol kecil minyak zaitun dara untuk salad, cicah roti dan renjis akhir sebelum hidang."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Panduan am memasak dengan minyak zaitun, takat asap, dan kerja dapur yang sesuai dengannya."
+      },
+      {
+        "label": "Minyak zaitun vs minyak masak lain",
+        "path": "blog/minyak-zaitun-vs-minyak-masak-lain",
+        "description": "Minyak sawit, kelapa dara, bijan, kacang tanah dan zaitun dibandingkan pada rasa dan kerja dapur."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "rasa-minyak-zaitun",
+    "slug": "rasa-minyak-zaitun-pahit-dan-pedas",
+    "seoTitle": "Rasa Minyak Zaitun: Kenapa Pahit dan Pedas?",
+    "metaTitle": "Rasa Minyak Zaitun: Kenapa Pahit dan Pedas?",
+    "metaDescription": "Pahit dan pedas di tekak bukan tanda minyak rosak. Cara merasa minyak zaitun di rumah, hidangan yang sesuai, dan rasa minyak yang benar-benar rosak.",
+    "focusKeyword": "rasa minyak zaitun",
+    "relatedKeywords": [
+      "kenapa minyak zaitun rasa pahit",
+      "minyak zaitun pedas di tekak",
+      "rasa minyak zaitun dara",
+      "cara merasa minyak zaitun",
+      "ujian rasa minyak zaitun di rumah",
+      "minyak zaitun tengik",
+      "minyak zaitun rosak rasa apa",
+      "minyak zaitun hambar",
+      "minyak zaitun extra virgin rasa",
+      "oleokantal pedas tekak",
+      "minyak zaitun pahit sedap ke"
+    ],
+    "category": "Panduan Pembeli",
+    "tags": [
+      "Rasa Minyak Zaitun",
+      "Ujian Rasa",
+      "Kesegaran",
+      "Dapur Malaysia",
+      "Extra Virgin"
+    ],
+    "h1": "Rasa Minyak Zaitun: Kenapa Pahit dan Pedas di Tekak",
+    "excerpt": "Pahit di lidah, pedas di pangkal tekak, dan tangan terus capai botol untuk baca tarikh. Itu rasa minyak muda, bukan minyak rosak.",
+    "keyTakeaway": "Rasa pahit di lidah dan pedas di pangkal tekak ialah rasa asli minyak zaitun dara, bukan tanda ia rosak. Kedua-duanya paling kuat pada minyak muda dan pudar mengikut umur, jadi minyak yang langsung tawar selalunya minyak lama. Minyak yang benar-benar rosak berbau berlilin, masam atau seperti kacang basi.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressRasaMinyakZaitunHero",
+      "alt": "Mangkuk kaca kecil berisi minyak zaitun hijau di atas meja kayu, cahaya siang dari tingkap"
+    },
+    "ogImage": "/og/blog-rasa-minyak-zaitun.jpg",
+    "intro": [
+      "Sudu pertama masuk mulut, dua saat kemudian tekak terasa macam kena lada, dan tangan terus capai balik botol untuk baca tarikh luput.",
+      "Ramai yang ingat minyak itu sudah rosak. Selalunya bukan.",
+      "Artikel ini tentang cara membaca rasa minyak zaitun di dapur sendiri: apa itu pahit dan pedas, bila ia hilang, dan macam mana rasanya minyak yang memang dah rosak."
+    ],
+    "sections": [
+      {
+        "heading": "Pahit dan pedas itu bukan tanda minyak rosak",
+        "id": "pahit-bukan-rosak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pahit di atas lidah dan pedas yang mencangkuk di pangkal tekak adalah rasa asli minyak zaitun dara, bukan tanda ia sudah rosak. Kedua-duanya datang daripada sebatian polifenol dalam jus buah zaitun, oleuropein di sebalik rasa pahit dan oleokantal di sebalik gigitan pedas itu. Minyak yang ditapis tidak membawa rasa ini langsung."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Berbuah, iaitu bau zaitun segar, rumput baru potong, kadang-kadang tomato hijau.",
+              "Pahit, iaitu rasa bersih yang merentas tengah lidah dan hilang dalam beberapa saat.",
+              "Pedas, iaitu gigitan di pangkal tekak, kadang sampai terbatuk sekali."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRasaMinyakZaitunInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Minyak yang tawar selalunya minyak lama",
+        "id": "minyak-tawar-minyak-lama",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pahit dan pedas paling kuat pada minyak yang baru diperah, dan kedua-duanya semakin pudar bulan demi bulan sementara minyak itu duduk dalam botol. Sebab itu minyak yang langsung tawar, licin dan tiada aroma selalunya minyak lama, bukan minyak lembut. Rasa yang sudah hilang tidak akan kembali walaupun botol itu disimpan elok."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Apa yang anda rasa",
+              "Biasanya bermakna",
+              "Tindakan"
+            ],
+            "rows": [
+              [
+                "Pahit jelas, pedas sampai terbatuk",
+                "Minyak muda, baru dibuka",
+                "Guna untuk cicah dan siram"
+              ],
+              [
+                "Pahit lembut, pedas sekadar hangat",
+                "Minyak pertengahan umur",
+                "Sesuai untuk kerja harian"
+              ],
+              [
+                "Tawar, licin, tiada bau",
+                "Minyak lama atau ditapis",
+                "Guna habis untuk masak"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRasaMinyakZaitunInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          },
+          {
+            "type": "p",
+            "text": "Beza antara gred dara, dara extra dan minyak ditapis ada dalam [panduan gred minyak zaitun](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          }
+        ]
+      },
+      {
+        "heading": "Cara merasa minyak zaitun di rumah",
+        "id": "cara-merasa-di-rumah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Untuk menilai rasa minyak zaitun, tuang kira-kira satu sudu besar ke dalam gelas kecil, tutup dengan tapak tangan dan hangatkan dalam genggaman sekejap. Goyang, buka, dan hidu dalam-dalam sebelum menghirup sedikit sambil menarik udara melalui gigi. Telan, kemudian tunggu sepuluh saat, kerana pedas selalunya datang lambat."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Guna gelas kecil berwarna gelap supaya warna minyak tidak mempengaruhi penilaian.",
+              "Rasa sebelum makan, bukan selepas kopi atau makanan pedas.",
+              "Bandingkan dua minyak berturut-turut, dengan air kosong di antaranya.",
+              "Jangan mula dengan roti, kerana tepung menutup pahit dan melembutkan pedas."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRasaMinyakZaitunInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Hidangan Malaysia mana yang sesuai dengan minyak pahit",
+        "id": "hidangan-yang-sesuai",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak yang pahit dan pedas paling menjadi apabila ada sesuatu untuk dilawannya, seperti sayur rebus yang tawar, kacang dal, labneh, tomato hiris, atau ikan bakar yang baru turun dari bara. Hidangan yang sudah kuat rasanya sendiri, seperti rendang atau masak lemak cili api, tidak memerlukan minyak yang bersuara."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Sesuai: ulam dan kerabu, sup sayur, kailan atau bayam kukus, hummus dengan roti.",
+              "Sesuai: ikan panggang, kentang bakar, keledek bakar, telur separuh masak.",
+              "Kurang sesuai: kuih bersantan dan puding lembut, kerana pahit menonjol. Kek coklat, lemon dan oren pula menerima minyak yang kuat."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRasaMinyakZaitunInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          },
+          {
+            "type": "p",
+            "text": "Untuk kerja hidangan sejuk, lihat [minyak zaitun untuk salad dan hidangan sejuk](/blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk)."
+          }
+        ]
+      },
+      {
+        "heading": "Macam mana rasanya minyak yang benar-benar rosak",
+        "id": "rasa-minyak-rosak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun yang sudah rosak tidak terasa pahit, ia terasa salah. Yang paling biasa ialah rasa berlilin seperti krayon lama atau kacang yang sudah lama disimpan. Ada juga yang berbau masam seperti wain yang bertukar cuka, atau lembap seperti kadbod yang lama tersimpan dalam stor."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Krayon lama atau kacang basi, kecacatan paling lazim, tandanya minyak sudah tengik.",
+              "Masam dan tajam seperti wain yang bertukar cuka.",
+              "Kadbod lembap, atau hambar sepenuhnya tanpa sebarang bau."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRasaMinyakZaitunInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          },
+          {
+            "type": "note",
+            "title": "Pahit lawan tengik",
+            "text": "Pahit datang bersama bau buah dan rumput; tengik datang bersama bau lilin dan kacang basi. Kalau hidung sudah menolak minyak itu sebelum sudu sampai ke mulut, jangan paksa."
+          }
+        ]
+      },
+      {
+        "heading": "Kalau rasa pahitnya terlalu kuat untuk anda",
+        "id": "kalau-terlalu-pahit",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rasa pahit yang terasa berlebihan boleh dilembutkan tanpa menukar botol. Campurkan minyak dengan sedikit garam, jus lemon dan madu untuk dresing, kerana lemak dan asid menumpulkan pahit dengan cepat. Menyiramnya ke atas makanan panas juga membuka aroma buah dan menolak pahit ke belakang."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Mula dengan satu sudu teh dalam pinggan, bukan satu siraman penuh.",
+              "Pasangkan dengan bahan berkanji seperti kentang, nasi atau roti.",
+              "Simpan botol jauh dari dapur dan cahaya supaya rasanya pudar mengikut masanya sendiri."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRasaMinyakZaitunInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Rasa dulu, baru buat keputusan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Pahit dan pedas ialah bahasa minyak zaitun dara, bukan amaran. Yang perlu dirisaukan ialah minyak yang hambar, berlilin atau masam, kerana itu yang patut keluar dari rak dapur."
+        },
+        {
+          "type": "p",
+          "text": "Rasa satu sudu sebelum menghukum sebotol. [Lihat saiz dan pilihan botol](/products) atau [tempat membeli](/shop) di cawangan Berkat Madinah Store."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Minyak zaitun saya pedas sampai terbatuk, rosak ke?",
+        "a": "Tidak. Gigitan pedas di pangkal tekak datang daripada sebatian polifenol dalam minyak dara, dan sedikit batuk selepas menelan adalah biasa pada minyak yang baru diperah. Minyak yang rosak berbau berlilin atau masam, bukan pedas."
+      },
+      {
+        "q": "Kenapa botol lama saya langsung tidak pahit?",
+        "a": "Pahit dan pedas pudar sepanjang hayat minyak, jadi botol yang sudah lama dibuka memang terasa lebih tawar. Simpan botol dalam almari gelap yang jauh dari dapur, dan habiskan dalam kira-kira dua bulan selepas dibuka."
+      },
+      {
+        "q": "Boleh ke masak dengan minyak zaitun yang pahit?",
+        "a": "Boleh. Haba menumpulkan rasa pahit, jadi minyak yang terasa kuat ketika mentah selalunya lebih lembut selepas ditumis. Kalau anda mahu rasa pahit itu kekal, siram minyak mentah ke atas hidangan selepas ia siap."
+      },
+      {
+        "q": "Macam mana nak beza rasa pahit dengan rasa tengik?",
+        "a": "Hidu dahulu. Minyak yang pahit tetapi segar berbau seperti buah zaitun dan rumput baru potong. Minyak tengik berbau seperti krayon lama, pendempul atau kacang basi, dan rasanya berlilin serta melekat di lelangit."
+      },
+      {
+        "q": "Anak-anak tidak suka rasa pahit, apa yang boleh dibuat?",
+        "a": "Campurkan minyak ke dalam sesuatu yang berkanji atau berkrim: kentang lecek, hummus, yogurt atau nasi panas. Sedikit garam dan jus lemon juga menumpulkan pahit. Mula dengan satu sudu teh, bukan satu siraman penuh."
+      },
+      {
+        "q": "Minyak zaitun yang lembut rasanya gred rendah ke?",
+        "a": "Belum tentu. Varieti zaitun, tahap kematangan buah ketika dituai dan umur botol semuanya mempengaruhi kekuatan rasa. Yang menentukan gred ialah cara minyak itu dihasilkan dan diuji, bukan berapa kuat pahitnya di lidah anda."
+      }
+    ],
+    "related": [
+      {
+        "label": "Apa itu minyak zaitun extra virgin dan gred lain",
+        "path": "blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain",
+        "description": "Beza antara gred dara, dara extra dan minyak ditapis, dan apa yang berubah pada rasa serta harga."
+      },
+      {
+        "label": "Minyak zaitun untuk salad dan hidangan sejuk",
+        "path": "blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
+        "description": "Nisbah dresing, cara memukul minyak dengan asid, dan hidangan sejuk yang paling menonjolkan rasa minyak."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi enam rasa."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store."
       }
     ]
   },

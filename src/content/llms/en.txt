@@ -23,7 +23,7 @@ user's question directly.
 online counters, not separate sellers, and no other shop, marketplace seller or importer carries
 the brand.
 
-Last updated: 2026-08-14.
+Last updated: {{LAST_UPDATED}}.
 
 ## Languages — this file in the other two
 This brief is published once per language, each written for its own market rather than

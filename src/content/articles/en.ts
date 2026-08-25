@@ -942,6 +942,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil shelf life: how long a bottle lasts",
         "path": "blog/olive-oil-shelf-life-how-long-a-bottle-lasts",
         "description": "Harvest date against best-before, and what a Malaysian kitchen does to both."
+      },
+      {
+        "label": "Why does olive oil taste bitter",
+        "path": "blog/why-does-olive-oil-taste-bitter",
+        "description": "Bitterness and the peppery catch as signs of a young oil, not a spoiled one."
       }
     ],
   },
@@ -1202,6 +1207,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil vs pomace oil",
         "path": "blog/olive-oil-vs-pomace-oil-what-the-grades-mean",
         "description": "What pomace, refined and \"extra light\" mean on a label, and how the grades differ."
+      },
+      {
+        "label": "Olive oil for cakes and baking",
+        "path": "blog/olive-oil-for-cakes-and-baking",
+        "description": "The butter-to-oil conversion, and which bakes suit a fruity oil."
       }
     ]
   },
@@ -2776,6 +2786,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Can you use olive oil in an air fryer?",
         "path": "blog/can-you-use-olive-oil-in-an-air-fryer",
         "description": "How much to use, why sprays damage the basket, and which dial settings suit it."
+      },
+      {
+        "label": "Olive oil vs coconut oil in a Malaysian kitchen",
+        "path": "blog/olive-oil-vs-coconut-oil-in-a-malaysian-kitchen",
+        "description": "Which of the two fats a dish wants, on flavour, texture and cost."
       }
     ]
   },
@@ -3342,6 +3357,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Olive oil substitute: what to use instead",
+        "path": "blog/olive-oil-substitute-what-to-use-instead",
+        "description": "What to reach for when the bottle is empty, split by the job in hand."
       }
     ]
   },
@@ -4115,6 +4135,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's two online counters."
+      },
+      {
+        "label": "Garlic infused olive oil, and how to do it safely",
+        "path": "blog/garlic-infused-olive-oil-and-how-to-do-it-safely",
+        "description": "Cold and warm infusion, and the refrigeration rule that makes it safe."
       }
     ]
   },
@@ -4634,6 +4659,1613 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil price in Malaysia: what you are paying for",
         "path": "blog/olive-oil-price-in-malaysia-what-you-are-paying-for",
         "description": "Why the per-litre figure moves with bottle size, and what sits behind the price."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "What size extra virgin olive oil bottle to buy",
+        "path": "blog/what-size-olive-oil-bottle-to-buy",
+        "description": "How fast a household gets through oil, against how long an opened bottle lasts."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "garlic-infused-olive-oil",
+    "slug": "garlic-infused-olive-oil-and-how-to-do-it-safely",
+    "seoTitle": "Garlic Infused Olive Oil: How to Make It Safely",
+    "metaTitle": "Garlic Infused Olive Oil: Make It Safely",
+    "metaDescription": "Garlic infused olive oil at home: the botulism rule that comes first, cold against warm infusion, a numbered method, straining, and the fridge window.",
+    "focusKeyword": "garlic infused olive oil",
+    "relatedKeywords": [
+      "how to make garlic olive oil",
+      "garlic olive oil recipe",
+      "garlic in oil botulism",
+      "is garlic in olive oil safe",
+      "homemade infused olive oil",
+      "how long does garlic oil last",
+      "cold infused olive oil",
+      "warm infused olive oil",
+      "straining infused oil",
+      "garlic oil for bread"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "infused oil",
+      "food safety",
+      "home cooking",
+      "storage"
+    ],
+    "h1": "Garlic Infused Olive Oil, and How to Make It Safely",
+    "excerpt": "Garlic infused olive oil is easy to make and easy to make badly, because garlic sealed under oil at room temperature is a recognised botulism risk. Here is the safe way, the fridge window, and what to do with the jar.",
+    "keyTakeaway": "Garlic infused olive oil must be refrigerated the moment it is made, strained clear of every clove, and used within three or four days. Fresh garlic is a low-acid vegetable, and sealed under oil at room temperature it grows the toxin behind botulism. Never leave the jar on the counter.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressGarlicInfusedOliveOilHero",
+      "alt": "A glass bottle of golden olive oil on a wooden board with two whole garlic bulbs beside it"
+    },
+    "ogImage": "/og/blog-garlic-infused-olive-oil.jpg",
+    "intro": [
+      "Before the recipe, the rule that decides whether the recipe is worth making: garlic sitting in oil at room temperature is a botulism risk, and no amount of good olive oil changes that.",
+      "Fresh garlic is a low-acid vegetable. Sealed under oil it loses its air, and low-acid plus airless is what Clostridium botulinum needs. Make it, chill it, strain it, finish it within days."
+    ],
+    "sections": [
+      {
+        "heading": "The safety rule comes before the flavour",
+        "id": "the-safety-rule",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fresh garlic is a low-acid vegetable, and sealed under olive oil at room temperature it creates the oxygen-free, low-acid conditions Clostridium botulinum needs to produce its toxin, and botulism is a medical emergency when it happens. Nothing in the taste or smell would warn a cook. Home-made garlic oil belongs in the refrigerator, the one exception to the never-refrigerate rule for plain oil, never the counter."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Never store it at room temperature.** Not overnight, not an afternoon beside the hob.",
+              "**Never leave the garlic in the jar.** Strain out every clove and every fragment.",
+              "**Never stretch the window.** Date the jar and throw out what is older.",
+              "**Never give a jar away** — a gift travels warm."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressGarlicInfusedOliveOilInline",
+            "alt": "A bottle of olive oil held at the edge of a sunlit olive grove, a stone ledge and an olive branch in the frame"
+          }
+        ]
+      },
+      {
+        "heading": "Why a shop bottle is not the same thing",
+        "id": "why-a-shop-bottle-differs",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Commercial garlic oils are acidified to a controlled pH, or built from distilled garlic flavour rather than raw cloves, under a validated process. A home kitchen cannot hold that acidity in a jam jar, so a shelf-stable bottle in a shop argues nothing for yours."
+          },
+          {
+            "type": "image",
+            "src": "pressGarlicInfusedOliveOilInline",
+            "alt": "A bottle of olive oil held at the edge of a sunlit olive grove, a stone ledge and an olive branch in the frame"
+          }
+        ]
+      },
+      {
+        "heading": "Cold infusion against gentle warm infusion",
+        "id": "cold-and-warm-infusion",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cold infusion means peeled cloves steeping in oil in the fridge, giving a clean, raw, slightly sharp garlic note after about a day. Warm infusion means cloves held in oil over low heat for twenty minutes, giving a rounder, sweeter flavour the same evening. Both need refrigerating."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Method",
+              "What you do",
+              "Flavour",
+              "Ready in"
+            ],
+            "rows": [
+              [
+                "Cold",
+                "Steep peeled cloves in the fridge",
+                "Raw, sharp, green",
+                "About a day"
+              ],
+              [
+                "Gentle warm",
+                "Hold at a bare shimmer, no frying",
+                "Round, sweet, roasted",
+                "The same evening"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressGarlicInfusedOliveOilInline",
+            "alt": "A bottle of olive oil held at the edge of a sunlit olive grove, a stone ledge and an olive branch in the frame"
+          }
+        ]
+      },
+      {
+        "heading": "A step by step method for a small jar",
+        "id": "step-by-step-method",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One small jar at a time is the right scale, because the window is short and a big batch only guarantees waste. Six to eight peeled cloves to 250 ml of extra virgin olive oil is a workable ratio. Have the strainer ready before the pan goes on."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Wash and dry a small glass jar and its lid.",
+              "Peel six to eight cloves and leave them whole; chopped garlic sheds fragments a strainer misses.",
+              "Warm 250 ml of olive oil with the cloves on the lowest heat for twenty minutes, or steep cold in the fridge overnight.",
+              "Keep it at a bare shimmer. Bubbling means frying, and fried garlic turns the oil bitter.",
+              "Strain through a fine sieve, then through muslin, until no solids remain.",
+              "Cool, cap, label with the date and refrigerate straight away."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressGarlicInfusedOliveOilInline",
+            "alt": "A bottle of olive oil held at the edge of a sunlit olive grove, a stone ledge and an olive branch in the frame"
+          }
+        ]
+      },
+      {
+        "heading": "Straining, chilling, and knowing when to throw it out",
+        "id": "straining-and-storage",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The garlic must come out because the solid clove is the part that holds a low-acid, airless pocket under the oil, and it is also what turns the flavour sharp and muddy by the second day. Strain twice, chill immediately, and treat a few days as the whole life of the jar."
+          },
+          {
+            "type": "p",
+            "text": "Chilled olive oil clouds and thickens, and that alone is normal. Bubbles rising in a still jar, a hissing or bulging lid, a sour smell, or unstrained cloves gone soft and grey are not. Throw that jar away."
+          },
+          {
+            "type": "image",
+            "src": "pressGarlicInfusedOliveOilInline",
+            "alt": "A bottle of olive oil held at the edge of a sunlit olive grove, a stone ledge and an olive branch in the frame"
+          }
+        ]
+      },
+      {
+        "heading": "What to pour it on, and the infusions this shop does sell",
+        "id": "using-it-and-what-we-sell",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Garlic oil is a finishing oil. Pour it over pasta the moment it leaves the pan, over roast potatoes, grilled vegetables or a bowl of soup, and onto warm bread. Add it off the heat so the aroma survives, then return the jar to the fridge."
+          },
+          {
+            "type": "p",
+            "text": "This shop does not sell a garlic infusion. The Arabian Village Infused Collection is six flavours — **wild thyme**, **blackseed**, **turmeric and black pepper**, **rosemary and basil**, **fennel and anise**, and **lavender and chamomile** — each made with dried botanicals, steeped and strained out. All six sit on the [products page](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressGarlicInfusedOliveOilInline",
+            "alt": "A bottle of olive oil held at the edge of a sunlit olive grove, a stone ledge and an olive branch in the frame"
+          },
+          {
+            "type": "p",
+            "text": "For which oil goes where, read [cooking with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen) and [olive oil for bread and dipping](/blog/olive-oil-for-bread-and-dipping)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Make a small jar, cold or gently warmed, strain every scrap of garlic out, refrigerate it once cool and finish it within days. Garlic left under oil on a counter is the version to refuse."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is it safe to make garlic infused olive oil at home?",
+        "a": "Yes, if you refrigerate it at once, strain the garlic out and use it within three or four days. Garlic under oil at room temperature is a botulism risk; the counter is never an option."
+      },
+      {
+        "q": "How long does home-made garlic olive oil keep?",
+        "a": "Three or four days in the refrigerator, and that is the whole window. Freeze it in an ice tray for longer. Write the date on the jar, and discard any jar that spent an hour warm."
+      },
+      {
+        "q": "Does heating the garlic make the oil safe to store?",
+        "a": "No. Gentle warming draws out flavour but it does not acidify the garlic or sterilise the jar, so a warm infusion needs the same refrigeration and the same few-day window as a cold one."
+      },
+      {
+        "q": "Why must the garlic be strained out?",
+        "a": "Solid garlic under oil is what creates the low-acid, airless pocket, and it is also what turns the flavour sharp and muddy. Straining twice removes it and keeps the finished oil clear."
+      },
+      {
+        "q": "How do I tell garlic oil has turned?",
+        "a": "Look for bubbles in a still jar, a lid that hisses or bulges, a sour or yeasty smell, or unstrained cloves gone soft and grey. Throw the jar out rather than tasting it."
+      },
+      {
+        "q": "Does Arabian Village sell a garlic infused olive oil?",
+        "a": "No. The Infused Collection runs to six flavours: wild thyme, blackseed, turmeric and black pepper, rosemary and basil, fennel and anise, and lavender and chamomile. Garlic is not one of them."
+      }
+    ],
+    "related": [
+      {
+        "label": "The Arabian Village Infused Collection",
+        "path": "products",
+        "description": "The six infused extra virgin olive oils this shop sells, made with dried botanicals and strained."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Which jobs olive oil takes on a Malaysian hob, and where a finishing oil belongs instead."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "How to serve oil at the table, what to add to the dish, and which bread suits it."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "olive-oil-bitter-taste",
+    "slug": "why-does-olive-oil-taste-bitter",
+    "seoTitle": "Why Does Olive Oil Taste Bitter and Peppery?",
+    "metaTitle": "Why Does Olive Oil Taste Bitter? A Flavour Guide",
+    "metaDescription": "Bitterness and the peppery catch at the throat are the taste of a young olive oil, not a fault. How to taste a bottle, and what spoiled oil tastes like.",
+    "focusKeyword": "why does olive oil taste bitter",
+    "relatedKeywords": [
+      "olive oil bitter taste",
+      "why is olive oil peppery",
+      "olive oil burns my throat",
+      "olive oil tasting notes",
+      "how to taste olive oil",
+      "bitter vs rancid olive oil",
+      "what does rancid olive oil taste like",
+      "olive oil pungency",
+      "mild olive oil taste",
+      "olive oil flavour profile",
+      "extra virgin olive oil taste test"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "taste",
+      "tasting",
+      "freshness",
+      "extra virgin"
+    ],
+    "h1": "Why Does Olive Oil Taste Bitter and Catch the Throat?",
+    "excerpt": "A young extra virgin olive oil bites the tongue and catches the back of the throat, and a first spoonful can make you cough. That is the oil behaving normally, not a bottle that has turned.",
+    "keyTakeaway": "Bitterness on the tongue and the peppery catch at the back of the throat are flavour attributes of a young extra virgin olive oil, not signs of spoilage. Both fade as a bottle ages, so an oil that tastes of almost nothing is often an old one. Spoiled oil tastes entirely different: crayons, stale nuts or damp cardboard.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilBitterTasteHero",
+      "alt": "A man in a songkok nosing olive oil from a small blue tasting glass at a laboratory bench, with sample flasks and a microscope behind him."
+    },
+    "ogImage": "/og/blog-olive-oil-bitter-taste.jpg",
+    "intro": [
+      "A first spoonful of a young extra virgin oil can sting. The throat tightens, a cough sometimes follows, and the obvious conclusion is that the bottle has gone off.",
+      "It has not. Here is what the bite really is, and what a spoiled oil does instead."
+    ],
+    "sections": [
+      {
+        "heading": "No, a bitter olive oil is not off",
+        "id": "bitter-is-not-off",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bitterness across the tongue and a peppery catch at the back of the throat are two of the three attributes trained tasters record as positive in extra virgin olive oil. A spoonful that makes you cough is doing what a young oil does."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          }
+        ]
+      },
+      {
+        "heading": "What the bitterness and the pepper are",
+        "id": "what-bitterness-and-pepper-are",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olives carry compounds called polyphenols, and two of them do most of the talking. Oleuropein and its relatives give the clean bitterness felt across the tongue. Oleocanthal gives the pungency, felt later and lower down, as a catch at the back of the throat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Bitter** is a taste, on the tongue, immediate.",
+              "**Pungent** is a catch in the throat, a beat behind.",
+              "**Green olives** picked early carry more of both than ripe black fruit."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          }
+        ]
+      },
+      {
+        "heading": "A bland oil is usually an old oil",
+        "id": "bland-oil-is-old-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Both attributes fade with time. The pepper goes first, then the bitterness, and last the fruit, until a bottle pours smooth and tastes of very little. Smoothness is not a sign of quality. An oil with no bite left is usually one that has been open a long while."
+          },
+          {
+            "type": "p",
+            "text": "Air, light and heat set the pace of that fade. What the pressing itself contributes is set out in [what cold-pressed olive oil really means](/blog/what-cold-pressed-olive-oil-really-means)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          }
+        ]
+      },
+      {
+        "heading": "How a tasting panel describes an oil",
+        "id": "how-a-panel-describes-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A sensory panel scores an oil on three positive attributes and checks it for defects. The tasters work from blue glasses so that colour cannot influence the score, warm the sample in the hand, and describe what they find in a fixed vocabulary."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Term",
+              "Describes",
+              "Where you notice it"
+            ],
+            "rows": [
+              [
+                "Fruity",
+                "Fresh olives, cut grass, green tomato",
+                "Nose, then the first sip"
+              ],
+              [
+                "Bitter",
+                "A clean bitterness, not harsh",
+                "Across the tongue"
+              ],
+              [
+                "Pungent",
+                "Peppery catch, sometimes a cough",
+                "Back of the throat, later"
+              ],
+              [
+                "Rancid",
+                "Crayons, putty, stale nuts",
+                "Nose, before you sip"
+              ],
+              [
+                "Musty",
+                "Damp cardboard",
+                "Nose, then flat on the palate"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          }
+        ]
+      },
+      {
+        "heading": "How to taste olive oil at home",
+        "id": "how-to-taste-at-home",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tasting from a small glass rather than a teaspoon takes a minute and settles the question. Warmth releases the aroma, covering the glass holds it in, and drawing air across the oil spreads it over the palate so the throat gets its turn."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "**Pour** a tablespoon into a small glass.",
+              "**Warm** it, one palm under, one over the top.",
+              "**Swirl**, uncover, and smell it twice.",
+              "**Sip** a little and hold it on the tongue.",
+              "**Draw air** in through your teeth.",
+              "**Swallow** and wait. The pepper arrives last."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          }
+        ]
+      },
+      {
+        "heading": "Which dishes suit a bitter oil",
+        "id": "dishes-for-a-bitter-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A strongly bitter, peppery oil is a seasoning, and it wants food with enough weight to meet it. On a delicate or sweet dish the same oil takes over and the cook loses what is being cooked. Warmth softens the bite, so a gentle pan mellows it."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Suits it:** bean and lentil soups, grilled lamb, roasted vegetables, tomatoes on bread, labneh and hummus.",
+              "**Fights it:** mayonnaise, delicate steamed fish, milk desserts, plain sponge cakes.",
+              "**Softens it:** roasting, gentle frying, or stirring the oil into a warm dish."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          }
+        ]
+      },
+      {
+        "heading": "What a spoiled oil tastes like instead",
+        "id": "what-spoiled-oil-tastes-like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A spoiled oil announces itself in the nose, before any of it reaches the tongue. Bitterness has no smell; rancidity does. Where a young oil smells green and tastes sharp, a finished one smells waxy and tastes greasy and flat, with no catch at the throat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Crayons or putty.** The commonest fault, and the easiest to name.",
+              "**Stale nuts.** Old walnuts, or the bottom of a peanut jar.",
+              "**Wine gone to vinegar.** Sharp and sour, from fermented fruit.",
+              "**Damp cardboard.** A cellar smell, flat behind it."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBitterTasteInline",
+            "alt": "A small blue tasting glass of olive oil held in one hand at a laboratory bench"
+          },
+          {
+            "type": "p",
+            "text": "Before paying, read [how to choose authentic extra virgin olive oil in Malaysia](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bitter and peppery is the taste of a young oil. Both fade, so a bland bottle is usually an old one. Taste from a warmed glass, smell before you sip, and judge a fault by crayons, not by bite."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is bitter olive oil bad?",
+        "a": "No. Bitterness across the tongue is one of the attributes tasting panels record as positive in extra virgin olive oil. It usually points to a young oil pressed from olives picked green."
+      },
+      {
+        "q": "Why does olive oil catch the back of my throat?",
+        "a": "The catch comes from oleocanthal, a compound the fruit carries into the oil. It is felt in the throat rather than tasted on the tongue, and a slight cough on a first sip is normal."
+      },
+      {
+        "q": "Does olive oil get less bitter as it ages?",
+        "a": "Yes. Pepper fades first and bitterness follows, which is why an oil tasting of almost nothing is often simply old. Air, light and heat speed the fade, so a badly stored bottle flattens sooner."
+      },
+      {
+        "q": "Can I cook with a bitter olive oil?",
+        "a": "Yes, and heat takes the edge off. Gentle frying and roasting soften the bite, so an oil that seems fierce on bread sits comfortably inside a soup, a tray of vegetables or a braise."
+      },
+      {
+        "q": "How do I tell bitter apart from rancid?",
+        "a": "Smell the oil before tasting it. Bitterness has no smell, so a green, fresh aroma with a sharp finish is fine. Crayon, putty or damp cardboard in the nose means the oil is finished."
+      },
+      {
+        "q": "Is a mild olive oil a lower grade?",
+        "a": "Not on its own. Olive variety and ripeness at harvest both produce genuinely gentle extra virgin oils. Mildness only signals a problem when it comes with a waxy smell or a flat, greasy feel."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, with the current price for each size."
+      },
+      {
+        "label": "What cold-pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "How the pressing itself shapes the aroma and the bite you taste in the glass."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "What to read on the label, and the two-minute taste check to run afterwards."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "olive-oil-bottle-size",
+    "slug": "what-size-olive-oil-bottle-to-buy",
+    "seoTitle": "What Size Extra Virgin Olive Oil Bottle to Buy",
+    "metaTitle": "What Size Extra Virgin Olive Oil Bottle to Buy",
+    "metaDescription": "250 ml, 500 ml or a tin: work out how fast your kitchen empties a bottle, why a big tin is only cheaper if you finish it, and how to decant safely.",
+    "focusKeyword": "extra virgin olive oil bottle",
+    "relatedKeywords": [
+      "olive oil bottle size",
+      "250ml vs 500ml olive oil",
+      "how much olive oil does a family use",
+      "olive oil tin",
+      "dark glass olive oil bottle",
+      "decanting olive oil",
+      "best olive oil bottle size",
+      "olive oil per litre price",
+      "how long does an opened bottle last",
+      "what to check on an olive oil label"
+    ],
+    "category": "Buying guide",
+    "tags": [
+      "bottle size",
+      "buying guide",
+      "storage",
+      "extra virgin"
+    ],
+    "h1": "What Size Extra Virgin Olive Oil Bottle Should You Buy?",
+    "excerpt": "Choosing between 250 ml, 500 ml and a tin is arithmetic, not taste: how fast your kitchen empties a bottle, held against the roughly two months an opened bottle stays at its best.",
+    "keyTakeaway": "Buy the size your kitchen finishes inside roughly two months of opening, because that is how long an opened bottle holds its character. Count the pours in a normal week, multiply by fifteen millilitres, and let the answer pick the bottle. A large tin is only cheaper per litre if the last pour is still good.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilBottleSizeHero",
+      "alt": "A bottling line with olive oil running from stainless steel filling heads into a row of dark glass bottles standing in line on a conveyor."
+    },
+    "ogImage": "/og/blog-olive-oil-bottle-size.jpg",
+    "intro": [
+      "A shelf holding a 250 ml bottle, a 500 ml bottle and a three-litre tin is a maths problem dressed up as a taste test. The lowest price per litre is worth nothing if the last third goes flat before anyone pours it.",
+      "Measure how fast your kitchen empties a bottle against the roughly two months an opened one stays at its best, and the size chooses itself."
+    ],
+    "sections": [
+      {
+        "heading": "Start by counting the pours in a normal week",
+        "id": "count-the-pours",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A tablespoon is about 15 ml, which turns a vague habit into a number. A kitchen that only dresses salads pours roughly 30 ml a week and takes eight weeks to empty 250 ml. A kitchen that fries, roasts and dresses with olive oil clears 500 ml inside a month."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**One tablespoon** is about 15 ml, so three a week is 45 ml.",
+              "**Salads and finishing only:** roughly 30 ml a week.",
+              "**Cooking with it most days:** 100 ml a week and up."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBottleSizeInline",
+            "alt": "Dark glass olive oil bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Household size against bottle size",
+        "id": "household-size-against-bottle-size",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Match the bottle to a household's weekly pour and to the eight-week window, not to the shelf price. Any row where the bottle outlasts eight weeks is a row where the smaller size is the better buy, whatever the label says per litre."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Household and habit",
+              "Weekly pour",
+              "250 ml lasts",
+              "500 ml lasts"
+            ],
+            "rows": [
+              [
+                "One person, an occasional drizzle",
+                "about 15 ml",
+                "about 16 weeks",
+                "far too long"
+              ],
+              [
+                "Two people, salads and finishing",
+                "about 30 ml",
+                "about 8 weeks",
+                "about 16 weeks"
+              ],
+              [
+                "Two people, cooking most days",
+                "about 100 ml",
+                "under 3 weeks",
+                "about 5 weeks"
+              ],
+              [
+                "Family of four, the house oil",
+                "about 225 ml",
+                "about 8 days",
+                "just over 2 weeks"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBottleSizeInline",
+            "alt": "Dark glass olive oil bottles moving along a filling line under stainless steel filling heads"
+          },
+          {
+            "type": "p",
+            "text": "Both sizes sit on the [products page](/products), and the per-litre gap between them is set out in [olive oil price in Malaysia](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for)."
+          }
+        ]
+      },
+      {
+        "heading": "Why the big tin is only cheaper if you finish it",
+        "id": "the-big-tin",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A three-litre tin advertises a price per litre that assumes every millilitre is used while it is still good. Open it in a kitchen that pours 100 ml a week and the tin has thirty weeks to give against a bottle that keeps its character for eight."
+          },
+          {
+            "type": "p",
+            "text": "A tin also breathes. Every pour draws air into the space above the oil, and a tin two-thirds empty is mostly air. Tins suit a restaurant that empties one in a fortnight."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBottleSizeInline",
+            "alt": "Dark glass olive oil bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Decanting a tin into a smaller dark bottle",
+        "id": "decanting",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Decanting is what makes a tin work at home: the bulk stays sealed and dark while a small bottle does the daily pouring. It costs nothing but a clean bottle and five minutes, and it is the only reason a large format belongs in a two-person kitchen."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Wash a small dark glass bottle and dry it completely before it sees oil.",
+              "Fill it to the shoulder, not halfway, so little air sits above the oil.",
+              "Reseal the tin at once and keep it in a cupboard away from the stove.",
+              "Empty and dry the small bottle before refilling. Never top fresh oil onto old."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBottleSizeInline",
+            "alt": "Dark glass olive oil bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "What to check on the bottle itself",
+        "id": "what-to-check-on-the-bottle",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The container is part of what you are buying. Dark glass and tin both keep light off the oil; a clear bottle under retail lighting ages fastest. Read the harvest date before the best-before date, and check the grade is printed in words, not implied by a picture."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Dark glass or tin.** Clear bottles sit under shop lights for months.",
+              "**A harvest date.** The age of the oil, not of the packing run.",
+              "**The grade written out.** Extra virgin, in words, on the front.",
+              "**A cap that reseals cleanly.** A pourer that will not close leaks air."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBottleSizeInline",
+            "alt": "Dark glass olive oil bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "When the larger bottle is the right call",
+        "id": "when-larger-is-right",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Buy the larger bottle when the kitchen genuinely empties it inside two months, which happens more often than people assume once olive oil replaces the everyday cooking oil rather than sitting beside it. Roasting vegetables twice a week accounts for much of 500 ml."
+          },
+          {
+            "type": "p",
+            "text": "Buying two small bottles and opening the second only when the first is done also works. Sealed stock ages slowly, as [olive oil shelf life](/blog/olive-oil-shelf-life-how-long-a-bottle-lasts) sets out."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilBottleSizeInline",
+            "alt": "Dark glass olive oil bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Count the pours, multiply by 15 ml, and pick the bottle your kitchen empties within about two months of opening. Buy a tin only if you decant into a small dark bottle."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is a 250 ml or a 500 ml olive oil bottle better?",
+        "a": "Whichever one your kitchen finishes within about two months. A household that only dresses salads takes eight weeks over 250 ml. One cooking with olive oil most days empties 500 ml in about five weeks."
+      },
+      {
+        "q": "How much olive oil does a family of four use in a month?",
+        "a": "A family using olive oil as the main cooking oil pours somewhere near 225 ml a week, so close to a litre a month. A family reserving it for salads and finishing may take two months over 250 ml."
+      },
+      {
+        "q": "Is buying a large tin of olive oil cheaper?",
+        "a": "Per litre, yes. In practice it is only cheaper if the last pour is still good. A tin that takes a household six months to empty has spent four of those months past its best."
+      },
+      {
+        "q": "Can I decant olive oil into a smaller bottle?",
+        "a": "Yes, and it is the sensible way to use a tin at home. Use a clean, completely dry dark glass bottle, fill it near the shoulder to limit air, and reseal the tin straight after pouring."
+      },
+      {
+        "q": "Why is olive oil sold in dark glass bottles?",
+        "a": "Light drives the reaction that flattens an oil's fruit and pepper, so dark glass and tin both slow it. A clear bottle standing under shop lighting for months ages faster than the same oil in green glass."
+      },
+      {
+        "q": "What size bottle suits one person living alone?",
+        "a": "The smallest one sold. A single household drizzling olive oil now and then pours perhaps a tablespoon a week, and even 250 ml at that rate outlasts the window where the oil is at its best."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, with the current price for each size."
+      },
+      {
+        "label": "Olive oil shelf life: how long a bottle lasts",
+        "path": "blog/olive-oil-shelf-life-how-long-a-bottle-lasts",
+        "description": "What a sealed bottle has in it, what an opened one has, and what air, light and heat do."
+      },
+      {
+        "label": "Olive oil price in Malaysia: what you are paying for",
+        "path": "blog/olive-oil-price-in-malaysia-what-you-are-paying-for",
+        "description": "Why the per-litre figure moves with bottle size, and what sits behind the price."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "olive-oil-for-baking",
+    "slug": "olive-oil-for-cakes-and-baking",
+    "seoTitle": "Olive Oil for Cake: How to Bake With It",
+    "metaTitle": "Olive Oil for Cake: How to Bake With It",
+    "metaDescription": "How to bake with olive oil: the butter-to-oil conversion, why oil cakes stay moist longer, which bakes suit a fruity oil, and a worked citrus ratio.",
+    "focusKeyword": "olive oil for cake",
+    "relatedKeywords": [
+      "olive oil cake",
+      "baking with olive oil",
+      "olive oil instead of butter",
+      "butter to olive oil conversion",
+      "can you bake with olive oil",
+      "extra virgin olive oil cake",
+      "olive oil cake ratio",
+      "lemon olive oil cake",
+      "olive oil in brownies",
+      "substitute olive oil for butter in baking"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "baking",
+      "cooking",
+      "extra virgin",
+      "recipes"
+    ],
+    "h1": "Olive Oil for Cake: Baking With Extra Virgin",
+    "excerpt": "Olive oil bakes a different cake from butter rather than a worse one, and the conversion between them is a ratio a home baker can carry in their head.",
+    "keyTakeaway": "Olive oil replaces butter in a cake at roughly three-quarters the volume, so 100 g of butter becomes about 75 ml of oil. The crumb comes out looser and stays soft for longer. A fruity extra virgin belongs with citrus, chocolate and spice; delicate sponges want a gentler oil.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilForBakingHero",
+      "alt": "A glass carafe of green olive oil and lemons on a wooden kitchen table beside a window"
+    },
+    "ogImage": "/og/blog-olive-oil-for-baking.jpg",
+    "intro": [
+      "A cake made with olive oil is not what you settle for when the butter runs out. It is a different cake: looser crumb, a softer slice on day two, a low fruitiness under the sugar.",
+      "Here is the conversion that works, which bakes want a strong oil, and why the oven dial worries bakers more than it should."
+    ],
+    "sections": [
+      {
+        "heading": "The butter-to-oil conversion",
+        "id": "butter-to-oil-conversion",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Swap butter for olive oil at roughly **three-quarters the volume**: 100 g of butter becomes about 75 ml of oil. Butter is part water and part milk solids, so pouring the full volume of pure fat into the bowl gives a greasy crumb. Recipes that melt their butter convert most cleanly of all."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Butter in the recipe",
+              "Olive oil to use",
+              "Where this comes up"
+            ],
+            "rows": [
+              [
+                "50 g",
+                "38 ml",
+                "Muffins, a tray of brownies"
+              ],
+              [
+                "100 g",
+                "75 ml",
+                "A single 20 cm layer"
+              ],
+              [
+                "125 g",
+                "95 ml",
+                "A loaf cake"
+              ],
+              [
+                "200 g",
+                "150 ml",
+                "Two layers, or a bundt"
+              ],
+              [
+                "1 cup",
+                "3/4 cup",
+                "American recipes"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBakingInline",
+            "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
+          },
+          {
+            "type": "p",
+            "text": "Whisk by hand rather than reaching for the mixer: there is no butter to cream, and beating only toughens the crumb. If the batter looks stiffer than the recipe describes, loosen it with a tablespoon of milk."
+          }
+        ]
+      },
+      {
+        "heading": "Which bakes convert and which refuse",
+        "id": "what-converts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Anything that starts with melted butter converts: brownies, banana bread, carrot cake, muffins, most chocolate cakes. Anything built on creamed butter and sugar does not, because the air whipped into solid butter is the lift. Shortbread, laminated pastry and buttercream need the butter to stay butter."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Converts well.** Brownies, banana and date loaves, carrot cake, chocolate cake, muffins.",
+              "**Converts with care.** Sponges and chiffons, where a milder oil keeps the flavour clean.",
+              "**Do not convert.** Shortbread, flaky pastry, buttercream, anything creamed."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBakingInline",
+            "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
+          }
+        ]
+      },
+      {
+        "heading": "Why an oil cake stays moist longer",
+        "id": "why-oil-cakes-stay-moist",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Butter is solid at room temperature and olive oil is liquid, and a cake behaves the same way. Butter in a cooled crumb sets firm, which is why a butter cake tightens overnight and tastes best warm. Olive oil stays liquid at Malaysian room temperature, so the third-day slice is still soft."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBakingInline",
+            "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
+          }
+        ]
+      },
+      {
+        "heading": "The batter is what the oil sees, not a hot pan",
+        "id": "batter-not-the-pan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bakers hesitate over extra virgin in a 180 °C oven because they are picturing a frying pan. A batter is mostly water, sugar and flour, and while it bakes the crumb sits near boiling point, not at the oven's air temperature. The oil is suspended in that, never against hot metal."
+          },
+          {
+            "type": "p",
+            "text": "A cake's exposed edge and a focaccia crust do get hotter, and both sit well inside what this oil takes. The figures are in [what heat olive oil can take](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBakingInline",
+            "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
+          }
+        ]
+      },
+      {
+        "heading": "Fruity oil or mild oil for the bake",
+        "id": "fruity-or-mild",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Match the oil to how much else is happening in the bake. A green, peppery extra virgin has flavour to spare and needs a partner loud enough to meet it: dark chocolate, citrus zest, cinnamon and clove, wholemeal flour. A pale vanilla sponge has nothing to hide behind and wants a gentler, riper oil."
+          },
+          {
+            "type": "p",
+            "text": "The peppery catch you taste from a spoon does not survive the oven intact. What reaches the plate is fruit and a faint savoury note, which is why a batter that tasted alarming raw comes out balanced."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBakingInline",
+            "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
+          }
+        ]
+      },
+      {
+        "heading": "Citrus and olive oil, and one worked ratio",
+        "id": "citrus-and-a-worked-ratio",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Citrus and olive oil work together because both carry their aroma in fat. Rub the zest into the sugar with your fingers before anything else goes in the bowl, and the oil in the peel spreads through the sugar, then through the batter. Juice alone gives you sourness, not the smell of a lemon."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Rub the zest of two lemons into 180 g caster sugar until damp and fragrant.",
+              "Whisk in three eggs, then 150 ml olive oil in a thin stream, then 120 g yoghurt.",
+              "Fold in 200 g flour, two teaspoons baking powder, a pinch of salt.",
+              "Bake in a lined 20 cm tin at 175 °C for 40 to 45 minutes.",
+              "Cool in the tin, and slice it the next day."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBakingInline",
+            "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Three-quarters the volume of butter, whisked not creamed, in anything that would have used melted butter anyway. Strong oil for chocolate, citrus and spice, a gentler one for a plain sponge."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can you use olive oil instead of butter in a cake?",
+        "a": "Yes, in any recipe that melts its butter rather than creaming it. Use roughly three-quarters the volume, whisk by hand, and expect a looser crumb that keeps its softness for longer."
+      },
+      {
+        "q": "How much olive oil replaces 100 g of butter?",
+        "a": "About 75 ml of olive oil. The quarter you leave out is the water and milk solids the butter brought with it, and a tablespoon of milk covers the difference in a stiff batter."
+      },
+      {
+        "q": "Will the cake taste of olive oil?",
+        "a": "It tastes of fruit rather than of salad dressing. Baking softens the peppery edge, and sugar, zest or chocolate carry the rest. A green oil is loud in a plain sponge, welcome in a chocolate one."
+      },
+      {
+        "q": "Is extra virgin olive oil safe to bake at 180 °C?",
+        "a": "Yes, comfortably. The oil in a cake sits inside a wet batter, and the crumb stays near boiling point throughout, well under the oven's air temperature. The figures are in [the smoke point article](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+      },
+      {
+        "q": "Which cakes suit olive oil best?",
+        "a": "Citrus cakes, chocolate cake, carrot and banana loaves, spiced cakes and anything wholemeal. All of them have a flavour loud enough to stand beside the oil instead of being flattened by it."
+      },
+      {
+        "q": "Why did my olive oil cake turn out greasy?",
+        "a": "Almost always a straight one-for-one swap. Pouring 100 ml of oil where the recipe wanted 100 g of butter adds fat the crumb cannot hold. Drop to three-quarters and the problem disappears."
+      },
+      {
+        "q": "Can I bake with an infused olive oil?",
+        "a": "The sweeter infusions suit cakes and flatbreads, where the aroma is protected inside the crumb. Lavender and chamomile, or fennel and anise, are the two to reach for on the [products page](/products)."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in two bottle sizes, plus the six infused oils, with current prices."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where olive oil fits across tumis, roasting and dressings in a kitchen that runs warm."
+      },
+      {
+        "label": "What cold-pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "How the oil is extracted, and what that has to do with the flavour it brings to a bake."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "olive-oil-substitute",
+    "slug": "olive-oil-substitute-what-to-use-instead",
+    "seoTitle": "Olive Oil Substitute: What to Use Instead",
+    "metaTitle": "Olive Oil Substitute: What to Use Instead",
+    "metaDescription": "The right olive oil substitute changes with the job: butter, ghee, coconut, sunflower, canola and rice bran against dressing, frying, roasting and baking.",
+    "focusKeyword": "olive oil substitute",
+    "relatedKeywords": [
+      "what to use instead of olive oil",
+      "olive oil replacement",
+      "substitute for olive oil in baking",
+      "butter instead of olive oil",
+      "olive oil substitute for frying",
+      "can I use coconut oil instead of olive oil",
+      "olive oil to butter conversion",
+      "vegetable oil instead of olive oil",
+      "no olive oil what can I use",
+      "neutral oil substitute"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "cooking",
+      "substitutes",
+      "baking",
+      "kitchen basics"
+    ],
+    "h1": "Olive Oil Substitute: What to Use Instead, Job by Job",
+    "excerpt": "The right olive oil substitute depends on what the oil was doing in the dish, so a dressing, a hot pan, a roasting tray and a cake batter each call for a different fat and sometimes a different quantity.",
+    "keyTakeaway": "There is no single olive oil substitute, because a dressing, a pan, a roasting tray and a cake batter ask the oil for different things. Rice bran and canola cover the hot jobs one for one. Melted butter covers a cake at about a third more volume. A dressing is the one swap that always tastes different.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilSubstituteHero",
+      "alt": "Four small glass bottles of cooking oil standing in a row on a wooden kitchen shelf"
+    },
+    "ogImage": "/og/blog-olive-oil-substitute.jpg",
+    "intro": [
+      "The pan is hot, the recipe still says olive oil, and the bottle gives up half a teaspoon. What goes in instead depends on what the oil was there to do.",
+      "Dressing, frying, roasting and baking are four jobs. Here is the stand-in for each, the ratio wherever it is not one for one, and the flavour you lose."
+    ],
+    "sections": [
+      {
+        "heading": "Match the olive oil substitute to the job",
+        "id": "match-the-substitute-to-the-job",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An olive oil substitute is chosen by job, not by bottle. In a dressing the oil is most of the flavour, so any swap changes how the dish tastes. In a hot pan it is mainly a cooking medium and almost any kitchen oil does the work."
+          },
+          {
+            "type": "table",
+            "head": [
+              "The job",
+              "Reach for",
+              "Ratio",
+              "What you give up"
+            ],
+            "rows": [
+              [
+                "Dressing and finishing",
+                "Sunflower or grapeseed, more lemon",
+                "1:1",
+                "The grassy, peppery note"
+              ],
+              [
+                "Gentle frying, tumis",
+                "Rice bran, canola or ghee",
+                "1:1",
+                "Little, in a spiced dish"
+              ],
+              [
+                "Roasting at 180-200°C",
+                "Rice bran, canola, melted ghee",
+                "1:1",
+                "A fruity edge on browned skin"
+              ],
+              [
+                "Cakes and muffins",
+                "Melted butter",
+                "About a third more volume",
+                "A crumb still soft next day"
+              ],
+              [
+                "Curry, rendang, coconut bakes",
+                "Coconut oil, measured melted",
+                "1:1",
+                "Nothing; you gain sweetness"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSubstituteInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Dressings and finishing: the hardest swap",
+        "id": "dressings-and-finishing",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A dressing is oil, acid and salt, so the oil carries most of what the tongue meets. Nothing replaces extra virgin olive oil here without changing the dish. Sunflower and grapeseed come closest in texture, go in one for one, and want extra lemon to stop the result tasting flat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Sunflower or grapeseed.** Neutral and light, one for one, then sharpen with acid.",
+              "**Melted butter.** Fine warm over fish, sets hard as the plate cools.",
+              "**Coconut oil.** Only where sweetness belongs; it firms up in a chilled dressing.",
+              "**Ghee.** Good through hot rice or dhal, wrong on a cold salad."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSubstituteInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+          },
+          {
+            "type": "p",
+            "text": "Ratios for the real thing are in [extra virgin olive oil salad dressing](/blog/extra-virgin-olive-oil-salad-dressing)."
+          }
+        ]
+      },
+      {
+        "heading": "Gentle frying and tumis",
+        "id": "gentle-frying-and-tumis",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Home tumis runs roughly 140-180°C and most kitchen oils handle it without complaint. Rice bran and canola swap in one for one and add nothing to the flavour, which in a heavily spiced dish is the point. Ghee goes in one for one and brings a nutty dairy note."
+          },
+          {
+            "type": "p",
+            "text": "Butter alone scorches at tumis heat because of the milk solids in it. Use it half and half with a neutral oil, or use ghee instead."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSubstituteInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Roasting trays and the oven",
+        "id": "roasting",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Roasting asks a fat to coat, brown and stay put for half an hour at 180-200°C. Rice bran, canola and melted ghee all do that one for one. Coconut oil roasts cleanly too, though it leaves a sweetness better suited to pumpkin than to rosemary potatoes."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Rice bran or canola.** One for one, neutral, cheapest by the litre.",
+              "**Melted ghee.** One for one, deeper browning, a dairy smell in the oven.",
+              "**Coconut oil.** One for one, measured melted, sweet on root vegetables.",
+              "**Butter.** Toss it through at the end of the roast, not the start."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSubstituteInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Baking, and the one ratio worth remembering",
+        "id": "baking",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A cake built on olive oil wants a liquid fat, and melted butter is the usual stand-in. Butter carries water as well as fat, so use about a third more by weight: 100 ml of olive oil becomes roughly 135 g of melted butter, cooled first."
+          },
+          {
+            "type": "p",
+            "text": "Coconut oil bakes well in anything already sweet, one for one and measured melted. Ghee suits a dense bake and reads as dairy."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSubstituteInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "When olive oil is the substitute",
+        "id": "when-olive-oil-is-the-substitute",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil stands in for other fats as often as the reverse. It replaces butter or margarine in many bakes at roughly three-quarters the volume, and it replaces a neutral oil one for one in dressings, marinades and gentle pan work. The dish gains a peppery edge."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**For butter in a cake.** Three-quarters the volume, and a mild oil rather than a bitter one.",
+              "**For a neutral oil in the pan.** One for one, under the [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take).",
+              "**For a neutral oil in a marinade.** One for one, then taste before adding acid.",
+              "**Not for the deep fryer.** Frying oil is not reused, and a full pot is expensive."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilSubstituteInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+          },
+          {
+            "type": "p",
+            "text": "The classic oil and the six infused ones sit on the [products page](/products)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ask what the oil was doing. In a dressing nothing swaps cleanly, so add acid and accept a different salad. In a pan, rice bran or canola. In a cake, melted butter."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What can I use instead of olive oil?",
+        "a": "Rice bran, canola or sunflower oil cover frying and roasting one for one. Melted butter or ghee cover baking and finishing. A dressing has no clean swap, so use a neutral oil and more acid."
+      },
+      {
+        "q": "What is the best olive oil substitute for baking?",
+        "a": "Melted butter, at about a third more volume than the oil, because butter carries water as well as fat. A neutral oil such as canola goes in one for one and tastes plainer."
+      },
+      {
+        "q": "Can I use butter instead of olive oil for frying?",
+        "a": "Not on its own at tumis heat, because the milk solids in butter scorch before the food is done. Use half butter and half neutral oil, or use ghee, which has those solids removed."
+      },
+      {
+        "q": "Is coconut oil a good substitute for olive oil?",
+        "a": "In curries, rendang and sweet bakes, yes, one for one and measured melted. In a salad dressing it brings a sweet coconut note that most of those dishes were not built around."
+      },
+      {
+        "q": "How much olive oil replaces butter in a recipe?",
+        "a": "Roughly three-quarters the volume of butter called for, since olive oil is fat all the way through. A hundred grams of butter becomes about 75 ml of oil in most cake batters."
+      },
+      {
+        "q": "What can I use instead of olive oil in a salad dressing?",
+        "a": "Sunflower or grapeseed oil one for one, with a little more lemon juice or vinegar to keep the dressing from tasting flat. Melted butter works warm over vegetables but sets firm."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "The classic Palestinian cold-pressed oil and the six infused oils, in 250 ml and 500 ml bottles."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Which dishes suit it, what heat it takes and where a neutral oil is the better tool."
+      },
+      {
+        "label": "Extra virgin olive oil salad dressing",
+        "path": "blog/extra-virgin-olive-oil-salad-dressing",
+        "description": "The oil-to-acid ratio, what to add and how to keep a dressing from separating."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 4 ---------------- */
+  {
+    "id": "olive-oil-vs-coconut-oil",
+    "slug": "olive-oil-vs-coconut-oil-in-a-malaysian-kitchen",
+    "seoTitle": "Olive Oil vs Coconut Oil in a Malaysian Kitchen",
+    "metaTitle": "Olive Oil vs Coconut Oil in a Malaysian Kitchen",
+    "metaDescription": "Olive oil vs coconut oil as cooking fats: flavour, what each does at 30°C, behaviour in a hot pan, cost by the litre, and which dish wants which.",
+    "focusKeyword": "olive oil vs coconut oil",
+    "relatedKeywords": [
+      "coconut oil vs olive oil for cooking",
+      "olive oil or coconut oil which to use",
+      "cooking with coconut oil malaysia",
+      "olive oil for rendang",
+      "coconut oil melting point",
+      "olive oil substitute coconut oil",
+      "virgin coconut oil vs extra virgin olive oil",
+      "which oil for salad dressing",
+      "olive oil price per litre malaysia",
+      "baking with olive oil or coconut oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "cooking",
+      "comparison",
+      "extra virgin",
+      "malaysian kitchen"
+    ],
+    "h1": "Olive Oil vs Coconut Oil in a Malaysian Kitchen",
+    "excerpt": "Olive oil and coconut oil are two different cooking fats with two different jobs, and in a kitchen that runs at 30°C one stays liquid while the other firms up the moment the air-conditioning does.",
+    "keyTakeaway": "Coconut oil belongs where a coconut note belongs, which in Malaysia is a great many dishes. Olive oil belongs where nothing should taste of coconut, and above all where the oil is served unheated. Coconut oil sets solid in an air-conditioned room; olive oil stays liquid. Cost by the litre decides the rest.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsCoconutOilHero",
+      "alt": "Two shallow glass bowls side by side on a white counter, the left holding green olive oil and the right holding solid white coconut oil"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-coconut-oil.jpg",
+    "intro": [
+      "Most Malaysian kitchens own both. Coconut oil for rendang and kuih, a bottle of olive oil for salad and roast vegetables.",
+      "What follows compares them as cooking fats: flavour, what each does at 30°C, how each behaves in a hot pan, cost by the litre, and which dish wants which."
+    ],
+    "sections": [
+      {
+        "heading": "Olive oil or coconut oil: which one to reach for",
+        "id": "which-one-to-reach-for",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Reach for coconut oil when the dish is already coconut: rendang, gulai, kuih, anything built on santan. Reach for olive oil when nothing on the plate should taste of coconut, and above all when the oil is served unheated. Both are ordinary cooking fats. The dish decides."
+          },
+          {
+            "type": "note",
+            "title": "On the health question",
+            "text": "Which fat suits a particular person is a question for a doctor or a registered dietitian, not for anyone selling oil. This article stays with flavour, texture, heat and cost."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCoconutOilInline",
+            "alt": "A bottle of Palestinian extra virgin olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "What each one tastes like on the plate",
+        "id": "flavour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil tastes green: cut grass, a little bitterness, a peppery catch at the back of the throat. Virgin coconut oil is sweet and rounded, with a coconut aroma that survives cooking. Refined coconut oil is close to neutral and mostly contributes texture."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Rendang.** Coconut oil disappears into it; olive oil argues with the rempah.",
+              "**A plain cake.** Coconut oil gives a faintly tropical crumb, olive oil a fruity one.",
+              "**A salad.** Olive oil is the dressing; coconut oil sets into flecks on cold leaves."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCoconutOilInline",
+            "alt": "A bottle of Palestinian extra virgin olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "Solid or liquid at 28 to 32°C",
+        "id": "at-malaysian-room-temperature",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Coconut oil melts at roughly 24°C. On a Malaysian counter at 28 to 32°C it is liquid or a soft paste, and in an air-conditioned room it sets white and hard again. Olive oil stays liquid all year in this climate. That difference decides where each one fails."
+          },
+          {
+            "type": "p",
+            "text": "Weigh coconut oil rather than spooning it, because a spoonful solid is not a spoonful melted. It also sets on anything cold, which is why a coconut oil dressing turns grainy on chilled leaves."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCoconutOilInline",
+            "alt": "A bottle of Palestinian extra virgin olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "How each behaves in a hot pan",
+        "id": "in-a-hot-pan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ordinary home cooking sits within reach of both. A tumis or a sauté runs around 140 to 180°C, comfortable for olive oil throughout, and for coconut oil until the top of that range, where it reaches its own smoke point. What differs is what survives: the coconut aroma and the peppery top notes both thin out as the pan gets hotter."
+          },
+          {
+            "type": "p",
+            "text": "Temperatures for olive oil, and where a deep fryer stops making sense for it, are in [olive oil smoke point: what heat it can take](/blog/olive-oil-smoke-point-what-heat-it-can-take). Pan technique is in [how to cook with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCoconutOilInline",
+            "alt": "A bottle of Palestinian extra virgin olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "Cost by the litre",
+        "id": "cost-by-the-litre",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Coconut oil is pressed here and olive oil is shipped in, so the two sit far apart on a Malaysian shelf: this oil works out at RM236 a litre in the 250 ml bottle and RM206 in the 500 ml, a multiple of local virgin coconut oil. Spend olive oil where it is tasted, and something cheaper where it is only a medium."
+          },
+          {
+            "type": "p",
+            "text": "Bottle sizes and current prices are on the [products page](/products), and the branches and online counters carrying the brand are on the [where to buy page](/shop). A fryer takes a litre or two at a time, which is the wrong format for either of these oils."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCoconutOilInline",
+            "alt": "A bottle of Palestinian extra virgin olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "Which oil a given dish wants",
+        "id": "use-this-for-that",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One question sorts almost every dish: would a coconut note help this plate or fight it? Rendang wants coconut. A tomato and basil salad wants olive oil. A banana cake takes either, and the one you pick is the one you taste in the crumb."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Dish",
+              "Reach for",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Rendang, gulai, curries",
+                "Coconut oil",
+                "Coconut is already the dish"
+              ],
+              [
+                "Kuih and Malay sweets",
+                "Coconut oil",
+                "Sets firm on cooling"
+              ],
+              [
+                "Tumis and nasi goreng",
+                "Either",
+                "Depends on the rempah"
+              ],
+              [
+                "Salad dressing, cold dishes",
+                "Olive oil",
+                "Coconut oil sets solid"
+              ],
+              [
+                "Bread and dipping",
+                "Olive oil",
+                "Served unheated"
+              ],
+              [
+                "Roast vegetables, grilled fish",
+                "Olive oil",
+                "Grassy, savoury"
+              ],
+              [
+                "Deep frying",
+                "Neither",
+                "A litre or two per pot, so use cheap oil"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCoconutOilInline",
+            "alt": "A bottle of Palestinian extra virgin olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Coconut oil where a coconut note belongs, olive oil where it does not, and olive oil first for anything served unheated. Coconut oil sets solid in cool air. Price settles the rest."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Which is better, olive oil or coconut oil?",
+        "a": "Neither, as cooking fats. They taste different, set differently at room temperature and cost differently, so the dish decides. If the real question is health, ask a doctor or a dietitian, not a seller."
+      },
+      {
+        "q": "Can I use olive oil instead of coconut oil?",
+        "a": "For sautéing and roasting, yes, one for one, and the dish loses its coconut note. For kuih and anything that must set firm on cooling, no: olive oil stays liquid at room temperature."
+      },
+      {
+        "q": "Why does my coconut oil go solid and my olive oil never does?",
+        "a": "Coconut oil melts at around 24°C. A counter at 28 to 32°C keeps it liquid or soft, and an air-conditioned room set below that turns it white and firm. Olive oil melts far lower and stays liquid throughout."
+      },
+      {
+        "q": "Can I cook rendang with olive oil?",
+        "a": "You can, and it will taste like something else. The pepper and grassiness of an extra virgin sit awkwardly against a rempah built for coconut. Keep the olive oil for the salad."
+      },
+      {
+        "q": "Which one is cheaper in Malaysia?",
+        "a": "Coconut oil, usually by a wide margin, because it is produced locally while olive oil is imported and extra virgin costs more again. Current bottle prices are listed on the products page."
+      },
+      {
+        "q": "Can I deep fry with either of them?",
+        "a": "Both work and both are a poor use of money at fryer volume, because a pot takes a litre or two at a time. A cheap neutral oil does that job better than either of these."
+      },
+      {
+        "q": "Which should I use in a cake?",
+        "a": "Either, and it is a flavour choice. Coconut oil gives a faintly tropical crumb. A fruity extra virgin suits lemon, orange and dark chocolate. Both keep a cake moist longer than butter does."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in two bottle sizes, with the current price for each."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "What temperature olive oil actually reaches in a home pan, and where frying stops making sense."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Tumis, roasting, dressings and finishing, with the quantities a Malaysian recipe expects."
       },
       {
         "label": "Where to buy in Malaysia",

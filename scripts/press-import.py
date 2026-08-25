@@ -335,6 +335,9 @@ def main() -> int:
             "slug": draft["slug"],
             "h1": draft["h1"],
             "excerpt": draft["excerpt"],
+            # build-llms.mjs derives the briefs' "last updated" line from the newest of these.
+            # It used to be a hardcoded date in all three templates and never moved.
+            "dateModified": draft.get("dateModified") or draft.get("datePublished"),
             "focusKeyword": draft["focusKeyword"],
         })
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -59,9 +59,22 @@ function articleIndexFor(lang) {
     .join('\n');
 }
 
+/**
+ * The freshness line was a hardcoded date in all three templates, so it never moved: the
+ * briefs claimed 2026-08-14 while indexing articles published 2026-08-25. A build clock
+ * would churn the file on every build and break --check, so this derives the date from the
+ * newest article the manifest carries — content-derived, deterministic, and it cannot go
+ * stale while the index below it grows.
+ */
+function lastUpdated() {
+  const dates = MANIFEST.map((a) => a.dateModified || a.datePublished).filter(Boolean).sort();
+  return dates.length ? dates[dates.length - 1] : '';
+}
+
 function tokensFor(sellerName, lang) {
   return {
     ARTICLES: articleIndexFor(lang),
+    LAST_UPDATED: lastUpdated(),
     SELLER: sellerName,
     SELLER_URL: S.url,
     EMAIL: S.email,
