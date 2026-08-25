@@ -29,3 +29,4 @@ dist-ssr
 # Python bytecode — press-import.py regenerates this on every validation run
 __pycache__/
 *.pyc
+docs/press/round-4/gen/

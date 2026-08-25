@@ -1,0 +1,228 @@
+{
+  "id": "olive-oil-for-baking",
+  "lang": "en",
+  "slug": "olive-oil-for-cakes-and-baking",
+  "seoTitle": "Olive Oil for Cake: How to Bake With It",
+  "metaTitle": "Olive Oil for Cake: How to Bake With It",
+  "metaDescription": "How to bake with olive oil: the butter-to-oil conversion, why oil cakes stay moist longer, which bakes suit a fruity oil, and a worked citrus ratio.",
+  "focusKeyword": "olive oil for cake",
+  "relatedKeywords": [
+    "olive oil cake",
+    "baking with olive oil",
+    "olive oil instead of butter",
+    "butter to olive oil conversion",
+    "can you bake with olive oil",
+    "extra virgin olive oil cake",
+    "olive oil cake ratio",
+    "lemon olive oil cake",
+    "olive oil in brownies",
+    "substitute olive oil for butter in baking"
+  ],
+  "category": "Cooking with olive oil",
+  "tags": [
+    "baking",
+    "cooking",
+    "extra virgin",
+    "recipes"
+  ],
+  "h1": "Olive Oil for Cake: Baking With Extra Virgin",
+  "excerpt": "Olive oil bakes a different cake from butter rather than a worse one, and the conversion between them is a ratio a home baker can carry in their head.",
+  "keyTakeaway": "Olive oil replaces butter in a cake at roughly three-quarters the volume, so 100 g of butter becomes about 75 ml of oil. The crumb comes out looser and stays soft for longer. A fruity extra virgin belongs with citrus, chocolate and spice; delicate sponges want a gentler oil.",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "readingTime": 5,
+  "heroAlt": "A glass carafe of green olive oil and lemons on a wooden kitchen table beside a window",
+  "inlineAlt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge",
+  "intro": [
+    "A cake made with olive oil is not what you settle for when the butter runs out. It is a different cake: looser crumb, a softer slice on day two, a low fruitiness under the sugar.",
+    "Here is the conversion that works, which bakes want a strong oil, and why the oven dial worries bakers more than it should."
+  ],
+  "sections": [
+    {
+      "heading": "The butter-to-oil conversion",
+      "id": "butter-to-oil-conversion",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Swap butter for olive oil at roughly **three-quarters the volume**: 100 g of butter becomes about 75 ml of oil. Butter is part water and part milk solids, so pouring the full volume of pure fat into the bowl gives a greasy crumb. Recipes that melt their butter convert most cleanly of all."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Butter in the recipe",
+            "Olive oil to use",
+            "Where this comes up"
+          ],
+          "rows": [
+            [
+              "50 g",
+              "38 ml",
+              "Muffins, a tray of brownies"
+            ],
+            [
+              "100 g",
+              "75 ml",
+              "A single 20 cm layer"
+            ],
+            [
+              "125 g",
+              "95 ml",
+              "A loaf cake"
+            ],
+            [
+              "200 g",
+              "150 ml",
+              "Two layers, or a bundt"
+            ],
+            [
+              "1 cup",
+              "3/4 cup",
+              "American recipes"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Whisk by hand rather than reaching for the mixer: there is no butter to cream, and beating only toughens the crumb. If the batter looks stiffer than the recipe describes, loosen it with a tablespoon of milk."
+        }
+      ]
+    },
+    {
+      "heading": "Which bakes convert and which refuse",
+      "id": "what-converts",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Anything that starts with melted butter converts: brownies, banana bread, carrot cake, muffins, most chocolate cakes. Anything built on creamed butter and sugar does not, because the air whipped into solid butter is the lift. Shortbread, laminated pastry and buttercream need the butter to stay butter."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**Converts well.** Brownies, banana and date loaves, carrot cake, chocolate cake, muffins.",
+            "**Converts with care.** Sponges and chiffons, where a milder oil keeps the flavour clean.",
+            "**Do not convert.** Shortbread, flaky pastry, buttercream, anything creamed."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Why an oil cake stays moist longer",
+      "id": "why-oil-cakes-stay-moist",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Butter is solid at room temperature and olive oil is liquid, and a cake behaves the same way. Butter in a cooled crumb sets firm, which is why a butter cake tightens overnight and tastes best warm. Olive oil stays liquid at Malaysian room temperature, so the third-day slice is still soft."
+        }
+      ]
+    },
+    {
+      "heading": "The batter is what the oil sees, not a hot pan",
+      "id": "batter-not-the-pan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bakers hesitate over extra virgin in a 180 °C oven because they are picturing a frying pan. A batter is mostly water, sugar and flour, and while it bakes the crumb sits near boiling point, not at the oven's air temperature. The oil is suspended in that, never against hot metal."
+        },
+        {
+          "type": "p",
+          "text": "A cake's exposed edge and a focaccia crust do get hotter, and both sit well inside what this oil takes. The figures are in [what heat olive oil can take](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+        }
+      ]
+    },
+    {
+      "heading": "Fruity oil or mild oil for the bake",
+      "id": "fruity-or-mild",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Match the oil to how much else is happening in the bake. A green, peppery extra virgin has flavour to spare and needs a partner loud enough to meet it: dark chocolate, citrus zest, cinnamon and clove, wholemeal flour. A pale vanilla sponge has nothing to hide behind and wants a gentler, riper oil."
+        },
+        {
+          "type": "p",
+          "text": "The peppery catch you taste from a spoon does not survive the oven intact. What reaches the plate is fruit and a faint savoury note, which is why a batter that tasted alarming raw comes out balanced."
+        }
+      ]
+    },
+    {
+      "heading": "Citrus and olive oil, and one worked ratio",
+      "id": "citrus-and-a-worked-ratio",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Citrus and olive oil work together because both carry their aroma in fat. Rub the zest into the sugar with your fingers before anything else goes in the bowl, and the oil in the peel spreads through the sugar, then through the batter. Juice alone gives you sourness, not the smell of a lemon."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Rub the zest of two lemons into 180 g caster sugar until damp and fragrant.",
+            "Whisk in three eggs, then 150 ml olive oil in a thin stream, then 120 g yoghurt.",
+            "Fold in 200 g flour, two teaspoons baking powder, a pinch of salt.",
+            "Bake in a lined 20 cm tin at 175 °C for 40 to 45 minutes.",
+            "Cool in the tin, and slice it the next day."
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "heading": "The short version",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Three-quarters the volume of butter, whisked not creamed, in anything that would have used melted butter anyway. Strong oil for chocolate, citrus and spice, a gentler one for a plain sponge."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Can you use olive oil instead of butter in a cake?",
+      "a": "Yes, in any recipe that melts its butter rather than creaming it. Use roughly three-quarters the volume, whisk by hand, and expect a looser crumb that keeps its softness for longer."
+    },
+    {
+      "q": "How much olive oil replaces 100 g of butter?",
+      "a": "About 75 ml of olive oil. The quarter you leave out is the water and milk solids the butter brought with it, and a tablespoon of milk covers the difference in a stiff batter."
+    },
+    {
+      "q": "Will the cake taste of olive oil?",
+      "a": "It tastes of fruit rather than of salad dressing. Baking softens the peppery edge, and sugar, zest or chocolate carry the rest. A green oil is loud in a plain sponge, welcome in a chocolate one."
+    },
+    {
+      "q": "Is extra virgin olive oil safe to bake at 180 °C?",
+      "a": "Yes, comfortably. The oil in a cake sits inside a wet batter, and the crumb stays near boiling point throughout, well under the oven's air temperature. The figures are in [the smoke point article](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+    },
+    {
+      "q": "Which cakes suit olive oil best?",
+      "a": "Citrus cakes, chocolate cake, carrot and banana loaves, spiced cakes and anything wholemeal. All of them have a flavour loud enough to stand beside the oil instead of being flattened by it."
+    },
+    {
+      "q": "Why did my olive oil cake turn out greasy?",
+      "a": "Almost always a straight one-for-one swap. Pouring 100 ml of oil where the recipe wanted 100 g of butter adds fat the crumb cannot hold. Drop to three-quarters and the problem disappears."
+    },
+    {
+      "q": "Can I bake with an infused olive oil?",
+      "a": "The sweeter infusions suit cakes and flatbreads, where the aroma is protected inside the crumb. Lavender and chamomile, or fennel and anise, are the two to reach for on the [products page](/products)."
+    }
+  ],
+  "related": [
+    {
+      "label": "Arabian Village extra virgin olive oil",
+      "path": "products",
+      "description": "Palestinian cold-pressed oil in two bottle sizes, plus the six infused oils, with current prices."
+    },
+    {
+      "label": "How to cook with olive oil in a Malaysian kitchen",
+      "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+      "description": "Where olive oil fits across tumis, roasting and dressings in a kitchen that runs warm."
+    },
+    {
+      "label": "What cold-pressed olive oil really means",
+      "path": "blog/what-cold-pressed-olive-oil-really-means",
+      "description": "How the oil is extracted, and what that has to do with the flavour it brings to a bake."
+    },
+    {
+      "label": "Where to buy in Malaysia",
+      "path": "shop",
+      "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+    }
+  ]
+}
