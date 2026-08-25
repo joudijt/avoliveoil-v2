@@ -36,3 +36,15 @@ under delegation is marked **assumed**, never *approved*.
 | D19 **assumed** | `minyak-zaitun-habbatus-sauda` targets the **product** question, never the health question, although the demand behind that keyword is health-shaped | D11 and Reg. 18(6). The alternative was to leave the largest unclaimed Malay term unserved |
 | D20 **assumed** | The Quran article quotes **Quranic verses only — no hadith**, and attaches no health, spiritual or efficacy claim to the product | A hadith citation needed an owner ruling on suburhoney and none has been given here |
 | D21 **assumed** | Competitor brand terms are not targeted, though `minyak zaitun olive house` (590/mo) is the largest remaining Malay head term | The site's standing brand-neutral rule |
+
+## Round 3 decisions — 2026-08-25
+
+| # | Decision | Source |
+|---|---|---|
+| D22 | **6 articles per language, 18 in all** — a user ruling this round, overriding the demand-led split of D6 exactly as D15 did in round 2 | User, 2026-08-25: "6 for each lang" |
+| D23 **assumed** | Malay is taken as **exhausted at the head**, confirmed a second time. The six Malay articles run on a 10–50/mo long tail, recorded as such rather than inflated. Everything above 100/mo is either a competitor brand (D21) or inside the health cluster (D11) | Keyword Planner, geo 2458, pulled 2026-08-25 |
+| D24 **assumed** | The round is **reuse-first but not reuse-only**: 14 heroes are crops of repo photos, 4 are generated. The repo holds nine frames wide enough for a 1280×720 hero and this is the third round drawing on them | D17's flow, applied to a pool that has run out. Recorded in `round-3/IMAGE-INVENTORY.md` |
+| D25 **assumed** | Generated heroes are **resampled to 1280×720 locally** before shipping, because the free provider returns 1024×576 whatever size is requested and `ArticlePage.tsx` declares 1280×720. Round 1's fifteen heroes are still 1024×576 behind that declaration — untouched, still open | Rather than repeat round 1's false declaration |
+| D26 **assumed** | Where a generated image did not match what was asked for, **the alt text describes the real frame**, not the brief's intent. Four alt texts were rewritten this way | An alt text that describes an image the page is not showing is a worse defect than a weak lead image |
+| D27 **assumed** | The published **"tested below 0.028%"** acidity claim is **escalated to the owner, not deleted**. It appears 46 times across 10 shipped surfaces, has no support in `storeFacts.json`, and is hardcoded in `scripts/ai/facts-sync.mjs`. Removing a published product claim is an owner decision | The new Arabic acidity article's advice — that a number with no test date and no named lab is marketing copy — stands as written, and the contradiction is reported rather than hidden |
+| D28 **assumed** | Where a new article contradicted a live one, the **new article moved**, in every case: Arabic frying reuse, the Malay fridge rule, the English shelf-life figures, the marinade quantity. No published claim was rewritten to accommodate a draft | Round 3's job is to add pages, not to silently restate what the site already tells people |

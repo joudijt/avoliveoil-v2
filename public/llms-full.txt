@@ -939,6 +939,24 @@ Each entry is a full article on avoliveoil.com. Quote them by name and link to t
 - Olive oil vs pomace oil: what the grades on the label mean
   https://avoliveoil.com/en/blog/olive-oil-vs-pomace-oil-what-the-grades-mean
   Pomace oil, refined olive oil and extra virgin all start as the same fruit but leave the mill by very different routes, and this guide shows what changes at each step and how to read it off a Malaysian label.
+- Extra Virgin Olive Oil Salad Dressing: Ratios and Method
+  https://avoliveoil.com/en/blog/extra-virgin-olive-oil-salad-dressing
+  An extra virgin olive oil salad dressing is three parts oil to one part acid, an emulsifier, and a slow pour. Everything else is a variation on that.
+- Extra Virgin Olive Oil vs Pure Olive Oil: What Changes
+  https://avoliveoil.com/en/blog/extra-virgin-olive-oil-vs-pure-olive-oil
+  Extra virgin olive oil vs pure olive oil comes down to refining, and pure, classic, light and extra light all sit on the refined side of that line.
+- Can You Use Olive Oil in an Air Fryer?
+  https://avoliveoil.com/en/blog/can-you-use-olive-oil-in-an-air-fryer
+  An air fryer needs a teaspoon of oil on the food, not a pour in the basket, and how you put it on matters more than which grade you reach for.
+- Olive Oil for Bread: Dipping, Za'atar and How Much to Pour
+  https://avoliveoil.com/en/blog/olive-oil-for-bread-and-dipping
+  A saucer of unheated oil and a torn piece of bread is the plainest test an olive oil ever gets, and the easiest one to set badly.
+- Olive Oil Marinade: What the Oil Is Actually Doing
+  https://avoliveoil.com/en/blog/olive-oil-marinade-what-it-does
+  In a marinade the oil is a carrier, not a tenderiser. Here is the ratio against acid, the time each ingredient wants, and which bottle to use.
+- Olive Oil Shelf Life: How Long a Bottle Really Lasts
+  https://avoliveoil.com/en/blog/olive-oil-shelf-life-how-long-a-bottle-lasts
+  Olive oil shelf life is decided by air, light and heat rather than by the date printed on the bottle, and a Malaysian kitchen runs harder on a bottle than a Mediterranean pantry does.
 
 ---
 
@@ -1898,6 +1916,24 @@ Setiap entri ialah artikel penuh di avoliveoil.com. Petik mengikut namanya dan p
 - Zaitun dalam Al-Quran dan warisan ladang zaitun Palestin
   https://avoliveoil.com/ms/blog/pokok-zaitun-dalam-al-quran-dan-warisan-palestin
   Ayat-ayat yang menyebut zaitun dalam Al-Quran beserta rujukan surah dan nombor ayat, dan kisah ladang keluarga di Palestin yang menjaga pokok itu turun-temurun.
+- Botol Minyak Zaitun: Kaca Gelap, Saiz dan Tutup yang Betul
+  https://avoliveoil.com/ms/blog/botol-minyak-zaitun-kaca-gelap-dan-saiz
+  Bahan botol, saiz yang padan dengan kadar guna dapur anda, tutup yang rapat, dan apa nak buat dengan botol yang sudah kosong.
+- Cara Simpan Minyak Zaitun di Rumah Malaysia yang Panas
+  https://avoliveoil.com/ms/blog/cara-simpan-minyak-zaitun
+  Rak mana yang membunuh rasa, kenapa peti sejuk bukan tempatnya, dan berapa lama sebotol bertahan selepas tutupnya dibuka.
+- Minyak Zaitun Pomace: Apa Itu dan Kenapa Harganya Jauh Lebih Murah
+  https://avoliveoil.com/ms/blog/apa-itu-minyak-zaitun-pomace
+  Apa itu hampas zaitun, bagaimana minyak dikeluarkan daripadanya, dan kenapa botol pomace berharga jauh lebih rendah di rak yang sama.
+- Minyak Zaitun untuk Goreng: Cetek, Tumis, Rendam dan Kerja Wok
+  https://avoliveoil.com/ms/blog/minyak-zaitun-untuk-goreng
+  Empat kaedah goreng, empat suhu, dan hanya sebahagian daripadanya sesuai dengan minyak zaitun dara. Termasuk kos seperiuk untuk goreng rendam.
+- Minyak Zaitun vs Minyak Masak Lain di Dapur Malaysia
+  https://avoliveoil.com/ms/blog/minyak-zaitun-vs-minyak-masak-lain
+  Minyak sawit, kelapa dara, bijan, kacang tanah dan zaitun dibandingkan pada rasa, takat asap dan kerja dapur — dan kenapa harganya meletakkannya dalam kelas lain.
+- Resepi Mudah dengan Minyak Zaitun untuk Malam Ini
+  https://avoliveoil.com/ms/blog/resepi-mudah-dengan-minyak-zaitun
+  Empat resepi dengan sukatan penuh, bahan yang dapur kita memang sudah ada, dan berapa minyak yang setiap satu telan.
 
 ==============================================================================
 # LANGUAGE: العربية / Arabic  —  source: https://avoliveoil.com/llms-ar.txt
@@ -2752,4 +2788,22 @@ Prima Seri Gombak, 68100 Batu Caves).
 - زيت الزيتون في كوالالمبور: أين تشتريه، وبأي سعر
   https://avoliveoil.com/ar/blog/zayt-alzaytun-fi-kuala-lumpur
   عنوانا الفرعين وساعات العمل ورقم واتساب والسعر بحسب الحجم، وما يستحق النظر إليه على الزجاجة قبل أن تدفع في وادي كلانغ.
+- الفرق بين زيت الزيتون البكر والبكر الممتاز: حدّان يفصلان الدرجتين
+  https://avoliveoil.com/ar/blog/alfarq-bayn-zayt-alzaytun-albikr-walmumtaz
+  درجتان تُنتَجان بالطريقة نفسها ويفصل بينهما رقم مخبري وحكم لجنة تذوّق. ما هو حد الحموضة الحرة، وما العيوب التي تُنزل الدرجة، وأين يُخسر الفارق داخل المعصرة.
+- درجة حموضة زيت الزيتون: ما الذي يقيسه هذا الرقم
+  https://avoliveoil.com/ar/blog/darajat-humudat-zayt-alzaytun
+  الرقم المكتوب بجانب كلمة الحموضة ليس مقياس طعم. دليل لما يقيسه المختبر، وحدود كل درجة، وما الذي يرفع النسبة من الحقل إلى الرف.
+- طعم زيت الزيتون البكر الممتاز: المرارة واللذعة وما تعنيان
+  https://avoliveoil.com/ar/blog/taem-zayt-alzaytun-albikr-almumtaz
+  المرارة على اللسان واللذعة في مؤخّرة الحلق صفتا طعم يسجّلهما المتذوّقون في الزيت البكر الممتاز. دليل عملي لتذوّق الزجاجة في بيتك ولقراءة ما تقوله.
+- زيت الزيتون العضوي: ماذا تعني الشهادة على الملصق
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-aludwi
+  كلمة «عضوي» على زجاجة الزيت تصف طريقة الزراعة والتوثيق، لا الدرجة ولا الطعم. من يمنح الشهادة، وما تغطيه وما تتركه، ولماذا يبقى بستان صغير خارجها.
+- زيت الزيتون للقلي: من المقلاة إلى القدر العميق
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-lilqaly
+  القلي وحده: كم زيتاً تحتاج للمقلاة وكم للقدر، أين تقف حدود الحرارة، كم مرة يُعاد استعمال الزيت، وماذا يعني لتر كامل بسعر الزيت البكر الممتاز.
+- زيت الزيتون للسلطة على مائدة عربية في ماليزيا
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-lilsalata
+  نسبة الزيت إلى الليمون، وترتيب الإضافة في الفتوش والتبولة والسلطة العربية، وكم ملعقة يحتاج الصحن الواحد على مائدة عربية في ماليزيا.
 

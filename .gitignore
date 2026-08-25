@@ -25,3 +25,7 @@ dist-ssr
 
 # ai-visibility-kit staging output (never deployed)
 .beacon-out/
+
+# Python bytecode — press-import.py regenerates this on every validation run
+__pycache__/
+*.pyc

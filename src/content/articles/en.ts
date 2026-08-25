@@ -938,6 +938,11 @@ export const EN_ARTICLES: Article[] = [
         path: 'shop',
         description: 'Berkat Madinah Store, Shopee and TikTok Shop — every official channel.',
       },
+      {
+        "label": "Olive oil shelf life: how long a bottle lasts",
+        "path": "blog/olive-oil-shelf-life-how-long-a-bottle-lasts",
+        "description": "Harvest date against best-before, and what a Malaysian kitchen does to both."
+      }
     ],
   },
   /* ---------------- PRESS round 1 ---------------- */
@@ -1927,6 +1932,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Cooking with olive oil",
         "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
         "description": "Where extra virgin belongs in a Malaysian kitchen, and what a pour actually costs."
+      },
+      {
+        "label": "Olive oil marinade: what the oil is actually doing",
+        "path": "blog/olive-oil-marinade-what-it-does",
+        "description": "Why oil carries aroma rather than tenderises, and how long to leave each ingredient."
       }
     ]
   },
@@ -2175,6 +2185,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Branch counters in Ampang Jaya and Batu Caves, plus Berkat Madinah's own Shopee and TikTok Shop."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "The unheated use that shows an oil’s character, and what to serve with it."
       }
     ]
   },
@@ -2476,6 +2491,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy",
         "path": "shop",
         "description": "Berkat Madinah branches, opening hours and online counters."
+      },
+      {
+        "label": "Extra virgin olive oil salad dressing",
+        "path": "blog/extra-virgin-olive-oil-salad-dressing",
+        "description": "Ratios, the emulsion method, and how long a dressing keeps."
       }
     ]
   },
@@ -2751,6 +2771,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the two online counters."
+      },
+      {
+        "label": "Can you use olive oil in an air fryer?",
+        "path": "blog/can-you-use-olive-oil-in-an-air-fryer",
+        "description": "How much to use, why sprays damage the basket, and which dial settings suit it."
       }
     ]
   },
@@ -3027,6 +3052,1593 @@ export const EN_ARTICLES: Article[] = [
         "label": "The Arabian Village range",
         "path": "products",
         "description": "Single-origin Palestinian extra virgin olive oil and the six-botanical Infused Collection."
+      },
+      {
+        "label": "Extra virgin vs pure olive oil",
+        "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+        "description": "What \"pure\", \"classic\" and \"light\" mean on a Malaysian shelf."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "evoo-salad-dressing",
+    "slug": "extra-virgin-olive-oil-salad-dressing",
+    "seoTitle": "Extra Virgin Olive Oil Salad Dressing: Ratios",
+    "metaTitle": "Extra Virgin Olive Oil Salad Dressing: Ratios",
+    "metaDescription": "The 3:1 ratio, an emulsion method that holds, the faults that split a dressing, four builds for tonight, and how long a jar keeps in the fridge.",
+    "focusKeyword": "extra virgin olive oil salad dressing",
+    "relatedKeywords": [
+      "olive oil salad dressing recipe",
+      "olive oil and vinegar dressing ratio",
+      "how to make vinaigrette",
+      "lemon olive oil dressing",
+      "olive oil salad dressing malaysia",
+      "balsamic vinaigrette recipe",
+      "why does my dressing separate",
+      "emulsify salad dressing",
+      "homemade salad dressing shelf life",
+      "olive oil for cold dishes",
+      "best olive oil for salad",
+      "mustard vinaigrette"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "salad dressing",
+      "vinaigrette",
+      "cooking with olive oil",
+      "extra virgin"
+    ],
+    "h1": "Extra Virgin Olive Oil Salad Dressing: Ratios and Method",
+    "excerpt": "An extra virgin olive oil salad dressing is three parts oil to one part acid, an emulsifier, and a slow pour. Everything else is a variation on that.",
+    "keyTakeaway": "An extra virgin olive oil salad dressing is three parts oil to one part acid by volume, held together by mustard, honey or crushed garlic and a slow whisked pour. Dissolve the salt in the acid first. Keep the rest in a capped glass jar in the fridge and shake it back together.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressEvooSaladDressingHero",
+      "alt": "A bottle of Arabian Village olive oil standing upright on a wooden table, whole olives and olive leaves scattered around its base, daylight coming from the side."
+    },
+    "ogImage": "/og/blog-evoo-salad-dressing.jpg",
+    "intro": [
+      "A salad dressing is the shortest recipe in the kitchen and one of the easiest to get wrong, usually because the oil hit the bowl before the salt had dissolved. Three ingredients, one order of operations, ninety seconds.",
+      "Below: the ratios, a whisking method that holds, the faults that split a dressing, four builds, and how long a jar keeps."
+    ],
+    "sections": [
+      {
+        "heading": "The ratio to start from",
+        "id": "the-ratio",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A vinaigrette starts at three parts oil to one part acid, measured by volume. Three tablespoons of extra virgin olive oil to one tablespoon of lemon juice dresses a bowl of leaves for four. Shift to 2:1 on sturdy leaves, and to 4:1 when the vinegar is strong."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Oil to acid",
+              "What it suits",
+              "Leaves"
+            ],
+            "rows": [
+              [
+                "2:1",
+                "Sharp, cuts richness",
+                "Kale, cabbage, raw carrot"
+              ],
+              [
+                "3:1",
+                "The default vinaigrette",
+                "Romaine, butterhead, mixed leaves"
+              ],
+              [
+                "4:1",
+                "Softens a strong vinegar",
+                "Rocket, spinach"
+              ],
+              [
+                "5:1",
+                "Oil forward, barely dressed",
+                "Ripe tomato, avocado"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooSaladDressingInline",
+            "alt": "Seen from above: a white ceramic bowl of mixed green salad leaves on a wooden table, beside a small glass jug of olive oil and a lemon half."
+          }
+        ]
+      },
+      {
+        "heading": "How to make the emulsion hold",
+        "id": "emulsion-method",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Oil and acid do not dissolve in one another, so something has to hold them suspended. A teaspoon of Dijon mustard, half a teaspoon of honey, or a garlic clove crushed to a paste with salt will each do it. Order matters more than the whisk."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Stir the acid, salt and pepper together until the salt dissolves. Salt will not dissolve in oil.",
+              "Whisk in the mustard, honey or garlic paste.",
+              "Pour the oil in a thin stream, whisking without stopping, until it thickens and turns opaque.",
+              "Taste it on a leaf, not off the spoon: more oil if it bites, more acid if it sits flat."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooSaladDressingInline",
+            "alt": "Seen from above: a white ceramic bowl of mixed green salad leaves on a wooden table, beside a small glass jug of olive oil and a lemon half."
+          }
+        ]
+      },
+      {
+        "heading": "What goes wrong, and the fix",
+        "id": "what-goes-wrong",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Almost every failed dressing is one of four things: the oil went in too fast, the salt never dissolved, there was no emulsifier, or the leaves were wet from the tap. A split dressing still rebuilds — whisk fresh mustard in a clean bowl and pour the split mixture in slowly."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Split at once.** No emulsifier. Rebuild it onto mustard or garlic paste.",
+              "**Harsh.** Too much acid, or salt added last. Add oil a teaspoon at a time.",
+              "**Flat.** Wet leaves dilute whatever lands on them. Spin or pat them dry.",
+              "**Solid in the fridge.** Normal. Twenty minutes on the counter reverses it."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooSaladDressingInline",
+            "alt": "Seen from above: a white ceramic bowl of mixed green salad leaves on a wooden table, beside a small glass jug of olive oil and a lemon half."
+          }
+        ]
+      },
+      {
+        "heading": "Which oil, and when to pour it",
+        "id": "which-oil-and-when",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A dressing is an unheated use, so the oil's own character lands on the plate rather than being cooked off. Extra virgin is the grade that has one: green, fruity, peppery at the back of the throat. Refined pure and light grades are processed to taste of almost nothing. For where that character comes from, read [what cold-pressed olive oil really means](/blog/what-cold-pressed-olive-oil-really-means)."
+          },
+          {
+            "type": "p",
+            "text": "Dress at the table. Salt and acid draw water from a leaf within minutes."
+          },
+          {
+            "type": "image",
+            "src": "pressEvooSaladDressingInline",
+            "alt": "Seen from above: a white ceramic bowl of mixed green salad leaves on a wooden table, beside a small glass jug of olive oil and a lemon half."
+          }
+        ]
+      },
+      {
+        "heading": "Four dressings on the same base",
+        "id": "four-dressings",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Four dressings run off one base: three parts extra virgin olive oil to one part acid, the salt dissolved in the acid first, the oil whisked in last. Lemon and garlic, mustard vinaigrette, balsamic, and calamansi with soy each change a single ingredient. The quantities dress a bowl for four."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "**Lemon and garlic.** 3 tbsp oil, 1 tbsp lemon juice, one clove crushed with salt, black pepper. For cucumber and tomato.",
+              "**Mustard vinaigrette.** 3 tbsp oil, 1 tbsp red wine vinegar, 1 tsp Dijon, a little honey. For romaine and boiled egg.",
+              "**Balsamic.** 4 tbsp oil, 1 tbsp balsamic vinegar, salt. For tomato, rocket and anything with cheese.",
+              "**Calamansi and soy.** 3 tbsp oil, 1 tbsp calamansi juice, 1 tsp light soy sauce. For shredded cabbage and mango."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooSaladDressingInline",
+            "alt": "Seen from above: a white ceramic bowl of mixed green salad leaves on a wooden table, beside a small glass jug of olive oil and a lemon half."
+          }
+        ]
+      },
+      {
+        "heading": "What to keep it in and how long it keeps",
+        "id": "storage-and-keeping",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A screw-top glass jar is the whole storage answer: mix in it, pour from it, cap the rest and shake it back together. Plain oil, vinegar and mustard keeps about two weeks in the refrigerator, and anything fresh stirred in cuts that to a few days."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Dressing",
+              "Where",
+              "How long"
+            ],
+            "rows": [
+              [
+                "Oil, vinegar, mustard, salt",
+                "Fridge, capped",
+                "About 2 weeks"
+              ],
+              [
+                "With raw garlic or shallot",
+                "Fridge, capped",
+                "3 to 4 days"
+              ],
+              [
+                "With soft fresh herbs",
+                "Fridge, capped",
+                "2 to 3 days"
+              ],
+              [
+                "With yogurt or tahini",
+                "Fridge, capped",
+                "2 days"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooSaladDressingInline",
+            "alt": "Seen from above: a white ceramic bowl of mixed green salad leaves on a wooden table, beside a small glass jug of olive oil and a lemon half."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Three parts oil, one part acid, the salt dissolved in the acid first, mustard or garlic to hold it, the oil poured last in a thin stream. Keep the rest capped in the fridge."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the ratio of olive oil to vinegar in a salad dressing?",
+        "a": "Three parts oil to one part vinegar by volume: three tablespoons of extra virgin olive oil to one tablespoon of vinegar. Use 2:1 for a sharper dressing on sturdy leaves, and 4:1 when the vinegar is strong."
+      },
+      {
+        "q": "Can I use extra virgin olive oil for salad dressing?",
+        "a": "Yes, and a dressing is the use that shows it best. Nothing is heated, so the fruit, bitterness and peppery finish reach the plate intact. Refined pure and light grades are processed to taste of very little."
+      },
+      {
+        "q": "Why does my olive oil dressing separate?",
+        "a": "Oil and acid do not dissolve in one another, so a dressing with no emulsifier separates within a minute. A teaspoon of mustard, a little honey, or garlic crushed to a paste with salt holds them together."
+      },
+      {
+        "q": "How do I fix a dressing that has split?",
+        "a": "Whisk a fresh teaspoon of Dijon mustard in a clean bowl, then pour the split dressing into it in a thin stream, whisking throughout. It comes back together. Pouring the oil too fast is the usual cause."
+      },
+      {
+        "q": "How long does homemade salad dressing keep?",
+        "a": "Oil, vinegar, mustard and salt keeps about two weeks in a capped jar in the fridge. Raw garlic or shallot brings that to three or four days, soft herbs to two or three, yogurt or tahini to two."
+      },
+      {
+        "q": "Why does my dressing go solid in the fridge?",
+        "a": "Olive oil clouds and turns semi-solid at fridge temperature, which is normal rather than a fault. Take the jar out about twenty minutes before the meal and shake it back together before pouring."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml bottles, with the current price for each size."
+      },
+      {
+        "label": "What cold-pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "How the oil is extracted, and why that decides the taste a raw dressing puts on the plate."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where the same bottle fits across a week of cooking once the pan is involved."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "evoo-vs-pure-olive-oil",
+    "slug": "extra-virgin-olive-oil-vs-pure-olive-oil",
+    "seoTitle": "Extra Virgin Olive Oil vs Pure Olive Oil",
+    "metaTitle": "Extra Virgin Olive Oil vs Pure Olive Oil",
+    "metaDescription": "Extra virgin olive oil vs pure olive oil: what pure, classic, light and extra light mean on a label, how refined oil is made, and which one to buy.",
+    "focusKeyword": "extra virgin olive oil vs pure olive oil",
+    "relatedKeywords": [
+      "pure olive oil vs extra virgin",
+      "what is pure olive oil",
+      "what does pure olive oil mean",
+      "refined olive oil meaning",
+      "is pure olive oil refined",
+      "classic olive oil meaning",
+      "extra light olive oil",
+      "what does light olive oil mean",
+      "which olive oil to buy in malaysia",
+      "olive oil label words"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "olive oil grades",
+      "extra virgin",
+      "refined olive oil",
+      "buying guide"
+    ],
+    "h1": "Extra Virgin Olive Oil vs Pure Olive Oil: What Changes",
+    "excerpt": "Extra virgin olive oil vs pure olive oil comes down to refining, and pure, classic, light and extra light all sit on the refined side of that line.",
+    "keyTakeaway": "Extra virgin olive oil vs pure olive oil is a question of refining. Pure, classic, light and extra light are four shelf names for the same thing: refined olive oil with a little virgin blended back in. Extra virgin is pressed and bottled untreated, and it is the only one of them that still tastes of the fruit.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressEvooVsPureOliveOilHero",
+      "alt": "Olive paste pushing out of a stainless steel mill in a thick ribbon, with green olive oil running down the metal face into an open vat below."
+    },
+    "ogImage": "/og/blog-evoo-vs-pure-olive-oil.jpg",
+    "intro": [
+      "Three bottles on the same shelf, three different words, and no explanation of any of them: extra virgin, then pure or classic, then light or extra light.",
+      "One thing separates them: how much of the bottle came straight off the press, and how much was refined in a plant first."
+    ],
+    "sections": [
+      {
+        "heading": "What pure, classic, light and extra light mean",
+        "id": "what-the-labels-mean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pure, classic, light and extra light are four shelf names for one construction: refined olive oil with a small share of virgin oil blended back in for colour and taste. The trade standard calls that blend simply olive oil, and the words on the front are the bottler's."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Pure.** Refined oil with a little virgin blended back into it.",
+              "**Classic.** The same blend under a softer name, common on imported bottles.",
+              "**Light.** The same blend filtered paler. Light describes colour and taste.",
+              "**Extra light.** The palest of the four, and the furthest from tasting of olives."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooVsPureOliveOilInline",
+            "alt": "Two clear glass tumblers standing side by side on a marble surface against a plain background, one holding a deep green olive oil and the other a pale yellow one."
+          },
+          {
+            "type": "p",
+            "text": "For the full ladder, from extra virgin down to the oil drawn out of the solids left after pressing, read [olive oil vs pomace oil](/blog/olive-oil-vs-pomace-oil-what-the-grades-mean)."
+          }
+        ]
+      },
+      {
+        "heading": "How the refined grades are made",
+        "id": "how-they-are-made",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Refining starts with oil that failed the virgin grades on acidity or on taste. Heat, filtration and neutralisation strip out the compounds that carried its colour, its smell and its flavour, leaving a pale fat that hazes at a higher pan temperature. A little virgin oil goes back in at the end."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Colour.** Deep green or gold becomes pale yellow.",
+              "**Aroma.** Cut grass, tomato leaf and green almond disappear.",
+              "**Taste.** The bitterness and the peppery catch at the back of the throat go.",
+              "**Origin.** A refined blend can draw on oil from several countries."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooVsPureOliveOilInline",
+            "alt": "Two clear glass tumblers standing side by side on a marble surface against a plain background, one holding a deep green olive oil and the other a pale yellow one."
+          },
+          {
+            "type": "p",
+            "text": "How much virgin oil goes back is the bottler's decision rather than a fixed figure, so two bottles marked pure need not taste alike."
+          }
+        ]
+      },
+      {
+        "heading": "Extra virgin as the reference point",
+        "id": "extra-virgin-reference-point",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin is the point all four of those words are measured against. It is pressed from olives by mechanical means alone, with no chemical treatment, capped at 0.8% free acidity and allowed no tasting defect at all. Nothing is blended back in, because nothing was taken out."
+          },
+          {
+            "type": "p",
+            "text": "Its range in the kitchen is also wider than the shelf words suggest: dressings and a saucer of dipping oil, and equally tumis, roasting and shallow frying. What it will not do is fill a deep pot cheaply. [Olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take) sets out the heat it takes."
+          },
+          {
+            "type": "image",
+            "src": "pressEvooVsPureOliveOilInline",
+            "alt": "Two clear glass tumblers standing side by side on a marble surface against a plain background, one holding a deep green olive oil and the other a pale yellow one."
+          }
+        ]
+      },
+      {
+        "heading": "Extra virgin olive oil vs pure olive oil, side by side",
+        "id": "extra-virgin-vs-pure-side-by-side",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil is unrefined juice of the olive, and it tastes different by grove and harvest. Pure olive oil is mostly refined oil with a little virgin stirred in, sold cheaper per litre for a flatter flavour. Only one of the two still tastes of olives."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Label",
+              "How it is made",
+              "Taste",
+              "Best for"
+            ],
+            "rows": [
+              [
+                "Extra virgin",
+                "Pressed, unrefined, under 0.8% acidity",
+                "Fruity, bitter, peppery",
+                "Raw, tumis, roasting, shallow frying"
+              ],
+              [
+                "Pure or classic",
+                "Refined oil plus a little virgin",
+                "Almost neutral",
+                "A full pot for deep frying"
+              ],
+              [
+                "Light or extra light",
+                "Refined further, less virgin in it",
+                "Neutral, pale",
+                "Cakes and mayonnaise"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooVsPureOliveOilInline",
+            "alt": "Two clear glass tumblers standing side by side on a marble surface against a plain background, one holding a deep green olive oil and the other a pale yellow one."
+          }
+        ]
+      },
+      {
+        "heading": "Which one to buy, and what it costs",
+        "id": "which-one-to-buy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Buy extra virgin for anything the oil will be tasted in, which covers most of what a bottle does at home. Buy a refined grade when a pot must be filled for deep frying, or when a cake wants no flavour from its fat. Refined grades cost less per litre."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Dressings, dips and a drizzle over a finished plate: extra virgin.",
+              "Tumis, roasting and shallow frying: extra virgin, and the taste carries into the food.",
+              "Deep frying a full pot: a refined grade, and keep the extra virgin for the plate.",
+              "Baking where the oil should not be tasted: light or extra light."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressEvooVsPureOliveOilInline",
+            "alt": "Two clear glass tumblers standing side by side on a marble surface against a plain background, one holding a deep green olive oil and the other a pale yellow one."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village bottles extra virgin only, in two sizes. Current prices are on the [product page](/products)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Extra virgin is pressed and bottled. Pure, classic, light and extra light are refined oil with a little virgin stirred back in. The first tastes of the fruit; the second of very little. Choose by what the oil must do on the plate."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is pure olive oil the same as extra virgin olive oil?",
+        "a": "No. Pure olive oil is refined olive oil with a small amount of virgin oil blended in for colour and taste. Extra virgin is pressed and bottled with no refining. Both are legally olive oil, but only one still carries the flavour of the fruit."
+      },
+      {
+        "q": "What does refined mean on an olive oil label?",
+        "a": "Refined means the oil was treated with heat and filtration until the compounds that give olive oil its colour, smell and taste were stripped out. It rescues oil that failed the virgin grades and turns it into a neutral cooking fat that takes a higher pan temperature."
+      },
+      {
+        "q": "Is light olive oil a higher grade than pure olive oil?",
+        "a": "No. Light and extra light are shelf words for colour and taste, not grades in any trade standard. The oil is the same refined blend sold as pure olive oil, filtered further so it pours pale and adds almost nothing to the flavour of a dish."
+      },
+      {
+        "q": "Can I fry with pure olive oil?",
+        "a": "Yes. A refined grade hazes at a higher temperature and costs less per litre, which makes it sensible when a whole pot has to be filled. Little is lost in taste, since there was little to begin with."
+      },
+      {
+        "q": "Why does extra virgin olive oil cost more?",
+        "a": "Extra virgin has to pass on the first attempt. The olives must reach the mill quickly and be pressed without heat, and a batch that fails on acidity or taste cannot be sold as extra virgin at any price. Refining starts from that failed stock."
+      },
+      {
+        "q": "Which grade do I use for a salad dressing?",
+        "a": "Extra virgin, because a dressing is unheated and the oil is tasted directly. The ratios and the method are in [extra virgin olive oil salad dressing](/blog/extra-virgin-olive-oil-salad-dressing)."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Single-origin Palestinian cold-pressed extra virgin oil, in 250 ml and 500 ml bottles."
+      },
+      {
+        "label": "Olive oil vs pomace oil: what the grades mean",
+        "path": "blog/olive-oil-vs-pomace-oil-what-the-grades-mean",
+        "description": "Where pomace oil comes from, and why it sits outside the pressed and refined grades above."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "What to read on the label and the bottle before you pay for it."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the two online counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "olive-oil-air-fryer",
+    "slug": "can-you-use-olive-oil-in-an-air-fryer",
+    "seoTitle": "Olive Oil in an Air Fryer: How Much, How Hot",
+    "metaTitle": "Olive Oil in an Air Fryer: How Much, How Hot",
+    "metaDescription": "Using olive oil in air fryer baskets: brush a teaspoon instead of pouring, skip aerosol sprays, and match the dial to what the oil can take.",
+    "focusKeyword": "olive oil in air fryer",
+    "relatedKeywords": [
+      "can you use olive oil in an air fryer",
+      "best oil for air fryer",
+      "air fryer olive oil spray",
+      "how much oil in air fryer",
+      "extra virgin olive oil air fryer",
+      "air fryer temperature celsius",
+      "air fryer basket coating damage",
+      "air fryer potato wedges olive oil",
+      "olive oil brush air fryer",
+      "air fryer oil malaysia"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "air fryer",
+      "cooking with olive oil",
+      "kitchen guide",
+      "extra virgin"
+    ],
+    "h1": "Can You Use Olive Oil in an Air Fryer?",
+    "excerpt": "An air fryer needs a teaspoon of oil on the food, not a pour in the basket, and how you put it on matters more than which grade you reach for.",
+    "keyTakeaway": "Olive oil belongs in an air fryer on the food, never in the basket. Brush or toss roughly a teaspoon over a full basket, keep aerosol cans away from the coating, and set the dial at 180 to 200°C for most things. Coat anything dry and starchy; leave wet batter to a pan.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilAirFryerHero",
+      "alt": "A green kitchen basket holding cooked potato wedges on a wooden counter, a small spoon and a single olive beside it, an oven in the background."
+    },
+    "ogImage": "/og/blog-olive-oil-air-fryer.jpg",
+    "intro": [
+      "The air fryer has become a fixture on Malaysian kitchen counters, and nobody was given instructions for it. It is a small fan oven, not a fryer, and its oil does a different job from the oil in a wok.",
+      "Yes, olive oil works in one. What changes is the quantity and how it goes on."
+    ],
+    "sections": [
+      {
+        "heading": "How much olive oil an air fryer basket takes",
+        "id": "how-much-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A full air fryer basket needs roughly one teaspoon of olive oil, tossed through the food before it goes in. The machine moves hot air rather than submerging anything, so oil not clinging to a surface drains to the drawer and burns there. Toss until each piece is glossy."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**One teaspoon** for a basket of chips, wedges or florets.",
+              "**Half a teaspoon** for chicken, which releases its own fat.",
+              "**A brushed film** for bread, halloumi or anything already coated.",
+              "**None** for reheating something fried once already."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAirFryerInline",
+            "alt": "Close view of potato wedges on a metal air fryer tray being brushed with olive oil using a silicone pastry brush."
+          }
+        ]
+      },
+      {
+        "heading": "Why aerosol sprays wreck an air fryer basket",
+        "id": "aerosol-sprays",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Commercial cooking sprays carry more than oil. Propellants and additives such as lecithin land as a fine mist on the basket coating, bake on and build a sticky brown film that washing will not shift. Manufacturer manuals commonly warn against them. Use a pump mister or a silicone brush."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Method",
+              "Coverage",
+              "Effect on the basket"
+            ],
+            "rows": [
+              [
+                "Aerosol can",
+                "Wide, uncontrolled",
+                "Baked-on film"
+              ],
+              [
+                "Pump mister",
+                "Even, adjustable",
+                "Clean"
+              ],
+              [
+                "Silicone brush",
+                "Food only",
+                "None"
+              ],
+              [
+                "Tossed in a bowl",
+                "Every surface",
+                "None"
+              ],
+              [
+                "Poured in",
+                "Pools and drains",
+                "Smoke, oil in the drawer"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAirFryerInline",
+            "alt": "Close view of potato wedges on a metal air fryer tray being brushed with olive oil using a silicone pastry brush."
+          }
+        ]
+      },
+      {
+        "heading": "What an air fryer runs at, against what the oil takes",
+        "id": "temperature-range",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An air fryer dial climbs higher than an olive oil coating ever needs. Set 180 to 200°C for chips, wedges, root vegetables and chicken, and 160 to 170°C for fish, bread and anything that browns quickly. Leave the top of the dial for cooking with nothing brushed on."
+          },
+          {
+            "type": "p",
+            "text": "While the food is still giving off steam, the oiled surface stays below the air temperature. The bare patches of a half-loaded basket scorch first. For figures by grade, read [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAirFryerInline",
+            "alt": "Close view of potato wedges on a metal air fryer tray being brushed with olive oil using a silicone pastry brush."
+          }
+        ]
+      },
+      {
+        "heading": "Which foods take olive oil well in an air fryer",
+        "id": "which-foods",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dry, starchy and firm foods take olive oil best, because there is a surface for it to hold and something for the heat to crisp. Potatoes, root vegetables, cauliflower, chickpeas, chicken thighs, prawns and thick bread all work. Wet batter does not, and loose flour blows onto the element."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Cut and dry the food, since a damp surface steams before it browns.",
+              "Toss it with the oil and salt in a bowl, off the machine.",
+              "Load one layer only, with gaps for the air to move.",
+              "Shake the basket once halfway, then drizzle raw oil over it afterwards."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAirFryerInline",
+            "alt": "Close view of potato wedges on a metal air fryer tray being brushed with olive oil using a silicone pastry brush."
+          }
+        ]
+      },
+      {
+        "heading": "Which grade goes in the basket",
+        "id": "which-grade",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin is the grade to reach for, because the quantity is so small. A teaspoon over a full basket is not where a bottle disappears, and the coating is doing a mechanical job: drying the surface, helping it brown, keeping it off the metal."
+          },
+          {
+            "type": "p",
+            "text": "What the fan does take is the aroma, which fades at 200°C whichever grade goes in. So hold a spoonful back and drizzle it over the food once the basket is out. Sizes and prices are on the [Arabian Village product page](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAirFryerInline",
+            "alt": "Close view of potato wedges on a metal air fryer tray being brushed with olive oil using a silicone pastry brush."
+          }
+        ]
+      },
+      {
+        "heading": "Keeping the drawer clean when you cook with oil",
+        "id": "cleaning",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Oil that misses the food collects in the drawer under the basket, and left there it bakes into a varnish that smokes on the next run. Wash the basket and drawer after any oiled cook, while both are still warm. Soapy water and a soft brush is the job."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Wipe the drawer out first, so grease does not go down the sink.",
+              "Never use steel wool or a scouring pad on the coating.",
+              "Dry both parts before they go back in a humid kitchen."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAirFryerInline",
+            "alt": "Close view of potato wedges on a metal air fryer tray being brushed with olive oil using a silicone pastry brush."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A teaspoon on the food, never a pour in the basket. A brush or a bowl, not an aerosol can. Extra virgin for that teaspoon, a spoonful more once it is out, and a wash while it is warm. See also [cooking with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can you put olive oil in an air fryer?",
+        "a": "Yes, on the food rather than in the basket. Toss or brush about a teaspoon over a full basket before cooking. Oil poured straight into the basket drains into the drawer below and burns there instead of crisping anything at all."
+      },
+      {
+        "q": "Can I use extra virgin olive oil in an air fryer?",
+        "a": "Yes, and it is the grade to use. A teaspoon over a full basket is a small amount, and at the usual 180 to 200°C it copes with the heat. The aroma fades under the fan, so keep a spoonful back for afterwards."
+      },
+      {
+        "q": "Why should I not use olive oil spray in an air fryer?",
+        "a": "Aerosol cans carry propellants and additives alongside the oil. Those settle on the basket coating, bake on and build a sticky film that will not wash off, so the surface stops releasing food properly. A refillable pump mister avoids it."
+      },
+      {
+        "q": "How much oil does an air fryer basket need?",
+        "a": "About one teaspoon for a full basket of chips or vegetables, and roughly half that for chicken, which releases its own fat as it cooks. If oil is still pooling in the mixing bowl after tossing, the amount was too high."
+      },
+      {
+        "q": "What temperature should I set for olive oil in an air fryer?",
+        "a": "Use 180 to 200°C for potatoes, chicken and root vegetables, and 160 to 170°C for delicate items such as fish or bread. Leave the very top of the dial for cooking with nothing brushed on, where there is no oil on the surface to scorch."
+      },
+      {
+        "q": "Should I preheat the air fryer before adding oiled food?",
+        "a": "A three-minute preheat helps things crisp rather than dry out, and costs very little. Oil the food while the machine warms, then load it in one layer. Never leave an oiled basket heating on its own with nothing in it."
+      }
+    ],
+    "related": [
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The approximate ranges by grade, and why a fresh bottle takes more heat than an old one."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where the oil fits across tumis, roasting and the rest of a week of meals."
+      },
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml bottles, with the current price for each size."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "olive-oil-for-bread",
+    "slug": "olive-oil-for-bread-and-dipping",
+    "seoTitle": "Olive Oil for Bread: How to Serve a Dipping Saucer",
+    "metaTitle": "Olive Oil for Bread: How to Serve a Dipping Saucer",
+    "metaDescription": "Olive oil for bread, done properly: which bread holds oil, za'atar and dukkah and balsamic, serving temperature, and how much to pour at a time.",
+    "focusKeyword": "olive oil for bread",
+    "relatedKeywords": [
+      "olive oil dipping sauce",
+      "bread dipping oil",
+      "za'atar and olive oil",
+      "dukkah olive oil dip",
+      "olive oil and balsamic for bread",
+      "how to serve olive oil with bread",
+      "best bread for olive oil",
+      "extra virgin olive oil for dipping",
+      "olive oil dip recipe",
+      "olive oil serving temperature"
+    ],
+    "category": "Serving and pairing",
+    "tags": [
+      "dipping",
+      "za'atar",
+      "bread",
+      "serving"
+    ],
+    "h1": "Olive Oil for Bread: Dipping, Za'atar and How Much to Pour",
+    "excerpt": "A saucer of unheated oil and a torn piece of bread is the plainest test an olive oil ever gets, and the easiest one to set badly.",
+    "keyTakeaway": "Olive oil for bread is the use where least hides the oil: no heat, no acid, no garlic. Serve it at room temperature in a shallow saucer, pour a tablespoon at a time and refill, tear an open-crumbed bread rather than cutting it, and keep za'atar and dukkah in separate bowls.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilForBreadHero",
+      "alt": "Olive oil pouring in a steady stream from a stainless steel pipe into an open vat, the surface below already covered in green-gold oil."
+    },
+    "ogImage": "/og/blog-olive-oil-for-bread.jpg",
+    "intro": [
+      "Bread and a saucer of olive oil is one of the oldest ways to serve it and the hardest to hide behind. Nothing is heated, nothing is cut with vinegar, nothing is buried under garlic.",
+      "Which bread holds oil, what za'atar, dukkah and balsamic each do to a saucer, what temperature to serve at, and how much to pour."
+    ],
+    "sections": [
+      {
+        "heading": "Why an unheated saucer shows the oil's character",
+        "id": "unheated-oil-shows-character",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dipping is the use where least happens to the oil. Heat drives off the volatile compounds carrying the grassy and peppery notes, and a dressing cuts them with acid and salt. On bread the oil arrives whole: fruit first, then bitterness, then pepper at the back of the throat."
+          },
+          {
+            "type": "p",
+            "text": "A saucer is unforgiving of a tired bottle: oil that stood open beside the stove since March reads flat here."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBreadInline",
+            "alt": "A small white saucer of green olive oil on a wooden board, with torn pieces of flatbread beside it and a spoon holding dried thyme."
+          }
+        ]
+      },
+      {
+        "heading": "The bread matters as much as the oil",
+        "id": "which-bread-to-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bread decides how much oil reaches you and in what state. An open, chewy crumb takes a measured amount and holds its shape to your mouth. A soft sandwich loaf wets straight through and turns greasy; a dry cracker snaps and leaves the oil behind."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Arabic flatbread, pita or saj.** Tear it; a torn edge holds more oil.",
+              "**Sourdough or a country loaf.** Open crumb takes oil, crust gives you a grip.",
+              "**Warm roti canai or naan.** Fine, but they carry their own fat, so pour less.",
+              "**Soft sandwich bread.** Skip it: soaks through and tears."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBreadInline",
+            "alt": "A small white saucer of green olive oil on a wooden board, with torn pieces of flatbread beside it and a spoon holding dried thyme."
+          }
+        ]
+      },
+      {
+        "heading": "Za'atar, dukkah and balsamic pull three ways",
+        "id": "three-directions",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Three additions take a saucer three different places. Za'atar turns it herbal and sour, with thyme, sumac and sesame. Dukkah turns it nutty and crunchy, a dry mix of toasted nuts and seeds. Balsamic turns it sharp and never mixes: the vinegar sits under the oil in beads."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Za'atar.** A teaspoon per tablespoon of oil, left five minutes.",
+              "**Dukkah.** Keep it dry in its own bowl; press oiled bread into it.",
+              "**Balsamic.** Oil first, vinegar dropped in the centre, no stirring.",
+              "**Flaky salt and cracked pepper.** Changes the oil least.",
+              "**Chilli flakes with lemon zest.** Bright and hot, good with a green oil."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBreadInline",
+            "alt": "A small white saucer of green olive oil on a wooden board, with torn pieces of flatbread beside it and a spoon holding dried thyme."
+          },
+          {
+            "type": "p",
+            "text": "The same pairing is sold ready made as [wild thyme infused olive oil](/products/infused-extra-virgin-olive-oil-wild-thyme), the leaf steeped into the oil rather than spooned on top."
+          }
+        ]
+      },
+      {
+        "heading": "Serving temperature and how much to pour",
+        "id": "temperature-and-quantity",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Serve olive oil for bread at room temperature, which a Malaysian kitchen manages without help. A bottle straight from the refrigerator is the problem: cold oil goes cloudy, thickens and gives up almost no aroma. Take it out an hour ahead and pour a shallow layer."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Serving",
+              "Oil per saucer",
+              "Refill"
+            ],
+            "rows": [
+              [
+                "One person",
+                "1 tablespoon",
+                "From the bottle"
+              ],
+              [
+                "Two to four",
+                "2 to 3 tablespoons",
+                "Every fifteen minutes"
+              ],
+              [
+                "Six or more",
+                "A saucer per two",
+                "Each saucer"
+              ],
+              [
+                "Mezze, long meal",
+                "A small jug",
+                "Pour to order"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBreadInline",
+            "alt": "A small white saucer of green olive oil on a wooden board, with torn pieces of flatbread beside it and a spoon holding dried thyme."
+          }
+        ]
+      },
+      {
+        "heading": "Setting a dipping course for guests",
+        "id": "serving-for-guests",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A dipping course takes two minutes and one decision: the oil goes out plain first and everything else follows. Guests who have tasted the oil alone know what they are dipping into, and the za'atar bowl stops being the only thing they remember."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Warm the bread two minutes in a dry pan, then wrap it.",
+              "Pour a shallow layer into a white saucer so the colour shows.",
+              "Set za'atar, dukkah and salt in separate bowls, not in the oil.",
+              "Tear the bread at the table; cut bread dries waiting.",
+              "Refill from the bottle; never leave a deep saucer standing."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBreadInline",
+            "alt": "A small white saucer of green olive oil on a wooden board, with torn pieces of flatbread beside it and a spoon holding dried thyme."
+          }
+        ]
+      },
+      {
+        "heading": "What usually goes wrong",
+        "id": "what-goes-wrong",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most dipping saucers fail for reasons unrelated to the recipe. A saucer poured an hour before anyone sits down has been meeting air the whole time. A bottle kept above the stove was finished before it reached the table. Bread from a plastic bag pulls apart."
+          },
+          {
+            "type": "p",
+            "text": "The oil you would taste plain is the one worth a saucer. See [what cold-pressed olive oil really means](/blog/what-cold-pressed-olive-oil-really-means) and the [bottles and sizes](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForBreadInline",
+            "alt": "A small white saucer of green olive oil on a wooden board, with torn pieces of flatbread beside it and a spoon holding dried thyme."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Putting it on the table",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Room temperature, a shallow white saucer, a tablespoon at a time, bread torn rather than sliced. Taste the oil plain first, keep za'atar and dukkah in their own bowls, and refill."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What olive oil is best for dipping bread?",
+        "a": "Extra virgin, because dipping leaves the oil less masked than any other use. Refined and pure grades have had the aromatic compounds stripped out and give a saucer little to taste. Freshness counts as much as grade: a recently opened bottle reads brighter than an old one."
+      },
+      {
+        "q": "How much olive oil goes in a dipping saucer?",
+        "a": "About a tablespoon per person, as a shallow layer rather than a deep pool. A thin layer in a wide saucer meets a lot of air, so pour small amounts and refill from the bottle instead of filling the saucer once at the start."
+      },
+      {
+        "q": "Should olive oil for bread be warmed?",
+        "a": "No. Room temperature is where the aroma is fullest, and heating a saucer drives off the volatile compounds you are serving it for. If the bottle has been in a refrigerator, leave it on the counter an hour rather than putting it near a flame."
+      },
+      {
+        "q": "How do you make a za'atar and olive oil dip?",
+        "a": "Pour a shallow layer of oil into a saucer, add roughly a teaspoon of za'atar per tablespoon of oil, stir once and leave five minutes so the sumac and thyme loosen. Serve with torn flatbread, pressed into the saucer rather than dragged through it."
+      },
+      {
+        "q": "Why does balsamic vinegar sit under the olive oil?",
+        "a": "Vinegar is water-based and denser than oil, so it sinks and stays as separate dark beads unless something is whisked in to hold the two together. On a dipping saucer that separation is the point: each piece of bread takes a different ratio."
+      },
+      {
+        "q": "Which bread is best with olive oil?",
+        "a": "An open, chewy crumb with a real crust: Arabic flatbread, sourdough, a country loaf, or a baguette cut on the diagonal. Soft sandwich bread wets through and falls apart in the saucer, and dry crackers snap before taking up much oil at all."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml bottles, with the current price for each size."
+      },
+      {
+        "label": "What cold-pressed olive oil really means",
+        "path": "blog/what-cold-pressed-olive-oil-really-means",
+        "description": "How the oil is extracted, and why that decides what a plain saucer tastes of."
+      },
+      {
+        "label": "Palestinian olive oil: what makes it different",
+        "path": "blog/palestinian-olive-oil-what-makes-it-different",
+        "description": "The groves, the varieties and the harvest behind the oil in the saucer."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's two online counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "olive-oil-marinade",
+    "slug": "olive-oil-marinade-what-it-does",
+    "seoTitle": "Olive Oil Marinade: What the Oil Actually Does",
+    "metaTitle": "Olive Oil Marinade: What the Oil Actually Does",
+    "metaDescription": "An olive oil marinade carries the aromatics and holds them on the surface. It does not tenderise. Ratios against acid, timings for chicken and fish.",
+    "focusKeyword": "olive oil marinade",
+    "relatedKeywords": [
+      "olive oil and lemon marinade",
+      "how to marinate chicken with olive oil",
+      "marinade ratio oil to acid",
+      "does olive oil tenderise meat",
+      "how long to marinate chicken",
+      "olive oil marinade for fish",
+      "garlic and rosemary marinade",
+      "marinating beef in olive oil",
+      "roast vegetable marinade",
+      "extra virgin olive oil marinade"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "marinade",
+      "cooking with olive oil",
+      "chicken",
+      "kitchen guide"
+    ],
+    "h1": "Olive Oil Marinade: What the Oil Is Actually Doing",
+    "excerpt": "In a marinade the oil is a carrier, not a tenderiser. Here is the ratio against acid, the time each ingredient wants, and which bottle to use.",
+    "keyTakeaway": "In an olive oil marinade the oil dissolves the fat-soluble aromatics and holds them against the surface of the food. It does not tenderise: salt, the cut and the cooking do that. Three parts oil to one part acid suits meat, more oil for fish, and the clock matters more than the recipe.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilMarinadeHero",
+      "alt": "A hand holding a bottle of olive oil at the edge of a sunlit olive grove, with a stone ledge and an olive branch in the frame and a path receding between the trees behind."
+    },
+    "ogImage": "/og/blog-olive-oil-marinade.jpg",
+    "intro": [
+      "Every marinade recipe opens with olive oil and none says why. The oil does one job, and not the one most people credit it with.",
+      "What follows is the mechanism, the ratio against acid, and a timing table by ingredient."
+    ],
+    "sections": [
+      {
+        "heading": "What the oil is doing in there",
+        "id": "what-the-oil-does",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An olive oil marinade works as a carrier. Most of the flavour in garlic, rosemary, oregano and chilli is fat-soluble, so it dissolves into oil rather than into lemon juice. The oil coats the food and holds that flavour there, through the fridge and onto the heat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**It dissolves the aromatics.** Crushed garlic and bruised rosemary give up more to oil than to juice.",
+              "**It stays put.** A thin film holds the seasoning on the meat instead of pooling in the dish.",
+              "**It arrives in the pan.** The film clinging to the food browns first."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMarinadeInline",
+            "alt": "A shallow glass dish of raw chicken pieces coated in olive oil marinade, with whole garlic cloves, lemon slices and sprigs of rosemary tucked between them, on a wooden table."
+          }
+        ]
+      },
+      {
+        "heading": "It does not tenderise anything",
+        "id": "no-tenderising",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil does not tenderise meat. It sits on the outside and travels perhaps a millimetre in, so a marinated steak is seasoned at the surface and unchanged in the middle. Tenderness is settled by five other things, and the oil is none of them."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**The cut.** Shin will not become sirloin in a bowl.",
+              "**Slicing across the grain.** Shorter fibres, before any cooking.",
+              "**Salt.** Reorganises the surface protein and holds water in it.",
+              "**Papain.** The enzyme in raw papaya, which overshoots fast.",
+              "**Slow cooking.** Low heat breaks down the connective tissue."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMarinadeInline",
+            "alt": "A shallow glass dish of raw chicken pieces coated in olive oil marinade, with whole garlic cloves, lemon slices and sprigs of rosemary tucked between them, on a wooden table."
+          }
+        ]
+      },
+      {
+        "heading": "Oil against acid: the ratio",
+        "id": "oil-to-acid-ratio",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A workable olive oil marinade runs about three parts oil to one part acid, with salt and aromatics on top. More acid than that firms and whitens the surface of fish and chicken before any heat reaches it. Less acid and the mixture reads as oily."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**3:1 oil to acid** for chicken, lamb and beef.",
+              "**4:1 or 5:1** for fish and prawns, which acid reaches within minutes.",
+              "**2:1** for firm vegetables and halloumi, with no protein to seize.",
+              "**About 2 tbsp of oil per kilo** of food, which puts the acid at roughly 2 tsp."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMarinadeInline",
+            "alt": "A shallow glass dish of raw chicken pieces coated in olive oil marinade, with whole garlic cloves, lemon slices and sprigs of rosemary tucked between them, on a wooden table."
+          }
+        ]
+      },
+      {
+        "heading": "How long to marinate, by ingredient",
+        "id": "marinating-times",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Marinating time depends on how far the acid can reach, not on how much flavour is wanted. Fish takes fifteen to thirty minutes. Chicken pieces take two to six hours. A whole beef steak can sit overnight because its surface is dense."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ingredient",
+              "Time in the marinade",
+              "Too long shows as"
+            ],
+            "rows": [
+              [
+                "Fish fillets, prawns",
+                "15-30 minutes",
+                "Opaque, firm edges"
+              ],
+              [
+                "Chicken, bone in",
+                "2-6 hours",
+                "Chalky, dry after roasting"
+              ],
+              [
+                "Chicken breast, cubed",
+                "30 minutes to 2 hours",
+                "Pale, stringy outer layer"
+              ],
+              [
+                "Lamb chops, kebab cubes",
+                "2-8 hours",
+                "Soft grey instead of pink"
+              ],
+              [
+                "Beef steak, whole cut",
+                "4 hours to overnight",
+                "Little changes at all"
+              ],
+              [
+                "Vegetables, halloumi",
+                "15-45 minutes",
+                "Absorption simply stops"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMarinadeInline",
+            "alt": "A shallow glass dish of raw chicken pieces coated in olive oil marinade, with whole garlic cloves, lemon slices and sprigs of rosemary tucked between them, on a wooden table."
+          }
+        ]
+      },
+      {
+        "heading": "Which bottle goes in the marinade",
+        "id": "which-bottle",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A whole marinade is not the place for the most expensive bottle in the kitchen. Most of that oil ends up in the dish, on the tray or burning off over the grill, and heat flattens what it carried."
+          },
+          {
+            "type": "p",
+            "text": "The arithmetic is quick. Two tablespoons per kilo is around 30 ml, and most of it goes with the drips and the smoke rather than onto the plate, so at **RM236** a litre it buys nothing you taste. For the figures, read [olive oil price in Malaysia](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMarinadeInline",
+            "alt": "A shallow glass dish of raw chicken pieces coated in olive oil marinade, with whole garlic cloves, lemon slices and sprigs of rosemary tucked between them, on a wooden table."
+          }
+        ]
+      },
+      {
+        "heading": "Mix it in the right order",
+        "id": "mixing-order",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Build the marinade in the dish the food will sit in, and add the olive oil last. Salt dissolves in lemon juice or vinegar and stops dissolving once oil has coated the crystals: acid first, aromatics next, oil whisked in at the end."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Stir the salt into the lemon juice or vinegar until it disappears.",
+              "Crush the garlic, bruise the herbs, stir them through the acid.",
+              "Pour the olive oil in slowly, whisking, until the mixture thickens.",
+              "Turn the food through it, cover, and refrigerate for the time it needs."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMarinadeInline",
+            "alt": "A shallow glass dish of raw chicken pieces coated in olive oil marinade, with whole garlic cloves, lemon slices and sprigs of rosemary tucked between them, on a wooden table."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What to remember",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Olive oil in a marinade dissolves the aromatics and holds them on the surface. Three parts oil to one part acid for meat, more oil still for fish, and the clock matters more than the recipe. See [cooking with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Does olive oil tenderise meat?",
+        "a": "No. Olive oil coats the surface and travels barely a millimetre in. Tenderness comes from the cut, the direction of the slice, salt, an enzyme such as the one in raw papaya, or slow cooking. A marinade seasons the outer surface only."
+      },
+      {
+        "q": "How much olive oil against lemon juice in a marinade?",
+        "a": "About three parts olive oil to one part lemon juice for chicken, lamb and beef. Move to four or five parts oil for fish and prawns, which acid reaches within minutes. Two tablespoons of oil per kilo of food is enough to coat it."
+      },
+      {
+        "q": "How long can chicken sit in an olive oil marinade?",
+        "a": "Two to six hours for bone-in pieces, thirty minutes to two hours for cubed breast. Beyond that the acid works too far into the surface and the outer layer turns chalky once roasted. Keep the dish covered in the refrigerator, never on the counter."
+      },
+      {
+        "q": "Can a used marinade be reused?",
+        "a": "Not as a sauce and not for a second batch, because raw juices have gone into it. Set part of the mixture aside before the food goes in if a sauce is wanted, or boil the used marinade hard for several minutes first."
+      },
+      {
+        "q": "Should the good bottle go in the marinade or on the plate?",
+        "a": "On the plate. A plain extra virgin oil carries garlic and herbs through the marinade and burns off over the grill, where its aroma is spent. A drizzle after cooking is where the character of a better oil survives, because nothing has heated it."
+      },
+      {
+        "q": "Do vegetables need marinating before roasting?",
+        "a": "Fifteen to forty-five minutes is enough. Vegetables hold no protein for acid to act on, so extra time adds little once the oil has coated every cut face. Toss aubergine, courgette, capsicum and onion with oil, salt and dried oregano before roasting."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml bottles, with the current price for each size."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where the oil fits across tumis, roasting and the rest of a week of meals."
+      },
+      {
+        "label": "Olive oil price in Malaysia: what you are paying for",
+        "path": "blog/olive-oil-price-in-malaysia-what-you-are-paying-for",
+        "description": "Why a litre costs what it costs, and which size works out cheaper."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's two online counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "olive-oil-shelf-life",
+    "slug": "olive-oil-shelf-life-how-long-a-bottle-lasts",
+    "seoTitle": "Olive Oil Shelf Life: How Long a Bottle Lasts",
+    "metaTitle": "Olive Oil Shelf Life: How Long a Bottle Lasts",
+    "metaDescription": "Olive oil shelf life, unopened and opened: what a harvest date tells you, how air, light and heat end a bottle, and how to store one in Malaysia.",
+    "focusKeyword": "olive oil shelf life",
+    "relatedKeywords": [
+      "how long does olive oil last",
+      "does olive oil expire",
+      "olive oil expiry date",
+      "olive oil harvest date",
+      "how to store olive oil",
+      "olive oil after opening",
+      "rancid olive oil signs",
+      "olive oil storage temperature",
+      "unopened olive oil shelf life",
+      "best before date olive oil"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "shelf life",
+      "storage",
+      "extra virgin",
+      "buying guide"
+    ],
+    "h1": "Olive Oil Shelf Life: How Long a Bottle Really Lasts",
+    "excerpt": "Olive oil shelf life is decided by air, light and heat rather than by the date printed on the bottle, and a Malaysian kitchen runs harder on a bottle than a Mediterranean pantry does.",
+    "keyTakeaway": "Olive oil shelf life runs up to about eighteen months from harvest while the bottle is sealed, and about two months of real character once the cap comes off. Air, light and heat set that pace, not the printed date. Read the harvest date, store the bottle dark and away from the stove, and buy the size your kitchen finishes.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilShelfLifeHero",
+      "alt": "A bottling line seen close up, olive oil running into a row of dark glass bottles standing shoulder to shoulder on a stainless conveyor."
+    },
+    "ogImage": "/og/blog-olive-oil-shelf-life.jpg",
+    "intro": [
+      "Olive oil does not spoil the way milk spoils. It fades. The fruit goes first, then the pepper at the back of the throat, and one afternoon the bottle tastes of nothing much.",
+      "Here is what a bottle has in it, unopened and opened, what ends it, and why a Selangor kitchen is harder on oil than a Mediterranean pantry."
+    ],
+    "sections": [
+      {
+        "heading": "How long a bottle lasts, unopened and opened",
+        "id": "how-long-a-bottle-lasts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An unopened bottle of extra virgin olive oil typically holds its character for up to about eighteen months from the harvest that produced it, kept cool and dark. Once opened, count in weeks rather than seasons: about two months of real character is a fair expectation, because air is now inside for good."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilShelfLifeInline",
+            "alt": "A dark green glass olive oil bottle with its cap on, standing inside a wooden kitchen cupboard beside two storage jars in dim indoor light."
+          }
+        ]
+      },
+      {
+        "heading": "Harvest date beats best-before date",
+        "id": "harvest-date-vs-best-before",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A harvest date tells you when the olives were milled. A best-before date tells you when the bottler stopped guaranteeing the oil, counted from the bottling run, which can happen months after the fruit was pressed. Where both appear, read the harvest date first and treat the other as an outer limit."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Harvest or crush date.** The real age of the oil in the bottle.",
+              "**Best before.** Counted from bottling, not from the mill.",
+              "**Lot code.** Useful to a recall, not to you.",
+              "**No date at all.** Common on blends, and a reason to ask."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilShelfLifeInline",
+            "alt": "A dark green glass olive oil bottle with its cap on, standing inside a wooden kitchen cupboard beside two storage jars in dim indoor light."
+          },
+          {
+            "type": "p",
+            "text": "For the rest of what belongs on a label you are about to pay for, read [how to choose authentic extra virgin olive oil in Malaysia](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia)."
+          }
+        ]
+      },
+      {
+        "heading": "Air, light and heat are what end a bottle",
+        "id": "air-light-and-heat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Three things end a bottle. Air enters every time the cap comes off and stays in the space above the oil. Light drives the same reaction faster, which is the reason dark glass exists. Heat multiplies both. Sealed, cold and dark, an oil barely moves at all."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Where it sits",
+              "Condition",
+              "Effect"
+            ],
+            "rows": [
+              [
+                "Closed cupboard, away from the stove",
+                "24-28°C, dark",
+                "Best ordinary option at home"
+              ],
+              [
+                "Counter beside the hob",
+                "30-40°C when cooking",
+                "Heat and light, fades fastest"
+              ],
+              [
+                "Open shelf or windowsill",
+                "Daylight, room temperature",
+                "Light alone works on it"
+              ],
+              [
+                "Refrigerator",
+                "4-8°C",
+                "Clouds and thickens, then clears"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilShelfLifeInline",
+            "alt": "A dark green glass olive oil bottle with its cap on, standing inside a wooden kitchen cupboard beside two storage jars in dim indoor light."
+          }
+        ]
+      },
+      {
+        "heading": "Why a Malaysian kitchen is the harder environment",
+        "id": "malaysian-kitchen",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A Malaysian kitchen runs warm and humid every month of the year, with no cold season to give a bottle a rest. Indoor temperatures sit near 28°C before anyone lights the hob, and an open layout puts the oil in daylight for hours. A Mediterranean pantry spends part of the year cold."
+          },
+          {
+            "type": "p",
+            "text": "Two habits cover most of the risk. Keep the bottle in a closed cupboard on the far side of the kitchen from the hob, never on the shelf above it, and screw the cap back down the moment the pouring is done."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilShelfLifeInline",
+            "alt": "A dark green glass olive oil bottle with its cap on, standing inside a wooden kitchen cupboard beside two storage jars in dim indoor light."
+          }
+        ]
+      },
+      {
+        "heading": "How to tell an oil has gone",
+        "id": "how-to-tell-it-has-gone",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pour a little into a spoon and smell it before you taste it. A finished oil smells of wax crayon, putty, stale nuts or damp cardboard, and tastes greasy and flat with no peppery catch at the back of the throat. Cloudiness alone is not a fault; a cold bottle clouds and clears again."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Smell.** Crayon or putty where fruit used to be.",
+              "**Taste.** Flat and greasy, the peppery finish gone.",
+              "**Colour.** Duller and browner than the day it was opened.",
+              "**Sediment.** Normal in unfiltered oil; a musty smell with it is not."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilShelfLifeInline",
+            "alt": "A dark green glass olive oil bottle with its cap on, standing inside a wooden kitchen cupboard beside two storage jars in dim indoor light."
+          }
+        ]
+      },
+      {
+        "heading": "Bottle size is a shelf-life decision",
+        "id": "bottle-size",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Buy the size your kitchen will finish, not the size with the better price per litre. A household that reaches for olive oil twice a week takes months over 500 ml, and the last third tastes nothing like the first pour. The same oil in 250 ml is used while it still has everything."
+          },
+          {
+            "type": "p",
+            "text": "Both sizes sit on the [products page](/products), and what separates them by the litre is set out in [olive oil price in Malaysia](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilShelfLifeInline",
+            "alt": "A dark green glass olive oil bottle with its cap on, standing inside a wooden kitchen cupboard beside two storage jars in dim indoor light."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sealed and cool, up to about eighteen months from harvest. Opened, about two months of real character. Air, light and heat decide which end you get. Read the harvest date and buy the size you will finish."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How long does olive oil last unopened?",
+        "a": "Kept cool and dark, an unopened bottle typically holds its character for up to about eighteen months from the harvest that produced it. The seal keeps air out, so a sealed bottle ages far more slowly than an opened one standing on a counter."
+      },
+      {
+        "q": "How long does olive oil last after opening?",
+        "a": "About two months is a fair figure for a bottle in regular use in Malaysia. Air enters the space above the oil every time the cap comes off, so a half-empty bottle left for weeks ages faster than one poured from daily."
+      },
+      {
+        "q": "Does olive oil go bad, or just go stale?",
+        "a": "It goes stale rather than spoiling. Oxidation flattens the fruit and the pepper and leaves a waxy, cardboard smell. The oil is still oil, but the character you paid for has gone. That is why a harvest date beats an expiry date."
+      },
+      {
+        "q": "Should olive oil be kept in the fridge?",
+        "a": "It is not necessary, and cold oil is awkward to pour. It clouds and thickens, then clears again at room temperature with nothing lost. A closed cupboard away from the stove does the same job for a bottle finished within a few months."
+      },
+      {
+        "q": "Can I use olive oil after the best-before date?",
+        "a": "A best-before date is a limit set by the bottler, not a hard stop. Smell and taste the oil first. If it is flat or smells of crayon, cook with it in a spiced dish and open a fresh bottle for salads."
+      },
+      {
+        "q": "Which bottle size keeps better once opened?",
+        "a": "Neither keeps better; the smaller one gets finished sooner, which comes to the same thing. A 250 ml bottle suits a kitchen that pours olive oil now and then, and a 500 ml bottle suits one that cooks with it most days."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml bottles, with the current price for each size."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "What to read on the label and the bottle, harvest date included, before you pay."
+      },
+      {
+        "label": "Olive oil price in Malaysia: what you are paying for",
+        "path": "blog/olive-oil-price-in-malaysia-what-you-are-paying-for",
+        "description": "Why the per-litre figure moves with bottle size, and what sits behind the price."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
       }
     ]
   },

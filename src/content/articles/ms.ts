@@ -1454,6 +1454,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Cara memilih minyak zaitun dara asli",
         "path": "blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia",
         "description": "Senarai semak label: gred, asal, tahun tuaian dan botol."
+      },
+      {
+        "label": "Botol minyak zaitun: kaca gelap dan saiz",
+        "path": "blog/botol-minyak-zaitun-kaca-gelap-dan-saiz",
+        "description": "Kenapa botol itu penting, dan saiz mana untuk kadar guna anda."
       }
     ]
   },
@@ -1741,6 +1746,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Kedai dan cara membeli",
         "path": "shop",
         "description": "Cawangan, waktu buka dan saluran rasmi Berkat Madinah Store."
+      },
+      {
+        "label": "Minyak zaitun vs minyak masak lain",
+        "path": "blog/minyak-zaitun-vs-minyak-masak-lain",
+        "description": "Rasa, takat asap dan kegunaan berbanding minyak sawit, kelapa, bijan dan kacang."
       }
     ]
   },
@@ -1993,6 +2003,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Koleksi Infused — wild thyme",
         "path": "products/infused-extra-virgin-olive-oil-wild-thyme",
         "description": "Minyak extra virgin yang sama, diinfusikan untuk kegunaan masakan."
+      },
+      {
+        "label": "Apa itu minyak zaitun pomace",
+        "path": "blog/apa-itu-minyak-zaitun-pomace",
+        "description": "Hampas, pelarut dan penapisan — kenapa harganya jauh lebih murah."
       }
     ]
   },
@@ -2251,6 +2266,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun habbatus sauda",
         "path": "blog/minyak-zaitun-habbatus-sauda-apa-yang-perlu-tahu",
         "description": "Apa itu minyak zaitun infusi habbatus sauda, cara membacanya pada label, dan penggunaannya di dapur."
+      },
+      {
+        "label": "Cara simpan minyak zaitun",
+        "path": "blog/cara-simpan-minyak-zaitun",
+        "description": "Rak mana, kenapa bukan peti sejuk, dan berapa lama selepas dibuka."
       }
     ]
   },
@@ -3062,6 +3082,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk salad",
         "path": "blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
         "description": "Sos salad, kerabu dan hidangan sejuk — di mana minyak yang tidak dipanaskan paling menyerlah."
+      },
+      {
+        "label": "Minyak zaitun untuk goreng",
+        "path": "blog/minyak-zaitun-untuk-goreng",
+        "description": "Tumis, goreng cetek, goreng rendam dan wok api besar — mana yang munasabah."
       }
     ]
   },
@@ -3673,6 +3698,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
+      },
+      {
+        "label": "Resepi mudah dengan minyak zaitun",
+        "path": "blog/resepi-mudah-dengan-minyak-zaitun",
+        "description": "Empat resepi ringkas dengan sukatan, untuk malam ini."
       }
     ]
   },
@@ -3952,6 +3982,1710 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli di Malaysia",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu buka, serta kaunter dalam talian rasmi."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "botol-minyak-zaitun",
+    "slug": "botol-minyak-zaitun-kaca-gelap-dan-saiz",
+    "seoTitle": "Botol Minyak Zaitun: Kaca Gelap dan Saiz Mana",
+    "metaTitle": "Botol Minyak Zaitun: Kaca Gelap dan Saiz Mana",
+    "metaDescription": "Kenapa kaca gelap, apa bezanya dengan plastik dan tin, saiz 250 ml lawan 500 ml ikut kadar guna dapur, tutup dan penuang, dan botol yang sudah kosong.",
+    "focusKeyword": "botol minyak zaitun",
+    "relatedKeywords": [
+      "botol minyak zaitun kaca",
+      "botol kaca gelap minyak zaitun",
+      "saiz botol minyak zaitun",
+      "minyak zaitun 250ml",
+      "minyak zaitun 500ml",
+      "botol minyak zaitun kosong",
+      "bekas simpan minyak zaitun",
+      "tutup botol minyak zaitun",
+      "botol minyak zaitun plastik",
+      "olive oil bottle Malaysia"
+    ],
+    "category": "Panduan Pembeli",
+    "tags": [
+      "Botol Minyak Zaitun",
+      "Kaca Gelap",
+      "Saiz dan Harga",
+      "Penyimpanan",
+      "Dapur Malaysia"
+    ],
+    "h1": "Botol Minyak Zaitun: Kaca Gelap, Saiz dan Tutup yang Betul",
+    "excerpt": "Bahan botol, saiz yang padan dengan kadar guna dapur anda, tutup yang rapat, dan apa nak buat dengan botol yang sudah kosong.",
+    "keyTakeaway": "Botol minyak zaitun yang baik ialah kaca berwarna gelap dengan tutup skru yang menutup rapat. Kaca tidak menyerap bau dan warna gelap menapis sebahagian cahaya. Pilih saiz mengikut kadar guna dapur anda: botol yang habis dalam sebulan atau dua selepas dibuka kekal lebih tajam rasanya daripada botol besar yang bertahan setahun.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressBotolMinyakZaitunHero",
+      "alt": "Tiga botol minyak zaitun kaca hijau gelap bersaiz berbeza berdiri sebaris di atas rak kayu"
+    },
+    "ogImage": "/og/blog-botol-minyak-zaitun.jpg",
+    "intro": [
+      "Botol bukan sekadar bekas. Ia yang menentukan berapa lama rasa minyak di dalamnya bertahan selepas anda buka tutup kali pertama.",
+      "Tiga perkara menumpulkan rasa minyak zaitun: cahaya, udara dan haba. Bahan botol menahan yang pertama, dan saiz botol menentukan berapa lama minyak terdedah kepada yang kedua.",
+      "Di bawah ini: kaca gelap lawan plastik lawan tin, saiz mana untuk isi rumah mana, tutup dan penuang, dan botol yang sudah kosong."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa bahan dan saiz botol mengubah rasa",
+        "id": "kenapa-botol-penting",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun berubah rasa apabila terdedah kepada cahaya, oksigen dan haba. Botol menentukan berapa banyak cahaya masuk, dan berapa banyak udara duduk di atas paras minyak setiap kali tutup dibuka. Kaca hijau gelap menapis sebahagian besar cahaya yang cuba menembusi, manakala botol jernih di atas rak terbuka membiarkan semuanya masuk."
+          },
+          {
+            "type": "note",
+            "title": "Bekas, bukan kandungan",
+            "text": "Harga isi botol ada dalam [harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia)."
+          },
+          {
+            "type": "image",
+            "src": "pressBotolMinyakZaitunInline",
+            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+          }
+        ]
+      },
+      {
+        "heading": "Kaca gelap, plastik atau tin",
+        "id": "kaca-plastik-tin",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kaca gelap ialah pilihan lazim untuk minyak zaitun dara kerana kaca tidak bertindak balas dengan minyak dan warna hijau atau coklat menapis cahaya yang paling cepat menumpulkan rasa. Tin logam pula menghalang cahaya sepenuhnya tetapi anda tidak nampak isinya. Botol plastik jernih paling murah dibuat, dan paling lemah terhadap cahaya."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Bekas",
+              "Cahaya",
+              "Sesuai untuk"
+            ],
+            "rows": [
+              [
+                "Kaca hijau atau coklat gelap",
+                "Ditapis sebahagian besar",
+                "Botol harian di dapur"
+              ],
+              [
+                "Kaca jernih",
+                "Menembusi sepenuhnya",
+                "Hanya jika disimpan dalam kabinet"
+              ],
+              [
+                "Tin logam",
+                "Terhalang sepenuhnya",
+                "Belian besar, tuang ke botol kecil"
+              ],
+              [
+                "Plastik jernih",
+                "Menembusi",
+                "Pindahan sementara sahaja"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBotolMinyakZaitunInline",
+            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+          }
+        ]
+      },
+      {
+        "heading": "Saiz mana untuk isi rumah mana",
+        "id": "saiz-mana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pilih saiz ikut berapa lama satu botol bertahan di dapur anda, bukan ikut harga seliter. Satu sudu besar lebih kurang 15 ml, jadi kadar guna senang dianggar. Isi rumah yang guna minyak zaitun untuk sos salad hujung minggu sahaja akan ambil masa jauh lebih lama menghabiskan botol berbanding rumah yang tumis hampir setiap malam."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kadar guna seminggu",
+              "Saiz sesuai",
+              "Berapa lama satu botol"
+            ],
+            "rows": [
+              [
+                "Kira-kira 30 ml, dua sudu besar",
+                "250 ml",
+                "Lapan minggu"
+              ],
+              [
+                "Kira-kira 60 ml",
+                "250 ml",
+                "Empat minggu"
+              ],
+              [
+                "Kira-kira 120 ml",
+                "500 ml",
+                "Empat minggu"
+              ],
+              [
+                "Kira-kira 250 ml",
+                "500 ml",
+                "Dua minggu"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBotolMinyakZaitunInline",
+            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+          },
+          {
+            "type": "p",
+            "text": "Botol 500 ml lebih murah setiap mililiter, tetapi jimat itu hanya menjadi kalau botol memang habis. Kedua-dua saiz ada di halaman [produk](/products)."
+          }
+        ]
+      },
+      {
+        "heading": "Tutup, penuang dan mulut botol",
+        "id": "tutup-dan-penuang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tutup yang rapat lebih penting daripada bentuk botol. Setiap kali botol dibuka, udara baharu masuk dan duduk di atas minyak sehingga kali seterusnya. Tutup skru dengan lapisan dalam menutup lebih rapat daripada gabus yang sudah longgar, dan penuang yang dipasang kekal di leher botol selalunya tidak boleh ditutup langsung."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tutup semula sebaik selesai menuang, bukan selepas habis masak.",
+              "Lap bibir botol dengan kain kering — sisa minyak di situ melekit dan menarik habuk.",
+              "Mulut sempit senang dikawal; mulut lebar cepat tercurah lebih daripada yang dirancang."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBotolMinyakZaitunInline",
+            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+          }
+        ]
+      },
+      {
+        "heading": "Botol yang sudah kosong",
+        "id": "botol-kosong",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Botol kaca gelap yang kosong masih berguna, tetapi jangan isi minyak baharu melainkan ia dicuci dan dikeringkan betul-betul. Sisa minyak lama di dinding botol akan bercampur dengan minyak segar dan menumpulkan rasanya. Air panas dengan sedikit pencuci pinggan, bilas, kemudian terbalikkan sehingga kering sepenuhnya."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Botol kecil untuk sos salad yang sudah dikacau, disimpan di pintu peti sejuk.",
+              "Bekas cuka atau air limau di atas meja makan.",
+              "Kitar semula kaca — asingkan tutup logam atau plastik dahulu."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBotolMinyakZaitunInline",
+            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+          }
+        ]
+      },
+      {
+        "heading": "Melihat botol itu sendiri sebelum membeli",
+        "id": "lihat-sebelum-beli",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Botol yang dipegang di tangan memberitahu lebih banyak daripada gambar produk. Anda dapat lihat tebal kacanya, jenis tutupnya, dan sama ada ada penutup keselamatan di bawah tutup skru. Arabian Village dijual di dua cawangan Berkat Madinah Store di Selangor, iaitu di Ampang Jaya dan di Batu Caves."
+          },
+          {
+            "type": "p",
+            "text": "Kaunter Shopee dan TikTok Shop itu milik penjual yang sama. Alamat dan waktu operasi ada di halaman [tempat membeli](/shop)."
+          },
+          {
+            "type": "image",
+            "src": "pressBotolMinyakZaitunInline",
+            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Botol yang betul, saiz yang betul",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kaca gelap, tutup skru yang rapat, dan saiz yang dapur anda habiskan dalam sebulan atau dua. Selebihnya bergantung pada tempat botol itu berdiri selepas anda meletakkannya."
+        },
+        {
+          "type": "p",
+          "text": "[Cara menilai jenama minyak zaitun](/blog/cara-menilai-jenama-minyak-zaitun) melihat apa yang tertulis pada botol dan apa yang tidak."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Kenapa minyak zaitun dijual dalam botol kaca gelap?",
+        "a": "Cahaya mempercepatkan perubahan rasa minyak zaitun, dan kaca hijau atau coklat menapis sebahagian besar cahaya yang cuba menembusi. Kaca juga tidak bertindak balas dengan minyak atau menyerap bau, jadi rasa dalam botol kekal seperti masa ia diisi. Botol jernih pula memerlukan kabinet tertutup."
+      },
+      {
+        "q": "Berapa lama satu botol 250 ml bertahan?",
+        "a": "Ikut kadar guna dapur anda. Rumah yang memakai kira-kira 30 ml seminggu — dua sudu besar untuk sos salad — mengambil lapan minggu, manakala rumah yang tumis hampir setiap malam menghabiskannya dalam empat. Perbandingan harga antara dua saiz pula ada dalam [harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia)."
+      },
+      {
+        "q": "Boleh simpan minyak zaitun dalam botol plastik?",
+        "a": "Boleh untuk tempoh singkat, tetapi bukan untuk botol yang duduk berbulan di dapur. Plastik jernih membiarkan cahaya masuk dan dindingnya lebih telap udara berbanding kaca. Kalau anda memindahkan minyak ke botol plastik, pindahkan sedikit sahaja dan habiskan dalam beberapa hari."
+      },
+      {
+        "q": "Perlu tukar botol kalau beli minyak zaitun dalam tin?",
+        "a": "Kalau tin itu besar, ya. Tin menghalang cahaya sepenuhnya, tetapi setiap kali dibuka udara masuk ke ruang yang semakin lapang. Tuang sebahagian ke botol kaca gelap yang kecil untuk guna harian, tutup rapat tin selebihnya, dan isi semula botol bila kosong."
+      },
+      {
+        "q": "Boleh isi semula botol minyak zaitun yang kosong?",
+        "a": "Boleh, selepas dicuci dengan air panas dan pencuci pinggan lalu dikeringkan sepenuhnya. Sisa minyak lama yang melekat di dinding botol akan bercampur dengan minyak baharu. Air yang tertinggal pula lebih teruk, kerana titisan air di dalam minyak menggalakkan perubahan rasa."
+      },
+      {
+        "q": "Penuang yang dipasang di leher botol elok atau tidak?",
+        "a": "Ia memudahkan kawalan tuangan, tetapi kebanyakan penuang tidak boleh ditutup rapat, jadi minyak terdedah kepada udara sepanjang masa. Kalau anda mahu guna penuang, pasangkannya pada botol kecil yang habis dalam beberapa hari, dan biarkan botol utama bertutup skru dalam kabinet."
+      },
+      {
+        "q": "Berapa harga botol minyak zaitun Arabian Village?",
+        "a": "RM59.00 untuk botol 250 ml dan RM103.00 untuk botol 500 ml, iaitu RM236 dan RM206 seliter. Harga itu sama mengikut saiz untuk minyak klasik dan untuk setiap perisa Infused Collection. Kedua-dua saiz boleh dilihat di halaman produk."
+      }
+    ],
+    "related": [
+      {
+        "label": "Saiz dan botol Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun sejuk-tekan asal Palestin dalam botol kaca 250 ml dan 500 ml, serta perisa Infused Collection."
+      },
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "Perbandingan seliter antara saiz botol, dan apa yang ada di sebalik harga itu."
+      },
+      {
+        "label": "Cara menilai jenama minyak zaitun",
+        "path": "blog/cara-menilai-jenama-minyak-zaitun",
+        "description": "Apa yang tertulis pada botol, apa yang tidak, dan mana satu yang benar-benar memberitahu sesuatu."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "cara-simpan-minyak-zaitun",
+    "slug": "cara-simpan-minyak-zaitun",
+    "seoTitle": "Cara Simpan Minyak Zaitun di Dapur Panas Malaysia",
+    "metaTitle": "Cara Simpan Minyak Zaitun di Dapur Panas Malaysia",
+    "metaDescription": "Rak mana dalam dapur Malaysia yang merosakkan rasa minyak zaitun, kenapa bukan dalam peti sejuk, dan berapa lama sebotol bertahan selepas dibuka.",
+    "focusKeyword": "cara simpan minyak zaitun",
+    "relatedKeywords": [
+      "cara simpan minyak zaitun extra virgin",
+      "cara simpan minyak zaitun selepas dibuka",
+      "simpan minyak zaitun dalam peti sejuk",
+      "minyak zaitun beku dalam peti sejuk",
+      "berapa lama minyak zaitun tahan",
+      "tempat simpan minyak zaitun",
+      "minyak zaitun jadi keruh",
+      "penyimpanan minyak zaitun di Malaysia",
+      "minyak zaitun tumpul rasa"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Cara Simpan Minyak Zaitun",
+      "Penyimpanan",
+      "Dapur Malaysia",
+      "Panduan Pembeli"
+    ],
+    "h1": "Cara Simpan Minyak Zaitun di Rumah Malaysia yang Panas",
+    "excerpt": "Rak mana yang membunuh rasa, kenapa peti sejuk bukan tempatnya, dan berapa lama sebotol bertahan selepas tutupnya dibuka.",
+    "keyTakeaway": "Cara simpan minyak zaitun di rumah Malaysia bergantung pada satu keputusan: satu tempat gelap, tertutup dan jauh dari dapur masak, dengan tutup yang dirapatkan semula setiap kali. Peti sejuk bukan tempatnya, dan botol yang sudah dibuka elok dihabiskan dalam kira-kira dua bulan.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressCaraSimpanMinyakZaitunHero",
+      "alt": "Kebun zaitun di lereng bukit ketika senja, dengan sebuah perkampungan dan laut di latar belakang, dan beberapa biji zaitun di atas hamparan batu di bawah dahan pokok."
+    },
+    "ogImage": "/og/blog-cara-simpan-minyak-zaitun.jpg",
+    "intro": [
+      "Botol minyak zaitun yang sama boleh kekal sedap beberapa bulan di satu rumah dan hilang rasanya dalam beberapa minggu di rumah sebelah. Bezanya tempat botol itu berdiri.",
+      "Rumah di Malaysia panas, lembap dan dapurnya selalunya terbuka. Dapur di sini jarang sejuk, dan itu mengubah kiraan.",
+      "Ini panduan cara simpan minyak zaitun di rumah sebenar: rak mana, hal peti sejuk, dan berapa lama selepas botol dibuka."
+    ],
+    "sections": [
+      {
+        "heading": "Tempat paling salah untuk letak botol",
+        "id": "tempat-paling-salah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rak terbuka di sebelah dapur gas ialah tempat paling teruk untuk sebotol minyak zaitun. Setiap kali anda menumis, botol itu turut panas, kemudian sejuk semula apabila api ditutup. Kitaran naik turun suhu yang berulang setiap hari itulah yang menumpulkan rasa."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Sebelah dapur atau ketuhar** — haba dari kuali dan pintu ketuhar sampai ke botol.",
+              "**Tepi tingkap** — cahaya matahari petang menembusi kaca dan mengubah rasa minyak.",
+              "**Atas peti ais** — bahagian atas dan belakang peti membuang haba sepanjang hari."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraSimpanMinyakZaitunInline",
+            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+          }
+        ]
+      },
+      {
+        "heading": "Haba, cahaya dan udara, bukan kelembapan",
+        "id": "haba-cahaya-udara",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga perkara mengubah rasa minyak zaitun di dalam botol: haba, cahaya dan udara. Kelembapan udara Malaysia yang tinggi tidak masuk ke dalam minyak selagi tutup dipasang rapat. Yang perlu dikawal ialah suhu yang stabil, kaca yang gelap dan tutup yang sentiasa dipulangkan ke tempatnya selepas menuang."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Haba** mempercepatkan segalanya, dan suhu yang naik turun lebih memudaratkan daripada panas yang tetap.",
+              "**Cahaya** bertindak walaupun melalui kaca jernih, jadi gelap penuh lebih baik daripada teduh separuh.",
+              "**Udara** masuk setiap kali tutup dibuka; botol yang tinggal separuh isi sudah separuh penuh dengan udara."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraSimpanMinyakZaitunInline",
+            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+          },
+          {
+            "type": "p",
+            "text": "Bahan dan saiz botol itu kerja artikel lain — [botol minyak zaitun: kaca gelap dan saiz](/blog/botol-minyak-zaitun-kaca-gelap-dan-saiz) — dan di sini kita tinggal pada tempat, suhu dan tempoh."
+          }
+        ]
+      },
+      {
+        "heading": "Jadual tempat simpan di dalam rumah",
+        "id": "jadual-tempat-simpan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tempat terbaik dalam kebanyakan rumah Malaysia ialah kabinet dapur yang tertutup, di bahagian yang jauh dari dapur masak dan tidak dilanggar cahaya matahari. Rak jubin pada dinding dalam biasanya lebih sejuk daripada kabinet kayu di atas ketuhar. Ini perbandingan tempat yang biasa dipilih orang."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Tempat",
+              "Masalahnya",
+              "Sesuai?"
+            ],
+            "rows": [
+              [
+                "Kabinet tertutup jauh dari dapur",
+                "Tiada",
+                "Ya, pilihan pertama"
+              ],
+              [
+                "Almari makanan yang kering",
+                "Tiada",
+                "Ya"
+              ],
+              [
+                "Kaunter terbuka dekat tingkap",
+                "Cahaya matahari terus",
+                "Tidak"
+              ],
+              [
+                "Kabinet di atas ketuhar",
+                "Haba naik ke atas",
+                "Tidak"
+              ],
+              [
+                "Atas peti ais",
+                "Haba dari belakang peti",
+                "Tidak"
+              ],
+              [
+                "Dalam peti sejuk",
+                "Minyak jadi keruh dan pekat",
+                "Tidak"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraSimpanMinyakZaitunInline",
+            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+          }
+        ]
+      },
+      {
+        "heading": "Peti sejuk: kenapa bukan tempatnya",
+        "id": "peti-sejuk",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Jangan simpan minyak zaitun dalam peti sejuk, termasuk stok yang belum dibuka. Minyak tidak rosak di dalam sejuk, tetapi ia berkabus, menjadi keruh dan separa membeku menjadi ketulan lembut berwarna putih, dan setiap kali hendak menuang anda terpaksa menunggu botol kembali ke suhu bilik. Kabinet gelap yang jauh dari dapur masak sudah memadai."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Ketulan putih itu normal** — letakkan botol di atas kaunter satu atau dua jam dan minyak jernih semula tanpa berubah rasa.",
+              "**Stok simpanan** lebih elok duduk dalam kotak asalnya di dalam almari makanan yang kering."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraSimpanMinyakZaitunInline",
+            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+          }
+        ]
+      },
+      {
+        "heading": "Berapa lama selepas botol dibuka",
+        "id": "selepas-dibuka",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tarikh yang tercetak pada botol ialah tarikh untuk botol yang belum dibuka. Selepas tutup dibuka kali pertama, kiraan bermula semula: rasa mula tumpul dalam beberapa bulan, lebih cepat kalau botol tinggal separuh dan disimpan di tempat panas. Habiskan botol yang sudah dibuka dalam kira-kira dua bulan."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Beli saiz yang munasabah dengan kadar guna rumah anda; botol besar yang bertahan setahun bukan penjimatan.",
+              "Tulis tarikh botol dibuka pada pelekat kecil di bahu botol supaya kiraan dua bulan itu bukan tekaan.",
+              "Kalau baunya sudah seperti krayon atau kacang lama, rasanya memang sudah pergi."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraSimpanMinyakZaitunInline",
+            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+          },
+          {
+            "type": "p",
+            "text": "Saiz mana yang sesuai bergantung pada kekerapan anda masak, jadi [lihat saiz dan harga](/products) dahulu."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Satu botol, satu tempat tetap",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Pilih satu tempat gelap yang jauh dari dapur masak, dan kembalikan botol ke situ setiap kali selesai guna. Itu sahaja yang membezakan minyak yang masih tajam pada bulan ketiga dengan yang sudah hambar."
+        },
+        {
+          "type": "p",
+          "text": "Kalau anda masih memilih botol pertama, mula dengan [cara memilih minyak zaitun dara asli](/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia), kemudian [lihat tempat membeli](/shop) untuk cawangan Berkat Madinah di Selangor."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Di mana tempat terbaik simpan minyak zaitun di rumah?",
+        "a": "Kabinet tertutup yang jauh dari dapur masak dan tidak terkena cahaya matahari. Rak bawah atau almari makanan yang kering juga sesuai. Yang penting satu tempat gelap dengan suhu yang tidak naik turun setiap kali anda memasak, dan bukan rak terbuka di sebelah kuali."
+      },
+      {
+        "q": "Kabinet di atas ketuhar boleh dijadikan tempat simpan?",
+        "a": "Tidak, walaupun ia kabinet tertutup. Haba naik ke atas, jadi ruang tepat di atas ketuhar atau dapur gas menjadi kotak panas setiap kali anda memasak. Tiga tempat lain yang sama teruk: kaunter dekat tingkap, rak terbuka di sebelah kuali, dan atas peti ais yang membuang haba sepanjang hari."
+      },
+      {
+        "q": "Minyak zaitun saya berketul putih, adakah ia rosak?",
+        "a": "Tidak. Ketulan lembut berwarna putih itu bermakna minyak menjadi sejuk, bukan rosak. Letakkan botol di atas kaunter selama satu atau dua jam dan ia akan jernih semula tanpa mengubah rasa. Minyak zaitun memang mula pekat pada suhu rendah, dan itu bukan tanda kualiti."
+      },
+      {
+        "q": "Kenapa suhu yang naik turun lebih memudaratkan daripada panas yang tetap?",
+        "a": "Setiap kali dapur dinyalakan, botol di sebelahnya turut panas, kemudian sejuk semula selepas api ditutup. Kitaran itu berulang setiap hari dan menumpulkan rasa lebih cepat daripada satu suhu suam yang tidak berubah. Sebab itu kabinet dalam lebih baik daripada rak terbuka."
+      },
+      {
+        "q": "Kelembapan udara Malaysia boleh merosakkan minyak zaitun?",
+        "a": "Kelembapan tidak masuk ke dalam minyak selagi tutup dipasang rapat. Masalah sebenar di rumah kita ialah haba dan suhu yang naik turun sepanjang hari. Air hanya menjadi isu apabila titisan peluh dari botol yang baru keluar dari peti sejuk masuk semasa anda menuang."
+      },
+      {
+        "q": "Berapa lama minyak zaitun tahan selepas botol dibuka?",
+        "a": "Rasanya mula tumpul selepas beberapa bulan, dan lebih cepat kalau botol tinggal separuh atau disimpan di tempat panas. Habiskan botol yang sudah dibuka dalam kira-kira dua bulan, dan pilih saiz mengikut kekerapan anda memasak supaya tiada botol besar tersadai di rak."
+      },
+      {
+        "q": "Botol yang belum dibuka perlu disimpan macam mana?",
+        "a": "Sama seperti botol yang sudah dibuka, cuma ia lebih bertoleransi kerana tiada udara masuk. Simpan tegak di tempat gelap dan sejuk, jauh dari tingkap dan dapur. Kotak asal berguna di sini kerana ia menghalang cahaya sepenuhnya tanpa memerlukan ruang kabinet."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun sejuk-tekan asal Palestin dalam botol kaca gelap, dua saiz, serta enam perisa Infused Collection."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Bila minyak zaitun menjadi di dalam kuali, dan bila lebih baik anda guna minyak lain."
+      },
+      {
+        "label": "Cara memilih minyak zaitun dara asli di Malaysia",
+        "path": "blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia",
+        "description": "Apa yang perlu dibaca pada botol sebelum bayar, dan tanda yang patut buat anda berhenti."
+      },
+      {
+        "label": "Botol minyak zaitun: kaca gelap dan saiz",
+        "path": "blog/botol-minyak-zaitun-kaca-gelap-dan-saiz",
+        "description": "Kaca gelap lawan plastik lawan tin, saiz mana untuk kadar guna mana, dan tutup yang rapat."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Berkat Madinah di Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "minyak-zaitun-pomace",
+    "slug": "apa-itu-minyak-zaitun-pomace",
+    "seoTitle": "Minyak Zaitun Pomace: Apa Itu dan Kenapa Murah",
+    "metaTitle": "Minyak Zaitun Pomace: Apa Itu dan Kenapa Murah",
+    "metaDescription": "Minyak daripada hampas selepas perahan: cara ia diekstrak dengan pelarut dan ditapis, kenapa harganya jauh lebih rendah, dan cara mengenalinya pada label.",
+    "focusKeyword": "minyak zaitun pomace",
+    "relatedKeywords": [
+      "pomace olive oil maksud",
+      "minyak hampas zaitun",
+      "beza pomace dan extra virgin",
+      "gred minyak zaitun pomace",
+      "minyak zaitun murah",
+      "olive pomace oil",
+      "pomace untuk menggoreng",
+      "label minyak zaitun pomace",
+      "minyak zaitun ditapis",
+      "adakah pomace minyak zaitun sebenar",
+      "harga minyak zaitun pomace",
+      "hampas zaitun selepas perahan"
+    ],
+    "category": "Panduan Pembeli",
+    "tags": [
+      "Minyak Zaitun Pomace",
+      "Gred Minyak Zaitun",
+      "Panduan Pembeli",
+      "Membaca Label"
+    ],
+    "h1": "Minyak Zaitun Pomace: Apa Itu dan Kenapa Harganya Jauh Lebih Murah",
+    "excerpt": "Apa itu hampas zaitun, bagaimana minyak dikeluarkan daripadanya, dan kenapa botol pomace berharga jauh lebih rendah di rak yang sama.",
+    "keyTakeaway": "Minyak zaitun pomace ialah minyak yang diekstrak dengan pelarut daripada hampas zaitun — kulit, isi dan serpihan biji yang tinggal selepas perahan pertama — kemudian ditapis sehingga hampir neutral. Ia sah dijual sebagai minyak zaitun, tetapi gred, rasa dan harganya berbeza daripada minyak dara yang diperah terus daripada buah.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunPomaceHero",
+      "alt": "Minyak zaitun hijau mengalir keluar daripada corong keluli sebuah kilang perahan ke dalam tangki logam di bawahnya"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-pomace.jpg",
+    "intro": [
+      "Dua botol pada rak yang sama, kedua-duanya bertulis olive oil. Satu berharga beberapa kali ganda daripada satu lagi.",
+      "Selalunya bezanya satu perkataan kecil yang dicetak di bawah nama jenama: pomace. Ia bukan gaya pemasaran, ia gred.",
+      "Di sini kita lihat daripada bahagian buah yang mana minyak itu datang, bagaimana ia dikeluarkan, kenapa harganya rendah, dan cara mengenalinya sebelum bayar."
+    ],
+    "sections": [
+      {
+        "heading": "Apa itu minyak zaitun pomace",
+        "id": "apa-itu-pomace",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun pomace ialah minyak yang diekstrak daripada hampas — kulit, isi dan serpihan biji yang tinggal di dalam mesin selepas buah zaitun diperah. Hampas itu masih menyimpan sedikit minyak, tetapi minyak tersebut tidak dapat dikeluarkan dengan tekanan sahaja. Ia dikeluarkan menggunakan pelarut, kemudian ditapis sebelum layak dijual sebagai makanan."
+          },
+          {
+            "type": "p",
+            "text": "Kerana bahan mentahnya lain, hasilnya pun lain: warna kuning pucat, bau nyaris tiada, rasa zaitun hampir hilang. Gred yang lain pula dibandingkan dalam [panduan gred minyak zaitun](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPomaceInline",
+            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+          }
+        ]
+      },
+      {
+        "heading": "Hampas yang tinggal selepas perahan pertama",
+        "id": "hampas-selepas-perahan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Selepas buah zaitun dikisar dan diperah, yang mengalir keluar ialah minyak dan air, manakala yang tertinggal ialah jisim lembap berwarna coklat gelap. Itulah hampas. Di kilang besar ia keluar bertan-tan sehari dan tidak dibuang begitu sahaja: ia dijual kepada kilang lain sebagai bahan mentah."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Kulit dan isi buah yang sudah kehilangan sebahagian besar minyaknya.",
+              "Serpihan biji zaitun yang hancur semasa pengisaran.",
+              "Air pemprosesan yang menjadikan hampas lembap dan cepat masam.",
+              "Baki minyak yang terlalu sedikit untuk diperah keluar."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPomaceInline",
+            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+          }
+        ]
+      },
+      {
+        "heading": "Bagaimana minyak dikeluarkan daripada hampas",
+        "id": "cara-diekstrak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hampas dikeringkan dahulu, kemudian dibasuh dengan pelarut yang melarutkan baki minyak keluar daripada pepejalnya. Pelarut itu disejat dan dipulihkan semula, meninggalkan minyak hampas mentah yang berbau kuat dan belum boleh dimakan. Selepas itu barulah ia melalui penapisan sehingga menjadi neutral."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Hampas basah dikeringkan supaya pelarut dapat bekerja.",
+              "Pelarut gred makanan melarutkan baki minyak keluar daripada pepejal.",
+              "Pelarut disejat keluar dan digunakan semula pada pusingan berikutnya.",
+              "Minyak mentah dinyahasid, dilunturkan warnanya dan dinyahbau.",
+              "Sedikit minyak zaitun dara dicampur semula sebelum dibotolkan."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPomaceInline",
+            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa harganya jauh lebih rendah",
+        "id": "kenapa-murah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bahan mentahnya ialah sisa yang kosnya sudah ditanggung oleh perahan pertama, jadi harganya bermula rendah. Pengekstrakan dengan pelarut mengeluarkan hampir semua baki minyak, jadi hasil setiap tan hampas tinggi. Selebihnya soal skala dan bungkusan: tin besar untuk dapur komersial, bukan botol kecil untuk meja."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Bahan mentah ialah hasil sampingan, bukan buah yang dipetik khas.",
+              "Pelarut mengeluarkan lebih banyak minyak daripada tekanan mekanikal.",
+              "Tiada rasa halus yang perlu dijaga, jadi tiada kos untuk menjaganya."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPomaceInline",
+            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+          },
+          {
+            "type": "p",
+            "text": "Apa yang membentuk harga di hujung sebelah lagi rak pula dipecahkan dalam [harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia)."
+          }
+        ]
+      },
+      {
+        "heading": "Di mana pomace berdiri antara gred lain",
+        "id": "jadual-gred",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gred menerangkan dua perkara: daripada apa minyak itu datang, dan apa yang dilakukan kepadanya selepas itu. Extra virgin dan virgin datang terus daripada buah tanpa penapisan. Minyak ditapis datang daripada buah tetapi melalui penapisan. Pomace pula bermula daripada hampas, bukan daripada buah."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Gred",
+              "Sumber minyak",
+              "Cara dikeluarkan",
+              "Rasa"
+            ],
+            "rows": [
+              [
+                "Extra virgin",
+                "Buah zaitun",
+                "Perahan mekanikal, suhu rendah",
+                "Pedas, sedikit pahit"
+              ],
+              [
+                "Virgin",
+                "Buah zaitun",
+                "Perahan mekanikal",
+                "Lebih lembut"
+              ],
+              [
+                "Ditapis (pure, light)",
+                "Buah zaitun",
+                "Perahan, kemudian penapisan",
+                "Hampir neutral"
+              ],
+              [
+                "Pomace",
+                "Hampas selepas perahan",
+                "Pelarut, kemudian penapisan",
+                "Nyaris tiada"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPomaceInline",
+            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+          }
+        ]
+      },
+      {
+        "heading": "Cara mengenali pomace pada label di kedai",
+        "id": "kenali-label",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Perkataan gred itu mesti ada pada label, cuma ia jarang dicetak sebesar nama jenama. Baca baris kecil di bawah atau di belakang botol, dan bandingkan harga seliter, bukan harga sebotol. Saiz bungkusan dan warna minyak juga memberi petunjuk sebelum tutup dibuka."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Cari perkataan **pomace**, olive pomace oil atau minyak hampas zaitun.",
+              "Tin lima liter berbukaan lebar biasanya minyak untuk menggoreng, bukan untuk meja.",
+              "Harga seliter yang jauh lebih rendah daripada botol dara di rak yang sama.",
+              "Warna kuning pucat dan hampir tiada bau apabila tutup dibuka.",
+              "Jarang ada tarikh tuaian pada label, hanya tarikh luput yang panjang."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPomaceInline",
+            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Baca gred, bukan perkataan zaitun",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Pomace dan extra virgin kedua-duanya sah dipanggil minyak zaitun, tetapi keduanya bahan yang berlainan kerja. Satu untuk kuali besar yang menelan minyak seliter demi seliter; satu lagi untuk hidangan yang minyaknya memang dirasa."
+        },
+        {
+          "type": "p",
+          "text": "Kalau minyak itu akan sampai ke pinggan tanpa dipanaskan, baca baris gred dahulu. [Lihat minyak dara Arabian Village](/products) sebagai titik perbandingan."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Adakah minyak zaitun pomace itu minyak zaitun sebenar?",
+        "a": "Ia sah dilabel sebagai minyak zaitun kerana asalnya buah yang sama, tetapi ia bukan gred yang sama. Minyak dara diperah terus daripada buah tanpa penapisan. Pomace diekstrak daripada hampas yang tinggal selepas perahan itu, kemudian ditapis sehingga rasa dan baunya hampir hilang."
+      },
+      {
+        "q": "Boleh ke guna minyak zaitun pomace untuk menggoreng?",
+        "a": "Boleh, dan itulah kerja yang direka untuknya. Ia neutral, murah seliter dan tidak membawa rasa ke dalam makanan, jadi dapur komersial memakainya untuk kuali besar. Untuk salad, cicahan roti atau siraman akhir ia tidak menyumbang apa-apa rasa, jadi wangnya lebih baik dibelanjakan pada gred lain."
+      },
+      {
+        "q": "Kenapa minyak zaitun pomace jauh lebih murah?",
+        "a": "Tiga sebab bergabung. Bahan mentahnya hasil sampingan perahan pertama, pengekstrakan dengan pelarut mengeluarkan hampir semua baki minyak daripada setiap tan hampas, dan produk akhirnya dibungkus dalam tin besar untuk dapur komersial. Tiada rasa halus yang perlu dijaga sepanjang rantaian itu."
+      },
+      {
+        "q": "Adakah pelarut masih tinggal di dalam minyak pomace?",
+        "a": "Pelarut disejat keluar dan dipulihkan semula semasa pemprosesan, dan bakinya tertakluk kepada piawaian makanan yang mengawal minyak itu. Minyak hampas yang masih mentah tidak dijual terus kepada pengguna sama sekali. Ia mesti melalui penapisan penuh dahulu sebelum boleh dibotolkan dan dijual sebagai makanan."
+      },
+      {
+        "q": "Bagaimana saya tahu botol di tangan saya pomace?",
+        "a": "Baca baris gred, bukan nama jenama. Botol atau tin pomace akan menulis pomace atau olive pomace oil di suatu tempat pada label, selalunya dalam huruf jauh lebih kecil daripada perkataan olive oil di atasnya. Kalau perkataan itu ada, gred itulah isinya."
+      },
+      {
+        "q": "Minyak Arabian Village pomace atau extra virgin?",
+        "a": "Extra virgin perah sejuk dari Palestin, bukan pomace. Ia diperah secara mekanikal terus daripada buah zaitun, tanpa pelarut dan tanpa penapisan, dan dijual dalam botol kaca saiz 250 ml dan 500 ml melalui Berkat Madinah Store di Selangor serta saluran dalam talian mereka."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun extra virgin perah sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta enam perisa Infused Collection."
+      },
+      {
+        "label": "Apa itu minyak zaitun extra virgin dan gred lain",
+        "path": "blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain",
+        "description": "Empat gred pada rak Malaysia dan apa yang berubah pada cara pemprosesan, rasa dan harga."
+      },
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "Perbandingan harga seliter antara saiz botol, dan apa yang ada di sebalik angka itu."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Dua cawangan Berkat Madinah Store di Selangor, waktu operasi, dan saluran dalam talian rasmi."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-goreng",
+    "slug": "minyak-zaitun-untuk-goreng",
+    "seoTitle": "Minyak Zaitun untuk Goreng: Kaedah dan Suhu",
+    "metaTitle": "Minyak Zaitun untuk Goreng: Kaedah dan Suhu",
+    "metaDescription": "Goreng cetek, tumis, goreng rendam dan kerja wok bukan satu perkara yang sama. Jadual kaedah lawan suhu, kos seperiuk, dan bau minyak terlebih panas.",
+    "focusKeyword": "minyak zaitun untuk goreng",
+    "relatedKeywords": [
+      "olive oil untuk goreng",
+      "boleh ke goreng guna minyak zaitun",
+      "minyak zaitun goreng ikan",
+      "minyak zaitun goreng ayam",
+      "minyak zaitun untuk tumis",
+      "goreng rendam minyak zaitun",
+      "minyak zaitun untuk wok",
+      "suhu goreng minyak zaitun",
+      "minyak zaitun berasap",
+      "minyak zaitun guna semula",
+      "kos minyak zaitun seliter"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun untuk Goreng",
+      "Teknik Memasak",
+      "Dapur Malaysia",
+      "Kos Dapur",
+      "Extra Virgin"
+    ],
+    "h1": "Minyak Zaitun untuk Goreng: Cetek, Tumis, Rendam dan Kerja Wok",
+    "excerpt": "Empat kaedah goreng, empat suhu, dan hanya sebahagian daripadanya sesuai dengan minyak zaitun dara. Termasuk kos seperiuk untuk goreng rendam.",
+    "keyTakeaway": "Minyak zaitun untuk goreng paling menjadi pada goreng cetek dan tumis, di mana suhu kuali duduk sekitar 140 hingga 180 darjah. Untuk periuk goreng rendam halangannya kos, bukan haba. Untuk kerja wok api besar pula minyak sudah mula berasap sebelum kuali sempat panas cukup.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukGorengHero",
+      "alt": "Minyak zaitun mengalir dalam aliran tetap dari paip keluli tahan karat ke dalam tangki terbuka di kilang pemprosesan."
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-goreng.jpg",
+    "intro": [
+      "Kuali sudah panas, botol minyak zaitun ada di rak, dan soalannya cuma satu: boleh ke goreng ikan dengan yang ini?",
+      "Jawapannya bergantung pada jenis gorengan. Tumis, goreng cetek, goreng rendam sekuali penuh dan kerja wok api besar bukan satu perkara yang sama.",
+      "Di sini kita asingkan empat kaedah itu: suhu, kos seperiuk, dan bau minyak yang terlebih panas."
+    ],
+    "sections": [
+      {
+        "heading": "Boleh ke minyak zaitun untuk goreng ikan dan ayam?",
+        "id": "boleh-ke-goreng",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Boleh untuk goreng cetek dan tumis, dengan api sederhana dan minyak setakat separuh tinggi bahan sahaja. Minyak zaitun dara mula berasap lebih awal daripada minyak yang ditapis, jadi wok api besar bukan tempatnya; periuk goreng rendam pula tersekat pada kos, bukan pada haba. Ikan kembung dan ketul ayam yang nipis menjadi elok dalam kuali leper berlapis nipis."
+          },
+          {
+            "type": "p",
+            "text": "Takat asap dan suhu secara am ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukGorengInline",
+            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+          }
+        ]
+      },
+      {
+        "heading": "Empat kaedah goreng dan suhu masing-masing",
+        "id": "kaedah-lawan-suhu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Perkataan goreng merangkumi empat kerja yang berbeza suhunya. Tumis berlaku paling rendah kerana bahannya halus dan cepat masak. Goreng cetek naik sedikit. Goreng rendam perlu suhu yang stabil supaya salutan mengeras sebelum minyak masuk ke dalam. Kerja wok pula memang menuntut kuali yang hampir berasap."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kaedah",
+              "Suhu biasa",
+              "Minyak zaitun dara?"
+            ],
+            "rows": [
+              [
+                "Tumis bawang, bawang putih, rempah",
+                "140-180°C",
+                "Ya, kerja yang paling sesuai"
+              ],
+              [
+                "Goreng cetek dalam kuali leper",
+                "160-180°C",
+                "Ya, kekalkan api sederhana"
+              ],
+              [
+                "Goreng rendam, bahan terapung",
+                "175-190°C",
+                "Boleh, tetapi kosnya tinggi"
+              ],
+              [
+                "Wok api besar, goreng kilas",
+                "220°C ke atas",
+                "Tidak, pilih minyak yang lebih neutral"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukGorengInline",
+            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+          }
+        ]
+      },
+      {
+        "heading": "Goreng cetek dan tumis: di sini ia paling menjadi",
+        "id": "goreng-cetek-dan-tumis",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dua sudu besar minyak dalam kuali leper sudah cukup untuk sekeping ikan atau dua ketul ayam. Panaskan kuali dahulu, baru tuang minyak, dan tunggu sehingga permukaannya bergerak nipis. Bahan yang masuk ke dalam minyak suam akan menyerap minyak dan bukan mengeras, dan itulah punca gorengan menjadi lemau."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Keringkan permukaan ikan atau ayam dengan tuala dapur sebelum ia masuk.",
+              "Panaskan kuali kosong, kemudian tuang dua hingga tiga sudu besar minyak.",
+              "Uji dengan sehiris bawang: berdesir perlahan bermakna api sudah cukup.",
+              "Angkat ke atas rak dawai, bukan ditindan atas pinggan — wap terperangkap dan salutan jadi lemau."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukGorengInline",
+            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+          }
+        ]
+      },
+      {
+        "heading": "Goreng rendam: kira kos seperiuk dahulu",
+        "id": "kos-goreng-rendam",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Periuk goreng rendam yang sederhana menelan satu setengah hingga dua liter minyak sekali isi. Itu bukan sukatan sudu, itu botol demi botol. Sebelum bab suhu, kira dahulu berapa nilai minyak yang duduk dalam periuk itu, kerana angka inilah yang biasanya menamatkan perbincangan di dapur rumah."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Saiz botol",
+              "Harga",
+              "Kos seliter"
+            ],
+            "rows": [
+              [
+                "250 ml",
+                "RM59.00",
+                "RM236"
+              ],
+              [
+                "500 ml",
+                "RM103.00",
+                "RM206"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukGorengInline",
+            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+          },
+          {
+            "type": "p",
+            "text": "Pada RM206 seliter, dua liter dalam periuk bermakna lebih empat ratus ringgit minyak untuk satu petang menggoreng. Lihat [saiz dan harga penuh](/products). Untuk kuantiti begitu, minyak masak biasa lebih praktikal."
+          }
+        ]
+      },
+      {
+        "heading": "Kerja wok: kenapa api besar bukan tempatnya",
+        "id": "kerja-wok",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Goreng kilas bergantung pada kuali yang panas melampau supaya bahan bertukar warna dalam masa singkat tanpa mengeluarkan air. Pada suhu itu minyak zaitun dara sudah berasap dan rasanya bertukar hangit sebelum kuey teow sempat masak. Minyak yang lebih neutral dan lebih tahan haba melakukan kerja itu tanpa membawa rasa sendiri."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Char kuey teow, nasi goreng dan mi goreng — guna minyak masak biasa dalam wok.",
+              "Selepas hidangan diangkat dari wok, renjis sedikit minyak zaitun yang tidak dipanaskan supaya rasanya kekal utuh.",
+              "Untuk gred yang lebih tahan haba, rujuk [gred minyak zaitun](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukGorengInline",
+            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+          }
+        ]
+      },
+      {
+        "heading": "Bau: tanda minyak sudah terlebih panas",
+        "id": "bau-terlebih-panas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hidung memberitahu lebih awal daripada mata. Minyak zaitun yang panas dalam julat kerjanya berbau seperti buah dan sedikit rumput. Minyak yang melepasi hadnya bertukar tajam dan pedih di hidung, dan asapnya menjadi berterusan, bukan sekadar wap nipis daripada bahan yang basah."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Asap nipis berterusan dari permukaan minyak, bukan dari bahan yang baru masuk.",
+              "Bau tajam yang memedihkan mata apabila anda mendekat ke kuali.",
+              "Buih halus yang tidak surut walaupun selepas bahan diangkat."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukGorengInline",
+            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+          },
+          {
+            "type": "note",
+            "title": "Jika ia sudah berasap",
+            "text": "Matikan api dan biarkan kuali sejuk sebelum bahan masuk. Minyak yang sudah hangit tidak pulih rasanya, jadi tuang keluar dan mula semula."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Pilih kaedah dahulu, baru minyak",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Soalan yang betul bukan sama ada minyak zaitun boleh digoreng, tetapi gorengan yang mana. Untuk kuali leper dan tumis harian, dua sudu besar sudah cukup."
+        },
+        {
+          "type": "p",
+          "text": "Untuk periuk penuh dan wok api besar, biarkan minyak masak biasa buat kerja itu. [Lihat tempat membeli](/shop) untuk cawangan Berkat Madinah Store."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Boleh ke goreng ikan dengan minyak zaitun?",
+        "a": "Boleh, untuk goreng cetek dalam kuali leper dengan api sederhana. Guna dua hingga tiga sudu besar sahaja, keringkan permukaan ikan dahulu, dan jangan alihkan ikan pada dua minit pertama. Untuk ikan seekor penuh yang direndam dalam minyak, minyak masak biasa lebih praktikal dari segi kos."
+      },
+      {
+        "q": "Berbaloi ke guna minyak zaitun untuk goreng rendam?",
+        "a": "Jarang berbaloi di dapur rumah. Satu periuk memerlukan satu setengah hingga dua liter minyak sekali isi, dan pada harga seliter minyak zaitun dara, itu ratusan ringgit untuk satu sesi menggoreng. Simpan minyak zaitun untuk kerja bersukat sudu dan gunakan minyak biasa untuk periuk."
+      },
+      {
+        "q": "Berapa kali minyak zaitun boleh diguna semula selepas menggoreng?",
+        "a": "Untuk goreng cetek bahan yang bersih, dua atau tiga kali. Tapis semasa minyak masih suam melalui penapis halus, simpan dalam balang tertutup jauh dari dapur, dan buang apabila minyak itu gelap, berbuih atau berbau tajam. Minyak yang menggoreng salutan tepung lebih cepat rosak."
+      },
+      {
+        "q": "Kenapa dapur berbau hangit bila saya goreng dengan minyak zaitun?",
+        "a": "Biasanya api terlalu besar atau kuali dibiarkan kosong terlalu lama sebelum bahan masuk. Minyak zaitun dara berasap lebih awal daripada minyak yang ditapis. Kecilkan api ke sederhana, uji dengan sehiris bawang, dan masukkan bahan sebaik minyak mula bergerak nipis di permukaan."
+      },
+      {
+        "q": "Minyak mana untuk char kuey teow dan nasi goreng?",
+        "a": "Guna minyak masak biasa yang tahan haba tinggi. Wok untuk goreng kilas beroperasi melebihi dua ratus dua puluh darjah, jauh di atas julat minyak zaitun dara. Kalau mahu rasa minyak zaitun dalam hidangan itu, renjis sedikit minyak zaitun yang tidak dipanaskan selepas hidangan diangkat dari wok."
+      },
+      {
+        "q": "Perlu ke guna gred yang lebih murah untuk menggoreng?",
+        "a": "Untuk goreng kuantiti besar, minyak yang ditapis memang lebih neutral dan lebih tahan haba. Tetapi minyak zaitun dara membawa rasa buah dan sedikit pedas yang hilang selepas penapisan. Pilih ikut hidangan: rasa untuk tumis dan cicah, neutral untuk periuk dan wok."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Panduan am memasak dengan minyak zaitun, takat asap, dan perbandingan dengan minyak masak lain."
+      },
+      {
+        "label": "Apa itu minyak zaitun extra virgin dan gred lain",
+        "path": "blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain",
+        "description": "Beza antara gred dara, dara extra dan minyak yang ditapis, dan apa yang berubah pada rasa serta haba."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun sejuk-tekan asal Palestin dalam saiz 250 ml dan 500 ml, serta Infused Collection."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "minyak-zaitun-vs-minyak-masak",
+    "slug": "minyak-zaitun-vs-minyak-masak-lain",
+    "seoTitle": "Minyak Zaitun vs Minyak Masak: Rasa, Suhu, Harga",
+    "metaTitle": "Minyak Zaitun vs Minyak Masak: Rasa, Suhu, Harga",
+    "metaDescription": "Minyak zaitun berbanding minyak sawit, kelapa dara, bijan dan kacang tanah: rasa, takat asap, dan kerja dapur mana untuk minyak mana.",
+    "focusKeyword": "minyak zaitun vs minyak masak",
+    "relatedKeywords": [
+      "minyak zaitun vs minyak sawit",
+      "beza minyak zaitun dan minyak masak",
+      "olive oil vs minyak masak",
+      "minyak zaitun ganti minyak masak",
+      "minyak kelapa dara vs minyak zaitun",
+      "minyak bijan untuk masak",
+      "minyak kacang tanah untuk wok",
+      "takat asap minyak masak",
+      "jenis minyak masak di Malaysia",
+      "minyak mana untuk goreng ikan"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Perbandingan Minyak",
+      "Panduan Dapur",
+      "Minyak Masak Malaysia",
+      "Kos Dapur"
+    ],
+    "h1": "Minyak Zaitun vs Minyak Masak Lain di Dapur Malaysia",
+    "excerpt": "Minyak sawit, kelapa dara, bijan, kacang tanah dan zaitun dibandingkan pada rasa, takat asap dan kerja dapur — dan kenapa harganya meletakkannya dalam kelas lain.",
+    "keyTakeaway": "Minyak zaitun vs minyak masak bukan soal mana satu menang, tetapi kerja mana untuk minyak mana. Minyak sawit dan minyak kacang tanah untuk goreng rendam dan wok api besar. Minyak zaitun dara untuk tumis, panggang, sos salad dan cicah, kerana rasanya sampai ke pinggan. Harga seliternya pula meletakkannya dalam kelas lain.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunVsMinyakMasakHero",
+      "alt": "Seorang lelaki bersongkok sedang menghidu minyak zaitun dari gelas penilai berwarna biru di meja kayu, dengan kelalang kaca dan rak tabung sampel di hadapannya."
+    },
+    "ogImage": "/og/blog-minyak-zaitun-vs-minyak-masak.jpg",
+    "intro": [
+      "Kebanyakan dapur di Malaysia ada lebih daripada satu botol minyak: sebotol besar minyak masak sawit, mungkin minyak kelapa dara, sebotol kecil minyak bijan, dan sejak beberapa tahun ini, sebotol minyak zaitun.",
+      "Soalan yang lebih berguna bukan mana satu terbaik, tetapi kerja mana untuk minyak mana.",
+      "Perbandingan di bawah melihat tiga perkara: rasa, takat asap dan kegunaan dapur. Harga diambil berasingan, kerana harga seliter minyak zaitun meletakkannya dalam kelas yang lain sama sekali."
+    ],
+    "sections": [
+      {
+        "heading": "Empat minyak yang memang ada di dapur Malaysia",
+        "id": "empat-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak sawit ialah minyak masak lalai di kebanyakan rumah: murah, tahan panas, hampir tiada rasa. Minyak kelapa dara membawa bau kelapa yang jelas. Minyak bijan pekat dipakai titik demi titik sebagai perisa. Minyak kacang tanah tahan api besar untuk kerja wok. Minyak zaitun dara pula dibeli kerana rasanya."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Minyak",
+              "Rasa",
+              "Takat asap",
+              "Kerja dapur"
+            ],
+            "rows": [
+              [
+                "Minyak zaitun dara extra",
+                "Buah, pahit halus, pedas",
+                "190-210°C",
+                "Salad, cicah, tumis, panggang"
+              ],
+              [
+                "Minyak masak sawit",
+                "Hampir neutral",
+                "kira-kira 230°C",
+                "Goreng rendam, goreng ikan"
+              ],
+              [
+                "Minyak kelapa dara",
+                "Kelapa, jelas",
+                "175-190°C",
+                "Kuih, gorengan ringan"
+              ],
+              [
+                "Minyak bijan pekat",
+                "Bijan sangrai, kuat",
+                "rendah",
+                "Titis pada akhir masakan"
+              ],
+              [
+                "Minyak kacang tanah",
+                "Ringan, sedikit rasa kacang",
+                "kira-kira 230°C",
+                "Wok api besar"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakMasakInline",
+            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+          },
+          {
+            "type": "p",
+            "text": "Baca angka takat asap sebagai julat, bukan titik tepat — perinciannya ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          }
+        ]
+      },
+      {
+        "heading": "Rasa: minyak yang menyumbang, minyak yang neutral",
+        "id": "rasa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak masak sawit ditapis sehingga hampir tiada rasa, dan itu memang tujuannya — ia sepatutnya tidak terasa dalam lauk. Minyak zaitun dara tidak ditapis, jadi ia masuk ke dalam hidangan bersama rasanya sendiri: buah, sedikit pahit di hujung lidah, pedas halus di kerongkong."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Minyak neutral** — bila anda mahu rempah, ikan atau sayur berdiri sendiri.",
+              "**Minyak berasa** — bila minyak itu sebahagian daripada rasa hidangan: sos salad, roti cicah.",
+              "**Minyak perisa** — bijan pekat dan minyak zaitun infused; guna sedikit dahulu."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakMasakInline",
+            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+          }
+        ]
+      },
+      {
+        "heading": "Suhu: kaedah mana untuk minyak mana",
+        "id": "suhu-dan-kaedah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kebanyakan kerja dapur harian tidak sepanas yang orang sangka. Tumis di atas api sederhana berada sekitar 140 hingga 180°C selepas bahan masuk, dan memanggang dalam ketuhar lazimnya 180 hingga 200°C. Kedua-duanya dalam julat minyak zaitun dara. Yang keluar daripada julat itu ialah goreng rendam yang lama dan wok api penuh."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tumis bawang, bawang putih dan rempah — minyak zaitun sesuai.",
+              "Panggang sayur atau ayam pada 180 hingga 200°C — sesuai.",
+              "Goreng cetek ikan atau telur mata — sesuai, kalau kuali tidak berasap.",
+              "Goreng rendam dan wok api penuh — minyak sawit atau kacang tanah."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakMasakInline",
+            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+          }
+        ]
+      },
+      {
+        "heading": "Harga: kenapa minyak zaitun duduk dalam kelas lain",
+        "id": "harga-seliter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak masak sawit dijual dalam botol beberapa liter dan minyak zaitun dara dalam botol 250 ml atau 500 ml, jadi harga di rak membandingkan dua saiz yang berlainan. Bahagikan harga dengan isi padu dahulu. Minyak zaitun dara berkali ganda lebih mahal seliter."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Saiz botol",
+              "Harga",
+              "Harga seliter"
+            ],
+            "rows": [
+              [
+                "250 ml",
+                "RM59.00",
+                "RM236"
+              ],
+              [
+                "500 ml",
+                "RM103.00",
+                "RM206"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakMasakInline",
+            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+          },
+          {
+            "type": "p",
+            "text": "[Harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia) memecahkan angka itu mengikut saiz botol."
+          }
+        ]
+      },
+      {
+        "heading": "Pembahagian kerja: dua botol lebih masuk akal",
+        "id": "pembahagian-kerja",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rumah yang paling senang menggunakan minyak zaitun bukan rumah yang membuang minyak masak, tetapi rumah yang menyimpan kedua-duanya dan tahu bila hendak mencapai yang mana. Minyak masak untuk kerja kuantiti dan api besar. Minyak zaitun untuk kerja yang rasanya sampai ke pinggan."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Letak minyak masak sawit dekat dapur untuk goreng rendam.",
+              "Simpan minyak zaitun dalam kabinet tertutup, jauh daripada haba dapur.",
+              "Guna minyak zaitun untuk tumis, panggang, sos salad dan roti cicah.",
+              "Kekalkan minyak bijan pekat sebagai titisan akhir, bukan minyak menggoreng."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakMasakInline",
+            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+          }
+        ]
+      },
+      {
+        "heading": "Kesilapan biasa apabila bertukar daripada minyak masak",
+        "id": "kesilapan-biasa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Orang yang baru bertukar selalunya menuang minyak zaitun sebanyak minyak masak, memanaskan kuali kosong terlalu lama, dan menyimpan botol di sebelah dapur gas. Ketiga-tiganya menghabiskan botol lebih cepat daripada patut dan mengubah rasa hidangan, dan ketiga-tiganya senang dielakkan tanpa menukar resepi."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Menuang ikut sukatan lama** — mula dengan lebih sedikit, tambah kemudian.",
+              "**Kuali kosong berasap** — panaskan kuali, tuang minyak, terus masukkan bahan.",
+              "**Botol di sebelah dapur** — haba berterusan menumpulkan rasa; simpan dalam kabinet."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakMasakInline",
+            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Bukan ganti, tetapi bahagi",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun tidak menggantikan minyak masak di dapur Malaysia, dan tidak perlu pun. Ia mengambil kerja yang minyak neutral tidak boleh buat: hidangan yang sebahagian rasanya datang daripada minyak itu sendiri."
+        },
+        {
+          "type": "p",
+          "text": "Mula dengan satu kerja sahaja — sos salad atau sayur panggang. [Lihat botol dan saiz](/products), atau [tempat membeli](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Boleh ke minyak zaitun ganti minyak masak sepenuhnya?",
+        "a": "Untuk tumis, memanggang dan goreng cetek, boleh. Untuk goreng rendam sekuali penuh dan kerja wok di atas api penuh, minyak sawit atau minyak kacang tanah lebih praktikal — bukan sahaja kerana suhunya lebih tinggi, tetapi kerana kuantiti minyak yang diperlukan sekali gus jauh lebih besar."
+      },
+      {
+        "q": "Berapa kos minyak untuk satu hidangan berbanding satu kuali goreng?",
+        "a": "Kira ikut kerja, bukan ikut botol. Sos salad untuk empat orang menghabiskan kira-kira tiga sudu besar, iaitu 45 ml. Sekuali goreng rendam menelan satu setengah hingga dua liter sekali isi. Minyak yang sama, tetapi kuantitinya berpuluh kali ganda, dan di situlah pilihan minyak ditentukan."
+      },
+      {
+        "q": "Kenapa minyak zaitun jauh lebih mahal seliter?",
+        "a": "Ia diperah daripada buah, sekali setahun selepas musim tuaian, dan buah itu menghasilkan minyak dalam kuantiti yang kecil berbanding beratnya. Minyak zaitun dara Arabian Village berharga RM59.00 untuk botol 250 ml dan RM103.00 untuk 500 ml, iaitu RM236 dan RM206 seliter."
+      },
+      {
+        "q": "Minyak kelapa dara atau minyak zaitun untuk masakan Melayu?",
+        "a": "Ikut rasa hidangan. Minyak kelapa dara membawa bau kelapa yang duduk elok dengan lauk bersantan dan kuih. Minyak zaitun dara pula membawa rasa buah dan pedas halus di kerongkong, yang lebih sesuai untuk sayur panggang, sos salad dan roti cicah."
+      },
+      {
+        "q": "Boleh campur minyak zaitun dengan minyak masak dalam satu kuali?",
+        "a": "Boleh, tetapi hasilnya separuh jalan: anda dapat sedikit rasa minyak zaitun sambil menjimatkan kos. Kalau tujuannya menaikkan api pula, campuran itu tidak menaikkan takat asap minyak zaitun. Lebih senang pilih satu minyak mengikut kaedah masakan malam itu, dan simpan yang satu lagi untuk kerja lain."
+      },
+      {
+        "q": "Saiz mana untuk rumah yang baru mula guna minyak zaitun?",
+        "a": "Botol 250 ml pada RM59.00, sebab botol yang lama terbuka akan tumpul rasanya sebelum sempat habis. Kalau rumah anda sudah biasa memakainya untuk tumis dan sos salad setiap minggu, botol 500 ml pada RM103.00 lebih murah setiap liter dan masih habis dalam masa yang munasabah."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam botol 250 ml dan 500 ml, serta enam perisa Infused Collection."
+      },
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "Kiraan harga seliter antara saiz botol, dan apa yang ada di sebalik angka itu."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Kaunter Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 3 ---------------- */
+  {
+    "id": "resepi-minyak-zaitun",
+    "slug": "resepi-mudah-dengan-minyak-zaitun",
+    "seoTitle": "Resepi Minyak Zaitun: 4 Hidangan Mudah Malam Ini",
+    "metaTitle": "Resepi Minyak Zaitun: 4 Hidangan Mudah Malam Ini",
+    "metaDescription": "Empat resepi ringkas dengan sukatan sudu besar: cicahan roti, perap ayam, sayur panggang dan pasta cili — dan berapa mililiter minyak setiap satu telan.",
+    "focusKeyword": "resepi minyak zaitun",
+    "relatedKeywords": [
+      "resepi mudah minyak zaitun",
+      "cicahan roti minyak zaitun",
+      "perap ayam minyak zaitun",
+      "sayur panggang minyak zaitun",
+      "pasta bawang putih minyak zaitun",
+      "aglio olio minyak zaitun",
+      "olive oil recipe malaysia",
+      "sukatan minyak zaitun sudu besar",
+      "minyak zaitun extra virgin masak",
+      "resepi ketuhar minyak zaitun"
+    ],
+    "category": "Resepi",
+    "tags": [
+      "Resepi Minyak Zaitun",
+      "Panduan Dapur",
+      "Ketuhar dan Panggang",
+      "Dapur Malaysia",
+      "Arabian Village"
+    ],
+    "h1": "Resepi Mudah dengan Minyak Zaitun untuk Malam Ini",
+    "excerpt": "Empat resepi dengan sukatan penuh, bahan yang dapur kita memang sudah ada, dan berapa minyak yang setiap satu telan.",
+    "keyTakeaway": "Resepi minyak zaitun yang paling menjadi di dapur Malaysia ialah yang ringkas: cicahan roti bawang putih, perap ayam limau nipis, sayur panggang dan pasta bawang putih cili. Semuanya menggunakan sukatan sudu besar, bahan yang sudah ada di rumah, dan siap dalam tiga puluh minit atau kurang.",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressResepiMinyakZaitunHero",
+      "alt": "Wanita Malaysia bertudung memegang sebotol minyak zaitun dengan kedua-dua belah tangan, rumah kampung kayu dan dahan pokok zaitun kelihatan di belakangnya"
+    },
+    "ogImage": "/og/blog-resepi-minyak-zaitun.jpg",
+    "intro": [
+      "Botol minyak zaitun selalunya berdiri di rak sampai lupa. Bukan sebab tak sedap, tetapi sebab tiada resepi khusus yang terlintas bila tiba waktu masak.",
+      "Empat resepi di bawah menggunakan bahan yang dapur Malaysia memang sudah ada, dan setiap satu siap dalam tiga puluh minit.",
+      "Sukatan dalam sudu besar. Satu sudu besar ialah 15 ml, jadi senang digandakan daripada dua orang kepada empat."
+    ],
+    "sections": [
+      {
+        "heading": "Bahan asas yang membuka keempat-empat resepi",
+        "id": "bahan-asas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Empat bahan sahaja berulang dalam resepi minyak zaitun yang ringkas: bawang putih, limau nipis, garam kasar dan lada hitam yang baru dikisar. Minyak zaitun dara membawa rasa bahan itu ke seluruh hidangan kerana kebanyakan aromanya larut dalam lemak, bukan dalam air. Herba kering seperti oregano dan thyme pilihan tambahan, bukan syarat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Bawang putih segar — diparut untuk cicahan, dihiris nipis untuk pasta.",
+              "Limau nipis atau limau kasturi, diperah sejurus sebelum guna.",
+              "Garam kasar untuk taburan akhir, garam halus untuk perapan.",
+              "Lada hitam biji, dikisar terus ke atas hidangan.",
+              "Herba kering: oregano, thyme atau daun ketumbar kering."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressResepiMinyakZaitunInline",
+            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Cicahan roti bawang putih dalam dua minit",
+        "id": "cicahan-roti",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cicahan ialah cara paling cepat menggunakan minyak zaitun kerana ia langsung tidak dimasak. Tuang minyak ke dalam pinggan cetek, bukan mangkuk dalam, supaya roti boleh disapu rata dan bukan direndam. Sediakan sejurus sebelum makan, kerana bawang putih mentah yang duduk lama dalam minyak akan jadi tajam dan pahit."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Tuang 3 sudu besar minyak zaitun ke dalam pinggan cetek.",
+              "Parut satu ulas bawang putih terus ke dalam minyak.",
+              "Taburkan secubit garam kasar, lada hitam dan setengah sudu kecil herba kering.",
+              "Kacau sekali, biar lima minit, hidang dengan roti pita atau roti bakar."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressResepiMinyakZaitunInline",
+            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Perap ayam untuk ketuhar atau air fryer",
+        "id": "perap-ayam",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dalam perapan berfungsi sebagai pembawa: bawang putih, lada dan kulit limau melekat pada permukaan ayam dan tidak tertinggal di dasar bekas. Tiga puluh minit sudah memadai untuk ketulan bersaiz sederhana. Perapan yang lebih lama tidak menjadikan ayam lebih lembut, cuma lebih masin di luar."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Gaul 500 g ayam dengan 3 sudu besar minyak zaitun.",
+              "Masukkan jus satu biji limau nipis dan dua ulas bawang putih diparut.",
+              "Tambah satu sudu kecil garam dan setengah sudu kecil lada hitam.",
+              "Tutup, sejukkan 30 minit, panggang pada 200 darjah Celsius selama 25 minit."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressResepiMinyakZaitunInline",
+            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Sayur panggang yang tidak lembik",
+        "id": "sayur-panggang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sayur panggang gagal apabila minyaknya terlalu sedikit atau loyangnya terlalu penuh. Minyak yang cukup memindahkan haba ketuhar ke setiap permukaan sayur, jadi tepinya berkerak sebelum bahagian tengah sempat mengeluarkan air. Kentang, lobak merah, terung dan brokoli semuanya sesuai, asalkan dipotong lebih kurang sama besar."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Potong 400 g sayur campur kepada saiz sesuap.",
+              "Gaul dengan 2 sudu besar minyak zaitun dan satu sudu kecil garam.",
+              "Susun satu lapisan sahaja di atas loyang, jangan bertindih.",
+              "Panggang 200 darjah Celsius selama 25 minit, goncang loyang sekali di pertengahan."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressResepiMinyakZaitunInline",
+            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Pasta bawang putih dan cili untuk dua orang",
+        "id": "pasta-bawang-putih",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pasta ini menunjukkan minyak zaitun bekerja pada haba sederhana, bukan api besar. Bawang putih dimasak perlahan sehingga kekuningan sahaja, kerana sebaik ia bertukar coklat rasanya pahit dan tiada cara memulihkannya. Air rebusan pasta yang bertepung itulah yang mengikat minyak dengan mi supaya sos tidak berasingan dalam pinggan."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Rebus 200 g spageti, simpan setengah cawan air rebusannya.",
+              "Panaskan 4 sudu besar minyak zaitun dengan api sederhana.",
+              "Masukkan tiga ulas bawang putih dihiris nipis dan sedikit cili kering.",
+              "Gaul mi masuk dengan tiga sudu besar air rebusan dan garam."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressResepiMinyakZaitunInline",
+            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+          }
+        ]
+      },
+      {
+        "heading": "Berapa minyak yang setiap resepi telan",
+        "id": "kos-setiap-resepi",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Satu sudu besar ialah 15 ml, jadi sukatan setiap resepi boleh dibaca terus sebagai isi padu minyak. Empat resepi ringkas ini bersama-sama menggunakan 180 ml, iaitu belum habis satu botol 250 ml, dan itu termasuk pasta untuk dua orang serta satu loyang penuh sayur panggang."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Resepi",
+              "Sukatan",
+              "Isi padu"
+            ],
+            "rows": [
+              [
+                "Cicahan roti",
+                "3 sudu besar",
+                "45 ml"
+              ],
+              [
+                "Perap ayam 500 g",
+                "3 sudu besar",
+                "45 ml"
+              ],
+              [
+                "Sayur panggang 400 g",
+                "2 sudu besar",
+                "30 ml"
+              ],
+              [
+                "Pasta dua orang",
+                "4 sudu besar",
+                "60 ml"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressResepiMinyakZaitunInline",
+            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+          },
+          {
+            "type": "p",
+            "text": "Harga setiap saiz dan kiraan seliternya ada di halaman [produk](/products), manakala suhu untuk setiap kaedah masak ada dalam [panduan dapur](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Pilih satu, masak malam ini",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Empat resepi ini tidak perlu dibuat mengikut urutan. Cicahan roti paling pantas, sayur panggang paling sesuai untuk hidangan tengah minggu, dan perap ayam boleh disediakan pagi sebelum keluar kerja."
+        },
+        {
+          "type": "p",
+          "text": "Untuk hidangan sejuk pula, nisbah sos dan padanan kerabu ada dalam [minyak zaitun untuk salad](/blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk). [Tempat membeli](/shop) menyenaraikan cawangan Berkat Madinah."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Resepi minyak zaitun mana paling mudah untuk pemula?",
+        "a": "Cicahan roti. Tuang tiga sudu besar minyak ke dalam pinggan cetek, parut satu ulas bawang putih, taburkan garam kasar dan lada hitam. Siap dalam dua minit dan tidak melibatkan api langsung, jadi rasa minyak dalam botol itulah yang sampai ke mulut."
+      },
+      {
+        "q": "Berapa banyak minyak zaitun untuk perap 500 g ayam?",
+        "a": "Tiga sudu besar, iaitu lebih kurang 45 ml. Itu cukup untuk menyaluti setiap ketulan tanpa meninggalkan kolam minyak di dasar bekas. Tambah jus satu biji limau nipis, dua ulas bawang putih parut, garam dan lada hitam, kemudian perap tiga puluh minit dalam peti sejuk."
+      },
+      {
+        "q": "Boleh guna minyak zaitun untuk sayur panggang dalam ketuhar?",
+        "a": "Boleh. Dua sudu besar untuk 400 gram sayur campur, digaul rata sebelum disusun satu lapisan sahaja di atas loyang. Panggang pada 200 darjah Celsius selama kira-kira 25 minit dan goncang loyang sekali di pertengahan supaya setiap sisi sayur terkena haba."
+      },
+      {
+        "q": "Kenapa bawang putih dalam minyak zaitun saya jadi pahit?",
+        "a": "Kerana ia terlalu masak. Bawang putih cincang bertukar coklat dengan cepat dan rasa pahit itu kekal walaupun ia dibuang kemudian. Gunakan api sederhana, angkat kuali sebaik warnanya kekuningan, dan masukkan bahan lain untuk menurunkan suhu minyak dengan segera."
+      },
+      {
+        "q": "Minyak zaitun jenis mana untuk memasak harian?",
+        "a": "Extra virgin boleh digunakan untuk cicahan, perapan, sayur panggang dan tumisan pada haba sederhana. Bezanya cuma pada kos setiap hidangan, jadi banyak rumah menyimpan botol 500 ml untuk kerja dapur harian dan botol 250 ml untuk hidangan yang tidak dimasak."
+      },
+      {
+        "q": "Berapa lama ayam yang diperap boleh disimpan?",
+        "a": "Ayam yang sudah diperap elok dimasak dalam masa dua puluh empat jam, disimpan bertutup dalam peti sejuk sepanjang tempoh itu. Perapan yang mengandungi jus limau nipis lebih baik dimasak lebih awal lagi, kerana asid itu terus bekerja pada permukaan daging."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun sejuk-tekan asal Palestin dalam saiz 250 ml dan 500 ml, serta perisa Infused Collection."
+      },
+      {
+        "label": "Minyak zaitun untuk salad dan hidangan sejuk",
+        "path": "blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
+        "description": "Nisbah sos tiga banding satu, campuran limau kasturi dan madu, serta padanan kerabu dan ulam."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masak mana yang menjadi dengan minyak zaitun dan suhu yang sesuai untuk setiap satu."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah."
       }
     ]
   },
