@@ -981,7 +981,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressColdPressedOliveOilExplainedHero",
-      "alt": "A bottle of cold pressed olive oil beside freshly picked green olives on a stone ledge"
+      "alt": "Fresh olive oil running from a stainless steel pipe into an open vat at the mill"
     },
     "ogImage": "/og/blog-cold-pressed-olive-oil-explained.jpg",
     "intro": [
@@ -1000,7 +1000,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Olive paste being churned in a stainless steel mixer before mechanical separation at the mill"
+            "alt": "Olive paste coming out of the mill with green oil pouring from the chute"
           }
         ]
       },
@@ -1019,7 +1019,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Olive paste being churned in a stainless steel mixer before mechanical separation at the mill"
+            "alt": "Olive paste coming out of the mill with green oil pouring from the chute"
           }
         ]
       },
@@ -1043,7 +1043,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Olive paste being churned in a stainless steel mixer before mechanical separation at the mill"
+            "alt": "Olive paste coming out of the mill with green oil pouring from the chute"
           }
         ]
       },
@@ -1098,7 +1098,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Olive paste being churned in a stainless steel mixer before mechanical separation at the mill"
+            "alt": "Olive paste coming out of the mill with green oil pouring from the chute"
           }
         ]
       },
@@ -1113,7 +1113,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Olive paste being churned in a stainless steel mixer before mechanical separation at the mill"
+            "alt": "Olive paste coming out of the mill with green oil pouring from the chute"
           }
         ]
       },
@@ -1138,7 +1138,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Olive paste being churned in a stainless steel mixer before mechanical separation at the mill"
+            "alt": "Olive paste coming out of the mill with green oil pouring from the chute"
           },
           {
             "type": "p",
@@ -1240,7 +1240,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressCompareOliveOilBrandsMalaysiaHero",
-      "alt": "A shopper reading the back label of a dark glass bottle while comparing the best olive oil in Malaysia on a shop shelf"
+      "alt": "A man in a songkok nosing olive oil from a blue tasting glass beside sample flasks and a microscope"
     },
     "ogImage": "/og/blog-compare-olive-oil-brands-malaysia.jpg",
     "intro": [
@@ -1269,7 +1269,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing grade, origin and date printed together"
+            "alt": "Crates of freshly harvested green and purple olives stacked after picking"
           }
         ]
       },
@@ -1288,7 +1288,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing grade, origin and date printed together"
+            "alt": "Crates of freshly harvested green and purple olives stacked after picking"
           }
         ]
       },
@@ -1303,7 +1303,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing grade, origin and date printed together"
+            "alt": "Crates of freshly harvested green and purple olives stacked after picking"
           }
         ]
       },
@@ -1338,7 +1338,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing grade, origin and date printed together"
+            "alt": "Crates of freshly harvested green and purple olives stacked after picking"
           },
           {
             "type": "p",
@@ -1361,7 +1361,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing grade, origin and date printed together"
+            "alt": "Crates of freshly harvested green and purple olives stacked after picking"
           }
         ]
       },
@@ -1387,7 +1387,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing grade, origin and date printed together"
+            "alt": "Crates of freshly harvested green and purple olives stacked after picking"
           },
           {
             "type": "note",
@@ -1494,7 +1494,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressHalalOliveOilMalaysiaHero",
-      "alt": "A bottle of Palestinian cold-pressed extra virgin olive oil on a kitchen counter, back label facing the reader for a halal olive oil ingredient check"
+      "alt": "A Malaysian woman in a hijab holding a bottle of Arabian Village Palestinian olive oil beside a kampung house"
     },
     "ogImage": "/og/blog-halal-olive-oil-malaysia.jpg",
     "intro": [
@@ -1518,7 +1518,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing a single-line ingredient list beside a halal mark"
+            "alt": "Whole olives moving along a stainless steel chute into the press"
           }
         ]
       },
@@ -1542,7 +1542,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing a single-line ingredient list beside a halal mark"
+            "alt": "Whole olives moving along a stainless steel chute into the press"
           }
         ]
       },
@@ -1561,7 +1561,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing a single-line ingredient list beside a halal mark"
+            "alt": "Whole olives moving along a stainless steel chute into the press"
           }
         ]
       },
@@ -1580,7 +1580,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing a single-line ingredient list beside a halal mark"
+            "alt": "Whole olives moving along a stainless steel chute into the press"
           }
         ]
       },
@@ -1599,7 +1599,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing a single-line ingredient list beside a halal mark"
+            "alt": "Whole olives moving along a stainless steel chute into the press"
           }
         ]
       },
@@ -1639,7 +1639,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Close-up of an olive oil back label showing a single-line ingredient list beside a halal mark"
+            "alt": "Whole olives moving along a stainless steel chute into the press"
           },
           {
             "type": "note",
@@ -1737,7 +1737,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilPriceMalaysiaHero",
-      "alt": "Two bottles of Palestinian extra virgin olive oil beside a handwritten olive oil Malaysia price comparison on a kitchen counter"
+      "alt": "Dark glass bottles moving along the filling line under stainless steel filling heads"
     },
     "ogImage": "/og/blog-olive-oil-price-malaysia.jpg",
     "intro": [
@@ -1776,7 +1776,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Close-up of a 500 ml dark glass olive oil bottle with its price label and volume clearly visible"
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
           }
         ]
       },
@@ -1791,7 +1791,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Close-up of a 500 ml dark glass olive oil bottle with its price label and volume clearly visible"
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
           }
         ]
       },
@@ -1811,7 +1811,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Close-up of a 500 ml dark glass olive oil bottle with its price label and volume clearly visible"
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
           }
         ]
       },
@@ -1834,7 +1834,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Close-up of a 500 ml dark glass olive oil bottle with its price label and volume clearly visible"
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
           }
         ]
       },
@@ -1853,7 +1853,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Close-up of a 500 ml dark glass olive oil bottle with its price label and volume clearly visible"
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
           }
         ]
       },
@@ -1872,7 +1872,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Close-up of a 500 ml dark glass olive oil bottle with its price label and volume clearly visible"
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
           }
         ]
       }
@@ -1976,7 +1976,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressPalestinianOliveOilOriginHero",
-      "alt": "Green-gold Palestinian olive oil poured from a bottle beside olive branches and fresh olives"
+      "alt": "An old olive tree framing a hillside village and the sea at sunset, with olives resting on the stone ledge"
     },
     "ogImage": "/og/blog-palestinian-olive-oil-origin.jpg",
     "intro": [
@@ -1999,7 +1999,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Terraced hillside olive grove with stone walls, olives being hand-picked into a cloth at harvest"
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
           }
         ]
       },
@@ -2023,7 +2023,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Terraced hillside olive grove with stone walls, olives being hand-picked into a cloth at harvest"
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
           }
         ]
       },
@@ -2042,7 +2042,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Terraced hillside olive grove with stone walls, olives being hand-picked into a cloth at harvest"
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
           }
         ]
       },
@@ -2087,7 +2087,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Terraced hillside olive grove with stone walls, olives being hand-picked into a cloth at harvest"
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
           }
         ]
       },
@@ -2106,7 +2106,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Terraced hillside olive grove with stone walls, olives being hand-picked into a cloth at harvest"
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
           }
         ]
       },
@@ -2125,7 +2125,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Terraced hillside olive grove with stone walls, olives being hand-picked into a cloth at harvest"
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
           },
           {
             "type": "note",
