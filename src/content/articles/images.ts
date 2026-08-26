@@ -206,6 +206,42 @@ import pressZaytAlzaytunLilsteakHero from '../../assets/images/press/zayt-alzayt
 import pressZaytAlzaytunLilsteakInline from '../../assets/images/press/zayt-alzaytun-lilsteak-inline.webp';
 import pressZaytAlzaytunWalzubdaHero from '../../assets/images/press/zayt-alzaytun-walzubda-hero.webp';
 import pressZaytAlzaytunWalzubdaInline from '../../assets/images/press/zayt-alzaytun-walzubda-inline.webp';
+import pressAysKrimBizaytAlzaytunHero from '../../assets/images/press/ays-krim-bizayt-alzaytun-hero.webp';
+import pressAysKrimBizaytAlzaytunInline from '../../assets/images/press/ays-krim-bizayt-alzaytun-inline.webp';
+import pressKaykatAlburtuqalBizaytAlzaytunHero from '../../assets/images/press/kaykat-alburtuqal-bizayt-alzaytun-hero.webp';
+import pressKaykatAlburtuqalBizaytAlzaytunInline from '../../assets/images/press/kaykat-alburtuqal-bizayt-alzaytun-inline.webp';
+import pressKopiMinyakZaitunHero from '../../assets/images/press/kopi-minyak-zaitun-hero.webp';
+import pressKopiMinyakZaitunInline from '../../assets/images/press/kopi-minyak-zaitun-inline.webp';
+import pressMinyakZaitunAisKrimHero from '../../assets/images/press/minyak-zaitun-ais-krim-hero.webp';
+import pressMinyakZaitunAisKrimInline from '../../assets/images/press/minyak-zaitun-ais-krim-inline.webp';
+import pressMinyakZaitunKekOrenHero from '../../assets/images/press/minyak-zaitun-kek-oren-hero.webp';
+import pressMinyakZaitunKekOrenInline from '../../assets/images/press/minyak-zaitun-kek-oren-inline.webp';
+import pressMinyakZaitunUntukPizzaHero from '../../assets/images/press/minyak-zaitun-untuk-pizza-hero.webp';
+import pressMinyakZaitunUntukPizzaInline from '../../assets/images/press/minyak-zaitun-untuk-pizza-inline.webp';
+import pressMinyakZaitunVsMinyakBijanHero from '../../assets/images/press/minyak-zaitun-vs-minyak-bijan-hero.webp';
+import pressMinyakZaitunVsMinyakBijanInline from '../../assets/images/press/minyak-zaitun-vs-minyak-bijan-inline.webp';
+import pressMinyakZaitunVsMinyakBungaMatahariHero from '../../assets/images/press/minyak-zaitun-vs-minyak-bunga-matahari-hero.webp';
+import pressMinyakZaitunVsMinyakBungaMatahariInline from '../../assets/images/press/minyak-zaitun-vs-minyak-bunga-matahari-inline.webp';
+import pressOliveOilCoffeeHero from '../../assets/images/press/olive-oil-coffee-hero.webp';
+import pressOliveOilCoffeeInline from '../../assets/images/press/olive-oil-coffee-inline.webp';
+import pressOliveOilIceCreamHero from '../../assets/images/press/olive-oil-ice-cream-hero.webp';
+import pressOliveOilIceCreamInline from '../../assets/images/press/olive-oil-ice-cream-inline.webp';
+import pressOliveOilMashedPotatoesHero from '../../assets/images/press/olive-oil-mashed-potatoes-hero.webp';
+import pressOliveOilMashedPotatoesInline from '../../assets/images/press/olive-oil-mashed-potatoes-inline.webp';
+import pressOliveOilOrangeCakeHero from '../../assets/images/press/olive-oil-orange-cake-hero.webp';
+import pressOliveOilOrangeCakeInline from '../../assets/images/press/olive-oil-orange-cake-inline.webp';
+import pressOliveOilVsSesameOilHero from '../../assets/images/press/olive-oil-vs-sesame-oil-hero.webp';
+import pressOliveOilVsSesameOilInline from '../../assets/images/press/olive-oil-vs-sesame-oil-inline.webp';
+import pressOliveOilVsSunflowerOilHero from '../../assets/images/press/olive-oil-vs-sunflower-oil-hero.webp';
+import pressOliveOilVsSunflowerOilInline from '../../assets/images/press/olive-oil-vs-sunflower-oil-inline.webp';
+import pressQahwatBizaytAlzaytunHero from '../../assets/images/press/qahwat-bizayt-alzaytun-hero.webp';
+import pressQahwatBizaytAlzaytunInline from '../../assets/images/press/qahwat-bizayt-alzaytun-inline.webp';
+import pressZaytAlzaytunLilbatatisAlmahrusaHero from '../../assets/images/press/zayt-alzaytun-lilbatatis-almahrusa-hero.webp';
+import pressZaytAlzaytunLilbatatisAlmahrusaInline from '../../assets/images/press/zayt-alzaytun-lilbatatis-almahrusa-inline.webp';
+import pressZaytAlzaytunWalsimsimHero from '../../assets/images/press/zayt-alzaytun-walsimsim-hero.webp';
+import pressZaytAlzaytunWalsimsimInline from '../../assets/images/press/zayt-alzaytun-walsimsim-inline.webp';
+import pressZaytAlzaytunWazaytAbadAlshamsHero from '../../assets/images/press/zayt-alzaytun-wazayt-abad-alshams-hero.webp';
+import pressZaytAlzaytunWazaytAbadAlshamsInline from '../../assets/images/press/zayt-alzaytun-wazayt-abad-alshams-inline.webp';
 
 /**
  * Article bodies reference photos by key rather than by import so the content
@@ -417,4 +453,40 @@ export const ARTICLE_IMAGES: Record<ImageKey, string> = {
   pressZaytAlzaytunLilsteakInline,
   pressZaytAlzaytunWalzubdaHero,
   pressZaytAlzaytunWalzubdaInline,
+  pressAysKrimBizaytAlzaytunHero,
+  pressAysKrimBizaytAlzaytunInline,
+  pressKaykatAlburtuqalBizaytAlzaytunHero,
+  pressKaykatAlburtuqalBizaytAlzaytunInline,
+  pressKopiMinyakZaitunHero,
+  pressKopiMinyakZaitunInline,
+  pressMinyakZaitunAisKrimHero,
+  pressMinyakZaitunAisKrimInline,
+  pressMinyakZaitunKekOrenHero,
+  pressMinyakZaitunKekOrenInline,
+  pressMinyakZaitunUntukPizzaHero,
+  pressMinyakZaitunUntukPizzaInline,
+  pressMinyakZaitunVsMinyakBijanHero,
+  pressMinyakZaitunVsMinyakBijanInline,
+  pressMinyakZaitunVsMinyakBungaMatahariHero,
+  pressMinyakZaitunVsMinyakBungaMatahariInline,
+  pressOliveOilCoffeeHero,
+  pressOliveOilCoffeeInline,
+  pressOliveOilIceCreamHero,
+  pressOliveOilIceCreamInline,
+  pressOliveOilMashedPotatoesHero,
+  pressOliveOilMashedPotatoesInline,
+  pressOliveOilOrangeCakeHero,
+  pressOliveOilOrangeCakeInline,
+  pressOliveOilVsSesameOilHero,
+  pressOliveOilVsSesameOilInline,
+  pressOliveOilVsSunflowerOilHero,
+  pressOliveOilVsSunflowerOilInline,
+  pressQahwatBizaytAlzaytunHero,
+  pressQahwatBizaytAlzaytunInline,
+  pressZaytAlzaytunLilbatatisAlmahrusaHero,
+  pressZaytAlzaytunLilbatatisAlmahrusaInline,
+  pressZaytAlzaytunWalsimsimHero,
+  pressZaytAlzaytunWalsimsimInline,
+  pressZaytAlzaytunWazaytAbadAlshamsHero,
+  pressZaytAlzaytunWazaytAbadAlshamsInline,
 };

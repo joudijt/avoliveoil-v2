@@ -109,3 +109,25 @@ same line without re-checking it against the Arabic corpus specifically. A write
 it and a reviewer caught it. **The brief needs the same fact-check a draft gets, every round, not
 assumed correct because it worked in a previous round.**
 
+## Round 7 decisions — 2026-08-26
+
+| # | Decision | Source |
+|---|---|---|
+| D46 **open** | **Two different published orange-cake recipes now coexist on the Malay site.** The live `minyak-zaitun-untuk-kek-dan-bakeri` (an earlier round's general baking guide) carries its own worked orange-cake example — 130 ml oil, 22 cm loaf pan, 160 g sugar, 150 g yogurt, 170 °C. This round's dedicated `minyak-zaitun-kek-oren` independently arrived at 180 ml oil, 20 cm round tin, 200 g sugar, no yogurt, same 170 °C. Both are legitimate on their own terms — one is an illustrative example inside a general guide, the other a dedicated recipe — but a reader who found both would see two different recipes under the same name. Not fixed: editing the earlier-round article is outside this round's scope. Needs one owner decision on whether the general article's example should be trimmed or cross-referenced | Adversarial review, round 7 |
+
+**First round with a dedicated cross-language consistency reviewer built into Stage 6 from the
+start** (round 4's suburhoney lesson, applied here for the first time on avoliveoil, where this
+round had five genuine topical mirrors across all three languages — sunflower comparison, sesame
+comparison, coffee, ice cream, orange cake). It found what the three per-language reviewers could
+not have: a fabricated infused-flavour name in Malay ("halia hitam" / black ginger — not one of the
+real six) and a Malay/English-vs-Arabic disagreement on the same recipe's pan size and oven
+temperature, treating the two independently-agreeing languages as the correct side. Both required a
+second patch directly into the already-imported `.ts` file, not just the draft — `press-import.py`'s
+skip guard means a fix landing on a draft after the real import has run does not propagate on its
+own.
+
+**English came back completely clean for the first time in seven rounds** — the EN reviewer found
+zero defects across all 6 drafts. Worth noting as a data point, not a pattern yet: could mean the
+brief and writers are converging, could mean this round's EN topics (comparisons, a trend, two
+recipes) were simply lower-risk than earlier rounds' health-adjacent or figure-heavy ones.
+
