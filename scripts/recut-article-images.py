@@ -135,13 +135,34 @@ def crop_169(im, zoom, cx, cy):
     return im.crop((x, y, x + w, y + h))
 
 
-def save_budget(im, path, max_kb):
-    """The pool is small and the site is already image-heavy; hold every file to a budget."""
-    for q in (84, 80, 76, 70, 64, 58, 52):
+# Vite collapses byte-identical assets into one hashed file, so an English page ended up serving
+# a file named after a Malay article. Encoding each language a notch apart keeps every file
+# unique on disk without changing what the picture is.
+LANG_Q = {"en": 0, "ms": -2, "ar": -4}
+
+
+_WRITTEN = {}
+
+
+def save_budget(im, path, max_kb, qadj=0):
+    """The pool is small and the site is already image-heavy; hold every file to a budget.
+    Also guarantees the bytes are unique, because Vite collapses identical assets into one
+    hashed file and the surviving name may belong to another language's article."""
+    for extra in range(0, 9):
+        q = _save(im, path, max_kb, qadj - extra)
+        h = hashlib.md5(path.read_bytes()).hexdigest()
+        if h not in _WRITTEN:
+            _WRITTEN[h] = path.name
+            return q
+    return q
+
+
+def _save(im, path, max_kb, qadj=0):
+    for q in (84 + qadj, 80 + qadj, 76 + qadj, 70 + qadj, 64 + qadj, 58 + qadj, 52 + qadj):
         im.save(path, "WEBP", quality=q, method=6)
         if path.stat().st_size <= max_kb * 1024:
             return q
-    return 52
+    return 52 + qadj
 
 
 def box_for(src, zoom, cx, cy):
@@ -253,7 +274,7 @@ def main():
         c = crop_169(im, p["zoom"], p["cx"], p["cy"])
         if p["slot"] == "hero":
             c2 = c.resize(HERO, Image.LANCZOS)
-            save_budget(c2, OUT / f"{p['id']}-hero.webp", 170)
+            save_budget(c2, OUT / f"{p['id']}-hero.webp", 170, LANG_Q[p["lang"]])
             card = None
             for step in (0.06, 0.10, 0.14, 0.02, 0.18, -0.06, -0.10):
                 ccy = min(0.80, max(0.20, p["cy"] + step))
@@ -277,7 +298,7 @@ def main():
         else:
             w = min(1024, c.width)
             c2 = c.resize((w, int(round(w * 9 / 16))), Image.LANCZOS)
-            save_budget(c2, OUT / f"{p['id']}-inline.webp", 110)
+            save_budget(c2, OUT / f"{p['id']}-inline.webp", 110, LANG_Q[p["lang"]])
 
     # The three legacy articles keep their on-page hero (the site's own original image keys),
     # but their OG cards were cut by round 2 from boxes this plan also wants, so they are
