@@ -116,9 +116,9 @@ HERO_FRAMES = [f for f, m in FRAMES.items() if m["hero"]]
 INLINE_FRAMES = list(FRAMES.keys())
 
 # deterministic crop variants — enough distinct boxes per frame for 90+ articles
-ZOOMS = (1.00, 0.97, 0.94, 0.90, 0.86, 0.82, 0.78)
-CYS = (0.50, 0.38, 0.62, 0.44, 0.56, 0.34)
-CXS = (0.50, 0.42, 0.58, 0.46, 0.54, 0.62)
+ZOOMS = (1.00, 0.97, 0.94, 0.91, 0.88, 0.85, 0.82, 0.79, 0.76, 0.73, 0.70)
+CYS = (0.50, 0.40, 0.60, 0.35, 0.65, 0.45, 0.55, 0.30, 0.70)
+CXS = (0.50, 0.40, 0.60, 0.35, 0.65, 0.45, 0.55)
 
 
 def crop_169(im, zoom, cx, cy):
@@ -235,13 +235,18 @@ def build_plan(manifest):
                 pools.setdefault((src, slot), variants(src, slot))
                 pool = pools[(src, slot)]
                 key = (lang, src, slot)
+                # Scoped by (lang, slot), not just lang: a hero crop and an inline crop of the
+                # same source never collide on disk even when the box is identical, because they
+                # resize to different output dimensions. Sharing one budget across both slots
+                # wasted crops and caused a false "pool exhausted" failure.
+                tkey = (lang, slot)
                 z = cx = cy = None
                 while cursor[key] < len(pool):
                     z, cx, cy, b = pool[cursor[key]]
                     cursor[key] += 1
-                    if b in taken_boxes[lang]:
+                    if b in taken_boxes[tkey]:
                         continue
-                    taken_boxes[lang].add(b)
+                    taken_boxes[tkey].add(b)
                     break
                 else:
                     raise SystemExit(f"{src} has no distinct crop left for {aid} {slot} in {lang}")

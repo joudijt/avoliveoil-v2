@@ -1469,6 +1469,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Botol minyak zaitun: kaca gelap dan saiz",
         "path": "blog/botol-minyak-zaitun-kaca-gelap-dan-saiz",
         "description": "Kenapa botol itu penting, dan saiz mana untuk kadar guna anda."
+      },
+      {
+        "label": "Kenapa minyak zaitun tak pernah murah",
+        "path": "blog/kenapa-minyak-zaitun-tak-pernah-murah",
+        "description": "Kos sebenar di sebalik harga, dan bila harga rendah jadi tanda amaran."
       }
     ]
   },
@@ -3112,6 +3117,16 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk air fryer",
         "path": "blog/minyak-zaitun-untuk-air-fryer",
         "description": "Berapa banyak, kenapa bukan sembur aerosol, dan makanan mana yang sesuai."
+      },
+      {
+        "label": "Minyak zaitun untuk sayur panggang",
+        "path": "blog/minyak-zaitun-untuk-sayur-panggang",
+        "description": "Berapa banyak minyak setiap dulang, dan kenapa dulang penuh menghalang kegaringan."
+      },
+      {
+        "label": "Minyak zaitun untuk popcorn",
+        "path": "blog/minyak-zaitun-untuk-popcorn",
+        "description": "Popcorn atas dapur, bukan bag mikrogelombang, dan apa yang minyak dara tambah."
       }
     ]
   },
@@ -5148,6 +5163,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk ikan bakar",
         "path": "blog/minyak-zaitun-untuk-ikan-bakar",
         "description": "Sapu pada ikan, bukan pada jaring, dan tuangan akhir selepas ikan diangkat."
+      },
+      {
+        "label": "Minyak zaitun untuk steak",
+        "path": "blog/minyak-zaitun-untuk-steak",
+        "description": "Teknik dua minyak untuk sear di atas dapur, dan bila minyak dara masuk."
       }
     ]
   },
@@ -8783,6 +8803,16 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store."
+      },
+      {
+        "label": "Minyak zaitun vs mentega",
+        "path": "blog/minyak-zaitun-vs-mentega",
+        "description": "Sebagai sapuan dan lemak masakan, bukan penukaran bakeri, pada rasa dan sifat perang."
+      },
+      {
+        "label": "Minyak zaitun untuk telur goreng",
+        "path": "blog/minyak-zaitun-untuk-telur-goreng",
+        "description": "Gaya Sepanyol: lopak minyak cetek, disiram panas ke atas kuning."
       }
     ]
   },
@@ -9036,6 +9066,1514 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk masak: panduan dapur",
         "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
         "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "minyak-zaitun-murah",
+    "slug": "kenapa-minyak-zaitun-tak-pernah-murah",
+    "seoTitle": "Kenapa Minyak Zaitun Tak Pernah Murah?",
+    "metaTitle": "Kenapa Minyak Zaitun Tak Pernah Murah?",
+    "metaDescription": "Minyak zaitun murah selalu ada sebab. Kenapa harga tak pernah rendah, tanda amaran pada botol murah, dan cara banding harga seliter dengan adil.",
+    "focusKeyword": "minyak zaitun murah",
+    "relatedKeywords": [
+      "minyak zaitun murah malaysia",
+      "kenapa minyak zaitun mahal",
+      "botol minyak zaitun murah",
+      "harga minyak zaitun rendah",
+      "minyak zaitun murah selamat ke tidak",
+      "gred minyak zaitun",
+      "minyak zaitun campuran",
+      "harga seliter minyak zaitun",
+      "minyak zaitun jualan",
+      "tanda minyak zaitun palsu"
+    ],
+    "category": "Panduan Pembeli",
+    "tags": [
+      "Minyak Zaitun Murah",
+      "Harga Minyak Zaitun",
+      "Panduan Pembeli",
+      "Gred Minyak Zaitun",
+      "Dapur Malaysia"
+    ],
+    "h1": "Kenapa Minyak Zaitun Tak Pernah Murah, dan Bila Botol Murah Jadi Tanda Amaran",
+    "excerpt": "Minyak zaitun murah bukan tawaran bertuah — ia hampir selalu bermakna sesuatu. Kos sebenar sebotol, sebab harga sangat rendah patut buat anda tertanya, dan bila harga rendah memang munasabah.",
+    "keyTakeaway": "Minyak zaitun dara tidak pernah murah kerana pokoknya lambat berhasil, tuaian dilakukan dengan tangan, perahan mesti berlaku segera, dan setiap botol diimport ke Malaysia. Harga yang jauh lebih rendah daripada purata pasaran biasanya bermakna gred lebih rendah, campuran atau stok lama, bukan penjimatan sebenar. Banding harga seliter, bukan harga label.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunMurahHero",
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-murah.jpg",
+    "intro": [
+      "Sekali-sekala, sebotol minyak zaitun dara muncul jauh di bawah harga biasa — kadang-kadang separuh harga jenama lain di rak yang sama.",
+      "Soalan yang patut ditanya bukan sama ada produk ini berbaloi, tetapi kenapa harga itu boleh serendah itu, dan apa yang mungkin dikorbankan untuk sampai ke situ.",
+      "Di bawah ada kos sebenar sebotol minyak zaitun, sebab harga rendah keterlaluan patut buat anda berhenti sebentar, dan bila harga murah memang masuk akal."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa minyak zaitun tak pernah murah",
+        "id": "kenapa-tak-pernah-murah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara bermula daripada pokok yang mengambil bertahun untuk matang dan mengeluarkan hasil bermusim, bukan kilang yang boleh dipercepat. Buahnya dituai dalam tempoh singkat setiap tahun, kebanyakannya dengan tangan supaya buah tidak lebam, kemudian mesti diperah dalam beberapa jam supaya rasa dan mutunya tidak merosot. Setiap langkah itu perlahan dan padat kerja, dan kerja padat kos wang, sebelum botol itu pun dihantar merentasi lautan dan melepasi kastam."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunMurahInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Apa sebenarnya yang anda bayar dalam sebotol",
+        "id": "kos-sebenar",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Empat kos berulang dalam setiap botol minyak zaitun dara yang tulen: penjagaan pokok sepanjang tahun, tuaian tangan yang perlahan, perahan segera di kilang berhampiran ladang supaya buah tidak sempat rosak, dan penghantaran antarabangsa lengkap dengan duti. Tiada satu pun daripadanya murah, dan tiada satu pun boleh dilangkau tanpa menjejaskan apa yang masuk ke dalam botol."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Pokok dan tuaian** — dijaga sepanjang tahun, dituai dengan tangan.",
+              "**Perahan segera** — dalam beberapa jam selepas tuaian, bukan berminggu kemudian.",
+              "**Pembotolan** — kaca gelap dan tutup kedap yang melindungi minyak.",
+              "**Penghantaran dan duti** — merentasi benua ke negara yang tidak menanam zaitun."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunMurahInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa harga sangat rendah biasanya bermakna sesuatu",
+        "id": "harga-rendah-bermakna",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Apabila sebotol dijual jauh di bawah kos munasabah untuk keempat-empat langkah di atas, sesuatu pasti telah dipotong. Selalunya itu bermakna gred yang lebih rendah daripada extra virgin, campuran dengan minyak yang lebih murah, atau stok lama yang perlu dihabiskan sebelum ia semakin tengik. Harga itu jujur tentang kosnya, walaupun label tidak."
+          },
+          {
+            "type": "p",
+            "text": "Ini bukan tuduhan terhadap mana-mana jenama — ia cara pasaran minyak zaitun berfungsi merata dunia."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunMurahInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Cara membanding harga seliter dengan adil",
+        "id": "banding-harga-seliter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Botol berlainan saiz tidak boleh dibanding pada harga label sahaja — botol kecil sentiasa kelihatan lebih murah walaupun harga seliternya lebih tinggi. Tukar setiap harga kepada harga seliter dahulu, baru banding angka itu merentasi jenama dan saiz, sebelum tanya soalan gred. Pecahan penuh formula dan contoh pengiraan ada dalam [harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunMurahInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Bila harga murah munasabah, dan bila ia jadi amaran",
+        "id": "murah-munasabah-vs-amaran",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Harga rendah tidak semestinya mencurigakan. Jualan bermusim, saiz botol lebih besar yang menurunkan harga seliter, atau kedai membersihkan stok menjelang tarikh luput — semua itu sebab yang munasabah. Amaran sebenar muncul apabila harga jauh di bawah purata pasaran tanpa sebab yang dinyatakan, terutama pada botol tanpa tarikh tuaian atau gred yang jelas."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Situasi",
+              "Biasanya munasabah",
+              "Patut jadi tanda tanya"
+            ],
+            "rows": [
+              [
+                "Jualan bermusim dengan tarikh tamat jelas",
+                "Ya",
+                "Kalau 'jualan' itu tak pernah tamat"
+              ],
+              [
+                "Botol saiz lebih besar",
+                "Ya, harga seliter turun ikut saiz",
+                "Kalau harga seliter sama macam botol kecil"
+              ],
+              [
+                "Tiada tarikh tuaian atau gred pada label",
+                "Tidak",
+                "Hampir selalu — label jujur nyatakan kedua-duanya"
+              ],
+              [
+                "Harga jauh di bawah purata pasaran tanpa sebab",
+                "Tidak",
+                "Ya — semak gred dan sumber dahulu"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunMurahInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Tanda pada label yang patut disemak sebelum membayar",
+        "id": "tanda-label",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gred, tarikh tuaian dan negara asal patut ada pada label yang jujur — kalau salah satu hilang, itu sendiri satu petunjuk, dan harga murah jadi risiko yang belum dibayar lagi. Extra virgin ialah gred perahan pertama tanpa haba atau bahan kimia. Panduan penuh untuk mengesan minyak yang dicampur atau dilabel salah ada di [cara kenal minyak zaitun palsu](/blog/cara-kenal-minyak-zaitun-palsu)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunMurahInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Harga jujur tentang kos, kalau anda tahu bacaannya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun tak pernah murah kerana setiap langkah untuk menghasilkannya perlahan dan padat kerja — daripada pokok sehinggalah botol sampai ke rak di Malaysia. Harga yang jauh terlalu rendah biasanya bercakap tentang gred atau campuran, bukan tentang penjimatan sebenar."
+        },
+        {
+          "type": "p",
+          "text": "Banding harga seliter dahulu, semak gred dan tarikh tuaian pada label, dan simpan tawaran sebenar untuk jualan bermusim atau botol bersaiz besar. [Lihat saiz dan harga di halaman produk](/products) atau [tempat membeli rasmi](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Kenapa minyak zaitun tak boleh murah macam minyak masak biasa?",
+        "a": "Minyak zaitun datang daripada pokok yang lambat berhasil, dituai dengan tangan dan diperah segera, kemudian diimport ke Malaysia yang tidak menanam zaitun. Setiap langkah itu padat kerja dan padat kos, tidak seperti minyak masak yang dikeluarkan tempatan."
+      },
+      {
+        "q": "Botol minyak zaitun yang sangat murah tu selamat ke tidak untuk dimakan?",
+        "a": "Ia mungkin selamat, tetapi harga jauh di bawah purata pasaran biasanya bermakna gred lebih rendah, campuran atau stok lama, bukan bahaya segera. Semak gred dan tarikh tuaian pada label sebelum membayar, terutama kalau harganya terasa luar biasa rendah."
+      },
+      {
+        "q": "Macam mana nak tahu harga minyak zaitun tu munasabah atau tidak?",
+        "a": "Tukar harga botol kepada harga seliter, kemudian banding angka itu merentasi jenama dan saiz. Formula dan contoh pengiraan penuh ada dalam [harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia). Jangan banding harga label sahaja."
+      },
+      {
+        "q": "Adakah jualan atau diskaun bermakna minyak zaitun itu gred rendah?",
+        "a": "Tidak semestinya. Jualan bermusim dengan tempoh yang dinyatakan jelas ialah sebab harga munasabah untuk turun buat sementara. Yang patut buat anda tertanya ialah harga 'jualan' yang kekal berbulan-bulan tanpa tarikh tamat."
+      },
+      {
+        "q": "Apa tanda pada label yang menunjukkan minyak zaitun itu gred rendah atau campuran?",
+        "a": "Ketiadaan gred, tarikh tuaian atau negara asal pada label ialah petunjuk pertama. Label yang jujur menyatakan ketiga-tiganya dengan jelas. Panduan penuh untuk mengesan tanda ini ada di [cara kenal minyak zaitun palsu](/blog/cara-kenal-minyak-zaitun-palsu)."
+      },
+      {
+        "q": "Kenapa harga Arabian Village tak turun serendah sesetengah jenama lain di rak?",
+        "a": "Harganya menanggung kos yang sama seperti mana-mana minyak zaitun dara tulen: tuaian tangan, perahan segera dan penghantaran import. Saiz dan harga sebenar ada di [halaman produk](/products) — bandingkan seliter, bukan harga label."
+      },
+      {
+        "q": "Di mana boleh beli minyak zaitun dengan harga yang boleh dipercayai di Malaysia?",
+        "a": "Semak harga terus di [halaman produk](/products) atau [saluran belian rasmi](/shop) supaya anda tahu harga sebenar sebelum banding tempat lain. Elakkan penjual yang tidak boleh sahkan gred atau tarikh tuaian pada botol."
+      }
+    ],
+    "related": [
+      {
+        "label": "Harga minyak zaitun di Malaysia",
+        "path": "blog/harga-minyak-zaitun-di-malaysia",
+        "description": "Pecahan harga penuh mengikut saiz botol, dan cara kira harga seliter langkah demi langkah."
+      },
+      {
+        "label": "Cara kenal minyak zaitun palsu",
+        "path": "blog/cara-kenal-minyak-zaitun-palsu",
+        "description": "Tanda pada label dan botol yang menunjukkan minyak zaitun dicampur atau dilabel salah."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "minyak-zaitun-popcorn",
+    "slug": "minyak-zaitun-untuk-popcorn",
+    "seoTitle": "Minyak Zaitun Popcorn Atas Dapur: Kaedah Ringkas",
+    "metaTitle": "Minyak Zaitun Popcorn Atas Dapur: Kaedah Ringkas",
+    "metaDescription": "Cara buat popcorn atas dapur guna minyak zaitun: kuantiti setiap kali, kenapa penutup dan goncangan penting, tahap haba, dan waktu garam yang tepat.",
+    "focusKeyword": "minyak zaitun popcorn",
+    "relatedKeywords": [
+      "minyak zaitun untuk popcorn",
+      "popcorn minyak zaitun",
+      "popcorn atas dapur",
+      "cara buat popcorn guna minyak zaitun",
+      "popcorn tanpa bag mikrogelombang",
+      "minyak zaitun dara untuk masak",
+      "kuantiti minyak zaitun popcorn",
+      "garam popcorn bila masa",
+      "popcorn guna minyak dara",
+      "goncang periuk popcorn"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun Popcorn",
+      "Popcorn Atas Dapur",
+      "Teknik Memasak",
+      "Dapur Malaysia",
+      "Minyak Zaitun Dara"
+    ],
+    "h1": "Minyak Zaitun Popcorn: Kaedah Dapur, Bukan Bag Mikrogelombang",
+    "excerpt": "Popcorn atas dapur dengan minyak zaitun bukan bag mikrogelombang: kuantiti minyak yang betul, penutup dan goncangan, tahap haba, dan waktu garam yang tepat.",
+    "keyTakeaway": "Minyak zaitun popcorn atas dapur ialah kaedah ringkas: dua hingga tiga sudu besar minyak untuk setengah cawan biji, periuk berpenutup rapat yang digoncang kerap, api sederhana, dan garam ditabur selepas api dimatikan semasa popcorn masih boleh menyerapnya. Minyak dara menambah rasa buah dan pedas halus yang minyak neutral tidak ada — hujah rasa, bukan kesihatan.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunPopcornHero",
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-popcorn.jpg",
+    "intro": [
+      "Kebanyakan resipi popcorn di rumah guna bag mikrogelombang atau minyak neutral atas dapur, dan kedua-duanya memang senang.",
+      "Guna minyak zaitun atas dapur pula memberi kawalan penuh — kuantiti minyak, tahap haba, dan masa garam semuanya di tangan anda, bukan di tangan pengeluar bag.",
+      "Ini bukan kaedah rumit; ia cuma periuk, penutup, dan sedikit goncangan pada masa yang betul."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa Popcorn Atas Dapur, Bukan Bag Mikrogelombang",
+        "id": "kenapa-dapur-bukan-mikrogelombang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bag popcorn mikrogelombang datang dengan minyak neutral yang sudah dicampur di dalam kertas, jadi anda tidak boleh pilih jenis atau kuantiti minyaknya. Minyak neutral atas dapur pula selamat tetapi hambar — ia cuma alat untuk memanaskan bijirin. Minyak zaitun atas dapur memberi kedua-dua kawalan: anda tentukan berapa banyak minyak, dan minyak itu sendiri membawa rasa ke dalam popcorn siap."
+          },
+          {
+            "type": "p",
+            "text": "Bag mikrogelombang juga mengandungi lebih garam dan perasa tambahan daripada yang anda perlukan. Buat sendiri atas dapur bermakna anda kawal semuanya."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPopcornInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Kuantiti Minyak Setiap Kali",
+        "id": "kuantiti-minyak-setiap-kali",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Untuk kira-kira setengah cawan (100 gram) biji popcorn, dua hingga tiga sudu besar minyak zaitun sudah cukup — bukan lopak, sekadar cukup untuk melapis dasar periuk dan menyelubungi setiap biji semasa ia berputar. Terlalu sedikit minyak buat biji terbakar di dasar sebelum sempat pecah; terlalu banyak buat popcorn berminyak dan berat, bukan garing."
+          },
+          {
+            "type": "p",
+            "text": "Uji dengan tiga hingga empat biji dahulu: apabila ia pecah, minyak sudah cukup panas untuk baki biji dimasukkan sekali gus."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPopcornInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Kaedah Bernombor: Dari Periuk ke Mangkuk",
+        "id": "kaedah-bernombor-periuk-ke-mangkuk",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kaedah ini sama setiap kali dan tidak perlukan peralatan istimewa selain periuk berdinding tebal dan penutup yang muat rapat. Ikut lapan langkah di bawah mengikut turutan, dan biji akan pecah sekata di seluruh dasar tanpa mana-mana bahagian terbakar sebelum sempat pecah."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Panaskan periuk kosong di atas api sederhana selama seminit.",
+              "Masukkan dua hingga tiga sudu besar minyak zaitun dan biarkan panas.",
+              "Uji dengan tiga biji popcorn; tutup periuk dan tunggu ia pecah.",
+              "Bila biji ujian pecah, masukkan baki biji dalam satu lapisan rata.",
+              "Tutup periuk rapat-rapat dan goncang sekali untuk salut setiap biji dengan minyak.",
+              "Kekalkan api sederhana, goncang periuk setiap 15 hingga 20 saat.",
+              "Angkat dari api sebaik bunyi pecah menjarang kepada dua atau tiga saat sekali.",
+              "Tuang segera ke dalam mangkuk supaya wap tidak melembutkan popcorn yang sudah garing."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPopcornInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Penutup Periuk dan Goncangan Penting",
+        "id": "penutup-dan-goncangan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Penutup periuk menahan wap dan haba di sekeliling setiap biji supaya ia pecah serentak, bukan satu-satu secara perlahan sambil yang lain hangus menunggu giliran. Goncangan pula menggerakkan biji yang sudah pecah ke atas dan yang belum pecah turun ke dasar panas, jadi haba diagihkan sekata dan tiada satu bahagian periuk terbakar sebelum yang lain sempat pecah."
+          },
+          {
+            "type": "p",
+            "text": "Penutup yang terbuka sedikit membenarkan wap terlepas, jadi popcorn kekal garing."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPopcornInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Waktu Garam yang Tepat",
+        "id": "waktu-garam-yang-tepat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Garam masuk selepas api dimatikan, bukan semasa memasak — garam yang jatuh atas minyak panas hanya tenggelam ke dasar dan tidak melekat pada popcorn. Sebaik periuk diangkat dan popcorn dituang ke mangkuk, permukaannya masih berminyak dan sedikit lembap, jadi garam halus melekat serta-merta selagi ia masih boleh menyerap."
+          },
+          {
+            "type": "p",
+            "text": "Goncang mangkuk, bukan kacau dengan sudu, supaya garam sampai rata tanpa memecahkan popcorn yang rapuh."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPopcornInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang Minyak Zaitun Dara Tambah Di Sini",
+        "id": "apa-minyak-dara-tambah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara perahan sejuk membawa rasa buah dan sedikit pedas di hujung lidah yang minyak neutral tidak ada — ini hujah rasa semata-mata, bukan dakwaan kesihatan. Popcorn yang dimasak dengannya terasa lebih 'penuh' walaupun garamnya sama, kerana minyaknya sendiri sudah membawa rasa sebelum garam pun masuk."
+          },
+          {
+            "type": "p",
+            "text": "Untuk sentuhan lain, renjis sedikit minyak infusi seperti rosemary & selasih atas popcorn suam selepas garam, bukan semasa memasak — haba merampas aroma botani itu. [Lihat Koleksi Infusi](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPopcornInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Periuk, Penutup, Goncangan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun popcorn bukan teknik rumit — ia periuk yang dipanaskan betul, kuantiti minyak yang tepat, penutup yang rapat, dan garam yang masuk pada waktu yang betul. Ganti mana-mana satu langkah dan hasilnya berubah: gosong di dasar, popcorn lembik, atau garam yang gugur ke bawah mangkuk."
+        },
+        {
+          "type": "p",
+          "text": "Untuk teknik memasak minyak zaitun yang lain di dapur Malaysia, baca [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur). Untuk botol 250 ml atau 500 ml, [lihat halaman produk](/products) atau [cawangan berdekatan](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun diperlukan untuk sekali buat popcorn?",
+        "a": "Untuk kira-kira setengah cawan (100 gram) biji popcorn, dua hingga tiga sudu besar minyak zaitun sudah cukup — sekadar melapis dasar periuk dan menyelubungi setiap biji semasa ia berputar, bukan lopak minyak yang menenggelamkannya."
+      },
+      {
+        "q": "Kenapa perlu goncang periuk semasa memasak popcorn?",
+        "a": "Goncangan menggerakkan biji yang sudah pecah ke atas dan biji yang belum pecah turun ke dasar panas, jadi haba teragih sekata dan tiada satu bahagian periuk hangus sebelum bahagian lain sempat pecah."
+      },
+      {
+        "q": "Bila waktu terbaik untuk taburkan garam pada popcorn?",
+        "a": "Selepas api dimatikan dan popcorn dituang ke mangkuk, semasa permukaannya masih berminyak dan boleh menyerap. Garam yang ditabur atas minyak panas dalam periuk hanya tenggelam ke dasar dan tidak melekat pada popcorn."
+      },
+      {
+        "q": "Kenapa popcorn atas dapur guna minyak zaitun rasa lebih sedap daripada bag mikrogelombang?",
+        "a": "Bag mikrogelombang guna minyak neutral yang sudah ditetapkan kuantitinya dan tidak boleh diubah. Minyak zaitun dara membawa rasa buah dan pedas halusnya sendiri ke dalam popcorn, jadi rasa terbina sebelum garam pun masuk — bukan dakwaan kesihatan, cuma perbezaan rasa."
+      },
+      {
+        "q": "Bolehkah guna minyak zaitun infusi untuk buat popcorn?",
+        "a": "Elakkan memasak popcorn terus dalam minyak infusi kerana haba merampas aroma botani yang anda bayar. Guna minyak zaitun biasa untuk memasak, kemudian renjis sedikit minyak infusi seperti rosemary & selasih ke atas popcorn suam selepas garam."
+      },
+      {
+        "q": "Apa tanda haba terlalu tinggi semasa memasak popcorn dengan minyak zaitun?",
+        "a": "Kalau minyak mula berasap sebelum biji ujian pun pecah, atau bau hangus naik daripada dasar periuk, haba terlalu tinggi. Turunkan ke api sederhana dan goncang lebih kerap supaya biji tidak terbakar sebelum sempat pecah."
+      },
+      {
+        "q": "Perlu ke tukar kepada minyak neutral kalau minyak zaitun rasa terlalu kuat untuk popcorn?",
+        "a": "Tidak semestinya — kuantiti dua hingga tiga sudu besar untuk setengah cawan biji biasanya sederhana, bukan berat. Kalau masih terlalu kuat, kurangkan sedikit kuantiti minyak zaitun dan tambah minyak neutral untuk keseimbangan, bukan gantikan sepenuhnya."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak zaitun untuk goreng",
+        "path": "blog/minyak-zaitun-untuk-goreng",
+        "description": "Goreng cetek, tumis, goreng rendam dan kerja wok bukan satu perkara yang sama — jadual kaedah lawan suhu."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-sayur-panggang",
+    "slug": "minyak-zaitun-untuk-sayur-panggang",
+    "seoTitle": "Minyak Zaitun untuk Sayur Panggang: Garing Bukan Lembik",
+    "metaTitle": "Minyak Zaitun untuk Sayur Panggang: Garing Bukan Lembik",
+    "metaDescription": "Berapa banyak minyak zaitun untuk sayur panggang, kenapa dulang penuh buat lembik, suhu ketuhar ikut sayur, dan jadual suhu × masa lengkap.",
+    "focusKeyword": "minyak zaitun untuk sayur panggang",
+    "relatedKeywords": [
+      "minyak zaitun sayur panggang",
+      "cara panggang sayur guna minyak zaitun",
+      "suhu ketuhar sayur panggang",
+      "berapa lama panggang sayur dalam ketuhar",
+      "kenapa sayur panggang lembik",
+      "minyak zaitun dara untuk memasak",
+      "sayur panggang garing",
+      "jadual suhu sayur panggang",
+      "waktu tabur garam sayur panggang",
+      "minyak zaitun untuk masak"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Sayur Panggang",
+      "Minyak Zaitun untuk Sayur Panggang",
+      "Teknik Ketuhar",
+      "Dapur Malaysia",
+      "Panduan Memasak"
+    ],
+    "h1": "Minyak Zaitun untuk Sayur Panggang: Garing, Bukan Lembik",
+    "excerpt": "Kenapa sayur dalam ketuhar sering keluar lembik walaupun sudah disapu minyak zaitun, dan cara betulkan: kuantiti minyak, ruang dalam dulang, suhu, dan waktu garam.",
+    "keyTakeaway": "Minyak zaitun untuk sayur panggang berfungsi sebagai lapisan nipis, bukan rendaman, dan hanya menggaring kalau dulang tidak sesak. Suhu ketuhar 200 hingga 220 darjah, sayur nipis perlukan panas tinggi masa singkat, sayur padat perlukan suhu lebih rendah lebih lama, dan renjisan mentah selepas keluar ketuhar mengembalikan rasa yang hilang semasa panggang.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukSayurPanggangHero",
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-sayur-panggang.jpg",
+    "intro": [
+      "Ramai memasukkan sayur bersapu minyak zaitun ke dalam ketuhar dan keluar dengan hasil lembik dan berair, bukan garing.",
+      "Punca biasanya bukan minyaknya, tetapi kuantiti, ruang dalam dulang dan suhu.",
+      "Kita liputi berapa banyak minyak diperlukan, kenapa dulang penuh menghalang kegaringan, julat suhu ketuhar, waktu garam ditabur, sayur mana perlu panas tinggi dan mana perlu suhu rendah lebih lama, serta renjisan mentah selepas keluar ketuhar."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa Sayur Panggang Jadi Lembik, Bukan Garing",
+        "id": "kenapa-lembik",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sayur menggaring apabila wap air pada permukaannya cepat terlepas dan permukaan itu kering sebelum bahagian dalamnya terlalu masak. Kalau minyak terlalu banyak atau sayur terlalu rapat dalam dulang, wap itu terperangkap dan sayur mengukus dalam lembapannya sendiri, bukan memanggang."
+          },
+          {
+            "type": "note",
+            "title": "Soal rasa dan tekstur, bukan pemakanan",
+            "text": "Artikel ini tentang cara memanggang sayur supaya garing. Soalan tentang khasiat atau kesihatan minyak zaitun sebaiknya dirujuk kepada pakar pemakanan, bukan panduan dapur."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSayurPanggangInline",
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Berapa Banyak Minyak: Lapisan Nipis, Bukan Rendaman",
+        "id": "berapa-banyak-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sayur perlu dilapisi minyak zaitun, bukan direndam. Untuk satu dulang sederhana, gaul sayur dengan kira-kira satu hingga dua sudu besar sahaja, cukup untuk setiap keping berkilat nipis apabila digosok dengan tangan atau senduk."
+          },
+          {
+            "type": "p",
+            "text": "Kalau minyak masih berkumpul di dasar mangkuk selepas gaul, itu sudah terlalu banyak. Tambah sedikit demi sedikit dan gaul semula, bukan tuang terus di atas dulang yang sudah tersusun."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSayurPanggangInline",
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Dulang Terlalu Penuh Menghalang Kegaringan",
+        "id": "dulang-tak-padat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Setiap keping sayur melepaskan wap air semasa dipanggang. Kalau dulang sesak, wap dari sekeping tidak sempat terlepas ke udara dan malah diserap oleh keping sebelahnya, jadi seluruh dulang mengukus bersama walaupun ketuhar cukup panas."
+          },
+          {
+            "type": "p",
+            "text": "Susun sayur dalam satu lapisan sahaja, dengan ruang kecil antara setiap keping supaya udara panas boleh beredar. Kalau sayur terpaksa bertindih, guna dua dulang berasingan, bukan satu dulang yang penuh sesak."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSayurPanggangInline",
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Suhu Ketuhar dan Waktu Garam Ditabur",
+        "id": "suhu-dan-garam",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kebanyakan sayur panggang paling baik pada 200 hingga 220 darjah Celsius, suhu yang cukup tinggi untuk permukaan cepat kering tetapi tidak terlalu tinggi hingga minyak zaitun mula berasap dan berbau hangus sebelum sayur sempat masak."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Garam ditabur sebelum masuk ketuhar untuk sayur yang sudah nipis dan cepat masak, supaya garamnya sempat meresap.",
+              "Garam ditabur separuh masa memasak untuk sayur berair seperti terung dan tomato, supaya air yang ditarik keluar oleh garam tidak menggenang di dulang dari awal.",
+              "Garam ditabur sekali lagi selepas keluar ketuhar kalau rasanya masih kurang, kerana sebahagian garam ikut hilang bersama wap."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSayurPanggangInline",
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Sayur Mana Perlu Panas Tinggi, Mana Perlu Suhu Rendah Lebih Lama",
+        "id": "suhu-ikut-sayur",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sayur nipis dan berair seperti tomato ceri atau brokoli menggaring cepat pada panas tinggi kerana permukaannya sedikit dan lekas kering. Sayur padat seperti kentang dan lobak merah perlu suhu lebih rendah dan masa lebih lama supaya bahagian dalamnya masak sebelum bahagian luar hangus."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Sayur",
+              "Suhu Ketuhar",
+              "Anggaran Masa"
+            ],
+            "rows": [
+              [
+                "Kentang (potong dadu)",
+                "200 darjah",
+                "35 hingga 40 minit"
+              ],
+              [
+                "Lobak merah",
+                "190 darjah",
+                "25 hingga 30 minit"
+              ],
+              [
+                "Bunga kubis",
+                "200 darjah",
+                "22 hingga 25 minit"
+              ],
+              [
+                "Terung",
+                "190 darjah",
+                "20 hingga 25 minit"
+              ],
+              [
+                "Brokoli",
+                "190 darjah",
+                "15 hingga 18 minit"
+              ],
+              [
+                "Lada benggala",
+                "190 darjah",
+                "15 hingga 18 minit"
+              ],
+              [
+                "Tomato ceri",
+                "180 darjah",
+                "12 hingga 15 minit"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSayurPanggangInline",
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Renjisan Mentah Selepas Keluar Ketuhar",
+        "id": "renjisan-akhir",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara yang dipanggang bersama sayur selama 20 hingga 30 minit kehilangan sebahagian rasa buahnya akibat haba yang berpanjangan. Renjisan kecil minyak zaitun dara mentah selepas dulang keluar ketuhar mengembalikan rasa segar itu ke atas sayur yang sudah masak."
+          },
+          {
+            "type": "p",
+            "text": "Renjis semasa masih panas supaya baunya naik serta-merta, dan gaul ringan sebelum hidang. Untuk panduan lebih luas, lihat [minyak zaitun untuk masak: panduan dapur](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSayurPanggangInline",
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Garing Bermula daripada Ruang dan Suhu, Bukan Lebih Minyak",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun untuk sayur panggang paling berkesan sebagai lapisan nipis di atas dulang yang tidak sesak, pada suhu 200 hingga 220 darjah. Lebih minyak atau dulang yang terlalu penuh hanya membawa balik masalah yang sama: sayur mengukus, bukan menggaring."
+        },
+        {
+          "type": "p",
+          "text": "Kalau sayur panggang masih lembik, semak dulang dahulu sebelum menyalahkan minyak. [Lihat saiz botol minyak zaitun dara](/products) atau [minyak zaitun untuk ikan bakar](/blog/minyak-zaitun-untuk-ikan-bakar)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun untuk sedulang sayur panggang?",
+        "a": "Kira-kira satu hingga dua sudu besar untuk dulang sederhana, cukup untuk setiap keping berkilat nipis selepas digaul. Kalau minyak masih berkumpul di dasar mangkuk selepas gaul, kuantiti itu sudah terlalu banyak."
+      },
+      {
+        "q": "Kenapa sayur panggang saya lembik walaupun ketuhar sudah panas?",
+        "a": "Punca biasa ialah dulang terlalu sesak. Sayur yang bertindih memerangkap wap air antara satu sama lain sehingga seluruh dulang mengukus, bukan menggaring, walaupun suhu ketuhar sudah betul."
+      },
+      {
+        "q": "Suhu ketuhar apa yang sesuai untuk sayur panggang?",
+        "a": "Kebanyakan sayur paling baik pada 180 hingga 200 darjah Celsius, sepadan dengan julat yang sudah diterbitkan untuk minyak zaitun dara. Sayur nipis dan berair sesuai dengan hujung rendah julat, sayur padat seperti kentang perlu suhu lebih tinggi dan masa lebih lama."
+      },
+      {
+        "q": "Bila patut tabur garam pada sayur panggang?",
+        "a": "Untuk sayur nipis yang cepat masak, tabur sebelum masuk ketuhar. Untuk sayur berair seperti terung dan tomato, tabur separuh masa memasak supaya air yang ditarik keluar tidak menggenang sejak awal."
+      },
+      {
+        "q": "Patutkah semua sayur dipanggang pada suhu yang sama?",
+        "a": "Tidak. Sayur nipis seperti brokoli dan tomato ceri menggaring cepat pada panas tinggi, manakala sayur padat seperti kentang dan lobak merah perlu suhu lebih rendah dan masa lebih lama supaya bahagian dalam sempat masak."
+      },
+      {
+        "q": "Kenapa perlu renjis minyak zaitun lagi selepas sayur keluar ketuhar?",
+        "a": "Haba ketuhar yang berpanjangan menghilangkan sebahagian rasa buah minyak zaitun dara. Renjisan mentah selepas keluar ketuhar mengembalikan rasa segar itu ke atas sayur yang sudah masak, semasa ia masih panas."
+      },
+      {
+        "q": "Boleh ke guna satu dulang besar untuk semua sayur sekali gus?",
+        "a": "Boleh kalau sayur muat dalam satu lapisan dengan ruang antara setiap keping. Kalau terpaksa bertindih, lebih baik guna dua dulang berasingan supaya udara panas beredar dengan baik di sekeliling setiap keping."
+      },
+      {
+        "q": "Adakah minyak zaitun dara sesuai untuk suhu ketuhar setinggi ini?",
+        "a": "Ya, dalam masa panggang biasa pada 180 hingga 200 darjah — julat yang sudah diterbitkan untuk minyak zaitun dara di laman ini."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak zaitun untuk ikan bakar",
+        "path": "blog/minyak-zaitun-untuk-ikan-bakar",
+        "description": "Cara guna minyak zaitun semasa membakar ikan supaya kulitnya tidak melekat dan garing sekata."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-steak",
+    "slug": "minyak-zaitun-untuk-steak",
+    "seoTitle": "Minyak Zaitun untuk Steak: Teknik Dua Minyak",
+    "metaTitle": "Minyak Zaitun untuk Steak: Teknik Dua Minyak",
+    "metaDescription": "Kaedah dua minyak untuk goreng kilas steak di dapur: minyak neutral untuk kerak garing, extra virgin dituang selepas daging berehat, tamat dengan lada.",
+    "focusKeyword": "minyak zaitun untuk steak",
+    "relatedKeywords": [
+      "teknik dua minyak steak",
+      "minyak neutral untuk goreng kilas",
+      "cara goreng kilas steak di rumah",
+      "rehat daging selepas masak",
+      "minyak zaitun untuk masak daging",
+      "tuangan minyak zaitun atas steak",
+      "takat berasap minyak zaitun",
+      "minyak zaitun dara untuk hidangan siap",
+      "cara masak steak guna kuali",
+      "minyak zaitun Arabian Village untuk daging"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun untuk Steak",
+      "Teknik Dua Minyak",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Panduan Masak"
+    ],
+    "h1": "Minyak Zaitun untuk Steak: Teknik Dua Minyak di Dapur",
+    "excerpt": "Goreng Kilas keras perlukan minyak yang tahan haba lebih tinggi daripada extra virgin. Guna teknik dua minyak: neutral untuk kerak, extra virgin untuk rasa akhir selepas daging berehat.",
+    "keyTakeaway": "Goreng kilas steak yang garing perlukan haba lebih tinggi daripada apa yang extra virgin selesa tahan, jadi guna teknik dua minyak: minyak neutral untuk membentuk kerak, extra virgin dituang atau disental selepas daging diangkat dan berehat. Extra virgin sampai ke pinggan sebagai rasa akhir, bukan sebagai minyak goreng kilas.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukSteakHero",
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-steak.jpg",
+    "intro": [
+      "Goreng Kilas steak yang garing di luar dan juicy di dalam perlukan kuali yang benar-benar panas — lebih panas daripada suhu yang extra virgin selesa tahan.",
+      "Itu bukan sebab membuang minyak zaitun dari dapur, tetapi sebab menggunakan dua minyak, bukan satu.",
+      "Kita tunjukkan kaedah bernombor: minyak neutral untuk goreng kilas, extra virgin untuk rasa akhir, dan kenapa daging perlu berehat sebelum dihiris."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa Goreng Kilas Keras Tidak Sesuai dengan Extra Virgin Sahaja",
+        "id": "kenapa-goreng-kilas-perlu-minyak-lain",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Goreng kilas yang baik perlukan kuali pada suhu tinggi, cukup panas untuk membentuk kerak coklat dalam saat pertama daging menyentuh besi. Extra virgin selesa dipanaskan sehingga takat asapnya sendiri, tetapi itu masih di bawah suhu yang dikehendaki goreng kilas keras. Ini bukan kelemahan minyak, cuma bukan kerja yang ia dibuat untuk."
+          },
+          {
+            "type": "p",
+            "text": "Untuk angka takat berasap penuh, [baca panduan minyak zaitun untuk goreng](/blog/minyak-zaitun-untuk-goreng) — kerja di sini ialah steak, bukan senarai suhu."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSteakInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Teknik Dua Minyak: Neutral untuk Goreng Kilas, Extra Virgin Selepas",
+        "id": "teknik-dua-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Teknik dua minyak memisahkan dua kerja yang berlainan. Minyak neutral yang tahan haba tinggi memegang kuali semasa goreng kilas keras, dan extra virgin masuk kemudian, semata-mata untuk rasa. Ini bukan penukaran satu untuk satu — ia pembahagian tugas: satu minyak untuk haba, satu lagi untuk rasa akhir di pinggan."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Minyak neutral untuk goreng kilas: tahan haba tinggi, hampir tiada rasa sendiri — contohnya minyak kanola atau kacang tanah.",
+              "Extra virgin selepas goreng kilas: dituang atas daging yang diangkat, atau disental nipis sebelum dihidang.",
+              "Jangan tukar tempat — extra virgin dalam kuali terlalu panas jadi hangus dan pahit, bukan wangi."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSteakInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kaedah Goreng Kilas Steak Langkah demi Langkah",
+        "id": "kaedah-bernombor",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kaedah ini mengikut turutan tetap supaya kerak terbentuk sebelum bahagian dalam terlebih masak. Keluarkan daging awal, keringkan permukaannya, panaskan kuali dahulu, baru masuk minyak neutral, goreng kilas tanpa gerak berlebihan, dan biar extra virgin serta lada jadi langkah paling akhir."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Keluarkan steak dari peti sejuk 20 hingga 30 minit sebelum masak supaya tidak terlalu sejuk di tengah.",
+              "Keringkan permukaan daging dengan tuala dapur dan taburkan garam sejurus sebelum masuk kuali.",
+              "Panaskan kuali kosong sehingga benar-benar panas, baru tuang minyak neutral secukupnya melapisi dasar.",
+              "Goreng Kilas setiap belah tanpa menggerakkan daging berulang-ulang, biar kerak terbentuk sebelum dibalik.",
+              "Kecilkan api untuk bahagian tebal supaya bahagian dalam sampai ke tahap masak dikehendaki.",
+              "Angkat daging dan biar ia berehat sebelum sebarang minyak zaitun menyentuhnya.",
+              "Sental atau tuang extra virgin dan lada baru digiling ke atas daging yang dihiris."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSteakInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Daging Perlu Berehat Sebelum Dihiris",
+        "id": "rehat-daging",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Semasa goreng kilas, jus daging terdesak ke tengah oleh haba tinggi di permukaan. Jika dihiris serta-merta, jus itu tumpah ke atas papan pemotong, bukan kekal dalam daging. Rehat sekitar lima hingga sepuluh minit, bergantung ketebalan, membenarkan jus itu kembali tersebar rata sebelum pisau turun."
+          },
+          {
+            "type": "p",
+            "text": "Ini juga masa untuk menyediakan extra virgin dan lada, supaya tuangan akhir terus menyusul sebaik daging selesai berehat."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSteakInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Tuangan Akhir: Extra Virgin dan Lada Segar",
+        "id": "tuangan-akhir",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tuangan akhir ialah satu-satunya masa extra virgin menyentuh steak dalam kaedah ini, dan sebab itu ia paling terasa. Tuang atau sental nipis di atas daging yang telah dihiris, gilingkan lada hitam segar, dan tambah sedikit garam kasar jika kerak belum cukup masin."
+          },
+          {
+            "type": "p",
+            "text": "Kerana minyak tidak dipanaskan pada tahap ini, rasa buahnya kekal utuh berbanding jika turut digoreng kilas. [Koleksi Infusi Arabian Village](/products) turut sesuai sebagai tuangan akhir, bukan untuk goreng kilas."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSteakInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Silap Biasa Bila Guna Minyak Zaitun untuk Steak",
+        "id": "silap-biasa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kebanyakan hasil steak yang tidak memuaskan bukan datang daripada daging, tetapi daripada minyak yang salah pada peringkat yang salah. Guna extra virgin untuk goreng kilas sahaja, atau tuang terlalu banyak minyak sehingga daging tergoreng dan bukan tersear, ialah dua silap paling biasa di dapur rumah."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Goreng Kilas dengan extra virgin sahaja pada kuali sangat panas — minyak berasap dan pahit sebelum daging berkerak.",
+              "Kuali tidak cukup panas sebelum minyak masuk, jadi daging melekat dan kerak tidak terbentuk rata.",
+              "Terus hiris sebaik diangkat, jus terbuang dan tuangan akhir jatuh atas daging yang sudah kering.",
+              "Terlalu banyak minyak dalam kuali, steak tergoreng dalam minyak berlebihan dan bukan digoreng kilas."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukSteakInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Dua Minyak, Dua Peringkat, Satu Steak",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun untuk steak bukan bermaksud satu minyak dari awal hingga akhir. Minyak neutral memegang haba semasa goreng kilas, extra virgin membawa rasa selepas daging berehat, dan lada segar menutup hidangan. Kaedah."
+        },
+        {
+          "type": "p",
+          "text": "Untuk kaedah goreng lain, [baca panduan goreng penuh](/blog/minyak-zaitun-untuk-goreng), atau [lihat panduan masak umum](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Bolehkah guna extra virgin sahaja untuk goreng kilas steak?",
+        "a": "Boleh secara teknikal, tetapi kuali yang cukup panas untuk goreng kilas keras selalunya melebihi keselesaan extra virgin, dan minyak akan berasap serta pahit sebelum daging berkerak. Minyak neutral."
+      },
+      {
+        "q": "Minyak neutral apa sesuai untuk goreng kilas steak?",
+        "a": "Mana-mana minyak masak yang tahan haba tinggi dan hampir tiada rasa sendiri, seperti minyak kanola atau kacang tanah, sesuai untuk peringkat goreng kilas supaya rasa daging dan extra."
+      },
+      {
+        "q": "Berapa lama daging patut berehat sebelum dihiris?",
+        "a": "Kira-kira lima hingga sepuluh minit bergantung ketebalan steak. Tempoh ini membenarkan jus yang terdesak ke tengah semasa goreng kilas kembali tersebar rata, supaya ia kekal dalam daging, bukan."
+      },
+      {
+        "q": "Extra virgin dituang sebelum atau selepas daging berehat?",
+        "a": "Selepas. Tuang atau sental extra virgin dan lada selepas daging berehat dan dihiris, supaya minyak tidak terkena haba berlebihan dan rasa buahnya kekal utuh sebagai tuangan akhir."
+      },
+      {
+        "q": "Kenapa bukan guna minyak zaitun sepanjang proses masak steak?",
+        "a": "Kerana peringkat goreng kilas memerlukan haba lebih tinggi daripada keselesaan extra virgin, manakala tuangan akhir memerlukan minyak yang rasanya masih utuh. Dua keperluan berbeza ini dipenuhi oleh dua minyak berasingan."
+      },
+      {
+        "q": "Adakah teknik dua minyak ini sama dengan menggoreng rendam?",
+        "a": "Tidak. Goreng Kilas hanya perlukan lapisan minyak nipis untuk melicinkan kuali, bukan daging direndam. Untuk perbezaan penuh antara kaedah goreng, rujuk [panduan minyak zaitun untuk goreng](/blog/minyak-zaitun-untuk-goreng)."
+      },
+      {
+        "q": "Berapa banyak minyak neutral diperlukan untuk goreng kilas satu steak?",
+        "a": "Cukup untuk melapisi dasar kuali secara nipis dan rata, bukan lopak. Steak yang tebal mungkin perlukan sedikit lebih banyak berbanding kepingan nipis, tetapi ia tetap lapisan, bukan rendaman."
+      },
+      {
+        "q": "Bolehkah Koleksi Infusi Arabian Village digunakan untuk tuangan akhir steak?",
+        "a": "Ya, kerana ia digunakan sejuk atau suam, bukan untuk goreng kilas. Rasa seperti rosemary & selasih atau kunyit & lada hitam sesuai sebagai tuangan akhir di atas steak yang dihiris dan berehat."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk goreng: cetek, tumis, rendam dan wok",
+        "path": "blog/minyak-zaitun-untuk-goreng",
+        "description": "Empat kaedah goreng, empat suhu, dan takat berasap penuh setiap kaedah masak dengan minyak zaitun dara."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun dara, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi enam rasa."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-telur",
+    "slug": "minyak-zaitun-untuk-telur-goreng",
+    "seoTitle": "Minyak Zaitun untuk Telur Goreng Gaya Sepanyol",
+    "metaTitle": "Minyak Zaitun untuk Telur Goreng Gaya Sepanyol",
+    "metaDescription": "Cara goreng telur dengan minyak zaitun gaya Sepanyol: kuantiti minyak yang betul, haba kuali, siraman minyak panas ke atas kuning, dan waktu garam.",
+    "focusKeyword": "minyak zaitun untuk telur",
+    "relatedKeywords": [
+      "minyak zaitun untuk telur goreng",
+      "telur goreng minyak zaitun",
+      "cara goreng telur ala Sepanyol",
+      "minyak zaitun untuk masak telur",
+      "telur mata minyak zaitun",
+      "minyak zaitun dara untuk telur",
+      "goreng telur minyak zaitun dara",
+      "kuantiti minyak zaitun untuk telur",
+      "minyak zaitun untuk sarapan",
+      "resepi telur goreng Sepanyol"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun untuk Telur",
+      "Telur Goreng Gaya Sepanyol",
+      "Panduan Dapur",
+      "Teknik Memasak",
+      "Sarapan"
+    ],
+    "h1": "Minyak Zaitun untuk Telur: Cara Goreng Gaya Sepanyol",
+    "excerpt": "Bukan telur mata biasa. Liputi kuantiti minyak yang betul, haba kuali, cara menyiram minyak panas ke atas kuning, dan waktu garam.",
+    "keyTakeaway": "Minyak zaitun untuk telur bermakna guna lebih minyak daripada kebiasaan — lopak cetek, bukan lapisan nipis — pada haba sederhana-tinggi, lalu menyiram minyak panas ke atas kuning dengan sudu sehingga tepi garing dan kuning kekal lembut. Garam masuk selepas telur diangkat, bukan semasa memasak.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukTelurHero",
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-telur.jpg",
+    "intro": [
+      "Di Sepanyol, telur digoreng dalam kuali minyak zaitun yang agak dalam — bukan kuali kering — supaya tepinya renyah bergelembung dan kuningnya kekal lembut.",
+      "Bezanya dengan cara biasa di dapur Malaysia bukan pada telur, tetapi pada berapa banyak minyak yang digunakan dan bagaimana ia disiram.",
+      "Kita liputi kuantiti minyak, haba kuali, cara menyiram minyak panas ke atas kuning, waktu garam, dan beza minyak dara dengan minyak lembut."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa telur goreng gaya Sepanyol berbeza",
+        "id": "kenapa-gaya-sepanyol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Telur goreng ala Sepanyol digoreng dalam minyak zaitun yang cukup dalam untuk membuai keseluruhan telur, bukan sekadar melapik dasar kuali. Tepi putihnya jadi renyah dan bergelembung seperti renda, manakala bahagian tengah kuningnya kekal cair dan lembut. Ia bukan telur mata biasa yang digoreng kering atas kuali hampir tanpa minyak."
+          },
+          {
+            "type": "p",
+            "text": "Kaedah ini popular di dapur Sepanyol dan Itali kerana minyak zaitun tahan pada haba sederhana-tinggi tanpa berasap, dan rasanya sendiri menjadi sebahagian daripada hidangan. Untuk asas memasak dengan minyak zaitun di dapur Malaysia, lihat [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukTelurInline",
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Berapa banyak minyak: lebih daripada sangkaan",
+        "id": "kuantiti-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ramai guna terlalu sedikit minyak lalu tertanya kenapa telur melekat dan tidak renyah. Untuk satu telur dalam kuali kecil, tuang minyak sehingga membentuk lopak setinggi kira-kira satu sentimeter — cukup untuk membasahi separuh badan telur apabila ia dimasukkan, bukan sekadar melicinkan dasar kuali."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Kuali kecil (18–20 cm) untuk satu atau dua telur: kira-kira 100 ml minyak.",
+              "Kuali sederhana untuk tiga hingga empat telur: kira-kira 150–200 ml.",
+              "Minyak yang berlebih boleh ditapis dan disimpan untuk goreng seterusnya."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukTelurInline",
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Kaedah goreng telur, langkah demi langkah",
+        "id": "kaedah-bernombor",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kaedah ini pantas sebaik minyak cukup panas, dan urutannya tetap sama setiap kali. Pecahkan telur terus ke dalam minyak panas, biar putihnya mengembang dan bergelembung di tepi, kemudian condongkan kuali dan guna sudu untuk menyiram minyak panas berulang kali ke atas kuning sehingga ia berselaput nipis tetapi masih cair di dalam."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Panaskan minyak pada api sederhana-tinggi sehingga bergelembung halus apabila hujung penyudip dicelup — jangan tunggu ia berasap, itu tanda kuali sudah terlalu panas untuk mana-mana minyak.",
+              "Pecahkan telur terus ke dalam minyak; biar tepinya mengembang dan bergelembung.",
+              "Condongkan kuali, cedok minyak panas dengan sudu, siram berulang ke atas kuning.",
+              "Angkat apabila tepi putih garing keperangan tetapi kuning masih goyang di tengah.",
+              "Toskan sebentar di atas kertas penyerap sebelum hidang."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukTelurInline",
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Bila masa untuk garam",
+        "id": "waktu-garam",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Garam masuk selepas telur keluar dari kuali, bukan ke dalam minyak atau atas telur mentah. Garam yang ditabur ke atas minyak panas hanya melekat pada gelembung minyak, bukan pada telur, dan garam di atas telur mentah menarik air keluar sebelum sempat digoreng, menjadikan putih telur lembik."
+          },
+          {
+            "type": "p",
+            "text": "Tabur garam halus sejurus telur diangkat, ketika permukaannya masih panas dan sedikit berminyak supaya garam melekat rata. Sedikit lada hitam pada masa yang sama turut sesuai."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukTelurInline",
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Minyak zaitun dara berbanding minyak zaitun lembut",
+        "id": "dara-vs-lembut",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara perahan sejuk membawa rasa buah dan sedikit pedas di kerongkong yang menyerap ke dalam putih telur semasa digoreng, jadi telur itu sendiri terasa rasa minyaknya. Minyak zaitun lembut atau ditapis pula hampir neutral — ia memberi tekstur renyah yang sama tetapi tidak menambah rasa, lebih dekat dengan minyak masak biasa."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ciri",
+              "Minyak zaitun dara",
+              "Minyak zaitun lembut"
+            ],
+            "rows": [
+              [
+                "Rasa pada telur",
+                "Buah, sedikit pedas di kerongkong",
+                "Hampir neutral"
+              ],
+              [
+                "Sesuai untuk",
+                "Telur dimakan sendiri atau dengan roti",
+                "Telur sebagai sebahagian hidangan lain"
+              ],
+              [
+                "Kos setiap kali guna",
+                "Lebih tinggi",
+                "Lebih rendah"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukTelurInline",
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Apa untuk hidang bersama",
+        "id": "sajian-selepas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Telur ini paling sedap dimakan panas-panas terus dari kuali, dicicah dengan roti untuk menyerap kuning yang cair, atau diletak atas nasi putih dengan sedikit kicap. Ia juga sesuai atas sayur panggang atau salad sebagai tambahan protein pada waktu makan tengah hari."
+          },
+          {
+            "type": "p",
+            "text": "Minyak yang tinggal dalam kuali boleh ditapis dan digunakan sekali dua lagi untuk goreng cetek sebelum dibuang. Untuk cadangan cicahan roti yang lain, lihat [minyak zaitun untuk roti dan cicahan](/blog/minyak-zaitun-untuk-roti-dan-cicahan)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukTelurInline",
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Bukan resepi rumit, cuma nisbah minyak yang betul",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Telur goreng gaya Sepanyol bukan sukar — ia cuma perlukan lebih minyak dan lebih keyakinan daripada kebiasaan. Lopak cetek minyak zaitun, haba yang cukup, dan sudu menyiram minyak panas ke atas kuning sudah cukup untuk tepi garing dan kuning lembut setiap kali."
+        },
+        {
+          "type": "p",
+          "text": "Mula dengan sebotol kecil dan satu kuali. [Lihat saiz botol](/products) atau [tempat membeli](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Kenapa telur saya melekat pada kuali walaupun guna minyak zaitun?",
+        "a": "Minyak yang digunakan biasanya terlalu sedikit atau kuali tidak cukup panas sebelum telur dimasukkan. Guna lopak minyak setinggi kira-kira satu sentimeter dan pastikan minyak sudah panas, bukan baru suam, sebelum telur dipecahkan ke dalamnya."
+      },
+      {
+        "q": "Perlu ke guna minyak zaitun dara untuk cara ini?",
+        "a": "Tidak semestinya. Minyak dara memberi rasa buah yang menyerap ke dalam telur, manakala minyak zaitun lembut lebih neutral tetapi tetap memberi tepi renyah yang sama. Pilih ikut rasa yang dikehendaki, bukan kerana satu lebih betul."
+      },
+      {
+        "q": "Berapa lama masa memasak telur dengan kaedah ini?",
+        "a": "Biasanya satu hingga dua minit sahaja sebaik minyak panas, kerana minyak yang menyelubungi telur memasak putihnya dengan cepat dari semua arah. Angkat sebaik tepi garing dan kuning masih goyang supaya tidak terlebih masak."
+      },
+      {
+        "q": "Kenapa perlu siram minyak panas ke atas kuning?",
+        "a": "Siraman itu memasak lapisan atas kuning dengan lembut tanpa membaliknya, jadi kuning kekal cair di dalam tetapi tidak lagi mentah di permukaan. Ia juga membantu tepi putih terus bergelembung dan renyah sepanjang masa memasak."
+      },
+      {
+        "q": "Bolehkah minyak yang sama digunakan semula untuk goreng telur lain?",
+        "a": "Boleh, dua atau tiga kali untuk goreng cetek, dengan syarat minyak ditapis selepas setiap penggunaan untuk buang serpihan telur. Selepas itu warnanya gelap dan baunya berubah, tanda ia perlu dibuang."
+      },
+      {
+        "q": "Adakah cara ini sesuai untuk sarapan harian?",
+        "a": "Sesuai, terutama bila mahu sesuatu berlainan daripada telur mata biasa. Kaedahnya pantas — hanya beberapa minit sebaik minyak panas — dan hanya memerlukan kuali kecil serta satu telur untuk seorang."
+      },
+      {
+        "q": "Minyak zaitun apa yang sesuai untuk telur goreng gaya Sepanyol?",
+        "a": "Mana-mana minyak zaitun dara perahan sejuk sesuai, terutama yang rasanya sederhana kuat supaya terasa dalam telur. Minyak infusi seperti timi liar turut sesuai untuk variasi rasa pada hidangan yang sama."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak zaitun untuk roti dan cicahan",
+        "path": "blog/minyak-zaitun-untuk-roti-dan-cicahan",
+        "description": "Cara menyediakan saucer minyak zaitun untuk dicicah dengan roti yang sudah siap."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "minyak-zaitun-vs-mentega",
+    "slug": "minyak-zaitun-vs-mentega",
+    "seoTitle": "Minyak Zaitun vs Mentega: Sapuan dan Masakan",
+    "metaTitle": "Minyak Zaitun vs Mentega: Sapuan dan Masakan",
+    "metaDescription": "Banding minyak zaitun dara dan mentega sebagai lemak sapuan dan masakan: rasa, roti panas, kuali panas, hidangan sesuai dan kos setiap kali guna.",
+    "focusKeyword": "minyak zaitun vs mentega",
+    "relatedKeywords": [
+      "minyak zaitun vs mentega",
+      "mentega vs minyak zaitun",
+      "beza minyak zaitun dan mentega",
+      "minyak zaitun untuk roti",
+      "mentega perang dalam kuali",
+      "guna minyak zaitun atau mentega",
+      "minyak zaitun dara untuk masakan",
+      "kos minyak zaitun seliter",
+      "minyak zaitun sapuan roti",
+      "lemak masakan Malaysia"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun vs Mentega",
+      "Perbandingan Lemak",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Kos Dapur"
+    ],
+    "h1": "Minyak Zaitun vs Mentega: Sapuan dan Masakan",
+    "excerpt": "Mentega cair dan boleh hangus, minyak zaitun kekal cecair dan tak berkelakuan sama. Banding rasa, roti panas, kuali panas, hidangan mana sesuai dengan mana, dan kos setiap kali guna.",
+    "keyTakeaway": "Minyak zaitun vs mentega bukan soal mana lebih hebat, tetapi kerja mana untuk lemak mana. Mentega bawa rasa krim tenusu dan boleh perang atau hangus dalam kuali panas; minyak zaitun dara kekal cecair dan bawa rasa buah yang menonjol di atas hidangan. Guna jadual dalam artikel ini untuk pilih ikut kerja dapur, bukan ikut sangkaan.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunVsMentegaHero",
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-vs-mentega.jpg",
+    "intro": [
+      "Mentega dan minyak zaitun dara sama-sama duduk di dapur, tetapi jarang buat kerja yang sama dengan cara yang sama.",
+      "Mentega ialah lemak tenusu yang keras sejuk dan cair pada haba; minyak zaitun ialah **perahan sejuk** buah zaitun yang kekal cecair sepanjang masa.",
+      "Kita banding kedua-duanya sebagai lemak sapuan dan masakan sahaja — rasa, kuali panas, hidangan sesuai, dan kos setiap kali guna."
+    ],
+    "sections": [
+      {
+        "heading": "Rasa: Dua Watak yang Sangat Berbeza",
+        "id": "rasa-dua-lemak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mentega bawa rasa krim, sedikit masin dan manis tenusu yang sebati dengan apa sahaja ia sentuh. Minyak zaitun dara pula bawa rasa buah zaitun sendiri, pahit halus di pangkal lidah dan pedas ringan di kerongkong, ciri **perahan sejuk** yang segar. Dua rasa ini tidak saling menggantikan; masing-masing menonjolkan hidangan secara berbeza."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu tukar satu untuk satu jarang berjaya. Sos yang minta mentega mahukan body lemak pejal itu; salad atau cicahan yang minta minyak zaitun mahukan rasa buah yang menonjol, bukan lemak yang hilang."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMentegaInline",
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Roti Panas Berbanding Roti Suhu Bilik",
+        "id": "roti-panas-vs-suhu-bilik",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Atas roti panas terus dari pembakar, mentega cair serta-merta dan meresap ke dalam setiap liang, membawa rasa krimnya sekali. Atas roti suhu bilik, mentega kekal separuh pejal dan perlu disapu, jadi lapisannya lebih tebal dan lebih terasa di mulut. Minyak zaitun tidak berkelakuan begitu, ia cecair sama ada roti panas atau sejuk, jadi tekstur sapuannya tidak berubah banyak, cuma meresap lebih laju bila roti masih panas."
+          },
+          {
+            "type": "p",
+            "text": "Itu sebab ramai suka mentega atas roti panggang panas dan minyak zaitun atas roti suhu bilik untuk dicicah. [Lihat lebih lanjut tentang minyak zaitun untuk roti dan cicahan](/blog/minyak-zaitun-untuk-roti-dan-cicahan)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMentegaInline",
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Sifat Perang Mentega dalam Kuali",
+        "id": "mentega-dalam-kuali",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mentega mengandungi pepejal susu yang berubah warna dalam kuali, mula-mula berbuih, kemudian perang keemasan, dan jika ditinggalkan sesaat lagi, hangus dan pahit. Itu sebab mentega perlu diperhati sepanjang masa di atas api. Minyak zaitun tidak mengandungi pepejal susu itu, jadi ia tidak bertukar warna atau berbuih dengan cara yang sama; ia hanya semakin panas sehingga mula berasap."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu rasa mentega perang, browned butter, sengaja dimasak sehingga ke tahap itu, sesuatu yang tidak boleh ditiru minyak zaitun. Untuk kerja panas lebih tinggi dan lama, [panduan memasak dengan minyak zaitun](/blog/minyak-zaitun-untuk-masak-panduan-dapur) sesuai dirujuk."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMentegaInline",
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Satu Hidangan untuk Mentega, Satu untuk Minyak",
+        "id": "hidangan-untuk-setiap-lemak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Telur hancur yang lembut dan berkrim jelas milik mentega, pepejal susu itu yang beri tekstur licin dan rasa kaya yang sukar ditiru minyak. Sebaliknya, tumisan bawang putih dan sayur hijau pada api sederhana, atau renjisan akhir atas sup dan salad, jelas milik minyak zaitun dara, rasa buahnya kekal terasa di atas hidangan, bukan hilang ke dalamnya."
+          },
+          {
+            "type": "p",
+            "text": "Ini bukan peraturan tetap, sekadar corak berulang: mentega menang bila hidangan mahukan kekayaan tenusu, minyak zaitun menang bila ia mahukan rasa buah segar di atas."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMentegaInline",
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Kos Setiap Kali Guna",
+        "id": "kos-setiap-kali-guna",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mentega biasanya dibeli dalam blok besar dan digunakan secara senduk, jadi kos setiap hidangan kelihatan rendah walaupun harga sebalok tidak murah. Minyak zaitun dara dijual dalam botol kecil dan digunakan secara renjisan, jadi walaupun harga sebotol lebih tinggi, kos setiap kali guna tidak sejauh mana ia kelihatan pada label harga."
+          },
+          {
+            "type": "p",
+            "text": "Cara paling adil menilai ialah bahagikan harga botol dengan bilangan sudu yang ia beri, bukan bandingkan harga sebotol dengan harga sebalok terus. [Semak saiz dan harga di halaman produk](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMentegaInline",
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Guna Yang Mana Untuk Apa",
+        "id": "guna-mana-untuk-apa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Jadual di bawah rumuskan corak biasa di dapur Malaysia, bukan peraturan keras, sekadar titik permulaan bila anda tak pasti lemak mana untuk kerja mana. Ura-ura mudahnya: haba tinggi dan rasa tenusu memihak mentega, rasa buah dan sapuan sejuk memihak minyak zaitun."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kerja dapur",
+              "Guna",
+              "Kenapa"
+            ],
+            "rows": [
+              [
+                "Roti panas dari pembakar",
+                "Mentega",
+                "Cair terus, rasa krim sebati"
+              ],
+              [
+                "Roti suhu bilik untuk dicicah",
+                "Minyak zaitun dara",
+                "Kekal cecair, rasa buah menonjol"
+              ],
+              [
+                "Telur hancur atau dadar lembut",
+                "Mentega",
+                "Tekstur licin, rasa kaya"
+              ],
+              [
+                "Tumis bawang & sayur api sederhana",
+                "Minyak zaitun dara",
+                "Rasa buah kekal, tak mudah hangus"
+              ],
+              [
+                "Renjisan akhir atas sup atau salad",
+                "Minyak zaitun dara",
+                "Rasa segar di atas, bukan dimasak"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMentegaInline",
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Dua Lemak, Dua Kerja",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun vs mentega bukan pertandingan mencari juara sejagat. Mentega bawa kekayaan tenusu yang cair pada haba; minyak zaitun dara bawa rasa buah yang kekal dari botol ke pinggan. Dapur paling praktikal simpan kedua-duanya dan tahu bila hendak mencapai yang mana."
+        },
+        {
+          "type": "p",
+          "text": "Untuk kerja bakeri seperti menukar mentega kepada minyak dalam resipi, [panduan penukaran minyak zaitun](/blog/minyak-zaitun-untuk-kek-dan-bakeri) ada nisbah penuh. Untuk mula, [lihat saiz botol Arabian Village](/products) atau [tempat membeli](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Patutkah saya sapu mentega atau minyak zaitun atas roti panas?",
+        "a": "Mentega biasanya menang di sini kerana ia cair serta-merta dan rasa krimnya sebati dengan roti panas. Minyak zaitun dara lebih sesuai atas roti suhu bilik untuk dicicah, di mana rasa buahnya kekal menonjol."
+      },
+      {
+        "q": "Kenapa mentega boleh hangus dalam kuali tapi minyak zaitun jarang begitu?",
+        "a": "Mentega mengandungi pepejal susu yang berbuih lalu bertukar perang, dan jika dibiarkan lama ia hangus dan pahit. Minyak zaitun tiada pepejal susu itu, jadi ia tidak bertukar warna sama; ia hanya semakin panas."
+      },
+      {
+        "q": "Boleh guna minyak zaitun ganti mentega dalam resipi bakeri?",
+        "a": "Boleh, tetapi bakeri ada nisbah penukarannya sendiri kerana mentega membawa struktur pejal yang minyak tiada. Artikel ini fokus pada sapuan dan masakan sahaja, untuk nisbah bakeri, rujuk [panduan penukaran minyak zaitun](/blog/minyak-zaitun-untuk-kek-dan-bakeri)."
+      },
+      {
+        "q": "Yang mana lebih murah setiap kali guna, mentega atau minyak zaitun?",
+        "a": "Mentega dibeli dalam blok dan digunakan secara senduk, jadi kos setiap hidangan kelihatan rendah walaupun harga sebalok tidak murah. Minyak zaitun dara digunakan secara renjisan kecil, jadi sebotol bertahan lama walaupun harganya lebih tinggi."
+      },
+      {
+        "q": "Adakah minyak zaitun lebih sihat daripada mentega?",
+        "a": "Itu soalan untuk pakar pemakanan atau doktor, bukan untuk penjual minyak. Artikel ini membandingkan kedua-duanya sebagai lemak sapuan dan masakan sahaja, rasa, kuali panas dan kos setiap kali guna. Rujuk profesional kesihatan untuk bab pemakanan."
+      },
+      {
+        "q": "Kenapa mentega jadi keras dalam peti sejuk tapi minyak zaitun tidak semestinya?",
+        "a": "Mentega ialah lemak tenusu yang keras pada suhu sejuk dan lembut pada suhu bilik, itu sifat asasnya. Minyak zaitun kekal cecair pada suhu bilik dan tidak perlu peti sejuk; ia hanya jadi keruh jika disimpan sejuk, dan itu normal."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna lemak lain."
+      },
+      {
+        "label": "Minyak zaitun untuk roti dan cicahan",
+        "path": "blog/minyak-zaitun-untuk-roti-dan-cicahan",
+        "description": "Cara menyediakan pinggan cicah roti yang betul, dan roti mana sesuai dengan minyak zaitun."
       },
       {
         "label": "Minyak zaitun dara Arabian Village",
