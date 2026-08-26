@@ -1011,6 +1011,24 @@ Each entry is a full article on avoliveoil.com. Quote them by name and link to t
 - Olive Oil vs Butter: Which One to Reach For
   https://avoliveoil.com/en/blog/olive-oil-vs-butter
   Olive oil and butter are both reached for on instinct, and the right one depends on the job: a slice of toast, a hot pan, a finished plate. This is about spreading and cooking, not baking.
+- Olive Oil Coffee: What the Trend Actually Tastes Like
+  https://avoliveoil.com/en/blog/olive-oil-coffee
+  A spoon of olive oil in a cup of coffee is a texture and flavour trend, not a health drink. Here is how much to use, how to mix it in so it doesn't separate, and what it actually tastes like.
+- Olive Oil Ice Cream: A Mediterranean Dessert Technique
+  https://avoliveoil.com/en/blog/olive-oil-ice-cream
+  Extra virgin olive oil churned into an ice cream base gives a silkier texture and a fruity, faintly peppery counter-note to the sweetness. This is a technique borrowed from Mediterranean kitchens, not a diet swap.
+- Olive Oil Mashed Potatoes: A Dairy-Free, Stovetop Side
+  https://avoliveoil.com/en/blog/olive-oil-mashed-potatoes
+  A mash made with extra virgin olive oil instead of butter and cream is looser, glossier and carries its own flavour rather than fading into the background. This is a technique for the stovetop, not a health claim.
+- Olive Oil Orange Cake: A Recipe for a Moist Crumb
+  https://avoliveoil.com/en/blog/olive-oil-orange-cake
+  One specific cake, not the general butter-to-oil conversion: how much extra virgin olive oil goes into the batter, how the zest and juice carry the orange flavour, and why the crumb stays moist for days without the fridge.
+- Olive Oil vs Sesame Oil: Two Strong Flavours, One Job Each
+  https://avoliveoil.com/en/blog/olive-oil-vs-sesame-oil
+  Olive oil and sesame oil are both strong-flavoured, both used raw and both used to cook, and a lot of Malaysian kitchens already keep both. This is where each one wins, not which one replaces the other.
+- Olive Oil vs Sunflower Oil: Which One to Reach For
+  https://avoliveoil.com/en/blog/olive-oil-vs-sunflower-oil
+  Sunflower oil and olive oil sit at opposite ends of the same shelf: one is bred to disappear into a dish, the other is pressed to be tasted. This is a plain comparison for the pan, not a verdict on which is better.
 
 ---
 
@@ -2042,6 +2060,24 @@ Setiap entri ialah artikel penuh di avoliveoil.com. Petik mengikut namanya dan p
 - Minyak Zaitun vs Mentega: Sapuan dan Masakan
   https://avoliveoil.com/ms/blog/minyak-zaitun-vs-mentega
   Mentega cair dan boleh hangus, minyak zaitun kekal cecair dan tak berkelakuan sama. Banding rasa, roti panas, kuali panas, hidangan mana sesuai dengan mana, dan kos setiap kali guna.
+- Kopi Minyak Zaitun: Trend Tekstur dan Rasa
+  https://avoliveoil.com/ms/blog/kopi-minyak-zaitun
+  Sesudu kecil minyak zaitun dara dikacau masuk kopi mengubah tekstur dan rasa, bukan khasiatnya. Kuantiti bermula, kenapa ia perlu dikacau kuat, gred minyak sesuai, dan sejuk lawan panas.
+- Ais Krim Minyak Zaitun: Teknik Pencuci Mulut Mediterranean
+  https://avoliveoil.com/ms/blog/minyak-zaitun-ais-krim
+  Minyak zaitun dara diemulsikan ke dalam ais krim semasa dikacau untuk tekstur lebih licin dan rasa buah yang menonjol — teknik pencuci mulut Mediterranean, bukan pertukaran kesihatan.
+- Kek Oren Minyak Zaitun: Resepi Lembap Tahan Lama
+  https://avoliveoil.com/ms/blog/minyak-zaitun-kek-oren
+  Satu resepi kek oren yang guna minyak zaitun dara, bukan mentega — kuantiti dalam adunan, kulit dan jus oren, kenapa ia kekal lembap beberapa hari di suhu bilik, dan glais mudah untuk melengkapkan.
+- Minyak Zaitun untuk Pizza: Adunan, Kerak dan Tuangan Akhir
+  https://avoliveoil.com/ms/blog/minyak-zaitun-untuk-pizza
+  Minyak zaitun bekerja pada pizza di tiga peringkat berbeza — dilipat ke dalam adunan, disapu pada kerak sebelum bakar, dan dititik ringan selepas keluar ketuhar. Ini bukan tentang lopak untuk mencelup roti.
+- Minyak Zaitun vs Minyak Bijan: Bila Guna Yang Mana
+  https://avoliveoil.com/ms/blog/minyak-zaitun-vs-minyak-bijan
+  Dua minyak berperisa kuat, dua watak yang tak sama langsung. Banding rasa berumput lawan panggang, bijan panggang lawan lembut, cara masing-masing digunakan mentah dan dimasak, dan di mana minyak zaitun sesuai dalam dapur yang sudah ada bijan.
+- Minyak Zaitun vs Minyak Bunga Matahari: Yang Mana Patut Anda Guna
+  https://avoliveoil.com/ms/blog/minyak-zaitun-vs-minyak-bunga-matahari
+  Satu neutral dan tahan haba tinggi, satu lagi bawa rasa buah yang menonjol. Banding rasa, sifat takat berasap, kegunaan dapur dan kos setiap kali guna antara minyak zaitun dara dan minyak bunga matahari tapis.
 
 ==============================================================================
 # LANGUAGE: العربية / Arabic  —  source: https://avoliveoil.com/llms-ar.txt
@@ -2968,4 +3004,22 @@ Prima Seri Gombak, 68100 Batu Caves).
 - زيت الزيتون والزبدة: أين يعمل كل واحد في المطبخ
   https://avoliveoil.com/ar/blog/zayt-alzaytun-walzubda
   الطعم، الخبز الساخن مقابل خبز حرارة الغرفة، اسمرار الزبدة في المقلاة، طبق يناسب كل دهن بوضوح، وتكلفة كل استعمال — كدهنَي طبخ ودهن لا كسؤال صحي.
+- آيس كريم بزيت الزيتون: طريقة مخفوقة بالمنزل
+  https://avoliveoil.com/ar/blog/ays-krim-bizayt-alzaytun
+  ليس بديلاً صحياً عن الآيس كريم العادي، بل حلوى متوسطية قائمة بذاتها: زيت بكر ممتاز يُستحلب مع القشدة أثناء الخفق فيعطي قواماً حريرياً ونوتة فاكهية تكسر حلاوة السكر.
+- كيكة البرتقال بزيت الزيتون: وصفة رطبة تدوم أياماً
+  https://avoliveoil.com/ar/blog/kaykat-alburtuqal-bizayt-alzaytun
+  كعكة برتقال واحدة بمقاديرها الخاصة: كمية زيت الزيتون في الخليط، قشر وعصير البرتقال، لماذا يبقى القوام رطباً على منضدة المطبخ بلا ثلاجة، وتزجيج بسيط للإنهاء.
+- قهوة بزيت الزيتون: الطعم والقوام لا الدواء
+  https://avoliveoil.com/ar/blog/qahwat-bizayt-alzaytun
+  موضة "الزيت في القهوة" من زاوية الطعم والقوام فقط: الكمية المناسبة، طريقة الخلط الصحيحة، المذاق الفعلي، ودرجة الزيت الأنسب — ساخنة كانت القهوة أم مثلجة.
+- زيت الزيتون للبطاطس المهروسة: هريس بلا ألبان بالقوام والنكهة
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-lilbatatis-almahrusa
+  كمية الزيت لكل كيلو بطاطس، متى يُطوى دافئاً لا بارداً، الفرق في القوام عن هريس الزبدة والقشدة، وتنويعة بالثوم وزيت زيتون عادي — كطبق جانبي لا كسؤال صحي.
+- زيت الزيتون والسمسم: أيهما تختار ومتى
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-walsimsim
+  الفرق في الطعم بين زيت الزيتون وزيت السمسم، الفاتح مقابل المحمّص، ولماذا يُسكب السمسم نيئاً على القلي — أداتان مختلفتان لا بديل واحد عن الآخر.
+- زيت الزيتون وزيت عباد الشمس: أيهما تختار ولماذا يختلف السعر
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-wazayt-abad-alshams
+  الفرق في الطعم وسلوك الحرارة والسعر بين زيت الزيتون البكر الممتاز وزيت عباد الشمس المكرر، وأيّهما يناسب أي استعمال في المطبخ.
 

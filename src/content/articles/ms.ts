@@ -3127,6 +3127,21 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk popcorn",
         "path": "blog/minyak-zaitun-untuk-popcorn",
         "description": "Popcorn atas dapur, bukan bag mikrogelombang, dan apa yang minyak dara tambah."
+      },
+      {
+        "label": "Minyak zaitun vs minyak bunga matahari",
+        "path": "blog/minyak-zaitun-vs-minyak-bunga-matahari",
+        "description": "Rasa, sifat takat berasap dan kos setiap kali guna, dua minyak berbanding."
+      },
+      {
+        "label": "Minyak zaitun vs minyak bijan",
+        "path": "blog/minyak-zaitun-vs-minyak-bijan",
+        "description": "Dua minyak berperisa kuat, dan bila setiap satu menang di dapur."
+      },
+      {
+        "label": "Kopi minyak zaitun",
+        "path": "blog/kopi-minyak-zaitun",
+        "description": "Trend minyak dalam kopi: kuantiti, kenapa perlu dikacau kuat, dan rasa sebenar."
       }
     ]
   },
@@ -6880,6 +6895,16 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      },
+      {
+        "label": "Ais krim minyak zaitun",
+        "path": "blog/minyak-zaitun-ais-krim",
+        "description": "Pencuci mulut gaya Mediterranean, rasa buah dan pedas extra virgin menonjol."
+      },
+      {
+        "label": "Kek oren minyak zaitun",
+        "path": "blog/minyak-zaitun-kek-oren",
+        "description": "Satu resepi kek spesifik: kulit dan jus oren, kek lembap tanpa peti sejuk."
       }
     ]
   },
@@ -8813,6 +8838,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk telur goreng",
         "path": "blog/minyak-zaitun-untuk-telur-goreng",
         "description": "Gaya Sepanyol: lopak minyak cetek, disiram panas ke atas kuning."
+      },
+      {
+        "label": "Minyak zaitun untuk pizza",
+        "path": "blog/minyak-zaitun-untuk-pizza",
+        "description": "Adunan dan kerak, bukan lopak untuk mencelup — minyak dilipat dan disapu."
       }
     ]
   },
@@ -10574,6 +10604,1528 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk roti dan cicahan",
         "path": "blog/minyak-zaitun-untuk-roti-dan-cicahan",
         "description": "Cara menyediakan pinggan cicah roti yang betul, dan roti mana sesuai dengan minyak zaitun."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "kopi-minyak-zaitun",
+    "slug": "kopi-minyak-zaitun",
+    "seoTitle": "Kopi Minyak Zaitun: Trend Tekstur dan Rasa",
+    "metaTitle": "Kopi Minyak Zaitun: Trend Tekstur dan Rasa",
+    "metaDescription": "Kopi minyak zaitun dari sudut tekstur dan rasa: kuantiti bermula, sebab dikacau kuat, gred minyak sesuai, sejuk lawan panas — bukan dakwaan kesihatan.",
+    "focusKeyword": "kopi minyak zaitun",
+    "relatedKeywords": [
+      "kopi minyak zaitun",
+      "minyak zaitun dalam kopi",
+      "cara buat kopi minyak zaitun",
+      "trend kopi zaitun",
+      "sudu minyak zaitun dalam kopi",
+      "kopi minyak zaitun sejuk",
+      "kopi minyak zaitun panas",
+      "blend kopi dan minyak zaitun",
+      "rasa kopi bercampur minyak zaitun",
+      "minyak zaitun extra virgin untuk kopi"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Kopi Minyak Zaitun",
+      "Trend Kopi",
+      "Minyak Zaitun Extra Virgin",
+      "Dapur Malaysia"
+    ],
+    "h1": "Kopi Minyak Zaitun: Trend Tekstur dan Rasa",
+    "excerpt": "Sesudu kecil minyak zaitun dara dikacau masuk kopi mengubah tekstur dan rasa, bukan khasiatnya. Kuantiti bermula, kenapa ia perlu dikacau kuat, gred minyak sesuai, dan sejuk lawan panas.",
+    "keyTakeaway": "Kopi minyak zaitun ialah soal tekstur dan rasa, bukan khasiat: mulakan separuh sudu teh, kacau kuat atau blend kerana minyak dan kopi terpisah, pilih extra virgin lembut bukan yang pedas, dan sesuai untuk sejuk atau panas. Soalan tentang kesihatan sebaiknya dibawa kepada doktor atau pakar pemakanan.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressKopiMinyakZaitunHero",
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+    },
+    "ogImage": "/og/blog-kopi-minyak-zaitun.jpg",
+    "intro": [
+      "Kopi minyak zaitun ialah secawan kopi biasa dengan sedikit minyak zaitun dara dikacau masuk, trend yang tular semula di media sosial sebagai perubahan tekstur dan rasa pada minuman harian, bukan sebagai ramuan berkhasiat.",
+      "Ia bukan resipi rumit — cuma cara lama menambah lemak pada kopi, dipopularkan semula dengan nama baru dan botol minyak zaitun dara di tangan.",
+      "Artikel ini berhenti pada tekstur dan rasa: berapa banyak minyak untuk mula, kenapa ia perlu dikacau kuat, gred minyak yang sesuai, dan kopi sejuk berbanding panas. Soalan kesihatan dijawab ringkas, kemudian dihantar kepada profesional yang betul."
+    ],
+    "sections": [
+      {
+        "heading": "Apa Sebenarnya Trend Ini",
+        "id": "apa-itu-kopi-minyak-zaitun",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kopi minyak zaitun bukan minuman baru dengan formula rahsia, cuma kopi hitam biasa yang dikacau dengan sedikit minyak zaitun dara sebelum diminum. Perubahan yang berlaku ada pada tekstur cawan dan rasa akhir di lidah, bukan pada apa yang kopi itu buat kepada badan."
+          },
+          {
+            "type": "p",
+            "text": "Trend ini popular kerana mudah dicuba di rumah tanpa alat khas — hanya kopi yang biasa diseduh dan minyak zaitun dara yang sudah ada di dapur."
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      },
+      {
+        "heading": "Kuantiti Untuk Mula",
+        "id": "kuantiti-untuk-mula",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mulakan dengan kira-kira separuh sudu teh minyak zaitun dara untuk satu cawan kopi biasa, bukan satu sudu penuh. Kuantiti sekecil ini sudah cukup mengubah tekstur dan rasa; terlalu banyak buat kopi terasa berminyak dan berat di mulut, bukan lebih sedap."
+          },
+          {
+            "type": "p",
+            "text": "Selepas cuba sekali pada kuantiti itu, boleh tambah sedikit demi sedikit pada cawan seterusnya mengikut citarasa sendiri — bukan mengikut sebarang dos tetap."
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Perlu Dikacau Kuat, Bukan Dituang Terus",
+        "id": "kenapa-perlu-dikacau-kuat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak dan kopi tidak bercampur secara semula jadi kerana kopi kebanyakannya air, dan minyak zaitun tidak larut dalam air. Tuang terus tanpa kacau, minyak hanya terapung sebagai lapisan nipis di permukaan dan cawan pertama hirupan akan terasa berminyak sahaja, bukan bercampur."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Kacau laju** dengan sudu selama sepuluh hingga lima belas saat sehingga minyak berpecah menjadi titik halus.",
+              "**Guna frother tangan** atau blender kecil untuk campuran lebih sekata dan berbuih.",
+              "**Tutup dan goncang** dalam balang berpenutup jika kopi sudah sejuk sedikit, kaedah paling mudah tanpa alat."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      },
+      {
+        "heading": "Rasa Sebenar: Bukan Manis, Bukan Dakwaan Kesihatan",
+        "id": "rasa-sebenar-kopi-minyak-zaitun",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kopi bercampur minyak zaitun terasa lebih penuh di mulut, tekstur sedikit berkrim tanpa tenusu, dan ada nota halus yang melembutkan kepahitan kopi hitam. Ia tidak manis — jangan harap rasa seperti kopi berkrim atau bergula, kerana minyak zaitun tidak membawa gula langsung."
+          },
+          {
+            "type": "p",
+            "text": "Jika soalan sebenar ialah sama ada ini baik untuk badan, itu soalan untuk doktor atau pakar pemakanan, bukan untuk artikel dapur. Di sini kita berhenti pada apa yang lidah rasa, bukan apa yang badan buat dengannya."
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      },
+      {
+        "heading": "Gred Minyak Zaitun Yang Sesuai",
+        "id": "gred-minyak-yang-sesuai",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pilih minyak zaitun dara yang lembut dan buah-buahan, bukan yang pedas atau tajam di kerongkong. Minyak pedas cenderung bergaduh dengan kepahitan kopi dan buat rasa akhir tidak seimbang, sementara minyak lembut membiarkan kopi kekal watak utama."
+          },
+          {
+            "type": "p",
+            "text": "Elak juga minyak dari Koleksi Infusi seperti rosemary & selasih atau kunyit & lada hitam untuk kopi — perisa herba itu direka untuk masakan berat, bukan untuk secawan kopi pagi."
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      },
+      {
+        "heading": "Sejuk Berbanding Panas",
+        "id": "sejuk-vs-panas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kopi panas melarutkan minyak lebih cepat semasa dikacau kerana haba membantu pecahkan titik minyak, tetapi lapisan minyak juga naik semula ke permukaan lebih pantas apabila kacauan berhenti. Kopi sejuk atau ais perlukan kacauan lebih kuat pada mulanya, tetapi campuran kekal stabil lebih lama dalam gelas."
+          },
+          {
+            "type": "p",
+            "text": "Kedua-dua cara sah dicuba; pilih ikut minuman biasa anda, bukan kerana satu cara dianggap lebih betul daripada yang lain."
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      },
+      {
+        "heading": "Kaedah Ringkas: Langkah Demi Langkah",
+        "id": "kaedah-ringkas-langkah-demi-langkah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Berikut kaedah ringkas untuk satu cawan, sama ada kopi seduh biasa, kopi segera, panas atau sejuk, tanpa perlu alat khas selain sudu atau frother tangan yang mungkin sudah ada di dapur. Sesuaikan kuantiti minyak selepas cubaan pertama mengikut citarasa sendiri, bukan ikut sukatan tetap yang sama untuk semua orang."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Seduh kopi seperti biasa, panas atau sejuk mengikut pilihan.",
+              "Tambah kira-kira separuh sudu teh minyak zaitun dara yang lembut.",
+              "Kacau laju dengan sudu selama sepuluh hingga lima belas saat, atau blend sekejap.",
+              "Rasa dahulu sebelum tambah gula atau susu supaya nota minyak dapat dikenali.",
+              "Minum segera — lapisan minyak naik semula ke permukaan jika dibiarkan lama."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressKopiMinyakZaitunInline",
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasan Ringkas",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kopi minyak zaitun ialah eksperimen tekstur dan rasa yang mudah dicuba di dapur sendiri: sedikit minyak, kacauan kuat, dan minyak dara yang lembut. Ia bukan ubat atau suplemen, cuma cara lain menikmati secawan kopi."
+        },
+        {
+          "type": "p",
+          "text": "Untuk teknik memasak lain dengan minyak zaitun dara, [lihat panduan dapur penuh](/blog/minyak-zaitun-untuk-masak-panduan-dapur), atau [semak saiz botol Arabian Village](/products) untuk mula mencuba di rumah."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun patut dimasukkan dalam secawan kopi?",
+        "a": "Mulakan dengan kira-kira separuh sudu teh untuk satu cawan biasa. Kuantiti sekecil ini sudah mengubah tekstur dan rasa; lebih banyak daripada itu cenderung terasa berminyak dan berat, bukan lebih sedap."
+      },
+      {
+        "q": "Kenapa minyak zaitun tak boleh terus dituang atas kopi?",
+        "a": "Minyak dan kopi tidak bercampur secara semula jadi kerana kopi kebanyakannya air. Tuang terus tanpa kacau, minyak hanya terapung sebagai lapisan nipis di permukaan, bukan sebati dengan minuman."
+      },
+      {
+        "q": "Apa rasa sebenar kopi bercampur minyak zaitun?",
+        "a": "Tekstur terasa lebih penuh dan sedikit berkrim tanpa tenusu, dengan nota halus yang melembutkan kepahitan. Ia tidak manis — minyak zaitun tidak membawa gula, jadi jangan harap rasa seperti kopi berkrim."
+      },
+      {
+        "q": "Gred minyak zaitun mana paling sesuai untuk kopi?",
+        "a": "Pilih minyak zaitun dara yang lembut dan buah-buahan, bukan yang pedas atau tajam di kerongkong. Minyak pedas cenderung bergaduh dengan kepahitan kopi dan buat rasa akhir tidak seimbang."
+      },
+      {
+        "q": "Bolehkah kopi minyak zaitun dibuat sejuk atau ais?",
+        "a": "Boleh. Kacau lebih kuat pada mulanya kerana kopi sejuk tidak membantu pecahkan minyak seperti haba, tetapi campuran cenderung kekal stabil lebih lama dalam gelas berbanding kopi panas."
+      },
+      {
+        "q": "Adakah kopi minyak zaitun baik untuk kesihatan?",
+        "a": "Itu soalan untuk doktor atau pakar pemakanan, bukan untuk artikel dapur ini. Di sini kita bincang tekstur dan rasa sahaja — kuantiti, kaedah kacau, dan gred minyak yang sesuai."
+      },
+      {
+        "q": "Bolehkah guna minyak dari Koleksi Infusi untuk kopi?",
+        "a": "Lebih baik elak. Perisa seperti rosemary & selasih atau kunyit & lada hitam direka untuk masakan berat dan cenderung bergaduh dengan kopi. Minyak zaitun dara klasik yang lembut lebih sesuai untuk secawan kopi."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun dara, dan bila lebih baik guna lemak lain."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "minyak-zaitun-ais-krim",
+    "slug": "minyak-zaitun-ais-krim",
+    "seoTitle": "Ais Krim Minyak Zaitun: Teknik Pencuci Mulut",
+    "metaTitle": "Ais Krim Minyak Zaitun: Teknik Pencuci Mulut",
+    "metaDescription": "Ais krim minyak zaitun dara: teknik Mediterranean, bukan pertukaran kesihatan — emulsi semasa churn, rasa buah pedas, garam flaky, dan cara tanpa mesin.",
+    "focusKeyword": "ais krim minyak zaitun",
+    "relatedKeywords": [
+      "ais krim minyak zaitun",
+      "resepi ais krim minyak zaitun",
+      "minyak zaitun dalam ais krim",
+      "ais krim minyak zaitun dara",
+      "cara buat ais krim minyak zaitun",
+      "ais krim tanpa mesin minyak zaitun",
+      "pencuci mulut minyak zaitun",
+      "minyak zaitun untuk pencuci mulut",
+      "ais krim gaya Mediterranean",
+      "garam flaky ais krim minyak zaitun"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Ais Krim Minyak Zaitun",
+      "Pencuci Mulut",
+      "Extra Virgin",
+      "Dapur Malaysia",
+      "Teknik Memasak"
+    ],
+    "h1": "Ais Krim Minyak Zaitun: Teknik Pencuci Mulut Mediterranean",
+    "excerpt": "Minyak zaitun dara diemulsikan ke dalam ais krim semasa dikacau untuk tekstur lebih licin dan rasa buah yang menonjol — teknik pencuci mulut Mediterranean, bukan pertukaran kesihatan.",
+    "keyTakeaway": "Ais krim minyak zaitun ialah teknik Mediterranean: minyak zaitun dara diemulsikan ke dalam krim semasa dikacau untuk tekstur licin dan rasa buah pedas yang melawan manis, bukan versi 'lebih sihat'. Guna minyak dara sederhana, tambah hampir akhir churn, dan tutup dengan garam flaky atau kulit sitrus.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunAisKrimHero",
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-ais-krim.jpg",
+    "intro": [
+      "Ais krim minyak zaitun bukan versi \"lebih sihat\" bagi pencuci mulut sejuk beku ini — ia teknik gaya Mediterranean yang sudah lama wujud di dapur Itali dan Sepanyol, di mana minyak zaitun dara diemulsikan ke dalam adunan krim semasa dikacau.",
+      "Artikel ini fokus pada teknik sahaja: bagaimana minyak bercampur rata dengan krim, kenapa rasa buah dan pedas extra virgin lebih ketara berbanding pencuci mulut minyak neutral, sentuhan akhir yang biasa digunakan, dan cara ringkas jika anda tiada mesin ais krim."
+    ],
+    "sections": [
+      {
+        "heading": "Apa Itu Ais Krim Minyak Zaitun",
+        "id": "apa-itu-ais-krim-minyak-zaitun",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ais krim minyak zaitun ialah pencuci mulut sejuk beku di mana minyak zaitun dara menggantikan sebahagian krim atau menyertainya, diemulsikan rata semasa adunan dikacau atau di-churn. Ia bukan trend baru — teknik ini biasa di gelato Itali dan pencuci mulut Sepanyol, di mana minyak dara ialah lemak, bukan hiasan atas hidangan."
+          },
+          {
+            "type": "p",
+            "text": "Sebab utama guna minyak zaitun di sini ialah tekstur dan rasa, bukan kesihatan: minyak beri kelicinan berbeza daripada krim tenusu semata-mata, dan bawa nota buah serta pedas halus yang melawan manis gula."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunAisKrimInline",
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Teknik: Minyak Menggantikan atau Menyertai Krim",
+        "id": "teknik-emulsi-minyak-dan-krim",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Untuk 500 ml campuran krim dan susu, mula dengan 2 hingga 3 sudu besar minyak zaitun dara — cukup untuk rasa dan tekstur tanpa menenggelamkan manis. Minyak dituang perlahan semasa mesin masih berputar, bukan sekali gus, supaya ia berpisah menjadi titisan halus, bukan lapisan berminyak di atas."
+          },
+          {
+            "type": "p",
+            "text": "Masa terbaik menambah minyak ialah lewat dalam proses churn, ketika adunan sudah mula memekat tetapi belum keras sepenuhnya. Tambah terlalu awal dan minyak boleh memisah semula semasa beku; tambah terlalu lewat dan ia tidak sempat sebati rata."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunAisKrimInline",
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Rasa Buah dan Pedas Extra Virgin Lebih Menonjol",
+        "id": "rasa-buah-dan-pedas-lebih-menonjol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara membawa rasa buahnya sendiri — sedikit pedas di kerongkong, sedikit pahit di pangkal lidah — ciri **perahan sejuk** yang minyak neutral seperti minyak sayur tidak ada. Dalam ais krim, rasa itu melawan manis gula dan buat setiap suapan terasa lebih kompleks."
+          },
+          {
+            "type": "p",
+            "text": "Pilih minyak zaitun dara sederhana, bukan yang paling pedas dalam rangkaian, supaya pedasnya tambah lapisan rasa dan bukan tenggelamkan manis serta vanila."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunAisKrimInline",
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Sentuhan Akhir: Garam Flaky, Kulit Oren atau Lemon",
+        "id": "sentuhan-akhir-garam-dan-sitrus",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sedikit garam flaky ditabur atas semangkuk ais krim minyak zaitun tajamkan lagi kontras antara pedas minyak dan manis gula, cara yang sama garam bekerja atas coklat gelap. Kulit oren atau lemon parut tambah nota segar tanpa ubah tekstur asasnya."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Garam flaky** — satu cubitan kecil atas setiap mangkuk, sejurus sebelum dihidang.",
+              "**Kulit oren atau lemon parut** — hiasan segar, guna buah segar, bukan perisa botol.",
+              "**Renjisan minyak zaitun tambahan** — beberapa titis atas permukaan untuk rasa yang lebih ketara."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunAisKrimInline",
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Cara Ringkas Tanpa Mesin Ais Krim",
+        "id": "cara-tanpa-mesin-ais-krim",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tanpa mesin churn, udara perlu dimasukkan secara manual supaya hasil akhir tidak jadi ketulan ais keras yang sukar disudu. Kaedah paling mudah ialah pukul krim sejuk sehingga kaku dan berbuih, gaul rata dengan susu pekat manis serta minyak zaitun dara, kemudian bekukan dalam bekas kalis udara sambil dikacau sekali-sekala pada jam-jam awal."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Pukul 250 ml krim sejuk sehingga kaku dan berbentuk puncak lembut.",
+              "Gaul rata dengan satu tin susu pekat manis dan 2 sudu besar minyak zaitun dara, kacau perlahan supaya udara dalam krim tidak hilang.",
+              "Tuang ke dalam bekas kalis udara dan bekukan sekurang-kurangnya 6 jam.",
+              "Kacau kasar dengan garpu pada jam pertama dan kedua untuk pecahkan hablur ais sebelum ia keras sepenuhnya."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunAisKrimInline",
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Ramuan Asas untuk Cuba di Rumah",
+        "id": "ramuan-asas-ais-krim-minyak-zaitun",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Jadual di bawah senaraikan ramuan asas untuk satu kelompok kecil ais krim minyak zaitun, sesuai digunakan dengan mesin churn atau kaedah pukul-dan-bekukan tanpa mesin di atas. Kuantiti boleh digandakan dua atau tiga kali, dan minyak boleh dilaraskan naik atau turun sedikit ikut citarasa masing-masing."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ramuan",
+              "Kuantiti",
+              "Nota"
+            ],
+            "rows": [
+              [
+                "Krim sejuk",
+                "250–500 ml",
+                "Sejukkan bekas dan pemukul dahulu"
+              ],
+              [
+                "Minyak zaitun dara",
+                "2–3 sudu besar",
+                "Gred sederhana, bukan yang paling pedas"
+              ],
+              [
+                "Susu pekat manis atau gula halus",
+                "1 tin / secukup rasa",
+                "Sumber manis dan kestabilan tekstur"
+              ],
+              [
+                "Garam flaky",
+                "Secubit",
+                "Ditabur sejurus sebelum dihidang"
+              ],
+              [
+                "Kulit oren atau lemon",
+                "Secukup rasa",
+                "Parut halus, guna buah segar"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunAisKrimInline",
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ais krim minyak zaitun ialah teknik, bukan pertukaran kesihatan — minyak dara diemulsikan lewat churn untuk tekstur licin dan rasa buah pedas yang melawan manis. Pilih gred sederhana, tutup dengan garam flaky atau kulit sitrus."
+        },
+        {
+          "type": "p",
+          "text": "Untuk teknik lain minyak zaitun dalam bakeri dan pencuci mulut, [panduan minyak zaitun untuk kek dan bakeri](/blog/minyak-zaitun-untuk-kek-dan-bakeri) ada nisbah dan langkah penuh. Untuk mula, [lihat saiz botol Arabian Village](/products)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Adakah ais krim minyak zaitun lebih sihat daripada ais krim biasa?",
+        "a": "Itu soalan untuk pakar pemakanan atau doktor, bukan artikel dapur ini. Artikel ini bercakap tentang teknik dan rasa sahaja — minyak zaitun sebagai lemak dalam ais krim, bukan dakwaan kesihatan tentang produk ini."
+      },
+      {
+        "q": "Berapa banyak minyak zaitun patut digunakan dalam ais krim?",
+        "a": "Mulakan dengan 2 hingga 3 sudu besar minyak zaitun dara bagi setiap 500 ml campuran krim. Terlalu banyak buat adunan berminyak dan sukar sebati; terlalu sedikit dan rasa buahnya tidak akan terasa."
+      },
+      {
+        "q": "Bolehkah buat ais krim minyak zaitun tanpa mesin churn?",
+        "a": "Boleh. Pukul krim sejuk sehingga kaku, gaul rata dengan susu pekat manis dan minyak zaitun, kemudian bekukan sambil dikacau kasar sekali-sekala pada dua jam pertama untuk pecahkan hablur ais."
+      },
+      {
+        "q": "Kenapa ais krim minyak zaitun terasa lebih pedas berbanding ais krim biasa?",
+        "a": "Minyak zaitun dara membawa rasa buah dan pedas halusnya sendiri, ciri perahan sejuk yang minyak neutral tidak ada. Rasa itu melawan manis gula, jadi setiap suapan terasa lebih kompleks berbanding ais krim biasa."
+      },
+      {
+        "q": "Minyak zaitun gred apa sesuai untuk ais krim?",
+        "a": "Minyak zaitun dara gred sederhana, bukan yang paling pedas dalam rangkaian. Pedas yang terlalu kuat boleh buat ais krim terasa pahit di hujung, jadi elakkan minyak paling tajam untuk pencuci mulut ini."
+      },
+      {
+        "q": "Bolehkah minyak zaitun infusi digunakan ganti minyak dara biasa?",
+        "a": "Boleh dicuba, tetapi rasa infusi seperti rosemary atau lavender akan mendominasi manis dan vanila. Untuk rasa buah dan pedas yang seimbang seperti diterangkan di sini, minyak zaitun dara klasik lebih sesuai bermula."
+      },
+      {
+        "q": "Berapa lama ais krim minyak zaitun boleh disimpan dalam peti sejuk beku?",
+        "a": "Seperti ais krim biasa, sebaiknya dihabiskan dalam dua hingga tiga minggu dalam bekas kalis udara sebelum hablur ais mula terbentuk dan tekstur jadi kasar. Kacau semula sedikit sebelum dihidang jika ia jadi terlalu keras."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak Zaitun Palestin Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, sesuai untuk teknik dapur seperti ini."
+      },
+      {
+        "label": "Minyak zaitun untuk kek dan bakeri",
+        "path": "blog/minyak-zaitun-untuk-kek-dan-bakeri",
+        "description": "Nisbah penukaran minyak zaitun dalam bakeri, dan teknik lain minyak zaitun dalam pencuci mulut."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "minyak-zaitun-kek-oren",
+    "slug": "minyak-zaitun-kek-oren",
+    "seoTitle": "Kek Oren Minyak Zaitun: Resepi Lembap Tahan Lama",
+    "metaTitle": "Kek Oren Minyak Zaitun: Resepi Lembap Tahan Lama",
+    "metaDescription": "Resepi kek oren minyak zaitun: kuantiti minyak dalam adunan, kulit dan jus oren, kenapa ia lembap tanpa peti sejuk, dan glais mudah untuk melengkapkan.",
+    "focusKeyword": "kek oren minyak zaitun",
+    "relatedKeywords": [
+      "resepi kek oren minyak zaitun",
+      "kek minyak zaitun",
+      "kek oren tanpa mentega",
+      "kek oren lembap",
+      "minyak zaitun untuk kek",
+      "kek oren tanpa peti sejuk",
+      "glais oren untuk kek",
+      "kulit oren dalam kek",
+      "kek oren extra virgin",
+      "resepi kek guna minyak"
+    ],
+    "category": "Resepi",
+    "tags": [
+      "Kek Oren",
+      "Bakeri",
+      "Resepi",
+      "Minyak Zaitun Dara",
+      "Kek Tanpa Mentega"
+    ],
+    "h1": "Kek Oren Minyak Zaitun: Resepi Lembap Tahan Lama",
+    "excerpt": "Satu resepi kek oren yang guna minyak zaitun dara, bukan mentega — kuantiti dalam adunan, kulit dan jus oren, kenapa ia kekal lembap beberapa hari di suhu bilik, dan glais mudah untuk melengkapkan.",
+    "keyTakeaway": "Kek oren minyak zaitun guna kira-kira 180 ml minyak zaitun dara untuk satu loyang, kulit dan jus dua biji oren, dan tiada mentega langsung. Minyak kekal cecair selepas kek sejuk, jadi remahnya terus lembap beberapa hari di suhu bilik, siap dengan glais oren atau taburan gula ais ringkas.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunKekOrenHero",
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-kek-oren.jpg",
+    "intro": [
+      "Kebanyakan kek oren guna mentega, tetapi versi minyak zaitun dara datang dari dapur Mediterranean dan hasilnya berbeza — remah lebih lembap dan tahan lebih lama tanpa peti sejuk.",
+      "Ini bukan panduan penukaran mentega-ke-minyak am; untuk nisbah itu, [panduan minyak zaitun untuk kek dan bakeri](/blog/minyak-zaitun-untuk-kek-dan-bakeri) sudah menerangkannya. Artikel ini fokus pada satu resepi: kuantiti minyak, kulit dan jus oren, kaedah bakar, dan glais akhir."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa Minyak Zaitun untuk Kek Ini",
+        "id": "kenapa-minyak-zaitun",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara kekal cecair pada suhu bilik, tidak seperti mentega yang mengeras bila sejuk. Sifat itu yang buat kek oren jenis ini kekal lembut sehari selepas dibakar, bukan keras di tepi macam kek berasaskan mentega yang disimpan tanpa peti sejuk."
+          },
+          {
+            "type": "p",
+            "text": "Guna minyak zaitun dara **perahan sejuk** yang sederhana rasanya, bukan yang pedas kuat, supaya ia tidak melawan rasa oren. Botol klasik Arabian Village sesuai untuk ini; jangan guna varian berinfusi kerana tiada satu pun daripada enam infusi itu bercitarasa oren."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKekOrenInline",
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Kuantiti Minyak dan Bahan Dalam Adunan",
+        "id": "kuantiti-minyak-adunan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Untuk satu loyang bulat 20 cm, guna kira-kira 180 ml minyak zaitun dara, 200 g tepung naik sendiri, 200 g gula kastor, tiga biji telur saiz sederhana dan satu sudu kecil serbuk penaik tambahan. Nisbah minyak ini lebih tinggi daripada kek mentega biasa kerana minyak tidak bawa udara semasa dikacau seperti mentega dikrimkan."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Bahan",
+              "Kuantiti"
+            ],
+            "rows": [
+              [
+                "Minyak zaitun dara (klasik)",
+                "180 ml"
+              ],
+              [
+                "Tepung naik sendiri",
+                "200 g"
+              ],
+              [
+                "Gula kastor",
+                "200 g"
+              ],
+              [
+                "Telur",
+                "3 biji"
+              ],
+              [
+                "Kulit oren, diparut",
+                "2 biji oren"
+              ],
+              [
+                "Jus oren",
+                "120 ml"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKekOrenInline",
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Kulit dan Jus Oren",
+        "id": "kulit-dan-jus-oren",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Parut kulit sebelum oren dipicit, kerana kulit yang sudah lembik lebih sukar diparut halus. Kulit bawa minyak pati oren yang beri bau kuat; jus pula beri kelembapan dan sedikit keasidan yang imbangi manis gula."
+          },
+          {
+            "type": "p",
+            "text": "Gaul kulit oren terus ke dalam gula sebelum campur bahan lain — geseran gula lepaskan lebih banyak minyak pati daripada kulit berbanding gaul terus ke adunan cecair."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKekOrenInline",
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Kaedah Bakar Langkah demi Langkah",
+        "id": "kaedah-bakar",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Panaskan ketuhar pada 170°C dan lapik loyang dengan kertas minyak. Kacau minyak zaitun, gula dan kulit oren dahulu, kemudian masukkan telur satu-satu, baru jus oren, dan akhir sekali tepung diayak masuk perlahan supaya adunan tidak keras."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Gaul kulit oren ke dalam gula, kacau rata.",
+              "Tuang minyak zaitun, kacau sehingga sebati dan berkilat.",
+              "Masukkan telur satu-satu, kacau selepas setiap satu.",
+              "Tuang jus oren, kacau sebentar sahaja.",
+              "Ayak tepung dan serbuk penaik masuk, lipat perlahan sehingga rata.",
+              "Bakar 35–40 minit sehingga lidi keluar bersih, kemudian sejukkan dalam loyang 10 minit sebelum dikeluarkan."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKekOrenInline",
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Kek Ini Kekal Lembap Tanpa Peti Sejuk",
+        "id": "kek-lembap-tanpa-peti-sejuk",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara tidak mengeras pada suhu bilik seperti lemak tenusu, jadi remah kek kekal lembut tanpa perlu disimpan sejuk. Kek jenis mentega selalunya keras di tepi lepas semalam di atas kaunter; kek minyak ini tidak berkelakuan begitu."
+          },
+          {
+            "type": "p",
+            "text": "Simpan dalam bekas kedap udara di atas kaunter, bukan peti sejuk — sejuk sebenarnya buat remah kek jenis ini rasa lebih kering, bukan lebih segar. Ia biasanya kekal baik tiga hingga empat hari begitu."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKekOrenInline",
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
+          }
+        ]
+      },
+      {
+        "heading": "Glais atau Taburan Gula Ais",
+        "id": "glais-atau-gula-ais",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cara paling ringkas ialah tabur gula ais atas kek yang sudah sejuk sepenuhnya, guna penapis halus supaya lapisannya sekata. Untuk sentuhan lebih basah, gaul gula ais dengan sedikit jus oren sehingga jadi glais cair, kemudian tuang atas kek dan biar ia meleleh ke tepi sebelum dipotong."
+          },
+          {
+            "type": "p",
+            "text": "Glais oren yang terlalu pekat akan retak bila dipotong; nisbah biasa ialah dua sudu besar jus oren untuk setiap 150 g gula ais, laraskan sehingga kepekatan boleh dituang perlahan dari sudu."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKekOrenInline",
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kek oren minyak zaitun bukan sekadar tukar mentega dengan minyak dalam resepi lama — ia guna nisbah dan kaedah sendiri supaya minyak zaitun dara kekal terasa dan remah kek kekal lembap beberapa hari di suhu bilik. Untuk pengganti bahan lain dalam bakeri, [panduan penukaran minyak zaitun](/blog/olive-oil-substitute-what-to-use-instead) ada nisbah tambahan."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun untuk satu kek oren?",
+        "a": "Untuk loyang bulat 20 cm, kira-kira 180 ml minyak zaitun dara sudah cukup. Kuantiti ini lebih tinggi daripada kek berasaskan mentega kerana minyak tidak bawa udara semasa dikacau seperti mentega dikrimkan."
+      },
+      {
+        "q": "Bolehkah guna minyak zaitun berinfusi untuk kek oren ini?",
+        "a": "Tidak digalakkan — enam infusi yang ada (thyme liar, blackseed, kunyit & lada hitam, rosemary & basil, adas manis, lavender & chamomile) tiada satu pun bercitarasa oren. Guna minyak klasik yang sederhana rasanya."
+      },
+      {
+        "q": "Kenapa kek ini tidak perlu peti sejuk?",
+        "a": "Minyak zaitun dara kekal cecair pada suhu bilik, tidak mengeras seperti lemak tenusu, jadi remah kek kekal lembut tanpa penyejukan. Simpan dalam bekas kedap udara di atas kaunter selama tiga hingga empat hari."
+      },
+      {
+        "q": "Apa beza resepi ini dengan nisbah penukaran mentega-ke-minyak am?",
+        "a": "Ini satu resepi kek oren yang khusus, bukan panduan penukaran am. Untuk nisbah menukar mentega kepada minyak dalam resepi lain, rujuk [panduan minyak zaitun untuk kek dan bakeri](/blog/minyak-zaitun-untuk-kek-dan-bakeri) yang sudah menerangkannya."
+      },
+      {
+        "q": "Bolehkah kulit oren digantikan dengan perisa oren botol?",
+        "a": "Kulit oren segar beri minyak pati sebenar dan bau yang lebih kuat berbanding perisa botol, yang selalunya lebih rata dan kurang kompleks. Kulit segar juga tidak tambah kemanisan atau bahan tambahan lain ke dalam adunan."
+      },
+      {
+        "q": "Kenapa telur dimasukkan satu-satu, bukan sekali gus?",
+        "a": "Memasukkan telur satu-satu bagi adunan minyak dan gula masa untuk sebati sebelum telur seterusnya, jadi campuran tidak berlerai atau kelihatan berketul. Ini penting kerana minyak dan telur lebih mudah terpisah berbanding mentega dikrimkan."
+      },
+      {
+        "q": "Berapa lama kek ini kekal baik di suhu bilik?",
+        "a": "Biasanya tiga hingga empat hari dalam bekas kedap udara di atas kaunter, tanpa keras di tepi. Ini kelebihan utama minyak zaitun berbanding kek mentega yang cenderung keras selepas semalam."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml untuk resepi bakeri."
+      },
+      {
+        "label": "Minyak zaitun untuk kek dan bakeri",
+        "path": "blog/minyak-zaitun-untuk-kek-dan-bakeri",
+        "description": "Nisbah penukaran mentega kepada minyak zaitun untuk bakeri secara umum."
+      },
+      {
+        "label": "Olive oil substitute: what to use instead",
+        "path": "blog/olive-oil-substitute-what-to-use-instead",
+        "description": "Pengganti bahan lain dalam bakeri bila minyak zaitun bukan pilihan pertama."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, serta saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-pizza",
+    "slug": "minyak-zaitun-untuk-pizza",
+    "seoTitle": "Minyak Zaitun untuk Pizza: Adunan, Kerak, Tuangan",
+    "metaTitle": "Minyak Zaitun untuk Pizza: Adunan, Kerak, Tuangan",
+    "metaDescription": "Minyak zaitun dilipat ke adunan, disapu pada kerak sebelum bakar, dititik ringan selepas keluar ketuhar — bukan lopak untuk mencelup roti.",
+    "focusKeyword": "minyak zaitun untuk pizza",
+    "relatedKeywords": [
+      "minyak zaitun dalam adunan pizza",
+      "sapu minyak zaitun pada kerak pizza",
+      "berapa banyak minyak zaitun untuk pizza",
+      "minyak zaitun extra virgin untuk pizza",
+      "tuangan minyak zaitun selepas bakar pizza",
+      "resepi adunan pizza minyak zaitun",
+      "minyak zaitun kerak pizza rangup",
+      "pizza tanpa minyak zaitun",
+      "minyak zaitun untuk masak pizza rumah",
+      "kerak pizza emas minyak zaitun"
+    ],
+    "category": "Memasak dengan minyak zaitun",
+    "tags": [
+      "pizza",
+      "adunan",
+      "kerak",
+      "extra virgin"
+    ],
+    "h1": "Minyak Zaitun untuk Pizza: Adunan, Kerak dan Tuangan Akhir",
+    "excerpt": "Minyak zaitun bekerja pada pizza di tiga peringkat berbeza — dilipat ke dalam adunan, disapu pada kerak sebelum bakar, dan dititik ringan selepas keluar ketuhar. Ini bukan tentang lopak untuk mencelup roti.",
+    "keyTakeaway": "Minyak zaitun ada tiga tugas berasingan pada pizza: melembutkan dan meregangkan adunan, menyapu kerak untuk warna dan rangup sebelum bakar, dan tuangan akhir selepas ketuhar untuk rasa buah serta pedas yang tidak terdedah kepada haba penuh. Ketiga-tiganya berbeza daripada lopak untuk mencelup roti.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukPizzaHero",
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-pizza.jpg",
+    "intro": [
+      "Minyak zaitun masuk ke dalam pizza rumah pada tiga masa berbeza, dan setiap satu buat kerja yang tidak sama — bukan sekadar satu tuangan longgar sebelum masuk ketuhar.",
+      "Artikel ini fokus pada adunan dan kerak: berapa banyak minyak dilipat ke dalam doh, sapuan pada kerak sebelum bakar, tuangan akhir selepas keluar ketuhar, dan beza rasa berbanding pizza tanpa minyak zaitun langsung. Ini bukan lopak minyak untuk mencelup roti — subjek itu sudah dimiliki oleh [minyak zaitun untuk roti dan cicahan](/blog/minyak-zaitun-untuk-roti-dan-cicahan), dipautkan di sini, tidak diulang."
+    ],
+    "sections": [
+      {
+        "heading": "Minyak zaitun dalam adunan, bukan sekadar di atas kerak",
+        "id": "minyak-dalam-adunan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dilipat terus ke dalam adunan pizza sebelum diuli, bukan hanya disapu di atas selepas dibentuk. Ia melincirkan gluten semasa diuli, jadi doh lebih senang diregang nipis tanpa koyak, dan kekal lembut walaupun sudah sejuk keesokan hari."
+          },
+          {
+            "type": "p",
+            "text": "Kesan ini paling ketara pada kerak nipis gaya rumah — doh tanpa minyak cenderung keras dan rapuh selepas sejuk, manakala doh berminyak kekal lembut untuk dipanaskan semula esoknya."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPizzaInline",
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+          }
+        ]
+      },
+      {
+        "heading": "Berapa banyak minyak untuk dilipat ke dalam adunan",
+        "id": "kuantiti-dalam-adunan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kadar biasa ialah kira-kira dua sudu besar minyak zaitun untuk setiap 500 gram tepung — cukup untuk mengubah tekstur tanpa menjadikan doh berminyak atau susah dibentuk. Masukkan selepas air dan ragi bercampur, sebelum diuli sepenuhnya."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Terlalu sikit** (kurang satu sudu besar per 500g): doh masih rapuh, tiada beza ketara berbanding tanpa minyak.",
+              "**Kadar biasa** (dua sudu besar per 500g): doh licin, mudah diregang, kerak lembut di dalam.",
+              "**Terlalu banyak** (lebih empat sudu besar): doh melekit, sukar dibentuk nipis, dan gluten lemah."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPizzaInline",
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+          }
+        ]
+      },
+      {
+        "heading": "Sapuan minyak pada kerak sebelum masuk ketuhar",
+        "id": "sapuan-kerak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sapuan minyak zaitun nipis pada pinggir kerak sebelum bakar memberi warna keemasan dan permukaan yang lebih rangup, kerana minyak membantu haba ketuhar mencoklatkan permukaan doh dengan lebih rata berbanding doh kering."
+          },
+          {
+            "type": "p",
+            "text": "Sapu dengan berus dapur, fokus pada pinggir kerak yang tidak dilitupi topping, bukan seluruh permukaan tengah — bahagian itu sudah dilindungi sos dan keju daripada haba terus."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPizzaInline",
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+          }
+        ]
+      },
+      {
+        "heading": "Tuangan akhir selepas pizza keluar dari ketuhar",
+        "id": "tuangan-akhir",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ketuhar rumah untuk pizza selalunya jauh melepasi julat takat berasap minyak zaitun extra virgin (190–210°C), jadi tuangan ringan dilakukan selepas pizza keluar, bukan sebelum masuk — ini mengelakkan haba penuh sepenuhnya dan mengekalkan rasa asal minyak."
+          },
+          {
+            "type": "p",
+            "text": "Satu hingga dua sudu teh dititik merata atas pizza panas sudah cukup — lebih daripada itu menenggelamkan rasa topping dan keju yang sudah ada."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPizzaInline",
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+          }
+        ]
+      },
+      {
+        "heading": "Rasa pizza dengan minyak zaitun berbanding tanpa",
+        "id": "perbezaan-rasa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pizza tanpa minyak zaitun langsung terasa lebih kering pada kerak dan lebih rata pada rasa keseluruhan — sos dan keju mendominasi tanpa lawan. Minyak zaitun extra virgin bawa nota berumput atau sedikit pedas yang memotong kemanisan sos tomato."
+          },
+          {
+            "type": "p",
+            "text": "Perbezaan paling jelas pada pizza ringkas seperti margherita, di mana sedikit topping bermaksud rasa minyak lebih mudah dikesan berbanding pizza penuh topping berat."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPizzaInline",
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+          }
+        ]
+      },
+      {
+        "heading": "Tiga peringkat, tiga kegunaan: ringkasan pantas",
+        "id": "ringkasan-tiga-peringkat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Setiap peringkat pizza — adunan, kerak sebelum bakar, dan pizza siap — ada tugas minyak zaitun tersendiri, dan mengelirukan ketiga-tiganya biasanya bermakna terlalu banyak minyak di satu tempat dan tiada langsung di tempat lain."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Peringkat",
+              "Kegunaan minyak",
+              "Kenapa"
+            ],
+            "rows": [
+              [
+                "Adunan (sebelum diuli)",
+                "~2 sudu besar / 500g tepung",
+                "Melincirkan gluten, doh lebih lembut dan kekal begitu selepas sejuk"
+              ],
+              [
+                "Kerak (sebelum bakar)",
+                "Sapuan nipis dengan berus",
+                "Warna keemasan dan pinggir lebih rangup"
+              ],
+              [
+                "Pizza siap (selepas ketuhar)",
+                "1–2 sudu teh dititik",
+                "Rasa buah dan pedas terpelihara, tidak terdedah haba penuh"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPizzaInline",
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun pada pizza bukan satu tuangan, tetapi tiga langkah berasingan — dalam adunan, pada kerak, dan selepas ketuhar. Guna ketiga-tiganya dengan kadar yang betul, dan kerak akan lebih lembut, lebih rangup di pinggir, serta rasa lebih hidup tanpa menenggelamkan topping."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Kenapa perlu lipat minyak zaitun ke dalam adunan pizza?",
+        "a": "Minyak melincirkan gluten semasa diuli, jadi doh lebih senang diregang nipis tanpa koyak dan kekal lembut walaupun disimpan sejuk semalaman untuk dipanggang esoknya."
+      },
+      {
+        "q": "Berapa banyak minyak zaitun untuk satu adunan pizza rumah?",
+        "a": "Kira-kira dua sudu besar untuk setiap 500 gram tepung, dimasukkan selepas air dan ragi bercampur. Lebih daripada empat sudu besar buat doh melekit dan sukar dibentuk nipis."
+      },
+      {
+        "q": "Patut sapu minyak pada kerak sebelum atau selepas bakar?",
+        "a": "Kedua-duanya, untuk tujuan berbeza. Sapuan nipis sebelum bakar bagi warna dan rangup pinggir; tuangan ringan selepas keluar ketuhar bagi rasa buah dan pedas yang tidak terdedah haba penuh."
+      },
+      {
+        "q": "Bolehkah guna minyak zaitun berperisa untuk pizza?",
+        "a": "Boleh untuk tuangan akhir — rosmari & basil atau thyme liar sesuai dengan pizza gaya Mediterranean. Untuk adunan dan sapuan kerak, minyak zaitun biasa lebih neutral dan tidak mengatasi rasa doh."
+      },
+      {
+        "q": "Apa beza rasa pizza dengan dan tanpa minyak zaitun?",
+        "a": "Tanpa minyak, kerak terasa lebih kering dan rasa keseluruhan lebih rata kerana sos serta keju mendominasi. Dengan minyak zaitun extra virgin, ada nota berumput atau pedas yang memotong kemanisan sos."
+      },
+      {
+        "q": "Adakah ini sama dengan minyak zaitun untuk mencelup roti?",
+        "a": "Tidak — itu subjek lopak minyak untuk mencelup, sudah dibincangkan penuh di [minyak zaitun untuk roti dan cicahan](/blog/minyak-zaitun-untuk-roti-dan-cicahan). Artikel ini fokus pada adunan dan kerak pizza sahaja."
+      },
+      {
+        "q": "Minyak zaitun jenis apa paling sesuai untuk pizza?",
+        "a": "Extra virgin perahan sejuk sesuai untuk ketiga-tiga peringkat — dalam adunan, sapuan kerak, dan tuangan akhir. Gred yang sama boleh digunakan sepanjang proses tanpa perlu bertukar jenis."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun extra virgin perahan sejuk dari Palestin, 250 ml dan 500 ml, serta enam perisa infused."
+      },
+      {
+        "label": "Minyak zaitun untuk roti dan cicahan",
+        "path": "blog/minyak-zaitun-untuk-roti-dan-cicahan",
+        "description": "Versi lopak minyak zaitun untuk mencelup roti pada suhu bilik, dengan za'atar, dukkah dan balsamik."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Bila guna minyak zaitun untuk tumis, goreng cetek atau tuangan mentah dalam dapur Malaysia."
+      },
+      {
+        "label": "Di mana beli di Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store di Ampang Jaya dan Batu Caves, serta kaunter Shopee dan TikTok Shop penjual yang sama."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "minyak-zaitun-vs-minyak-bijan",
+    "slug": "minyak-zaitun-vs-minyak-bijan",
+    "seoTitle": "Minyak Zaitun vs Minyak Bijan: Bila Guna Yang Mana",
+    "metaTitle": "Minyak Zaitun vs Minyak Bijan: Bila Guna Yang Mana",
+    "metaDescription": "Banding minyak zaitun dan minyak bijan: rasa berumput lawan panggang, bijan panggang lawan lembut, guna mentah dan tumisan.",
+    "focusKeyword": "minyak zaitun vs minyak bijan",
+    "relatedKeywords": [
+      "minyak zaitun vs minyak bijan",
+      "minyak bijan vs minyak zaitun",
+      "beza minyak zaitun dan minyak bijan",
+      "minyak bijan panggang",
+      "minyak bijan lembut",
+      "minyak zaitun untuk tumisan",
+      "minyak bijan untuk masakan Cina",
+      "minyak zaitun dara perahan sejuk",
+      "guna minyak bijan atau minyak zaitun",
+      "minyak berperisa kuat untuk dapur"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun vs Minyak Bijan",
+      "Perbandingan Minyak",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Minyak Berperisa Kuat"
+    ],
+    "h1": "Minyak Zaitun vs Minyak Bijan: Bila Guna Yang Mana",
+    "excerpt": "Dua minyak berperisa kuat, dua watak yang tak sama langsung. Banding rasa berumput lawan panggang, bijan panggang lawan lembut, cara masing-masing digunakan mentah dan dimasak, dan di mana minyak zaitun sesuai dalam dapur yang sudah ada bijan.",
+    "keyTakeaway": "Minyak zaitun vs minyak bijan bukan pertandingan mencari satu pemenang, kerana kedua-duanya berperisa terlalu kuat untuk saling menggantikan senyap-senyap. Minyak bijan panggang bawa rasa gorengan yang tebal dan biasanya dituang di hujung masakan; minyak zaitun dara bawa rasa buah dan pedas ringan yang sesuai mentah atau tumisan sederhana. Simpan kedua-duanya sebagai dua alat berasingan, bukan satu ganti satu.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunVsMinyakBijanHero",
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-vs-minyak-bijan.jpg",
+    "intro": [
+      "Minyak zaitun dara dan minyak bijan sama-sama tergolong dalam minyak berperisa kuat, bukan minyak neutral yang senyap di latar belakang.",
+      "Tapi rasa kuat itu datang dari arah yang berbeza sama sekali: minyak zaitun dari buah zaitun yang **perahan sejuk**, minyak bijan dari biji bijan yang selalunya dipanggang dahulu.",
+      "Kita banding kedua-duanya sebagai minyak mentah dan minyak masakan — rasa, dua jenis bijan yang sering keliru, cara masing-masing digunakan di dapur, dan di mana minyak zaitun sesuai dalam dapur yang sudah ada bijan."
+    ],
+    "sections": [
+      {
+        "heading": "Rasa: Berumput Lawan Panggang",
+        "id": "rasa-berumput-lawan-panggang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara bawa rasa berumput dan sedikit pedas di kerongkong, ciri buah zaitun yang **perahan sejuk** dan belum dipanaskan. Minyak bijan, terutama jenis panggang, bawa rasa gorengan yang tebal dan wangi yang datang dari biji yang telah dipanggang sebelum diperah. Dua rasa ini sama-sama kuat, tetapi tidak sama sifat."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu satu titisan bijan panggang boleh menguasai seluruh hidangan, manakala minyak zaitun lebih sering dirasa sebagai lapisan tambahan, bukan penguasa tunggal."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBijanInline",
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
+          }
+        ]
+      },
+      {
+        "heading": "Bijan Panggang Lawan Bijan Lembut: Dua Produk Berbeza",
+        "id": "bijan-panggang-lawan-lembut",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak bijan panggang berwarna perang gelap, wangi kuat dan digunakan dalam kuantiti kecil sebagai penamat rasa. Minyak bijan lembut atau ringan berwarna kuning cerah, rasa lebih neutral dan boleh tahan haba lebih tinggi, lebih dekat sifatnya dengan minyak masakan biasa berbanding sepupunya yang panggang."
+          },
+          {
+            "type": "p",
+            "text": "Dua jenis ini bukan satu produk dengan nama berbeza; label perlu disemak sebelum beli, kerana resipi yang minta bijan panggang akan terasa janggal jika ditukar dengan bijan lembut."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBijanInline",
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
+          }
+        ]
+      },
+      {
+        "heading": "Guna Mentah: Renjisan dan Cicahan",
+        "id": "guna-mentah-renjisan-cicahan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara mentah sesuai atas salad, hummus, atau direnjis atas sup panas sebaik sahaja diangkat dari api, rasa buahnya kekal terasa tanpa dimasak lagi. Minyak bijan panggang mentah pula lebih kerap muncul dalam sos cicah, salad gaya Asia, atau digaul terus ke dalam mi sejuk, sekadar beberapa titik kerana rasanya begitu pekat."
+          },
+          {
+            "type": "p",
+            "text": "Kedua-duanya digunakan mentah kerana haba merosakkan wangian istimewa mereka, tetapi corak hidangan yang dituju jauh berbeza antara masakan Mediterranean dan Asia."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBijanInline",
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa Bijan Dituang Selepas Masak, Bukan Dari Sejuk",
+        "id": "bijan-selepas-masak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak bijan panggang jarang digunakan untuk memulakan tumisan dari kuali sejuk, kerana wangian panggangnya mudah hilang atau bertukar pahit bila terlalu lama di atas api. Cara biasa ialah tumis dahulu dengan minyak neutral atau minyak zaitun, kemudian renjis minyak bijan di saat-saat akhir sebelum kuali diangkat, supaya wangiannya kekal segar."
+          },
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara pula lebih tahan digunakan dari awal pada api sederhana, walaupun ia juga lebih baik ditamatkan sebagai renjisan bila tujuannya ialah rasa, bukan sekadar haba masakan."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBijanInline",
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
+          }
+        ]
+      },
+      {
+        "heading": "Di Mana Minyak Zaitun Sesuai Dalam Dapur Yang Sudah Ada Bijan",
+        "id": "minyak-zaitun-dalam-dapur-bijan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dapur Malaysia yang sudah ada minyak bijan tidak perlu buang salah satu untuk terima yang satu lagi, kerana kedua-duanya bukan bersaing untuk kerja yang sama. Minyak zaitun dara sesuai masuk untuk tumisan sayur bergaya Mediterranean, sos pasta, atau renjisan atas roti dan salad; minyak bijan kekal untuk kerja gaya Asia yang sudah biasa dengannya."
+          },
+          {
+            "type": "p",
+            "text": "Anggap ia alat tambahan, bukan pengganti. [Panduan memasak dengan minyak zaitun](/blog/minyak-zaitun-untuk-masak-panduan-dapur) ada lebih lanjut."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBijanInline",
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
+          }
+        ]
+      },
+      {
+        "heading": "Guna Yang Mana Untuk Apa",
+        "id": "guna-mana-untuk-apa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Jadual di bawah rumuskan corak biasa bila dua minyak berperisa kuat ini berada dalam dapur yang sama, sekadar titik permulaan bila anda tak pasti minyak mana untuk kerja mana. Laman ini tidak menyebut sebarang angka takat berasap untuk minyak bijan kerana ia tidak pernah diterbitkan di sini; untuk angka minyak zaitun, rujuk [artikel takat berasap](/blog/minyak-zaitun-untuk-goreng)."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kerja dapur",
+              "Guna",
+              "Kenapa"
+            ],
+            "rows": [
+              [
+                "Renjisan akhir atas sup atau salad Mediterranean",
+                "Minyak zaitun dara",
+                "Rasa buah kekal terasa di atas"
+              ],
+              [
+                "Sos cicah atau mi sejuk gaya Asia",
+                "Minyak bijan panggang",
+                "Wangi panggang pekat, sedikit sudah cukup"
+              ],
+              [
+                "Tumis sayur api sederhana",
+                "Minyak zaitun dara",
+                "Tahan haba lebih lama tanpa jadi pahit"
+              ],
+              [
+                "Titisan akhir sebelum kuali diangkat",
+                "Minyak bijan panggang",
+                "Wangian kekal segar, tak hilang ke haba"
+              ],
+              [
+                "Masakan neutral suhu lebih tinggi",
+                "Minyak bijan lembut",
+                "Rasa lebih senyap, lebih tahan haba"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBijanInline",
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Dua Minyak Kuat, Dua Watak Berbeza",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun vs minyak bijan bukan soal mencari satu pemenang, kerana kedua-duanya terlalu berperisa untuk bertukar ganti tanpa disedari. Minyak zaitun bawa rasa buah gaya Mediterranean; minyak bijan bawa wangi gorengan gaya Asia. Dapur paling praktikal simpan kedua-duanya."
+        },
+        {
+          "type": "p",
+          "text": "Untuk kaedah masakan yang sesuai dengan minyak zaitun dan suhu yang perlu dielak, [panduan minyak zaitun untuk goreng](/blog/minyak-zaitun-untuk-goreng) ada butiran penuh. Untuk mula, [lihat saiz botol Arabian Village](/products) atau [tempat membeli](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Bolehkah minyak zaitun ganti minyak bijan dalam resipi?",
+        "a": "Boleh dicuba, tetapi rasa akhir akan berbeza kerana wangi panggang bijan tiada pada minyak zaitun. Untuk hidangan gaya Asia yang bergantung pada wangi bijan, lebih baik kekalkan minyak bijan dan guna minyak zaitun untuk kerja lain."
+      },
+      {
+        "q": "Apa beza minyak bijan panggang dan minyak bijan lembut?",
+        "a": "Bijan panggang berwarna perang gelap dan wangi kuat, digunakan sedikit sebagai penamat. Bijan lembut berwarna kuning cerah, rasa neutral dan lebih tahan haba. Kedua-dua bukan produk yang sama walaupun sering dijual bersebelahan."
+      },
+      {
+        "q": "Kenapa minyak bijan biasanya dituang selepas masak, bukan dari kuali sejuk?",
+        "a": "Wangi panggang bijan mudah hilang atau bertukar pahit bila terlalu lama terdedah kepada haba tinggi. Kaedah biasa ialah tumis dengan minyak lain dahulu, kemudian renjis bijan di akhir sebelum kuali diangkat."
+      },
+      {
+        "q": "Apakah takat berasap minyak bijan?",
+        "a": "Laman ini tidak menerbitkan angka khusus untuk minyak bijan. Secara umum ia lebih rendah daripada minyak neutral tulen, jadi ia lebih sesuai sebagai penamat berbanding minyak masakan haba tinggi utama."
+      },
+      {
+        "q": "Perlukah saya buang minyak bijan jika sudah ada minyak zaitun?",
+        "a": "Tidak perlu. Kedua-duanya buat kerja berbeza — minyak zaitun untuk gaya Mediterranean, minyak bijan untuk gaya Asia. Dapur yang guna kedua-dua masakan lebih senang simpan kedua-dua botol berasingan."
+      },
+      {
+        "q": "Yang mana lebih sesuai untuk salad?",
+        "a": "Bergantung gaya salad. Salad ala Mediterranean dengan sayur segar dan cuka lebih sesuai minyak zaitun dara; salad gaya Asia dengan mi sejuk atau sos soya lebih sesuai beberapa titik minyak bijan panggang."
+      },
+      {
+        "q": "Adakah minyak zaitun atau minyak bijan lebih sihat?",
+        "a": "Itu soalan untuk pakar pemakanan atau doktor, bukan untuk penjual minyak. Artikel ini banding kedua-duanya dari segi rasa dan kegunaan dapur sahaja. Rujuk profesional kesihatan untuk bab pemakanan dan diet."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak Zaitun untuk Goreng",
+        "path": "blog/minyak-zaitun-untuk-goreng",
+        "description": "Empat kaedah goreng, empat suhu, dan sejauh mana minyak zaitun dara sesuai dengan setiap satu."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "minyak-zaitun-vs-minyak-bunga-matahari",
+    "slug": "minyak-zaitun-vs-minyak-bunga-matahari",
+    "seoTitle": "Minyak Zaitun vs Minyak Bunga Matahari: Guna Mana",
+    "metaTitle": "Minyak Zaitun vs Minyak Bunga Matahari: Guna Mana",
+    "metaDescription": "Banding minyak zaitun dara dan minyak bunga matahari tapis: rasa, takat berasap, kegunaan dapur dan kos setiap kali guna, plus jadual guna-mana-untuk-apa.",
+    "focusKeyword": "minyak zaitun vs minyak bunga matahari",
+    "relatedKeywords": [
+      "minyak zaitun vs minyak bunga matahari",
+      "minyak bunga matahari vs minyak zaitun",
+      "beza minyak zaitun dan minyak bunga matahari",
+      "minyak zaitun untuk goreng",
+      "minyak bunga matahari untuk goreng",
+      "takat berasap minyak zaitun",
+      "takat berasap minyak bunga matahari",
+      "minyak zaitun dara untuk masakan",
+      "kos minyak zaitun seliter",
+      "minyak neutral untuk goreng",
+      "minyak zaitun untuk tumis"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun vs Minyak Bunga Matahari",
+      "Perbandingan Minyak",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Kos Dapur"
+    ],
+    "h1": "Minyak Zaitun vs Minyak Bunga Matahari: Yang Mana Patut Anda Guna",
+    "excerpt": "Satu neutral dan tahan haba tinggi, satu lagi bawa rasa buah yang menonjol. Banding rasa, sifat takat berasap, kegunaan dapur dan kos setiap kali guna antara minyak zaitun dara dan minyak bunga matahari tapis.",
+    "keyTakeaway": "Minyak zaitun vs minyak bunga matahari bukan soal mana lebih hebat, tetapi kerja dapur mana untuk minyak mana. Bunga matahari tapis tahan haba tinggi dan murah seliter untuk goreng rendam; minyak zaitun dara bawa rasa buah yang menonjol untuk renjisan dan tumisan sederhana. Guna jadual dalam artikel ini untuk pilih ikut kerja dapur, bukan sangkaan.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunVsMinyakBungaMatahariHero",
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-vs-minyak-bunga-matahari.jpg",
+    "intro": [
+      "Minyak zaitun dara dan minyak bunga matahari tapis duduk bersebelahan di banyak dapur Malaysia, tetapi jarang buat kerja yang sama dengan cara yang sama.",
+      "Bunga matahari tapis ialah minyak neutral yang tahan haba tinggi; minyak zaitun ialah **perahan sejuk** buah zaitun yang bawa rasa sendiri ke dalam apa sahaja ia sentuh.",
+      "Kita banding kedua-duanya pada rasa, sifat takat berasap secara umum, kegunaan dapur mana sesuai dengan mana, dan kos setiap kali guna."
+    ],
+    "sections": [
+      {
+        "heading": "Rasa: Neutral Berbanding Buah",
+        "id": "rasa-neutral-lawan-buah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak bunga matahari tapis nyaris tiada rasa sendiri, itu sebab ia sesuai untuk goreng tanpa mengubah rasa asal makanan. Minyak zaitun dara pula bawa rasa buah zaitun yang jelas, kadang pahit halus dan pedas ringan di kerongkong, ciri **perahan sejuk** yang tak boleh disembunyikan walau digunakan sedikit."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu tukar satu untuk satu jarang berjaya bila resipi memang mahukan salah satu watak rasa itu. Goreng ringan yang perlukan minyak senyap pilih bunga matahari; hidangan yang mahu rasa minyak sendiri menonjol pilih minyak zaitun dara."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBungaMatahariInline",
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
+          }
+        ]
+      },
+      {
+        "heading": "Sifat Takat Berasap Secara Umum",
+        "id": "sifat-takat-berasap",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak bunga matahari tapis ialah minyak neutral bertakat berasap tinggi, kira-kira 225°C, jadi ia tahan panas kuali yang lama sebelum mula berasap. Minyak zaitun dara pula bertakat berasap sederhana, lebih sesuai untuk goreng ringan dan tumis, bukan goreng rendam pada suhu paling tinggi di dapur."
+          },
+          {
+            "type": "p",
+            "text": "Angka tepat takat berasap minyak zaitun dara serta perbandingan penuh dengan minyak lain ada dalam [Minyak Zaitun vs Minyak Sawit dalam Dapur Malaysia](/blog/minyak-zaitun-vs-minyak-sawit), rujuk di situ sebelum pilih minyak untuk kerja goreng suhu tinggi."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBungaMatahariInline",
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
+          }
+        ]
+      },
+      {
+        "heading": "Untuk Goreng Suhu Tinggi",
+        "id": "goreng-suhu-tinggi",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Goreng rendam atau goreng cetek pada api paling kuat, seperti ayam goreng atau keropok, lebih sesuai dengan minyak bunga matahari tapis kerana takat berasapnya lebih tinggi dan harganya lebih rendah untuk kuantiti besar yang kerja itu telan."
+          },
+          {
+            "type": "p",
+            "text": "Guna minyak zaitun dara untuk goreng rendam bermakna rasa buahnya hilang dalam haba tinggi, dan botol yang lebih mahal habis lebih cepat daripada yang berbaloi. Jadi ia bukan pilihan praktikal untuk kerja jenis ini."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBungaMatahariInline",
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
+          }
+        ]
+      },
+      {
+        "heading": "Untuk Tuangan Mentah dan Tumis Sederhana",
+        "id": "tuangan-mentah-tumis-sederhana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Renjisan atas salad, sup atau roti, dan tumisan bawang atau sayur pada api sederhana, ialah tempat minyak zaitun dara menang jelas — rasa buahnya kekal terasa di atas hidangan, sesuatu yang minyak bunga matahari neutral tidak boleh berikan."
+          },
+          {
+            "type": "p",
+            "text": "Minyak bunga matahari pada kerja yang sama hanya beri lemak tanpa rasa tambahan. Kalau hidangan memang mahukan watak rasa minyak sendiri, minyak zaitun dara ialah pilihan yang betul, bukan sekadar pengganti biasa."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBungaMatahariInline",
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
+          }
+        ]
+      },
+      {
+        "heading": "Kos Setiap Kali Guna",
+        "id": "kos-setiap-kali-guna",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak bunga matahari tapis dijual dalam botol besar dengan harga seliter jauh lebih rendah, sesuai untuk kuantiti banyak yang goreng rendam telan setiap kali masak. Minyak zaitun dara harganya lebih tinggi seliter, tetapi digunakan secara renjisan kecil, jadi kos setiap kali guna tidak sejauh mana jurang harga label kelihatan."
+          },
+          {
+            "type": "p",
+            "text": "Jurang harga wujud kerana cara pengeluaran berbeza sepenuhnya — minyak zaitun dara ialah **perahan sejuk** buah tunggal, minyak bunga matahari tapis melalui proses penulenan yang jauh lebih murah untuk kuantiti besar. [Semak saiz dan harga botol Arabian Village](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBungaMatahariInline",
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
+          }
+        ]
+      },
+      {
+        "heading": "Guna Yang Mana Untuk Apa",
+        "id": "guna-mana-untuk-apa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Jadual di bawah rumuskan corak biasa dapur Malaysia, bukan peraturan keras — cuma titik permulaan bila anda tak pasti minyak mana untuk kerja mana pada bila-bila masa memasak. Ura-ura mudahnya: haba tinggi dan kuantiti besar memihak bunga matahari, rasa buah dan renjisan sejuk memihak minyak zaitun."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kerja dapur",
+              "Guna",
+              "Kenapa"
+            ],
+            "rows": [
+              [
+                "Goreng rendam suhu tinggi",
+                "Minyak bunga matahari tapis",
+                "Takat berasap lebih tinggi, kos seliter lebih rendah"
+              ],
+              [
+                "Tumis bawang & sayur api sederhana",
+                "Minyak zaitun dara",
+                "Rasa buah kekal, sesuai haba sederhana"
+              ],
+              [
+                "Renjisan akhir atas salad atau sup",
+                "Minyak zaitun dara",
+                "Rasa segar di atas, bukan dimasak"
+              ],
+              [
+                "Goreng ringan tanpa ubah rasa asal",
+                "Minyak bunga matahari tapis",
+                "Neutral, tak ganggu rasa makanan"
+              ],
+              [
+                "Kuih atau gorengan kuantiti besar",
+                "Minyak bunga matahari tapis",
+                "Harga seliter lebih murah untuk kuantiti banyak"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakBungaMatahariInline",
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Dua Minyak, Dua Kerja Dapur",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun vs minyak bunga matahari bukan pertandingan mencari juara sejagat, tetapi soal kerja dapur mana untuk minyak mana. Bunga matahari tapis menang pada goreng suhu tinggi dan kos seliter; minyak zaitun dara menang pada rasa buah dan renjisan mentah."
+        },
+        {
+          "type": "p",
+          "text": "Dapur paling praktikal simpan kedua-duanya dan tahu bila hendak mencapai yang mana. [Lihat saiz botol Arabian Village](/products) atau baca [panduan memasak dengan minyak zaitun](/blog/minyak-zaitun-untuk-masak-panduan-dapur) untuk kaedah masakan lain yang sesuai dengannya."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Minyak zaitun atau minyak bunga matahari, mana lebih murah setiap kali guna?",
+        "a": "Minyak bunga matahari tapis lebih murah seliter dan sesuai untuk kuantiti besar seperti goreng rendam. Minyak zaitun dara lebih mahal seliter tetapi digunakan secara renjisan kecil, jadi kos sebenar setiap kali guna tidak sejauh jurang harga di label."
+      },
+      {
+        "q": "Kenapa jurang harga antara dua minyak ini begitu besar?",
+        "a": "Minyak zaitun dara ialah **perahan sejuk** buah tunggal dengan hasil terhad setiap pokok. Minyak bunga matahari tapis melalui proses penulenan besar-besaran yang jauh lebih murah bagi setiap liter, itulah punca jurang harga."
+      },
+      {
+        "q": "Bolehkah minyak zaitun dara digunakan untuk goreng rendam suhu tinggi?",
+        "a": "Boleh secara teknikal, tetapi tidak praktikal — rasa buahnya hilang dalam haba tinggi dan botol yang mahal habis lebih cepat. Minyak bunga matahari tapis lebih sesuai untuk kerja goreng rendam kerana takat berasapnya lebih tinggi dan harganya lebih rendah."
+      },
+      {
+        "q": "Apakah takat berasap minyak zaitun dan minyak bunga matahari?",
+        "a": "Minyak bunga matahari tapis bertakat berasap kira-kira 225°C. Angka tepat untuk minyak zaitun dara serta perbandingan penuh dengan minyak lain ada dalam [Minyak Zaitun vs Minyak Sawit](/blog/minyak-zaitun-vs-minyak-sawit)."
+      },
+      {
+        "q": "Adakah minyak zaitun lebih sihat daripada minyak bunga matahari?",
+        "a": "Itu soalan untuk pakar pemakanan atau doktor, bukan untuk penjual minyak. Artikel ini membandingkan kedua-duanya pada rasa, takat berasap, kegunaan dapur dan kos setiap kali guna sahaja. Rujuk profesional kesihatan untuk bab pemakanan."
+      },
+      {
+        "q": "Bolehkah dua minyak ini dicampur dalam satu botol untuk digunakan?",
+        "a": "Boleh, sesetengah dapur campur kedua-duanya untuk goreng ringan supaya rasa minyak zaitun sedikit menonjol tanpa kos seliter penuh. Tetapi rasa dan takat berasap campuran itu jadi tidak menentu, jadi guna berasingan mengikut kerja lebih boleh diramal."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna lemak lain."
+      },
+      {
+        "label": "Minyak Zaitun vs Minyak Sawit dalam Dapur Malaysia",
+        "path": "blog/minyak-zaitun-vs-minyak-sawit",
+        "description": "Takat berasap, rasa, kos seliter dan kerja dapur mana untuk minyak sawit berbanding minyak zaitun."
       },
       {
         "label": "Minyak zaitun dara Arabian Village",

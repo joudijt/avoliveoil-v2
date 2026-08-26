@@ -2516,6 +2516,16 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil fried egg",
         "path": "blog/olive-oil-fried-egg",
         "description": "The Spanish method: a shallow pool of oil, hot oil spooned over the yolk."
+      },
+      {
+        "label": "Olive oil vs sesame oil",
+        "path": "blog/olive-oil-vs-sesame-oil",
+        "description": "Two strong, distinct flavours side by side, and where each earns its place."
+      },
+      {
+        "label": "Olive oil coffee",
+        "path": "blog/olive-oil-coffee",
+        "description": "The oil-in-coffee trend: quantity, why it needs blending, and what it tastes like."
       }
     ]
   },
@@ -2816,6 +2826,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil popcorn",
         "path": "blog/olive-oil-popcorn",
         "description": "Popping corn in olive oil on the stovetop, and what extra virgin adds."
+      },
+      {
+        "label": "Olive oil vs sunflower oil",
+        "path": "blog/olive-oil-vs-sunflower-oil",
+        "description": "Flavour, smoke behaviour and price per use, olive oil against a refined seed oil."
       }
     ]
   },
@@ -5784,6 +5799,16 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Olive oil ice cream",
+        "path": "blog/olive-oil-ice-cream",
+        "description": "A churned Mediterranean dessert, extra virgin's fruit and pepper against the sweetness."
+      },
+      {
+        "label": "Olive oil orange cake",
+        "path": "blog/olive-oil-orange-cake",
+        "description": "One specific recipe: zest, juice, and why oil keeps the crumb moist for days."
       }
     ]
   },
@@ -9429,6 +9454,1494 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Olive oil mashed potatoes",
+        "path": "blog/olive-oil-mashed-potatoes",
+        "description": "A dairy-free mash, warm oil folded in, and how the texture differs from butter."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "olive-oil-coffee",
+    "slug": "olive-oil-coffee",
+    "seoTitle": "Olive Oil Coffee: What the Trend Tastes Like",
+    "metaTitle": "Olive Oil Coffee: What the Trend Tastes Like",
+    "metaDescription": "The oil-in-coffee trend explained as texture and flavour: how much oil, how to mix it in, which grade suits coffee, and iced versus hot.",
+    "focusKeyword": "olive oil coffee",
+    "relatedKeywords": [
+      "olive oil in coffee",
+      "oil coffee trend",
+      "olive oil coffee taste",
+      "how much olive oil in coffee",
+      "olive oil latte",
+      "iced olive oil coffee",
+      "olive oil coffee recipe",
+      "extra virgin olive oil coffee",
+      "oil in coffee texture",
+      "coffee with olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "coffee",
+      "trend",
+      "texture",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil Coffee: What the Trend Actually Tastes Like",
+    "excerpt": "A spoon of olive oil in a cup of coffee is a texture and flavour trend, not a health drink. Here is how much to use, how to mix it in so it doesn't separate, and what it actually tastes like.",
+    "keyTakeaway": "Olive oil coffee is a mouthfeel trend: about half a teaspoon of a mild extra virgin oil, blended or stirred hard into hot or iced coffee, gives a fuller texture and a faint note that softens bitterness. It has nothing to do with metabolism or energy claims — those belong to a dietitian, not this article.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilCoffeeHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+    },
+    "ogImage": "/og/blog-olive-oil-coffee.jpg",
+    "intro": [
+      "Olive oil in coffee has been showing up online as a trend, usually with a spoon stirred into the cup and a claim attached about energy or metabolism.",
+      "This article skips the claims: how much oil to use, why it needs blending or vigorous stirring rather than a plain pour, what it tastes like, which grade suits it, and hot versus iced."
+    ],
+    "sections": [
+      {
+        "heading": "A texture trend, not a health trend",
+        "id": "trend-not-a-health-claim",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most of what circulates about olive oil coffee online is framed as a metabolism boost or a healthier latte. This article does not make that case: it treats the drink as what it is on the palate, a fuller mouthfeel and a flavour note, nothing about disease or energy."
+          },
+          {
+            "type": "p",
+            "text": "If the real question is whether it is good for you, that is one for a doctor or dietitian, not a recipe article. What follows is only how it's made and what it tastes like."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCoffeeInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "How much oil, and how to mix it in",
+        "id": "quantity-and-method",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Start with roughly half a teaspoon of extra virgin olive oil per cup — a small amount, since the point is a texture change, not an oily drink. Oil and coffee do not mix on their own, so a plain pour just sits as a slick on top."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Brew the coffee as usual, hot or over ice.",
+              "Measure roughly half a teaspoon of a mild extra virgin olive oil.",
+              "Add the oil to the cup, then stir hard and continuously for ten to fifteen seconds, or blend for a few seconds in a small frother or blender.",
+              "Taste, and add a few more drops only if the mouthfeel still feels thin.",
+              "Drink promptly — left standing, the oil separates back out and beads on the surface."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCoffeeInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "What it actually tastes like",
+        "id": "what-it-tastes-like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Done right, the coffee feels fuller and slightly heavier on the tongue, closer to a drink with a little cream stirred through than a black coffee. It is not sweet, and it does not taste of olives in any strong way if the oil is mild."
+          },
+          {
+            "type": "p",
+            "text": "The main effect is on bitterness: a faint, grassy note sits underneath the coffee and takes the edge off a sharp cup rather than masking the coffee flavour. Too much oil tips it the other way and the drink turns greasy."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCoffeeInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Which oil suits coffee, and which doesn't",
+        "id": "which-oil-to-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A mild extra virgin olive oil works better here than a peppery, high-intensity one, which fights the coffee instead of rounding it out. Arabian Village's plain extra virgin, poured in small quantity, keeps the coffee flavour in front rather than competing with it."
+          },
+          {
+            "type": "p",
+            "text": "None of the six infused oils belong in a cup of coffee — they're built for savoury dishes, not a drink. See [the products page](/products) for the plain oil and its two sizes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCoffeeInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Iced versus hot",
+        "id": "iced-vs-hot",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hot coffee mixes the oil in faster because heat thins it, so a firm stir for ten seconds is usually enough. Cold or iced coffee needs more work — the oil stays thicker and separates back out sooner, so a blender or milk frother does a more even job than a spoon."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Coffee",
+              "Best mixing method",
+              "How it separates"
+            ],
+            "rows": [
+              [
+                "Hot coffee",
+                "Vigorous stir, 10–15 seconds",
+                "Slowly, over several minutes"
+              ],
+              [
+                "Iced coffee",
+                "Small blender or frother",
+                "Faster — oil beads on the surface within a minute or two if not emulsified"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCoffeeInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Where this fits next to your other coffee habits",
+        "id": "where-it-fits",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This is a one-cup experiment, not a routine to build a diet around, and it sits alongside milk, sugar or a plain black coffee rather than replacing any of them. If it isn't for you, nothing is lost by leaving the oil out."
+          },
+          {
+            "type": "p",
+            "text": "For the same oil in savoury cooking rather than a cup, [how to cook with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen) covers pan heat, seasoning and everyday dishes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCoffeeInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Olive oil coffee is a texture experiment: about half a teaspoon of a mild extra virgin oil, mixed in hard rather than poured, gives a fuller mouthfeel and softens bitterness. It is worth trying once out of curiosity, not as a health routine — leave the disease and energy claims to a dietitian."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil coffee good for you?",
+        "a": "That is a question for a doctor or dietitian, not a recipe article. This piece only covers what the drink tastes like and how to make it — a fuller mouthfeel and a softened bitterness, nothing more."
+      },
+      {
+        "q": "How much olive oil should I put in coffee?",
+        "a": "Start with about half a teaspoon per cup. It is a small amount because the goal is a texture change, not an oily drink — add a few more drops only if it still tastes thin."
+      },
+      {
+        "q": "Why does the oil float on top of my coffee?",
+        "a": "Oil and coffee don't mix on their own, so a plain pour sits as a slick. Stir hard for ten to fifteen seconds, or blend briefly, so the oil breaks up through the drink instead of pooling."
+      },
+      {
+        "q": "Which olive oil is best for coffee?",
+        "a": "A mild extra virgin oil works better than a peppery, high-intensity one, which fights the coffee's own flavour. None of the infused flavours suit a cup — they're built for savoury cooking, not a drink."
+      },
+      {
+        "q": "Can I add olive oil to iced coffee?",
+        "a": "Yes, though it takes more work than hot coffee — cold oil separates back out faster. A small blender or milk frother mixes it more evenly than stirring with a spoon."
+      },
+      {
+        "q": "What does olive oil coffee actually taste like?",
+        "a": "Fuller and slightly heavier on the tongue, closer to coffee with a little cream than black coffee. It isn't sweet, and with a mild oil it doesn't taste strongly of olives."
+      },
+      {
+        "q": "Does olive oil coffee replace milk or sugar?",
+        "a": "No — it sits alongside them, not as a replacement. Some people add oil to plain black coffee, others still add milk or sugar as usual; there's no fixed rule."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, the size to reach for a small measure at a time."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Pan heat, seasoning and everyday dishes for the same oil used in savoury cooking."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "How much heat this oil takes before it smokes, for anyone warming rather than stirring it in cold."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "olive-oil-ice-cream",
+    "slug": "olive-oil-ice-cream",
+    "seoTitle": "Olive Oil Ice Cream: A Mediterranean Dessert",
+    "metaTitle": "Olive Oil Ice Cream: A Mediterranean Dessert",
+    "metaDescription": "How olive oil ice cream is churned, why extra virgin's fruit and pepper come through, a salt-and-zest finish, and a no-churn shortcut with no machine.",
+    "focusKeyword": "olive oil ice cream",
+    "relatedKeywords": [
+      "olive oil ice cream recipe",
+      "extra virgin olive oil ice cream",
+      "no churn olive oil ice cream",
+      "olive oil gelato",
+      "olive oil dessert",
+      "olive oil in ice cream base",
+      "salted olive oil ice cream",
+      "olive oil and citrus ice cream",
+      "churned olive oil dessert",
+      "Mediterranean olive oil dessert"
+    ],
+    "category": "Recipes",
+    "tags": [
+      "dessert",
+      "ice cream",
+      "extra virgin",
+      "recipe"
+    ],
+    "h1": "Olive Oil Ice Cream: A Mediterranean Dessert Technique",
+    "excerpt": "Extra virgin olive oil churned into an ice cream base gives a silkier texture and a fruity, faintly peppery counter-note to the sweetness. This is a technique borrowed from Mediterranean kitchens, not a diet swap.",
+    "keyTakeaway": "Olive oil ice cream is a churning technique, not a lighter dessert: extra virgin oil joins or replaces the cream, emulsifies in as the base churns, and its fruit and pepper cut through the sweetness. Finish with flaky salt or citrus zest, or skip the machine with a folded no-churn version.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilIceCreamHero",
+      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+    },
+    "ogImage": "/og/blog-olive-oil-ice-cream.jpg",
+    "intro": [
+      "Olive oil ice cream is not a health food. It is a Mediterranean dessert technique, where extra virgin olive oil is churned into the base for a silkier texture and a fruity, peppery note plain cream cannot give.",
+      "This covers how the oil goes in, why a good extra virgin's character comes through more than in a neutral-oil dessert, a simple finish, and a no-churn version for a reader without a machine."
+    ],
+    "sections": [
+      {
+        "heading": "A churned dessert, not a health swap",
+        "id": "not-a-health-swap",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil ice cream sits in the same family as gelato made with milk instead of heavy cream: a technique aimed at texture and flavour, not a lighter or better-for-you version of the classic. Whether it suits any particular diet is a question for a doctor or dietitian, not this article."
+          },
+          {
+            "type": "p",
+            "text": "The oil changes mouthfeel and taste. Fat coats the tongue and slows how fast ice crystals melt, and extra virgin olive oil brings its own fruitiness along, in a way a neutral oil never would."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIceCreamInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "How the oil goes into the base",
+        "id": "how-the-technique-works",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The oil joins the cream in a custard base or replaces part of it, then gets emulsified in while the machine churns, rather than poured in at the end. A slow, steady stream into the still-cold, moving base is what keeps it from separating."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Component",
+              "Amount",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Whole milk",
+                "500 ml",
+                "Warmed, not boiled"
+              ],
+              [
+                "Heavy cream",
+                "250 ml",
+                "Can drop to 125 ml"
+              ],
+              [
+                "Sugar",
+                "150 g",
+                "Whisked with the yolks"
+              ],
+              [
+                "Egg yolks",
+                "4",
+                "Omit for a simpler base"
+              ],
+              [
+                "Extra virgin olive oil",
+                "80–100 ml",
+                "Streamed in while churning"
+              ],
+              [
+                "Salt",
+                "A pinch",
+                "In the base"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIceCreamInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Why extra virgin's fruit and pepper come through",
+        "id": "flavour-comes-through",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A neutral oil disappears into a dessert and leaves only richness behind. Extra virgin olive oil keeps its own identity: a grassy or fruity front note and a peppery catch at the back of the throat, both of which survive churning and cold far better than they survive baking heat."
+          },
+          {
+            "type": "p",
+            "text": "That peppery edge cuts the sweetness, the way a squeeze of lemon might on a savoury dish. A milder extra virgin sits politely alongside vanilla or citrus; a sharper one suits a plainer base that lets it lead."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIceCreamInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "A simple finishing touch",
+        "id": "finishing-touch",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The base rarely needs more than one finishing touch once scooped: flaky salt for a savoury-sweet contrast, or fresh orange or lemon zest for a brighter top note that echoes the oil's own fruitiness. A last thread of oil drizzled over the scoop repeats the flavour rather than introducing a new one."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Flaky salt** — a small pinch scattered just before serving.",
+              "**Citrus zest** — orange or lemon, grated over the scoop for a fruitier oil.",
+              "**A final thread of oil** — a few drops on top, for a stronger finish."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIceCreamInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "No machine? A no-churn shortcut",
+        "id": "no-churn-shortcut",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Whipped cream folded with sweetened condensed milk and olive oil sets in the freezer without any churning at all, and skips the custard step entirely. The texture is a touch denser than a churned base, but the same oil, salt and zest choices still apply."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Whip 400 ml chilled heavy cream to soft peaks.",
+              "Whisk 200 ml condensed milk with 80 ml olive oil and a pinch of salt.",
+              "Fold the condensed-milk mixture into the cream, in three additions.",
+              "Pour into a lidded container and smooth the top.",
+              "Freeze at least six hours before scooping."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIceCreamInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Which oil to reach for",
+        "id": "which-oil-to-reach-for",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A milder extra virgin suits a vanilla or citrus base, and a sharper, peppery one suits a plainer base built to let the oil lead. Either way, use the plain extra virgin — see [the products page](products) — not one of the infused flavours."
+          },
+          {
+            "type": "p",
+            "text": "For how the same oil behaves in an oven rather than a freezer, see [olive oil for cakes and baking](blog/olive-oil-for-cakes-and-baking)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIceCreamInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Olive oil ice cream is a Mediterranean churning technique: oil joins or replaces the cream, emulsifies in as the base churns, and brings its own fruit and pepper along. Finish with salt or zest, or skip the machine with the folded version above."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil ice cream healthier than regular ice cream?",
+        "a": "That is a question for a doctor or dietitian, not a recipe guide. This article covers the technique only: how the oil goes into the base, and what it does to texture."
+      },
+      {
+        "q": "Does olive oil ice cream taste like olive oil?",
+        "a": "It tastes faintly of the fruit the oil was pressed from — grassy or peppery depending on the oil — as a counter-note to the sweetness, not as the dominant flavour once the base is churned and frozen."
+      },
+      {
+        "q": "Can I make olive oil ice cream without a machine?",
+        "a": "Yes. Whip cream to soft peaks, fold in sweetened condensed milk mixed with olive oil and a pinch of salt, then freeze in a lidded container for at least six hours before scooping."
+      },
+      {
+        "q": "How much olive oil goes into an ice cream base?",
+        "a": "Roughly 80 to 100 ml of extra virgin olive oil against 750 ml of combined milk and cream is a workable starting ratio, streamed in slowly while the base is churning rather than stirred in cold."
+      },
+      {
+        "q": "Which olive oil suits ice cream best?",
+        "a": "A milder, fruitier extra virgin suits a vanilla or citrus base; a sharper, peppery one suits a plainer base built to let the oil lead. Either way, use the plain extra virgin, not an infused flavour."
+      },
+      {
+        "q": "Why does the oil need to be added while churning?",
+        "a": "A slow stream into a cold, moving base is what keeps the oil emulsified rather than floating free. Poured in cold at the end, it tends to separate instead of blending into the texture."
+      },
+      {
+        "q": "What can I add on top of olive oil ice cream?",
+        "a": "Flaky salt or fresh orange or lemon zest, scattered on just before serving, both echo the oil's own fruitiness. A final thread of the same oil over the scoop repeats the flavour rather than adding a new one."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, the plain extra virgin used in this recipe."
+      },
+      {
+        "label": "Olive oil for cakes and baking",
+        "path": "blog/olive-oil-for-cakes-and-baking",
+        "description": "How the same extra virgin oil behaves in an oven, with the general baking conversion ratio."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "olive-oil-mashed-potatoes",
+    "slug": "olive-oil-mashed-potatoes",
+    "seoTitle": "Olive Oil Mashed Potatoes: A Dairy-Free Side",
+    "metaTitle": "Olive Oil Mashed Potatoes: A Dairy-Free Side",
+    "metaDescription": "How much olive oil per kilo of potato, why the oil goes in warm not cold, how the texture differs from a butter mash, and a fresh-garlic variation.",
+    "focusKeyword": "olive oil mashed potatoes",
+    "relatedKeywords": [
+      "dairy-free mashed potatoes",
+      "olive oil mash recipe",
+      "mashed potatoes without butter",
+      "olive oil instead of butter mash",
+      "how much olive oil for mashed potato",
+      "garlic olive oil mashed potatoes",
+      "vegan mashed potatoes olive oil",
+      "extra virgin olive oil mash",
+      "creamy olive oil mashed potatoes",
+      "olive oil potato side dish"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "mashed potatoes",
+      "dairy-free",
+      "side dish",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil Mashed Potatoes: A Dairy-Free, Stovetop Side",
+    "excerpt": "A mash made with extra virgin olive oil instead of butter and cream is looser, glossier and carries its own flavour rather than fading into the background. This is a technique for the stovetop, not a health claim.",
+    "keyTakeaway": "Olive oil mash is dairy-free by ingredient, not by promised benefit: warm oil folded into just-mashed potato, roughly 60–80 ml per kilo, gives a looser, creamier result than butter and cream. A fresh-garlic variation needs plain oil, not the infused range.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilMashedPotatoesHero",
+      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+    },
+    "ogImage": "/og/blog-olive-oil-mashed-potatoes.jpg",
+    "intro": [
+      "Mashed potato usually means butter and cream, but a version finished with extra virgin olive oil instead is a genuine stovetop technique, not a compromise.",
+      "This covers how much oil to use per kilo of potato, why it goes in warm rather than cold or boiling-hot, how the finished texture differs from a classic mash, and a fresh-garlic variation using plain oil rather than the infused range."
+    ],
+    "sections": [
+      {
+        "heading": "A dairy-free mash, by ingredient not by claim",
+        "id": "dairy-free-by-ingredient",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Swapping butter and cream for olive oil is dairy-free because of what is left out, not because of any promised benefit. It suits anyone avoiding dairy, cooking for a mixed table, or wanting the fruity, peppery note extra virgin oil brings that butter cannot."
+          },
+          {
+            "type": "p",
+            "text": "It is not a lighter or healthier version of the classic mash — that question belongs with a doctor or dietitian, not a recipe. What follows covers only how the oil behaves and how the result tastes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMashedPotatoesInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "How much oil per kilo of potato",
+        "id": "oil-quantity-per-kilo",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A working range is roughly 60 to 80 ml of extra virgin olive oil per kilo of raw potato, added gradually. Start at the lower end and add more a tablespoon at a time until the mash pulls together."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**1 kg potato:** 60–80 ml olive oil, added in two or three additions.",
+              "**Salt:** to taste, added with the first addition of oil so it dissolves into the hot potato.",
+              "**Liquid, if needed:** a splash of the reserved potato-cooking water loosens the mash further without changing the flavour."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMashedPotatoesInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "Warm oil, not cold and not scalding",
+        "id": "warm-oil-not-cold",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The oil should be warm when it goes in, not straight from a cold bottle and not while the potato is still at a rolling boil. Warm oil folds through evenly; cold oil seizes into streaks, and boiling-hot potato can turn the mash gluey."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Drain and steam-dry the potato in the pot for a minute off the heat.",
+              "Mash while hot, but just off a rolling boil.",
+              "Warm the oil briefly — a few seconds is enough, not hot to the touch.",
+              "Fold it in with a spoon, not a whisk, in two or three additions."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMashedPotatoesInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "How the texture differs from a butter-and-cream mash",
+        "id": "texture-vs-butter-mash",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An olive oil mash is looser and glossier than a butter-and-cream mash, which sets up thicker and richer as the butter's milk solids firm on cooling. Olive oil stays fluid at room temperature, so the mash pours more than it mounds and stays spoonable even once it has cooled a little."
+          },
+          {
+            "type": "p",
+            "text": "The flavour sits differently too: butter mostly disappears into the potato, while olive oil keeps its own grassy or peppery note running through the dish — closer to a Mediterranean puree than a steakhouse mash."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMashedPotatoesInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "A garlic and herb variation, with plain oil",
+        "id": "garlic-and-herb-variation",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For a garlic mash, use **plain** extra virgin olive oil and fresh garlic, not an infused oil — the infused range on this site covers wild thyme, blackseed, turmeric and black pepper, rosemary and basil, fennel and anise, and lavender and chamomile, and does not include garlic."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Warm one or two chopped garlic cloves gently in a spoonful of the measured oil for under a minute, then fold both into the mash.",
+              "For an herb version, stir in chopped parsley, chives or rosemary at the very end, off the heat.",
+              "Keep the garlic barely warmed rather than browned, so it seasons rather than turns bitter."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMashedPotatoesInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "The method in short",
+        "id": "the-method-in-short",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Put together, the method is short enough to hold in your head: boil, drain, mash while hot, then fold in warm oil gradually until the texture is right, seasoning and finishing to taste."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Step",
+              "What to do"
+            ],
+            "rows": [
+              [
+                "Boil",
+                "Even chunks in salted water until fork-tender."
+              ],
+              [
+                "Drain",
+                "Steam-dry off the heat for a minute."
+              ],
+              [
+                "Mash",
+                "While hot, just off the boil."
+              ],
+              [
+                "Fold in oil",
+                "60–80 ml warm oil per kilo, in stages."
+              ],
+              [
+                "Finish",
+                "Salt, and garlic or herbs if using."
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilMashedPotatoesInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Fold warm extra virgin olive oil into just-mashed potato, roughly 60 to 80 ml per kilo, and expect a looser, glossier mash with its own fruity or peppery note rather than butter's rich, neutral background. For a garlic version, use plain oil and fresh garlic, not an infused flavour."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil mashed potato healthier than a butter mash?",
+        "a": "That question is for a doctor or dietitian, not a cooking guide. This article covers only how the oil behaves, how much to use, and how the finished texture and flavour compare with a butter-and-cream mash."
+      },
+      {
+        "q": "How much olive oil replaces butter and cream in mashed potato?",
+        "a": "A working range is roughly 60 to 80 ml of extra virgin olive oil per kilo of potato, added in two or three additions rather than all at once, adjusting until the texture pulls together."
+      },
+      {
+        "q": "Why does the olive oil need to be warm, not cold?",
+        "a": "Cold oil straight from the bottle seizes into streaks instead of folding through evenly. Warm oil blends in smoothly, giving a consistent texture rather than an uneven, oily-looking mash."
+      },
+      {
+        "q": "Can I use an infused olive oil for a garlic mash?",
+        "a": "No — this site's infused range covers wild thyme, blackseed, turmeric and black pepper, rosemary and basil, fennel and anise, and lavender and chamomile, and none of them is garlic. Use plain oil with fresh garlic instead."
+      },
+      {
+        "q": "Does olive oil mashed potato taste like a classic butter mash?",
+        "a": "No, and it is not meant to. Butter and cream mostly fade into the potato, while extra virgin olive oil keeps its own grassy or peppery note running through the dish, closer to a Mediterranean puree."
+      },
+      {
+        "q": "Is olive oil mashed potato dairy-free?",
+        "a": "Yes, as a fact about ingredients — potato, oil and salt, with no butter or cream. That is a statement about what is in the dish, not a claim about any health benefit."
+      }
+    ],
+    "related": [
+      {
+        "label": "Olive oil vs butter",
+        "path": "blog/olive-oil-vs-butter",
+        "description": "Flavour, browning and price compared between the two fats for cooking and spreading, not baking."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "A practical guide to using extra virgin olive oil across everyday cooking, from sautéing to finishing."
+      },
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "olive-oil-orange-cake",
+    "slug": "olive-oil-orange-cake",
+    "seoTitle": "Olive Oil Orange Cake: A Moist Crumb Recipe",
+    "metaTitle": "Olive Oil Orange Cake: A Moist Crumb Recipe",
+    "metaDescription": "Oil quantity, orange zest and juice, a crumb that stays moist for days at room temperature, and a simple glaze — one specific olive oil orange cake recipe.",
+    "focusKeyword": "olive oil orange cake",
+    "relatedKeywords": [
+      "olive oil orange cake recipe",
+      "moist olive oil cake",
+      "orange cake with olive oil",
+      "dairy-free orange cake",
+      "olive oil cake glaze",
+      "extra virgin olive oil cake",
+      "orange zest cake recipe",
+      "olive oil cake without butter",
+      "olive oil cake that keeps well",
+      "easy orange olive oil cake"
+    ],
+    "category": "Baking with olive oil",
+    "tags": [
+      "orange cake",
+      "baking",
+      "dessert",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil Orange Cake: A Recipe for a Moist Crumb",
+    "excerpt": "One specific cake, not the general butter-to-oil conversion: how much extra virgin olive oil goes into the batter, how the zest and juice carry the orange flavour, and why the crumb stays moist for days without the fridge.",
+    "keyTakeaway": "This is one cake, not the general baking substitution: 180 ml extra virgin olive oil, orange zest rubbed into the sugar, juice in the batter, baked plain and finished with a citrus glaze or a dusting of icing sugar. The oil is what keeps the crumb moist at room temperature for days.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilOrangeCakeHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-olive-oil-orange-cake.jpg",
+    "intro": [
+      "This cake is built around one fat from the start rather than a butter recipe adjusted afterward, and it holds together differently because of it: a close, moist crumb under an orange glaze, no dairy in the batter, and no fridge needed once it cools.",
+      "This is one specific recipe, not the general olive-oil-for-butter ratio — for that conversion see [olive oil for cakes and baking](/blog/olive-oil-for-cakes-and-baking). Here: how much oil, how the zest and juice go in, the method, and how to finish it."
+    ],
+    "sections": [
+      {
+        "heading": "Why Oil, Not Butter, for This Cake",
+        "id": "why-oil-not-butter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Butter is roughly a fifth water, which bakes off in the oven and leaves the crumb to dry out over a day or two. Extra virgin olive oil is entirely fat, so it keeps coating the crumb after baking instead of evaporating out of it."
+          },
+          {
+            "type": "p",
+            "text": "That is a fact about this particular batter, not a general rule for swapping the two fats in any cake — the conversion ratio between butter and oil for baking more broadly is covered at [olive oil for cakes and baking](/blog/olive-oil-for-cakes-and-baking), not repeated here."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilOrangeCakeInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "How Much Oil Goes Into the Batter",
+        "id": "oil-quantity-in-the-batter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For one 20 cm round cake: 180 ml extra virgin olive oil, 3 eggs, 220 g caster sugar, 240 g plain flour, 2 teaspoons baking powder, a pinch of salt, the zest of two oranges and 120 ml fresh orange juice."
+          },
+          {
+            "type": "p",
+            "text": "A mild extra virgin oil suits this cake better than a peppery one — the sharper the pepper note, the more it fights the orange rather than sitting underneath it. Any of this site's plain 250 ml or 500 ml bottles works; see [the products page](/products) for sizes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilOrangeCakeInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Building the Orange Flavour: Zest and Juice",
+        "id": "orange-zest-and-juice",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rub the orange zest into the caster sugar with your fingertips before anything else goes in the bowl — the sugar's abrasion pulls the citrus oils out of the zest, and the mixture turns damp and fragrant within a minute."
+          },
+          {
+            "type": "p",
+            "text": "The juice replaces part of the batter's liquid rather than sitting on top as a flavouring, so it needs to go in with the eggs and oil, not stirred in at the end. Squeeze it fresh; bottled juice tastes flatter and thinner in the finished crumb."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilOrangeCakeInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Method: Mixing and Baking the Cake",
+        "id": "method-mixing-and-baking",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This batter comes together in one bowl with a whisk, no electric mixer needed, and bakes at 170°C for about 45 minutes. Test it the ordinary way: a skewer through the centre should come out clean, not wet."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Rub the orange zest into the sugar until damp and fragrant.",
+              "Whisk in the eggs, oil and orange juice until smooth.",
+              "Fold in the flour, baking powder and salt just until no dry streaks remain.",
+              "Pour into a greased, lined 20 cm round tin.",
+              "Bake at 170°C for 40–45 minutes until a skewer comes out clean.",
+              "Cool in the tin for 10 minutes, then turn out onto a rack."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilOrangeCakeInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "A Simple Glaze or Icing Sugar Dusting to Finish",
+        "id": "glaze-or-dusting-to-finish",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A thin glaze of icing sugar loosened with fresh orange juice, spooned over the cake once it has fully cooled, sinks slightly into the top and sets into a matte, faintly sticky finish rather than a hard shell."
+          },
+          {
+            "type": "p",
+            "text": "For a plainer finish, skip the glaze and sift icing sugar over the top just before serving — it suits a cake meant to be cut again the next day, since a glaze left on for two days turns tacky while a dusting can simply be reapplied."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilOrangeCakeInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Why It Stays Moist for Days Without the Fridge",
+        "id": "staying-moist-without-the-fridge",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kept under a cake dome or wrapped at room temperature, this cake is still moist on day three or four, because the oil that coats the crumb does not evaporate the way butter's water content does, and does not stiffen the way chilled butter does in the fridge."
+          },
+          {
+            "type": "p",
+            "text": "Refrigerating it is unnecessary and works against the texture: a cold, oil-based crumb turns denser and loses the softness it has at room temperature, so it is worth cutting only what will be eaten within a few days rather than storing the rest cold."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilOrangeCakeInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The Short Version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "180 ml extra virgin olive oil, zest rubbed into the sugar, fresh juice in the batter, baked plain at 170°C, then finished with a citrus glaze or a dusting of icing sugar. Kept at room temperature, it stays moist for days — no fridge, no butter."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can I use the general butter-to-oil baking ratio for this cake?",
+        "a": "This recipe already gives you the oil quantity directly, so there is nothing to convert. For the general ratio to adapt other recipes, see [olive oil for cakes and baking](/blog/olive-oil-for-cakes-and-baking)."
+      },
+      {
+        "q": "Can I use an infused olive oil instead of plain?",
+        "a": "Plain extra virgin olive oil is the better choice here; a mild one lets the orange lead. This site's infused range (thyme, blackseed, turmeric and others) is built for savoury cooking, not this cake."
+      },
+      {
+        "q": "How long does this cake keep?",
+        "a": "Well wrapped at room temperature, it stays moist for three to four days. Cut only what will be eaten soon, since the cut face dries faster than the rest of the loaf or round."
+      },
+      {
+        "q": "Do I need to refrigerate this cake?",
+        "a": "No. The fridge is not necessary and works against the texture — a chilled, oil-based crumb turns denser than one left at room temperature under a cover or cake dome."
+      },
+      {
+        "q": "Do I need an electric mixer for this recipe?",
+        "a": "No. The batter comes together with a whisk and a bowl — rub the zest into the sugar by hand, then whisk in the wet ingredients and fold through the dry ones."
+      },
+      {
+        "q": "Can I substitute another citrus for the orange?",
+        "a": "Lemon or a mix of orange and lemon works in the same quantities; lemon alone gives a sharper, less sweet cake, so taste the batter before assuming the sugar needs no adjustment."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, the size this recipe's 180 ml comes from."
+      },
+      {
+        "label": "Olive oil for cakes and baking",
+        "path": "blog/olive-oil-for-cakes-and-baking",
+        "description": "The general butter-to-oil conversion ratio for baking, for adapting other recipes."
+      },
+      {
+        "label": "Olive oil substitute: what to use instead",
+        "path": "blog/olive-oil-substitute-what-to-use-instead",
+        "description": "What to reach for if a recipe calls for olive oil and the kitchen has none."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "olive-oil-vs-sesame-oil",
+    "slug": "olive-oil-vs-sesame-oil",
+    "seoTitle": "Olive Oil vs Sesame Oil: Two Strong Flavours, One Job Each",
+    "metaTitle": "Olive Oil vs Sesame Oil: Two Strong Flavours, One Job Each",
+    "metaDescription": "Flavour, toasted vs light sesame oil, raw finish vs cooking, and where olive oil fits a kitchen that already uses sesame oil — not a swap.",
+    "focusKeyword": "olive oil vs sesame oil",
+    "relatedKeywords": [
+      "olive oil vs sesame oil",
+      "sesame oil vs olive oil for stir-fry",
+      "toasted sesame oil vs light sesame oil",
+      "olive oil or sesame oil for cooking",
+      "sesame oil smoke point",
+      "can you substitute olive oil for sesame oil",
+      "olive oil and sesame oil together",
+      "best oil for stir-fry",
+      "sesame oil finishing oil",
+      "olive oil raw drizzle"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "sesame oil",
+      "stir-fry",
+      "raw drizzle",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil vs Sesame Oil: Two Strong Flavours, One Job Each",
+    "excerpt": "Olive oil and sesame oil are both strong-flavoured, both used raw and both used to cook, and a lot of Malaysian kitchens already keep both. This is where each one wins, not which one replaces the other.",
+    "keyTakeaway": "Olive oil and sesame oil are both strong, distinct-flavoured oils used raw and in cooking, but they rarely do the same job. Toasted sesame oil finishes a stir-fry or noodle dish off the heat; olive oil suits a raw drizzle or a moderate sauté. Most kitchens keep both rather than choosing one.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsSesameOilHero",
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-sesame-oil.jpg",
+    "intro": [
+      "Two oils with strong, distinct flavours turn up in a lot of Malaysian kitchens at once, and neither erases the need for the other.",
+      "This is where each one earns its place: flavour, toasted sesame oil against the light version, raw finish against cooking, and how olive oil fits a kitchen that already keeps sesame oil."
+    ],
+    "sections": [
+      {
+        "heading": "Two flavours that do not compete",
+        "id": "flavour-first",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil tastes of the fruit it was pressed from — grassy, peppery or mild depending on the harvest. Sesame oil tastes of the seed: a deep, toasted, nutty note when the seeds were roasted first, or a lighter one from raw seeds."
+          },
+          {
+            "type": "p",
+            "text": "That is the reason to keep both. A dish built around sesame oil's toasted aroma falls flat with olive oil in its place, and hummus wants olive oil's fruit and pepper, not a nutty note."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSesameOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Toasted and light sesame oil are two different products",
+        "id": "toasted-vs-light-sesame-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Toasted sesame oil is pressed from roasted seeds and comes out dark amber with a strong, unmistakable aroma — a finishing oil, not a cooking one. Light or raw sesame oil is pressed from unroasted seeds, pale and mild, and holds up better to heat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Toasted sesame oil** — dark, strongly aromatic, added at the end of cooking or as a raw finish.",
+              "**Light (raw) sesame oil** — pale, mild, closer to a neutral oil in a pan.",
+              "Buying 'sesame oil' without checking the label leads to a burnt dish or a bland one."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSesameOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Poured on at the end, not cooked from cold",
+        "id": "poured-on-not-cooked-from-cold",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Toasted sesame oil is almost always finished rather than started: a few drops stirred through a stir-fry once the wok is off the heat, or drizzled over noodles just before serving. Cooked from cold, it turns bitter before the dish is done."
+          },
+          {
+            "type": "p",
+            "text": "Olive oil works both ways: a raw drizzle carries its fruit and pepper, but it also takes a moderate sauté from the start — see [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take) for how much heat it takes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSesameOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Where olive oil fits a kitchen that already has sesame oil",
+        "id": "not-a-replacement-a-different-tool",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil does not replace sesame oil in a kitchen that already keeps one — it does a different job. Sesame oil finishes a stir-fry with its own toasted note; olive oil finishes a salad or roasted vegetables with a grassy, peppery one."
+          },
+          {
+            "type": "p",
+            "text": "Both earn a place on the same shelf. For which oil suits which dish more broadly, see [how to cook with olive oil in a Malaysian kitchen](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSesameOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Use this for that: a quick reference",
+        "id": "use-this-for-that",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most of the choice comes down to timing: whether the oil needs to survive real heat in the pan, or whether its job is to sit raw on top of a finished dish."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Job",
+              "Reach for",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Finishing a stir-fry off the heat",
+                "Toasted sesame oil",
+                "Aroma survives only a brief brush with heat"
+              ],
+              [
+                "Cooking in a hot wok from cold",
+                "Light sesame oil or olive oil",
+                "Toasted sesame oil turns bitter cooked from cold"
+              ],
+              [
+                "A raw drizzle over hummus or roasted vegetables",
+                "Olive oil",
+                "Carries its own fruit and pepper on top"
+              ],
+              [
+                "A raw finish over noodles or a stir-fry",
+                "Toasted sesame oil",
+                "Its nutty aroma is the point"
+              ],
+              [
+                "A sauté that should not overpower other flavours",
+                "Light sesame oil or a mild olive oil",
+                "Neither one's strongest note gets in the way"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSesameOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "How much of each you actually use",
+        "id": "price-per-use-and-where-to-buy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Toasted sesame oil is used a few drops at a time, so a small bottle lasts months. Olive oil is poured more freely and goes through faster once it earns a regular place in the same kitchen."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village extra virgin olive oil comes in 250 ml and 500 ml, sold in Malaysia only through [Berkat Madinah Store](/shop) — two branches in Selangor, plus the seller's own Shopee and TikTok Shop counters. See [the products page](/products) for sizes and pricing."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSesameOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Keep both bottles for what each does best: sesame oil, toasted especially, for a raw or barely-heated finish; olive oil for everything from a raw drizzle to a moderate sauté. Neither replaces the other — they are different tools for the same kitchen."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can I use olive oil instead of sesame oil in a stir-fry?",
+        "a": "Not for the finishing splash — sesame oil's toasted aroma is the point of adding it there. Olive oil can do the earlier cooking, but swap it in at the end and the dish loses the flavour it was built around."
+      },
+      {
+        "q": "What is the difference between toasted and light sesame oil?",
+        "a": "Toasted sesame oil is pressed from roasted seeds — dark, strongly aromatic, meant for finishing off the heat. Light or raw sesame oil is pressed from unroasted seeds, paler and milder, and holds up to more heat in a pan."
+      },
+      {
+        "q": "Does sesame oil have a lower smoke point than olive oil?",
+        "a": "This site has not published a smoke-point figure for sesame oil, so no number is claimed here. In practice, toasted sesame oil is treated as a low-heat finishing oil, not one poured into an empty hot pan."
+      },
+      {
+        "q": "Which oil is better for a stir-fry, olive oil or sesame oil?",
+        "a": "Neither replaces the other in the same stir-fry. Sesame oil, usually toasted, is stirred through at the very end for its aroma; olive oil suits the earlier cooking or a raw finish on a different dish."
+      },
+      {
+        "q": "Can I mix olive oil and sesame oil in one dish?",
+        "a": "Yes — a light sesame oil can carry the heat while a few drops of toasted sesame oil go in at the end for aroma, with olive oil kept for dishes built around its own fruity flavour instead."
+      },
+      {
+        "q": "Where can I buy Arabian Village olive oil in Malaysia?",
+        "a": "Through Berkat Madinah Store's two branches in Selangor, or the same seller's own Shopee and TikTok Shop counters — see the shop page for details. There is no other legitimate seller of this brand."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where olive oil fits alongside the oils a Malaysian kitchen already keeps, dish by dish."
+      },
+      {
+        "label": "Olive oil and balsamic vinegar",
+        "path": "blog/olive-oil-and-balsamic-vinegar",
+        "description": "Another raw pairing for olive oil, for dipping and for dressing a plate."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 7 ---------------- */
+  {
+    "id": "olive-oil-vs-sunflower-oil",
+    "slug": "olive-oil-vs-sunflower-oil",
+    "seoTitle": "Olive Oil vs Sunflower Oil: Which One to Reach For",
+    "metaTitle": "Olive Oil vs Sunflower Oil: Which One to Reach For",
+    "metaDescription": "Flavour, smoke behaviour, what each oil suits and price per use — a plain comparison of olive oil and sunflower oil for a Malaysian kitchen.",
+    "focusKeyword": "olive oil vs sunflower oil",
+    "relatedKeywords": [
+      "olive oil or sunflower oil for cooking",
+      "olive oil vs sunflower oil price",
+      "sunflower oil vs olive oil smoke point",
+      "which oil is better for frying",
+      "neutral oil vs olive oil",
+      "olive oil for tumis",
+      "sunflower oil for deep frying",
+      "extra virgin olive oil vs refined oil",
+      "cooking oil comparison malaysia",
+      "olive oil vs sunflower oil flavour"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "sunflower oil",
+      "smoke point",
+      "cooking oil",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil vs Sunflower Oil: Which One to Reach For",
+    "excerpt": "Sunflower oil and olive oil sit at opposite ends of the same shelf: one is bred to disappear into a dish, the other is pressed to be tasted. This is a plain comparison for the pan, not a verdict on which is better.",
+    "keyTakeaway": "Sunflower oil is neutral and takes more heat before it smokes, which suits a hard fry. Extra virgin olive oil carries its own fruity or peppery flavour and suits a raw drizzle or a moderate sauté rather than a long deep-fry. The price gap tracks how each is made, not a quality claim either way.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsSunflowerOilHero",
+      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-sunflower-oil.jpg",
+    "intro": [
+      "Sunflower oil and olive oil turn up in the same Malaysian kitchen for different reasons, and the price tag on each is the first clue: one bottle costs a few ringgit, the other several times more for the same size.",
+      "This is a comparison for deciding which to reach for: flavour, how each behaves in a hot pan, what each suits, and price per use."
+    ],
+    "sections": [
+      {
+        "heading": "Flavour: neutral against fruity",
+        "id": "flavour-neutral-vs-fruity",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Refined sunflower oil is bred for a mild, almost nonexistent flavour, and that neutrality is the whole point: it lets a curry paste or a fried egg taste of itself and nothing else. Extra virgin olive oil is pressed straight from the fruit, so it carries its own grassy, peppery or fruity character into whatever it touches."
+          },
+          {
+            "type": "p",
+            "text": "That is why sunflower oil disappears into a dish rather than shaping it. A peppery extra virgin can carry a plain dish on its own, but can just as easily overwhelm something already crowded with flavour."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSunflowerOilInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Smoke behaviour: two different ceilings",
+        "id": "smoke-behaviour-and-heat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Refined sunflower oil takes more heat before it starts to smoke than extra virgin olive oil does. Its figure sits at roughly 225°C against extra virgin's 190 to 210°C, both set out in full on [the olive oil smoke point guide](blog/olive-oil-smoke-point-what-heat-it-can-take) rather than repeated here."
+          },
+          {
+            "type": "p",
+            "text": "That gap has nothing to do with which oil is better. Sunflower oil is processed to strip out the compounds that break down first, raising the ceiling and flattening the flavour in the same step."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSunflowerOilInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "What each oil suits in the kitchen",
+        "id": "what-each-oil-suits",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sunflower oil's higher ceiling and quiet flavour suit sustained high heat: a proper deep-fry, a hard wok flame, or anything cooked past the point where extra virgin olive oil starts to smoke. Extra virgin suits a raw finish, a dressing, or a moderate sauté where its own flavour is meant to show."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Sunflower oil** for deep-frying, a hard wok flame, or any dish that should taste only of itself.",
+              "**Extra virgin olive oil** for a raw drizzle, a dressing, or tumis at a moderate flame — see [how to cook with olive oil in a Malaysian kitchen](blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen).",
+              "Neither is a one-for-one swap for the other; each does a different job in the same kitchen."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSunflowerOilInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Use this for that: a quick reference",
+        "id": "use-this-for-that",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most kitchens keep both, and the choice on any given day comes down to whether the fat needs to survive a hard flame or carry its own flavour raw onto the plate once cooking is done."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Job",
+              "Reach for",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Deep-frying",
+                "Sunflower oil",
+                "Higher smoke point, holds up under sustained heat"
+              ],
+              [
+                "A hard wok flame",
+                "Sunflower oil",
+                "Neutral flavour and a wider heat margin"
+              ],
+              [
+                "Tumis at a moderate flame",
+                "Olive oil",
+                "Stays under its range and carries the aromatics"
+              ],
+              [
+                "A raw drizzle over a finished dish",
+                "Olive oil",
+                "Its own fruit and pepper come through"
+              ],
+              [
+                "A salad dressing",
+                "Olive oil",
+                "Flavour is the point, not neutrality"
+              ],
+              [
+                "A cake or bake wanting an invisible fat",
+                "Sunflower oil",
+                "Mild flavour stays out of the way"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSunflowerOilInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Why the price gap exists",
+        "id": "why-the-price-gap-exists",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sunflower oil is a commodity crop oil, extracted from seed at scale and refined for a long shelf life — a process built for volume. Extra virgin olive oil is cold-pressed from fruit, with a lower yield and no refining step, which is the real source of the gap on the shelf."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSunflowerOilInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Price per use",
+        "id": "price-per-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil is normally poured in small amounts — a drizzle, a tablespoon for tumis — so a bottle stretches further than its sticker price suggests. Sizes and pricing for Arabian Village's cold-pressed extra virgin sit on [the products page](products) rather than a fixed figure here."
+          },
+          {
+            "type": "p",
+            "text": "Sunflower oil is usually cheaper and used more freely for deep-frying, so the two rarely compete for the same job. In Malaysia, Arabian Village's extra virgin comes only from [Berkat Madinah Store's two branches, its Shopee counter and its TikTok Shop](shop)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsSunflowerOilInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Reach for sunflower oil when the dish needs sustained high heat and no flavour of its own, and for extra virgin olive oil when the fat should carry its own fruit and pepper into a moderate sauté, a dressing or a finished plate. Most kitchens are better off keeping both."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can I use olive oil instead of sunflower oil for deep-frying?",
+        "a": "Extra virgin olive oil can be shallow-fried, but its 190–210°C range sits below refined sunflower oil's roughly 225°C, so a long deep-fry suits sunflower oil better, keeping olive oil for lower-heat cooking."
+      },
+      {
+        "q": "Which oil has a stronger flavour, olive oil or sunflower oil?",
+        "a": "Extra virgin olive oil, by a wide margin. It is pressed from fruit and carries a grassy or peppery character, while refined sunflower oil is processed specifically to taste of almost nothing."
+      },
+      {
+        "q": "Why is olive oil so much more expensive than sunflower oil?",
+        "a": "Different crop and different process: sunflower oil is extracted from seed at scale, while good extra virgin olive oil is cold-pressed from fruit with a lower yield. Neither price reflects which oil suits a given dish better."
+      },
+      {
+        "q": "Is sunflower oil healthier than olive oil?",
+        "a": "That question belongs to a doctor or dietitian, not a kitchen comparison. This article covers flavour, smoke behaviour, what each suits and price per use."
+      },
+      {
+        "q": "What is sunflower oil's smoke point compared to olive oil's?",
+        "a": "Refined sunflower oil sits at roughly 225°C. Extra virgin olive oil sits at roughly 190 to 210°C, set out in full on the site's smoke point guide rather than repeated here."
+      },
+      {
+        "q": "Does sunflower oil work for a salad dressing the way olive oil does?",
+        "a": "It works, but it will not do the same job. A dressing built on extra virgin olive oil borrows its fruit and pepper as part of the flavour; sunflower oil leaves a dressing tasting mostly of the acid and salt."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The full smoke point range for extra virgin olive oil and how it compares to refined sunflower, coconut and palm oil."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Tumis, roasting and shallow-frying with extra virgin olive oil, method by method."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store's two branches in Selangor, plus its own Shopee and TikTok Shop counters."
       }
     ]
   },
