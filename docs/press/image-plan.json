@@ -59,7 +59,7 @@
   "slot": "hero",
   "src": "journey-05-filtering.png",
   "zoom": 1.0,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -69,7 +69,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.5
  },
  {
   "id": "zayt-alzaytun-kuala-lumpur",
@@ -95,7 +95,7 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 1.0,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -105,7 +105,7 @@
   "src": "journey-03-picking.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "humudat-zayt-alzaytun",
@@ -114,7 +114,7 @@
   "src": "OliveGroveSunsetHero.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.6
  },
  {
   "id": "humudat-zayt-alzaytun",
@@ -122,7 +122,7 @@
   "slot": "inline",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -131,7 +131,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -150,7 +150,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.4
  },
  {
   "id": "zayt-alzaytun-aludwi",
@@ -159,15 +159,15 @@
   "src": "journey-02-sunset.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.6
  },
  {
   "id": "zayt-alzaytun-lilqaly",
   "lang": "ar",
   "slot": "hero",
   "src": "journey-05-filtering.png",
-  "zoom": 0.97,
-  "cx": 0.5,
+  "zoom": 1.0,
+  "cx": 0.6,
   "cy": 0.5
  },
  {
@@ -175,7 +175,7 @@
   "lang": "ar",
   "slot": "inline",
   "src": "OliveGroveSunsetHero.png",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
   "cy": 0.5
  },
@@ -186,15 +186,15 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "zayt-alzaytun-lilsalata",
   "lang": "ar",
   "slot": "inline",
   "src": "journey-07-bottling.png",
-  "zoom": 0.97,
-  "cx": 0.42,
+  "zoom": 1.0,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -203,7 +203,7 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -213,7 +213,7 @@
   "src": "journey-01-grove.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.35
  },
  {
   "id": "mawsim-qitaf-alzaytun",
@@ -221,7 +221,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -231,7 +231,7 @@
   "src": "journey-06-press.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.65
  },
  {
   "id": "zayt-alzaytun-almukarrar",
@@ -239,8 +239,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "zayt-alzaytun-almukarrar",
@@ -249,7 +249,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.5
  },
  {
   "id": "zayt-alzaytun-balad-almansha",
@@ -258,7 +258,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.6
  },
  {
   "id": "zayt-alzaytun-balad-almansha",
@@ -275,8 +275,8 @@
   "slot": "hero",
   "src": "journey-05-filtering.png",
   "zoom": 0.97,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.4,
+  "cy": 0.5
  },
  {
   "id": "zayt-zaytun-baladi",
@@ -285,7 +285,7 @@
   "src": "journey-05-carrying.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.34
+  "cy": 0.45
  },
  {
   "id": "zujajat-zayt-alzaytun",
@@ -294,16 +294,16 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.6
  },
  {
   "id": "zujajat-zayt-alzaytun",
   "lang": "ar",
   "slot": "inline",
   "src": "journey-05-filtering.png",
-  "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.38
+  "zoom": 1.0,
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "anwae-alzaytun",
@@ -311,8 +311,8 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "anwae-alzaytun",
@@ -321,7 +321,7 @@
   "src": "FarmerPickingOliveOfTheTreeInTheField.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "tajmid-zayt-alzaytun",
@@ -329,7 +329,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -337,9 +337,9 @@
   "lang": "ar",
   "slot": "inline",
   "src": "journey-04-crates.webp",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.5
+  "cy": 0.55
  },
  {
   "id": "zayt-alzaytun-fi-ramadan",
@@ -347,8 +347,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.42,
-  "cy": 0.38
+  "cx": 0.5,
+  "cy": 0.4
  },
  {
   "id": "zayt-alzaytun-fi-ramadan",
@@ -357,16 +357,16 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.4
  },
  {
   "id": "zayt-alzaytun-lilmuajanat",
   "lang": "ar",
   "slot": "hero",
   "src": "journey-04-extraction.png",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.5
+  "cy": 0.45
  },
  {
   "id": "zayt-alzaytun-lilmuajanat",
@@ -375,7 +375,7 @@
   "src": "journey-08-final.png",
   "zoom": 0.62,
   "cx": 0.12,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "zayt-alzaytun-lilshawi",
@@ -384,7 +384,7 @@
   "src": "journey-05-filtering.png",
   "zoom": 0.97,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.4
  },
  {
   "id": "zayt-alzaytun-lilshawi",
@@ -392,7 +392,7 @@
   "slot": "inline",
   "src": "journey-03-picking.webp",
   "zoom": 0.97,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -402,7 +402,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.35
  },
  {
   "id": "zayt-alzaytun-walzaatar",
@@ -410,8 +410,116 @@
   "slot": "inline",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.58,
-  "cy": 0.38
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "zayt-alzaytun-al-rakhis",
+  "lang": "ar",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.4
+ },
+ {
+  "id": "zayt-alzaytun-al-rakhis",
+  "lang": "ar",
+  "slot": "inline",
+  "src": "HeroAVOliveOilBottleInTheField.png",
+  "zoom": 0.62,
+  "cx": 0.16,
+  "cy": 0.4
+ },
+ {
+  "id": "zayt-alzaytun-lilbayd",
+  "lang": "ar",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "zayt-alzaytun-lilbayd",
+  "lang": "ar",
+  "slot": "inline",
+  "src": "journey-02-sunset.webp",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "zayt-alzaytun-lilfawshar",
+  "lang": "ar",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.4,
+  "cy": 0.4
+ },
+ {
+  "id": "zayt-alzaytun-lilfawshar",
+  "lang": "ar",
+  "slot": "inline",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "zayt-alzaytun-lilkhudar-almashwi",
+  "lang": "ar",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.55
+ },
+ {
+  "id": "zayt-alzaytun-lilkhudar-almashwi",
+  "lang": "ar",
+  "slot": "inline",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "zayt-alzaytun-lilsteak",
+  "lang": "ar",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "zayt-alzaytun-lilsteak",
+  "lang": "ar",
+  "slot": "inline",
+  "src": "journey-01-grove.webp",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "zayt-alzaytun-walzubda",
+  "lang": "ar",
+  "slot": "hero",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.65
+ },
+ {
+  "id": "zayt-alzaytun-walzubda",
+  "lang": "ar",
+  "slot": "inline",
+  "src": "journey-06-press.webp",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.4
  },
  {
   "id": "cold-pressed-olive-oil-explained",
@@ -473,7 +581,7 @@
   "slot": "hero",
   "src": "journey-05-filtering.png",
   "zoom": 1.0,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -483,7 +591,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.5
  },
  {
   "id": "palestinian-olive-oil-origin",
@@ -509,7 +617,7 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 1.0,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -519,7 +627,7 @@
   "src": "journey-03-picking.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "olive-oil-smoke-point",
@@ -528,7 +636,7 @@
   "src": "OliveGroveSunsetHero.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.6
  },
  {
   "id": "olive-oil-smoke-point",
@@ -536,7 +644,7 @@
   "slot": "inline",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -545,7 +653,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -564,7 +672,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.4
  },
  {
   "id": "evoo-salad-dressing",
@@ -573,15 +681,15 @@
   "src": "journey-02-sunset.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.6
  },
  {
   "id": "evoo-vs-pure-olive-oil",
   "lang": "en",
   "slot": "hero",
   "src": "journey-05-filtering.png",
-  "zoom": 0.97,
-  "cx": 0.5,
+  "zoom": 1.0,
+  "cx": 0.6,
   "cy": 0.5
  },
  {
@@ -589,7 +697,7 @@
   "lang": "en",
   "slot": "inline",
   "src": "OliveGroveSunsetHero.png",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
   "cy": 0.5
  },
@@ -600,15 +708,15 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "olive-oil-air-fryer",
   "lang": "en",
   "slot": "inline",
   "src": "journey-07-bottling.png",
-  "zoom": 0.97,
-  "cx": 0.42,
+  "zoom": 1.0,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -617,7 +725,7 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -627,7 +735,7 @@
   "src": "journey-01-grove.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.35
  },
  {
   "id": "olive-oil-marinade",
@@ -635,7 +743,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -645,7 +753,7 @@
   "src": "journey-06-press.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.65
  },
  {
   "id": "olive-oil-shelf-life",
@@ -653,8 +761,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "olive-oil-shelf-life",
@@ -663,7 +771,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.5
  },
  {
   "id": "garlic-infused-olive-oil",
@@ -672,7 +780,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.6
  },
  {
   "id": "garlic-infused-olive-oil",
@@ -689,8 +797,8 @@
   "slot": "hero",
   "src": "journey-05-filtering.png",
   "zoom": 0.97,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.4,
+  "cy": 0.5
  },
  {
   "id": "olive-oil-bitter-taste",
@@ -699,7 +807,7 @@
   "src": "journey-05-carrying.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.34
+  "cy": 0.45
  },
  {
   "id": "olive-oil-bottle-size",
@@ -708,16 +816,16 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.6
  },
  {
   "id": "olive-oil-bottle-size",
   "lang": "en",
   "slot": "inline",
   "src": "journey-05-filtering.png",
-  "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.38
+  "zoom": 1.0,
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "olive-oil-for-baking",
@@ -725,8 +833,8 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "olive-oil-for-baking",
@@ -735,7 +843,7 @@
   "src": "FarmerPickingOliveOfTheTreeInTheField.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "olive-oil-substitute",
@@ -743,7 +851,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -751,9 +859,9 @@
   "lang": "en",
   "slot": "inline",
   "src": "journey-04-crates.webp",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.5
+  "cy": 0.55
  },
  {
   "id": "olive-oil-vs-coconut-oil",
@@ -761,8 +869,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.42,
-  "cy": 0.38
+  "cx": 0.5,
+  "cy": 0.4
  },
  {
   "id": "olive-oil-vs-coconut-oil",
@@ -771,16 +879,16 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.4
  },
  {
   "id": "aglio-e-olio",
   "lang": "en",
   "slot": "hero",
   "src": "journey-04-extraction.png",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.5
+  "cy": 0.45
  },
  {
   "id": "aglio-e-olio",
@@ -789,7 +897,7 @@
   "src": "journey-08-final.png",
   "zoom": 0.62,
   "cx": 0.12,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "cloudy-olive-oil",
@@ -798,7 +906,7 @@
   "src": "journey-05-filtering.png",
   "zoom": 0.97,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.4
  },
  {
   "id": "cloudy-olive-oil",
@@ -806,7 +914,7 @@
   "slot": "inline",
   "src": "journey-03-picking.webp",
   "zoom": 0.97,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -816,7 +924,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.35
  },
  {
   "id": "olive-oil-and-balsamic",
@@ -824,8 +932,8 @@
   "slot": "inline",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.58,
-  "cy": 0.38
+  "cx": 0.4,
+  "cy": 0.5
  },
  {
   "id": "olive-oil-for-grilling",
@@ -833,8 +941,8 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.62
+  "cx": 0.4,
+  "cy": 0.4
  },
  {
   "id": "olive-oil-for-grilling",
@@ -843,7 +951,7 @@
   "src": "HeroAVOliveOilBottleInTheField.png",
   "zoom": 0.62,
   "cx": 0.16,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "olive-oil-for-hummus",
@@ -851,8 +959,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "olive-oil-for-hummus",
@@ -860,7 +968,7 @@
   "slot": "inline",
   "src": "journey-02-sunset.webp",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -869,17 +977,125 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.5,
-  "cy": 0.62
+  "cx": 0.4,
+  "cy": 0.4
  },
  {
   "id": "olive-oil-vs-avocado-oil",
   "lang": "en",
   "slot": "inline",
   "src": "OliveGroveSunsetHero.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "olive-oil-focaccia",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.55
+ },
+ {
+  "id": "olive-oil-focaccia",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.38
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "olive-oil-for-steak",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-for-steak",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-01-grove.webp",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "olive-oil-fried-egg",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.65
+ },
+ {
+  "id": "olive-oil-fried-egg",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-06-press.webp",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-popcorn",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "olive-oil-popcorn",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-roasted-vegetables",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-roasted-vegetables",
+  "lang": "en",
+  "slot": "inline",
+  "src": "FarmerPouringOliveOilInTheField.png",
+  "zoom": 1.0,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "olive-oil-vs-butter",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-vs-butter",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-05-carrying.webp",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.4
  },
  {
   "id": "beli-minyak-zaitun-kl",
@@ -941,7 +1157,7 @@
   "slot": "hero",
   "src": "journey-05-filtering.png",
   "zoom": 1.0,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -951,7 +1167,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-halal",
@@ -977,7 +1193,7 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 1.0,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -987,7 +1203,7 @@
   "src": "journey-03-picking.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-palestin",
@@ -996,7 +1212,7 @@
   "src": "OliveGroveSunsetHero.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.6
  },
  {
   "id": "minyak-zaitun-palestin",
@@ -1004,7 +1220,7 @@
   "slot": "inline",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -1013,7 +1229,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -1032,7 +1248,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-habbatus-sauda",
@@ -1041,15 +1257,15 @@
   "src": "journey-02-sunset.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.6
  },
  {
   "id": "minyak-zaitun-untuk-salad",
   "lang": "ms",
   "slot": "hero",
   "src": "journey-05-filtering.png",
-  "zoom": 0.97,
-  "cx": 0.5,
+  "zoom": 1.0,
+  "cx": 0.6,
   "cy": 0.5
  },
  {
@@ -1057,7 +1273,7 @@
   "lang": "ms",
   "slot": "inline",
   "src": "OliveGroveSunsetHero.png",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
   "cy": 0.5
  },
@@ -1068,15 +1284,15 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "zaitun-dalam-al-quran",
   "lang": "ms",
   "slot": "inline",
   "src": "journey-07-bottling.png",
-  "zoom": 0.97,
-  "cx": 0.42,
+  "zoom": 1.0,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -1085,7 +1301,7 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -1095,7 +1311,7 @@
   "src": "journey-01-grove.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.35
  },
  {
   "id": "cara-simpan-minyak-zaitun",
@@ -1103,7 +1319,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -1113,7 +1329,7 @@
   "src": "journey-06-press.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.65
  },
  {
   "id": "minyak-zaitun-pomace",
@@ -1121,8 +1337,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-pomace",
@@ -1131,7 +1347,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-untuk-goreng",
@@ -1140,7 +1356,7 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.6
  },
  {
   "id": "minyak-zaitun-untuk-goreng",
@@ -1157,8 +1373,8 @@
   "slot": "hero",
   "src": "journey-05-filtering.png",
   "zoom": 0.97,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.4,
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-vs-minyak-masak",
@@ -1167,7 +1383,7 @@
   "src": "journey-05-carrying.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.34
+  "cy": 0.45
  },
  {
   "id": "resepi-minyak-zaitun",
@@ -1176,16 +1392,16 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.44
+  "cy": 0.6
  },
  {
   "id": "resepi-minyak-zaitun",
   "lang": "ms",
   "slot": "inline",
   "src": "journey-05-filtering.png",
-  "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.38
+  "zoom": 1.0,
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "beli-minyak-zaitun-online",
@@ -1193,8 +1409,8 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "beli-minyak-zaitun-online",
@@ -1203,7 +1419,7 @@
   "src": "FarmerPickingOliveOfTheTreeInTheField.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-palsu",
@@ -1211,7 +1427,7 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -1219,9 +1435,9 @@
   "lang": "ms",
   "slot": "inline",
   "src": "journey-04-crates.webp",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.5
+  "cy": 0.55
  },
  {
   "id": "minyak-zaitun-tulen",
@@ -1229,8 +1445,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.42,
-  "cy": 0.38
+  "cx": 0.5,
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-tulen",
@@ -1239,16 +1455,16 @@
   "src": "journey-04-extraction.png",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-untuk-kek",
   "lang": "ms",
   "slot": "hero",
   "src": "journey-04-extraction.png",
-  "zoom": 0.97,
+  "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.5
+  "cy": 0.45
  },
  {
   "id": "minyak-zaitun-untuk-kek",
@@ -1257,7 +1473,7 @@
   "src": "journey-08-final.png",
   "zoom": 0.62,
   "cx": 0.12,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-vs-minyak-kelapa",
@@ -1266,7 +1482,7 @@
   "src": "journey-05-filtering.png",
   "zoom": 0.97,
   "cx": 0.5,
-  "cy": 0.62
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-vs-minyak-kelapa",
@@ -1274,7 +1490,7 @@
   "slot": "inline",
   "src": "journey-03-picking.webp",
   "zoom": 0.97,
-  "cx": 0.42,
+  "cx": 0.5,
   "cy": 0.5
  },
  {
@@ -1284,7 +1500,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.56
+  "cy": 0.35
  },
  {
   "id": "rasa-minyak-zaitun",
@@ -1292,8 +1508,8 @@
   "slot": "inline",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.58,
-  "cy": 0.38
+  "cx": 0.4,
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-keruh",
@@ -1301,8 +1517,8 @@
   "slot": "hero",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.62
+  "cx": 0.4,
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-keruh",
@@ -1311,7 +1527,7 @@
   "src": "HeroAVOliveOilBottleInTheField.png",
   "zoom": 0.62,
   "cx": 0.16,
-  "cy": 0.38
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-untuk-air-fryer",
@@ -1319,8 +1535,8 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero.png",
   "zoom": 0.97,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-untuk-air-fryer",
@@ -1328,7 +1544,7 @@
   "slot": "inline",
   "src": "journey-02-sunset.webp",
   "zoom": 0.97,
-  "cx": 0.58,
+  "cx": 0.4,
   "cy": 0.5
  },
  {
@@ -1337,26 +1553,26 @@
   "slot": "hero",
   "src": "OliveGroveSunsetHero-ar.png",
   "zoom": 0.94,
-  "cx": 0.5,
-  "cy": 0.62
+  "cx": 0.4,
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-untuk-ikan-bakar",
   "lang": "ms",
   "slot": "inline",
   "src": "OliveGroveSunsetHero.png",
-  "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.38
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.6
  },
  {
   "id": "minyak-zaitun-untuk-pasta",
   "lang": "ms",
   "slot": "hero",
   "src": "journey-04-extraction.png",
-  "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.5
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.55
  },
  {
   "id": "minyak-zaitun-untuk-pasta",
@@ -1364,17 +1580,17 @@
   "slot": "inline",
   "src": "journey-07-bottling.png",
   "zoom": 0.97,
-  "cx": 0.58,
-  "cy": 0.62
+  "cx": 0.5,
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-untuk-roti",
   "lang": "ms",
   "slot": "hero",
   "src": "journey-05-filtering.png",
-  "zoom": 0.94,
-  "cx": 0.5,
-  "cy": 0.5
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.4
  },
  {
   "id": "minyak-zaitun-untuk-roti",
@@ -1382,8 +1598,8 @@
   "slot": "inline",
   "src": "journey-01-grove.webp",
   "zoom": 0.97,
-  "cx": 0.5,
-  "cy": 0.38
+  "cx": 0.6,
+  "cy": 0.5
  },
  {
   "id": "minyak-zaitun-vs-minyak-sawit",
@@ -1392,7 +1608,7 @@
   "src": "journey-06-testing.webp",
   "zoom": 1.0,
   "cx": 0.5,
-  "cy": 0.34
+  "cy": 0.65
  },
  {
   "id": "minyak-zaitun-vs-minyak-sawit",
@@ -1400,7 +1616,115 @@
   "slot": "inline",
   "src": "journey-06-press.webp",
   "zoom": 0.97,
-  "cx": 0.42,
-  "cy": 0.38
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "minyak-zaitun-murah",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "minyak-zaitun-murah",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "minyak-zaitun-popcorn",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "minyak-zaitun-popcorn",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "FarmerPouringOliveOilInTheField.png",
+  "zoom": 1.0,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "minyak-zaitun-untuk-sayur-panggang",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "minyak-zaitun-untuk-sayur-panggang",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-05-carrying.webp",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.4
+ },
+ {
+  "id": "minyak-zaitun-untuk-steak",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "minyak-zaitun-untuk-steak",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "minyak-zaitun-untuk-telur",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.6
+ },
+ {
+  "id": "minyak-zaitun-untuk-telur",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "FarmerPickingOliveOfTheTreeInTheField.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "minyak-zaitun-vs-mentega",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.45
+ },
+ {
+  "id": "minyak-zaitun-vs-mentega",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-04-crates.webp",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.4
  }
 ]

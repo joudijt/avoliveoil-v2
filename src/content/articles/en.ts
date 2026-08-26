@@ -2511,6 +2511,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Aglio e olio with extra virgin olive oil",
         "path": "blog/aglio-e-olio-recipe-with-extra-virgin-olive-oil",
         "description": "The four-ingredient pasta where the oil is the sauce, and the emulsion step people miss."
+      },
+      {
+        "label": "Olive oil fried egg",
+        "path": "blog/olive-oil-fried-egg",
+        "description": "The Spanish method: a shallow pool of oil, hot oil spooned over the yolk."
       }
     ]
   },
@@ -2801,6 +2806,16 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil vs avocado oil",
         "path": "blog/olive-oil-vs-avocado-oil",
         "description": "Two oils compared on flavour, heat and price per litre, without the health argument."
+      },
+      {
+        "label": "Olive oil for roasting vegetables",
+        "path": "blog/olive-oil-for-roasting-vegetables",
+        "description": "How much oil per tray, and why a crowded tray steams instead of crisping."
+      },
+      {
+        "label": "Olive oil popcorn",
+        "path": "blog/olive-oil-popcorn",
+        "description": "Popping corn in olive oil on the stovetop, and what extra virgin adds."
       }
     ]
   },
@@ -4160,6 +4175,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil for hummus",
         "path": "blog/olive-oil-for-hummus",
         "description": "Hummus takes oil twice, and the two jobs want different things."
+      },
+      {
+        "label": "Olive oil focaccia recipe",
+        "path": "blog/olive-oil-focaccia-recipe",
+        "description": "Baking the dough itself, dimples and all, not dipping bread that already exists."
       }
     ]
   },
@@ -4437,6 +4457,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil for grilling and barbecue",
         "path": "blog/olive-oil-for-grilling-and-barbecue",
         "description": "Oil the food, not the grate, and save the good oil for after it comes off."
+      },
+      {
+        "label": "Olive oil for steak",
+        "path": "blog/olive-oil-for-steak",
+        "description": "The two-oil trick for a stovetop sear, and where the good oil goes after."
       }
     ]
   },
@@ -6035,6 +6060,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Olive oil vs butter",
+        "path": "blog/olive-oil-vs-butter",
+        "description": "As a spread and a cooking fat, not a baking swap, on flavour and browning."
       }
     ]
   },
@@ -7903,6 +7933,1502 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "olive-oil-focaccia",
+    "slug": "olive-oil-focaccia-recipe",
+    "seoTitle": "Olive Oil Focaccia: Dough, Dimples and the Oven",
+    "metaTitle": "Olive Oil Focaccia: Dough, Dimples and the Oven",
+    "metaDescription": "How the oil goes into the dough, why dimpling holds a pool of it, toppings, oven temperature, and the finishing pour straight from the oven.",
+    "focusKeyword": "olive oil focaccia",
+    "relatedKeywords": [
+      "olive oil focaccia recipe",
+      "focaccia dimples",
+      "focaccia dough ratio",
+      "olive oil bread recipe",
+      "rosemary focaccia",
+      "focaccia oven temperature",
+      "how to make focaccia",
+      "focaccia topping ideas",
+      "wet dough bread",
+      "extra virgin olive oil for baking"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "focaccia",
+      "baking",
+      "bread",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil Focaccia: Folding the Dough, Dimpling the Top, Pouring at the End",
+    "excerpt": "Focaccia is not bread you dip afterwards. The oil is folded into the dough itself, pooled again by dimpling, and poured a third time the moment it leaves the oven.",
+    "keyTakeaway": "Fold oil into a wet dough, let it rise, then press deep dimples across the surface once it is in the tray. Top with rosemary, flaky salt and olives pressed into those dimples, bake hot at 220-230°C, and finish with a last pour straight from the oven.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilFocacciaHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+    },
+    "ogImage": "/og/blog-olive-oil-focaccia.jpg",
+    "intro": [
+      "Focaccia is a wet, olive-oil-heavy dough, not bread you slice and dip afterwards. The oil folds into the dough before the first rise, pools again once the dough is dimpled, and goes on once more straight from the oven — three separate pours, not one saucer beside it.",
+      "Get the dough wet enough and the dimples deep enough, and the rest follows."
+    ],
+    "sections": [
+      {
+        "heading": "Why the oil goes into the dough, not onto it",
+        "id": "oil-in-the-dough",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Focaccia dough is far wetter than a sandwich loaf, closer to a thick batter than a ball you can knead by hand. Olive oil goes in with the water, not brushed on after, because a dough this loose needs the fat working through the gluten from the start to keep the crumb open rather than dense."
+          },
+          {
+            "type": "p",
+            "text": "Two to three tablespoons folded in is normal; more goes on top later. The same oil coats the bowl for the first rise, so the dough pulls away clean rather than tearing when it goes into the tray."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFocacciaInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Ingredients for one tray",
+        "id": "ingredients-for-one-tray",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A standard tray needs flour, water, yeast, salt and olive oil in roughly this ratio, with the water kept slack enough to pour rather than knead. Extra virgin olive oil appears three times in the method — folded into the dough, then poured on twice more."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ingredient",
+              "Amount",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Bread flour",
+                "500 g",
+                "Holds a wet dough together"
+              ],
+              [
+                "Water",
+                "375-400 ml",
+                "About 75-80% of flour weight"
+              ],
+              [
+                "Instant yeast",
+                "7 g",
+                "One sachet"
+              ],
+              [
+                "Salt",
+                "10 g",
+                "Added after the first minute"
+              ],
+              [
+                "Extra virgin olive oil, folded in",
+                "3 tbsp",
+                "Part of the dough itself"
+              ],
+              [
+                "Extra virgin olive oil, tray and pour",
+                "4-5 tbsp",
+                "Split: tray, pre-bake, after baking"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFocacciaInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "The dimpling step, and the pool it holds",
+        "id": "the-dimpling-step",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dimpling means pressing all ten fingertips into the risen dough until they nearly reach the tray, spaced a few centimetres apart across the whole surface. It is not decoration: each dent breaks the surface tension so the dough bakes flat instead of ballooning into one blister, and it opens a well that holds the oil poured over it."
+          },
+          {
+            "type": "p",
+            "text": "Oiled fingers press hard enough to feel the tray underneath, and the dimples go in right before baking. Oil poured afterward collects in those wells and fries the crust there, while the ridges brown dry — the whole point of dimpling."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFocacciaInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Toppings that sit in the dimples",
+        "id": "toppings",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rosemary, flaky salt and whole or halved olives are the classic toppings, added right after the pre-bake oil pour so they settle into the wells rather than balancing on top, where they would scorch before the crust colours. Rosemary goes on as whole sprigs; salt stays light since the oil already carries flavour."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Rosemary.** Whole sprigs pressed down so the leaves touch the dough.",
+              "**Flaky salt.** A light, even scatter after the oil, not folded in.",
+              "**Olives.** Whole or halved, pressed into the dimples so they don't roll off."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFocacciaInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Oven temperature and the bake",
+        "id": "oven-temperature-and-bake",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Focaccia wants a hot oven, around 220-230°C, hot enough that the crust sets and colours before the wet crumb inside dries out. A standard tray takes roughly 20-25 minutes, and it is ready when the top is deep gold and the sides pull slightly from the tray."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Mix flour, yeast, water and the folded-in oil to a wet dough; add salt after the first minute.",
+              "Cover and rise until doubled, about 1-1.5 hours.",
+              "Pour oil into the tray, turn the dough onto it, and stretch gently to the edges.",
+              "Rest 20-30 minutes, then dimple firmly with oiled fingers.",
+              "Top with rosemary, salt and olives, pressed into the dimples.",
+              "Bake at 220-230°C for 20-25 minutes, until deep gold."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFocacciaInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "The finishing pour, straight from the oven",
+        "id": "the-finishing-pour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A last spoon or two of oil goes over the focaccia the moment it leaves the oven, while the crust is still hot enough to drink it in rather than let it sit on top. This pour is separate from the one before baking, and it is what leaves the crust glistening and the crumb underneath soft."
+          },
+          {
+            "type": "p",
+            "text": "Cut it warm rather than fully cooled. Oil left pooled in the tray is worth mopping up the way you would treat [a saucer of oil beside any other bread](/blog/olive-oil-for-bread-and-dipping) — a dip for the crust, not a dressing."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFocacciaInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Oil goes into the dough, into the tray, and over the top: folded in before the rise, poured before dimpling, poured again straight from the oven. The dimples exist to hold that second pour exactly where it lands."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much olive oil goes into focaccia dough?",
+        "a": "About two to three tablespoons folded into the dough for one tray, plus four to five tablespoons split between the tray, the pre-bake pour and the finishing pour after baking."
+      },
+      {
+        "q": "Why do you dimple focaccia dough?",
+        "a": "Dimpling breaks the surface tension so the dough bakes flat instead of ballooning, and it opens wells that hold the topping oil in place rather than letting it run off the tray."
+      },
+      {
+        "q": "What temperature do you bake focaccia at?",
+        "a": "Around 220-230°C, hot enough to set and colour the crust before the wet crumb inside dries out. A standard tray takes roughly 20-25 minutes, ready once the top turns deep gold."
+      },
+      {
+        "q": "Can I use infused olive oil on focaccia?",
+        "a": "Yes, folded in or poured on top after baking. Rosemary and basil, or wild thyme, both suit a rosemary-and-salt focaccia, while the classic oil suits a plainer, olive-only version best."
+      },
+      {
+        "q": "What toppings work best on focaccia?",
+        "a": "Rosemary sprigs, flaky salt and whole or halved olives, pressed into the dimples right after the pre-bake oil pour so they sit partly submerged rather than scorching on the crust."
+      },
+      {
+        "q": "Why pour oil on focaccia straight from the oven?",
+        "a": "The hot crust absorbs it instead of letting it sit on the surface, which leaves the top glistening and keeps the crumb underneath soft. It is a separate pour from the one before baking."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where extra virgin fits alongside a wok and a deep fryer, and when to reach for it instead."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "The saucer itself: bread that already exists, with za'atar, dukkah and balsamic as three directions."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "olive-oil-for-steak",
+    "slug": "olive-oil-for-steak",
+    "seoTitle": "Olive Oil for Steak: The Two-Oil Pan-Sear Method",
+    "metaTitle": "Olive Oil for Steak: The Two-Oil Pan-Sear Method",
+    "metaDescription": "Why extra virgin can't take a hard sear, the two-oil trick that fixes it, resting the meat, and a simple pepper-and-oil finish for a stovetop steak.",
+    "focusKeyword": "olive oil for steak",
+    "relatedKeywords": [
+      "olive oil for searing steak",
+      "two-oil steak method",
+      "what oil to sear steak in",
+      "extra virgin olive oil steak finish",
+      "pan-seared steak oil",
+      "olive oil smoke point steak",
+      "resting a steak before cutting",
+      "neutral oil for searing",
+      "basting steak with olive oil",
+      "pepper and olive oil steak finish"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "steak",
+      "searing",
+      "smoke point",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil for Steak: A Stovetop, Two-Oil Method",
+    "excerpt": "A hard sear wants more heat than extra virgin comfortably gives. The fix is two oils doing two jobs: a neutral one for the pan, extra virgin saved for after.",
+    "keyTakeaway": "Sear in a neutral oil with a high smoke point, not extra virgin, then bring the extra virgin back once the pan is off direct heat — basted on at the end or poured over the rested steak. Rest the meat five to ten minutes, then finish with cracked pepper in warm fat.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilForSteakHero",
+      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+    },
+    "ogImage": "/og/blog-olive-oil-for-steak.jpg",
+    "intro": [
+      "A steak wants a screaming-hot pan for the first minute, and that is a temperature range extra virgin olive oil was never built for. Reach for a neutral oil to do the actual searing, and save the extra virgin for the part where flavour matters more than heat.",
+      "Two oils, used for two different jobs, get the crust and the flavour both."
+    ],
+    "sections": [
+      {
+        "heading": "Why a hard sear asks more than extra virgin gives",
+        "id": "why-extra-virgin-cant-carry-a-hard-sear",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A good crust wants a pan hot enough to sear the meat in under a minute a side, and extra virgin olive oil starts to smoke well before that heat. [Its smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take) sits lower than a hard sear needs, so the pan turns acrid before the meat browns properly."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForSteakInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "The two-oil trick: a neutral sear, an extra virgin finish",
+        "id": "the-two-oil-trick",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The trick is two bottles, not one. A neutral oil with a high smoke point carries the actual heat of the pan, and the extra virgin goes on afterward, poured over the resting steak or brushed on in the last seconds, where its flavour survives instead of burning off."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Oil",
+              "Job",
+              "When it goes in"
+            ],
+            "rows": [
+              [
+                "Neutral (canola, grapeseed, refined avocado)",
+                "Carries the heat, builds the crust",
+                "In the pan before the steak"
+              ],
+              [
+                "Extra virgin olive oil",
+                "Flavour and a soft finish",
+                "Basted in the last minute, or poured after resting"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForSteakInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "How to pan-sear a steak",
+        "id": "how-to-pan-sear-a-steak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pat the steak dry, salt it well, and let it sit at room temperature for twenty to thirty minutes before it meets the pan. A dry, room-temperature surface is what actually browns a steak; a cold, wet one steams instead of searing and never gets a real crust."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Pat the steak fully dry and season generously with salt fifteen minutes before it goes into the pan.",
+              "Heat a heavy pan with the neutral oil until it just starts to shimmer, close to smoking.",
+              "Lay the steak away from you and leave it alone for two to three minutes a side, turning once.",
+              "In the last minute, add butter and a spoon of extra virgin, tilt the pan, and baste.",
+              "Pull the steak a few degrees before the target and rest it, loosely tented, off the heat.",
+              "Finish with the pepper-and-oil mixture just before the first cut."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForSteakInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "Resting the meat before the knife",
+        "id": "resting-the-meat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A steak pulled straight off the pan loses most of its juice to the cutting board. Resting five to ten minutes, loosely covered, lets the meat relax and pull that liquid back through the fibres, so a rested steak carries the juice instead of the plate."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForSteakInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "A simple pepper-and-oil finish",
+        "id": "a-pepper-and-oil-finish",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Crack black pepper coarsely, warm it briefly in a spoon of the resting steak's own juices or a little extra virgin, and spoon it back over the meat. It is not a sauce, just cracked pepper carried by warm fat so it clings to the crust instead of falling off."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Coarse, not ground.** Cracked pepper sits on the crust; fine pepper dissolves and burns.",
+              "**Flaky salt at the table.** The pan salt already did its job; this one is for crunch.",
+              "**A drop more extra virgin.** Poured, not whisked in, this is a finish, not a dressing."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForSteakInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "This is the pan, not the grill",
+        "id": "the-pan-not-the-grill",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Everything here is stovetop: a pan, two oils, and a kitchen hob. Charcoal and open flame change the heat, the smoke and the timing enough to be their own subject, covered in [olive oil for grilling and barbecue](/blog/olive-oil-for-grilling-and-barbecue) rather than repeated here."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForSteakInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sear in a neutral oil hot enough to brown fast, finish with extra virgin once the pan comes off the heat, rest the steak before it's cut, and carry cracked pepper over the top in a spoon of warm fat."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Why isn't extra virgin olive oil good for searing a steak?",
+        "a": "Extra virgin has a comfortable smoke point that a hard sear pushes past within seconds, so the pan turns bitter and smoky before the crust forms. A neutral oil holds that heat cleanly; save the extra virgin for after the sear."
+      },
+      {
+        "q": "What oil should I use to sear a steak?",
+        "a": "A neutral oil with a high smoke point, canola, grapeseed or a refined avocado oil, does the actual searing. It carries the pan's heat without smoking or turning bitter, which is what a hard, fast crust needs."
+      },
+      {
+        "q": "When do I add the extra virgin olive oil to a steak?",
+        "a": "After the sear, not during it. Baste with a spoon of extra virgin in the last minute of cooking, or pour it over the steak once it comes off the pan and starts to rest."
+      },
+      {
+        "q": "How long should a steak rest before cutting?",
+        "a": "Five to ten minutes, loosely tented with foil, off the heat. A thicker cut wants the longer end of that range. Cutting straight off the pan lets most of the juice run onto the board instead of staying in the meat."
+      },
+      {
+        "q": "Can I use olive oil for the whole steak, sear and all?",
+        "a": "You can, but a hard sear will push it past a comfortable heat and the pan will smoke early. It works better split: a neutral oil for the sear, extra virgin added once the pan has cooled a little."
+      },
+      {
+        "q": "What is the two-oil trick for steak?",
+        "a": "Sear in a neutral oil that can take the heat, then finish with extra virgin once the meat is off the direct flame, basted on at the end or poured over the rested steak, where its flavour actually survives."
+      },
+      {
+        "q": "Does this method work for the grill as well as a pan?",
+        "a": "Not directly. Charcoal and open flame bring their own heat and smoke behaviour, covered separately in [olive oil for grilling and barbecue](/blog/olive-oil-for-grilling-and-barbecue). This article is stovetop only, a heavy pan on a kitchen hob."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, the fat to keep on hand for the finish and the baste."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The full smoke-point range for extra virgin and how it compares with other cooking oils."
+      },
+      {
+        "label": "What an olive oil marinade actually does",
+        "path": "blog/olive-oil-marinade-what-it-does",
+        "description": "How the oil carries flavour into meat before it ever reaches the pan."
+      },
+      {
+        "label": "Olive oil for grilling and barbecue",
+        "path": "blog/olive-oil-for-grilling-and-barbecue",
+        "description": "Charcoal and open flame, the sibling method for outside the kitchen."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "olive-oil-fried-egg",
+    "slug": "olive-oil-fried-egg",
+    "seoTitle": "Olive Oil Fried Egg: The Spanish Method",
+    "metaTitle": "Olive Oil Fried Egg: The Spanish Method",
+    "metaDescription": "How much olive oil a fried egg actually needs, pan heat, spooning it over the yolk, salt timing, and what changes between extra virgin and a milder oil.",
+    "focusKeyword": "olive oil fried egg",
+    "relatedKeywords": [
+      "olive oil fried egg recipe",
+      "spanish fried egg olive oil",
+      "huevos fritos olive oil",
+      "fried egg in olive oil vs butter",
+      "how much olive oil to fry an egg",
+      "crispy edge fried egg",
+      "extra virgin olive oil for frying eggs",
+      "spooning oil over egg yolk",
+      "olive oil for eggs",
+      "shallow fry egg in olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "eggs",
+      "frying",
+      "breakfast",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil Fried Egg: The Spanish Method for Crisp Edges and a Soft Yolk",
+    "excerpt": "A Spanish-style fried egg wants a pool of hot olive oil, not a film, and a spoon working the yolk while the white blisters at the edge. The method is short, but the oil quantity is where most home cooks fall short.",
+    "keyTakeaway": "Use two to three tablespoons of oil for one egg, hot enough to bubble the instant the egg lands, and spoon it over the yolk instead of flipping. Salt the white once it firms, not the yolk. Extra virgin adds its own pepper and grass; a milder oil stays out of the way.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilFriedEggHero",
+      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+    },
+    "ogImage": "/og/blog-olive-oil-fried-egg.jpg",
+    "intro": [
+      "A fried egg made in olive oil is not the same food as one made in butter or a splash of neutral oil. The white blisters and crisps at the edge, the yolk stays loose under a set surface, and the pan smells of the oil itself.",
+      "Most of that comes down to one thing people underdo at home: the amount of oil in the pan."
+    ],
+    "sections": [
+      {
+        "heading": "Why olive oil changes a fried egg",
+        "id": "why-olive-oil-changes-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Butter shallow-fries an egg gently and browns as it goes; a neutral oil stays silent and does very little. Olive oil sits between the two — hot enough to blister the white properly, with a flavour of its own that a neutral oil never brings to the plate."
+          },
+          {
+            "type": "p",
+            "text": "It is a shallow-fry, and the oil is doing real work, not just keeping the egg from sticking."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFriedEggInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "How much oil: a shallow pool, not a film",
+        "id": "how-much-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One egg wants two to three tablespoons of oil — enough that it pools around the white and rises partway up its edge, not a thin coating wiped across the pan. That is more than most home cooks pour, and it is the single biggest reason a homemade version falls flat."
+          },
+          {
+            "type": "p",
+            "text": "A wider pan needs more oil to keep the same depth — judge by the pool, not the tablespoon."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFriedEggInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "Pan heat, then spooning oil over the yolk",
+        "id": "heat-and-basting",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The oil should shimmer and move like water before the egg goes in, and the white should bubble hard the moment it lands. A quiet pan gives a pale, rubbery edge instead of a crisp, lacy one — the step that separates a fried egg from a poached one."
+          },
+          {
+            "type": "p",
+            "text": "Once the white is bubbling, tilt the pan and spoon the pooled oil over the yolk five or six times. This sets a thin skin on the yolk without cooking it through, so the egg never has to be flipped."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFriedEggInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "Salt timing",
+        "id": "salt-timing",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Salt the white once it has firmed at the edges, while it is still in the pan and can take the seasoning evenly. Leave the yolk unsalted until the egg is plated — salt sitting on a still-liquid yolk can toughen its surface before it ever reaches the table."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFriedEggInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "Extra virgin against a milder oil",
+        "id": "extra-virgin-vs-milder",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin carries its own pepper and grass into the egg, noticeable in the last of the pooled oil mopped up with bread. A milder, lighter oil fries cleaner, letting the egg taste mostly of itself and the salt."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Extra virgin.** A visible flavour on the plate — good with plain bread or vegetables that can carry it.",
+              "**A milder oil.** Quiet and neutral, useful when the egg sits beside something already strongly flavoured.",
+              "**Either way**, keep the [six infused flavours](/products) for other dishes; their own character would compete with the yolk rather than sit under it."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFriedEggInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "The method, step by step",
+        "id": "the-method",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Once the pan holds enough oil and it is hot enough, the frying itself takes under two minutes from the moment the egg goes in. This order keeps the white crisp at the edge and the yolk loose in the middle, without a flip."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Warm two to three tablespoons of oil over medium-high heat until it shimmers and moves freely.",
+              "Crack the egg into a cup first, then slide it into the oil close to the surface.",
+              "Let the white hit the oil hard — it should bubble and blister at the edges within seconds.",
+              "Salt the white once its edges have firmed.",
+              "Tilt the pan and spoon the pooled oil over the yolk five or six times.",
+              "Lift the egg out with a slotted spoon the moment the edges turn deep gold and lacy.",
+              "Drain briefly on the pan's edge and plate at once, while the yolk is still loose."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilFriedEggInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "More oil than you think, hot enough to bubble on contact, spooned over the yolk instead of flipped, and salted on the white only. Extra virgin brings its own flavour; a milder oil stays quiet."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much olive oil do I need to fry one egg?",
+        "a": "More than a normal fried egg gets: two to three tablespoons, enough that the oil pools around the white and rises up its edge instead of lying flat as a thin film underneath it."
+      },
+      {
+        "q": "What pan temperature is right for an olive oil fried egg?",
+        "a": "Medium-high, with the oil shimmering before the egg goes in. It should bubble hard around the white the instant it lands — a quiet pan gives a pale edge rather than a crisp one."
+      },
+      {
+        "q": "Why do you spoon oil over the yolk instead of flipping the egg?",
+        "a": "Spooning hot oil over the top sets the yolk's surface gently while the underside keeps frying, so the centre stays loose. Flipping cooks the yolk through to its middle instead."
+      },
+      {
+        "q": "When should I salt an olive oil fried egg?",
+        "a": "Salt the white once it has firmed at the edges, still in the pan. Leave the yolk unsalted until the egg is plated, since salt on a still-liquid yolk can toughen its surface."
+      },
+      {
+        "q": "Does extra virgin olive oil taste different from a milder oil when frying an egg?",
+        "a": "Yes. Extra virgin carries its own pepper and grass into the dish, which some cooks want and others find too assertive for breakfast. A milder oil fries cleaner and lets the egg taste of itself."
+      },
+      {
+        "q": "Can I reuse the oil after frying an egg in it?",
+        "a": "Strain it to remove any white or shell first. As general guidance, a shallow-fry oil like this is good for two or three uses with filtering, then it should be retired."
+      },
+      {
+        "q": "Is an olive oil fried egg the same as a Spanish-style fried egg?",
+        "a": "Very close. Spain's huevos fritos use the same deep pool and basting, though some cooks push the edges further, to a deeper brown and proper crackle than most home versions reach."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "The wider cooking guide: tumis, roasting, dressing and where olive oil fits against the oils already in a Malaysian pantry."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "The saucer version of the same oil, with za'atar, dukkah and balsamic as three separate directions."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "olive-oil-popcorn",
+    "slug": "olive-oil-popcorn",
+    "seoTitle": "Olive Oil Popcorn: Stovetop Method",
+    "metaTitle": "Olive Oil Popcorn: Stovetop Method",
+    "metaDescription": "How much oil per batch, why the lid and the shake matter, the right heat, when to salt, and what extra virgin actually adds over a neutral oil.",
+    "focusKeyword": "olive oil popcorn",
+    "relatedKeywords": [
+      "olive oil popcorn recipe",
+      "stovetop popcorn oil",
+      "popcorn without a microwave bag",
+      "extra virgin olive oil popcorn",
+      "best oil for popcorn",
+      "how to pop corn on the stove",
+      "salt popcorn timing",
+      "olive oil vs neutral oil popcorn",
+      "homemade stovetop popcorn method",
+      "popcorn kernels and oil ratio"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "popcorn",
+      "stovetop",
+      "extra virgin",
+      "snacks"
+    ],
+    "h1": "Olive Oil Popcorn: How to Pop Corn in Olive Oil on the Stovetop",
+    "excerpt": "A microwave bag steams half its kernels and scorches the rest. A pot, a lid and a few tablespoons of olive oil pop it more evenly and taste of something before the salt goes anywhere near it.",
+    "keyTakeaway": "Three tablespoons of oil for half a cup of kernels in a wide, lidded pot on medium heat, shaken every ten to fifteen seconds, off the heat and salted the moment popping slows. Extra virgin over a neutral oil is a flavour choice, not a health one, and holds up through the heat popcorn needs.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilPopcornHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-olive-oil-popcorn.jpg",
+    "intro": [
+      "A microwave bag steams as much popcorn as it pops, and the kernels nearest the edge of the bag scorch before the ones in the middle finish. A wide pot on the stovetop heats far more evenly, and swapping in olive oil for a flavourless one means the popcorn tastes of something before salt or butter arrive.",
+      "The method is short — oil, a lid and a shake — and most of what goes wrong traces back to one of those three."
+    ],
+    "sections": [
+      {
+        "heading": "Why the stovetop beats a bag or a neutral oil",
+        "id": "why-stovetop",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A microwave bag pops unevenly, scorching kernels near the edge while the ones in the middle barely finish, because steam does the heating instead of a hot surface. A pot on the stovetop heats far more evenly, and swapping in olive oil for a neutral one means the popcorn already tastes of something before salt or butter arrive."
+          },
+          {
+            "type": "p",
+            "text": "A neutral oil does the same job with no flavour of its own. Olive oil is the same fat, just one that tastes like something, so less salt and butter is needed after."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilPopcornInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "How much oil, and how many kernels",
+        "id": "oil-quantity",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "About three tablespoons of oil for half a cup of kernels is the working ratio, enough to coat the base of the pot and coat every kernel before the first one pops, not a shallow film. Scale the oil and the kernels together, never the kernels alone, or the driest ones near the top will burn."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kernels",
+              "Oil",
+              "Pot"
+            ],
+            "rows": [
+              [
+                "1/4 cup",
+                "1.5–2 Tbsp",
+                "2-litre, lidded"
+              ],
+              [
+                "1/2 cup",
+                "3 Tbsp",
+                "4–5 litre, lidded"
+              ],
+              [
+                "3/4 cup",
+                "4–4.5 Tbsp",
+                "6-litre, lidded"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilPopcornInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "Heat, the lid, and the shake",
+        "id": "heat-lid-shake",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Medium heat, held steady, is right: brisk enough to pop a full batch in a few minutes, well short of where the oil itself would start to smoke. See [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take) for the range this oil comfortably handles before that happens."
+          },
+          {
+            "type": "p",
+            "text": "The lid holds the heat in so kernels at the rim pop instead of just warming, and stops oil and popped corn flying off the stove as popping speeds up. Sliding the pot every ten to fifteen seconds keeps kernels moving off the hottest patch of metal so none of them scorch."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilPopcornInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "The stovetop method",
+        "id": "method",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Popping corn in olive oil on the stovetop is warming oil with a few test kernels until they pop, adding the rest off the heat, then covering and shaking over medium heat until the popping slows to a gap of a few seconds between pops, at which point it comes off the stove."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Warm the oil over medium heat with three or four test kernels in, lid on.",
+              "When the test kernels pop, add the rest off the heat, then swirl to coat them.",
+              "Cover, return to medium, and slide the pot every ten to fifteen seconds.",
+              "Once popping turns frequent, crack the lid slightly to vent steam.",
+              "Pull the pot off the heat once pops space out to a few seconds apart.",
+              "Tip into a wide bowl at once and salt while it is still hot."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilPopcornInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "Salting timing — off the heat, not on it",
+        "id": "salting-timing",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Salt goes on off the heat, the moment the popcorn lands in the bowl, while the oil on each piece is still warm enough to hold it. Salted into the hot pot it can scorch before the popcorn finishes; salted once everything has cooled, it slides straight off instead of sticking."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilPopcornInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "What extra virgin actually adds here",
+        "id": "what-extra-virgin-adds",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The case for extra virgin here is what it tastes like, not what it is made of. A neutral oil is a blank carrier; extra virgin brings a fruity, sometimes peppery edge that comes through in every piece once it has carried the heat that popped the corn."
+          },
+          {
+            "type": "p",
+            "text": "A milder olive oil pops the same way with a quieter flavour, which is a preference rather than a rule. Either way this is a question about taste, not a health claim this site makes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilPopcornInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Three tablespoons of oil to half a cup of kernels, lid on, shaken every ten to fifteen seconds over medium heat, off the heat and salted the moment the popping slows. Extra virgin earns its place here on flavour, in a pot most kitchens already own."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much olive oil do I need for a batch of popcorn?",
+        "a": "About three tablespoons of oil for half a cup of kernels — enough to coat the pot's base and every kernel before popping starts. Scale both together, never the kernels alone."
+      },
+      {
+        "q": "Why do you need a lid when popping corn in oil?",
+        "a": "A lid holds the heat in so kernels near the rim pop rather than just warm through, and stops hot oil and popped corn flying off the stovetop as popping speeds up."
+      },
+      {
+        "q": "Should popcorn oil be extra virgin or a milder olive oil?",
+        "a": "Either pops the same way. Extra virgin adds a fruity, sometimes peppery edge a neutral oil cannot; a milder olive oil gives a quieter flavour. It is a taste preference, not a rule."
+      },
+      {
+        "q": "When should I salt stovetop popcorn?",
+        "a": "Off the heat, right after tipping it into a bowl, while the oil on each piece is still warm enough to hold the salt. Salted into the hot pot it can scorch first."
+      },
+      {
+        "q": "Why does shaking the pot matter so much?",
+        "a": "It moves kernels off the hottest patch of metal so none of them scorch while others are still unpopped, keeping a single moving layer of kernels in contact with the heat."
+      },
+      {
+        "q": "Is olive oil popcorn healthier than microwave popcorn?",
+        "a": "That question belongs with a dietitian, not a cooking article, and this site makes no health claim for its oil. What stovetop popping genuinely offers is more flavour and salt control."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The full smoke point range for extra virgin, and how freshness and grade move it."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Frying, tumis, dressing and baking with olive oil, in one guide."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "olive-oil-roasted-vegetables",
+    "slug": "olive-oil-for-roasting-vegetables",
+    "seoTitle": "Olive Oil for Roasting Vegetables: Getting Them to Crisp",
+    "metaTitle": "Olive Oil for Roasting Vegetables: Getting Them to Crisp",
+    "metaDescription": "How much oil per tray, why a crowded tray steams instead of crisps, oven temperature by vegetable, and when to salt. A temperature and time table included.",
+    "focusKeyword": "olive oil for roasting vegetables",
+    "relatedKeywords": [
+      "roasting vegetables with olive oil",
+      "olive oil roasted vegetables temperature",
+      "how much olive oil for roasted vegetables",
+      "crispy roasted vegetables oven",
+      "roasting tray too crowded",
+      "when to salt roasted vegetables",
+      "oven temperature for roasting vegetables",
+      "olive oil drizzle after roasting",
+      "roast vegetables extra virgin olive oil",
+      "coating vegetables in olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "roasting",
+      "vegetables",
+      "oven",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil for Roasting Vegetables: How to Get Them to Actually Crisp",
+    "excerpt": "Most roasted vegetables come out of the oven soft and grey instead of browned at the edges. The fix is rarely the oven. It is how much oil goes on, how the tray is loaded, and when the salt lands.",
+    "keyTakeaway": "Coat vegetables in a thin film of oil, about a tablespoon per tray, not a pool. Spread them in one uncrowded layer so steam escapes, roast hot for watery vegetables and lower for dense ones, salt dense vegetables before and watery ones after, then finish with a raw drizzle once out.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilRoastedVegetablesHero",
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-olive-oil-roasted-vegetables.jpg",
+    "intro": [
+      "A tray of roasted vegetables that comes out pale and soft instead of browned at the edges has usually not failed because of the oven. It has failed because of the oil and the tray: too little coating, too much crowding, or salt added at the wrong moment.",
+      "None of that needs more heat. It needs less vegetable per tray and a clearer idea of what each one wants."
+    ],
+    "sections": [
+      {
+        "heading": "How much oil actually belongs on the tray",
+        "id": "how-much-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A tray of cut vegetables needs a thin, even coating of olive oil, not a puddle at the bottom. For a full baking sheet, start with about a tablespoon and toss until every piece looks glossy rather than wet, adding more only if dry patches remain."
+          },
+          {
+            "type": "p",
+            "text": "Too little oil and the cut surfaces dry out and char before they soften. Too much and the vegetables sit in a shallow fry instead of a roast. See the [smoke point guide](/blog/olive-oil-smoke-point-what-heat-it-can-take) for how far extra virgin can be pushed."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilRoastedVegetablesInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Why a crowded tray is the real enemy of crisping",
+        "id": "crowded-tray",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Vegetables piled two and three deep release water as they heat, and that water has nowhere to go in a crowded pan — it collects, and they steam in it instead of browning. One layer with visible gaps between pieces lets the moisture escape upward instead of pooling."
+          },
+          {
+            "type": "p",
+            "text": "If the tray is covered edge to edge with no gaps, split the batch across two trays. A half-empty tray is usually the one that browns properly."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilRoastedVegetablesInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Oven temperature and roughly how long, by vegetable",
+        "id": "temperature-and-time",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dense root vegetables want a lower oven and more time so the inside cooks through before the outside burns. Watery, quick-cooking vegetables want it hot and fast, so they brown before turning to mush. The table below is a starting point, not a fixed rule."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Vegetable",
+              "Oven temperature",
+              "Roughly how long"
+            ],
+            "rows": [
+              [
+                "Potatoes, carrots, beetroot",
+                "190-200°C",
+                "40-50 minutes"
+              ],
+              [
+                "Pumpkin, sweet potato",
+                "190-200°C",
+                "35-45 minutes"
+              ],
+              [
+                "Cauliflower, broccoli",
+                "190-200°C",
+                "25-30 minutes"
+              ],
+              [
+                "Bell peppers, onions",
+                "190-200°C",
+                "20-25 minutes"
+              ],
+              [
+                "Zucchini, eggplant",
+                "180-200°C",
+                "18-22 minutes"
+              ],
+              [
+                "Cherry tomatoes, asparagus",
+                "180-200°C",
+                "12-18 minutes"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilRoastedVegetablesInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          },
+          {
+            "type": "p",
+            "text": "Cut pieces roughly the same size on one tray so they finish together, flipping halfway if one side browns faster."
+          }
+        ]
+      },
+      {
+        "heading": "When to salt: before the oven or after",
+        "id": "when-to-salt",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dense vegetables such as potatoes, carrots and pumpkin can take salt before they go in, since it has time to season through as they cook. Watery vegetables such as zucchini, eggplant and tomatoes are better salted after, since salt draws water out and an early hand slows the browning."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Salt before.** Dense roots, cauliflower, broccoli, onions.",
+              "**Salt after.** Zucchini, eggplant, cherry tomatoes, mushrooms.",
+              "**Either works.** Bell peppers and asparagus, since they hold little water."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilRoastedVegetablesInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Which vegetables want hot and fast versus low and slow",
+        "id": "hot-versus-low",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The split is about water content and density, not the vegetable's family. Thin, watery pieces want a hot oven and a short time so they brown before they collapse; thick, dense pieces want a gentler oven so the centre catches up before the outside burns."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Hot and fast.** Asparagus, cherry tomatoes, zucchini, thin green beans — in and out in under twenty minutes.",
+              "**Low and longer.** Whole beetroot, large potato wedges, pumpkin chunks, whole garlic bulbs — closer to forty-five to fifty minutes."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilRoastedVegetablesInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "The raw drizzle after the tray comes out",
+        "id": "raw-finishing-drizzle",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A second, raw pour of extra virgin olive oil after roasting is a different job from the oil the vegetables cooked in. The heated oil is a cooking medium; the finishing oil is tasted straight, so its own flavour — grassy, peppery, herbal — is what the diner notices first."
+          },
+          {
+            "type": "p",
+            "text": "A teaspoon or two over the tray, added while the vegetables are still hot enough to carry the aroma, does more for the finished dish than any amount added before roasting. An infused oil such as [rosemary and basil](/products) suits this step well, since none of its aroma is lost to the oven."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilRoastedVegetablesInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A thin coating, not a pool. One uncrowded layer. Hot and fast for watery vegetables, lower and longer for dense ones. Salt dense vegetables before, watery ones after, and finish with a raw drizzle once the tray is out."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much olive oil should I use for roasted vegetables?",
+        "a": "About a tablespoon per full baking tray, tossed until every piece looks glossy rather than wet. Add a little more only if dry patches remain — a pool at the bottom is too much oil."
+      },
+      {
+        "q": "Why do my roasted vegetables come out soggy instead of crispy?",
+        "a": "The tray is usually too crowded. Piled vegetables release water with nowhere to go, so they steam instead of browning. Spread them in one layer with visible gaps, splitting into two trays if needed."
+      },
+      {
+        "q": "What oven temperature is best for roasting vegetables?",
+        "a": "It depends on the vegetable. Dense roots like potatoes and beetroot suit 200-220°C for 35-45 minutes; watery, quick-cooking vegetables like asparagus and cherry tomatoes want a hotter 220-230°C for closer to 10-20 minutes."
+      },
+      {
+        "q": "Should I salt vegetables before or after roasting?",
+        "a": "Dense vegetables such as potatoes can be salted before, since it seasons through as they cook. Watery vegetables such as zucchini and tomatoes are better salted after, since early salt slows browning."
+      },
+      {
+        "q": "Should I use extra virgin olive oil for roasting?",
+        "a": "Yes, extra virgin comfortably handles oven roasting inside the published 180-200°C range. See the [smoke point guide](/blog/olive-oil-smoke-point-what-heat-it-can-take) for the full range it can take before it starts to smoke."
+      },
+      {
+        "q": "Why add more olive oil after the vegetables are roasted?",
+        "a": "A raw drizzle is tasted straight rather than cooked away, so its own flavour comes through. A teaspoon or two while the tray is still hot carries more aroma than oil added before cooking starts."
+      },
+      {
+        "q": "Can I roast all vegetables together on one tray?",
+        "a": "Only if they cook at similar speeds. Mixing quick asparagus with whole beetroot means one burns before the other softens through — group vegetables by roughly how long each one needs instead."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours for a finishing drizzle."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can actually take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The smoke point range for extra virgin and how freshness moves it more than the grade on the label."
+      },
+      {
+        "label": "Olive oil marinade: what it does",
+        "path": "blog/olive-oil-marinade-what-it-does",
+        "description": "How oil in a marinade carries flavour into vegetables and meat before they ever reach the pan or oven."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 6 ---------------- */
+  {
+    "id": "olive-oil-vs-butter",
+    "slug": "olive-oil-vs-butter",
+    "seoTitle": "Olive Oil vs Butter: Which One to Reach For",
+    "metaTitle": "Olive Oil vs Butter: Which One to Reach For",
+    "metaDescription": "Flavour, hot toast vs room-temperature bread, browning in a pan, one dish each way, price per use — olive oil vs butter as cooking fats, not baking.",
+    "focusKeyword": "olive oil vs butter",
+    "relatedKeywords": [
+      "olive oil or butter for cooking",
+      "olive oil vs butter for toast",
+      "does olive oil brown like butter",
+      "butter vs olive oil in a pan",
+      "olive oil instead of butter",
+      "olive oil vs butter flavour",
+      "spreading olive oil on bread",
+      "olive oil vs butter price",
+      "cooking with olive oil vs butter",
+      "browned butter vs olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "butter",
+      "pan cooking",
+      "spreading",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil vs Butter: Which One to Reach For",
+    "excerpt": "Olive oil and butter are both reached for on instinct, and the right one depends on the job: a slice of toast, a hot pan, a finished plate. This is about spreading and cooking, not baking.",
+    "keyTakeaway": "Neither fat replaces the other across the board. Butter suits hot toast, a browned crust and a pan sauce finished glossy; olive oil suits room-temperature bread, a raw drizzle and a pan that should not brown. For the baking conversion ratio, see the substitute guide rather than guessing it here.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsButterHero",
+      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-butter.jpg",
+    "intro": [
+      "Butter and olive oil sit in the same kitchen doing different jobs, and most people pick on instinct rather than asking what the dish needs.",
+      "This is a comparison for the stovetop and the bread board, not the oven: flavour, toast versus room-temperature bread, what a hot pan does to each, one dish that wants butter and one that wants oil, and price per use."
+    ],
+    "sections": [
+      {
+        "heading": "Flavour is the real difference",
+        "id": "flavour-first",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Butter tastes of milk and cream: rich, faintly sweet, the same note under almost anything. Extra virgin olive oil tastes of the fruit it was pressed from — grassy, peppery or mild depending on the harvest — and changes what it touches instead of just coating it."
+          },
+          {
+            "type": "p",
+            "text": "Butter is a background note that lets other flavours lead. Olive oil is a flavour of its own, so a peppery finish can carry a plain dish and overwhelm a delicate one."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsButterInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "Hot toast against bread left at room temperature",
+        "id": "hot-toast-vs-room-temperature-bread",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On toast straight from the toaster, cold butter melts into every hole within seconds and turns the surface glossy and soft. Olive oil poured onto hot bread pools instead of melting in, and sits more on top than it is absorbed."
+          },
+          {
+            "type": "p",
+            "text": "On bread left at room temperature, the difference flips. Cold butter tears the crust as it drags and needs minutes softening. Olive oil spreads instantly at any bread temperature — see [olive oil for bread and dipping](/blog/olive-oil-for-bread-and-dipping) for the saucer version."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsButterInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "What each one does in a hot pan",
+        "id": "what-happens-in-a-hot-pan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Butter carries water and milk solids, and those solids brown as the water cooks off — the nutty, toasted colour behind a proper pan sauce. Left too long, the same solids scorch and turn bitter, which is why butter needs watching."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Butter** browns in minutes and can burn soon after — good for a deliberate browned-butter finish, risky if the pan is left unattended.",
+              "**Olive oil** has no milk solids to brown, so it shimmers and thins as it heats instead of building that toasted colour.",
+              "See [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take) for how much heat the oil itself takes."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsButterInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "One dish that wants butter, one that wants oil",
+        "id": "one-dish-each-way",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A pan sauce finished with cold butter, swirled in off the heat, turns glossy and thick in a way oil cannot copy — the fat emulsifies into the liquid rather than floating on it. Mashed potato leans the same way."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Wants butter:** a pan sauce mounted at the end, or mash finished rich and smooth.",
+              "**Wants oil:** a tomato sauce or sautéed greens finished with a raw drizzle once the heat is off."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsButterInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "Use this for that: a quick reference",
+        "id": "use-this-for-that",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most kitchens keep both, and the choice comes down to whether the fat needs to brown, sit in a pan unattended for a while, or carry its own flavour onto the plate raw at the end of cooking, rather than during it."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Job",
+              "Reach for",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Toast, still hot",
+                "Butter",
+                "Melts in within seconds"
+              ],
+              [
+                "Bread at room temperature",
+                "Olive oil",
+                "Spreads without softening or tearing the crust"
+              ],
+              [
+                "A browned, nutty finish",
+                "Butter",
+                "Only the milk solids brown this way"
+              ],
+              [
+                "Sautéing without watching the pan closely",
+                "Olive oil",
+                "No milk solids to scorch"
+              ],
+              [
+                "A glossy pan sauce or mash",
+                "Butter",
+                "Emulsifies into the liquid, not just coats it"
+              ],
+              [
+                "A raw drizzle over a finished dish",
+                "Olive oil",
+                "Carries its own fruit and pepper on top"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsButterInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "What each one costs to use, and where baking fits",
+        "id": "price-per-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Butter goes on in small pats, so one block covers many rounds of toast. Olive oil is poured by the tablespoon, and a raw drizzle uses less than a shallow-fry — see [the products page](/products) for sizes and pricing rather than a figure here."
+          },
+          {
+            "type": "p",
+            "text": "Baking is a different question, with its own conversion between the two fats, already covered at [olive oil substitute: what to use instead](/blog/olive-oil-substitute-what-to-use-instead) — this article stays with the stovetop and the bread board."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsButterInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Reach for butter when a dish wants a browned note or a glossy finish, and for olive oil when the fat should carry its own flavour raw, or sit in a pan without browning. Keep both, and pick by the job."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can I substitute olive oil for butter when baking?",
+        "a": "That is a different question from spreading and cooking, which is what this article covers. The conversion ratio between the two fats already lives at [olive oil substitute: what to use instead](/blog/olive-oil-substitute-what-to-use-instead), not repeated here."
+      },
+      {
+        "q": "Which is healthier, olive oil or butter?",
+        "a": "That is a question for a dietitian, not a cooking guide. This article compares the two only as fats for spreading and cooking: flavour, browning behaviour, and cost per use."
+      },
+      {
+        "q": "Can I spread olive oil on bread instead of butter?",
+        "a": "Yes, and at room temperature it spreads more easily than cold butter, which needs minutes softening. On hot toast the two flip: butter melts in within seconds, while olive oil pools on top instead."
+      },
+      {
+        "q": "Does olive oil brown the way butter does in a pan?",
+        "a": "No. Butter browns because of its milk solids, which caramelise and can then burn. Olive oil has no milk solids, so it heats and thins without building that toasted colour."
+      },
+      {
+        "q": "Is olive oil or butter cheaper to cook with?",
+        "a": "It depends how each is used: butter goes on in small pats, olive oil by the tablespoon. Check current sizes and pricing on the [products page](/products) rather than a fixed figure."
+      },
+      {
+        "q": "Can butter and olive oil be used together in the same pan?",
+        "a": "Yes — a splash of olive oil alongside butter lets the butter sit at heat a little longer before its milk solids start to scorch, without losing the browned flavour it gives a dish."
+      },
+      {
+        "q": "What can olive oil do on a finished dish that butter cannot?",
+        "a": "Carry its own fruity or peppery flavour raw, poured on once the heat is off. Butter melts into a dish and mostly disappears; a good extra virgin oil stays a flavour on top."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "Olive oil substitute: what to use instead",
+        "path": "blog/olive-oil-substitute-what-to-use-instead",
+        "description": "The baking conversion between olive oil and butter, plus substitutes for other pantry fats."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "The saucer version of room-temperature bread and oil, with za'atar, dukkah and balsamic."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
       }
     ]
   },

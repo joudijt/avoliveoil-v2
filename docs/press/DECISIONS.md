@@ -94,3 +94,18 @@ live `minyak-zaitun-untuk-goreng` allows two or three shallow-fry uses with filt
 cases a writer or a reviewer caught it. **Brief facts need checking against the corpus the same way
 draft facts do** — the brief is not evidence.
 
+## Round 6 decisions — 2026-08-26
+
+| # | Decision | Source |
+|---|---|---|
+| D-images | **Round 6 is the first fully reuse-only round.** No image was generated; every hero, inline and OG card across all 105 articles (87 live + this round's 18) was cut from the site's own photo library by `scripts/recut-article-images.py`, per the owner's ruling earlier the same day | User, 2026-08-26 |
+| D44 **open** | **The frying-oil reuse rule genuinely differs by language on the live site**, not introduced by this round: EN "not reused", MS "two or three times with filtering", AR "not even once". Surfaced when an Arabic draft, following the round-6 brief's blanket line, was caught contradicting the live Arabic article by the adversarial reviewer. Needs one owner decision, not three quietly different answers | Adversarial review, round 6 |
+| D45 **assumed** | Two real bugs in the site-wide image script were fixed in the tooling rather than worked around: `taken_boxes` was scoped only by language and so wrongly treated a hero crop and an inline crop of the same photo as competing for one budget, when they can never collide on disk (different output sizes); and an earlier patch via `str.replace()` silently no-opped, leaving the bug in place while reporting success. Both fixed by editing the file directly and re-verifying by re-reading it | Traced during Stage 4, round 6 |
+
+**A brief fact went unchecked against the corpus for the third round running.** Round 4's brief
+said coconut oil sets solid at 28–32 °C (wrong); round 5's said "frying oil is not reused" is this
+site's advice (wrong for MS, and this round showed it's wrong for AR too); round 6 repeated the
+same line without re-checking it against the Arabic corpus specifically. A writer's draft inherited
+it and a reviewer caught it. **The brief needs the same fact-check a draft gets, every round, not
+assumed correct because it worked in a previous round.**
+
