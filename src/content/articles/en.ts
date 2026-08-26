@@ -2506,6 +2506,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Extra virgin olive oil salad dressing",
         "path": "blog/extra-virgin-olive-oil-salad-dressing",
         "description": "Ratios, the emulsion method, and how long a dressing keeps."
+      },
+      {
+        "label": "Aglio e olio with extra virgin olive oil",
+        "path": "blog/aglio-e-olio-recipe-with-extra-virgin-olive-oil",
+        "description": "The four-ingredient pasta where the oil is the sauce, and the emulsion step people miss."
       }
     ]
   },
@@ -2791,6 +2796,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil vs coconut oil in a Malaysian kitchen",
         "path": "blog/olive-oil-vs-coconut-oil-in-a-malaysian-kitchen",
         "description": "Which of the two fats a dish wants, on flavour, texture and cost."
+      },
+      {
+        "label": "Olive oil vs avocado oil",
+        "path": "blog/olive-oil-vs-avocado-oil",
+        "description": "Two oils compared on flavour, heat and price per litre, without the health argument."
       }
     ]
   },
@@ -3362,6 +3372,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil substitute: what to use instead",
         "path": "blog/olive-oil-substitute-what-to-use-instead",
         "description": "What to reach for when the bottle is empty, split by the job in hand."
+      },
+      {
+        "label": "Olive oil and balsamic vinegar",
+        "path": "blog/olive-oil-and-balsamic-vinegar",
+        "description": "Why the pairing needs a ratio, and where a cheap balsamic changes it."
       }
     ]
   },
@@ -4140,6 +4155,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Garlic infused olive oil, and how to do it safely",
         "path": "blog/garlic-infused-olive-oil-and-how-to-do-it-safely",
         "description": "Cold and warm infusion, and the refrigeration rule that makes it safe."
+      },
+      {
+        "label": "Olive oil for hummus",
+        "path": "blog/olive-oil-for-hummus",
+        "description": "Hummus takes oil twice, and the two jobs want different things."
       }
     ]
   },
@@ -4412,6 +4432,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's two online counters."
+      },
+      {
+        "label": "Olive oil for grilling and barbecue",
+        "path": "blog/olive-oil-for-grilling-and-barbecue",
+        "description": "Oil the food, not the grate, and save the good oil for after it comes off."
       }
     ]
   },
@@ -5203,6 +5228,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Why is my olive oil cloudy",
+        "path": "blog/why-is-my-olive-oil-cloudy",
+        "description": "Cold haze, unfiltered sediment and actual spoilage are three different things."
       }
     ]
   },
@@ -6266,6 +6296,1608 @@ export const EN_ARTICLES: Article[] = [
         "label": "How to cook with olive oil in a Malaysian kitchen",
         "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
         "description": "Tumis, roasting, dressings and finishing, with the quantities a Malaysian recipe expects."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "aglio-e-olio",
+    "slug": "aglio-e-olio-recipe-with-extra-virgin-olive-oil",
+    "seoTitle": "Aglio e Olio Recipe: The Four-Ingredient Version",
+    "metaTitle": "Aglio e Olio Recipe with Extra Virgin Olive Oil",
+    "metaDescription": "Spaghetti, garlic, chilli and olive oil, by weight for two and four: the emulsion step people skip, blond garlic, and why the oil goes in twice.",
+    "focusKeyword": "aglio olio recipe",
+    "relatedKeywords": [
+      "aglio e olio",
+      "spaghetti aglio olio",
+      "garlic and olive oil pasta",
+      "pasta water emulsion",
+      "how much olive oil for pasta",
+      "aglio olio ingredients",
+      "olive oil pasta recipe",
+      "aglio olio for two people",
+      "chilli garlic spaghetti",
+      "best olive oil for pasta"
+    ],
+    "category": "Recipes",
+    "tags": [
+      "recipe",
+      "pasta",
+      "garlic",
+      "extra virgin"
+    ],
+    "h1": "Aglio e Olio Recipe: Spaghetti with Garlic, Chilli and Olive Oil",
+    "excerpt": "The four-ingredient version by weight and volume, for two and for four, with the pasta-water step that turns oil into sauce and the point past which garlic ruins the plate.",
+    "keyTakeaway": "Aglio e olio is spaghetti, garlic, chilli and extra virgin olive oil bound with starchy pasta water. Weigh the pasta, take the garlic only as far as blond, keep a mugful of the cooking water back, and stir the last third of the oil in raw off the heat.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressAglioEOlioHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running down into the vat below"
+    },
+    "ogImage": "/og/blog-aglio-e-olio.jpg",
+    "intro": [
+      "Aglio e olio exposes a kitchen: four ingredients, twelve minutes, nothing on the plate to hide behind.",
+      "Two things separate a good bowl from an oily one: the pasta water, and how far the garlic went."
+    ],
+    "sections": [
+      {
+        "heading": "The four ingredients, by weight and volume",
+        "id": "the-four-ingredients",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Spaghetti, garlic, chilli and extra virgin olive oil, finished with parsley and a ladle of the water the pasta cooked in. With so few components, quantities matter more here than in a dish of fifteen. Weigh the pasta and measure the oil."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ingredient",
+              "For two",
+              "For four"
+            ],
+            "rows": [
+              [
+                "Spaghetti",
+                "200 g",
+                "400 g"
+              ],
+              [
+                "Extra virgin olive oil",
+                "60 ml (4 tbsp)",
+                "120 ml (8 tbsp)"
+              ],
+              [
+                "Garlic, sliced thin",
+                "4 cloves (20 g)",
+                "8 cloves (40 g)"
+              ],
+              [
+                "Dried red chilli",
+                "1 whole",
+                "2 whole"
+              ],
+              [
+                "Parsley, chopped",
+                "3 tbsp",
+                "6 tbsp"
+              ],
+              [
+                "Water and salt",
+                "2 litres, 20 g",
+                "4 litres, 40 g"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressAglioEOlioInline",
+            "alt": "Olive paste leaving a stainless steel mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "How to make aglio olio, step by step",
+        "id": "method",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Everything happens in the time the spaghetti takes, so slice the garlic and chop the parsley before the water boils. The method below runs pan and pot in parallel and brings them together while both are hot, the only moment a sauce will form."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Boil 2 litres of water, salted with 20 g — double every quantity in this method for four. It should taste clearly salty.",
+              "Slice the garlic thin by hand; chopped garlic burns, slices cook evenly.",
+              "Drop the spaghetti, timer set one minute short of the packet time.",
+              "With about five minutes left on the pasta, put 40 ml of oil and the garlic in a **cold** wide pan over low heat.",
+              "When the edges turn pale gold, about four minutes, add the chilli and pull the pan off.",
+              "Keep a mugful of cooking water back, drain, and lift the spaghetti across; add a ladle, 120 ml, of that water.",
+              "Back on medium heat, toss hard for 60 to 90 seconds until the liquid clings.",
+              "Off the heat, stir in parsley and the last 20 ml of oil raw. Serve immediately."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressAglioEOlioInline",
+            "alt": "Olive paste leaving a stainless steel mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "The pasta water step people get wrong",
+        "id": "pasta-water-emulsion",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The sauce is an emulsion. Starch dissolved in the cooking water holds oil and water together so the mixture coats every strand instead of pooling under it. Two habits break it: draining into a colander and losing that water, and finishing the toss off the heat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Keep a mugful back** before draining. It is the only thickener here.",
+              "**Undercook by two minutes.** The rest happens in the pan.",
+              "**Toss, do not stir.** Agitation forces oil and water to combine.",
+              "**Judge by the pan,** not the clock: ready when it turns glossy."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressAglioEOlioInline",
+            "alt": "Olive paste leaving a stainless steel mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Garlic: blond, never brown",
+        "id": "garlic-blond-never-brown",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Garlic in warm oil travels from raw to sweet to bitter fast, and brown garlic ruins the plate because the oil carries that bitterness into every strand. Blond is the target: pale gold at the edges, still soft in the middle, smelling sweet. A cold start buys time."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**A few dark edges?** Off the heat at once, lift those slices out.",
+              "**Brown and smelling acrid?** Start over. Four minutes against a bitter dinner.",
+              "**Burning every time?** Use a wider pan: one layer cooks evenly."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressAglioEOlioInline",
+            "alt": "Olive paste leaving a stainless steel mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Chilli, parsley and the second pour",
+        "id": "chilli-parsley-and-raw-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The chilli is warmth, not fire: one dried chilli crumbled, or half a teaspoon of flakes, for two. Parsley goes in off the heat so it stays green. The oil arrives twice, warm at the start to carry the garlic, cold at the end for the aroma heat drives off."
+          },
+          {
+            "type": "p",
+            "text": "Two-thirds of the oil cooks, one-third goes in raw. That last 20 ml is most of what you smell."
+          },
+          {
+            "type": "image",
+            "src": "pressAglioEOlioInline",
+            "alt": "Olive paste leaving a stainless steel mill with green oil running down into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Mostly oil, so the oil is the flavour",
+        "id": "the-oil-is-the-flavour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Strip the recipe back and it is pasta, garlic and about 30 ml of oil a head. Nothing else carries the plate. A flat refined oil makes a flat bowl: texture and salt, no fruit. This is the dish where an extra virgin's pepper and grassiness has somewhere to go."
+          },
+          {
+            "type": "p",
+            "text": "A young, green, peppery oil suits it: bitterness that is aggressive off a spoon becomes backbone against starch. Heat is not the constraint here — [what heat olive oil takes](/blog/olive-oil-smoke-point-what-heat-it-can-take) covers that. [Arabian Village](/products) sells it in 250 ml and 500 ml."
+          },
+          {
+            "type": "image",
+            "src": "pressAglioEOlioInline",
+            "alt": "Olive paste leaving a stainless steel mill with green oil running down into the vat below"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Salt the water, keep a mugful back, start the garlic in cold oil and stop at blond, toss until glossy, then stir a third of the oil in raw."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much olive oil goes into aglio olio?",
+        "a": "About 30 ml of extra virgin olive oil per 100 g of dried spaghetti, so 60 ml for two. Use two-thirds warm with the garlic and stir the last third in raw."
+      },
+      {
+        "q": "Why is my aglio olio oily instead of glossy?",
+        "a": "The oil and the pasta water never emulsified. Add a ladle of starchy cooking water, put the pan back over medium heat, and toss hard for a minute until the liquid clings."
+      },
+      {
+        "q": "Can I use ordinary olive oil instead of extra virgin?",
+        "a": "You can, and the bowl will be duller. Nearly all the flavour here comes from the oil and the garlic, so a refined oil leaves texture and salt without fruit or pepper."
+      },
+      {
+        "q": "What do I do if the garlic turns brown?",
+        "a": "If only a few edges caught, lift the pan off the heat and remove the darkest slices. If it smells acrid, start the garlic again in fresh oil: brown garlic turns everything bitter."
+      },
+      {
+        "q": "Should aglio e olio have cheese in it?",
+        "a": "The classic version has none and the sauce holds without it. Grated hard cheese at the table is common outside Italy; add it off the heat, or it clumps instead of melting."
+      },
+      {
+        "q": "How long does aglio olio take to make?",
+        "a": "Roughly the time the spaghetti boils, about twelve minutes, plus five to slice garlic and chop parsley. Prepare everything before the pasta goes in, because the finish itself takes only ninety seconds."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, the classic bottle plus six infused flavours."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Where olive oil fits alongside the oils already on the shelf, from tumis to roasting."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "Tasting an oil unheated: za'atar, dukkah and balsamic as three different directions."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus its Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "cloudy-olive-oil",
+    "slug": "why-is-my-olive-oil-cloudy",
+    "seoTitle": "Cloudy Olive Oil With Sediment: Is It Off?",
+    "metaTitle": "Cloudy Olive Oil With Sediment: Is It Off?",
+    "metaDescription": "Cold haze, unfiltered sediment or a bottle that is genuinely finished: how to tell which one you have, and why the smell is the only test that decides.",
+    "focusKeyword": "cloudy olive oil with sediment",
+    "relatedKeywords": [
+      "why is my olive oil cloudy",
+      "sediment in olive oil",
+      "unfiltered olive oil",
+      "filtered vs unfiltered olive oil",
+      "olive oil solidified in fridge",
+      "olive oil fridge test",
+      "is cloudy olive oil safe",
+      "how to tell if olive oil is rancid",
+      "olive oil storage Malaysia",
+      "olive oil went hazy"
+    ],
+    "category": "Storage and quality",
+    "tags": [
+      "cloudy",
+      "sediment",
+      "unfiltered",
+      "storage"
+    ],
+    "h1": "Why Is My Olive Oil Cloudy, With Sediment at the Bottom?",
+    "excerpt": "A haze in the bottle and a layer at the bottom are three different things wearing one face: cold, olive solids, or an oil that is genuinely finished. Only one of them means throw it out.",
+    "keyTakeaway": "Cloudiness is almost never a verdict. Cold haze reverses in about an hour on the counter, and sediment in an unfiltered oil is fine olive solids rather than damage, though they shorten the bottle's life. Only the smell decides whether an oil is finished, and a rancid oil can be perfectly clear.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressCloudyOliveOilHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-cloudy-olive-oil.jpg",
+    "intro": [
+      "A haze in the bottle and a fine layer at the bottom is the most searched olive oil worry there is, and the answer is almost always that nothing is wrong.",
+      "Three separate things get called cloudy, and only one means the oil is finished."
+    ],
+    "sections": [
+      {
+        "heading": "The three things people call cloudy",
+        "id": "three-things-people-call-cloudy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cold haze, unfiltered sediment and genuine spoilage look nothing alike once you know what separates them. Haze is temperature, and it undoes itself. Sediment is olive solids that settled out. Spoilage is a change in smell, and a rancid oil can be perfectly clear while a cloudy one is perfectly good."
+          },
+          {
+            "type": "table",
+            "head": [
+              "What you see",
+              "What it is",
+              "What to do"
+            ],
+            "rows": [
+              [
+                "Milky haze after a cold night",
+                "Cold haze, fats setting",
+                "Counter, about an hour"
+              ],
+              [
+                "Soft layer at the bottom",
+                "Unfiltered olive solids",
+                "Normal, but finish the bottle"
+              ],
+              [
+                "Firm white deposit, chilled bottle",
+                "The same setting, further on",
+                "Room temperature, no fridge needed"
+              ],
+              [
+                "Clear oil, smells of crayon",
+                "Rancid, and the haze was never it",
+                "Stop pouring it on food"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCloudyOliveOilInline",
+            "alt": "Green olive oil pouring from a stainless steel pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Cold haze reverses at room temperature",
+        "id": "cold-haze",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil is a blend of fats that set at different temperatures, so a bottle below roughly ten degrees clouds, and one at fridge temperature stiffens into soft white lumps. The change is physical, not chemical. About an hour on a Malaysian counter and the bottle pours clear again."
+          },
+          {
+            "type": "p",
+            "text": "This is also why the fridge test proves nothing. How much an oil hazes in the cold follows the olive variety and the temperature it reached, not whether it is genuine. A bottle that sets is no more real than one that stays clear."
+          },
+          {
+            "type": "image",
+            "src": "pressCloudyOliveOilInline",
+            "alt": "Green olive oil pouring from a stainless steel pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Sediment in an unfiltered bottle",
+        "id": "unfiltered-sediment",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A soft layer at the bottom of a young oil is fine olive solids and a trace of fruit water that were never filtered out. It is normal, not a fault. It does shorten the bottle's life, because those solids carry moisture and slowly ferment, so an unfiltered bottle wants finishing."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Do not shake it back in.** Pour off the clear oil and leave the last centimetre.",
+              "**Keep it closed and dark.** Light and air do far more damage than the solids do.",
+              "**Finish it sooner.** Roughly two months from opening, as [olive oil shelf life](/blog/olive-oil-shelf-life-how-long-a-bottle-lasts) sets out."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCloudyOliveOilInline",
+            "alt": "Green olive oil pouring from a stainless steel pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Filtered against unfiltered is a choice, not a fault",
+        "id": "filtered-or-unfiltered",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Filtering passes the fresh oil through cloth or a fine filter to take the solids out. An unfiltered oil skips that and goes into the bottle hazy and a little fuller in the mouth. Neither is a grade and neither is a defect, and which one a bottle is belongs on its label."
+          },
+          {
+            "type": "p",
+            "text": "The trade-off is time. Filtered oil stays bright and keeps better; unfiltered shows more of the fresh fruit early and fades sooner. Both meet the same extra virgin standard, set by chemistry and tasting, never by clarity. The range sits on the [products page](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressCloudyOliveOilInline",
+            "alt": "Green olive oil pouring from a stainless steel pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "The smell test is the only one that settles it",
+        "id": "the-smell-test",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pour a spoonful, cup it in your palm for a moment, and smell it. Sound oil smells green — cut grass, fresh olive, a little almond — and catches at the back of the throat. A finished oil smells of wax crayon, putty or stale nuts, or of nothing."
+          },
+          {
+            "type": "p",
+            "text": "Bitterness and pepper get mistaken for faults constantly, which [why olive oil tastes bitter](/blog/why-does-olive-oil-taste-bitter) goes through properly. Damp cardboard, sour or fermented notes are a different matter."
+          },
+          {
+            "type": "image",
+            "src": "pressCloudyOliveOilInline",
+            "alt": "Green olive oil pouring from a stainless steel pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "What a Malaysian kitchen does to the bottle",
+        "id": "malaysian-kitchen",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An air-conditioned kitchen at twenty-four degrees is nowhere near cold enough to haze a bottle, so a cloudy oil here has usually been in the fridge or has solids in it. The fridge is not necessary, and heat is the real enemy: the cupboard beside the hob."
+          },
+          {
+            "type": "p",
+            "text": "One local wrinkle: a bottle out of the fridge sweats, and those drops run into the neck as you pour. Let it come back to room temperature and dry the outside first."
+          },
+          {
+            "type": "image",
+            "src": "pressCloudyOliveOilInline",
+            "alt": "Green olive oil pouring from a stainless steel pipe into an open vat at the mill"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Cloudy is not a verdict. A cold bottle needs an hour on the counter. A hazy one at room temperature with a layer underneath is unfiltered, and wants finishing. Only the smell tells you an oil is done."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is cloudy olive oil safe to use?",
+        "a": "Almost always, yes. Cold haze reverses on the counter, and unfiltered sediment is normal in a young oil. Cloudiness on its own says nothing about whether an oil is sound; the smell does."
+      },
+      {
+        "q": "Why is there sediment at the bottom of my olive oil?",
+        "a": "Because the oil was bottled without filtering, or with only light filtering, so fine olive solids and a little fruit water settled out over the following weeks. It is normal, and it is not damage."
+      },
+      {
+        "q": "How long does cloudy olive oil take to clear?",
+        "a": "About an hour at room temperature for a haze, and longer for a bottle that has set firm in a fridge. Nothing needs doing beyond leaving it on the counter; never warm it on the hob."
+      },
+      {
+        "q": "Does olive oil clouding in the fridge prove it is real?",
+        "a": "No, and staying clear proves nothing either. How much an oil hazes in the cold follows the olive variety and the temperature it reached, not whether it was blended with something cheaper."
+      },
+      {
+        "q": "Is unfiltered olive oil better than filtered?",
+        "a": "Neither is better. Unfiltered shows more of the fresh fruit early and keeps less well; filtered stays bright and stable for longer. Both can be extra virgin, since the grade is set by chemistry and tasting."
+      },
+      {
+        "q": "How do I know my olive oil has actually gone off?",
+        "a": "Smell it. A finished oil smells of wax crayon, putty or stale nuts, or has lost its aroma entirely, and tastes flat and greasy with no peppery catch at the back of the throat."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, classic and the six infused flavours."
+      },
+      {
+        "label": "Olive oil shelf life: how long a bottle lasts",
+        "path": "blog/olive-oil-shelf-life-how-long-a-bottle-lasts",
+        "description": "What a sealed bottle has in it, what an opened one has, and what air, light and heat do."
+      },
+      {
+        "label": "Why does olive oil taste bitter?",
+        "path": "blog/why-does-olive-oil-taste-bitter",
+        "description": "Why bitterness and a peppery catch are normal in a fresh oil, and which tastes are real faults."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus their Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "olive-oil-and-balsamic",
+    "slug": "olive-oil-and-balsamic-vinegar",
+    "seoTitle": "Balsamic Vinegar and Olive Oil Dressing Ratio",
+    "metaTitle": "Balsamic Vinegar and Olive Oil Dressing Ratio",
+    "metaDescription": "Where to start the ratio, how a cheap balsamic of Modena and an aged one change it, dipping against dressing, and what not to pair balsamic with.",
+    "focusKeyword": "balsamic vinegar and olive oil dressing",
+    "relatedKeywords": [
+      "olive oil and balsamic vinegar ratio",
+      "balsamic vinaigrette ratio",
+      "balsamic vinegar of modena",
+      "aged balsamic vinegar",
+      "balsamic glaze vs vinegar",
+      "olive oil and balsamic for bread",
+      "how to make balsamic dressing",
+      "balsamic dressing shelf life",
+      "what to serve with balsamic and olive oil",
+      "finishing drizzle olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "balsamic",
+      "dressing",
+      "pairing",
+      "extra virgin"
+    ],
+    "h1": "Balsamic Vinegar and Olive Oil Dressing: Getting the Ratio Right",
+    "excerpt": "Balsamic and olive oil are poured together by eye in most kitchens. They are a fat and a sweet acid, and the amount of each decides whether the plate tastes of one, the other, or neither.",
+    "keyTakeaway": "Start at four parts extra virgin olive oil to one part balsamic by volume, which is what this blog already publishes for a balsamic dressing, then move it: more oil when the vinegar is thin and sharp, far less when it is aged and syrupy. Whisk it for a salad, pour it unmixed for bread, and keep the rest capped and cold.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilAndBalsamicHero",
+      "alt": "A bottle of green olive oil and a small dark bottle of balsamic vinegar standing side by side on a wooden board."
+    },
+    "ogImage": "/og/blog-olive-oil-and-balsamic.jpg",
+    "intro": [
+      "Balsamic and olive oil go into the same bowl in more kitchens than any other pairing, usually by eye. One is a fat and the other a sweet acid, and the amount of each decides whether the plate tastes of oil, of vinegar, or of nothing much.",
+      "The measure is a ratio, and where it starts depends on which balsamic you bought."
+    ],
+    "sections": [
+      {
+        "heading": "Why fat and acid need a ratio, not a splash",
+        "id": "why-a-ratio",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Oil coats and carries flavour; acid cuts through it. Pour either by eye and one of them wins. Balsamic makes it harder because it brings sugar as well as acid, so a heavy hand reads sweet before it reads sharp and the pepper in a good oil vanishes underneath."
+          },
+          {
+            "type": "p",
+            "text": "It is a ratio by volume, and it counts only the oil and the vinegar."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAndBalsamicInline",
+            "alt": "A bottle of olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "Start at 3:1, then move it",
+        "id": "start-at-three-to-one",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Three tablespoons of extra virgin olive oil to one of balsamic is the place to begin: enough vinegar to taste, not enough to take the plate over. Move up as the balsamic gets sweeter and thicker, and down to 2:1 on leaves sturdy enough to fight back."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Oil to balsamic",
+              "The bottle",
+              "What it suits"
+            ],
+            "rows": [
+              [
+                "3:1",
+                "Aged and syrupy, used in drops",
+                "Ripe tomato, roast vegetables"
+              ],
+              [
+                "4:1",
+                "Everyday vinegar of Modena",
+                "Mixed leaves, rocket, cheese"
+              ],
+              [
+                "5:1",
+                "Thin and very sharp",
+                "Cabbage, kale, raw fennel"
+              ],
+              [
+                "Poured, not mixed",
+                "Any of them",
+                "A dipping saucer"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAndBalsamicInline",
+            "alt": "A bottle of olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          },
+          {
+            "type": "p",
+            "text": "The same arithmetic with lemon and other acids: [extra virgin olive oil salad dressing](/blog/extra-virgin-olive-oil-salad-dressing)."
+          }
+        ]
+      },
+      {
+        "heading": "A cheap balsamic and an aged one are not the same ingredient",
+        "id": "cheap-against-aged",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most supermarket bottles are balsamic vinegar of Modena: wine vinegar with concentrated grape must added, thin, dark and sharp. An aged bottle is grape must cooked down and held in casks for years, so it pours slowly, tastes of dried fruit rather than vinegar, and costs many times more."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Everyday vinegar of Modena.** Thin and sour, and the cheapest bottles are sharpest. Whisk it.",
+              "**Condimento or glaze.** Thickened and sweetened, sometimes with sugar. Read the ingredients first.",
+              "**Aged and cask-matured.** Syrupy, with little bite. Use drops, not spoons."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAndBalsamicInline",
+            "alt": "A bottle of olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          },
+          {
+            "type": "p",
+            "text": "Sharper bottle, more oil. Sweeter and thicker, much less of it."
+          }
+        ]
+      },
+      {
+        "heading": "Dipping, dressing and a finishing drizzle",
+        "id": "three-different-jobs",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The same two bottles do three jobs and only one involves whisking. On a dipping saucer the two never combine, and [the bread article](/blog/olive-oil-for-bread-and-dipping) covers that saucer in full. A dressing is held together so every leaf gets both. A drizzle is neither, and goes on last."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Dipping.** Pour the oil, drop the balsamic in, leave it alone — the saucer itself is [olive oil for bread and dipping](/blog/olive-oil-for-bread-and-dipping).",
+              "**Dressing.** Shake with a little mustard so it holds, and dress at the table.",
+              "**Finishing.** A spoon of oil and a few drops over plated food: tomatoes, grilled vegetables, strawberries."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAndBalsamicInline",
+            "alt": "A bottle of olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "What not to pair it with",
+        "id": "what-not-to-pair",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Balsamic is dark, sweet and loud. It flattens anything delicate and doubles up on anything already sour, which is why it lands badly on half the plates it reaches. Steamed white fish and a salad already dressed with calamansi both lose from it; lemon and olive oil belong there."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Delicate fish and seafood.** Colour and sweetness both take over.",
+              "**Anything already sour.** Lime, tamarind, yogurt: one acid is enough.",
+              "**The strongly infused oils.** Balsamic argues with wild thyme or fennel and anise; keep it for the classic oil on the [products page](/products).",
+              "**A long marinade.** The sugar darkens and catches before the meat is done."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAndBalsamicInline",
+            "alt": "A bottle of olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      },
+      {
+        "heading": "Storing a dressing you have already mixed",
+        "id": "storing-a-mixed-dressing",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mix it in the jar you intend to keep it in. Oil, balsamic, salt and mustard hold about two weeks capped in the refrigerator, and a crushed garlic clove or chopped herbs cut that to a few days. Shake it back together before it meets a leaf."
+          },
+          {
+            "type": "p",
+            "text": "The dressing thickens and clouds in the cold. That is normal and twenty minutes on the counter reverses it. The oil bottle itself needs no refrigerator."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilAndBalsamicInline",
+            "alt": "A bottle of olive oil standing on a wooden table with whole olives and olive leaves scattered around it"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Four parts extra virgin olive oil to one part balsamic, more oil if the bottle is sharp and less if it is syrupy. Whisk for salad, pour unmixed for bread."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the correct ratio of balsamic vinegar to olive oil?",
+        "a": "Four parts olive oil to one part balsamic by volume: four tablespoons of oil to one of vinegar. Go to 3:1 with an aged, syrupy bottle, and further still with a syrupy one."
+      },
+      {
+        "q": "Do you mix olive oil and balsamic vinegar or keep them separate?",
+        "a": "Both, depending on the job. For bread, pour the oil and drop the balsamic in so each piece takes a different amount. For a salad, whisk them so the dressing coats every leaf."
+      },
+      {
+        "q": "Can I use aged balsamic in a salad dressing?",
+        "a": "You can, with much less of it. An aged, cask-matured bottle is sweet and syrupy, so a 3:1 dressing built on it tastes like a dessert sauce. Start nearer five parts oil."
+      },
+      {
+        "q": "What is the difference between balsamic vinegar of Modena and a glaze?",
+        "a": "Vinegar of Modena is thin, sharp wine vinegar with concentrated grape must added. A glaze or condimento is thickened and sweetened, sometimes with sugar, so it needs far less oil to balance."
+      },
+      {
+        "q": "How long does a balsamic and olive oil dressing keep?",
+        "a": "About two weeks in a capped glass jar in the refrigerator when it is only oil, balsamic, salt and mustard. Raw garlic brings that down to three or four days, and soft fresh herbs to two or three."
+      },
+      {
+        "q": "Which olive oil goes best with balsamic vinegar?",
+        "a": "An extra virgin, since nothing is heated and the oil's own fruit and pepper have to stand up to the vinegar. The classic oil suits it better than the strongly infused flavours."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size."
+      },
+      {
+        "label": "Extra virgin olive oil salad dressing: ratios and method",
+        "path": "blog/extra-virgin-olive-oil-salad-dressing",
+        "description": "The wider dressing guide: emulsion method, four builds, and what splits a vinaigrette."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "The saucer itself, with za'atar, dukkah and balsamic as three separate directions."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the seller's own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "olive-oil-for-grilling",
+    "slug": "olive-oil-for-grilling-and-barbecue",
+    "seoTitle": "Olive Oil for Grilling: Where the Oil Goes",
+    "metaTitle": "Olive Oil for Grilling: Where the Oil Goes",
+    "metaDescription": "Oil the food, not the grate. Why a marinade's oil drips and burns, what really causes flare-ups, and the finishing pour after the food comes off.",
+    "focusKeyword": "olive oil for grilling",
+    "relatedKeywords": [
+      "olive oil for barbecue",
+      "oil the grill grate or the food",
+      "olive oil flare ups barbecue",
+      "grilling marinade oil",
+      "direct and indirect heat grilling",
+      "finishing oil for grilled food",
+      "olive oil for satay",
+      "olive oil for ikan bakar",
+      "brushing oil on grilled fish",
+      "extra virgin olive oil drizzle"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "grilling",
+      "barbecue",
+      "cooking with olive oil",
+      "kitchen guide"
+    ],
+    "h1": "Olive Oil for Grilling: Where the Oil Actually Goes",
+    "excerpt": "Grilling is the one method where most of the oil never reaches the plate. Oil the food rather than the bars, drain before the fire, and keep the good bottle for after.",
+    "keyTakeaway": "Brush the oil onto the food, never onto the grate, and drain the marinade before anything meets the fire, because the oil that drips is the oil that burns. Use a plain oil in the bowl and save the extra virgin for the pour that lands after the food comes off.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilForGrillingHero",
+      "alt": "An old olive tree above a hillside grove with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-olive-oil-for-grilling.jpg",
+    "intro": [
+      "Grilling is the one method where most of the oil never arrives on the plate. It runs off the food, drips between the bars and burns on the coals below.",
+      "Which bottle you reach for matters less than the moment you reach for it: two pours, two oils, and only one of them tasted."
+    ],
+    "sections": [
+      {
+        "heading": "Oil the food, not the grate",
+        "id": "oil-the-food-not-the-grate",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Brush the oil onto the food, not onto the bars. Oil on a hot grate burns off within seconds and leaves a sticky residue that grips rather than releases. A thin film on the food is what stops sticking and browns first, and it takes far less oil."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Pat the food dry first.** Oil slides off a wet surface, and water steams rather than browns.",
+              "**Brush, do not pour.** A teaspoon covers a chicken thigh.",
+              "**Clean and hot beats oiled.** Scrape the bars and heat them through."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForGrillingInline",
+            "alt": "A row of dark glass bottles filling with green olive oil under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Why a marinade's oil mostly drips and burns",
+        "id": "why-marinade-oil-burns",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most of the oil in a marinade never reaches anybody. It runs off on the way to the grill, drips between the bars and burns on the fire below, and the little that clings sits in the hottest place in the kitchen."
+          },
+          {
+            "type": "p",
+            "text": "That is not a case against marinating. The oil still carries garlic, chilli and herbs onto the surface, as [olive oil marinade](/blog/olive-oil-marinade-what-it-does) sets out. The question is which bottle."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForGrillingInline",
+            "alt": "A row of dark glass bottles filling with green olive oil under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Flare-ups, and what actually causes them",
+        "id": "flare-ups",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A flare-up is dripping fat catching fire, not an oil failing. Melting fat and loose marinade fall onto the coals, meet the flame and ignite, and the column of fire coats whatever sits above it in soot. More oil means more fuel arriving at once."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Drain before it goes on.** Let each piece stop dripping first.",
+              "**Keep a cool zone.** Move food sideways off the flame, not upward.",
+              "**Trim the loose fat** on chicken skin and lamb, which is the fuel."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForGrillingInline",
+            "alt": "A row of dark glass bottles filling with green olive oil under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Direct heat against indirect heat",
+        "id": "direct-against-indirect",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Direct heat means the food sits over the fire; indirect means beside it, lid down. Direct browns a thin cut in minutes. Indirect cooks a thick one through without burning the outside. Almost every grilling problem is a thick cut left over a direct fire."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Food",
+              "Direct or indirect",
+              "Oil goes on"
+            ],
+            "rows": [
+              [
+                "Satay, thin skewers",
+                "Direct, fast",
+                "Basted during, drizzled after"
+              ],
+              [
+                "Chicken thighs, bone in",
+                "Sear direct, finish indirect",
+                "Film before, pour after"
+              ],
+              [
+                "Whole fish",
+                "Direct, moderate fire",
+                "On the fish, not the bars"
+              ],
+              [
+                "Lamb shoulder, thick cuts",
+                "Indirect, lid down",
+                "After resting"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForGrillingInline",
+            "alt": "A row of dark glass bottles filling with green olive oil under stainless steel filling heads"
+          },
+          {
+            "type": "p",
+            "text": "Live charcoal runs hotter than any oil is at its best, so the pour that counts comes later. See [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+          }
+        ]
+      },
+      {
+        "heading": "The finishing pour, after the food comes off",
+        "id": "the-finishing-pour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The pour you actually taste happens once the food is off the fire. Oil meeting hot food away from the flame warms just enough to lift its aroma, and none of it burns off. This is where an extra virgin does what a refined oil cannot."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Fish:** a spoonful over the flesh with lemon, straight off the grate.",
+              "**Lamb and beef:** after ten minutes of resting, not before.",
+              "**Vegetables:** while still hot, because that is when they drink it."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForGrillingInline",
+            "alt": "A row of dark glass bottles filling with green olive oil under stainless steel filling heads"
+          },
+          {
+            "type": "p",
+            "text": "One tablespoon is the whole argument for keeping [Arabian Village extra virgin](/products) beside the serving dish, not in the bowl."
+          }
+        ]
+      },
+      {
+        "heading": "Satay and ikan bakar, the local cases",
+        "id": "satay-and-ikan-bakar",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Satay and ikan bakar are where the rule shows itself. Satay is basted throughout, classically with a bruised lemongrass stalk dipped in oil, and that basting oil does mechanical work: keeping a thin surface from drying over a fast fire."
+          },
+          {
+            "type": "p",
+            "text": "Ikan bakar is gentler. The fish is coated in sambal, often wrapped in banana leaf, and cooked at a distance rather than seared. Oil the fish, not the wire basket, and drizzle once it is opened."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForGrillingInline",
+            "alt": "A row of dark glass bottles filling with green olive oil under stainless steel filling heads"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Brush the food, never the grate. Drain before the fire, because the oil that drips is the oil that flares. Marinate with something plain and let the extra virgin land afterwards."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Can you use olive oil for grilling?",
+        "a": "Yes, in two places: a thin film brushed onto the food before it goes on, and a drizzle after it comes off. Use a plain oil for the first and an extra virgin for the second."
+      },
+      {
+        "q": "Should I oil the grill grate or the food?",
+        "a": "The food. Oil on hot bars burns off almost at once and leaves a residue that makes sticking worse. A clean, properly heated grate plus a light film on the food releases cleanly."
+      },
+      {
+        "q": "Why does my barbecue flare up when I put food on?",
+        "a": "Fat and marinade dripping onto the fire are igniting. Drain each piece before it goes on, trim loose fat, and keep an unlit area to slide food across to when flames come up."
+      },
+      {
+        "q": "Does olive oil burn on the barbecue?",
+        "a": "Oil sitting directly over live coals will darken and smoke, as any oil does at grill temperatures. That is why the marinade takes a cheap oil and the good oil goes on afterwards."
+      },
+      {
+        "q": "How much oil should I brush on before grilling?",
+        "a": "Roughly a teaspoon per portion, enough to leave a sheen with nothing pooling. If oil runs off as you carry the food to the grill, there is too much on it."
+      },
+      {
+        "q": "Can I use extra virgin olive oil for satay?",
+        "a": "Use a plain oil on the basting brush, since most of it drips into the fire. A spoonful of extra virgin over the skewers on the plate is where the difference is actually tasted."
+      },
+      {
+        "q": "Do I oil fish before grilling it?",
+        "a": "Yes, and only the fish. Pat it dry, brush a thin film over the skin, then grill over a moderate rather than a fierce fire. Oiling the basket or the bars does nothing useful."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused oils, with prices."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can actually take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The ranges by grade, why freshness moves the number, and which methods stay under it."
+      },
+      {
+        "label": "Olive oil marinade: what the oil is actually doing",
+        "path": "blog/olive-oil-marinade-what-it-does",
+        "description": "Why the oil carries aroma rather than tenderises, with ratios against acid and timings."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "olive-oil-for-hummus",
+    "slug": "olive-oil-for-hummus",
+    "seoTitle": "Olive Oil for Hummus: In the Blend and On Top",
+    "metaTitle": "Olive Oil for Hummus: In the Blend and On Top",
+    "metaDescription": "Hummus takes oil twice, in the blend and poured on top. Which oil does which job, quantities for a standard batch, and how to serve it so the oil pools.",
+    "focusKeyword": "olive oil for hummus",
+    "relatedKeywords": [
+      "how much olive oil in hummus",
+      "best olive oil for hummus",
+      "olive oil on top of hummus",
+      "hummus recipe with olive oil",
+      "extra virgin olive oil hummus",
+      "tahini and lemon balance",
+      "hummus serving temperature",
+      "how to serve hummus",
+      "olive oil drizzle",
+      "hummus quantities for a batch"
+    ],
+    "category": "Cooking",
+    "tags": [
+      "hummus",
+      "cooking",
+      "finishing oil",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil for Hummus: In the Blend and On Top",
+    "excerpt": "A bowl of hummus takes oil twice, and the two pours do different work. Which oil belongs in the blend, which belongs on the surface, how much of each, and how to serve it so the oil sits in a pool instead of vanishing.",
+    "keyTakeaway": "Hummus takes oil twice. About thirty millilitres goes into the blend, where tahini and lemon mask most of its character, so the everyday bottle is enough there. The pour on top is tasted almost neat, a tablespoon a portion, and that is where the better extra virgin belongs.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilForHummusHero",
+      "alt": "A ceramic bowl of hummus with a pool of green olive oil in the middle and whole chickpeas scattered on the table beside it."
+    },
+    "ogImage": "/og/blog-olive-oil-for-hummus.jpg",
+    "intro": [
+      "Most recipes mention olive oil once. A bowl of hummus takes it twice, and the two pours do different work: one disappears into the paste, the other is eaten almost neat.",
+      "Hummus is a Levantine dish and this oil is pressed in Palestine, which is the whole of that context. The rest is method."
+    ],
+    "sections": [
+      {
+        "heading": "Hummus takes oil twice",
+        "id": "oil-twice",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Oil goes into the blend, and oil goes onto the finished bowl. Inside, it is a texture ingredient that works into the tahini and chickpea paste and disappears. On top it is a condiment, tasted almost neat, one mouthful at a time."
+          },
+          {
+            "type": "p",
+            "text": "That decides where the money goes. Oil blended into tahini, lemon and garlic loses to three louder flavours. The pour sits on the surface with nothing in front of it."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForHummusInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Which oil goes where",
+        "id": "which-oil-where",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Use the plainer oil where it will be masked and the one you would happily taste on bread where it will be tasted. A mild everyday oil does honest work in the blend. The extra virgin goes on last, off the blade."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Where",
+              "Doing what",
+              "Which bottle",
+              "How much"
+            ],
+            "rows": [
+              [
+                "In the blend",
+                "Softening the paste",
+                "A mild everyday oil",
+                "30 ml"
+              ],
+              [
+                "Poured on the bowl",
+                "The flavour you taste",
+                "The best bottle you have",
+                "15 ml a portion"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForHummusInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          },
+          {
+            "type": "p",
+            "text": "A long, fast blend can sharpen an extra virgin's bitterness, another reason the good oil goes on by hand. Both sizes are on the [products page](/products)."
+          }
+        ]
+      },
+      {
+        "heading": "Quantities for a standard batch",
+        "id": "quantities",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A household batch starts from 250 g of dried chickpeas soaked overnight, which cook down to roughly 600 g; two and a half drained 400 g tins land in the same place. Everything below scales off that weight and makes six generous portions."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ingredient",
+              "One batch",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Dried chickpeas",
+                "250 g, soaked overnight",
+                "Or two tins"
+              ],
+              [
+                "Tahini",
+                "150 g",
+                "Well stirred"
+              ],
+              [
+                "Lemon juice",
+                "60 ml",
+                "Two lemons"
+              ],
+              [
+                "Garlic",
+                "One clove",
+                "Sharpens overnight"
+              ],
+              [
+                "Salt",
+                "1 tsp, then to taste",
+                "Before lemon"
+              ],
+              [
+                "Iced water",
+                "60 to 100 ml",
+                "Added slowly"
+              ],
+              [
+                "Olive oil, in the blend",
+                "30 ml",
+                "Everyday bottle"
+              ],
+              [
+                "Olive oil, on the bowl",
+                "15 ml a portion",
+                "Extra virgin"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForHummusInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Tahini and lemon set the balance",
+        "id": "tahini-and-lemon",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Oil cannot rescue a badly balanced bowl. Tahini brings weight and a faint bitterness, lemon cuts it, salt makes both legible. Get those three right while the machine is running, because once the dip is smooth the only things left are temperature and the pour."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Thick and bitter:** more lemon, 15 ml at a time.",
+              "**Sharp and thin:** more tahini, then a pinch of salt.",
+              "**Flat:** salt first, not lemon. Under-salted hummus reads sour.",
+              "**Stiff:** iced water by the spoon. Oil loosens it heavily."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForHummusInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Why fridge-cold hummus tastes of nothing",
+        "id": "temperature",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Straight from the fridge, hummus is stiff and mute, and cold oil poured onto a cold surface sits in a sluggish film instead of spreading. Take the bowl out twenty to thirty minutes before anyone eats; in an air-conditioned kitchen, give it thirty."
+          },
+          {
+            "type": "p",
+            "text": "Never warm the oil to speed that up; heat strips an extra virgin of the aroma you paid for, as [olive oil for bread and dipping](/blog/olive-oil-for-bread-and-dipping) sets out."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForHummusInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Serving it so the oil pools rather than soaks",
+        "id": "serving",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A pool of green oil in the middle of a smooth surface is not decoration. It is how the oil reaches the mouth in a quantity you can taste. Spread the dip flat in a deep bowl and the pour vanishes within a minute."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Use a wide, shallow dish; depth swallows the pour.",
+              "Smooth the top with the back of a spoon. Peaks drink oil.",
+              "Turn a slow spiral from the centre outward, leaving a channel.",
+              "Pour into the channel, a tablespoon a portion, and stop.",
+              "Do not stir it in. Scatter chickpeas or za'atar around the pool.",
+              "Leave the bottle out for the second pour."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilForHummusInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          },
+          {
+            "type": "p",
+            "text": "An infused oil works here too, one flavour at a time: wild thyme or blackseed, poured at the table. More in [Palestinian olive oil](/blog/palestinian-olive-oil-what-makes-it-different)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Thirty millilitres of the everyday oil in the blend, a tablespoon of the good one on top, and the bowl out of the fridge half an hour early."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Should olive oil go inside hummus or only on top?",
+        "a": "Both, in different amounts. About 30 ml goes into the blend for texture, where tahini and lemon mask it. The pour on top is what anyone actually tastes, so use the better bottle there."
+      },
+      {
+        "q": "How much olive oil goes into a batch of hummus?",
+        "a": "For a batch built on 250 g of dried chickpeas, about 30 ml inside the blend and roughly 15 ml poured over each portion at the table. Across a platter the pour is the larger share."
+      },
+      {
+        "q": "Which olive oil is best for hummus?",
+        "a": "An extra virgin with a green, peppery character for the pour, because it is tasted almost neat. A milder everyday oil is enough for the blend, where tahini and lemon cover it."
+      },
+      {
+        "q": "Why does the olive oil sink into my hummus?",
+        "a": "Either the surface is rough or the dish is too deep. Smooth the top with the back of a spoon, turn a shallow spiral into it, and pour into that channel."
+      },
+      {
+        "q": "Should hummus be served cold or at room temperature?",
+        "a": "At room temperature. Straight from the fridge it is stiff and its flavour is muted, and cold oil spreads badly on a cold surface. Twenty to thirty minutes out is usually enough."
+      },
+      {
+        "q": "Can I use an infused olive oil on hummus?",
+        "a": "Yes, and it is one of the easiest places to use one. Wild thyme or blackseed sit naturally on hummus. Use a single flavour, poured at the table rather than blended in."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused oils."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "Why an oil served without heat shows its real character, and what to pair with it."
+      },
+      {
+        "label": "Palestinian olive oil: what makes it different",
+        "path": "blog/palestinian-olive-oil-what-makes-it-different",
+        "description": "The groves, the harvest and the press behind the bottle you pour on the bowl."
+      },
+      {
+        "label": "Where to buy in Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "olive-oil-vs-avocado-oil",
+    "slug": "olive-oil-vs-avocado-oil",
+    "seoTitle": "Olive Oil vs Avocado Oil: Which to Cook With",
+    "metaTitle": "Olive Oil vs Avocado Oil: Which to Cook With",
+    "metaDescription": "Olive oil vs avocado oil compared as cooking fats: flavour, heat, price per litre in Malaysia, and a use-this-for-that table for everyday dishes.",
+    "focusKeyword": "olive oil vs avocado oil",
+    "relatedKeywords": [
+      "avocado oil vs olive oil",
+      "avocado oil smoke point",
+      "olive oil or avocado oil for frying",
+      "best oil for high heat cooking",
+      "neutral cooking oil Malaysia",
+      "avocado oil Malaysia",
+      "extra virgin olive oil flavour",
+      "which oil for salad dressing",
+      "cooking oil comparison",
+      "olive oil price per litre Malaysia"
+    ],
+    "category": "Buying guide",
+    "tags": [
+      "comparison",
+      "buying guide",
+      "cooking",
+      "extra virgin"
+    ],
+    "h1": "Olive Oil vs Avocado Oil: Which One Does Your Kitchen Need?",
+    "excerpt": "Two premium bottles, two different jobs. A cook's comparison of olive oil and avocado oil on flavour, heat, texture and cost per litre in Malaysia.",
+    "keyTakeaway": "Compare these two as cooking fats, not as health products. Refined avocado oil is near-neutral and its smoke point is the higher of the two, above the 190 to 210 °C published for extra virgin olive oil. Buy avocado where the oil should vanish, olive where the oil is the flavour.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsAvocadoOilHero",
+      "alt": "An old olive tree above a hillside grove with the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-avocado-oil.jpg",
+    "intro": [
+      "Avocado oil reached Malaysian shelves with a high-heat reputation and a price to match, and shoppers now stand between two expensive bottles trying to work out which one is doing the work.",
+      "Held against each other as cooking fats — flavour, heat, texture, cost per litre — they are less rivals than two different tools. One is bought to be tasted. The other is bought to disappear."
+    ],
+    "sections": [
+      {
+        "heading": "What actually separates the two oils",
+        "id": "what-separates-them",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Both are pressed from fruit rather than seed, and both stay liquid at Malaysian room temperature. What matters is what each is for. Extra virgin olive oil carries a flavour you are meant to notice; most avocado oil sold here is refined and near-neutral, chosen because it adds nothing."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Olive oil:** pressed from whole olives, sold here as extra virgin, tasted in the dish.",
+              "**Avocado oil:** pressed from avocado flesh, usually refined, close to flavourless.",
+              "**Both:** pourable all year here, unlike coconut oil in a cool kitchen."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsAvocadoOilInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Flavour: peppery and grassy against buttery and neutral",
+        "id": "flavour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil tastes of something specific: cut grass, green tomato leaf, bitterness at the back of the tongue and a peppery catch in the throat. Refined avocado oil tastes of very little, a faint buttery weight at most. Neither is a fault; each is the point of that oil."
+          },
+          {
+            "type": "p",
+            "text": "So the test is short. If the finished plate should taste of the oil, olive earns its price. If the oil should vanish, neutral wins."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsAvocadoOilInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Heat, honestly: avocado oil's smoke point is the higher one",
+        "id": "heat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Refined avocado oil smokes at a higher temperature than extra virgin olive oil, and no seller should pretend otherwise. Published figures put extra virgin olive oil at 190 to 210 °C, and refined avocado oil sits above that band. For a pan taken to a hard sear, the gap is real."
+          },
+          {
+            "type": "p",
+            "text": "It matters less than the numbers suggest, because most cooking never nears either ceiling. Tumis and shallow frying run below both. What moves the figure is set out in [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsAvocadoOilInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Use this for that",
+        "id": "use-this-for-that",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Stop asking which oil is better and ask what the dish needs. Where the oil is tasted, olive answers. Where it has to be invisible, or held very hot, avocado answers. Most kitchens keep both and use each on a different night."
+          },
+          {
+            "type": "table",
+            "head": [
+              "The dish",
+              "Reach for",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Salad dressing, finishing drizzle",
+                "Extra virgin olive oil",
+                "The oil is the flavour"
+              ],
+              [
+                "Bread dipping, hummus",
+                "Extra virgin olive oil",
+                "Nothing cooked, character shows"
+              ],
+              [
+                "Tumis, sautéing, gentle roasting",
+                "Either; olive if you want taste",
+                "Both sit above these temperatures"
+              ],
+              [
+                "A hard sear in cast iron",
+                "Avocado oil",
+                "Higher smoke point counts here"
+              ],
+              [
+                "Mayonnaise and other raw emulsions",
+                "Avocado oil",
+                "Flavour would be in the way"
+              ],
+              [
+                "Pasta finished with oil",
+                "Extra virgin olive oil",
+                "A flat oil, a flat plate"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsAvocadoOilInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Price per litre, and what is on the shelf in Malaysia",
+        "id": "price-and-availability",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Both cost several times what palm cooking oil does, and the ranking between them moves with brand, grade and bottle size. Compare per litre rather than per bottle, since the bottles rarely match. Avocado oil is a narrow import here; olive oil is stocked far more widely."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village comes in 250 ml and 500 ml, with the current price for each on the [products page](/products) and the larger bottle cheaper per litre. In Malaysia it is sold only through Berkat Madinah Store and that seller's own Shopee and TikTok Shop counters — see [where to buy](/shop)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsAvocadoOilInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Two bottles, one kitchen",
+        "id": "two-bottles-one-kitchen",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Keeping both is a sensible outcome rather than a failure to decide. A small bottle of extra virgin olive oil for everything served cold or finished with the oil showing, plus a neutral oil for the pan that runs hardest, covers almost every dish."
+          },
+          {
+            "type": "p",
+            "text": "If your real question is which is better for you, that is one for a doctor or a registered dietitian, not for anyone selling oil. This page compares behaviour in a pan and nothing more."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsAvocadoOilInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the autumn harvest"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Reach for avocado oil when the oil should be invisible or the pan is at its hottest. Reach for extra virgin olive oil when the oil is part of the flavour. Its smoke point is the lower of the two, and most home cooking reaches neither."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is avocado oil or olive oil better for high heat?",
+        "a": "Avocado oil, on smoke point alone. Refined avocado oil holds a higher temperature than extra virgin olive oil, which published figures put at 190 to 210 °C. Most home cooking stays well below both."
+      },
+      {
+        "q": "Can I use olive oil instead of avocado oil?",
+        "a": "In anything cooked short of a hard sear, yes. Expect the dish to taste of olive oil, which is the whole point in a dressing or a pasta and a distraction in mayonnaise."
+      },
+      {
+        "q": "Does avocado oil taste like avocado?",
+        "a": "Refined avocado oil barely tastes of anything, a faint buttery weight at most. Unrefined versions keep more of the fruit, but the bottles sold widely in Malaysia are the refined, near-neutral kind."
+      },
+      {
+        "q": "Which one is more expensive in Malaysia?",
+        "a": "It depends on brand, grade and size, so compare per litre rather than per bottle. Avocado oil is the narrower import and turns up in fewer shops; olive oil is stocked far more widely."
+      },
+      {
+        "q": "Is avocado oil healthier than olive oil?",
+        "a": "That is a question for a doctor or a registered dietitian, not for a seller. This page compares the two as cooking fats only: flavour, heat behaviour, texture and cost per litre."
+      },
+      {
+        "q": "Which oil should I use for salad dressing?",
+        "a": "Extra virgin olive oil, unless you want the dressing to taste only of the vinegar and the mustard. Avocado oil is the choice when the other ingredients are meant to carry it alone."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian cold-pressed oil in 250 ml and 500 ml, with the current price for each size."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The published range for extra virgin olive oil, and what moves it more than the grade does."
+      },
+      {
+        "label": "Olive oil vs coconut oil in a Malaysian kitchen",
+        "path": "blog/olive-oil-vs-coconut-oil-in-a-malaysian-kitchen",
+        "description": "The other comparison Malaysian cooks ask about, taken the same way: flavour, heat and use."
       },
       {
         "label": "Where to buy in Malaysia",
