@@ -3107,6 +3107,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk goreng",
         "path": "blog/minyak-zaitun-untuk-goreng",
         "description": "Tumis, goreng cetek, goreng rendam dan wok api besar — mana yang munasabah."
+      },
+      {
+        "label": "Minyak zaitun untuk air fryer",
+        "path": "blog/minyak-zaitun-untuk-air-fryer",
+        "description": "Berapa banyak, kenapa bukan sembur aerosol, dan makanan mana yang sesuai."
       }
     ]
   },
@@ -3723,6 +3728,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Resepi mudah dengan minyak zaitun",
         "path": "blog/resepi-mudah-dengan-minyak-zaitun",
         "description": "Empat resepi ringkas dengan sukatan, untuk malam ini."
+      },
+      {
+        "label": "Minyak zaitun untuk roti dan cicahan",
+        "path": "blog/minyak-zaitun-untuk-roti-dan-cicahan",
+        "description": "Guna tanpa panas menunjukkan watak sebenar minyak."
       }
     ]
   },
@@ -4562,6 +4572,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Berkat Madinah di Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian."
+      },
+      {
+        "label": "Kenapa minyak zaitun jadi keruh",
+        "path": "blog/kenapa-minyak-zaitun-jadi-keruh",
+        "description": "Keruh sejuk, mendapan, dan minyak yang betul-betul rosak adalah tiga perkara berbeza."
       }
     ]
   },
@@ -5128,6 +5143,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      },
+      {
+        "label": "Minyak zaitun untuk ikan bakar",
+        "path": "blog/minyak-zaitun-untuk-ikan-bakar",
+        "description": "Sapu pada ikan, bukan pada jaring, dan tuangan akhir selepas ikan diangkat."
       }
     ]
   },
@@ -5433,6 +5453,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun vs minyak kelapa",
         "path": "blog/minyak-zaitun-vs-minyak-kelapa",
         "description": "Dua minyak yang ada dalam dapur Malaysia, dibandingkan sebagai lemak masakan."
+      },
+      {
+        "label": "Minyak zaitun vs minyak sawit",
+        "path": "blog/minyak-zaitun-vs-minyak-sawit",
+        "description": "Minyak yang negara ini keluarkan, lawan minyak yang diimport, sebagai lemak masakan."
       }
     ]
   },
@@ -5716,6 +5741,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk kek dan bakeri",
         "path": "blog/minyak-zaitun-untuk-kek-dan-bakeri",
         "description": "Penukaran mentega kepada minyak, dan kek mana sesuai dengan minyak dara."
+      },
+      {
+        "label": "Minyak zaitun untuk pasta",
+        "path": "blog/minyak-zaitun-untuk-pasta",
+        "description": "Aglio olio versi rumah, dengan air pasta sebagai pengikat."
       }
     ]
   },
@@ -7380,6 +7410,1642 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "minyak-zaitun-keruh",
+    "slug": "kenapa-minyak-zaitun-jadi-keruh",
+    "seoTitle": "Minyak Zaitun Keruh dan Ada Mendapan: Rosakkah?",
+    "metaTitle": "Minyak Zaitun Keruh dan Ada Mendapan: Rosakkah?",
+    "metaDescription": "Keruh sejuk jernih semula dalam sejam, mendapan minyak tidak ditapis itu normal, dan hanya bau yang memberitahu minyak zaitun sudah benar-benar rosak.",
+    "focusKeyword": "minyak zaitun keruh",
+    "relatedKeywords": [
+      "kenapa minyak zaitun jadi keruh",
+      "mendapan minyak zaitun",
+      "minyak zaitun ada endapan di dasar botol",
+      "minyak zaitun keruh dalam peti sejuk",
+      "minyak zaitun tidak ditapis",
+      "minyak zaitun ditapis atau tidak ditapis",
+      "minyak zaitun berkabus",
+      "minyak zaitun beku putih",
+      "cara tahu minyak zaitun rosak",
+      "bau minyak zaitun tengik",
+      "tempoh hayat minyak zaitun selepas dibuka"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun Keruh",
+      "Mendapan",
+      "Penyimpanan",
+      "Panduan Pembeli"
+    ],
+    "h1": "Minyak zaitun keruh dan ada mendapan: rosakkah botol itu?",
+    "excerpt": "Tiga keadaan berbeza duduk di sebalik satu botol yang keruh, dan cuma satu daripadanya bermasalah. Cara membezakannya dalam dua minit di dapur.",
+    "keyTakeaway": "Minyak zaitun keruh hampir selalunya bukan minyak rosak. Keruh sejuk hilang sendiri dalam kira-kira sejam pada suhu bilik. Mendapan halus pula normal dalam minyak yang tidak ditapis, cuma ia memendekkan hayat botol, jadi habiskan awal. Hanya bau yang memberitahu sama ada minyak itu benar-benar sudah rosak.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunKeruhHero",
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-keruh.jpg",
+    "intro": [
+      "Anda tuang minyak untuk salad malam itu dan nampak lapisan halus di dasar botol, dan minyaknya tidak sejernih hari pertama dibuka.",
+      "Soalan yang sama datang setiap kali: rosakkah botol ini, atau memang begitu sepatutnya?",
+      "Selalunya memang begitu. Tetapi tiga keadaan berbeza duduk di sebalik satu botol yang keruh, dan cuma satu bermasalah."
+    ],
+    "sections": [
+      {
+        "heading": "Keruh bukan satu masalah, ia tiga keadaan",
+        "id": "tiga-keadaan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Apabila minyak zaitun jadi keruh, tiga perkara yang berbeza sama sekali boleh berada di belakangnya: minyak yang kesejukan, pepejal buah zaitun dalam minyak yang tidak ditapis, dan minyak yang memang sudah rosak. Dua yang pertama tidak mengubah keselamatan minyak itu. Yang ketiga tidak dapat dilihat dengan mata."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Keruh sejuk** — botol yang kesejukan, jernih semula pada suhu bilik.",
+              "**Mendapan** — pepejal zaitun halus dalam minyak yang tidak ditapis.",
+              "**Minyak rosak** — bau yang berubah, tiada kaitan dengan keruh."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKeruhInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Keruh sejuk: jernih semula pada suhu bilik",
+        "id": "keruh-sejuk",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun mula berkabus apabila suhunya jatuh cukup rendah, dan sebahagian lemaknya mengeras menjadi butir putih lembut sementara selebihnya masih cair. Keluarkan botol dan biarkan ia berdiri di kaunter dapur. Dalam kira-kira sejam ia jernih semula, dan rasanya tidak berubah walau sedikit."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Dapur berhawa dingin di sini jarang cukup sejuk; peti sejuk puncanya.",
+              "Peti sejuk **tidak perlu**, tetapi ia juga bukan bahaya — cuma menyusahkan waktu menuang.",
+              "Jangan panaskan botol untuk mempercepatkan; haba memendekkan hayat minyak."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKeruhInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          },
+          {
+            "type": "note",
+            "title": "Keruh bukan ujian ketulenan",
+            "text": "Minyak dara tulen boleh berkabus dalam sejuk dan boleh juga kekal cair, dan minyak ditapis sama sahaja. Sebab itu [ujian peti sejuk itu mitos](/blog/cara-kenal-minyak-zaitun-palsu)."
+          }
+        ]
+      },
+      {
+        "heading": "Mendapan di dasar botol minyak yang tidak ditapis",
+        "id": "mendapan-di-dasar-botol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Lapisan halus di dasar botol biasanya pepejal buah zaitun yang tidak ditapis keluar selepas minyak diperah. Dalam minyak yang muda ia normal, dan ada peminat yang memang mencarinya. Tetapi pepejal itu tidak duduk diam: ia perlahan-lahan mengubah rasa minyak di sekelilingnya."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Jangan goncang botol; biarkan mendapan itu duduk di dasar.",
+              "Botol bermendapan elok dihabiskan awal, bukan disimpan sebagai stok setahun.",
+              "Simpan tegak, gelap dan tertutup rapat — [caranya di sini](/blog/cara-simpan-minyak-zaitun)."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKeruhInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Disaring atau tidak disaring: itu pilihan, bukan kecacatan",
+        "id": "ditapis-lawan-tidak-ditapis",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak yang disaring dilalukan melalui penapis halus sehingga jernih; yang tidak ditapis dibotolkan selepas dienapkan sahaja. Kedua-duanya boleh menjadi minyak dara yang sangat baik. Yang ditapis bertahan lebih lama dan senang dinilai dengan mata; yang tidak ditapis lebih tebal rasanya ketika muda, tetapi hayatnya lebih pendek."
+          },
+          {
+            "type": "p",
+            "text": "Pilihan itu milik pembuat, bukan tanda mutu. Botol yang jernih sepanjang tahun ialah botol yang ditapis, dan itu tidak bermakna ia kurang tulen. Minyak perahan sejuk Arabian Village datang dalam dua saiz — [lihat halaman produk](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKeruhInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang nampak, apa sebenarnya, apa perlu buat",
+        "id": "apa-yang-nampak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hampir semua soalan tentang botol yang keruh boleh dijawab dalam dua minit di dapur: lihat keadaannya, hidu minyaknya, kemudian putuskan. Jadual di bawah menyusun keadaan yang paling kerap ditemui pembeli di Malaysia, dan apa yang patut dibuat untuk setiap satu."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Apa yang nampak",
+              "Apa sebenarnya",
+              "Apa perlu buat"
+            ],
+            "rows": [
+              [
+                "Berkabus selepas keluar dari peti sejuk",
+                "Lemak mengeras kerana sejuk",
+                "Biar di kaunter kira-kira sejam"
+              ],
+              [
+                "Butir putih lembut dalam minyak",
+                "Keadaan yang sama, lebih jauh",
+                "Tunggu sampai jernih, jangan panaskan"
+              ],
+              [
+                "Lapisan halus di dasar botol",
+                "Pepejal zaitun, minyak tidak ditapis",
+                "Tuang tanpa menggoncang, habiskan awal"
+              ],
+              [
+                "Keruh yang tidak jernih di suhu bilik",
+                "Mendapan, bukan sejuk",
+                "Hidu dahulu sebelum guna"
+              ],
+              [
+                "Bau krayon lama atau kacang basi",
+                "Minyak sudah rosak",
+                "Berhenti guna, buka botol baharu"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKeruhInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Minyak yang betul-betul rosak: hidung yang menentukan",
+        "id": "ujian-bau",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cuma satu ujian yang benar-benar penting, dan mata tidak terlibat langsung. Buka tutup, tuang sedikit ke dalam gelas, hangatkan seketika, dan hidu. Minyak yang masih baik berbau seperti buah, rumput atau daun. Minyak yang sudah rosak berbau seperti krayon lama atau kacang basi."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Bau tengik datang daripada usia dan udara, bukan daripada mendapan.",
+              "Botol yang sudah dibuka elok dihabiskan dalam kira-kira dua bulan di iklim kita.",
+              "Yang belum dibuka bertahan sehingga kira-kira 18 bulan jika disimpan gelap."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunKeruhInline",
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Lihat, hidu, kemudian putuskan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Botol yang keruh hampir selalunya botol yang kesejukan atau botol yang tidak ditapis, dan kedua-duanya masih boleh digunakan. Yang menentukan bukan rupa minyak, tetapi baunya apabila tutup dibuka."
+        },
+        {
+          "type": "p",
+          "text": "Simpan botol di tempat gelap jauh dari dapur masak, habiskan dalam kira-kira dua bulan selepas dibuka, dan [pilih saiz](/products) yang padan dengan kadar guna rumah anda."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Minyak zaitun saya keruh — adakah ia sudah rosak?",
+        "a": "Selalunya tidak. Keruh datang daripada sejuk atau daripada pepejal zaitun dalam minyak yang tidak ditapis, dan kedua-duanya normal. Rupa minyak tidak memberitahu apa-apa; buka tutup dan hidu, kerana bau sahaja yang menentukan."
+      },
+      {
+        "q": "Berapa lama minyak keruh mengambil masa untuk jernih semula?",
+        "a": "Kira-kira sejam di atas kaunter dapur pada suhu bilik Malaysia, kadangkala lebih lama untuk botol yang penuh. Jangan letak dalam air panas atau dekat dapur; haba tidak diperlukan dan ia memendekkan hayat minyak."
+      },
+      {
+        "q": "Mendapan di dasar botol perlu dibuang?",
+        "a": "Tidak perlu dibuang, tetapi jangan digoncang masuk ke dalam pinggan. Tuang perlahan dan biarkan lapisan itu duduk di dasar. Kerana mendapan memendekkan hayat botol, habiskan minyak itu lebih awal daripada biasa."
+      },
+      {
+        "q": "Minyak yang keruh bermakna ia lebih tulen?",
+        "a": "Tidak. Keruh tidak membuktikan apa-apa tentang ketulenan, dalam mana-mana arah. Minyak dara tulen boleh jernih dan boleh keruh, dan minyak ditapis pun sama. Yang boleh disemak ialah tarikh tuaian, asal usul dan penjual."
+      },
+      {
+        "q": "Perlu ke simpan minyak zaitun dalam peti sejuk supaya tahan lama?",
+        "a": "Tidak perlu. Almari yang gelap dan jauh daripada dapur masak sudah memadai. Peti sejuk membuatkan minyak berkabus dan pekat, jadi setiap kali menuang anda terpaksa menunggu botol kembali ke suhu bilik."
+      },
+      {
+        "q": "Bagaimana saya tahu minyak zaitun benar-benar sudah rosak?",
+        "a": "Baunya. Minyak yang rosak berbau seperti krayon lama, pendempul atau kacang basi, atau langsung hilang aroma. Itu berlaku kerana usia, udara dan haba, dan ia boleh berlaku pada minyak yang jernih sekalipun."
+      },
+      {
+        "q": "Minyak zaitun infusi pun boleh berkeruh?",
+        "a": "Boleh, dan sedikit mendapan daripada bahan botani sebenar memang dijangka. Aroma botani pudar lebih awal daripada minyaknya, jadi tutup rapat, simpan gelap dan habiskan botol infusi lebih cepat daripada botol klasik."
+      }
+    ],
+    "related": [
+      {
+        "label": "Cara simpan minyak zaitun di rumah Malaysia yang panas",
+        "path": "blog/cara-simpan-minyak-zaitun",
+        "description": "Rak mana yang menumpulkan rasa, kenapa peti sejuk bukan tempatnya, dan berapa lama sebotol bertahan selepas dibuka."
+      },
+      {
+        "label": "Minyak zaitun palsu dan ujian yang menipu anda",
+        "path": "blog/cara-kenal-minyak-zaitun-palsu",
+        "description": "Kenapa ujian peti sejuk dan ujian warna tidak membuktikan apa-apa, dan lima butiran label yang memang boleh disemak."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam kaca gelap, saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Berkat Madinah Store di Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian mereka sendiri."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-air-fryer",
+    "slug": "minyak-zaitun-untuk-air-fryer",
+    "seoTitle": "Minyak Zaitun untuk Air Fryer: Banyak Mana, Panas Mana",
+    "metaTitle": "Minyak Zaitun untuk Air Fryer: Banyak Mana, Panas Mana",
+    "metaDescription": "Berapa banyak untuk sebakul, kenapa sembur aerosol merosakkan salutan, suhu dail untuk keledek, ayam berempah dan popia, serta cara membersih laci.",
+    "focusKeyword": "minyak zaitun untuk air fryer",
+    "relatedKeywords": [
+      "boleh ke guna minyak zaitun dalam air fryer",
+      "minyak terbaik untuk air fryer",
+      "sembur minyak zaitun air fryer",
+      "berapa banyak minyak dalam air fryer",
+      "minyak zaitun dara air fryer",
+      "suhu air fryer keledek",
+      "salutan bakul air fryer rosak",
+      "ayam berempah air fryer",
+      "popia beku air fryer",
+      "cara cuci bakul air fryer berminyak",
+      "berus minyak untuk air fryer"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Air Fryer",
+      "Teknik Memasak",
+      "Dapur Malaysia",
+      "Minyak Zaitun Dara",
+      "Panduan Peralatan"
+    ],
+    "h1": "Minyak Zaitun untuk Air Fryer: Berapa Banyak dan Berapa Panas",
+    "excerpt": "Air fryer perlukan satu sudu kecil minyak pada makanan, bukan tuangan ke dalam bakul. Cara ia disapu lebih menentukan hasil daripada gred yang anda capai.",
+    "keyTakeaway": "Minyak zaitun untuk air fryer duduk pada makanan, bukan di dalam bakul. Gaul atau sapu lebih kurang satu sudu kecil untuk sebakul penuh, jauhkan tin sembur daripada salutan, dan set dail pada 180 hingga 200 darjah untuk kebanyakan hidangan. Salut benda yang kering dan berkanji.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukAirFryerHero",
+      "alt": "Sebotol kaca minyak zaitun hijau di atas meja dapur bertepung dengan mangkuk seramik dan pemukul di sebelahnya"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-air-fryer.jpg",
+    "intro": [
+      "Hampir setiap rumah di Malaysia sekarang ada air fryer di atas kabinet dapur, dan tiada siapa diberi arahan tentang minyaknya.",
+      "Mesin itu sebenarnya ketuhar kipas yang kecil, bukan kuali, jadi minyak di dalamnya buat kerja yang lain sama sekali.",
+      "Minyak zaitun memang boleh digunakan. Yang berubah ialah berapa banyak, dan cara ia disapu."
+    ],
+    "sections": [
+      {
+        "heading": "Berapa banyak minyak zaitun untuk satu bakul",
+        "id": "berapa-banyak-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sebakul penuh perlukan lebih kurang satu sudu kecil minyak zaitun, digaul pada makanan sebelum ia masuk. Mesin ini menolak udara panas, bukan merendam, jadi minyak yang tidak melekat pada permukaan akan menitis ke laci dan hangus di situ. Gaul sehingga setiap potong berkilat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Satu sudu kecil** untuk sebakul keledek, ubi kayu atau kentang.",
+              "**Setengah sudu kecil** untuk ayam berempah, yang mengeluarkan lemaknya sendiri.",
+              "**Sapuan nipis berus** untuk popia dan bebola ikan yang sudah bersalut.",
+              "**Tiada langsung** untuk memanaskan semula benda yang sudah digoreng."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukAirFryerInline",
+            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa sembur aerosol merosakkan salutan bakul",
+        "id": "sembur-aerosol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tin sembur masakan membawa lebih daripada minyak. Bahan pendorong dan bahan tambahan seperti lesitin turun sebagai kabus halus pada salutan bakul, terbakar melekat, dan membina lapisan perang melekit yang tidak hilang dengan basuhan biasa. Buku panduan pengeluar lazimnya melarangnya. Guna berus silikon sebaliknya."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tin aerosol: liputan luas tidak terkawal, dan lapisan terbakar pada salutan.",
+              "Botol pam boleh isi semula: kabus halus tanpa bahan pendorong.",
+              "Berus silikon: minyak jatuh pada makanan sahaja.",
+              "Gaul dalam mangkuk: setiap permukaan kena, bakul kekal bersih."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukAirFryerInline",
+            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Julat suhu air fryer lawan minyak zaitun",
+        "id": "julat-suhu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dail air fryer naik jauh lebih tinggi daripada yang diperlukan oleh sapuan setipis itu. Set 180 hingga 200 darjah untuk keledek, kentang dan ayam, dan turun ke 160 hingga 170 darjah untuk ikan, roti dan apa-apa yang cepat perang. Tinggalkan hujung atas dail untuk masakan tanpa minyak."
+          },
+          {
+            "type": "p",
+            "text": "Selagi makanan masih mengeluarkan wap, permukaan yang berminyak itu duduk lebih rendah daripada suhu udara di dalam ruang. Yang hangus dahulu ialah bahagian bakul yang kosong. Angka mengikut kaedah ada dalam [minyak zaitun untuk goreng](/blog/minyak-zaitun-untuk-goreng), dan gred pula dalam [gred minyak zaitun](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukAirFryerInline",
+            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Makanan mana yang menerima minyak zaitun dengan baik",
+        "id": "makanan-yang-sesuai",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Makanan yang kering, berkanji dan padat paling menerima minyak zaitun, kerana ada permukaan untuk minyak melekat dan ada sesuatu untuk haba jadikan rangup. Keledek, ubi kayu, ayam berempah, popia dan bebola ikan semuanya menjadi. Bancuhan basah tidak, dan tepung longgar akan berterbangan ke elemen."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Makanan",
+              "Suhu dail",
+              "Minyak",
+              "Catatan"
+            ],
+            "rows": [
+              [
+                "Keledek potong bujur",
+                "190 darjah",
+                "Satu sudu kecil",
+                "Keringkan dahulu"
+              ],
+              [
+                "Ayam berempah",
+                "180 darjah",
+                "Setengah sudu kecil",
+                "Lemaknya keluar sendiri"
+              ],
+              [
+                "Popia beku",
+                "180 darjah",
+                "Sapu berus",
+                "Jangan digaul"
+              ],
+              [
+                "Bebola ikan",
+                "180 darjah",
+                "Sapu berus",
+                "Goncang di pertengahan"
+              ],
+              [
+                "Pisang hiris",
+                "170 darjah",
+                "Sapu berus",
+                "Manisnya cepat perang"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukAirFryerInline",
+            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Cara membersih bakul dan laci selepas guna minyak",
+        "id": "cara-membersih",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak yang tidak kena makanan akan berkumpul di dalam laci bawah bakul, dan kalau dibiarkan ia terbakar menjadi lapisan varnis yang berasap pada masakan berikutnya. Basuh bakul dan laci selepas setiap masakan berminyak, semasa kedua-duanya masih suam. Air sabun dan berus lembut sudah memadai."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Lap laci dengan tuala dapur dahulu supaya minyak tidak turun ke sinki.",
+              "Rendam bakul dalam air sabun suam sepuluh minit kalau ada kesan melekat.",
+              "Jangan sekali-kali guna wul keluli atau span kasar pada salutan.",
+              "Keringkan kedua-duanya sepenuhnya sebelum disimpan semula."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukAirFryerInline",
+            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+          }
+        ]
+      },
+      {
+        "heading": "Gred mana yang patut masuk ke dalam bakul",
+        "id": "gred-mana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun dara perahan sejuk ialah gred yang munasabah di sini, justeru kerana jumlahnya sangat sedikit. Satu sudu kecil untuk sebakul penuh bukan tempat sebotol habis, dan salutan itu sebenarnya buat kerja mekanikal: mengeringkan permukaan, membantu ia perang, dan menahannya daripada melekat pada besi."
+          },
+          {
+            "type": "p",
+            "text": "Yang hilang di bawah kipas ialah baunya, jadi simpan satu sudu lagi dan renjis selepas bakul diangkat. Saiz botol ada di [halaman produk](/products), dan kerja dapur yang lain ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukAirFryerInline",
+            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Satu sudu kecil pada makanan, bukan tuangan ke dalam bakul. Berus atau mangkuk, bukan tin sembur. Dail pada 180 hingga 200 darjah, dan turun ke 170 untuk yang cepat perang."
+        },
+        {
+          "type": "p",
+          "text": "Renjis sedikit minyak mentah selepas bakul keluar, dan basuh laci semasa ia masih suam. Lihat [saiz botol](/products) sebelum membeli yang pertama."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Boleh ke guna minyak zaitun dalam air fryer?",
+        "a": "Boleh, tetapi pada makanan dan bukan dituang ke dalam bakul. Gaul atau sapu lebih kurang satu sudu kecil untuk sebakul penuh sebelum memasak. Minyak yang dituang terus akan menitis ke laci dan hangus di situ."
+      },
+      {
+        "q": "Perlu guna minyak zaitun dara atau yang ditapis?",
+        "a": "Minyak dara munasabah kerana jumlahnya kecil; satu sudu kecil untuk sebakul penuh tidak membazir. Baunya memang pudar di bawah kipas, jadi simpan satu sudu lagi untuk direnjis selepas bakul diangkat."
+      },
+      {
+        "q": "Kenapa tidak boleh guna minyak sembur dalam air fryer?",
+        "a": "Tin aerosol membawa bahan pendorong dan bahan tambahan bersama minyaknya. Kabus itu melekat pada salutan bakul, terbakar, dan membina lapisan melekit yang tidak dapat dibasuh. Botol pam yang boleh diisi semula mengelakkannya."
+      },
+      {
+        "q": "Berapa suhu untuk keledek dan ubi kayu?",
+        "a": "Cuba 190 darjah selama kira-kira dua puluh minit, dengan bakul digoncang sekali di pertengahan. Potong sama besar, keringkan dengan tuala dapur, dan susun satu lapisan sahaja supaya udara boleh bergerak."
+      },
+      {
+        "q": "Perlu ke panaskan air fryer dahulu?",
+        "a": "Panaskan tiga minit supaya makanan menjadi rangup dan bukan kering. Sapu minyak pada makanan semasa mesin memanas, kemudian masukkan satu lapisan. Jangan biarkan bakul yang berminyak memanas dalam keadaan kosong."
+      },
+      {
+        "q": "Popia beku boleh disapu minyak zaitun?",
+        "a": "Boleh, tetapi sapu dengan berus dan jangan digaul dalam mangkuk kerana kulitnya akan koyak. Sapu nipis pada satu sisi, susun tanpa bertindih, dan pusing sekali di pertengahan pada 180 darjah."
+      },
+      {
+        "q": "Minyak yang tinggal di dalam laci boleh diguna semula?",
+        "a": "Minyak yang menitis ke laci itu bukan minyak goreng yang boleh ditapis dan disimpan — ia sudah bercampur cecair dan serpihan hangus. Lap keluar dengan tuala dapur, kemudian basuh laci semasa ia masih suam."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk goreng",
+        "path": "blog/minyak-zaitun-untuk-goreng",
+        "description": "Bila minyak zaitun menjadi dalam kuali, dan takat asap mengikut gred tanpa perlu diteka."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Tumis, panggang dan renjis akhir sepanjang seminggu masakan di dapur Malaysia."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli di Malaysia",
+        "path": "shop",
+        "description": "Berkat Madinah Store di Ampang Jaya dan Batu Caves, berserta kaunter Shopee dan TikTok Shop."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-ikan-bakar",
+    "slug": "minyak-zaitun-untuk-ikan-bakar",
+    "seoTitle": "Minyak Zaitun untuk Ikan Bakar: Sapu, Bakar, Tuang",
+    "metaTitle": "Minyak Zaitun untuk Ikan Bakar: Sapu, Bakar, Tuang",
+    "metaDescription": "Sapu minyak pada ikan bukan pada jaring, kenapa minyak perapan menitis ke bara, daun pisang, dan tuangan akhir selepas ikan diangkat.",
+    "focusKeyword": "minyak zaitun untuk ikan bakar",
+    "relatedKeywords": [
+      "cara bakar ikan dengan minyak zaitun",
+      "sapu minyak pada ikan bakar",
+      "perapan ikan bakar minyak zaitun",
+      "ikan bakar daun pisang minyak zaitun",
+      "minyak zaitun untuk ikan kembung",
+      "ikan pari bakar sambal",
+      "tuangan minyak zaitun selepas bakar",
+      "api naik masa bakar ikan",
+      "minyak untuk panggangan bara",
+      "air asam ikan bakar",
+      "minyak zaitun dara untuk makanan laut"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Ikan Bakar",
+      "Teknik Memasak",
+      "Dapur Malaysia",
+      "Minyak Zaitun Dara",
+      "Panggangan"
+    ],
+    "h1": "Minyak Zaitun untuk Ikan Bakar: Di Mana Minyak Itu Patut Pergi",
+    "excerpt": "Kebanyakan minyak yang masuk ke dalam perapan berakhir di dalam bara, bukan di atas ikan. Panduan tempat minyak patut disapu, bila ia patut dituang, dan apa yang daun pisang ubah.",
+    "keyTakeaway": "Minyak zaitun untuk ikan bakar bekerja di dua tempat sahaja: sapuan nipis pada ikan sebelum ia naik ke jaring, dan tuangan selepas ikan diangkat. Minyak yang dicurah ke dalam perapan cair akan menitis ke bara dan hilang sebelum isi ikan sempat masak.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukIkanBakarHero",
+      "alt": "Sebotol minyak zaitun hijau dan berus penyapu di atas papan kayu di sebelah kuali panggang besi"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-ikan-bakar.jpg",
+    "intro": [
+      "Ikan bakar di rumah selalunya berakhir dengan minyak yang habis di bara, bukan di atas ikan.",
+      "Minyak zaitun boleh masuk ke dalam kerja ini, tetapi bukan di tempat yang ramai orang letakkan.",
+      "Panduan ini tentang di mana minyak itu patut disapu, dan bila pula ia patut dituang."
+    ],
+    "sections": [
+      {
+        "heading": "Sapu pada ikan, bukan pada jaring",
+        "id": "sapu-pada-ikan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sapu minyak pada ikan, bukan pada jaring panggangan. Minyak yang disapu pada jaring panas terbakar dalam beberapa saat dan meninggalkan lapisan hitam yang berpindah ke kulit ikan. Minyak yang disapu nipis pada ikan pula duduk pada kulit, membantu rempah melekat, dan melambatkan kulit daripada koyak apabila ikan dibalik."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Lap ikan kering dahulu, kerana minyak tidak melekat pada kulit yang basah.",
+              "Satu sudu besar sudah cukup untuk seekor ikan kembung sederhana.",
+              "Lincirkan jaring dengan minyak masak biasa dan kain, sebelum jaring itu panas."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukIkanBakarInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa minyak dalam perapan banyak yang menitis",
+        "id": "perapan-menitis",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Perapan ikan bakar biasanya cair: kunyit, cili, asam jawa, garam dan minyak. Di atas bara, bahagian cecair itu jatuh melalui jaring dalam masa satu dua minit. Minyak yang jatuh ke bara bukan sahaja hilang, ia menyala semula dan menghitamkan kulit ikan dari bawah sebelum isinya sempat masak."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu perapan tidak perlu banyak minyak. Cukup sekadar melekatkan rempah pada ikan, kira-kira satu sudu besar untuk dua ekor, dan simpan minyak zaitun dara untuk tuangan akhir."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukIkanBakarInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Api terbuka lawan api sederhana",
+        "id": "api-terbuka-lawan-sederhana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Api terbuka yang menjilat ikan datang daripada minyak dan lemak yang menitis ke bara, bukan daripada bara yang terlalu panas. Ikan bakar lebih menjadi di atas bara yang sudah kelabu berabu. Kalau api naik, alihkan ikan ke tepi jaring dan tunggu sehingga nyalaan itu padam."
+          },
+          {
+            "type": "p",
+            "text": "Permukaan jaring di atas bara jauh lebih panas daripada kuali di dapur, jadi soalan takat asap bukan lagi soalan yang sama. Angkanya ada dalam [panduan minyak zaitun untuk goreng](/blog/minyak-zaitun-untuk-goreng). Di sini yang menentukan ialah tempoh, bukan suhu."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukIkanBakarInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Daun pisang mengubah cara minyak bekerja",
+        "id": "daun-pisang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Daun pisang mengubah sepenuhnya cara minyak bekerja. Dibalut dalam daun, ikan masak dengan wapnya sendiri dan minyak tidak menitis ke bara, jadi tiada api terbuka. Layurkan daun sekejap di atas api supaya lembut, sapu sedikit minyak pada daun supaya ikan tidak melekat, kemudian balut kemas."
+          },
+          {
+            "type": "p",
+            "text": "Kerana minyak di dalam balutan tidak bertemu api secara terus, minyak zaitun dara boleh masuk di peringkat ini tanpa dibazirkan. Ikan pari dengan sambal ialah balutan yang paling biasa di sini."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukIkanBakarInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      },
+      {
+        "heading": "Tuangan akhir selepas ikan diangkat",
+        "id": "tuangan-akhir",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Di sinilah minyak zaitun dara berbaloi. Selepas ikan diangkat dari bara dan diletakkan di atas pinggan, tuang minyak zaitun dara terus ke atasnya, kira-kira dua sudu kecil untuk seekor. Minyak itu tidak pernah bertemu api, jadi rasa hijau dan denyut pedasnya sampai ke mulut dengan penuh."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Ikan kembung dengan air asam: siram air asam dahulu, minyak kemudian.",
+              "Ikan pari dengan sambal: renjis minyak di tepi sambal, bukan di atasnya.",
+              "Perah limau nipis dahulu, tuang minyak kemudian, supaya keduanya duduk rata."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukIkanBakarInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          },
+          {
+            "type": "p",
+            "text": "Antara enam minyak infusi Arabian Village, adas & jintan manis memang dipasangkan dengan ikan bakar. Lihat rasa dan saiz di [halaman produk](/products)."
+          }
+        ]
+      },
+      {
+        "heading": "Ikan mana, cara mana",
+        "id": "ikan-mana-cara-mana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ikan yang berbeza mahukan cara yang berbeza, dan itu menentukan berapa banyak minyak yang patut masuk sebelum bakar. Ikan bersisik nipis seperti kembung boleh terus di atas jaring, manakala ikan pari dan isi yang lembut lebih selamat dalam balutan daun pisang."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ikan",
+              "Cara bakar",
+              "Sebelum bakar",
+              "Tuangan akhir"
+            ],
+            "rows": [
+              [
+                "Ikan kembung",
+                "Atas jaring, bara kelabu",
+                "Sapu nipis",
+                "Minyak dara dan air asam"
+              ],
+              [
+                "Ikan pari",
+                "Balut daun pisang",
+                "Sapu daun dan ikan",
+                "Renjis di tepi sambal"
+              ],
+              [
+                "Ikan cencaru",
+                "Dibelah, atas jaring",
+                "Sapu selepas disumbat",
+                "Sedikit sahaja"
+              ],
+              [
+                "Ikan siakap",
+                "Bara sederhana",
+                "Keringkan kulit, sapu nipis",
+                "Minyak dara dan limau"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukIkanBakarInline",
+            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Minyak di atas ikan, bukan di dalam bara",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ikan bakar bukan kerja yang memerlukan banyak minyak. Ia memerlukan minyak di dua tempat sahaja: sapuan nipis sebelum ikan naik ke jaring, dan tuangan selepas ikan turun ke pinggan."
+        },
+        {
+          "type": "p",
+          "text": "Kalau hanya sebotol yang ada di rak, simpan ia untuk tuangan akhir itu. Lihat [saiz 250 ml dan 500 ml](/products) atau [cawangan dan cara membeli](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Boleh ke guna minyak zaitun untuk ikan bakar di atas bara?",
+        "a": "Boleh, tetapi tempatnya penting. Sapu nipis pada ikan sebelum bakar, dan simpan tuangan yang lebih murah hati untuk selepas ikan diangkat. Minyak yang dicurah banyak sebelum bakar akan menitis ke bara dan hilang."
+      },
+      {
+        "q": "Kenapa tidak elok sapu minyak pada jaring panggangan?",
+        "a": "Jaring panas membakar minyak dalam beberapa saat dan lapisan hitam itu berpindah ke kulit ikan. Sapu pada ikan sebaliknya: ia melekatkan rempah dan mengurangkan kulit koyak semasa ikan dibalik di atas bara."
+      },
+      {
+        "q": "Berapa banyak minyak untuk seekor ikan kembung?",
+        "a": "Kira-kira satu sudu besar disapu nipis pada seluruh ikan sudah cukup sebelum bakar. Selepas ikan diangkat, tuang lagi dua sudu kecil minyak zaitun dara di atas pinggan, kerana di situ rasanya paling jelas."
+      },
+      {
+        "q": "Api naik menjilat ikan saya, apa yang salah?",
+        "a": "Biasanya perapan terlalu cair atau terlalu banyak minyak, jadi cecair menitis ke bara dan menyala. Toskan ikan sekejap sebelum naik jaring, dan alihkan ikan ke tepi jaring apabila nyalaan naik, sehingga api itu reda."
+      },
+      {
+        "q": "Minyak zaitun sesuai ke untuk ikan yang dibalut daun pisang?",
+        "a": "Sesuai, kerana di dalam balutan minyak tidak bertemu api secara terus dan tidak menitis keluar. Sapu sedikit pada daun supaya ikan tidak melekat, dan tambah lagi sedikit apabila balutan dibuka di meja."
+      },
+      {
+        "q": "Perlu ke tukar minyak masak biasa kepada minyak zaitun untuk bakar?",
+        "a": "Tidak semestinya. Minyak masak biasa cukup untuk melincirkan jaring dan untuk perapan yang banyak menitis. Minyak zaitun dara lebih berbaloi pada tuangan akhir, tempat rasanya sampai ke pinggan tanpa melalui bara."
+      },
+      {
+        "q": "Di mana boleh beli minyak zaitun Arabian Village di Malaysia?",
+        "a": "Melalui Berkat Madinah Store sahaja. Mereka satu-satunya penjual sah di Malaysia, dengan dua cawangan di Selangor serta kaunter Shopee dan TikTok Shop mereka sendiri. Butiran cawangan dan waktu operasi ada di halaman kedai."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk goreng",
+        "path": "blog/minyak-zaitun-untuk-goreng",
+        "description": "Takat asap, haba dapur rumah, dan bila minyak zaitun berbaloi di dalam kuali."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Panduan am memasak dengan minyak zaitun dan kerja dapur Malaysia yang sesuai dengannya."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-pasta",
+    "slug": "minyak-zaitun-untuk-pasta",
+    "seoTitle": "Minyak Zaitun untuk Pasta: Aglio Olio Versi Rumah",
+    "metaTitle": "Minyak Zaitun untuk Pasta: Aglio Olio Versi Rumah",
+    "metaDescription": "Aglio olio dapur Malaysia: air rebusan sebagai pengikat, bawang putih yang tidak hangus, dan pusingan cili padi, ikan bilis atau daun kari.",
+    "focusKeyword": "minyak zaitun untuk pasta",
+    "relatedKeywords": [
+      "aglio olio minyak zaitun",
+      "resepi aglio olio mudah",
+      "pasta bawang putih minyak zaitun",
+      "air rebusan pasta pengikat sos",
+      "aglio olio cili padi",
+      "aglio olio ikan bilis",
+      "spageti minyak zaitun dara",
+      "berapa minyak zaitun untuk pasta",
+      "sos pasta berpisah",
+      "pasta tanpa krim"
+    ],
+    "category": "Resepi",
+    "tags": [
+      "Minyak Zaitun untuk Pasta",
+      "Aglio Olio",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Arabian Village"
+    ],
+    "h1": "Minyak Zaitun untuk Pasta: Aglio Olio Versi Dapur Malaysia",
+    "excerpt": "Sos aglio olio hanyalah minyak, air rebusan dan gaulan yang laju. Kaedah bernombor untuk dua orang, plus pusingan cili padi, ikan bilis dan daun kari.",
+    "keyTakeaway": "Minyak zaitun untuk pasta menjadi apabila tiga perkara betul: bawang putih dimasak dalam minyak sejuk pada api sederhana rendah sehingga warna gandum sahaja, air rebusan pasta yang berkanji disimpan sebagai pengikat, dan minyak mentah dimasukkan sekali lagi selepas api dimatikan. Cili padi, ikan bilis atau daun kari membawanya pulang ke dapur kita.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukPastaHero",
+      "alt": "Sebotol kaca minyak zaitun hijau di atas meja kayu di sebelah spageti kering dan ulas bawang putih"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-pasta.jpg",
+    "intro": [
+      "Malam yang tiada apa-apa dalam peti sejuk, tinggal sebungkus spageti dan beberapa ulas bawang putih. Itu sudah senarai bahan yang lengkap.",
+      "Aglio olio hidup atau mati pada minyaknya, kerana selain mi dan garam, minyak itulah sosnya.",
+      "Panduan ini untuk dapur di sini: bahan pasar raya biasa, dan satu pusingan tempatan."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa pasta minyak zaitun selalu berakhir kering",
+        "id": "kenapa-jadi-kering",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Masalahnya jarang kekurangan minyak. Masalahnya minyak dan mi yang tidak pernah bercantum, jadi minyak duduk di dasar mangkuk dan setiap suapan terasa berminyak sekali gus kering. Sos aglio olio sebenarnya emulsi ringkas: lemak yang dipegang air berkanji, disatukan oleh gaulan laju di dalam kuali panas."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu minyak perlu bertemu air rebusan dan haba di dalam kuali, bukan di dalam pinggan."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPastaInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Air rebusan pasta: pengikat yang selalu dibuang",
+        "id": "air-rebusan-pengikat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**Air rebusan pasta bukan air kosong.** Kanji yang keluar daripada mi menjadikannya likat sedikit, dan kanji itulah yang memegang minyak supaya ia tidak berpisah semula. Cedok satu cawan sebelum mi ditoskan, dan rebus dalam air yang kurang sedikit supaya kanjinya lebih pekat."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Dua liter air untuk 200 g mi, bukan satu periuk penuh.",
+              "Garamkan sehingga air itu terasa masin, kerana mi menyerap sebahagiannya.",
+              "Cedok air rebusan sebelum menoskan mi, bukan selepas ia masuk sinki."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPastaInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Bawang putih yang tidak boleh hangus",
+        "id": "bawang-putih-tak-hangus",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bawang putih hangus tidak boleh dibaiki. Rasa pahitnya larut terus ke dalam minyak dan tinggal di situ sampai habis sepinggan. Mulakan bawang putih dalam minyak yang masih sejuk, hidupkan api sederhana rendah, dan berhenti sebaik tepinya bertukar **warna gandum muda**."
+          },
+          {
+            "type": "p",
+            "text": "Kalau ia sudah coklat, buang minyak itu dan mula semula. Hirisan nipis memberi kepingan yang boleh dimakan; bawang putih tumbuk hangus jauh lebih cepat. Aglio olio bukan kerja api besar, dan bab haba ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPastaInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Kaedah aglio olio untuk dua orang",
+        "id": "kaedah-aglio-olio",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sukatan untuk dua orang: 200 g spageti, tiga ulas bawang putih dihiris nipis, dua batang cili kering dipatah, empat sudu besar minyak zaitun dara, dan sedikit daun parsli kalau ada. Tiga sudu masuk ke dalam kuali; satu sudu lagi masuk mentah selepas api dimatikan."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Didihkan dua liter air, garamkan, masukkan 180 g spageti.",
+              "Letak tiga sudu besar minyak dan bawang putih dalam kuali sejuk.",
+              "Hidupkan api sederhana rendah; bawang putih patut berdesir perlahan sahaja.",
+              "Masukkan cili kering sebaik tepinya bertukar gandum, kemudian matikan api.",
+              "Cedok satu cawan air rebusan, toskan mi dua minit lebih awal.",
+              "Hidupkan semula api, masukkan mi dengan setengah cawan air rebusan.",
+              "Gaul laju satu hingga dua minit sehingga sos likat dan melekat.",
+              "Matikan api, masukkan dua sudu minyak mentah dan parsli, hidang segera."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPastaInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Pusingan tempatan: cili padi, ikan bilis atau daun kari",
+        "id": "pusingan-tempatan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga bahan yang memang ada di dapur kita boleh mengambil tempat cili kering itu. Cili padi memberi pedas yang lebih tajam dan datang lebih awal. Ikan bilis goreng membawa masin gurih, kerja yang sama seperti anchovy dalam versi asalnya. Daun kari pula membawa wangi tersendiri."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Cili padi: hiris dua biji, masukkan bersama bawang putih, mula dengan sedikit.",
+              "Ikan bilis: goreng rangup dahulu, tabur di atas mi pada saat akhir.",
+              "Daun kari: rendam satu tangkai dalam minyak suam sepuluh saat, kemudian angkat.",
+              "Kurangkan garam apabila ikan bilis digunakan, kerana ia sudah cukup masin."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPastaInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Bahan dari pasar raya di sini",
+        "id": "bahan-pasar-raya",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Semuanya ada di pasar raya biasa. Spageti kering di lorong pasta, bawang putih dan cili padi di bahagian sayur, ikan bilis di lorong barangan kering. Parsli segar tidak selalu ada; daun sup atau daun ketumbar boleh mengambil tempatnya tanpa banyak beza."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Bahan",
+              "Apa yang dicari",
+              "Nota dapur"
+            ],
+            "rows": [
+              [
+                "Spageti kering",
+                "Kotak biasa, bukan mi segar",
+                "Toskan dua minit awal"
+              ],
+              [
+                "Bawang putih",
+                "Ulas padat dan kering",
+                "Hiris nipis, jangan tumbuk"
+              ],
+              [
+                "Cili padi",
+                "Merah, segar, bertangkai",
+                "Lebih pedas daripada cili kering"
+              ],
+              [
+                "Ikan bilis",
+                "Saiz kecil, tanpa kepala",
+                "Goreng rangup, tabur akhir"
+              ],
+              [
+                "Minyak zaitun dara",
+                "Kaca gelap, perahan sejuk",
+                "Simpan gelap dan tertutup"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukPastaInline",
+            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+          },
+          {
+            "type": "p",
+            "text": "Dalam hidangan yang sosnya hampir semua minyak, minyak itulah rasanya. Minyak zaitun dara **perahan sejuk** membawa rasa hijau dan denyut pedas; minyak neutral tidak membawa apa-apa. Lihat [saiz botol](/products) atau [tempat membelinya](/shop)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Satu kuali, empat bahan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun untuk pasta bukan soal resepi panjang. Bawang putih yang berhenti pada warna gandum, air rebusan yang tidak dibuang, dan gaulan yang laju di dalam kuali — itu sahaja sosnya."
+        },
+        {
+          "type": "p",
+          "text": "Selepas itu barulah pusingan tempatan: cili padi, ikan bilis atau daun kari. Resepi ringkas yang lain ada dalam [resepi mudah dengan minyak zaitun](/blog/resepi-mudah-dengan-minyak-zaitun)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun untuk pasta dua orang?",
+        "a": "Empat sudu besar untuk 200 g spageti, iaitu kira-kira 60 ml, sama seperti yang sudah diterbitkan dalam resepi pasta laman ini. Tiga sudu dimasak bersama bawang putih dan satu sudu lagi dimasukkan mentah selepas api dimatikan, supaya rasa hijaunya masih terasa."
+      },
+      {
+        "q": "Kenapa sos pasta saya berpisah menjadi minyak dan air?",
+        "a": "Kerana tiada kanji yang memegangnya. Air paip biasa tidak berfungsi; hanya air rebusan pasta yang berkanji boleh mengikat minyak. Gaul dalam kuali di atas api sederhana, bukan dalam pinggan hidang."
+      },
+      {
+        "q": "Bawang putih saya sudah bertukar coklat, masih boleh guna?",
+        "a": "Lebih baik tidak. Pahit daripada bawang putih hangus sudah larut ke dalam minyak dan tiada cara mengeluarkannya semula. Buang isi kuali, lap kuali itu, dan mula semula dengan minyak baharu."
+      },
+      {
+        "q": "Ikan bilis dimasukkan bila, di dalam minyak atau di atas mi?",
+        "a": "Goreng rangup dahulu dalam minyak, angkat dan ketepikan, kemudian tabur di atas mi selepas semuanya digaul. Kalau dibiar dalam sos ia menyerap air rebusan dan hilang rangupnya dalam beberapa minit."
+      },
+      {
+        "q": "Perlu ke guna minyak zaitun dara, tidak boleh minyak biasa?",
+        "a": "Boleh, tetapi hasilnya berbeza. Dalam hidangan yang sosnya hampir semua minyak, minyak neutral memberi pinggan yang neutral. Minyak zaitun dara membawa rasa hijau dan sedikit pedas yang memang menjadi tujuan hidangan ini."
+      },
+      {
+        "q": "Di mana boleh beli minyak zaitun Arabian Village di Malaysia?",
+        "a": "Di Berkat Madinah Store sahaja, dengan dua cawangan di Selangor serta kaunter Shopee dan TikTok Shop milik mereka sendiri. Tiada penjual sah yang lain di Malaysia, jadi semak sumbernya sebelum membeli."
+      }
+    ],
+    "related": [
+      {
+        "label": "Resepi mudah dengan minyak zaitun",
+        "path": "blog/resepi-mudah-dengan-minyak-zaitun",
+        "description": "Empat resepi ringkas dengan sukatan sudu besar: cicahan roti, perap ayam, sayur panggang dan pasta."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Bab haba, kerja dapur yang sesuai, dan apa yang berlaku kepada minyak zaitun di dalam kuali."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "minyak-zaitun-untuk-roti",
+    "slug": "minyak-zaitun-untuk-roti-dan-cicahan",
+    "seoTitle": "Minyak Zaitun untuk Roti: Panduan Pinggan Cicahan",
+    "metaTitle": "Minyak Zaitun untuk Roti: Panduan Pinggan Cicahan",
+    "metaDescription": "Cicah roti dengan minyak zaitun: roti canai, roti arab, sourdough dan roti benggali, za'atar dan dukkah dan balsamik, suhu hidangan dan sukatan.",
+    "focusKeyword": "minyak zaitun untuk roti",
+    "relatedKeywords": [
+      "cicahan minyak zaitun",
+      "minyak zaitun cicah roti",
+      "za'atar dan minyak zaitun",
+      "dukkah minyak zaitun",
+      "minyak zaitun dan balsamik",
+      "roti arab dengan minyak zaitun",
+      "roti canai dengan minyak zaitun",
+      "roti benggali bakar",
+      "cara hidang minyak zaitun",
+      "minyak zaitun dara untuk cicahan",
+      "suhu hidangan minyak zaitun"
+    ],
+    "category": "Hidangan dan Pasangan",
+    "tags": [
+      "Cicahan",
+      "Za'atar",
+      "Roti",
+      "Cara Hidang",
+      "Dapur Malaysia"
+    ],
+    "h1": "Minyak Zaitun untuk Roti: Cicahan, Za'atar dan Sukatannya",
+    "excerpt": "Sepinggan minyak yang tidak dipanaskan dan sekeping roti yang dicarik ialah ujian paling jujur yang pernah dihadapi sebotol minyak zaitun.",
+    "keyTakeaway": "Minyak zaitun untuk roti ialah cara guna yang paling sedikit menyembunyikan minyak: tiada haba, tiada asid, tiada bawang putih. Hidangkan pada suhu bilik dalam pinggan yang cetek, tuang satu sudu besar pada satu masa dan isi semula, carik roti yang berongga dan jangan memotongnya, kacau za'atar terus ke dalam minyak dan biarkan dukkah kering di mangkuk asing.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunUntukRotiHero",
+      "alt": "Pokok zaitun tua membingkai perkampungan di lereng bukit dan laut di belakangnya ketika senja"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-untuk-roti.jpg",
+    "intro": [
+      "Roti dan sepinggan minyak zaitun ialah cara hidang paling tua, dan paling susah untuk berselindung.",
+      "Tiada api, tiada cuka, tiada bawang putih yang menutup apa-apa.",
+      "Roti mana yang sesuai, apa yang za'atar, dukkah dan balsamik lakukan, dan berapa banyak dituang satu masa."
+    ],
+    "sections": [
+      {
+        "heading": "Kenapa cicahan tanpa haba menunjukkan watak sebenar minyak",
+        "id": "tanpa-haba",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mencicah ialah cara guna yang paling sedikit mengubah minyak. Haba menghalau sebatian meruap yang membawa rasa hijau dan denyut pedas, manakala dresing memotongnya dengan asid dan garam. Di atas roti, minyak sampai penuh: rasa buah dahulu, kemudian pahit, kemudian pedas di belakang tekak. Pinggan cicahan juga cepat mendedahkan botol yang sudah letih."
+          },
+          {
+            "type": "p",
+            "text": "Minyak yang lama terbiar terbuka di sebelah dapur akan berbunyi hambar di sini."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukRotiInline",
+            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+          }
+        ]
+      },
+      {
+        "heading": "Roti mana yang sesuai untuk dicicah",
+        "id": "roti-mana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Roti menentukan berapa banyak minyak sampai ke mulut anda dan dalam keadaan apa. Isi yang berongga dan kenyal mengambil kadar terkawal dan kekal bentuknya. Roti yang terlalu lembut basah terus ke tengah lalu menjadi berminyak, dan kraker kering pula patah."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Roti arab atau pita.** Carik, jangan potong — tepi carik memegang lebih banyak minyak.",
+              "**Sourdough.** Rongga besar mengambil minyak, kerak memberi pegangan.",
+              "**Roti canai panas.** Menjadi, tetapi ia sudah berlemak, jadi tuang lebih sedikit.",
+              "**Roti benggali.** Lembut dan cepat basah — bakar sehingga tepinya kering dahulu.",
+              "**Roti putih sandwic.** Langkau; ia meresap terus dan koyak."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukRotiInline",
+            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+          }
+        ]
+      },
+      {
+        "heading": "Za'atar, dukkah dan balsamik menarik ke tiga arah",
+        "id": "tiga-arah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga tambahan membawa sepinggan minyak ke tiga tempat berlainan. Za'atar menjadikannya berherba dan masam, dengan timi, sumak dan bijan. Dukkah menjadikannya berkacang dan rangup, campuran kering kacang serta biji panggang. Balsamik pula tajam dan memang tidak bercampur: cukanya duduk di bawah minyak sebagai manik gelap."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Za'atar dengan roti arab.** Satu sudu kecil bagi setiap sudu besar minyak, biar lima minit.",
+              "**Dukkah dengan sourdough.** Kekalkan kering dalam mangkuk sendiri, tekan roti berminyak ke dalamnya.",
+              "**Balsamik dengan roti artisan.** Minyak dahulu, cuka dititis di tengah, jangan dikacau.",
+              "**Garam kasar dengan roti canai.** Paling sedikit mengubah rasa minyak.",
+              "**Madu dengan roti benggali bakar.** Manis melawan pahit, untuk meja sarapan."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukRotiInline",
+            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+          },
+          {
+            "type": "p",
+            "text": "Pasangan minyak dengan timi itu dijual siap sebagai [minyak zaitun infusi timi liar](/products/infused-extra-virgin-olive-oil-wild-thyme), satu daripada enam rasa dalam [Koleksi Infusi](/products)."
+          }
+        ]
+      },
+      {
+        "heading": "Suhu hidangan dan berapa banyak dituang satu masa",
+        "id": "suhu-dan-sukatan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hidangkan minyak zaitun untuk roti pada suhu bilik, dan dapur Malaysia menguruskan itu tanpa bantuan. Yang menyusahkan ialah botol yang baru keluar dari peti sejuk: minyak sejuk menjadi keruh dan pekat, lalu hampir tiada aromanya keluar. Peti sejuk memang tidak perlu."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Bilangan orang",
+              "Minyak sepinggan",
+              "Cara isi semula"
+            ],
+            "rows": [
+              [
+                "Seorang",
+                "1 sudu besar",
+                "Terus dari botol"
+              ],
+              [
+                "Dua hingga empat",
+                "2 hingga 3 sudu besar",
+                "Setiap lima belas minit"
+              ],
+              [
+                "Enam atau lebih",
+                "Satu pinggan setiap dua orang",
+                "Isi setiap pinggan"
+              ],
+              [
+                "Meja mezze atau berbuka",
+                "Satu jag kecil",
+                "Tuang bila diminta"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukRotiInline",
+            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+          }
+        ]
+      },
+      {
+        "heading": "Menyusun hidangan cicahan untuk tetamu",
+        "id": "untuk-tetamu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hidangan cicahan mengambil masa dua minit dan satu keputusan sahaja: minyak keluar dahulu tanpa apa-apa, dan selebihnya menyusul. Tetamu yang sudah merasa minyak itu bersendirian tahu apa yang mereka cicah, dan mangkuk za'atar berhenti menjadi satu-satunya yang mereka ingat."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Panaskan roti dua minit dalam kuali kering, kemudian balut dengan kain.",
+              "Tuang lapisan cetek ke dalam pinggan putih supaya warnanya kelihatan.",
+              "Kacau za'atar ke dalam minyak; biarkan dukkah dan garam kering di mangkuk asing.",
+              "Carik roti di meja; roti yang dipotong awal kering menunggu.",
+              "Isi semula dari botol, jangan biarkan pinggan penuh terbiar."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukRotiInline",
+            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+          }
+        ]
+      },
+      {
+        "heading": "Silap yang biasa berlaku pada pinggan cicahan",
+        "id": "silap-biasa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kebanyakan pinggan cicahan gagal atas sebab yang tiada kaitan dengan resipi. Pinggan yang dituang sejam awal sudah bertemu udara sepanjang masa itu. Botol yang disimpan di atas dapur pula sudah habis riwayatnya sebelum sampai ke meja."
+          },
+          {
+            "type": "p",
+            "text": "Minyak yang anda sanggup rasa kosong itulah yang berbaloi dituang ke dalam pinggan. Lihat [saiz botol dan harga](/products) dan [cara simpan minyak zaitun](/blog/cara-simpan-minyak-zaitun)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunUntukRotiInline",
+            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Meletakkannya di atas meja",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Suhu bilik, pinggan putih yang cetek, satu sudu besar pada satu masa, dan roti yang dicarik bukan dipotong. Rasa minyak itu kosong dahulu, asingkan za'atar dan dukkah, kemudian isi semula."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Minyak zaitun jenis mana paling sesuai untuk mencicah roti?",
+        "a": "Minyak zaitun dara, kerana mencicah ialah cara guna yang paling sedikit menutup minyak. Gred yang ditapis sudah kehilangan sebahagian besar aromanya. Kesegaran sama penting dengan gred: botol yang baru dibuka terasa lebih terang."
+      },
+      {
+        "q": "Berapa banyak minyak zaitun patut dituang dalam satu pinggan cicahan?",
+        "a": "Kira-kira satu sudu besar bagi seorang, sebagai lapisan cetek dan bukan lopak yang dalam. Lapisan nipis dalam pinggan lebar bertemu banyak udara, jadi tuang sedikit dan isi semula dari botol."
+      },
+      {
+        "q": "Boleh ke cicah roti canai dengan minyak zaitun?",
+        "a": "Boleh, dan ia menjadi selagi roti canai itu masih panas. Cuma roti canai sudah membawa lemaknya sendiri, jadi tuang kira-kira separuh daripada sukatan untuk roti arab, dan pilih garam kasar berbanding za'atar."
+      },
+      {
+        "q": "Kenapa balsamik duduk di bawah minyak zaitun dan tidak bercampur?",
+        "a": "Cuka berasaskan air dan lebih tumpat daripada minyak, jadi ia turun lalu kekal sebagai manik gelap yang berasingan melainkan sesuatu dipukul untuk mengikat kedua-duanya. Di atas pinggan cicahan, pemisahan itu memang tujuannya."
+      },
+      {
+        "q": "Bagaimana cara membuat cicahan za'atar dan minyak zaitun?",
+        "a": "Tuang lapisan cetek minyak ke dalam pinggan, masukkan kira-kira satu sudu kecil za'atar bagi setiap sudu besar minyak, kacau sekali dan biarkan lima minit supaya sumak dan timi mengembang. Hidang dengan roti dicarik."
+      },
+      {
+        "q": "Roti benggali sesuai ke untuk dicicah dengan minyak zaitun?",
+        "a": "Ia lembut dan cepat basah kalau dicicah terus. Bakar keping tebal dalam kuali kering sehingga tepinya kering dan rangup, barulah cicah — kerak itu memberi pegangan yang tiada pada roti yang masih lembut."
+      },
+      {
+        "q": "Di mana boleh beli minyak zaitun Arabian Village di Malaysia?",
+        "a": "Di Berkat Madinah Store sahaja, satu-satunya penjual sah di Malaysia: cawangan Ampang Jaya dan Batu Caves di Selangor, serta kaunter Shopee dan TikTok Shop milik mereka sendiri. Tiada penjual lain membawa jenama ini."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun untuk salad dan hidangan sejuk",
+        "path": "blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
+        "description": "Kerja sejuk yang lain: nisbah dresing, kerabu dan ulam, serta bila minyak dituang tanpa dipanaskan."
+      },
+      {
+        "label": "Minyak zaitun Palestin: dari ladang ke botol",
+        "path": "blog/minyak-zaitun-palestin-dari-ladang-ke-botol",
+        "description": "Dusun, tuaian dan perahan sejuk di sebalik minyak yang duduk dalam pinggan cicahan itu."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi enam rasa."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 5 ---------------- */
+  {
+    "id": "minyak-zaitun-vs-minyak-sawit",
+    "slug": "minyak-zaitun-vs-minyak-sawit",
+    "seoTitle": "Minyak Zaitun vs Minyak Sawit: Guna Mana, Bila?",
+    "metaTitle": "Minyak Zaitun vs Minyak Sawit: Guna Mana, Bila?",
+    "metaDescription": "Banding minyak zaitun dara dan minyak sawit sebagai lemak masakan: takat berasap, rasa, kos seliter, dan kerja dapur mana untuk minyak mana.",
+    "focusKeyword": "minyak zaitun vs minyak sawit",
+    "relatedKeywords": [
+      "minyak sawit vs minyak zaitun",
+      "beza minyak zaitun dan minyak sawit",
+      "takat berasap minyak sawit",
+      "takat asap minyak zaitun dara",
+      "minyak zaitun ganti minyak masak",
+      "minyak sawit untuk goreng rendam",
+      "kos minyak zaitun seliter",
+      "minyak mana untuk tumis",
+      "minyak zaitun dara di Malaysia",
+      "banding minyak masak Malaysia"
+    ],
+    "category": "Panduan Dapur",
+    "tags": [
+      "Minyak Zaitun vs Minyak Sawit",
+      "Perbandingan Minyak",
+      "Dapur Malaysia",
+      "Teknik Memasak",
+      "Kos Dapur"
+    ],
+    "h1": "Minyak Zaitun vs Minyak Sawit dalam Dapur Malaysia",
+    "excerpt": "Satu ditapis untuk api besar, satu lagi diperah sejuk untuk rasanya. Banding takat berasap, rasa, kos seliter dan kerja dapur mana untuk minyak mana.",
+    "keyTakeaway": "Minyak zaitun vs minyak sawit bukan soal mana lebih hebat, tetapi kerja mana untuk minyak mana. Minyak sawit ditapis untuk tahan haba tinggi dan kuantiti besar, dan takat berasapnya memang lebih tinggi. Minyak zaitun dara perahan sejuk dibeli kerana rasanya, dan paling berbaloi pada hidangan yang tidak dipanaskan lama.",
+    "datePublished": "2026-08-26",
+    "dateModified": "2026-08-26",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunVsMinyakSawitHero",
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja makmal dengan kelalang sampel"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-vs-minyak-sawit.jpg",
+    "intro": [
+      "Di hampir setiap dapur di Malaysia, minyak sawit ialah minyak lalai: murah, tahan panas, dan memang dikeluarkan di negara ini sendiri.",
+      "Minyak zaitun dara pula datang dalam botol kecil dan dituang dengan lebih berhati-hati.",
+      "Kita banding kedua-duanya sebagai lemak masakan sahaja: takat berasap, rasa, kos seliter, dan kerja dapur mana untuk yang mana."
+    ],
+    "sections": [
+      {
+        "heading": "Beza asas antara minyak zaitun dan minyak sawit",
+        "id": "beza-asas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kedua-duanya lemak masakan, tetapi dibuat untuk kerja yang berlainan. Minyak sawit ditapis sehingga hampir tiada rasa dan tahan haba tinggi, jadi ia sesuai untuk kuali penuh dan api besar. Minyak zaitun dara pula tidak ditapis langsung: ia diperah daripada buah dan dibotolkan dengan rasa buah itu masih ada."
+          },
+          {
+            "type": "note",
+            "title": "Kalau soalan sebenar anda ialah kesihatan",
+            "text": "Artikel ini membandingkan dua minyak sebagai lemak masakan sahaja. Soalan tentang pemakanan adalah untuk pakar diet atau doktor, bukan untuk penjual minyak."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakSawitInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Takat berasap: minyak sawit memang lebih tinggi",
+        "id": "takat-berasap",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ini bahagian yang selalu diputarbelitkan, jadi kita katakan terus: minyak masak sawit tahan haba lebih tinggi daripada minyak zaitun dara. Sebagaimana angka yang kami terbitkan, minyak sawit berada sekitar 230 darjah Celsius manakala minyak zaitun dara extra berada dalam julat 190 hingga 210 darjah. Untuk goreng rendam, itu memang kelebihan sawit."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Ciri",
+              "Minyak zaitun dara extra",
+              "Minyak masak sawit"
+            ],
+            "rows": [
+              [
+                "Takat berasap",
+                "190 hingga 210 darjah",
+                "Kira-kira 230 darjah"
+              ],
+              [
+                "Rasa",
+                "Buah, sedikit pahit, pedas halus",
+                "Hampir neutral"
+              ],
+              [
+                "Pemprosesan",
+                "Perahan sejuk, tanpa penapisan",
+                "Ditapis untuk kestabilan haba"
+              ],
+              [
+                "Saiz botol biasa",
+                "250 ml dan 500 ml",
+                "Botol beberapa liter"
+              ],
+              [
+                "Kerja terbaiknya",
+                "Salad, cicah, renjis akhir, tumis",
+                "Goreng rendam, wok api besar"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakSawitInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Rasa: satu neutral, satu memang mahu dirasa",
+        "id": "rasa-dua-minyak",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak sawit ditapis supaya tidak terasa, dan itu bukan kekurangan tetapi memang tujuannya. Sambal, rempah kari dan ikan goreng sepatutnya berdiri sendiri tanpa minyak masuk campur. Minyak zaitun dara sebaliknya: ia membawa rasa buah, sedikit pahit di hujung lidah dan denyut pedas di kerongkong, dan rasa itu sampai ke pinggan."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu menukar minyak dalam resepi bukan pertukaran satu lawan satu. Untuk perbandingan yang lebih luas merentas minyak masak tempatan, lihat [minyak zaitun vs minyak masak lain](/blog/minyak-zaitun-vs-minyak-masak-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakSawitInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kos seliter: dua kelas harga yang berbeza",
+        "id": "kos-seliter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ini beza yang paling besar dan paling jujur. Minyak sawit ditanam, dikisar dan dibotolkan di negara ini, jadi harga seliternya rendah dan botolnya besar. Minyak zaitun dara diperah sekali setahun di luar negara dan sampai ke sini dalam botol 250 ml atau 500 ml. Bandingkan harga seliter, bukan harga sebotol."
+          },
+          {
+            "type": "p",
+            "text": "Kerana itu tiada siapa mencadangkan anda menggoreng seliter dengan minyak zaitun dara. Sebotol kecil bertahan berbulan kalau ia dipakai secara sudu, bukan secara kuali. [Lihat saiz dan harga di halaman produk](/products)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakSawitInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kerja dapur mana untuk minyak mana",
+        "id": "kerja-dapur",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cara paling mudah memilih ialah tanya dua soalan: berapa banyak minyak kerja ini telan, dan adakah minyak itu patut dirasa dalam hidangan siap. Kuantiti besar dan api penuh memihak kepada minyak sawit. Kuantiti sudu dan hidangan yang minyaknya sebahagian daripada rasa memihak kepada minyak zaitun dara."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Goreng rendam sekuali penuh seperti pisang goreng atau keropok: minyak sawit.",
+              "Wok api penuh untuk kuey teow atau nasi goreng: minyak sawit.",
+              "Tumis bawang putih dan sayur pada api sederhana: minyak zaitun dara sesuai.",
+              "Sos salad, cicah roti dan renjis akhir sebelum hidang: minyak zaitun dara."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakSawitInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa kedua-duanya boleh duduk dalam satu dapur",
+        "id": "satu-dapur-dua-botol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Rumah yang paling senang memakai minyak zaitun bukan rumah yang membuang minyak sawit. Ia rumah yang menyimpan kedua-duanya dan tahu bila hendak mencapai yang mana. Botol besar minyak sawit duduk dekat dapur untuk kerja panas dan kerja kuantiti. Botol kecil minyak zaitun dara duduk dalam kabinet, jauh daripada haba."
+          },
+          {
+            "type": "p",
+            "text": "Mula dengan satu kerja sahaja, bukan dengan menukar seluruh dapur. Sos salad atau renjis atas sayur panggang sudah cukup. Panduan penuh ada dalam [panduan minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunVsMinyakSawitInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Dua alat, bukan dua lawan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Minyak zaitun vs minyak sawit bukan pertandingan dengan pemenang tetap. Satu ditapis untuk tahan haba dan kuantiti, satu lagi diperah sejuk supaya rasanya sampai ke pinggan. Dapur yang paling praktikal di Malaysia menyimpan kedua-duanya."
+        },
+        {
+          "type": "p",
+          "text": "Kalau mahu mula, mula dengan botol kecil dan satu kerja. [Lihat saiz botol](/products) atau [tempat membeli](/shop)."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Boleh ke minyak zaitun ganti minyak sawit untuk goreng rendam?",
+        "a": "Untuk sekuali penuh, minyak sawit lebih praktikal: takat berasapnya lebih tinggi dan kuantiti yang diperlukan sekali gus jauh lebih besar. Minyak zaitun dara lebih sesuai untuk goreng cetek dan tumis pada api sederhana."
+      },
+      {
+        "q": "Minyak mana lebih tinggi takat berasapnya?",
+        "a": "Minyak masak sawit. Sebagaimana angka yang kami terbitkan, sawit berada sekitar 230 darjah Celsius dan minyak zaitun dara extra dalam julat 190 hingga 210 darjah. Untuk kerja api penuh, itu memang kelebihan sawit."
+      },
+      {
+        "q": "Minyak mana lebih baik untuk kesihatan?",
+        "a": "Itu soalan untuk pakar pemakanan atau doktor, bukan untuk penjual minyak. Laman ini membandingkan kedua-duanya sebagai lemak masakan sahaja: takat berasap, rasa, tekstur dan kos seliter. Sila rujuk profesional kesihatan untuk bab pemakanan."
+      },
+      {
+        "q": "Kenapa minyak zaitun jauh lebih mahal seliter daripada minyak sawit?",
+        "a": "Minyak sawit dikeluarkan dan dibotolkan di negara ini dalam kuantiti besar. Minyak zaitun dara diperah sekali setahun di luar negara, dibotolkan dalam kaca gelap dan dihantar ke sini. Semak harga mengikut saiz di halaman produk."
+      },
+      {
+        "q": "Boleh campur minyak zaitun dengan minyak sawit dalam satu kuali?",
+        "a": "Boleh, dan hasilnya di tengah-tengah: sedikit rasa zaitun dengan kos yang lebih rendah. Tetapi campuran itu tidak menaikkan takat berasap minyak zaitun, jadi ia bukan jalan pintas untuk memasak pada api yang lebih tinggi."
+      },
+      {
+        "q": "Minyak zaitun sesuai tak untuk masakan Melayu yang berempah?",
+        "a": "Untuk tumis rempah pada api sederhana ia menjadi, tetapi rasa hijaunya akan hilang dalam lauk bersantan yang direbus lama. Simpan minyak zaitun dara untuk kerja yang rasanya masih terasa, seperti sayur panggang dan sos salad."
+      },
+      {
+        "q": "Perlu ke simpan dua botol minyak dalam dapur kecil?",
+        "a": "Ramai memang berbuat begitu kerana kerjanya berlainan. Sebotol besar minyak sawit untuk goreng dan wok, dan sebotol 250 ml minyak zaitun dara dalam kabinet untuk salad, cicah roti dan renjis akhir."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun vs minyak masak lain",
+        "path": "blog/minyak-zaitun-vs-minyak-masak-lain",
+        "description": "Minyak sawit, kelapa dara, bijan, kacang tanah dan zaitun dibandingkan sebagai satu set."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Kaedah masakan mana yang sesuai dengan minyak zaitun, dan bila lebih baik guna minyak lain."
+      },
+      {
+        "label": "Minyak zaitun dara Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun perahan sejuk asal Palestin dalam saiz 250 ml dan 500 ml, serta Koleksi Infusi."
+      },
+      {
+        "label": "Tempat membeli dan cawangan",
+        "path": "shop",
+        "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
       }
     ]
   },

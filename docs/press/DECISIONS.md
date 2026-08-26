@@ -78,3 +78,19 @@ left alone because they are edits to live articles rather than to the round: the
 article's "two or three months" opened against the eight-week rule everywhere else, and the live
 smoke-point article's "120 to 160 °C" tumis range against the 140–180 °C `llms.txt` publishes.
 
+## Round 5 decisions — 2026-08-26
+
+| # | Decision | Source |
+|---|---|---|
+| D39 | **6 articles per language, 18 in all** — the same user ruling as D15, D22 and D29 | User, 2026-08-26 |
+| D40 **assumed** | **Malay demand has reached zero.** Round 3 called it exhausted at the head, round 4 found a 0–10/mo tail; this round every Malay seed returned **0/mo** and the only term with a number against it is `minyak zaitun vs minyak sawit` at 10. The six Malay articles are published for topic-map completeness and AI-answer coverage, not for measurable search demand, and that is recorded rather than dressed up | Keyword Planner, geo 2458, pulled 2026-08-26 |
+| D41 **assumed** | **`minyak zaitun vs minyak sawit` is taken despite being skipped in round 4** for overlapping the live `minyak-zaitun-vs-minyak-masak-lain`. It is the only Malay term left with volume, and the two are separated by angle: the live page compares olive oil against Malaysian cooking oils as a set, this one is only about palm | D40 |
+| D42 **assumed** | **The three machine briefs were corrected, not the articles.** All three `llms*.txt` templates flatly forbade refrigeration while every live storage article says it is unnecessary and that cold cloudiness is normal and reverses. Two rounds of drafts have been written against the softer, correct version, so the briefs were the outdated side. This is the first time a round has changed a published surface to resolve a contradiction rather than moving the new article (cf. D28) | The live articles and the briefs disagreed; the articles are right |
+| D43 **assumed** | **Two frames are barred from heroes in code**, not by memory: `journey-08-final.png` and `HeroAVOliveOilBottleInTheField.png` put the product bottle large enough that the label reads at 1280 px. Fifth instance of that rejection. ⚠ Both are **already live as heroes** on three articles from rounds 2–4, which were not re-cut | `derive-images.py` now asserts it |
+
+**A brief of mine carried a false fact for the second round running.** Round 4's said coconut oil
+sets solid at 28–32 °C; round 5's said "frying oil is not reused" is this site's advice, when the
+live `minyak-zaitun-untuk-goreng` allows two or three shallow-fry uses with filtering. In both
+cases a writer or a reviewer caught it. **Brief facts need checking against the corpus the same way
+draft facts do** — the brief is not evidence.
+

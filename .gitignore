@@ -30,3 +30,4 @@ dist-ssr
 __pycache__/
 *.pyc
 docs/press/round-4/gen/
+docs/press/round-5/gen/

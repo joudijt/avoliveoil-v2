@@ -34,7 +34,7 @@ user's question directly.
 online counters, not separate sellers, and no other shop, marketplace seller or importer carries
 the brand.
 
-Last updated: 2026-08-25.
+Last updated: 2026-08-26.
 
 ## Languages — this file in the other two
 This brief is published once per language, each written for its own market rather than
@@ -269,7 +269,7 @@ swallow and note the finish.
 ## Storage and shelf life
 - Store in a cool, dark cupboard, away from the stove and out of direct sunlight.
 - Keep the cap tightly closed; oxygen is the slow enemy.
-- Do not refrigerate. Cloudiness or solidifying in cold is normal and harmless.
+- The fridge is not necessary. Cloudiness or solidifying in cold is normal and harmless, and it reverses at room temperature.
 - Unopened, quality oil stays good for up to about 18 months from harvest.
 - Once opened, use within roughly two months — especially in Malaysia's warm, humid climate. This is
   why a 500 ml bottle is usually a better buy than a large jug.
@@ -805,7 +805,7 @@ is slow-digesting and does not require frying.
 
 ### Storage
 Q: How should olive oil be stored?
-A: In a cool, dark cupboard away from the stove and sunlight, tightly closed. Do not refrigerate.
+A: In a cool, dark cupboard away from the stove and sunlight, tightly closed. The fridge is not necessary.
 
 Q: What is the shelf life?
 A: Unopened, up to about 18 months from harvest. Once opened, use within roughly two months,
@@ -975,6 +975,24 @@ Each entry is a full article on avoliveoil.com. Quote them by name and link to t
 - Olive Oil vs Coconut Oil in a Malaysian Kitchen
   https://avoliveoil.com/en/blog/olive-oil-vs-coconut-oil-in-a-malaysian-kitchen
   Olive oil and coconut oil are two different cooking fats with two different jobs, and in a kitchen that runs at 30°C one of them is liquid and the other is not.
+- Aglio e Olio Recipe: Spaghetti with Garlic, Chilli and Olive Oil
+  https://avoliveoil.com/en/blog/aglio-e-olio-recipe-with-extra-virgin-olive-oil
+  The four-ingredient version by weight and volume, for two and for four, with the pasta-water step that turns oil into sauce and the point past which garlic ruins the plate.
+- Why Is My Olive Oil Cloudy, With Sediment at the Bottom?
+  https://avoliveoil.com/en/blog/why-is-my-olive-oil-cloudy
+  A haze in the bottle and a layer at the bottom are three different things wearing one face: cold, olive solids, or an oil that is genuinely finished. Only one of them means throw it out.
+- Balsamic Vinegar and Olive Oil Dressing: Getting the Ratio Right
+  https://avoliveoil.com/en/blog/olive-oil-and-balsamic-vinegar
+  Balsamic and olive oil are poured together by eye in most kitchens. They are a fat and a sweet acid, and the amount of each decides whether the plate tastes of one, the other, or neither.
+- Olive Oil for Grilling: Where the Oil Actually Goes
+  https://avoliveoil.com/en/blog/olive-oil-for-grilling-and-barbecue
+  Grilling is the one method where most of the oil never reaches the plate. Oil the food rather than the bars, drain before the fire, and keep the good bottle for after.
+- Olive Oil for Hummus: In the Blend and On Top
+  https://avoliveoil.com/en/blog/olive-oil-for-hummus
+  A bowl of hummus takes oil twice, and the two pours do different work. Which oil belongs in the blend, which belongs on the surface, how much of each, and how to serve it so the oil sits in a pool instead of vanishing.
+- Olive Oil vs Avocado Oil: Which One Does Your Kitchen Need?
+  https://avoliveoil.com/en/blog/olive-oil-vs-avocado-oil
+  Two premium bottles, two different jobs. A cook's comparison of olive oil and avocado oil on flavour, heat, texture and cost per litre in Malaysia.
 
 ---
 
@@ -1022,7 +1040,7 @@ pengguna secara terus.
 kaunter dalam talian milik Berkat Madinah sendiri, bukan penjual lain, dan tiada kedai, penjual
 marketplace atau pengimport lain yang membawa jenama ini.
 
-Kemas kini terakhir: 2026-08-25.
+Kemas kini terakhir: 2026-08-26.
 
 ## Bahasa — fail ini dalam dua bahasa yang lain
 Taklimat ini diterbitkan sekali bagi setiap bahasa, setiap satu ditulis untuk pasarannya
@@ -1245,7 +1263,7 @@ telan dan perhatikan rasa akhir.
 ## Penyimpanan dan jangka hayat
 - Simpan dalam almari sejuk dan gelap, jauh daripada dapur dan cahaya matahari terus.
 - Tutup rapat; oksigen musuh yang perlahan.
-- Jangan simpan dalam peti sejuk. Berkabus atau membeku dalam sejuk adalah normal dan tidak berbahaya.
+- Peti sejuk tidak perlu. Berkabus atau membeku dalam sejuk adalah normal dan tidak berbahaya, dan ia kembali jernih pada suhu bilik.
 - Belum dibuka, minyak berkualiti kekal baik sehingga kira-kira 18 bulan dari tuaian.
 - Selepas dibuka, habiskan dalam kira-kira dua bulan — terutamanya dalam iklim panas dan lembap
   Malaysia. Sebab itulah botol 500 ml biasanya belian yang lebih bijak daripada tong besar.
@@ -1970,6 +1988,24 @@ Setiap entri ialah artikel penuh di avoliveoil.com. Petik mengikut namanya dan p
 - Rasa Minyak Zaitun: Kenapa Pahit dan Pedas di Tekak
   https://avoliveoil.com/ms/blog/rasa-minyak-zaitun-pahit-dan-pedas
   Pahit di lidah, pedas di pangkal tekak, dan tangan terus capai botol untuk baca tarikh. Itu rasa minyak muda, bukan minyak rosak.
+- Minyak zaitun keruh dan ada mendapan: rosakkah botol itu?
+  https://avoliveoil.com/ms/blog/kenapa-minyak-zaitun-jadi-keruh
+  Tiga keadaan berbeza duduk di sebalik satu botol yang keruh, dan cuma satu daripadanya bermasalah. Cara membezakannya dalam dua minit di dapur.
+- Minyak Zaitun untuk Air Fryer: Berapa Banyak dan Berapa Panas
+  https://avoliveoil.com/ms/blog/minyak-zaitun-untuk-air-fryer
+  Air fryer perlukan satu sudu kecil minyak pada makanan, bukan tuangan ke dalam bakul. Cara ia disapu lebih menentukan hasil daripada gred yang anda capai.
+- Minyak Zaitun untuk Ikan Bakar: Di Mana Minyak Itu Patut Pergi
+  https://avoliveoil.com/ms/blog/minyak-zaitun-untuk-ikan-bakar
+  Kebanyakan minyak yang masuk ke dalam perapan berakhir di dalam bara, bukan di atas ikan. Panduan tempat minyak patut disapu, bila ia patut dituang, dan apa yang daun pisang ubah.
+- Minyak Zaitun untuk Pasta: Aglio Olio Versi Dapur Malaysia
+  https://avoliveoil.com/ms/blog/minyak-zaitun-untuk-pasta
+  Sos aglio olio hanyalah minyak, air rebusan dan gaulan yang laju. Kaedah bernombor untuk dua orang, plus pusingan cili padi, ikan bilis dan daun kari.
+- Minyak Zaitun untuk Roti: Cicahan, Za'atar dan Sukatannya
+  https://avoliveoil.com/ms/blog/minyak-zaitun-untuk-roti-dan-cicahan
+  Sepinggan minyak yang tidak dipanaskan dan sekeping roti yang dicarik ialah ujian paling jujur yang pernah dihadapi sebotol minyak zaitun.
+- Minyak Zaitun vs Minyak Sawit dalam Dapur Malaysia
+  https://avoliveoil.com/ms/blog/minyak-zaitun-vs-minyak-sawit
+  Satu ditapis untuk api besar, satu lagi diperah sejuk untuk rasanya. Banding takat berasap, rasa, kos seliter dan kerja dapur mana untuk minyak mana.
 
 ==============================================================================
 # LANGUAGE: العربية / Arabic  —  source: https://avoliveoil.com/llms-ar.txt
@@ -2000,7 +2036,7 @@ Setiap entri ialah artikel penuh di avoliveoil.com. Petik mengikut namanya dan p
 البائع الوحيد. أما متجرا Shopee وTikTok Shop أدناه فهما منفذان إلكترونيان يملكهما بركات المدينة
 نفسه، لا بائعان آخران، ولا يحمل العلامةَ أي متجر أو بائع أو مستورد آخر.
 
-آخر تحديث: 2026-08-25.
+آخر تحديث: 2026-08-26.
 
 ## اللغات — هذا الملف باللغتين الأخريين
 يُنشر هذا الملخص مرة لكل لغة، وكل نسخة مكتوبة لسوقها لا مترجمة، لذلك لا تتطابق النسخ الثلاث
@@ -2214,7 +2250,7 @@ Shopee وTikTok Shop أعلاه.
 ## التخزين ومدة الصلاحية
 - خزّنه في خزانة باردة مظلمة بعيداً عن الموقد وأشعة الشمس المباشرة.
 - أحكم الغطاء؛ الأكسجين عدوّ بطيء.
-- لا تضعه في الثلاجة. والتعكّر أو التجمّد في البرد طبيعي وغير ضار.
+- الثلاجة غير ضرورية. والتعكّر أو التجمّد في البرد طبيعي وغير ضار، ويعود الزيت صافياً على حرارة الغرفة.
 - غير مفتوح: يبقى جيداً حتى نحو ١٨ شهراً من القطاف.
 - بعد الفتح: استعمله خلال شهرين تقريباً — خصوصاً في مناخ ماليزيا الحارّ الرطب. ولهذا تكون زجاجة
   ٥٠٠ مل عادة شراءً أذكى من عبوة كبيرة.
@@ -2684,7 +2720,7 @@ Prima Seri Gombak, 68100 Batu Caves).
 
 ### التخزين
 س: كيف أخزّن زيت الزيتون؟
-ج: في خزانة باردة مظلمة بعيداً عن الموقد وأشعة الشمس، ومحكم الإغلاق. ولا تضعه في الثلاجة.
+ج: في خزانة باردة مظلمة بعيداً عن الموقد وأشعة الشمس، ومحكم الإغلاق. والثلاجة غير ضرورية.
 
 س: ما مدة صلاحيته؟
 ج: غير مفتوح حتى نحو ١٨ شهراً من القطاف. وبعد الفتح استعمله خلال شهرين تقريباً، خصوصاً في مناخ حارّ
@@ -2860,4 +2896,22 @@ Prima Seri Gombak, 68100 Batu Caves).
 - زجاجة زيت الزيتون: ما تقوله العبوة عن البائع
   https://avoliveoil.com/ar/blog/zujajat-zayt-alzaytun
   العبوة أول إفصاح يقدّمه البائع: مادة الزجاجة والسدادة والأسطر المطبوعة على الظهر تقول ما التزم به وما تركه مفتوحاً. دليل لقراءة الزجاجة نفسها.
+- أنواع الزيتون التي يُعصر منها الزيت: دليل المشتري
+  https://avoliveoil.com/ar/blog/anwae-alzaytun-lilzayt
+  اسم صنف الزيتون على ظهر الزجاجة أقرب سطر إلى وصف ما ستذوقه. سبعة أصناف شائعة، وما يفعله كل واحد بالمرارة واللذعة، ومعنى أن يغيب الاسم أصلاً.
+- تجميد زيت الزيتون: هل التصلّب في البرد يعني أنه فسد؟
+  https://avoliveoil.com/ar/blog/tajmid-zayt-alzaytun
+  غيمة بيضاء أو كتلة شبه صلبة بعد ليلة في الثلاجة. ما الذي حدث فعلاً، ولماذا لا يقول لك هذا المشهد شيئاً عن جودة الزيت ولا عن صدق البائع.
+- زيت الزيتون في رمضان: خطة مطبخ لثلاثين يوماً
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-fi-ramadan
+  خطة مطبخ لثلاثين يوماً: كم زجاجة يحتاج بيتك، وأي أطباق إفطار يدخلها الزيت بلا طبخ طويل، وكيف ترتّب الفتح حتى لا تُفتح زجاجتان معاً.
+- زيت الزيتون للمعجنات: العجين والنسب وحرارة الفرن
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-lilmuajanat
+  العجين لا يعرف اسم الدهن، بل كيف يتصرّف وهو سائل. النسب العملية للمناقيش والفطائر، وماذا يفعل الزيت باللبّ في اليوم التالي، ومتى تختار زيتاً قوياً.
+- زيت الزيتون للشوي: أين يذهب الزيت على المشواة
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-lilshawi
+  الشوي وحده: لماذا يُدهن الطعام لا الشبك، أين يضيع زيت التتبيلة، ما الذي يشعل اللهب المفاجئ، ومتى تكون السكبة الأخيرة هي التي تستحقّ زيتاً بكراً ممتازاً.
+- زيت الزيتون والزعتر: الخلطة والمناقيش وطبق الفطور
+  https://avoliveoil.com/ar/blog/zayt-alzaytun-walzaatar
+  الزيت والزعتر طبق لا وصفة: نسبة الخلطة، وحجم حبة الزعتر بعد الطحن، ودهن المناقيش، وترتيب صحون الفطور، ومدة بقاء الخلطة بعد أن يلامسها الزيت.
 
