@@ -55,7 +55,7 @@ export const AR_ARTICLES: Article[] = [
 
     hero: {
       src: 'bottleField',
-      alt: 'زجاجة زيت زيتون بكر ممتاز من القرية العربية داخل بستان زيتون وقت الغروب',
+      alt: 'Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki',
     },
     ogImage: '/og/blog-olive-oil-popularity-malaysia.jpg',
 
@@ -360,7 +360,7 @@ export const AR_ARTICLES: Article[] = [
 
     hero: {
       src: 'pouringField',
-      alt: 'زيت زيتون بكر ممتاز طازج يُسكب من إبريق إلى وعاء بجانب بستان زيتون',
+      alt: 'Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki',
     },
     ogImage: '/og/blog-evoo-health-benefits-families.jpg',
 
@@ -650,7 +650,7 @@ export const AR_ARTICLES: Article[] = [
 
     hero: {
       src: 'bottling',
-      alt: 'زيت زيتون بكر ممتاز حديث العصر يُعبّأ ويُختم في المعصرة',
+      alt: 'Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut',
     },
     ogImage: '/og/blog-choose-authentic-evoo-malaysia.jpg',
 
@@ -968,7 +968,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytZaytunFalastiniHero",
-      "alt": "زيت زيتون فلسطيني أخضر ذهبي يُسكب من زجاجة داكنة بجانب أغصان زيتون وثمار طازجة"
+      "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
     },
     "ogImage": "/og/blog-zayt-zaytun-falastini.jpg",
     "intro": [
@@ -995,7 +995,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunFalastiniInline",
-            "alt": "بستان زيتون على مصاطب حجرية في الخريف وأيادٍ تقطف الثمار فوق قماش مفروش تحت الشجرة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -1014,7 +1014,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunFalastiniInline",
-            "alt": "بستان زيتون على مصاطب حجرية في الخريف وأيادٍ تقطف الثمار فوق قماش مفروش تحت الشجرة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -1034,7 +1034,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunFalastiniInline",
-            "alt": "بستان زيتون على مصاطب حجرية في الخريف وأيادٍ تقطف الثمار فوق قماش مفروش تحت الشجرة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -1079,7 +1079,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunFalastiniInline",
-            "alt": "بستان زيتون على مصاطب حجرية في الخريف وأيادٍ تقطف الثمار فوق قماش مفروش تحت الشجرة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -1105,7 +1105,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunFalastiniInline",
-            "alt": "بستان زيتون على مصاطب حجرية في الخريف وأيادٍ تقطف الثمار فوق قماش مفروش تحت الشجرة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -1124,7 +1124,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunFalastiniInline",
-            "alt": "بستان زيتون على مصاطب حجرية في الخريف وأيادٍ تقطف الثمار فوق قماش مفروش تحت الشجرة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           },
           {
             "type": "p",
@@ -1247,7 +1247,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressZaytZaytunLilTabkhHero",
-      "alt": "يد تسكب زيت الزيتون للطبخ من زجاجة داكنة فوق مقلاة على موقد مطبخ"
+      "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
     },
     "ogImage": "/og/blog-zayt-zaytun-lil-tabkh.jpg",
     "intro": [
@@ -1276,7 +1276,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunLilTabkhInline",
-            "alt": "طبق سلطة وخبز وصحن تغميس بجانب زجاجة زيت زيتون بكر ممتاز على طاولة مطبخ"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -1331,7 +1331,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunLilTabkhInline",
-            "alt": "طبق سلطة وخبز وصحن تغميس بجانب زجاجة زيت زيتون بكر ممتاز على طاولة مطبخ"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -1355,7 +1355,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunLilTabkhInline",
-            "alt": "طبق سلطة وخبز وصحن تغميس بجانب زجاجة زيت زيتون بكر ممتاز على طاولة مطبخ"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -1378,7 +1378,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunLilTabkhInline",
-            "alt": "طبق سلطة وخبز وصحن تغميس بجانب زجاجة زيت زيتون بكر ممتاز على طاولة مطبخ"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -1401,7 +1401,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunLilTabkhInline",
-            "alt": "طبق سلطة وخبز وصحن تغميس بجانب زجاجة زيت زيتون بكر ممتاز على طاولة مطبخ"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -1439,7 +1439,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunLilTabkhInline",
-            "alt": "طبق سلطة وخبز وصحن تغميس بجانب زجاجة زيت زيتون بكر ممتاز على طاولة مطبخ"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           },
           {
             "type": "p",
@@ -1554,7 +1554,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressHifzZaytAlzaytunHero",
-      "alt": "زيت زيتون ينسكب من أنبوب فولاذي إلى حوض مفتوح داخل صالة عصر، وخزانات فولاذية ومقياس ضغط حوله."
+      "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
     },
     "ogImage": "/og/blog-hifz-zayt-alzaytun.jpg",
     "intro": [
@@ -1583,7 +1583,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHifzZaytAlzaytunInline",
-            "alt": "زجاجة زجاجية داكنة من زيت زيتون القرية العربية على طاولة خشبية، وأوراق زيتون في المقدمة وبستان زيتون غير واضح في الخلفية."
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           },
           {
             "type": "p",
@@ -1611,7 +1611,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHifzZaytAlzaytunInline",
-            "alt": "زجاجة زجاجية داكنة من زيت زيتون القرية العربية على طاولة خشبية، وأوراق زيتون في المقدمة وبستان زيتون غير واضح في الخلفية."
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           },
           {
             "type": "note",
@@ -1635,7 +1635,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHifzZaytAlzaytunInline",
-            "alt": "زجاجة زجاجية داكنة من زيت زيتون القرية العربية على طاولة خشبية، وأوراق زيتون في المقدمة وبستان زيتون غير واضح في الخلفية."
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -1654,7 +1654,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHifzZaytAlzaytunInline",
-            "alt": "زجاجة زجاجية داكنة من زيت زيتون القرية العربية على طاولة خشبية، وأوراق زيتون في المقدمة وبستان زيتون غير واضح في الخلفية."
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -1678,7 +1678,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHifzZaytAlzaytunInline",
-            "alt": "زجاجة زجاجية داكنة من زيت زيتون القرية العربية على طاولة خشبية، وأوراق زيتون في المقدمة وبستان زيتون غير واضح في الخلفية."
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           },
           {
             "type": "p",
@@ -1720,7 +1720,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHifzZaytAlzaytunInline",
-            "alt": "زجاجة زجاجية داكنة من زيت زيتون القرية العربية على طاولة خشبية، وأوراق زيتون في المقدمة وبستان زيتون غير واضح في الخلفية."
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           },
           {
             "type": "p",
@@ -1848,7 +1848,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressSierZaytAlzaytunMalaysiaHero",
-      "alt": "خط تعبئة يملأ صفاً متحركاً من الزجاجات الزجاجية الداكنة بزيت الزيتون من فوهات فولاذية، وعامل بغطاء رأس خلفه خارج بؤرة التصوير"
+      "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
     },
     "ogImage": "/og/blog-sier-zayt-alzaytun-malaysia.jpg",
     "intro": [
@@ -1871,7 +1871,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressSierZaytAlzaytunMalaysiaInline",
-            "alt": "عجينة الزيتون تخرج من فوهة معصرة فولاذية بينما ينساب شريط من الزيت الأخضر الذهبي إلى حوض فولاذي في الأسفل"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -1894,7 +1894,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressSierZaytAlzaytunMalaysiaInline",
-            "alt": "عجينة الزيتون تخرج من فوهة معصرة فولاذية بينما ينساب شريط من الزيت الأخضر الذهبي إلى حوض فولاذي في الأسفل"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           },
           {
             "type": "p",
@@ -1922,7 +1922,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressSierZaytAlzaytunMalaysiaInline",
-            "alt": "عجينة الزيتون تخرج من فوهة معصرة فولاذية بينما ينساب شريط من الزيت الأخضر الذهبي إلى حوض فولاذي في الأسفل"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -1960,7 +1960,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressSierZaytAlzaytunMalaysiaInline",
-            "alt": "عجينة الزيتون تخرج من فوهة معصرة فولاذية بينما ينساب شريط من الزيت الأخضر الذهبي إلى حوض فولاذي في الأسفل"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -1984,7 +1984,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressSierZaytAlzaytunMalaysiaInline",
-            "alt": "عجينة الزيتون تخرج من فوهة معصرة فولاذية بينما ينساب شريط من الزيت الأخضر الذهبي إلى حوض فولاذي في الأسفل"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -2007,7 +2007,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressSierZaytAlzaytunMalaysiaInline",
-            "alt": "عجينة الزيتون تخرج من فوهة معصرة فولاذية بينما ينساب شريط من الزيت الأخضر الذهبي إلى حوض فولاذي في الأسفل"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           },
           {
             "type": "note",
@@ -2131,7 +2131,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunKualaLumpurHero",
-      "alt": "امرأة ماليزية بحجاب أخضر تحمل زجاجة زيت زيتون Arabian Village باتجاه الكاميرا، وخلفها بيت خشبي تقليدي وأغصان زيتون"
+      "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
     },
     "ogImage": "/og/blog-zayt-alzaytun-kuala-lumpur.jpg",
     "intro": [
@@ -2158,7 +2158,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunKualaLumpurInline",
-            "alt": "زجاجة زيت الزيتون على حافة حجرية في بستان زيتون مشمس، ويد إلى جانبها، وممر ترابي يمتد بين أشجار زيتون معمّرة"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           }
         ]
       },
@@ -2190,7 +2190,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunKualaLumpurInline",
-            "alt": "زجاجة زيت الزيتون على حافة حجرية في بستان زيتون مشمس، ويد إلى جانبها، وممر ترابي يمتد بين أشجار زيتون معمّرة"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -2214,7 +2214,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunKualaLumpurInline",
-            "alt": "زجاجة زيت الزيتون على حافة حجرية في بستان زيتون مشمس، ويد إلى جانبها، وممر ترابي يمتد بين أشجار زيتون معمّرة"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -2253,7 +2253,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunKualaLumpurInline",
-            "alt": "زجاجة زيت الزيتون على حافة حجرية في بستان زيتون مشمس، ويد إلى جانبها، وممر ترابي يمتد بين أشجار زيتون معمّرة"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -2282,7 +2282,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunKualaLumpurInline",
-            "alt": "زجاجة زيت الزيتون على حافة حجرية في بستان زيتون مشمس، ويد إلى جانبها، وممر ترابي يمتد بين أشجار زيتون معمّرة"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -2309,7 +2309,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunKualaLumpurInline",
-            "alt": "زجاجة زيت الزيتون على حافة حجرية في بستان زيتون مشمس، ويد إلى جانبها، وممر ترابي يمتد بين أشجار زيتون معمّرة"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -2432,7 +2432,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressAlfarqBaynAlbikrWalmumtazHero",
-      "alt": "شجرة زيتون معمّرة تؤطر منحدراً مزروعاً بأشجار الزيتون، وحبات زيتون على حافة حجرية في المقدمة، وضوء غروب منخفض."
+      "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
     },
     "ogImage": "/og/blog-alfarq-bayn-albikr-walmumtaz.jpg",
     "intro": [
@@ -2456,7 +2456,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAlfarqBaynAlbikrWalmumtazInline",
-            "alt": "كأسا تذوّق زجاجيتان صغيرتان متجاورتان على سطح حجري، إحداهما تحمل زيتاً أكثر خضرة من الأخرى، وأوراق زيتون بجانبهما."
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           }
         ]
       },
@@ -2506,7 +2506,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAlfarqBaynAlbikrWalmumtazInline",
-            "alt": "كأسا تذوّق زجاجيتان صغيرتان متجاورتان على سطح حجري، إحداهما تحمل زيتاً أكثر خضرة من الأخرى، وأوراق زيتون بجانبهما."
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "note",
@@ -2536,7 +2536,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAlfarqBaynAlbikrWalmumtazInline",
-            "alt": "كأسا تذوّق زجاجيتان صغيرتان متجاورتان على سطح حجري، إحداهما تحمل زيتاً أكثر خضرة من الأخرى، وأوراق زيتون بجانبهما."
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -2565,7 +2565,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAlfarqBaynAlbikrWalmumtazInline",
-            "alt": "كأسا تذوّق زجاجيتان صغيرتان متجاورتان على سطح حجري، إحداهما تحمل زيتاً أكثر خضرة من الأخرى، وأوراق زيتون بجانبهما."
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           }
         ]
       },
@@ -2584,7 +2584,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAlfarqBaynAlbikrWalmumtazInline",
-            "alt": "كأسا تذوّق زجاجيتان صغيرتان متجاورتان على سطح حجري، إحداهما تحمل زيتاً أكثر خضرة من الأخرى، وأوراق زيتون بجانبهما."
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           }
         ]
       }
@@ -2697,7 +2697,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressHumudatZaytAlzaytunHero",
-      "alt": "كأس زجاجي من زيت الزيتون وماصّة زجاجية وطبق خزفي أبيض على منضدة مختبر بيضاء نظيفة."
+      "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
     },
     "ogImage": "/og/blog-humudat-zayt-alzaytun.jpg",
     "intro": [
@@ -2721,7 +2721,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHumudatZaytAlzaytunInline",
-            "alt": "دورق زجاجي فيه زيت زيتون على منضدة مختبر، وبجانبه حامل معدني يحمل أنابيب عيّنات زجاجية فارغة."
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       },
@@ -2776,7 +2776,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHumudatZaytAlzaytunInline",
-            "alt": "دورق زجاجي فيه زيت زيتون على منضدة مختبر، وبجانبه حامل معدني يحمل أنابيب عيّنات زجاجية فارغة."
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           },
           {
             "type": "p",
@@ -2803,7 +2803,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHumudatZaytAlzaytunInline",
-            "alt": "دورق زجاجي فيه زيت زيتون على منضدة مختبر، وبجانبه حامل معدني يحمل أنابيب عيّنات زجاجية فارغة."
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       },
@@ -2828,7 +2828,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHumudatZaytAlzaytunInline",
-            "alt": "دورق زجاجي فيه زيت زيتون على منضدة مختبر، وبجانبه حامل معدني يحمل أنابيب عيّنات زجاجية فارغة."
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       },
@@ -2847,7 +2847,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHumudatZaytAlzaytunInline",
-            "alt": "دورق زجاجي فيه زيت زيتون على منضدة مختبر، وبجانبه حامل معدني يحمل أنابيب عيّنات زجاجية فارغة."
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       },
@@ -2871,7 +2871,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHumudatZaytAlzaytunInline",
-            "alt": "دورق زجاجي فيه زيت زيتون على منضدة مختبر، وبجانبه حامل معدني يحمل أنابيب عيّنات زجاجية فارغة."
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           },
           {
             "type": "p",
@@ -2981,7 +2981,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressTaemZaytAlzaytunHero",
-      "alt": "منضدة تذوّق خشبية عليها دورق زجاجي مملوء بزيت الزيتون وصفّ من أنابيب العيّنات الزجاجية ومجهر إلى جانبها."
+      "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
     },
     "ogImage": "/og/blog-taem-zayt-alzaytun.jpg",
     "intro": [
@@ -3009,7 +3009,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTaemZaytAlzaytunInline",
-            "alt": "كأس تذوّق زرقاء داكنة نصف ممتلئة بزيت الزيتون البكر الممتاز، ممسوكة بكلتا اليدين فوق منضدة خشبية."
+            "alt": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
           }
         ]
       },
@@ -3028,7 +3028,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTaemZaytAlzaytunInline",
-            "alt": "كأس تذوّق زرقاء داكنة نصف ممتلئة بزيت الزيتون البكر الممتاز، ممسوكة بكلتا اليدين فوق منضدة خشبية."
+            "alt": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
           }
         ]
       },
@@ -3057,7 +3057,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTaemZaytAlzaytunInline",
-            "alt": "كأس تذوّق زرقاء داكنة نصف ممتلئة بزيت الزيتون البكر الممتاز، ممسوكة بكلتا اليدين فوق منضدة خشبية."
+            "alt": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
           }
         ]
       },
@@ -3102,7 +3102,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTaemZaytAlzaytunInline",
-            "alt": "كأس تذوّق زرقاء داكنة نصف ممتلئة بزيت الزيتون البكر الممتاز، ممسوكة بكلتا اليدين فوق منضدة خشبية."
+            "alt": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
           }
         ]
       },
@@ -3127,7 +3127,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTaemZaytAlzaytunInline",
-            "alt": "كأس تذوّق زرقاء داكنة نصف ممتلئة بزيت الزيتون البكر الممتاز، ممسوكة بكلتا اليدين فوق منضدة خشبية."
+            "alt": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
           },
           {
             "type": "p",
@@ -3150,7 +3150,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTaemZaytAlzaytunInline",
-            "alt": "كأس تذوّق زرقاء داكنة نصف ممتلئة بزيت الزيتون البكر الممتاز، ممسوكة بكلتا اليدين فوق منضدة خشبية."
+            "alt": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
           }
         ]
       }
@@ -3259,7 +3259,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunAludwiHero",
-      "alt": "منظر من كرم زيتون على منحدر عند الغروب، وأشجار زيتون متدرّجة على المصاطب، وقرية وخط البحر في العمق."
+      "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
     },
     "ogImage": "/og/blog-zayt-alzaytun-aludwi.jpg",
     "intro": [
@@ -3279,7 +3279,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAludwiInline",
-            "alt": "غصن زيتون محمّل بثمار خضراء في بستان تربته عارية غير معالجة، وضوء صباح جانبي."
+            "alt": "صفوف أشجار الزيتون في آخر ضوء العصر"
           }
         ]
       },
@@ -3303,7 +3303,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAludwiInline",
-            "alt": "غصن زيتون محمّل بثمار خضراء في بستان تربته عارية غير معالجة، وضوء صباح جانبي."
+            "alt": "صفوف أشجار الزيتون في آخر ضوء العصر"
           },
           {
             "type": "note",
@@ -3368,7 +3368,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAludwiInline",
-            "alt": "غصن زيتون محمّل بثمار خضراء في بستان تربته عارية غير معالجة، وضوء صباح جانبي."
+            "alt": "صفوف أشجار الزيتون في آخر ضوء العصر"
           }
         ]
       },
@@ -3387,7 +3387,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAludwiInline",
-            "alt": "غصن زيتون محمّل بثمار خضراء في بستان تربته عارية غير معالجة، وضوء صباح جانبي."
+            "alt": "صفوف أشجار الزيتون في آخر ضوء العصر"
           }
         ]
       },
@@ -3411,7 +3411,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAludwiInline",
-            "alt": "غصن زيتون محمّل بثمار خضراء في بستان تربته عارية غير معالجة، وضوء صباح جانبي."
+            "alt": "صفوف أشجار الزيتون في آخر ضوء العصر"
           },
           {
             "type": "p",
@@ -3441,7 +3441,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAludwiInline",
-            "alt": "غصن زيتون محمّل بثمار خضراء في بستان تربته عارية غير معالجة، وضوء صباح جانبي."
+            "alt": "صفوف أشجار الزيتون في آخر ضوء العصر"
           }
         ]
       }
@@ -3549,7 +3549,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunLilqalyHero",
-      "alt": "يد تمسك زجاجة زيت زيتون عند حافة كرم زيتون مشمس، وحافة حجرية وغصن زيتون في مقدمة الصورة."
+      "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
     },
     "ogImage": "/og/blog-zayt-alzaytun-lilqaly.jpg",
     "intro": [
@@ -3573,7 +3573,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilqalyInline",
-            "alt": "قدر عميق من زيت الزيتون يسخن على الموقد وقد أُنزلت فيه شريحة باذنجان واحدة."
+            "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
           }
         ]
       },
@@ -3623,7 +3623,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilqalyInline",
-            "alt": "قدر عميق من زيت الزيتون يسخن على الموقد وقد أُنزلت فيه شريحة باذنجان واحدة."
+            "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
           }
         ]
       },
@@ -3647,7 +3647,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilqalyInline",
-            "alt": "قدر عميق من زيت الزيتون يسخن على الموقد وقد أُنزلت فيه شريحة باذنجان واحدة."
+            "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
           },
           {
             "type": "p",
@@ -3670,7 +3670,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilqalyInline",
-            "alt": "قدر عميق من زيت الزيتون يسخن على الموقد وقد أُنزلت فيه شريحة باذنجان واحدة."
+            "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
           },
           {
             "type": "ol",
@@ -3699,7 +3699,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilqalyInline",
-            "alt": "قدر عميق من زيت الزيتون يسخن على الموقد وقد أُنزلت فيه شريحة باذنجان واحدة."
+            "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
           }
         ]
       },
@@ -3718,7 +3718,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilqalyInline",
-            "alt": "قدر عميق من زيت الزيتون يسخن على الموقد وقد أُنزلت فيه شريحة باذنجان واحدة."
+            "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
           }
         ]
       }
@@ -3823,7 +3823,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunLilsalataHero",
-      "alt": "مائدة مصوّرة من أعلى عليها صحن سلطة بندورة وبقدونس مفروم، وصحن صغير من زيت الزيتون، وأرغفة خبز وطبق زيتون."
+      "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
     },
     "ogImage": "/og/blog-zayt-alzaytun-lilsalata.jpg",
     "intro": [
@@ -3847,7 +3847,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilsalataInline",
-            "alt": "يد تسكب زيت الزيتون من إبريق صغير فوق صحن سلطة مفرومة، لقطة قريبة."
+            "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
           }
         ]
       },
@@ -3897,7 +3897,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilsalataInline",
-            "alt": "يد تسكب زيت الزيتون من إبريق صغير فوق صحن سلطة مفرومة، لقطة قريبة."
+            "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
           },
           {
             "type": "p",
@@ -3925,7 +3925,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilsalataInline",
-            "alt": "يد تسكب زيت الزيتون من إبريق صغير فوق صحن سلطة مفرومة، لقطة قريبة."
+            "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
           }
         ]
       },
@@ -3948,7 +3948,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilsalataInline",
-            "alt": "يد تسكب زيت الزيتون من إبريق صغير فوق صحن سلطة مفرومة، لقطة قريبة."
+            "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
           }
         ]
       },
@@ -3972,7 +3972,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilsalataInline",
-            "alt": "يد تسكب زيت الزيتون من إبريق صغير فوق صحن سلطة مفرومة، لقطة قريبة."
+            "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
           }
         ]
       },
@@ -4017,7 +4017,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilsalataInline",
-            "alt": "يد تسكب زيت الزيتون من إبريق صغير فوق صحن سلطة مفرومة، لقطة قريبة."
+            "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
           },
           {
             "type": "p",
@@ -4129,7 +4129,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressAfdalZaytZaytunHero",
-      "alt": "عدة زجاجات من زيت الزيتون الأخضر بأحجام مختلفة على طاولة خشبية"
+      "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
     },
     "ogImage": "/og/blog-afdal-zayt-zaytun.jpg",
     "intro": [
@@ -4153,7 +4153,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAfdalZaytZaytunInline",
-            "alt": "صناديق مرصوفة مملوءة بثمار الزيتون الأخضر والأرجواني بعد القطاف"
+            "alt": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
           }
         ]
       },
@@ -4176,7 +4176,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAfdalZaytZaytunInline",
-            "alt": "صناديق مرصوفة مملوءة بثمار الزيتون الأخضر والأرجواني بعد القطاف"
+            "alt": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
           }
         ]
       },
@@ -4221,7 +4221,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAfdalZaytZaytunInline",
-            "alt": "صناديق مرصوفة مملوءة بثمار الزيتون الأخضر والأرجواني بعد القطاف"
+            "alt": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
           }
         ]
       },
@@ -4240,7 +4240,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAfdalZaytZaytunInline",
-            "alt": "صناديق مرصوفة مملوءة بثمار الزيتون الأخضر والأرجواني بعد القطاف"
+            "alt": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
           }
         ]
       },
@@ -4263,7 +4263,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAfdalZaytZaytunInline",
-            "alt": "صناديق مرصوفة مملوءة بثمار الزيتون الأخضر والأرجواني بعد القطاف"
+            "alt": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
           },
           {
             "type": "p",
@@ -4296,7 +4296,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAfdalZaytZaytunInline",
-            "alt": "صناديق مرصوفة مملوءة بثمار الزيتون الأخضر والأرجواني بعد القطاف"
+            "alt": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
           }
         ]
       }
@@ -4400,7 +4400,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMawsimQitafAlzaytunHero",
-      "alt": "بستان زيتون معمّر وقد فُرشت شباك القطاف تحت الأشجار في ضوء الخريف"
+      "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
     },
     "ogImage": "/og/blog-mawsim-qitaf-alzaytun.jpg",
     "intro": [
@@ -4428,7 +4428,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMawsimQitafAlzaytunInline",
-            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء موسم القطاف"
+            "alt": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
           }
         ]
       },
@@ -4478,7 +4478,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMawsimQitafAlzaytunInline",
-            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء موسم القطاف"
+            "alt": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
           },
           {
             "type": "p",
@@ -4506,7 +4506,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMawsimQitafAlzaytunInline",
-            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء موسم القطاف"
+            "alt": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
           }
         ]
       },
@@ -4525,7 +4525,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMawsimQitafAlzaytunInline",
-            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء موسم القطاف"
+            "alt": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
           },
           {
             "type": "ul",
@@ -4558,7 +4558,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMawsimQitafAlzaytunInline",
-            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء موسم القطاف"
+            "alt": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
           },
           {
             "type": "p",
@@ -4581,7 +4581,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMawsimQitafAlzaytunInline",
-            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء موسم القطاف"
+            "alt": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
           }
         ]
       }
@@ -4685,7 +4685,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunAlmukarrarHero",
-      "alt": "زيت الزيتون يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
+      "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
     },
     "ogImage": "/og/blog-zayt-alzaytun-almukarrar.jpg",
     "intro": [
@@ -4709,7 +4709,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAlmukarrarInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
           }
         ]
       },
@@ -4733,7 +4733,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAlmukarrarInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
           },
           {
             "type": "p",
@@ -4756,7 +4756,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAlmukarrarInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
           }
         ]
       },
@@ -4806,7 +4806,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAlmukarrarInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
           },
           {
             "type": "p",
@@ -4834,7 +4834,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAlmukarrarInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
           },
           {
             "type": "p",
@@ -4862,7 +4862,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunAlmukarrarInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
           },
           {
             "type": "p",
@@ -4967,7 +4967,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunBaladAlmanshaHero",
-      "alt": "بستان زيتون على تلّة عند الغروب، صفوف الأشجار ممتدّة نحو الأفق تحت سماء برتقالية."
+      "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
     },
     "ogImage": "/og/blog-zayt-alzaytun-balad-almansha.jpg",
     "intro": [
@@ -4991,7 +4991,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunBaladAlmanshaInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
           }
         ]
       },
@@ -5051,7 +5051,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunBaladAlmanshaInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
           },
           {
             "type": "p",
@@ -5079,7 +5079,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunBaladAlmanshaInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
           }
         ]
       },
@@ -5103,7 +5103,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunBaladAlmanshaInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
           },
           {
             "type": "p",
@@ -5126,7 +5126,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunBaladAlmanshaInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
           }
         ]
       },
@@ -5153,7 +5153,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunBaladAlmanshaInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
           },
           {
             "type": "p",
@@ -5266,7 +5266,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytZaytunBaladiHero",
-      "alt": "شجرة زيتون معمّرة تؤطّر قرية على سفح تلّ والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية في المقدمة."
+      "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
     },
     "ogImage": "/og/blog-zayt-zaytun-baladi.jpg",
     "intro": [
@@ -5294,7 +5294,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunBaladiInline",
-            "alt": "مزارع يصب زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+            "alt": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
           }
         ]
       },
@@ -5313,7 +5313,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunBaladiInline",
-            "alt": "مزارع يصب زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+            "alt": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
           }
         ]
       },
@@ -5363,7 +5363,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunBaladiInline",
-            "alt": "مزارع يصب زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+            "alt": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
           },
           {
             "type": "p",
@@ -5392,7 +5392,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunBaladiInline",
-            "alt": "مزارع يصب زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+            "alt": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
           }
         ]
       },
@@ -5407,7 +5407,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunBaladiInline",
-            "alt": "مزارع يصب زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+            "alt": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
           }
         ]
       },
@@ -5430,7 +5430,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytZaytunBaladiInline",
-            "alt": "مزارع يصب زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+            "alt": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
           },
           {
             "type": "p",
@@ -5538,7 +5538,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZujajatZaytAlzaytunHero",
-      "alt": "زجاجة زيت زيتون داكنة قائمة على طاولة خشبية وحولها حبات زيتون وأوراق"
+      "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
     },
     "ogImage": "/og/blog-zujajat-zayt-alzaytun.jpg",
     "intro": [
@@ -5562,7 +5562,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZujajatZaytAlzaytunInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -5607,7 +5607,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZujajatZaytAlzaytunInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           },
           {
             "type": "p",
@@ -5630,7 +5630,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZujajatZaytAlzaytunInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -5654,7 +5654,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZujajatZaytAlzaytunInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           }
         ]
       },
@@ -5679,7 +5679,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZujajatZaytAlzaytunInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           },
           {
             "type": "p",
@@ -5707,7 +5707,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZujajatZaytAlzaytunInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
           },
           {
             "type": "p",
@@ -5816,7 +5816,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressAnwaeAlzaytunHero",
-      "alt": "حبات زيتون خضراء وأرجوانية مفروشة على طاولة خشبية إلى جانب زجاجة زيت"
+      "alt": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
     },
     "ogImage": "/og/blog-anwae-alzaytun.jpg",
     "intro": [
@@ -5840,7 +5840,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAnwaeAlzaytunInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -5863,7 +5863,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAnwaeAlzaytunInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           },
           {
             "type": "p",
@@ -5935,7 +5935,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAnwaeAlzaytunInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           },
           {
             "type": "p",
@@ -5962,7 +5962,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAnwaeAlzaytunInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -5987,7 +5987,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAnwaeAlzaytunInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           }
         ]
       },
@@ -6011,7 +6011,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAnwaeAlzaytunInline",
-            "alt": "عمال يقطفون ثمار الزيتون من الأشجار في البستان أثناء الموسم"
+            "alt": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
           },
           {
             "type": "p",
@@ -6119,7 +6119,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressTajmidZaytAlzaytunHero",
-      "alt": "رجل يفحص زيت الزيتون من كأس تذوّق أزرق على طاولة مختبر"
+      "alt": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
     },
     "ogImage": "/og/blog-tajmid-zayt-alzaytun.jpg",
     "intro": [
@@ -6143,7 +6143,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTajmidZaytAlzaytunInline",
-            "alt": "زجاجة زيت زيتون داكنة على طاولة خشبية وحولها حبات زيتون وأوراق"
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -6162,7 +6162,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTajmidZaytAlzaytunInline",
-            "alt": "زجاجة زيت زيتون داكنة على طاولة خشبية وحولها حبات زيتون وأوراق"
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -6207,7 +6207,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTajmidZaytAlzaytunInline",
-            "alt": "زجاجة زيت زيتون داكنة على طاولة خشبية وحولها حبات زيتون وأوراق"
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -6231,7 +6231,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTajmidZaytAlzaytunInline",
-            "alt": "زجاجة زيت زيتون داكنة على طاولة خشبية وحولها حبات زيتون وأوراق"
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -6250,7 +6250,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTajmidZaytAlzaytunInline",
-            "alt": "زجاجة زيت زيتون داكنة على طاولة خشبية وحولها حبات زيتون وأوراق"
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       },
@@ -6269,7 +6269,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressTajmidZaytAlzaytunInline",
-            "alt": "زجاجة زيت زيتون داكنة على طاولة خشبية وحولها حبات زيتون وأوراق"
+            "alt": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
           }
         ]
       }
@@ -6373,7 +6373,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunFiRamadanHero",
-      "alt": "مائدة خشبية عليها زجاجة زيت زيتون وأطباق صغيرة وخبز"
+      "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
     },
     "ogImage": "/og/blog-zayt-alzaytun-fi-ramadan.jpg",
     "intro": [
@@ -6423,7 +6423,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunFiRamadanInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           },
           {
             "type": "p",
@@ -6451,7 +6451,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunFiRamadanInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -6470,7 +6470,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunFiRamadanInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -6494,7 +6494,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunFiRamadanInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -6513,7 +6513,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunFiRamadanInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       },
@@ -6538,7 +6538,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunFiRamadanInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية والبحر خلفها عند الغروب، وحبات زيتون على حافة حجرية"
+            "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
           }
         ]
       }
@@ -6641,7 +6641,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunLilmuajanatHero",
-      "alt": "زيت الزيتون يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
+      "alt": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
     },
     "ogImage": "/og/blog-zayt-alzaytun-lilmuajanat.jpg",
     "intro": [
@@ -6665,7 +6665,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilmuajanatInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           }
         ]
       },
@@ -6715,7 +6715,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilmuajanatInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -6738,7 +6738,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilmuajanatInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           }
         ]
       },
@@ -6757,7 +6757,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilmuajanatInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           }
         ]
       },
@@ -6781,7 +6781,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilmuajanatInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           },
           {
             "type": "p",
@@ -6808,7 +6808,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilmuajanatInline",
-            "alt": "بستان زيتون عند الغروب، صفوف الأشجار ممتدة نحو الأفق"
+            "alt": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
           }
         ]
       }
@@ -6911,7 +6911,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunLilshawiHero",
-      "alt": "خط تعبئة يملأ صفاً من الزجاجات الداكنة بزيت الزيتون"
+      "alt": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
     },
     "ogImage": "/og/blog-zayt-alzaytun-lilshawi.jpg",
     "intro": [
@@ -6940,7 +6940,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilshawiInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -6968,7 +6968,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilshawiInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -6996,7 +6996,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilshawiInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -7050,7 +7050,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilshawiInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -7078,7 +7078,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilshawiInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -7106,7 +7106,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunLilshawiInline",
-            "alt": "صف من الزجاجات الداكنة يمتلئ بزيت الزيتون على خط التعبئة"
+            "alt": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
           },
           {
             "type": "p",
@@ -7214,7 +7214,7 @@ export const AR_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressZaytAlzaytunWalzaatarHero",
-      "alt": "زجاجة زيت زيتون وزعتر مجفف في وعاء خشبي على طاولة"
+      "alt": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
     },
     "ogImage": "/og/blog-zayt-alzaytun-walzaatar.jpg",
     "intro": [
@@ -7238,7 +7238,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunWalzaatarInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية على سفح تل عند الغروب"
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       },
@@ -7283,7 +7283,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunWalzaatarInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية على سفح تل عند الغروب"
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           },
           {
             "type": "p",
@@ -7311,7 +7311,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunWalzaatarInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية على سفح تل عند الغروب"
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       },
@@ -7336,7 +7336,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunWalzaatarInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية على سفح تل عند الغروب"
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           },
           {
             "type": "p",
@@ -7364,7 +7364,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunWalzaatarInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية على سفح تل عند الغروب"
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           },
           {
             "type": "p",
@@ -7413,7 +7413,7 @@ export const AR_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaytAlzaytunWalzaatarInline",
-            "alt": "شجرة زيتون معمّرة تؤطر قرية على سفح تل عند الغروب"
+            "alt": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
           }
         ]
       }

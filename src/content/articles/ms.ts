@@ -49,7 +49,7 @@ export const MS_ARTICLES: Article[] = [
 
     hero: {
       src: 'bottleField',
-      alt: 'Botol minyak zaitun dara Arabian Village berdiri di dalam kebun zaitun ketika senja',
+      alt: 'Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki',
     },
     ogImage: '/og/blog-olive-oil-popularity-malaysia.jpg',
 
@@ -354,7 +354,7 @@ export const MS_ARTICLES: Article[] = [
 
     hero: {
       src: 'pouringField',
-      alt: 'Minyak zaitun dara segar dicurah dari jag ke dalam mangkuk di tepi kebun zaitun',
+      alt: 'Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki',
     },
     ogImage: '/og/blog-evoo-health-benefits-families.jpg',
 
@@ -644,7 +644,7 @@ export const MS_ARTICLES: Article[] = [
 
     hero: {
       src: 'bottling',
-      alt: 'Minyak zaitun dara yang baru diperah sedang dibotolkan dan dimeterai di kilang perahan',
+      alt: 'Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut',
     },
     ogImage: '/og/blog-choose-authentic-evoo-malaysia.jpg',
 
@@ -961,7 +961,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressBeliMinyakZaitunKlHero",
-      "alt": "Rak minyak zaitun di sebuah kedai arab KL, botol kaca gelap disusun mengikut saiz"
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
     },
     "ogImage": "/og/blog-beli-minyak-zaitun-kl.jpg",
     "intro": [
@@ -989,7 +989,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -1004,7 +1004,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -1029,7 +1029,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -1053,7 +1053,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -1073,7 +1073,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -1118,7 +1118,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           },
           {
             "type": "p",
@@ -1141,7 +1141,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunKlInline",
-            "alt": "Botol minyak zaitun dara extra Arabian Village saiz 250 ml dan 500 ml di atas kaunter kedai"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       }
@@ -1243,7 +1243,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressHargaMinyakZaitunMalaysiaHero",
-      "alt": "Botol minyak zaitun dara Arabian Village di atas meja dapur, dengan tanda harga minyak zaitun bagi saiz 250 ml dan 500 ml"
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
     },
     "ogImage": "/og/blog-harga-minyak-zaitun-malaysia.jpg",
     "intro": [
@@ -1283,7 +1283,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHargaMinyakZaitunMalaysiaInline",
-            "alt": "Dua botol minyak zaitun bersebelahan, satu 250 ml dan satu 500 ml, untuk membandingkan harga seliter"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           },
           {
             "type": "p",
@@ -1309,7 +1309,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHargaMinyakZaitunMalaysiaInline",
-            "alt": "Dua botol minyak zaitun bersebelahan, satu 250 ml dan satu 500 ml, untuk membandingkan harga seliter"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -1332,7 +1332,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHargaMinyakZaitunMalaysiaInline",
-            "alt": "Dua botol minyak zaitun bersebelahan, satu 250 ml dan satu 500 ml, untuk membandingkan harga seliter"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           },
           {
             "type": "note",
@@ -1356,7 +1356,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHargaMinyakZaitunMalaysiaInline",
-            "alt": "Dua botol minyak zaitun bersebelahan, satu 250 ml dan satu 500 ml, untuk membandingkan harga seliter"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -1378,7 +1378,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHargaMinyakZaitunMalaysiaInline",
-            "alt": "Dua botol minyak zaitun bersebelahan, satu 250 ml dan satu 500 ml, untuk membandingkan harga seliter"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           },
           {
             "type": "p",
@@ -1404,7 +1404,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHargaMinyakZaitunMalaysiaInline",
-            "alt": "Dua botol minyak zaitun bersebelahan, satu 250 ml dan satu 500 ml, untuk membandingkan harga seliter"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           },
           {
             "type": "note",
@@ -1508,7 +1508,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressJenamaMinyakZaitunTerbaikHero",
-      "alt": "Beberapa botol minyak zaitun di rak kedai, dibandingkan mengikut kriteria jenama minyak zaitun terbaik seperti gred dan tarikh pada label"
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
     },
     "ogImage": "/og/blog-jenama-minyak-zaitun-terbaik.jpg",
     "intro": [
@@ -1532,7 +1532,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -1555,7 +1555,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -1574,7 +1574,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -1614,7 +1614,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -1633,7 +1633,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -1668,7 +1668,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           },
           {
             "type": "p",
@@ -1697,7 +1697,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressJenamaMinyakZaitunTerbaikInline",
-            "alt": "Tangan memegang botol kaca gelap sambil membaca label minyak zaitun extra virgin"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       }
@@ -1799,7 +1799,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunExtraVirginGredHero",
-      "alt": "Botol minyak zaitun extra virgin di atas meja kayu bersama buah zaitun segar"
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
     },
     "ogImage": "/og/blog-minyak-zaitun-extra-virgin-gred.jpg",
     "intro": [
@@ -1822,7 +1822,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunExtraVirginGredInline",
-            "alt": "Minyak zaitun berwarna hijau keemasan dituang ke dalam mangkuk kecil untuk dicicah dengan roti"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -1841,7 +1841,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunExtraVirginGredInline",
-            "alt": "Minyak zaitun berwarna hijau keemasan dituang ke dalam mangkuk kecil untuk dicicah dengan roti"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -1891,7 +1891,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunExtraVirginGredInline",
-            "alt": "Minyak zaitun berwarna hijau keemasan dituang ke dalam mangkuk kecil untuk dicicah dengan roti"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           },
           {
             "type": "note",
@@ -1915,7 +1915,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunExtraVirginGredInline",
-            "alt": "Minyak zaitun berwarna hijau keemasan dituang ke dalam mangkuk kecil untuk dicicah dengan roti"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -1934,7 +1934,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunExtraVirginGredInline",
-            "alt": "Minyak zaitun berwarna hijau keemasan dituang ke dalam mangkuk kecil untuk dicicah dengan roti"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -1958,7 +1958,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunExtraVirginGredInline",
-            "alt": "Minyak zaitun berwarna hijau keemasan dituang ke dalam mangkuk kecil untuk dicicah dengan roti"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       }
@@ -2062,7 +2062,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressMinyakZaitunHalalHero",
-      "alt": "Botol minyak zaitun halal dipegang di hadapan rak kedai sambil label belakang dibaca"
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
     },
     "ogImage": "/og/blog-minyak-zaitun-halal.jpg",
     "intro": [
@@ -2082,7 +2082,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHalalInline",
-            "alt": "Tangan menunjuk senarai bahan pada label belakang botol minyak zaitun"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -2127,7 +2127,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHalalInline",
-            "alt": "Tangan menunjuk senarai bahan pada label belakang botol minyak zaitun"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -2146,7 +2146,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHalalInline",
-            "alt": "Tangan menunjuk senarai bahan pada label belakang botol minyak zaitun"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -2165,7 +2165,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHalalInline",
-            "alt": "Tangan menunjuk senarai bahan pada label belakang botol minyak zaitun"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -2184,7 +2184,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHalalInline",
-            "alt": "Tangan menunjuk senarai bahan pada label belakang botol minyak zaitun"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           },
           {
             "type": "note",
@@ -2212,7 +2212,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHalalInline",
-            "alt": "Tangan menunjuk senarai bahan pada label belakang botol minyak zaitun"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           },
           {
             "type": "p",
@@ -2324,7 +2324,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunOrganikHero",
-      "alt": "Botol minyak zaitun organik dipegang di hadapan pokok zaitun di ladang"
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
     },
     "ogImage": "/og/blog-minyak-zaitun-organik.jpg",
     "intro": [
@@ -2352,7 +2352,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunOrganikInline",
-            "alt": "Tangan memeriksa label di belakang botol minyak zaitun di kaunter kedai"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           },
           {
             "type": "p",
@@ -2379,7 +2379,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunOrganikInline",
-            "alt": "Tangan memeriksa label di belakang botol minyak zaitun di kaunter kedai"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       },
@@ -2419,7 +2419,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunOrganikInline",
-            "alt": "Tangan memeriksa label di belakang botol minyak zaitun di kaunter kedai"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           },
           {
             "type": "p",
@@ -2446,7 +2446,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunOrganikInline",
-            "alt": "Tangan memeriksa label di belakang botol minyak zaitun di kaunter kedai"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           },
           {
             "type": "note",
@@ -2475,7 +2475,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunOrganikInline",
-            "alt": "Tangan memeriksa label di belakang botol minyak zaitun di kaunter kedai"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           },
           {
             "type": "p",
@@ -2498,7 +2498,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunOrganikInline",
-            "alt": "Tangan memeriksa label di belakang botol minyak zaitun di kaunter kedai"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       }
@@ -2605,7 +2605,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressMinyakZaitunPalestinHero",
-      "alt": "Buah zaitun hijau dan ungu di dahan pokok sebelum tuaian, sumber minyak zaitun Palestin"
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
     },
     "ogImage": "/og/blog-minyak-zaitun-palestin.jpg",
     "intro": [
@@ -2624,7 +2624,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalestinInline",
-            "alt": "Minyak zaitun baharu mengalir keluar dari kilang perahan sejuk ke dalam bekas keluli"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           }
         ]
       },
@@ -2643,7 +2643,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalestinInline",
-            "alt": "Minyak zaitun baharu mengalir keluar dari kilang perahan sejuk ke dalam bekas keluli"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           }
         ]
       },
@@ -2669,7 +2669,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalestinInline",
-            "alt": "Minyak zaitun baharu mengalir keluar dari kilang perahan sejuk ke dalam bekas keluli"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           },
           {
             "type": "p",
@@ -2718,7 +2718,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalestinInline",
-            "alt": "Minyak zaitun baharu mengalir keluar dari kilang perahan sejuk ke dalam bekas keluli"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           },
           {
             "type": "p",
@@ -2748,7 +2748,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalestinInline",
-            "alt": "Minyak zaitun baharu mengalir keluar dari kilang perahan sejuk ke dalam bekas keluli"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           }
         ]
       },
@@ -2767,7 +2767,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalestinInline",
-            "alt": "Minyak zaitun baharu mengalir keluar dari kilang perahan sejuk ke dalam bekas keluli"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           },
           {
             "type": "note",
@@ -2872,7 +2872,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukMasakHero",
-      "alt": "Minyak zaitun untuk masak dicurah ke dalam kuali panas berisi bawang merah yang sedang ditumis"
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-masak.jpg",
     "intro": [
@@ -2892,7 +2892,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukMasakInline",
-            "alt": "Botol minyak zaitun dara di atas meja dapur bersebelahan ikan kembung bersalut kunyit sebelum dipanggang"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -2912,7 +2912,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukMasakInline",
-            "alt": "Botol minyak zaitun dara di atas meja dapur bersebelahan ikan kembung bersalut kunyit sebelum dipanggang"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -2962,7 +2962,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukMasakInline",
-            "alt": "Botol minyak zaitun dara di atas meja dapur bersebelahan ikan kembung bersalut kunyit sebelum dipanggang"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           },
           {
             "type": "p",
@@ -2990,7 +2990,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukMasakInline",
-            "alt": "Botol minyak zaitun dara di atas meja dapur bersebelahan ikan kembung bersalut kunyit sebelum dipanggang"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -3009,7 +3009,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukMasakInline",
-            "alt": "Botol minyak zaitun dara di atas meja dapur bersebelahan ikan kembung bersalut kunyit sebelum dipanggang"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -3033,7 +3033,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukMasakInline",
-            "alt": "Botol minyak zaitun dara di atas meja dapur bersebelahan ikan kembung bersalut kunyit sebelum dipanggang"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       }
@@ -3153,7 +3153,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunHabbatusSaudaHero",
-      "alt": "Botol 500 ml minyak zaitun Arabian Village di atas para batu dalam kebun zaitun yang disimbah cahaya, sebelah tangan di kanan dan dahan zaitun di hadapan kiri"
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
     },
     "ogImage": "/og/blog-minyak-zaitun-habbatus-sauda.jpg",
     "intro": [
@@ -3177,7 +3177,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHabbatusSaudaInline",
-            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -3200,7 +3200,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHabbatusSaudaInline",
-            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -3240,7 +3240,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHabbatusSaudaInline",
-            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -3265,7 +3265,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHabbatusSaudaInline",
-            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           },
           {
             "type": "p",
@@ -3289,7 +3289,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHabbatusSaudaInline",
-            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -3308,7 +3308,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunHabbatusSaudaInline",
-            "alt": "Lelaki Malaysia bersongkok menghidu segelas penilai berwarna biru kobalt berisi minyak zaitun, dengan kelalang kaca di atas bangku kayu di hadapannya"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           },
           {
             "type": "ul",
@@ -3436,7 +3436,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukSaladHero",
-      "alt": "Wanita bertudung hijau memegang botol minyak zaitun Arabian Village di hadapan rumah kampung kayu, dengan semangkuk buah zaitun hijau dan hitam serta bakul rotan di atas meja"
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-salad.jpg",
     "intro": [
@@ -3460,7 +3460,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -3484,7 +3484,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           },
           {
             "type": "note",
@@ -3512,7 +3512,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -3535,7 +3535,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -3583,7 +3583,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           },
           {
             "type": "p",
@@ -3627,7 +3627,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           },
           {
             "type": "p",
@@ -3655,7 +3655,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukSaladInline",
-            "alt": "Botol minyak zaitun Arabian Village berdiri di atas meja kayu, buah zaitun hijau dan hitam serta daun zaitun berselerak di sekelilingnya"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       }
@@ -3773,7 +3773,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressZaitunDalamAlQuranHero",
-      "alt": "Pokok zaitun tua berbatang berlingkar di lereng bukit ketika senja, perkampungan batu berbumbung tanah liat dan laut di latar belakang, beberapa biji zaitun hijau di atas batu rata"
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
     },
     "ogImage": "/og/blog-zaitun-dalam-al-quran.jpg",
     "intro": [
@@ -3827,7 +3827,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaitunDalamAlQuranInline",
-            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           },
           {
             "type": "p",
@@ -3850,7 +3850,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaitunDalamAlQuranInline",
-            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           },
           {
             "type": "note",
@@ -3874,7 +3874,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaitunDalamAlQuranInline",
-            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -3898,7 +3898,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaitunDalamAlQuranInline",
-            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           },
           {
             "type": "p",
@@ -3921,7 +3921,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaitunDalamAlQuranInline",
-            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -3940,7 +3940,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressZaitunDalamAlQuranInline",
-            "alt": "Petani berusia bertutup kepala keffiyeh mencangkung memetik buah zaitun dengan tangan dari dahan yang lebat, peti kayu berisi zaitun di sebelahnya"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           },
           {
             "type": "p",
@@ -4051,7 +4051,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressBotolMinyakZaitunHero",
-      "alt": "Tiga botol minyak zaitun kaca hijau gelap bersaiz berbeza berdiri sebaris di atas rak kayu"
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
     },
     "ogImage": "/og/blog-botol-minyak-zaitun.jpg",
     "intro": [
@@ -4076,7 +4076,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBotolMinyakZaitunInline",
-            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -4121,7 +4121,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBotolMinyakZaitunInline",
-            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -4166,7 +4166,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBotolMinyakZaitunInline",
-            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           },
           {
             "type": "p",
@@ -4193,7 +4193,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBotolMinyakZaitunInline",
-            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -4216,7 +4216,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBotolMinyakZaitunInline",
-            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -4235,7 +4235,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBotolMinyakZaitunInline",
-            "alt": "Tangan memegang botol kaca hijau gelap ke arah tingkap sehingga cahaya menembusi leher botol"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       }
@@ -4340,7 +4340,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressCaraSimpanMinyakZaitunHero",
-      "alt": "Kebun zaitun di lereng bukit ketika senja, dengan sebuah perkampungan dan laut di latar belakang, dan beberapa biji zaitun di atas hamparan batu di bawah dahan pokok."
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
     },
     "ogImage": "/og/blog-cara-simpan-minyak-zaitun.jpg",
     "intro": [
@@ -4368,7 +4368,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraSimpanMinyakZaitunInline",
-            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -4391,7 +4391,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraSimpanMinyakZaitunInline",
-            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           },
           {
             "type": "p",
@@ -4450,7 +4450,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraSimpanMinyakZaitunInline",
-            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -4472,7 +4472,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraSimpanMinyakZaitunInline",
-            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -4495,7 +4495,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraSimpanMinyakZaitunInline",
-            "alt": "Botol kaca gelap berisi minyak zaitun dengan tutupnya dipasang rapat, berdiri di atas rak dapur berjubin di sudut yang teduh dan jauh dari tingkap"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           },
           {
             "type": "p",
@@ -4617,7 +4617,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunPomaceHero",
-      "alt": "Minyak zaitun hijau mengalir keluar daripada corong keluli sebuah kilang perahan ke dalam tangki logam di bawahnya"
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
     },
     "ogImage": "/og/blog-minyak-zaitun-pomace.jpg",
     "intro": [
@@ -4641,7 +4641,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPomaceInline",
-            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
           }
         ]
       },
@@ -4665,7 +4665,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPomaceInline",
-            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
           }
         ]
       },
@@ -4690,7 +4690,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPomaceInline",
-            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
           }
         ]
       },
@@ -4713,7 +4713,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPomaceInline",
-            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
           },
           {
             "type": "p",
@@ -4767,7 +4767,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPomaceInline",
-            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
           }
         ]
       },
@@ -4792,7 +4792,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPomaceInline",
-            "alt": "Timbunan hampas zaitun coklat gelap di atas lantai konkrit sebuah kilang, dengan penyodok besi bersandar di tepinya"
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
           }
         ]
       }
@@ -4896,7 +4896,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukGorengHero",
-      "alt": "Minyak zaitun mengalir dalam aliran tetap dari paip keluli tahan karat ke dalam tangki terbuka di kilang pemprosesan."
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-goreng.jpg",
     "intro": [
@@ -4920,7 +4920,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukGorengInline",
-            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -4965,7 +4965,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukGorengInline",
-            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -4989,7 +4989,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukGorengInline",
-            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -5024,7 +5024,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukGorengInline",
-            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           },
           {
             "type": "p",
@@ -5051,7 +5051,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukGorengInline",
-            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -5074,7 +5074,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukGorengInline",
-            "alt": "Kuali wok di atas api gas dengan minyak zaitun dan bawang putih cincang, dilihat dari atas"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           },
           {
             "type": "note",
@@ -5186,7 +5186,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakMasakHero",
-      "alt": "Seorang lelaki bersongkok sedang menghidu minyak zaitun dari gelas penilai berwarna biru di meja kayu, dengan kelalang kaca dan rak tabung sampel di hadapannya."
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
     },
     "ogImage": "/og/blog-minyak-zaitun-vs-minyak-masak.jpg",
     "intro": [
@@ -5247,7 +5247,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakMasakInline",
-            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
           },
           {
             "type": "p",
@@ -5274,7 +5274,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakMasakInline",
-            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
           }
         ]
       },
@@ -5298,7 +5298,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakMasakInline",
-            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
           }
         ]
       },
@@ -5333,7 +5333,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakMasakInline",
-            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
           },
           {
             "type": "p",
@@ -5361,7 +5361,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakMasakInline",
-            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
           }
         ]
       },
@@ -5384,7 +5384,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakMasakInline",
-            "alt": "Dua kuali bersebelahan dilihat dari atas, satu berisi lapisan minyak zaitun hijau dan satu lagi berisi minyak masak kuning cair"
+            "alt": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"
           }
         ]
       }
@@ -5497,7 +5497,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressResepiMinyakZaitunHero",
-      "alt": "Wanita Malaysia bertudung memegang sebotol minyak zaitun dengan kedua-dua belah tangan, rumah kampung kayu dan dahan pokok zaitun kelihatan di belakangnya"
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
     },
     "ogImage": "/og/blog-resepi-minyak-zaitun.jpg",
     "intro": [
@@ -5527,7 +5527,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressResepiMinyakZaitunInline",
-            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -5551,7 +5551,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressResepiMinyakZaitunInline",
-            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -5575,7 +5575,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressResepiMinyakZaitunInline",
-            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -5599,7 +5599,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressResepiMinyakZaitunInline",
-            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -5623,7 +5623,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressResepiMinyakZaitunInline",
-            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           }
         ]
       },
@@ -5668,7 +5668,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressResepiMinyakZaitunInline",
-            "alt": "Meja kayu dengan mangkuk salad timun dan tomato, jag kaca kecil berisi minyak zaitun, sebiji lemon dan pengisar lada di sebelahnya"
+            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
           },
           {
             "type": "p",
@@ -5785,7 +5785,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressBeliMinyakZaitunOnlineHero",
-      "alt": "Kotak penghantaran kadbod di atas meja kayu dengan dua biji zaitun di sebelahnya"
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
     },
     "ogImage": "/og/blog-beli-minyak-zaitun-online.jpg",
     "intro": [
@@ -5815,7 +5815,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunOnlineInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -5841,7 +5841,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunOnlineInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -5864,7 +5864,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunOnlineInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -5904,7 +5904,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunOnlineInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -5923,7 +5923,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunOnlineInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       },
@@ -5946,7 +5946,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBeliMinyakZaitunOnlineInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai"
           }
         ]
       }
@@ -6054,7 +6054,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunPalsuHero",
-      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja makmal, dengan kelalang sampel dan mikroskop di belakangnya."
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
     },
     "ogImage": "/og/blog-minyak-zaitun-palsu.jpg",
     "intro": [
@@ -6078,7 +6078,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalsuInline",
-            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -6101,7 +6101,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalsuInline",
-            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -6120,7 +6120,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalsuInline",
-            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           },
           {
             "type": "note",
@@ -6149,7 +6149,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalsuInline",
-            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -6201,7 +6201,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalsuInline",
-            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       },
@@ -6226,7 +6226,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPalsuInline",
-            "alt": "Tabung sampel kaca dan mikroskop di atas meja makmal penilaian minyak"
+            "alt": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"
           }
         ]
       }
@@ -6330,7 +6330,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunTulenHero",
-      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak zaitun hijau mengalir ke dalam tangki di bawah."
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
     },
     "ogImage": "/og/blog-minyak-zaitun-tulen.jpg",
     "intro": [
@@ -6354,7 +6354,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunTulenInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -6374,7 +6374,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunTulenInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -6454,7 +6454,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunTulenInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -6479,7 +6479,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunTulenInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -6502,7 +6502,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunTulenInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       },
@@ -6521,7 +6521,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunTulenInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
           }
         ]
       }
@@ -6628,7 +6628,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukKekHero",
-      "alt": "Sebotol kaca minyak zaitun hijau di atas meja kayu dapur dengan cahaya siang dari tingkap"
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-kek.jpg",
     "intro": [
@@ -6651,7 +6651,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukKekInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -6701,7 +6701,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukKekInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           },
           {
             "type": "p",
@@ -6728,7 +6728,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukKekInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -6751,7 +6751,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukKekInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -6776,7 +6776,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukKekInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       },
@@ -6796,7 +6796,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukKekInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang ke ufuk"
+            "alt": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu"
           }
         ]
       }
@@ -6900,7 +6900,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakKelapaHero",
-      "alt": "Sebotol kaca minyak zaitun hijau di sebelah kelapa muda dan isi kelapa parut putih di atas tikar anyaman"
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
     },
     "ogImage": "/og/blog-minyak-zaitun-vs-minyak-kelapa.jpg",
     "intro": [
@@ -6925,7 +6925,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakKelapaInline",
-            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       },
@@ -6948,7 +6948,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakKelapaInline",
-            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       },
@@ -6967,7 +6967,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakKelapaInline",
-            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       },
@@ -6990,7 +6990,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakKelapaInline",
-            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       },
@@ -7009,7 +7009,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakKelapaInline",
-            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       },
@@ -7064,7 +7064,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunVsMinyakKelapaInline",
-            "alt": "Seorang wanita Malaysia bertudung memegang sebotol minyak zaitun di hadapan rumah kampung"
+            "alt": "Pekerja menuai zaitun di celah dahan ketika musim tuai"
           }
         ]
       }
@@ -7172,7 +7172,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressRasaMinyakZaitunHero",
-      "alt": "Mangkuk kaca kecil berisi minyak zaitun hijau di atas meja kayu, cahaya siang dari tingkap"
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
     },
     "ogImage": "/og/blog-rasa-minyak-zaitun.jpg",
     "intro": [
@@ -7200,7 +7200,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRasaMinyakZaitunInline",
-            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           }
         ]
       },
@@ -7240,7 +7240,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRasaMinyakZaitunInline",
-            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           },
           {
             "type": "p",
@@ -7268,7 +7268,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRasaMinyakZaitunInline",
-            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           }
         ]
       },
@@ -7291,7 +7291,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRasaMinyakZaitunInline",
-            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           },
           {
             "type": "p",
@@ -7318,7 +7318,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRasaMinyakZaitunInline",
-            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           },
           {
             "type": "note",
@@ -7346,7 +7346,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRasaMinyakZaitunInline",
-            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+            "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
           }
         ]
       }
@@ -7449,7 +7449,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunKeruhHero",
-      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
     },
     "ogImage": "/og/blog-minyak-zaitun-keruh.jpg",
     "intro": [
@@ -7477,7 +7477,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunKeruhInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -7500,7 +7500,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunKeruhInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           },
           {
             "type": "note",
@@ -7528,7 +7528,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunKeruhInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -7547,7 +7547,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunKeruhInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -7597,7 +7597,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunKeruhInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       },
@@ -7620,7 +7620,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunKeruhInline",
-            "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+            "alt": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang"
           }
         ]
       }
@@ -7728,7 +7728,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukAirFryerHero",
-      "alt": "Sebotol kaca minyak zaitun hijau di atas meja dapur bertepung dengan mangkuk seramik dan pemukul di sebelahnya"
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-air-fryer.jpg",
     "intro": [
@@ -7757,7 +7757,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukAirFryerInline",
-            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -7781,7 +7781,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukAirFryerInline",
-            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -7800,7 +7800,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukAirFryerInline",
-            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -7856,7 +7856,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukAirFryerInline",
-            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -7880,7 +7880,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukAirFryerInline",
-            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       },
@@ -7899,7 +7899,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukAirFryerInline",
-            "alt": "Buah zaitun di dalam bekas plastik yang bertindan selepas dituai"
+            "alt": "Barisan pokok zaitun dalam cahaya terakhir petang"
           }
         ]
       }
@@ -8007,7 +8007,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukIkanBakarHero",
-      "alt": "Sebotol minyak zaitun hijau dan berus penyapu di atas papan kayu di sebelah kuali panggang besi"
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-ikan-bakar.jpg",
     "intro": [
@@ -8035,7 +8035,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukIkanBakarInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -8054,7 +8054,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukIkanBakarInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -8073,7 +8073,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukIkanBakarInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -8092,7 +8092,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukIkanBakarInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -8115,7 +8115,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukIkanBakarInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           },
           {
             "type": "p",
@@ -8169,7 +8169,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukIkanBakarInline",
-            "alt": "Pekerja ladang membawa hasil kutipan zaitun menyusuri laluan di celah pokok zaitun"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       }
@@ -8276,7 +8276,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukPastaHero",
-      "alt": "Sebotol kaca minyak zaitun hijau di atas meja kayu di sebelah spageti kering dan ulas bawang putih"
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-pasta.jpg",
     "intro": [
@@ -8300,7 +8300,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukPastaInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -8323,7 +8323,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukPastaInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -8342,7 +8342,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukPastaInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -8370,7 +8370,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukPastaInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -8394,7 +8394,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukPastaInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -8444,7 +8444,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukPastaInline",
-            "alt": "Pandangan dari udara ke atas ladang zaitun dengan barisan pokok memanjang sehingga ke ufuk"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           },
           {
             "type": "p",
@@ -8552,7 +8552,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukRotiHero",
-      "alt": "Pokok zaitun tua membingkai perkampungan di lereng bukit dan laut di belakangnya ketika senja"
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
     },
     "ogImage": "/og/blog-minyak-zaitun-untuk-roti.jpg",
     "intro": [
@@ -8576,7 +8576,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukRotiInline",
-            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -8601,7 +8601,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukRotiInline",
-            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -8626,7 +8626,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukRotiInline",
-            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           },
           {
             "type": "p",
@@ -8675,7 +8675,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukRotiInline",
-            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -8700,7 +8700,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukRotiInline",
-            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -8719,7 +8719,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunUntukRotiInline",
-            "alt": "Sebotol minyak zaitun dipegang di tepi ladang zaitun yang terkena cahaya matahari, dengan birai batu dan dahan zaitun dalam bingkai"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       }
@@ -8822,7 +8822,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakSawitHero",
-      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja makmal dengan kelalang sampel"
+      "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
     },
     "ogImage": "/og/blog-minyak-zaitun-vs-minyak-sawit.jpg",
     "intro": [

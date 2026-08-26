@@ -1,0 +1,82 @@
+{
+ "OliveGroveSunsetHero.png": {
+  "en": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset",
+  "ms": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja",
+  "ar": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"
+ },
+ "OliveGroveSunsetHero-ar.png": {
+  "en": "Olive trees on a hillside at sunset, the grove running down towards the sea",
+  "ms": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut",
+  "ar": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"
+ },
+ "journey-04-extraction.png": {
+  "en": "Olive paste coming out of a stainless mill with green oil running into the vat below",
+  "ms": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki",
+  "ar": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"
+ },
+ "journey-05-filtering.png": {
+  "en": "Green olive oil pouring from a stainless pipe into an open vat at the mill",
+  "ms": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan",
+  "ar": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"
+ },
+ "journey-06-testing.webp": {
+  "en": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks",
+  "ms": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel",
+  "ar": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"
+ },
+ "journey-07-bottling.png": {
+  "en": "Dark glass bottles moving along a filling line under stainless steel filling heads",
+  "ms": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli",
+  "ar": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"
+ },
+ "HeroAVOliveOilBottleInTheField.png": {
+  "en": "A sunlit path running between old olive trees in the grove",
+  "ms": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang",
+  "ar": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"
+ },
+ "journey-08-final.png": {
+  "en": "Whole olives and olive leaves scattered across a wooden table",
+  "ms": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu",
+  "ar": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"
+ },
+ "FarmerPickingOliveOfTheTreeInTheField.png": {
+  "en": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest",
+  "ms": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai",
+  "ar": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"
+ },
+ "FarmerPouringOliveOilInTheField.png": {
+  "en": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table",
+  "ms": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu",
+  "ar": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"
+ },
+ "journey-01-grove.webp": {
+  "en": "An olive grove seen from above, rows of trees running to the horizon",
+  "ms": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk",
+  "ar": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"
+ },
+ "journey-02-sunset.webp": {
+  "en": "Rows of olive trees in the last light of the afternoon",
+  "ms": "Barisan pokok zaitun dalam cahaya terakhir petang",
+  "ar": "صفوف أشجار الزيتون في آخر ضوء العصر"
+ },
+ "journey-03-picking.webp": {
+  "en": "Pickers working through the branches during the olive harvest",
+  "ms": "Pekerja menuai zaitun di celah dahan ketika musim tuai",
+  "ar": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"
+ },
+ "journey-04-crates.webp": {
+  "en": "Stacked crates filled with freshly picked green and purple olives",
+  "ms": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai",
+  "ar": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"
+ },
+ "journey-05-carrying.webp": {
+  "en": "Workers carrying the day's harvest along a track between the olive trees",
+  "ms": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun",
+  "ar": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"
+ },
+ "journey-06-press.webp": {
+  "en": "Green and purple olives moving down a stainless chute towards the press",
+  "ms": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan",
+  "ar": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"
+ }
+}
