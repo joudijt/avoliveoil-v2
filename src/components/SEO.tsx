@@ -5,7 +5,15 @@ import {
   SITE_URL,
   SITE_NAME,
   OG_IMAGE_PATH,
+  OG_IMAGE_WIDTH,
+  OG_IMAGE_HEIGHT,
+  OG_IMAGE_TYPE,
   OG_LOCALES,
+  LOGO_RASTER_PATH,
+  LOGO_RASTER_WIDTH,
+  LOGO_RASTER_HEIGHT,
+  SITE_NAME_BY_LANG,
+  MANIFEST_BY_LANG,
   INSTAGRAM_URL,
   FACEBOOK_URL,
   SHOPEE_URL,
@@ -136,6 +144,8 @@ export function SEO({
   const altLangs = pathByLang ? ALL_LANGS.filter((l) => pathByLang[l]) : ALL_LANGS;
   const defaultLang = altLangs.includes('en') ? 'en' : (altLangs[0] ?? lang);
   const ogImage = `${SITE_URL}${article?.imagePath ?? OG_IMAGE_PATH}`;
+  /** The brand as this language writes it — القرية العربية on /ar. */
+  const brandName = SITE_NAME_BY_LANG[lang] ?? SITE_NAME;
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -143,7 +153,25 @@ export function SEO({
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.svg`,
+    /**
+     * Google reads Organization.logo as an ImageObject and wants explicit
+     * dimensions; the raster twin is there for consumers that will not render
+     * SVG. Both files come out of scripts/brand-assets.py, so they cannot drift
+     * from the logo in the header.
+     */
+    logo: {
+      '@type': 'ImageObject',
+      '@id': `${SITE_URL}/#logo`,
+      // The raster, not the SVG: `width`/`height` have to describe the file at
+      // `url`, and logo.svg carries a viewBox but no pixel size. The vector is
+      // still what the pages render and what `LOGO_PATH` serves.
+      url: `${SITE_URL}${LOGO_RASTER_PATH}`,
+      contentUrl: `${SITE_URL}${LOGO_RASTER_PATH}`,
+      width: LOGO_RASTER_WIDTH,
+      height: LOGO_RASTER_HEIGHT,
+      caption: SITE_NAME,
+    },
+    image: { '@id': `${SITE_URL}/#logo` },
     // Real, owned profiles only — sameAs is an identity claim, not a link list.
     sameAs: [INSTAGRAM_URL, FACEBOOK_URL, SHOPEE_URL, TIKTOK_SHOP_URL],
   };
@@ -257,18 +285,11 @@ export function SEO({
         articleSection: article.section,
         keywords: article.keywords.join(', '),
         isAccessibleForFree: true,
-        author: {
-          '@type': 'Organization',
-          '@id': `${SITE_URL}/#organization`,
-          name: SITE_NAME,
-          url: SITE_URL,
-        },
-        publisher: {
-          '@type': 'Organization',
-          '@id': `${SITE_URL}/#organization`,
-          name: SITE_NAME,
-          logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
-        },
+        // Both are the same graph node the page already emits in full, so they
+        // are references. Restating name/logo here published two spellings of
+        // one @id, and a consumer merging them gets a contradictory node.
+        author: { '@id': `${SITE_URL}/#organization` },
+        publisher: { '@id': `${SITE_URL}/#organization` },
       }
     : null;
 
@@ -301,12 +322,21 @@ export function SEO({
       ))}
       <link rel="alternate" hrefLang="x-default" href={pathFor(defaultLang)} />
 
+      <link rel="manifest" href={MANIFEST_BY_LANG[lang] ?? MANIFEST_BY_LANG.en} />
+      <meta name="application-name" content={brandName} />
+      <meta name="apple-mobile-web-app-title" content={brandName} />
+
       <meta property="og:type" content={article ? 'article' : 'website'} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:secure_url" content={ogImage} />
+      <meta property="og:image:type" content={OG_IMAGE_TYPE} />
+      <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
+      <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
+      <meta property="og:image:alt" content={article?.headline ?? title} />
       <meta property="og:locale" content={OG_LOCALES[lang]} />
       {altLangs.filter((l) => l !== lang).map((l) => (
         <meta key={l} property="og:locale:alternate" content={OG_LOCALES[l]} />

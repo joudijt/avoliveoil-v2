@@ -19,6 +19,14 @@ DirectorySlash Off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+  # The bare domain used to fall through to DirectoryIndex and serve the empty
+  # 442-byte SPA shell: no title, no description, no og:image, no JSON-LD. That
+  # is the single most-shared URL of the site (pasting avoliveoil.com into
+  # WhatsApp produced nothing) and it is what scripts/ai/gate.mjs fetches for its
+  # homepage checks. Serve the prerendered English page instead; its canonical
+  # already points at /en, so this adds no duplicate URL.
+  RewriteRule ^$ /en/index.html [L]
+
   # Language roots -> prerendered snapshot, no redirect, slash optional
   RewriteRule ^(en|ar|ms)/?$ /$1/index.html [L]
 
@@ -50,8 +58,12 @@ DirectorySlash Off
   # shell for every missing asset — a soft 404 that a crawler, a schema
   # validator and a link checker all read as a real page. Verified live
   # 2026-08-18: /faq.md returned 200 text/html before this rule existed.
+  # 2,12 not 2,5: ".webmanifest" is eleven characters, so it fell outside the
+  # old range and a missing/failed-upload manifest answered 200 with the shell —
+  # the exact soft-404 this rule exists to stop, invisible to any status check.
+  # Routes on this site never contain a dot, so widening is safe.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule \.[A-Za-z0-9]{2,5}$ - [R=404,L]
+  RewriteRule \.[A-Za-z0-9]{2,12}$ - [R=404,L]
 
   # Everything else -> SPA shell
   RewriteRule ^ /index.html [L]
@@ -98,6 +110,33 @@ AddType "text/markdown; charset=UTF-8" .md
 <IfModule mod_headers.c>
   <FilesMatch "\.md$">
     Header set Content-Type "text/markdown; charset=UTF-8"
+  </FilesMatch>
+</IfModule>
+
+# Brand assets. The web manifest has its own registered type and is refused by
+# some browsers when served as octet-stream; the icons are long-lived because
+# their content only changes when the logo does, and the manifest is short-lived
+# because it names them.
+AddType application/manifest+json .webmanifest
+AddType image/svg+xml .svg
+AddType image/x-icon .ico
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webmanifest)$">
+    Header set Content-Type "application/manifest+json; charset=UTF-8"
+    Header set Cache-Control "public, max-age=3600"
+    Header unset Expires
+  </FilesMatch>
+  # mod_expires above gives every png/jpeg/svg "access plus 1 year". That is
+  # right for hashed build assets under /assets/ and wrong for these: it is why
+  # the old purple template favicon would otherwise stay in a returning
+  # visitor's tab until 2027. One week, and re-verify with curl -I after deploy.
+  <FilesMatch "^(favicon.*|apple-touch-icon|mask-icon|logo|logo-512|og-image|og-card.*|icon-.*)\.(svg|png|ico|jpg)$">
+    Header set Cache-Control "public, max-age=604800"
+    # mod_expires emits its own Expires: 2027 header for these types and a
+    # Cache-Control set here does not remove it. Two conflicting freshness
+    # headers on a LiteSpeed box emulating both modules is not worth relying on
+    # RFC precedence for — drop the stale one outright.
+    Header unset Expires
   </FilesMatch>
 </IfModule>
 

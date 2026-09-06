@@ -2,8 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Every icon below is derived from the one logo the header renders
+         (src/assets/logo/logo_theme.svg) by scripts/brand-assets.py. The palm
+         inside the emblem is a knockout, so each tile is painted with the
+         site's own cream (#FFFDF8) — a transparent icon renders a dark palm on
+         a dark browser theme. Re-run the script after any logo change. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon-2026-09.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="alternate icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/mask-icon.svg" color="#2E3A24" />
+
+    <meta name="theme-color" content="#FFFDF8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="msapplication-TileColor" content="#FFFDF8" />
+    <meta name="msapplication-TileImage" content="/icons/icon-192.png" />
+
+    <!-- The page title, description, manifest link and app names are NOT here
+         on purpose. react-helmet-async appends its per-route tags instead of
+         replacing the shell's, so anything duplicated in this file appears
+         twice in the live DOM of every page, and a crawler is free to pick
+         either one. SEO.tsx owns all four, per language. The icons above are
+         the only head tags Helmet does not manage. (No literal tag names in
+         this comment: it ships inside all 160 prerendered pages and a naive
+         title-scraper reads the first match it finds.) -->
   </head>
   <body>
     <div id="root"></div>

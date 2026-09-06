@@ -69,6 +69,28 @@ async function main() {
       // finished rendering (the loading timeline runs ~5 s); wait on that.
       await page.goto(`${base}${route}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
       await page.waitForSelector('body[data-app-ready="true"]', { timeout: 60000 });
+
+      // react-helmet-async APPENDS its per-route <title> and description; it
+      // does not replace the ones index.html ships, so a raw snapshot carries
+      // two of each and a crawler picks whichever it likes. The shell's copies
+      // are marked data-shell — drop them, but only once Helmet has actually
+      // produced a replacement, so a route that renders no SEO component still
+      // ends up titled.
+      await page.evaluate(() => {
+        const SHELL_TAGS = [
+          'title',
+          'meta[name="description"]',
+          'link[rel="manifest"]',
+          'meta[name="application-name"]',
+          'meta[name="apple-mobile-web-app-title"]',
+        ];
+        for (const selector of SHELL_TAGS) {
+          const all = [...document.head.querySelectorAll(selector)];
+          const shell = all.filter((el) => el.hasAttribute('data-shell'));
+          if (all.length > shell.length) shell.forEach((el) => el.remove());
+        }
+      });
+
       const html = await page.content();
 
       const outDir = join(distDir, route);

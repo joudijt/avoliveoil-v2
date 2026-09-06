@@ -23,7 +23,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../..');
 const F = JSON.parse(readFileSync(join(ROOT, 'src/data/storeFacts.json'), 'utf8'));
 const CHECK = process.argv.includes('--check');
 
-const { seller: S, branches: B, prices: P, scale: SC, hours: H } = F;
+const { seller: S, branches: B, prices: P, scale: SC, hours: H, site: SITE } = F;
 const SITE_URL = 'https://avoliveoil.com';
 const TODAY = '2026-08-18';
 
@@ -65,6 +65,11 @@ p('  name: Arabian Village');
 p('  name_ms: Arabian Village');
 p('  name_ar: القرية العربية');
 p(`  url: ${SITE_URL}`);
+/* scripts/ai/build.mjs emits Organization.logo when this fact exists, so the
+   JSON-LD an assistant reads out of AI-FACTS.yml names the same mark the header
+   renders. The file itself is written by scripts/brand-assets.py from
+   src/assets/logo/logo_theme.svg. */
+p(`  logo: ${SITE_URL}${SITE.logo}`);
 p(`  definition: ${one(`Arabian Village is a premium, first cold pressed extra virgin olive oil sourced from
    centuries-old olive groves in Palestine, hand-harvested and mechanically pressed within hours of
    picking without heat or chemicals. The range is the classic Palestinian extra virgin olive oil
