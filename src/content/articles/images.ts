@@ -1,15 +1,19 @@
 import type { ImageKey } from './types';
 
-import bottleField from '../../assets/images/HeroAVOliveOilBottleInTheField.png';
-import pouringField from '../../assets/images/FarmerPouringOliveOilInTheField.png';
-import pickingOlives from '../../assets/images/FarmerPickingOliveOfTheTreeInTheField.png';
-import oilInField from '../../assets/images/AVOliveOilInTheField.png';
-import groveSunset from '../../assets/images/OliveGroveSunsetHero.png';
+// The originals of these are 0.7–5.9 MB PNGs. Article bodies render them inside
+// a prose column that is never wider than ~800 CSS px, so they point at the
+// widest optimised variant at or below 1200px from scripts/optimize-images.py
+// (src/assets/opt/<name>-<width>.webp) — same string shape, ~1–2% of the bytes.
+import bottleField from '../../assets/opt/HeroAVOliveOilBottleInTheField-1200.webp';
+import pouringField from '../../assets/opt/FarmerPouringOliveOilInTheField-750.webp';
+import pickingOlives from '../../assets/opt/FarmerPickingOliveOfTheTreeInTheField-928.webp';
+import oilInField from '../../assets/opt/AVOliveOilInTheField-750.webp';
+import groveSunset from '../../assets/opt/OliveGroveSunsetHero-1200.webp';
 import tasting from '../../assets/images/journey-06-testing.webp';
-import extraction from '../../assets/images/journey-04-extraction.png';
-import filtering from '../../assets/images/journey-05-filtering.png';
-import bottling from '../../assets/images/journey-07-bottling.png';
-import finalBottle from '../../assets/images/journey-08-final.png';
+import extraction from '../../assets/opt/journey-04-extraction-1200.webp';
+import filtering from '../../assets/opt/journey-05-filtering-1200.webp';
+import bottling from '../../assets/opt/journey-07-bottling-1200.webp';
+import finalBottle from '../../assets/opt/journey-08-final-1200.webp';
 import womanHoldingBottle from '../../assets/images/woman-holding-bottle-nobg.webp';
 import kampungBottle from '../../assets/images/malaysian-woman-bottle-kampung.webp';
 

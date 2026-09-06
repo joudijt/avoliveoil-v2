@@ -15,7 +15,7 @@ let activeLenis: Lenis | null = null;
  * chance to interpolate and land frozen at a stale transform. Routing the
  * same jump through Lenis keeps it eased and in sync with ScrollTrigger.
  * Falls back to native smooth scroll if Lenis isn't mounted (e.g. during
- * the loading screen).
+ * the page is ready to scroll).
  */
 export function scrollToHash(hash: string) {
   const el = document.querySelector(hash);
@@ -31,7 +31,7 @@ export function scrollToHash(hash: string) {
  * Jumps Lenis to the top with no easing. Used on route changes, where the
  * new page should already be at its top rather than visibly scrolling
  * there. No-op when Lenis isn't mounted (every page except HomePage, and
- * HomePage itself while its loading screen is up) — the caller pairs this
+ * HomePage itself before it is ready) — the caller pairs this
  * with a plain window.scrollTo for those cases.
  */
 export function scrollToTopImmediate() {

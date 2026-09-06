@@ -6,7 +6,7 @@ import { Footer } from '../components/ui/Footer';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
-import bottleImg from '../assets/images/bottle-cutout.png';
+import { Picture } from '../components/ui/Picture';
 import { INFUSED_PRODUCTS } from '../data/infusedProducts';
 import { PRICES, STORE, STORE_BRANCHES, MADINAH_NAME } from '../config/site';
 
@@ -52,11 +52,13 @@ export function ProductsPage() {
               </p>
             </div>
             <div className="flex items-center justify-center">
-              <img
-                src={bottleImg}
+              <Picture
+                name="bottle-cutout"
                 alt="Arabian Village Organic Palestinian Olive Oil 500ml bottle, first cold pressed"
                 className="h-[46vh] w-auto object-contain md:h-[56vh]"
                 style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
+                sizes="(min-width: 768px) 12vh, 10vh"
+                priority
               />
             </div>
           </div>

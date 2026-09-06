@@ -1,12 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scrollToHash } from '../../hooks/useLenis';
-import groveImg from '../../assets/images/OliveGroveSunsetHero.png';
-import groveImgAr from '../../assets/images/OliveGroveSunsetHero-ar.png';
-import bottleImg from '../../assets/images/bottle-cutout.png';
+import { Picture } from '../ui/Picture';
+import { isPrerender } from '../../lib/prerender';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +13,16 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
   const imgRef = useRef<HTMLImageElement>(null);
   const current = useRef({ x: 0, y: 0 });
 
-  useEffect(() => {
+  // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
+  // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
+  // prerendered snapshot in which those animations had already finished: the
+  // markup carries `opacity: 1; transform: translate(0px,0px)`. With useEffect
+  // the browser painted that finished state first, then the animation reset it
+  // and replayed — a visible flash above the fold on every load. useLayoutEffect
+  // lands the reset before the first paint.
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     let raf: number;
     const tick = () => {
       current.current.x += (mouse.current.x - current.current.x) * 0.06;
@@ -32,11 +40,13 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
   }, [mouse]);
 
   return (
-    <img
+    <Picture
       ref={imgRef}
-      src={bottleImg}
+      name="bottle-cutout"
       alt="Arabian Village Palestinian Olive Oil bottle"
       className="relative z-10 h-[40vh] w-auto object-contain sm:h-[52vh] md:h-[68vh]"
+      sizes="(min-width: 768px) 14vh, 11vh"
+      priority
     />
   );
 }
@@ -54,7 +64,7 @@ const LEAVES = Array.from({ length: 8 }).map((_, i) => ({
 export function Hero() {
   const { t } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
-  const heroBg = lang === 'ar' ? groveImgAr : groveImg;
+  const heroBgName = lang === 'ar' ? 'OliveGroveSunsetHero-ar' : 'OliveGroveSunsetHero';
   const mouse = useRef({ x: 0, y: 0 });
   const rootRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -63,7 +73,9 @@ export function Hero() {
   const bottleWrapRef = useRef<HTMLDivElement>(null);
   const bottleExitRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const handleMove = (e: MouseEvent) => {
       mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = (e.clientY / window.innerHeight) * 2 - 1;
@@ -72,7 +84,9 @@ export function Hero() {
     return () => window.removeEventListener('mousemove', handleMove);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const words = headingRef.current?.querySelectorAll('span.word');
     const tl = gsap.timeline({ delay: 0.2 });
     if (words?.length) {
@@ -100,9 +114,17 @@ export function Hero() {
 
   return (
     <section id="home" ref={rootRef} className="relative flex min-h-screen w-full items-center overflow-hidden bg-bg">
-      <div
-        className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: '68% 62%' }}
+      {/* Was a `bg-cover` div with `background-position: 68% 62%`; an <img> with
+          object-cover + the same object-position paints identically and is the
+          only form that can carry a srcset for the LCP element. */}
+      <Picture
+        name={heroBgName}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ objectPosition: '68% 62%' }}
+        sizes="100vw"
+        priority
       />
       <div
         className="pointer-events-none absolute inset-0"

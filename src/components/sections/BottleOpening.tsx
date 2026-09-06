@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import bottleImg from '../../assets/images/bottle-cutout.png';
+import { Picture } from '../ui/Picture';
+import { isPrerender } from '../../lib/prerender';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +33,16 @@ export function BottleOpening() {
   const copyRef = useRef<HTMLDivElement>(null);
   const kickerRef = useRef<HTMLParagraphElement>(null);
 
-  useEffect(() => {
+  // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
+  // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
+  // prerendered snapshot in which those animations had already finished: the
+  // markup carries `opacity: 1; transform: translate(0px,0px)`. With useEffect
+  // the browser painted that finished state first, then the animation reset it
+  // and replayed — a visible flash above the fold on every load. useLayoutEffect
+  // lands the reset before the first paint.
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const ctx = gsap.context(() => {
       gsap.set(streamRef.current, { scaleY: 0, transformOrigin: 'top center' });
       gsap.set(poolRef.current, { scaleX: 0, opacity: 0 });
@@ -83,11 +93,12 @@ export function BottleOpening() {
               className="relative w-[110px] sm:w-[min(28vh,220px)]"
               style={{ aspectRatio: '343 / 1683' }}
             >
-              <img
-                src={bottleImg}
+              <Picture
+                name="bottle-cutout"
                 alt="Arabian Village Palestinian Olive Oil bottle, open and pouring"
                 className="relative z-10 h-full w-full object-contain"
                 style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.4))' }}
+                sizes="(min-width: 640px) 220px, 110px"
               />
 
               <div

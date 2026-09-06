@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import storyPortraitImg from '../../assets/images/woman-holding-bottle-nobg.webp';
+import { Picture } from '../ui/Picture';
+import { isPrerender } from '../../lib/prerender';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +66,16 @@ export function ScrollStory() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
+  // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
+  // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
+  // prerendered snapshot in which those animations had already finished: the
+  // markup carries `opacity: 1; transform: translate(0px,0px)`. With useEffect
+  // the browser painted that finished state first, then the animation reset it
+  // and replayed — a visible flash above the fold on every load. useLayoutEffect
+  // lands the reset before the first paint.
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
@@ -124,11 +134,12 @@ export function ScrollStory() {
             />
           ))}
 
-          <img
-            src={storyPortraitImg}
+          <Picture
+            name="woman-holding-bottle-nobg"
             alt="Woman holding a bottle of Arabian Village organic Palestinian olive oil"
             className="h-[45vh] w-auto object-contain lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:h-[65vh]"
             style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
+            sizes="(min-width: 1024px) 46vh, 32vh"
           />
 
           {cards.slice(2, 4).map((card, i) => (

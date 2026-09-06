@@ -125,7 +125,14 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-16 max-w-6xl border-t border-cream/10 pt-6 text-center text-xs font-light text-cream/40 md:text-start">
+      {/* suppressHydrationWarning: the year is computed when the page is
+          prerendered and again when it is read. Across New Year those differ,
+          and a text mismatch in the footer would discard the hydrated tree on
+          every page of the site. */}
+      <div
+        suppressHydrationWarning
+        className="relative z-10 mx-auto mt-16 max-w-6xl border-t border-cream/10 pt-6 text-center text-xs font-light text-cream/40 md:text-start"
+      >
         © {new Date().getFullYear()} Arabian Village. {t('footer.rights')}
       </div>
     </footer>

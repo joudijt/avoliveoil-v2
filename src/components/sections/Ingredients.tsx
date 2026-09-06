@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaAppleAlt, FaSnowflake, FaLeaf, FaTint, FaMedal } from 'react-icons/fa';
+import { isPrerender } from '../../lib/prerender';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +36,16 @@ export function Ingredients() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
-  useEffect(() => {
+  // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
+  // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
+  // prerendered snapshot in which those animations had already finished: the
+  // markup carries `opacity: 1; transform: translate(0px,0px)`. With useEffect
+  // the browser painted that finished state first, then the animation reset it
+  // and replayed — a visible flash above the fold on every load. useLayoutEffect
+  // lands the reset before the first paint.
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headingRef.current,

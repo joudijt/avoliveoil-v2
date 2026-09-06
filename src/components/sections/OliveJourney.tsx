@@ -1,13 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import groveImg from '../../assets/images/journey-01-grove.webp';
-import sunsetImg from '../../assets/images/journey-02-sunset.webp';
-import pickingImg from '../../assets/images/journey-03-picking.webp';
-import cratesImg from '../../assets/images/journey-04-crates.webp';
-import carryingImg from '../../assets/images/journey-05-carrying.webp';
-import pressImg from '../../assets/images/journey-06-press.webp';
+import { Picture } from '../ui/Picture';
+import { isPrerender } from '../../lib/prerender';
 
 interface JourneyScene {
   key: string;
@@ -15,14 +11,24 @@ interface JourneyScene {
   caption: string;
 }
 
+/** Scene key → base name of the optimised variants in src/assets/opt. */
 const PHOTOS: Record<string, string> = {
-  grove: groveImg,
-  sunset: sunsetImg,
-  picking: pickingImg,
-  crates: cratesImg,
-  carrying: carryingImg,
-  press: pressImg,
+  grove: 'journey-01-grove',
+  sunset: 'journey-02-sunset',
+  picking: 'journey-03-picking',
+  crates: 'journey-04-crates',
+  carrying: 'journey-05-carrying',
+  press: 'journey-06-press',
 };
+
+/**
+ * The slide sits in the right column of a `max-w-6xl` (1152px) two-column grid
+ * with `md:gap-16` (64px) inside `px-6 md:px-16` padding, so it is
+ * (1152 - 64) / 2 = 544px once the container stops growing at 1280px, and full
+ * bleed minus the 1.5rem page padding on one column below md.
+ */
+const JOURNEY_SIZES =
+  '(min-width: 1280px) 544px, (min-width: 768px) calc(50vw - 96px), calc(100vw - 3rem)';
 
 export function OliveJourney() {
   const { t } = useTranslation();
@@ -33,7 +39,16 @@ export function OliveJourney() {
   const scene = journey[index];
   const go = (delta: number) => setIndex((i) => (i + delta + journey.length) % journey.length);
 
-  useEffect(() => {
+  // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
+  // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
+  // prerendered snapshot in which those animations had already finished: the
+  // markup carries `opacity: 1; transform: translate(0px,0px)`. With useEffect
+  // the browser painted that finished state first, then the animation reset it
+  // and replayed — a visible flash above the fold on every load. useLayoutEffect
+  // lands the reset before the first paint.
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     gsap.fromTo(captionRef.current, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
   }, [index]);
 
@@ -69,12 +84,12 @@ export function OliveJourney() {
         <div className="order-1 md:order-2">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-olive-dark/10 shadow-[0_15px_40px_rgba(46,58,36,0.12)]">
             {journey.map((s, i) => (
-              <img
+              <Picture
                 key={s.key}
-                src={PHOTOS[s.key]}
+                name={PHOTOS[s.key]}
                 alt={s.title}
                 aria-hidden={i !== index}
-                decoding="async"
+                sizes={JOURNEY_SIZES}
                 className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-out ${
                   i === index ? 'opacity-100' : 'opacity-0'
                 }`}

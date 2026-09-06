@@ -1,11 +1,11 @@
 // Post-build step: launches the built app in a real headless browser,
-// waits for it to fully render past the loading screen (data-app-ready),
+// waits for it to finish rendering (data-app-ready),
 // and writes the resulting HTML as a static index.html per language route.
-// Real visitors never see this file — their browser loads the normal JS
-// bundle and createRoot() fully replaces it with the live app (Loading
-// animation and all). This snapshot exists purely so crawlers that don't
-// execute JavaScript (many AI bots) see real content instead of an empty
-// shell.
+// Since PERF-1 these snapshots are not only for crawlers: main.tsx HYDRATES
+// this markup instead of replacing it, so a real visitor sees the finished page
+// as soon as the HTML arrives and React adopts it in place. That makes the
+// snapshot load-bearing for humans too — if a page is captured before its
+// content renders, that is what everyone gets.
 import { preview } from 'vite';
 import puppeteer from 'puppeteer';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -61,6 +61,15 @@ async function main() {
   const openPages = await browser.pages();
   const page = openPages[0] ?? (await browser.newPage());
 
+  // Tell the app it is being snapshotted, BEFORE any of its code runs. The
+  // animation effects read this and skip gsap entirely, so the captured DOM is
+  // exactly what React rendered — no inline styles React does not know about.
+  // Without it the snapshot froze the hero mid-reveal at opacity 0 and made
+  // every animated page fail hydration (React error #418).
+  await page.evaluateOnNewDocument(() => {
+    window.__PRERENDER__ = true;
+  });
+
   try {
     for (const route of ROUTES) {
       // Don't wait for networkidle0 — the page ships ~25 MB of imagery and the
@@ -69,6 +78,18 @@ async function main() {
       // finished rendering (the loading timeline runs ~5 s); wait on that.
       await page.goto(`${base}${route}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
       await page.waitForSelector('body[data-app-ready="true"]', { timeout: 60000 });
+
+      // Let the render that FOLLOWS data-app-ready commit before snapshotting.
+      // Anything gated on useAppReady() — the floating WhatsApp button, on
+      // every page — mounts on that next render. Capturing a frame too early
+      // published HTML without it while the hydrating client rendered it
+      // immediately (the attribute is already in the markup), so React saw a
+      // structural mismatch and re-rendered the whole tree: error #418 on every
+      // page. Two frames plus a beat is enough for React to flush.
+      await page.evaluate(
+        () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)))
+      );
+      await new Promise((resolve) => setTimeout(resolve, 300));
 
       // react-helmet-async APPENDS its per-route <title> and description; it
       // does not replace the ones index.html ships, so a raw snapshot carries

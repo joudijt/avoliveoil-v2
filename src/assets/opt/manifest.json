@@ -1,0 +1,201 @@
+{
+  "AVOliveOilInTheField": {
+    "height": 947,
+    "width": 750,
+    "widths": [
+      400,
+      750
+    ]
+  },
+  "FarmerPickingOliveOfTheTreeInTheField": {
+    "height": 750,
+    "width": 928,
+    "widths": [
+      400,
+      800,
+      928
+    ]
+  },
+  "FarmerPouringOliveOilInTheField": {
+    "height": 409,
+    "width": 750,
+    "widths": [
+      400,
+      750
+    ]
+  },
+  "HeroAVOliveOilBottleInTheField": {
+    "height": 1536,
+    "width": 2752,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      2000
+    ]
+  },
+  "OliveGroveSunsetHero": {
+    "height": 941,
+    "width": 1672,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      1672
+    ]
+  },
+  "OliveGroveSunsetHero-ar": {
+    "height": 941,
+    "width": 1672,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      1672
+    ]
+  },
+  "bottle-cutout": {
+    "height": 1683,
+    "width": 343,
+    "widths": [
+      343
+    ]
+  },
+  "bottle-source-raw": {
+    "height": 1752,
+    "width": 898,
+    "widths": [
+      400,
+      800,
+      898
+    ]
+  },
+  "journey-01-grove": {
+    "height": 450,
+    "width": 600,
+    "widths": [
+      400,
+      600
+    ]
+  },
+  "journey-02-sunset": {
+    "height": 450,
+    "width": 600,
+    "widths": [
+      400,
+      600
+    ]
+  },
+  "journey-03-picking": {
+    "height": 450,
+    "width": 600,
+    "widths": [
+      400,
+      600
+    ]
+  },
+  "journey-04-crates": {
+    "height": 450,
+    "width": 600,
+    "widths": [
+      400,
+      600
+    ]
+  },
+  "journey-04-extraction": {
+    "height": 1024,
+    "width": 1536,
+    "widths": [
+      400,
+      800,
+      1200,
+      1536
+    ]
+  },
+  "journey-05-carrying": {
+    "height": 450,
+    "width": 600,
+    "widths": [
+      400,
+      600
+    ]
+  },
+  "journey-05-filtering": {
+    "height": 768,
+    "width": 1376,
+    "widths": [
+      400,
+      800,
+      1200,
+      1376
+    ]
+  },
+  "journey-06-press": {
+    "height": 450,
+    "width": 600,
+    "widths": [
+      400,
+      600
+    ]
+  },
+  "journey-06-testing": {
+    "height": 960,
+    "width": 1280,
+    "widths": [
+      400,
+      800,
+      1200,
+      1280
+    ]
+  },
+  "journey-07-bottling": {
+    "height": 768,
+    "width": 1376,
+    "widths": [
+      400,
+      800,
+      1200,
+      1376
+    ]
+  },
+  "journey-08-final": {
+    "height": 768,
+    "width": 1376,
+    "widths": [
+      400,
+      800,
+      1200,
+      1376
+    ]
+  },
+  "malaysian-woman-bottle-kampung": {
+    "height": 1024,
+    "width": 1536,
+    "widths": [
+      400,
+      800,
+      1200,
+      1536
+    ]
+  },
+  "polaroid-frame": {
+    "height": 691,
+    "width": 610,
+    "widths": [
+      400,
+      610
+    ]
+  },
+  "woman-holding-bottle-nobg": {
+    "height": 1277,
+    "width": 895,
+    "widths": [
+      400,
+      800,
+      895
+    ]
+  }
+}

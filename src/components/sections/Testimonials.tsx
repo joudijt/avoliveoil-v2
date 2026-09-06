@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { isPrerender } from '../../lib/prerender';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +18,9 @@ export function Testimonials() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRefs.current,

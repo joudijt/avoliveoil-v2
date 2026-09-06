@@ -1,8 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PRODUCTS } from '../../data/products';
+import { Picture } from '../ui/Picture';
+import { isPrerender } from '../../lib/prerender';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +19,16 @@ export function ProductShowcase() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
+  // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
+  // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
+  // prerendered snapshot in which those animations had already finished: the
+  // markup carries `opacity: 1; transform: translate(0px,0px)`. With useEffect
+  // the browser painted that finished state first, then the animation reset it
+  // and replayed — a visible flash above the fold on every load. useLayoutEffect
+  // lands the reset before the first paint.
+  useLayoutEffect(() => {
+    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
+    if (isPrerender()) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRefs.current,
@@ -70,11 +81,16 @@ export function ProductShowcase() {
                   }`}
                 >
                   <div className="pointer-events-none absolute inset-0 rounded-full bg-gold/0 blur-2xl transition-colors duration-500 group-hover:bg-gold/20" />
-                  <img
-                    src={product.image}
+                  {/* Every product ships in the same 343x1683 bottle, so the
+                      image is named here rather than carried per-product in
+                      data/products.ts. A product with its own bottle would need
+                      an `imageName` field there, not a bundled URL. */}
+                  <Picture
+                    name="bottle-cutout"
                     alt={text.name}
                     className="relative h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:rotate-3"
                     style={{ filter: 'drop-shadow(0 20px 20px rgba(46,58,36,0.18))' }}
+                    sizes={isCenter ? '(min-width: 1024px) 11vh, 7vh' : '(min-width: 1024px) 8vh, 7vh'}
                   />
                 </div>
                 <p className={`mt-4 text-sm text-olive-dark ${isCenter ? 'font-medium' : 'font-light text-olive-dark/70'}`}>

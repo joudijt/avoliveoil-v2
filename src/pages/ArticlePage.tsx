@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { FiArrowLeft, FiArrowRight, FiClock } from 'react-icons/fi';
@@ -9,8 +10,8 @@ import { FAQ } from '../components/sections/FAQ';
 import { Blocks } from '../components/blog/ArticleBody';
 import { renderInline } from '../components/blog/inline';
 import { ARTICLE_IMAGES } from '../content/articles/images';
-import { articlePathByLang, findArticle } from '../content/articles';
-import { useMarkAppReady } from '../hooks/useMarkAppReady';
+import { articlePathByLang } from '../content/articles';
+import { ensureArticles, peekArticles } from '../content/articles/registry';
 import { MADINAH_NAME, MADINAH_URL } from '../config/site';
 
 const DATE_LOCALE: Record<string, string> = { en: 'en-MY', ar: 'ar-EG', ms: 'ms-MY' };
@@ -18,8 +19,57 @@ const DATE_LOCALE: Record<string, string> = { en: 'en-MY', ar: 'ar-EG', ms: 'ms-
 export function ArticlePage() {
   const { t } = useTranslation();
   const { lang = 'en', slug } = useParams<{ lang: string; slug: string }>();
-  const article = findArticle(lang, slug);
-  useMarkAppReady();
+
+  // Synchronous read. On a first load of /{lang}/blog/{slug} this is always
+  // populated: main.tsx awaits ensureArticles(lang) before it renders at all,
+  // which is what lets the prerendered markup be hydrated instead of replaced.
+  // It is undefined only after a client-side navigation into the blog from a
+  // page that never needed the chunk.
+  const articles = peekArticles(lang);
+  const [, forceRender] = useState(0);
+
+  useEffect(() => {
+    if (articles) return;
+    let alive = true;
+    void ensureArticles(lang).then(() => {
+      if (alive) forceRender((n) => n + 1);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [lang, articles]);
+
+  const article = articles?.find((a) => a.slug === slug);
+
+  // NOT useMarkAppReady(): that hook fires on mount unconditionally, and
+  // scripts/prerender.mjs snapshots the page the instant
+  // body[data-app-ready="true"] appears. Flagging ready before `article`
+  // exists would publish 123 empty article pages. Gate it on the content.
+  useEffect(() => {
+    if (!article) return;
+    document.body.setAttribute('data-app-ready', 'true');
+  }, [article]);
+
+  // Chunk still in flight — client-side navigation only; a first load on an
+  // article URL is awaited in main.tsx before hydration. Show the frame rather
+  // than a blank document, and keep `data-app-ready` unset so the prerenderer
+  // can never capture this state.
+  if (!articles) {
+    return (
+      <>
+        <Navbar />
+        <main className="bg-bg min-h-screen px-6 pb-28 pt-28 md:px-16">
+          <div className="mx-auto max-w-3xl space-y-4">
+            <div className="h-10 w-3/4 animate-pulse rounded bg-cream/70" />
+            <div className="h-64 animate-pulse rounded-2xl bg-cream/70" />
+            <div className="h-4 w-full animate-pulse rounded bg-cream/70" />
+            <div className="h-4 w-5/6 animate-pulse rounded bg-cream/70" />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   // Unknown slug: send the reader to the blog index rather than showing an
   // empty shell that a crawler would happily index as a real page.
@@ -74,7 +124,7 @@ export function ArticlePage() {
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-body text-sm text-brown/60">
-                <time dateTime={article.datePublished}>{published}</time>
+                <time dateTime={article.datePublished} suppressHydrationWarning>{published}</time>
                 <span className="flex items-center gap-2">
                   <FiClock aria-hidden="true" className="h-4 w-4 text-gold" />
                   {t('articlePage.readingTime', { count: article.readingTime })}

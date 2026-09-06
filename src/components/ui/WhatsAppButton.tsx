@@ -1,20 +1,22 @@
 import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
 import { WHATSAPP_NUMBER } from '../../utils/whatsapp';
-import { useAppReady } from '../../hooks/useAppReady';
 
 /**
  * Fixed bottom-right WhatsApp bubble, present on every page. Physically
  * bottom-right regardless of language, same reasoning as Navbar/Footer's
- * forced chrome positions — not mirrored for RTL. Hidden until the app is
- * past HomePage's loading screen (see useAppReady) so it doesn't float on
- * top of that animation.
+ * forced chrome positions — not mirrored for RTL.
+ *
+ * It used to hide behind `useAppReady()` so it would not float over HomePage's
+ * loading animation. That animation was deleted in PERF-1, and the gate then
+ * became actively harmful: on a prerendered page the body already carries
+ * data-app-ready, so a hydrating client rendered this button on its very first
+ * render while the snapshot — captured on the same tick the attribute was set —
+ * did not contain it. React saw a structural mismatch and re-rendered the whole
+ * tree on every page. Rendering it unconditionally is both simpler and correct.
  */
 export function WhatsAppButton() {
   const { t } = useTranslation();
-  const ready = useAppReady();
-
-  if (!ready) return null;
 
   return (
     <a

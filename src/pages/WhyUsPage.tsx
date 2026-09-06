@@ -7,7 +7,7 @@ import { Footer } from '../components/ui/Footer';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
-import fieldImg from '../assets/images/AVOliveOilInTheField.png';
+import { Picture } from '../components/ui/Picture';
 
 interface Reason {
   title: string;
@@ -54,11 +54,14 @@ export function WhyUsPage() {
 
         <section className="px-6 pb-20 md:px-16 md:pb-28">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            <img
-              src={fieldImg}
+            {/* Left column of a max-w-6xl (1152px) 2-up grid with gap-12 (48px)
+                inside px-6 / md:px-16 padding: 552px once the container caps at
+                1280px, one full column below lg. */}
+            <Picture
+              name="AVOliveOilInTheField"
               alt="Arabian Village olive oil bottle among Palestinian olive groves in the field"
               className="w-full rounded-2xl object-cover shadow-[0_25px_50px_rgba(46,58,36,0.18)]"
-              loading="lazy"
+              sizes="(min-width: 1280px) 552px, (min-width: 1024px) calc(50vw - 88px), (min-width: 768px) calc(100vw - 8rem), calc(100vw - 3rem)"
             />
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {reasons.map((reason) => (

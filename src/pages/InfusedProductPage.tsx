@@ -5,6 +5,7 @@ import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
+import { Picture } from '../components/ui/Picture';
 import { INFUSED_PRODUCTS, findInfusedProduct } from '../data/infusedProducts';
 import { PRICES, MADINAH_NAME } from '../config/site';
 
@@ -75,11 +76,16 @@ export function InfusedProductPage() {
               </p>
             </div>
             <div className="flex items-center justify-center">
-              <img
-                src={product.image}
+              {/* Every infused variant ships in the same bottle, so the image
+                  is named here rather than carried per-variant in
+                  data/infusedProducts.ts. */}
+              <Picture
+                name="bottle-cutout"
                 alt={t(`${key}.imageAlt`)}
                 className="h-[46vh] w-auto object-contain md:h-[56vh]"
                 style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
+                sizes="(min-width: 768px) 12vh, 10vh"
+                priority
               />
             </div>
           </div>
