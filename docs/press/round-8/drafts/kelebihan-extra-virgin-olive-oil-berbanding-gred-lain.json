@@ -19,7 +19,12 @@
     "minyak zaitun perahan sejuk"
   ],
   "category": "Memilih minyak zaitun",
-  "tags": ["gred", "extra virgin", "polifenol", "rasa"],
+  "tags": [
+    "gred",
+    "extra virgin",
+    "polifenol",
+    "rasa"
+  ],
   "h1": "Kelebihan Extra Virgin Olive Oil Ialah Apa Yang Masih Tinggal",
   "excerpt": "Gred tertinggi tidak menambah apa-apa. Ia sekadar tidak membuang apa-apa. Itulah kelebihannya, dan itu juga sebab kelebihan itu boleh musnah dalam sekelip mata di dapur.",
   "keyTakeaway": "Kelebihan extra virgin olive oil bukan sesuatu yang ditambah, tetapi sesuatu yang tidak dibuang. Aroma, rasa pahit, pedas di tekak dan sebatian polifenol masih ada kerana minyak itu tidak pernah ditapis. Haba tinggi, cahaya dan botol yang dibiar terbuka boleh menghapuskan kelebihan itu.",
@@ -43,7 +48,7 @@
         },
         {
           "type": "p",
-          "text": "Jadi perbandingan sebenar bukan antara minyak baik dan minyak jahat. Ia antara minyak yang masih membawa isi buah dan minyak yang sudah dibersihkan sehingga senyap."
+          "text": "Jadi perbandingan sebenar bukan antara minyak baik dan minyak jahat. Ia antara minyak yang masih membawa isi buah dan minyak yang sudah dibersihkan sehingga senyap. Tangga gred penuh ada dalam [apa itu minyak zaitun extra virgin](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
         }
       ]
     },
@@ -57,7 +62,7 @@
         },
         {
           "type": "p",
-          "text": "Yang berguna untuk pembeli: semua itu boleh dirasa. Tiada label yang boleh memberitahu anda perkara yang lidah boleh sahkan dalam dua saat."
+          "text": "Yang berguna untuk pembeli: semua itu boleh dirasa. Tiada label yang boleh memberitahu anda perkara yang lidah boleh sahkan dalam dua saat, dan [rasa minyak zaitun pahit dan pedas](/blog/rasa-minyak-zaitun-pahit-dan-pedas) mengupas sebabnya."
         }
       ]
     },
@@ -85,12 +90,32 @@
         },
         {
           "type": "table",
-          "head": ["Gred", "Apa yang tinggal", "Sesuai untuk"],
+          "head": [
+            "Gred",
+            "Apa yang tinggal",
+            "Sesuai untuk"
+          ],
           "rows": [
-            ["Extra virgin", "Aroma, pahit, pedas, polifenol", "Mentah, salad, cicahan, tumis"],
-            ["Dara (virgin)", "Sebahagian aroma dan rasa", "Masakan harian"],
-            ["Ditapis, pure atau light", "Hampir tiada rasa atau bau", "Goreng bersuhu tinggi"],
-            ["Pomace atau hampas", "Diekstrak daripada sisa perahan", "Kegunaan pukal"]
+            [
+              "Extra virgin",
+              "Aroma, pahit, pedas, polifenol",
+              "Mentah, salad, cicahan, tumis"
+            ],
+            [
+              "Dara (virgin)",
+              "Sebahagian aroma dan rasa",
+              "Masakan harian"
+            ],
+            [
+              "Ditapis, pure atau light",
+              "Hampir tiada rasa atau bau",
+              "Goreng bersuhu tinggi"
+            ],
+            [
+              "Pomace atau hampas",
+              "Diekstrak daripada sisa perahan",
+              "Kegunaan pukal"
+            ]
           ]
         }
       ]

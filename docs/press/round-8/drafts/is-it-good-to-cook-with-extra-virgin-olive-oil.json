@@ -19,7 +19,12 @@
     "extra virgin olive oil cost per use"
   ],
   "category": "Cooking with olive oil",
-  "tags": ["cooking", "heat", "extra virgin", "value"],
+  "tags": [
+    "cooking",
+    "heat",
+    "extra virgin",
+    "value"
+  ],
   "h1": "Is It Good to Cook With Extra Virgin Olive Oil, or a Waste of It?",
   "excerpt": "Heat does not make extra virgin olive oil dangerous. It makes it quieter. Whether that is a waste depends entirely on which of three heat bands you are cooking in.",
   "keyTakeaway": "Yes, and most home cooking never gets near the limit. Extra virgin olive oil smokes somewhere around 190 to 210 degrees Celsius, while ordinary sauteing sits at 140 to 180. Heat costs you aroma and flavour, not safety, so the real question is whether the dish will taste of the oil at all.",
@@ -57,12 +62,27 @@
         },
         {
           "type": "table",
-          "head": ["Oil", "Approximate smoke point"],
+          "head": [
+            "Oil",
+            "Approximate smoke point"
+          ],
           "rows": [
-            ["Extra virgin olive oil", "190 to 210 degrees Celsius"],
-            ["Virgin coconut oil", "175 to 190 degrees Celsius"],
-            ["Refined sunflower oil", "around 225 degrees Celsius"],
-            ["Palm cooking oil", "around 230 degrees Celsius"]
+            [
+              "Extra virgin olive oil",
+              "190 to 210 degrees Celsius"
+            ],
+            [
+              "Virgin coconut oil",
+              "175 to 190 degrees Celsius"
+            ],
+            [
+              "Refined sunflower oil",
+              "around 225 degrees Celsius"
+            ],
+            [
+              "Palm cooking oil",
+              "around 230 degrees Celsius"
+            ]
           ]
         },
         {
@@ -81,11 +101,27 @@
         },
         {
           "type": "table",
-          "head": ["Heat band", "What it covers", "Which oil deserves it"],
+          "head": [
+            "Heat band",
+            "What it covers",
+            "Which oil deserves it"
+          ],
           "rows": [
-            ["Raw and finishing", "Dressings, drizzles, dipping, cold dishes", "Extra virgin, and nothing else is worth buying"],
-            ["Moderate heat", "Sauteing, roasting, baking, tumis", "Extra virgin is comfortable and still adds flavour"],
-            ["High heat", "Wok at full flame, deep-frying, hard searing", "A cheaper refined oil, extra virgin on the plate"]
+            [
+              "Raw and finishing",
+              "Dressings, drizzles, dipping, cold dishes",
+              "Extra virgin, and nothing else is worth buying"
+            ],
+            [
+              "Moderate heat",
+              "Sauteing, roasting, baking, tumis",
+              "Extra virgin is comfortable and still adds flavour"
+            ],
+            [
+              "High heat",
+              "Wok at full flame, deep-frying, hard searing",
+              "A cheaper refined oil, extra virgin on the plate"
+            ]
           ]
         }
       ]
@@ -110,7 +146,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "It depends on how much the pan swallows. A finishing drizzle uses a spoonful and the flavour is the entire point. A pan of vegetables uses a little more and still tastes of the oil. A deep-fry uses a great deal and returns almost none of it to the plate."
+          "text": "Whether cooking with extra virgin olive oil is bad value depends on how much the pan swallows. A finishing drizzle uses a spoonful and the flavour is the entire point. A pan of vegetables uses a little more and still tastes of the oil. A deep-fry uses a great deal and returns almost none of it."
         },
         {
           "type": "ul",

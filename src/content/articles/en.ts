@@ -11368,7 +11368,7 @@ export const EN_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "It looks like being able to name every link and find a person at the end of it. A grove and a country, a harvest, a named importer or distributor, and somewhere you could physically go if a bottle arrived wrong. Most of what is sold online in this category cannot offer the last of those."
+            "text": "Accountability in this category looks like being able to name every link in the chain and find a person at the end of it: a grove and a country, a harvest, a named importer or distributor, and somewhere you could physically go if a bottle arrived wrong. Most online sellers cannot offer the last of those."
           },
           {
             "type": "p",
@@ -12342,7 +12342,7 @@ export const EN_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "It depends on how much the pan swallows. A finishing drizzle uses a spoonful and the flavour is the entire point. A pan of vegetables uses a little more and still tastes of the oil. A deep-fry uses a great deal and returns almost none of it to the plate."
+            "text": "Whether cooking with extra virgin olive oil is bad value depends on how much the pan swallows. A finishing drizzle uses a spoonful and the flavour is the entire point. A pan of vegetables uses a little more and still tastes of the oil. A deep-fry uses a great deal and returns almost none of it."
           },
           {
             "type": "ul",
@@ -12963,7 +12963,7 @@ export const EN_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "This decides the grade, and it is the only question that really has to be answered first. If most of the use is raw or moderate heat, buy extra virgin. If most of the use is a wok at full flame or deep-frying, buy a refined oil and stop reading, because nothing else on this page will change that answer."
+            "text": "What you will mostly do with the oil decides the grade, and it is the only question that has to be answered first. If most of the use is raw or moderate heat, buy extra virgin. If most of it is a wok at full flame or deep-frying, buy a refined oil, because nothing else on this page will change that answer."
           },
           {
             "type": "p",
@@ -12982,7 +12982,7 @@ export const EN_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "This decides the size, and it is really a freshness question wearing a value disguise. An opened bottle holds its flavour for roughly two months. A larger bottle costs less per litre and is worse value if the last third has already flattened by the time you reach it."
+            "text": "How fast you get through a bottle decides the size, and that is really a freshness question wearing a value disguise. An opened bottle holds its flavour for roughly two months. A larger bottle costs less per litre and is worse value if the last third has already flattened by the time you reach it."
           },
           {
             "type": "p",

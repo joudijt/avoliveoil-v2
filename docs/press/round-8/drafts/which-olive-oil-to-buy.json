@@ -19,7 +19,12 @@
     "first olive oil bottle"
   ],
   "category": "Buying olive oil",
-  "tags": ["buying", "decision", "grades", "sizes"],
+  "tags": [
+    "buying",
+    "decision",
+    "grades",
+    "sizes"
+  ],
   "h1": "Which Olive Oil to Buy: Four Questions, in Order",
   "excerpt": "A short question ladder for someone standing in front of a shelf. Each answer narrows the choice, and the last one lands on a grade and a size.",
   "keyTakeaway": "Which olive oil to buy comes down to four questions asked in order: what will you mostly do with it, how fast will you get through it, are you buying for flavour or for volume, and can you check the label. Most households are better served by two oils than by one compromise bottle.",
@@ -39,7 +44,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "This decides the grade, and it is the only question that really has to be answered first. If most of the use is raw or moderate heat, buy extra virgin. If most of the use is a wok at full flame or deep-frying, buy a refined oil and stop reading, because nothing else on this page will change that answer."
+          "text": "What you will mostly do with the oil decides the grade, and it is the only question that has to be answered first. If most of the use is raw or moderate heat, buy extra virgin. If most of it is a wok at full flame or deep-frying, buy a refined oil, because nothing else on this page will change that answer."
         },
         {
           "type": "p",
@@ -53,7 +58,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "This decides the size, and it is really a freshness question wearing a value disguise. An opened bottle holds its flavour for roughly two months. A larger bottle costs less per litre and is worse value if the last third has already flattened by the time you reach it."
+          "text": "How fast you get through a bottle decides the size, and that is really a freshness question wearing a value disguise. An opened bottle holds its flavour for roughly two months. A larger bottle costs less per litre and is worse value if the last third has already flattened by the time you reach it."
         },
         {
           "type": "p",
@@ -71,12 +76,32 @@
         },
         {
           "type": "table",
-          "head": ["If your answer is", "Buy", "In this size"],
+          "head": [
+            "If your answer is",
+            "Buy",
+            "In this size"
+          ],
           "rows": [
-            ["Mostly raw: dressings, dipping, finishing", "Extra virgin, newest harvest you can find", "Small, so it stays fresh in use"],
-            ["Mixed: some raw, mostly moderate heat", "Extra virgin", "Whichever you finish in two months"],
-            ["Mostly high heat and volume", "A refined cooking oil", "Large, price per litre is the point"],
-            ["Both, honestly", "One of each", "Small extra virgin, large refined"]
+            [
+              "Mostly raw: dressings, dipping, finishing",
+              "Extra virgin, newest harvest you can find",
+              "Small, so it stays fresh in use"
+            ],
+            [
+              "Mixed: some raw, mostly moderate heat",
+              "Extra virgin",
+              "Whichever you finish in two months"
+            ],
+            [
+              "Mostly high heat and volume",
+              "A refined cooking oil",
+              "Large, price per litre is the point"
+            ],
+            [
+              "Both, honestly",
+              "One of each",
+              "Small extra virgin, large refined"
+            ]
           ]
         }
       ]

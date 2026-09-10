@@ -19,7 +19,12 @@
     "olive oil value for money malaysia"
   ],
   "category": "Buying olive oil",
-  "tags": ["Malaysia", "quality", "buying", "extra virgin"],
+  "tags": [
+    "Malaysia",
+    "quality",
+    "buying",
+    "extra virgin"
+  ],
   "h1": "The Best Extra Virgin Olive Oil in Malaysia Is a Question, Not an Answer",
   "excerpt": "No page can honestly rank this market, because nobody has tasted every bottle in it. What can be answered is what best means against a specific use, and which four things actually differ between bottles.",
   "keyTakeaway": "There is no single best extra virgin olive oil in Malaysia, and any page claiming to have ranked the market has told you something about itself. Best is only definable against a use: a dressing, a hot pan and a tight budget point at three different bottles. Taste is the only test a buyer can run.",
@@ -57,12 +62,27 @@
         },
         {
           "type": "table",
-          "head": ["Best for", "What that actually means"],
+          "head": [
+            "Best for",
+            "What that actually means"
+          ],
           "rows": [
-            ["A raw dressing or dipping", "Newest harvest, strongest bitterness and pepper, small bottle"],
-            ["Everyday moderate-heat cooking", "Any sound extra virgin, bought in a size you finish in two months"],
-            ["A wok at full flame or deep-frying", "A refined oil, and the extra virgin stays in the cupboard"],
-            ["Flavour per ringgit", "The freshest bottle you can finish, not the largest one you can afford"]
+            [
+              "A raw dressing or dipping",
+              "Newest harvest, strongest bitterness and pepper, small bottle"
+            ],
+            [
+              "Everyday moderate-heat cooking",
+              "Any sound extra virgin, bought in a size you finish in two months"
+            ],
+            [
+              "A wok at full flame or deep-frying",
+              "A refined oil, and the extra virgin stays in the cupboard"
+            ],
+            [
+              "Flavour per ringgit",
+              "The freshest bottle you can finish, not the largest one you can afford"
+            ]
           ]
         }
       ]
@@ -101,7 +121,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "It looks like being able to name every link and find a person at the end of it. A grove and a country, a harvest, a named importer or distributor, and somewhere you could physically go if a bottle arrived wrong. Most of what is sold online in this category cannot offer the last of those."
+          "text": "Accountability in this category looks like being able to name every link in the chain and find a person at the end of it: a grove and a country, a harvest, a named importer or distributor, and somewhere you could physically go if a bottle arrived wrong. Most online sellers cannot offer the last of those."
         },
         {
           "type": "p",

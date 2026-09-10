@@ -12488,7 +12488,7 @@ export const MS_ARTICLES: Article[] = [
           },
           {
             "type": "p",
-            "text": "Jadi perbandingan sebenar bukan antara minyak baik dan minyak jahat. Ia antara minyak yang masih membawa isi buah dan minyak yang sudah dibersihkan sehingga senyap."
+            "text": "Jadi perbandingan sebenar bukan antara minyak baik dan minyak jahat. Ia antara minyak yang masih membawa isi buah dan minyak yang sudah dibersihkan sehingga senyap. Tangga gred penuh ada dalam [apa itu minyak zaitun extra virgin](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
           },
           {
             "type": "image",
@@ -12507,7 +12507,7 @@ export const MS_ARTICLES: Article[] = [
           },
           {
             "type": "p",
-            "text": "Yang berguna untuk pembeli: semua itu boleh dirasa. Tiada label yang boleh memberitahu anda perkara yang lidah boleh sahkan dalam dua saat."
+            "text": "Yang berguna untuk pembeli: semua itu boleh dirasa. Tiada label yang boleh memberitahu anda perkara yang lidah boleh sahkan dalam dua saat, dan [rasa minyak zaitun pahit dan pedas](/blog/rasa-minyak-zaitun-pahit-dan-pedas) mengupas sebabnya."
           },
           {
             "type": "image",
