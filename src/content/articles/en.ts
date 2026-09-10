@@ -326,6 +326,11 @@ export const EN_ARTICLES: Article[] = [
         path: 'products',
         description: 'First cold pressed extra virgin olive oil from centuries-old Palestinian groves.',
       },
+      {
+        "label": "Extra virgin olive oil in Malaysia",
+        "path": "blog/extra-virgin-olive-oil-in-malaysia",
+        "description": "A shelf survey: three places to buy the grade, and what to check in each."
+      }
     ],
   },
 
@@ -620,6 +625,11 @@ export const EN_ARTICLES: Article[] = [
         path: 'why-us',
         description: 'Traceable Palestinian origin, hand harvest, and a press within hours of picking.',
       },
+      {
+        "label": "Olive oil: is it healthy?",
+        "path": "blog/olive-oil-is-it-healthy",
+        "description": "What a label may legally tell you in Malaysia, and what no label can."
+      }
     ],
   },
 
@@ -1466,6 +1476,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil smoke point",
         "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
         "description": "How much heat olive oil takes, compared with the oils a Malaysian kitchen already uses."
+      },
+      {
+        "label": "Best extra virgin olive oil in Malaysia",
+        "path": "blog/best-extra-virgin-olive-oil-in-malaysia",
+        "description": "Why no honest page ranks this market, and what best can mean against a use."
       }
     ]
   },
@@ -2526,6 +2541,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil coffee",
         "path": "blog/olive-oil-coffee",
         "description": "The oil-in-coffee trend: quantity, why it needs blending, and what it tastes like."
+      },
+      {
+        "label": "Extra virgin olive oil uses",
+        "path": "blog/extra-virgin-olive-oil-uses",
+        "description": "Four families of use, and what grade and freshness each one needs."
       }
     ]
   },
@@ -2831,6 +2851,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil vs sunflower oil",
         "path": "blog/olive-oil-vs-sunflower-oil",
         "description": "Flavour, smoke behaviour and price per use, olive oil against a refined seed oil."
+      },
+      {
+        "label": "Is it good to cook with extra virgin olive oil?",
+        "path": "blog/is-it-good-to-cook-with-extra-virgin-olive-oil",
+        "description": "The decision behind the temperatures: three heat bands, and which oil each deserves."
       }
     ]
   },
@@ -3656,6 +3681,16 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the two online counters."
+      },
+      {
+        "label": "Vitamins in extra virgin olive oil",
+        "path": "blog/vitamins-in-extra-virgin-olive-oil",
+        "description": "What is actually in the bottle, compound by compound, and why refining removes it."
+      },
+      {
+        "label": "Advantages of extra virgin olive oil",
+        "path": "blog/advantages-of-extra-virgin-olive-oil",
+        "description": "What the top grade gives a kitchen, and the three limits attached to it."
       }
     ]
   },
@@ -4195,6 +4230,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil focaccia recipe",
         "path": "blog/olive-oil-focaccia-recipe",
         "description": "Baking the dough itself, dimples and all, not dipping bread that already exists."
+      },
+      {
+        "label": "Consuming extra virgin olive oil day to day",
+        "path": "blog/consuming-extra-virgin-olive-oil-day-to-day",
+        "description": "Where a bottle actually goes across a week, measured per dish rather than per person."
       }
     ]
   },
@@ -5538,6 +5578,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Which olive oil to buy",
+        "path": "blog/which-olive-oil-to-buy",
+        "description": "Four questions in order, ending in a grade and a size."
       }
     ]
   },
@@ -10942,6 +10987,2172 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store's two branches in Selangor, plus its own Shopee and TikTok Shop counters."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "advantages-of-extra-virgin-olive-oil",
+    "slug": "advantages-of-extra-virgin-olive-oil",
+    "seoTitle": "Advantages of Extra Virgin Olive Oil, and Its Limits",
+    "metaTitle": "Advantages of Extra Virgin Olive Oil, and Its Limits",
+    "metaDescription": "What the top grade actually gives you in a kitchen, where that advantage is wasted, and the three real limits nobody selling it mentions.",
+    "focusKeyword": "advantages of extra virgin olive oil",
+    "relatedKeywords": [
+      "benefits of extra virgin olive oil in cooking",
+      "why buy extra virgin olive oil",
+      "extra virgin olive oil vs refined",
+      "is extra virgin olive oil worth it",
+      "what makes extra virgin olive oil different",
+      "extra virgin olive oil flavour",
+      "first cold pressed olive oil",
+      "extra virgin olive oil disadvantages",
+      "single ingredient cooking oil",
+      "extra virgin olive oil for dressings"
+    ],
+    "category": "Choosing olive oil",
+    "tags": [
+      "extra virgin",
+      "grades",
+      "flavour",
+      "value"
+    ],
+    "h1": "The Advantages of Extra Virgin Olive Oil, and Where They Run Out",
+    "excerpt": "The top grade earns its price in flavour and in what has not been done to it. It also has three genuine limits, and a page that lists only the advantages is selling, not explaining.",
+    "keyTakeaway": "Extra virgin olive oil is a single-ingredient food, mechanically extracted with no heat and no solvents, so nothing has been stripped out and nothing added. Its advantages are flavour you can taste and versatility across cold and moderate-heat cooking. Its limits are price, a short life once opened, and high heat.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressAdvantagesOfExtraVirginOliveOilHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+    },
+    "ogImage": "/og/blog-advantages-of-extra-virgin-olive-oil.jpg",
+    "intro": [
+      "Most pages about the advantages of extra virgin olive oil are really lists of reasons to buy some. This one covers what the grade actually does in a kitchen, and then the column that is usually missing.",
+      "The short version: the advantage is that nothing has been done to the oil, and the limits follow from exactly the same fact."
+    ],
+    "sections": [
+      {
+        "heading": "What does extra virgin actually mean?",
+        "id": "what-the-grade-means",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin is a grade, not a marketing word. It means the oil came out of the fruit mechanically, without heat and without solvents, and passed a taste panel and a free acidity limit of 0.8 percent. Refined grades are made from oil that failed those tests and was then cleaned up industrially."
+          },
+          {
+            "type": "p",
+            "text": "That single difference explains everything else. There is no processing step in which flavour, colour and aroma could have been removed, so they are still there. For the full grade ladder, see [extra virgin versus pure olive oil](/blog/extra-virgin-olive-oil-vs-pure-olive-oil)."
+          },
+          {
+            "type": "image",
+            "src": "pressAdvantagesOfExtraVirginOliveOilInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "Can you actually taste the difference?",
+        "id": "flavour-you-can-taste",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Yes, and most obviously when the oil is not cooked. A fresh extra virgin oil is grassy or fruity in the nose, and it leaves a bitterness and a peppery catch at the back of the throat. A refined oil has almost no smell and no finish at all, which is exactly what refining is for."
+          },
+          {
+            "type": "p",
+            "text": "That advantage is real on bread, in a dressing, over grilled fish or stirred through warm rice. It is largely wasted in a dish with a strong sauce, and lost completely in a deep fryer."
+          },
+          {
+            "type": "image",
+            "src": "pressAdvantagesOfExtraVirginOliveOilInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "Why does one ingredient matter?",
+        "id": "single-ingredient",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A bottle of extra virgin olive oil contains pressed olives and nothing else. No blend of unnamed oils, no solvent residue, no deodorising step, no additives. For a household that reads labels, that is unusually simple, and it is one of the few claims in this category that needs no qualification."
+          },
+          {
+            "type": "p",
+            "text": "It also means the label can be checked. A grade, a harvest date and one named country of origin either appear on the bottle or they do not."
+          },
+          {
+            "type": "image",
+            "src": "pressAdvantagesOfExtraVirginOliveOilInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "How versatile is it really?",
+        "id": "versatility",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "More than its reputation suggests. Extra virgin olive oil smokes at roughly 190 to 210 degrees Celsius and ordinary home sauteing runs at 140 to 180, so it covers dressings, dipping, roasting, baking and most stovetop cooking with one bottle. The wok at full flame is where it stops."
+          },
+          {
+            "type": "p",
+            "text": "A kitchen can genuinely run on this oil plus one cheap neutral oil for high-heat work. [How to cook with olive oil](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen) goes dish by dish."
+          },
+          {
+            "type": "image",
+            "src": "pressAdvantagesOfExtraVirginOliveOilInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "What are the real limits?",
+        "id": "advantage-and-limit",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Three, and none of them is a secret. It costs several times what a refined cooking oil costs. It has a short useful life once opened, roughly two months before the flavour flattens. And it is the wrong tool above its smoke point, where you pay a premium for something the heat immediately removes."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Advantage",
+              "The limit attached to it"
+            ],
+            "rows": [
+              [
+                "Flavour survives because nothing was refined out",
+                "That flavour is the first thing heat takes back"
+              ],
+              [
+                "One ingredient, checkable on the label",
+                "Nothing on a label proves what is inside the bottle"
+              ],
+              [
+                "Works raw and at moderate heat",
+                "Not the oil for a wok at full flame or a deep fryer"
+              ],
+              [
+                "Small bottles keep the oil fresh in use",
+                "Cost per litre is higher than a large bottle"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressAdvantagesOfExtraVirginOliveOilInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "Is any of this a health argument?",
+        "id": "not-a-health-argument",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Not on this page. Everything above is about cooking and about what is in the bottle. Diet is a separate subject with its own careful wording, and it is covered in [the health benefits article](/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families), where the international claims are quoted with the hedges their authors attached to them."
+          },
+          {
+            "type": "p",
+            "text": "Olive oil is a food, not a treatment for anything. If you have a diagnosed condition, the person to ask is your doctor or a registered dietitian."
+          },
+          {
+            "type": "image",
+            "src": "pressAdvantagesOfExtraVirginOliveOilInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Is it worth the money?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If most of what you do with oil is raw or moderate heat, yes, because that is where every advantage above is still intact when the food reaches the table. If most of what you do is deep-frying, buy a refined oil for the pot and a small extra virgin bottle for the plate."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What are the main advantages of extra virgin olive oil?",
+        "a": "Flavour that survives because nothing was refined out, a single-ingredient label you can check, and enough heat tolerance to cover raw dishes and most stovetop cooking with one bottle."
+      },
+      {
+        "q": "Is extra virgin olive oil better than regular olive oil?",
+        "a": "For anything raw or gently cooked, yes, because refining removes the aroma and the bitterness. For high-heat frying, a refined oil does the job at a fraction of the cost."
+      },
+      {
+        "q": "Does extra virgin olive oil go off quickly?",
+        "a": "It keeps up to about eighteen months unopened and roughly two months once opened. Heat and light shorten that, so the cupboard beside the stove is the worst place for it."
+      },
+      {
+        "q": "Is first cold pressed the same as extra virgin?",
+        "a": "They describe different things. Extra virgin is a graded quality standard. First cold pressed describes a single mechanical extraction without added heat. An oil can honestly carry both."
+      },
+      {
+        "q": "Is the peppery burn a fault?",
+        "a": "No, it is a sign the oil still carries its natural polyphenols. A flat, waxy oil with no finish is the one worth being suspicious about."
+      },
+      {
+        "q": "Which size bottle makes sense?",
+        "a": "Whichever you will finish in about two months. A larger bottle costs less per litre but is a false economy if the last third has already flattened."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Extra virgin vs pure olive oil",
+        "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+        "description": "What the grade ladder means, and what refining actually removes from a bottle."
+      },
+      {
+        "label": "Olive oil vs butter",
+        "path": "blog/olive-oil-vs-butter",
+        "description": "Where each one wins in a kitchen, on texture and flavour rather than on marketing."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "best-extra-virgin-olive-oil-in-malaysia",
+    "slug": "best-extra-virgin-olive-oil-in-malaysia",
+    "seoTitle": "Best Extra Virgin Olive Oil in Malaysia: Honest Limits",
+    "metaTitle": "Best Extra Virgin Olive Oil in Malaysia: Honest Limits",
+    "metaDescription": "Nobody has tasted every bottle sold here, so no honest page can rank them. What best can mean, what it never means, and the four things that differ.",
+    "focusKeyword": "best extra virgin olive oil in malaysia",
+    "relatedKeywords": [
+      "best olive oil brand malaysia",
+      "top extra virgin olive oil malaysia",
+      "how to judge olive oil quality",
+      "olive oil harvest year",
+      "olive oil origin traceability",
+      "olive oil taste test at home",
+      "olive oil storage between mill and shelf",
+      "best olive oil for salad dressing",
+      "best olive oil for cooking malaysia",
+      "olive oil value for money malaysia"
+    ],
+    "category": "Buying olive oil",
+    "tags": [
+      "Malaysia",
+      "quality",
+      "buying",
+      "extra virgin"
+    ],
+    "h1": "The Best Extra Virgin Olive Oil in Malaysia Is a Question, Not an Answer",
+    "excerpt": "No page can honestly rank this market, because nobody has tasted every bottle in it. What can be answered is what best means against a specific use, and which four things actually differ between bottles.",
+    "keyTakeaway": "There is no single best extra virgin olive oil in Malaysia, and any page claiming to have ranked the market has told you something about itself. Best is only definable against a use: a dressing, a hot pan and a tight budget point at three different bottles. Taste is the only test a buyer can run.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressBestExtraVirginOliveOilInMalaysiaHero",
+      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+    },
+    "ogImage": "/og/blog-best-extra-virgin-olive-oil-in-malaysia.jpg",
+    "intro": [
+      "This is one of the most searched questions in the category and one of the least answerable, because answering it honestly would mean having tasted every extra virgin olive oil sold in Malaysia, in the same month, from bottles stored the same way.",
+      "Nobody has done that. What follows is the useful version instead: what best can mean, what it can never mean, and the four things that genuinely separate one bottle from another."
+    ],
+    "sections": [
+      {
+        "heading": "Why can no page rank this market?",
+        "id": "why-no-ranking",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Because a ranking would need a controlled tasting of every bottle on sale, all from the same harvest year, all stored identically since the mill. No published list in this market has that, and an oil changes enough over a year that a ranking made from last season would already be wrong."
+          },
+          {
+            "type": "p",
+            "text": "A page that ranks anyway is usually ranking what it can get commission on. That is worth knowing before you read any list, including a list published by somebody who sells olive oil."
+          },
+          {
+            "type": "image",
+            "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "Best for what, exactly?",
+        "id": "best-against-a-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Best only becomes a real word once a use is attached to it. The oil that makes a dressing sing is a strong, peppery, recently harvested one. The oil for a hot pan in volume is a cheap refined one. The oil that gives the most flavour per ringgit is a third answer again. These are not the same bottle."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Best for",
+              "What that actually means"
+            ],
+            "rows": [
+              [
+                "A raw dressing or dipping",
+                "Newest harvest, strongest bitterness and pepper, small bottle"
+              ],
+              [
+                "Everyday moderate-heat cooking",
+                "Any sound extra virgin, bought in a size you finish in two months"
+              ],
+              [
+                "A wok at full flame or deep-frying",
+                "A refined oil, and the extra virgin stays in the cupboard"
+              ],
+              [
+                "Flavour per ringgit",
+                "The freshest bottle you can finish, not the largest one you can afford"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "What actually differs between two extra virgin oils?",
+        "id": "four-things-that-differ",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Four things, once both bottles genuinely meet the grade. The harvest year, which sets how much aroma is left. Origin traceability, which is how far back the chain can be named. How the oil was stored between the mill and the shelf. And taste, which is the only one of the four a buyer can measure without a laboratory."
+          },
+          {
+            "type": "p",
+            "text": "Everything else on a label, including the design of it, is packaging around those four."
+          },
+          {
+            "type": "image",
+            "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "How do you test it yourself?",
+        "id": "taste-is-the-test",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "By tasting it. Warm a spoonful in the hand, smell it, then sip it and let it reach the back of the throat. A sound extra virgin oil smells of something green and living, tastes faintly bitter, and catches at the throat. A flat, waxy or crayon-like oil has told you what you need to know."
+          },
+          {
+            "type": "p",
+            "text": "That bitterness is not a fault, which surprises people. [Why olive oil tastes bitter](/blog/why-does-olive-oil-taste-bitter) explains where it comes from and why its absence is the more worrying result."
+          },
+          {
+            "type": "image",
+            "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "What does accountability look like?",
+        "id": "accountability",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It looks like being able to name every link and find a person at the end of it. A grove and a country, a harvest, a named importer or distributor, and somewhere you could physically go if a bottle arrived wrong. Most of what is sold online in this category cannot offer the last of those."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village is one example of a chain that can: Palestinian groves, hand-harvested and pressed within hours, sold in Malaysia through Berkat Madinah Store with branches at Ampang Jaya and Batu Caves and a WhatsApp number that answers. That is not a claim to be best; it is a claim to be checkable."
+          },
+          {
+            "type": "image",
+            "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "So how should you actually compare bottles?",
+        "id": "how-to-compare",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "With a method rather than a ranking, and one already exists on this site. It works through the grade wording, the date, the glass, the origin line and the price per litre in a fixed order, so two bottles get judged on the same terms rather than on which packaging you liked."
+          },
+          {
+            "type": "p",
+            "text": "That method is [how to compare olive oil brands in Malaysia](/blog/how-to-compare-olive-oil-brands-in-malaysia). This page is the argument for why a method beats a list; that page is the method."
+          },
+          {
+            "type": "image",
+            "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The answer, such as it is",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Decide the use first, then buy the freshest bottle that meets the grade, comes from a named origin and can be finished in about two months. Taste it. If it is green in the nose and catches at the throat, you have bought well, and no list was going to tell you that."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Which is the best extra virgin olive oil in Malaysia?",
+        "a": "No honest answer exists, because nobody has tasted every bottle sold here under the same conditions. Best is definable only against a use, such as a dressing or a hot pan."
+      },
+      {
+        "q": "Why does this page not rank brands?",
+        "a": "A ranking would need a controlled tasting of the whole market from one harvest year. Without that, a list reflects what the publisher can sell rather than what is in the bottle."
+      },
+      {
+        "q": "What separates one extra virgin oil from another?",
+        "a": "Harvest year, how far back the origin can be named, how the oil was stored between mill and shelf, and taste. Only the last can be checked at home."
+      },
+      {
+        "q": "How do I taste-test olive oil?",
+        "a": "Warm a spoonful in the hand, smell it, then sip and let it reach the throat. Green in the nose, faintly bitter, catching at the back is what you want."
+      },
+      {
+        "q": "Is a more expensive bottle better?",
+        "a": "Not reliably. Price reflects freight, packaging and brand as much as quality, and a cheaper bottle from a recent harvest can taste better than an older premium one."
+      },
+      {
+        "q": "Does a harvest date matter more than a best-before date?",
+        "a": "Yes. A best-before date says when a seller wants the bottle gone. A harvest date says how old the oil actually is, which is the number that affects flavour."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil, one named origin and one named distributor in Malaysia."
+      },
+      {
+        "label": "How to compare olive oil brands in Malaysia",
+        "path": "blog/how-to-compare-olive-oil-brands-in-malaysia",
+        "description": "The comparison method itself, run in a fixed order so two bottles are judged the same way."
+      },
+      {
+        "label": "Why does olive oil taste bitter?",
+        "path": "blog/why-does-olive-oil-taste-bitter",
+        "description": "Where the bitterness and the peppery catch come from, and why their absence is the worrying result."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "consuming-extra-virgin-olive-oil-day-to-day",
+    "slug": "consuming-extra-virgin-olive-oil-day-to-day",
+    "seoTitle": "Consuming Extra Virgin Olive Oil, Day to Day",
+    "metaTitle": "Consuming Extra Virgin Olive Oil, Day to Day",
+    "metaDescription": "Where a bottle actually goes across a week in a Malaysian kitchen: which meals, how it goes in, and how much per dish rather than per person.",
+    "focusKeyword": "consuming extra virgin olive oil",
+    "relatedKeywords": [
+      "how to use extra virgin olive oil daily",
+      "extra virgin olive oil raw",
+      "olive oil over rice",
+      "olive oil on roti",
+      "finishing oil malaysia",
+      "how much olive oil per dish",
+      "extra virgin olive oil for grilled fish",
+      "olive oil in sambal",
+      "how long does a bottle of olive oil last",
+      "using olive oil without cooking"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "everyday",
+      "raw",
+      "finishing",
+      "Malaysian meals"
+    ],
+    "h1": "Consuming Extra Virgin Olive Oil Without Turning It Into a Ritual",
+    "excerpt": "Most people buy a bottle and then use it twice. Here is where extra virgin olive oil actually fits across an ordinary Malaysian week, measured per dish rather than per person.",
+    "keyTakeaway": "Extra virgin olive oil goes into a week most easily as a finishing oil rather than a cooking one: a spoonful over hot rice, on roti, into a sambal after the heat is off, over grilled fish, or in a dressing. Measure it per dish, never per person, and keep the bottle shut.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressConsumingExtraVirginOliveOilDayToDayHero",
+      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+    },
+    "ogImage": "/og/blog-consuming-extra-virgin-olive-oil-day-to-day.jpg",
+    "intro": [
+      "A bottle arrives, gets used in one salad, and then sits at the back of the cupboard until the flavour has gone quiet. That is the usual story, and it is a storage problem dressed up as a habit problem.",
+      "This is about where the oil actually goes across an ordinary week, in food terms and in dish-sized quantities."
+    ],
+    "sections": [
+      {
+        "heading": "Raw or heated, what changes?",
+        "id": "raw-versus-heated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Raw, you get everything the oil has: the grassy or fruity smell, the bitterness, the peppery catch at the back of the throat. Heated, the aroma goes first and the finish softens, and the higher the pan the less of it reaches the plate. Nothing becomes unsafe, it simply becomes quieter."
+          },
+          {
+            "type": "p",
+            "text": "So the easiest way to get value from a bottle is to add it after the heat rather than before it. The oil then behaves like a seasoning, which is roughly how it is used around the Mediterranean."
+          },
+          {
+            "type": "image",
+            "src": "pressConsumingExtraVirginOliveOilDayToDayInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "Where does it fit in a Malaysian week?",
+        "id": "where-it-fits",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In more places than people expect, and mostly in slots a household already has. Anywhere a dish currently gets a spoon of something rich at the end, olive oil can take that job without changing the recipe underneath it. The point is the finish, not a substitution."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Meal",
+              "How it goes in",
+              "How much per dish"
+            ],
+            "rows": [
+              [
+                "Hot white rice",
+                "Stirred through just before serving",
+                "About a teaspoon per bowl"
+              ],
+              [
+                "Roti or toast",
+                "Poured into a shallow saucer for dipping",
+                "A tablespoon for the table"
+              ],
+              [
+                "Sambal or a stir-fry",
+                "Stirred in after the heat is off",
+                "A teaspoon, off the flame"
+              ],
+              [
+                "Grilled fish or chicken",
+                "Drizzled over the plated dish",
+                "A teaspoon per portion"
+              ],
+              [
+                "Salad or cold vegetables",
+                "Whisked with acid into a dressing",
+                "Two tablespoons for four"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressConsumingExtraVirginOliveOilDayToDayInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "Why measure per dish, not per person?",
+        "id": "per-dish-not-per-person",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Because a dish has a right amount and a person does not. A saucer for dipping serves whoever is at the table. A dressing is sized to the bowl of leaves. Thinking in daily allowances turns a cooking ingredient into a regimen, which is not what this oil is, and not something a food article can prescribe."
+          },
+          {
+            "type": "p",
+            "text": "If the underlying question is really about diet, that is one for a doctor or a registered dietitian. The careful version of what is and is not known is in [the health benefits article](/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families)."
+          },
+          {
+            "type": "image",
+            "src": "pressConsumingExtraVirginOliveOilDayToDayInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "How long should a bottle last?",
+        "id": "how-long-a-bottle-lasts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Used raw in teaspoons and tablespoons, far longer than most people assume, which is why bottle size is really a freshness question. An unopened bottle keeps up to around eighteen months. Once opened, the flavour holds for roughly two months, and after that it flattens whether or not the bottle is full."
+          },
+          {
+            "type": "p",
+            "text": "So the size to buy is whichever you will finish inside that window. A larger bottle is cheaper per litre and worse value if the last third has already gone quiet. [What size to buy](/blog/what-size-olive-oil-bottle-to-buy) works through it."
+          },
+          {
+            "type": "image",
+            "src": "pressConsumingExtraVirginOliveOilDayToDayInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "What is the one habit that ruins it?",
+        "id": "the-habit-that-ruins-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Leaving the bottle open beside the stove. Between the warm air, the light and the open neck, an oil kept there loses more in a fortnight than any single pan takes from it. It is the most common way a household wastes the difference it paid for."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Cap it after every pour, not at the end of cooking",
+              "Keep it in a cupboard away from the hob, not on the counter beside it",
+              "Judge it by smell rather than by a date on the label",
+              "The refrigerator is unnecessary, though not harmful, and cold oil clouds until it warms"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressConsumingExtraVirginOliveOilDayToDayInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The honest version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Treat it as a finishing seasoning rather than a cooking oil and it will get used, taste of something, and be finished before it flattens. Pick two slots from the table above, keep the bottle shut and away from the stove, and the rest looks after itself."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much extra virgin olive oil should I use?",
+        "a": "Think per dish rather than per person: a teaspoon over a bowl of rice, a tablespoon in a dipping saucer, two tablespoons in a dressing for four people."
+      },
+      {
+        "q": "Is it better raw or cooked?",
+        "a": "Raw keeps the aroma, the bitterness and the peppery finish intact. Cooking is not wrong, but the higher the heat the less of that character reaches the plate."
+      },
+      {
+        "q": "Can I add olive oil to sambal?",
+        "a": "Yes, stirred in after the heat is off. Adding it to a hot pan cooks off the aroma you are adding it for, so it goes in at the end."
+      },
+      {
+        "q": "Does olive oil work with rice?",
+        "a": "It does. A teaspoon stirred through hot white rice just before serving behaves like a seasoning, adding a fruity, faintly peppery note without changing the dish."
+      },
+      {
+        "q": "How long does an opened bottle stay good?",
+        "a": "About two months for flavour, though it stays safe for longer. Smell is the reliable test: a flat or crayon-like smell means the oil has passed its best."
+      },
+      {
+        "q": "Should I buy 250 ml or 500 ml?",
+        "a": "Whichever you will finish in roughly two months. If the oil is only used raw, the smaller bottle often reaches the table in better condition than the cheaper large one."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, sized for a bottle that gets finished."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "The saucer, what goes into it, and why the oil is poured rather than cooked."
+      },
+      {
+        "label": "Extra virgin olive oil salad dressing",
+        "path": "blog/extra-virgin-olive-oil-salad-dressing",
+        "description": "Ratios for a dressing that holds together, and which acid suits which leaves."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "extra-virgin-olive-oil-in-malaysia",
+    "slug": "extra-virgin-olive-oil-in-malaysia",
+    "seoTitle": "Extra Virgin Olive Oil in Malaysia: A Shelf Survey",
+    "metaTitle": "Extra Virgin Olive Oil in Malaysia: A Shelf Survey",
+    "metaDescription": "What the grade actually looks like on a Malaysian shelf: three places to buy it, the formats sold here, and what to check in each of them.",
+    "focusKeyword": "extra virgin olive oil in malaysia",
+    "relatedKeywords": [
+      "where to buy extra virgin olive oil in malaysia",
+      "olive oil supermarket malaysia",
+      "arab grocery store olive oil",
+      "imported olive oil malaysia",
+      "olive oil harvest date malaysia",
+      "dark glass olive oil bottle",
+      "olive oil marketplace listing",
+      "olive oil origin traceability",
+      "olive oil selangor",
+      "extra virgin olive oil formats"
+    ],
+    "category": "Buying olive oil",
+    "tags": [
+      "Malaysia",
+      "buying",
+      "extra virgin",
+      "shelf"
+    ],
+    "h1": "Extra Virgin Olive Oil in Malaysia: What Is Actually on the Shelf",
+    "excerpt": "A survey of where the grade turns up in Malaysia, what each place does well and badly, and the one thing worth checking before you pay in each of them.",
+    "keyTakeaway": "Extra virgin olive oil reaches Malaysian buyers through three quite different channels: supermarket shelves, Arab and Middle Eastern grocers, and online marketplace listings. Each shows you different information and hides different things. All of it is imported, which makes the harvest date the single most useful line on any label.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressExtraVirginOliveOilInMalaysiaHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-extra-virgin-olive-oil-in-malaysia.jpg",
+    "intro": [
+      "Extra virgin is a defined grade, but in Malaysia it arrives through three channels that show a buyer completely different amounts of information about the same bottle.",
+      "This is a survey of those channels, the formats sold here, and what is worth checking in each. It is not the authenticity checklist and it is not a price explainer; both of those already exist and are linked below."
+    ],
+    "sections": [
+      {
+        "heading": "Where does the grade actually turn up?",
+        "id": "three-channels",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In three places. Supermarket shelves carry the widest range and the least context. Arab and Middle Eastern grocers carry fewer lines but usually better ones, because olive oil is a staple there rather than a specialty item. Marketplace listings carry everything, including bottles nobody can inspect before paying."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Where you are buying",
+              "What it does well",
+              "What to check there"
+            ],
+            "rows": [
+              [
+                "Supermarket shelf",
+                "Range, price comparison, and you can hold the bottle",
+                "Whether the shelf is lit and warm, and the harvest date"
+              ],
+              [
+                "Arab or Middle Eastern grocer",
+                "Turnover is high, so stock is usually fresher",
+                "Ask when it came in, and who imports it"
+              ],
+              [
+                "Marketplace listing",
+                "Reach and convenience",
+                "Whether the seller has a physical shop you could visit"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilInMalaysiaInline",
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+          }
+        ]
+      },
+      {
+        "heading": "Why does everything being imported matter?",
+        "id": "everything-is-imported",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Malaysia does not grow olives, so every bottle sold here has crossed an ocean and sat in at least one warehouse. That adds time between the mill and the shelf, and time is the thing extra virgin olive oil is least tolerant of. It also explains a great deal of the price."
+          },
+          {
+            "type": "p",
+            "text": "The practical consequence is that a harvest date is worth more to a Malaysian buyer than to a European one. A best-before date tells you when someone decided the bottle should be sold by. A harvest date tells you how old the oil in it actually is."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilInMalaysiaInline",
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+          }
+        ]
+      },
+      {
+        "heading": "What do the formats sold here tell you?",
+        "id": "formats-and-what-they-signal",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Format is a signal about intended use, not about quality on its own. Small dark glass suggests an oil meant to be tasted and finished quickly. Large clear plastic suggests an oil meant to be poured into a pan in volume. Neither is dishonest, but they are answering different questions."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Small dark glass: a finishing oil, protected from light, finished inside its useful window",
+              "Medium dark glass or tin: the usual format for a household that cooks with it as well",
+              "Large clear plastic: volume cooking oil, and light will reach the contents on a lit shelf",
+              "Anything decanted or unlabelled: no grade, no origin, no date, no recourse"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilInMalaysiaInline",
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+          }
+        ]
+      },
+      {
+        "heading": "What can you actually verify about origin?",
+        "id": "origin-traceability",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Less than most labels imply. A bottle can name a country of origin, a region, a mill, a harvest and an importer, and each of those is a step further than the one before. Most bottles on a Malaysian shelf stop at the first, and a fair number stop before it, at a vague packed-in line."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village is one worked example of a chain that runs the whole way: Palestinian groves, hand-harvested, pressed within hours, and one named distributor in Malaysia with two physical branches in Selangor rather than an anonymous marketplace account. The useful part is not the brand, it is that each link can be named and checked."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilInMalaysiaInline",
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+          }
+        ]
+      },
+      {
+        "heading": "What is worth checking before you pay?",
+        "id": "before-you-pay",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Four things, and they take under a minute. That the words extra virgin olive oil appear in full rather than a softer phrase. That there is a date, ideally a harvest one. That one country of origin is named. And that the bottle has not been standing under a warm shelf light for months."
+          },
+          {
+            "type": "p",
+            "text": "For the deeper test, including the taste check, [how to choose authentic extra virgin olive oil](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia) covers it properly. For what the price is made of, see [olive oil price in Malaysia](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for)."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilInMalaysiaInline",
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+          }
+        ]
+      },
+      {
+        "heading": "Where can you buy it in person?",
+        "id": "buying-in-person",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Buying in person removes most of the guesswork, because you can read the bottle, feel whether the shelf is warm, and ask a person when the stock arrived. In the Klang Valley, Arab grocers generally hold a better selection than a supermarket aisle, for the simple reason that they sell more of it."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village is stocked by Berkat Madinah Store at its Ampang Jaya and Batu Caves branches, the latter being the larger of the two, alongside that same seller's own Shopee and TikTok Shop counters. Sizes are 250 ml and 500 ml; the [products page](/products) carries the current prices."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilInMalaysiaInline",
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What the survey adds up to",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The grade on the label is the same everywhere; what changes between the three channels is how much you are allowed to find out before paying. Buy where you can read the bottle and ask a question, and treat a harvest date as the most useful line on it."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is extra virgin olive oil widely available in Malaysia?",
+        "a": "Yes, through supermarket shelves, Arab and Middle Eastern grocers and online marketplaces. Availability is not the difficulty; getting enough information about a specific bottle is."
+      },
+      {
+        "q": "Why is olive oil expensive in Malaysia?",
+        "a": "Every bottle is imported, so freight, duty, the grade and the harvest year all sit inside the shelf price. The price article works through where each part goes."
+      },
+      {
+        "q": "Which is better, a supermarket or an Arab grocer?",
+        "a": "An Arab grocer usually turns stock over faster because olive oil is a staple there, so bottles tend to be fresher. A supermarket gives you more brands to compare."
+      },
+      {
+        "q": "Does dark glass really matter in Malaysia?",
+        "a": "It matters more here than in cooler markets, because shelves are lit and warm and the oil has already spent months in transit. Light is a real cost to flavour."
+      },
+      {
+        "q": "What size is sold here?",
+        "a": "Most brands offer several. Arabian Village is sold in 250 ml and 500 ml only, with no litre bottle, tin or gift set in the range."
+      },
+      {
+        "q": "Can I buy Arabian Village online?",
+        "a": "Yes, through Berkat Madinah Store's own Shopee and TikTok Shop counters, or by WhatsApp. The same seller runs the two physical branches in Selangor."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, with the current prices and sizes."
+      },
+      {
+        "label": "Why olive oil is becoming popular in Malaysia",
+        "path": "blog/why-olive-oil-is-becoming-popular-in-malaysia",
+        "description": "The market behind the shelf: what changed, and why the category grew here."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "The full authenticity check, including the two-minute taste test at home."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "extra-virgin-olive-oil-uses",
+    "slug": "extra-virgin-olive-oil-uses",
+    "seoTitle": "Extra Virgin Olive Oil Uses: A Map of the Kitchen",
+    "metaTitle": "Extra Virgin Olive Oil Uses: A Map of the Kitchen",
+    "metaDescription": "Four families of use, what grade and freshness each one needs, and where to read the detailed method for every one of them.",
+    "focusKeyword": "extra virgin olive oil uses",
+    "relatedKeywords": [
+      "what can you use extra virgin olive oil for",
+      "olive oil uses in cooking",
+      "extra virgin olive oil for dressings",
+      "olive oil for baking",
+      "olive oil finishing uses",
+      "olive oil for roasting",
+      "which olive oil for which use",
+      "olive oil emulsion",
+      "cold uses for olive oil",
+      "extra virgin olive oil in desserts"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "uses",
+      "index",
+      "grades",
+      "freshness"
+    ],
+    "h1": "Extra Virgin Olive Oil Uses, Sorted by What Each One Needs",
+    "excerpt": "A map rather than a method. Four families of use, what grade and freshness each one demands, and a link to the article that covers each in full.",
+    "keyTakeaway": "Extra virgin olive oil has four families of use: raw and finishing, dressings and emulsions, moderate-heat cooking, and baking and desserts. Each demands something different from the bottle. The raw uses need the freshest, most peppery oil you own; baking is the one place a quieter oil is fine.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressExtraVirginOliveOilUsesHero",
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-extra-virgin-olive-oil-uses.jpg",
+    "intro": [
+      "There is no shortage of lists of things to do with olive oil. What is usually missing is which bottle each use actually needs, because a peppery new-harvest oil and a tired one behave very differently in the same dish.",
+      "This page sorts the uses into four families, says what each demands, and points at the article that covers the method."
+    ],
+    "sections": [
+      {
+        "heading": "Raw and finishing: the uses that need the best bottle",
+        "id": "raw-and-finishing",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nothing is heated, so nothing is hidden. Every fault and every virtue of the oil reaches the mouth intact, which makes this the family that repays a fresh, peppery, recently harvested bottle and punishes a flat one. It is also the cheapest family to run, because the quantities are spoonfuls."
+          },
+          {
+            "type": "p",
+            "text": "Dipping and bread is covered in [olive oil for bread](/blog/olive-oil-for-bread-and-dipping), and the reason a good oil bites at the back of the throat is in [why olive oil tastes bitter](/blog/why-does-olive-oil-taste-bitter)."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilUsesInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Dressings and emulsions: where the oil does structural work",
+        "id": "dressings-and-emulsions",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Here the oil is not only flavour, it is the thing holding the sauce together. A dressing needs an oil with enough character to survive being cut with acid, so a refined oil disappears entirely and a strong extra virgin does not. Freshness matters slightly less than in raw uses, but not much."
+          },
+          {
+            "type": "p",
+            "text": "The ratios are in [extra virgin olive oil salad dressing](/blog/extra-virgin-olive-oil-salad-dressing), and the vinegar side in [olive oil and balsamic vinegar](/blog/olive-oil-and-balsamic-vinegar)."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilUsesInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Moderate-heat cooking: the largest family",
+        "id": "moderate-heat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sauteing, roasting, gentle pan-frying and tumis all sit around 140 to 180 degrees Celsius, comfortably below the point where extra virgin olive oil begins to smoke. Some aroma is lost, so this family does not need your best bottle, but it does not need a different oil either."
+          },
+          {
+            "type": "p",
+            "text": "The dish-by-dish version is [how to cook with olive oil](/blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen), the temperatures are in [olive oil smoke point](/blog/olive-oil-smoke-point-what-heat-it-can-take), and vegetables specifically in [roasting vegetables](/blog/olive-oil-for-roasting-vegetables)."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilUsesInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Baking and desserts: where a quieter oil is fine",
+        "id": "baking-and-desserts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Oil in a batter is doing a texture job rather than a flavour job, keeping a crumb moist for days in a way butter does not. Sugar, citrus and flour mask a great deal, so this is the one family where an oil past its most aromatic weeks is still perfectly useful rather than wasted."
+          },
+          {
+            "type": "p",
+            "text": "The conversion and the method live in [olive oil for cakes and baking](/blog/olive-oil-for-cakes-and-baking). Do not take a ratio from this page; take it from that one."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilUsesInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Which use needs what?",
+        "id": "the-map",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The table below is the whole page in one block. Read down the first column to find the job, across to see what the bottle has to offer, and follow the link for the method. Nothing here explains how to do any of them, on purpose."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Use",
+              "What it needs from the bottle",
+              "Where to read the method"
+            ],
+            "rows": [
+              [
+                "Dipping and bread",
+                "Freshest, most peppery oil you own",
+                "Olive oil for bread and dipping"
+              ],
+              [
+                "Salad dressing",
+                "Character strong enough to survive acid",
+                "Extra virgin olive oil salad dressing"
+              ],
+              [
+                "Finishing a grilled dish",
+                "Aroma intact, added off the heat",
+                "How to cook with olive oil"
+              ],
+              [
+                "Roasting vegetables",
+                "Ordinary extra virgin, quantity over finesse",
+                "Olive oil for roasting vegetables"
+              ],
+              [
+                "Sauteing and tumis",
+                "Any extra virgin, kept under the smoke point",
+                "Olive oil smoke point"
+              ],
+              [
+                "Cakes and bakes",
+                "A quieter oil is fine here",
+                "Olive oil for cakes and baking"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilUsesInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      },
+      {
+        "heading": "Which uses is it wrong for?",
+        "id": "where-it-does-not-belong",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Two. A wok at full flame and a pot deep enough to fry in both run past what this oil tolerates, and both use enough of it that the cost is real. A refined oil is the correct tool there, and the extra virgin bottle goes back in the cupboard for the plate."
+          },
+          {
+            "type": "p",
+            "text": "That is a decision about heat and volume, not about quality. [Is it good to cook with extra virgin olive oil](/blog/is-it-good-to-cook-with-extra-virgin-olive-oil) sets out the three bands."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraVirginOliveOilUsesInline",
+            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Start with two",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A bottle that is used in one family gets finished; a bottle bought for everything gets used twice. Pick one raw use and one cooked use from the table, follow the two links, and the rest of the map is there when you want it."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What are the main uses for extra virgin olive oil?",
+        "a": "Four families: raw and finishing, dressings and emulsions, moderate-heat cooking such as sauteing and roasting, and baking. Each asks something different of the bottle."
+      },
+      {
+        "q": "Do all these uses need the same oil?",
+        "a": "No. Raw uses need the freshest and most peppery bottle you have. Baking is forgiving enough that an oil past its most aromatic weeks still does the job."
+      },
+      {
+        "q": "Can extra virgin olive oil be used for frying?",
+        "a": "Shallow frying at moderate heat, yes. Deep-frying is where the volume and the temperature make a refined oil the sensible choice instead."
+      },
+      {
+        "q": "Is olive oil suitable for baking?",
+        "a": "Yes, and it keeps a crumb moist for days at room temperature. The butter-to-oil conversion belongs on the baking article rather than here."
+      },
+      {
+        "q": "Which use gives the most for the money?",
+        "a": "Raw finishing. It uses teaspoons, and every part of the oil you paid extra for arrives at the table without being cooked away first."
+      },
+      {
+        "q": "Do infused oils change the map?",
+        "a": "They belong in the raw and finishing family, where the botanicals can be tasted. Cooking an infused oil hard removes the reason for buying it."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "The classic oil and six infused flavours, in 250 ml and 500 ml."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "The dish-by-dish method behind the moderate-heat family."
+      },
+      {
+        "label": "Olive oil for roasting vegetables",
+        "path": "blog/olive-oil-for-roasting-vegetables",
+        "description": "Quantities, tray temperature and why the vegetables should be dry before the oil goes on."
+      },
+      {
+        "label": "Olive oil for cakes and baking",
+        "path": "blog/olive-oil-for-cakes-and-baking",
+        "description": "The butter-to-oil conversion and what oil does to a crumb over several days."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "is-it-good-to-cook-with-extra-virgin-olive-oil",
+    "slug": "is-it-good-to-cook-with-extra-virgin-olive-oil",
+    "seoTitle": "Is It Good to Cook With Extra Virgin Olive Oil?",
+    "metaTitle": "Is It Good to Cook With Extra Virgin Olive Oil?",
+    "metaDescription": "Cooking with the expensive bottle is not a waste, but it is not always the right call either. Three heat bands, and which oil each one deserves.",
+    "focusKeyword": "is it good to cook with extra virgin olive oil",
+    "relatedKeywords": [
+      "can you cook with extra virgin olive oil",
+      "extra virgin olive oil for cooking",
+      "cooking with extra virgin olive oil",
+      "extra virgin olive oil high heat",
+      "does heat ruin extra virgin olive oil",
+      "extra virgin olive oil sauteing",
+      "olive oil for frying",
+      "wasting extra virgin olive oil",
+      "which oil for high heat",
+      "extra virgin olive oil cost per use"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "cooking",
+      "heat",
+      "extra virgin",
+      "value"
+    ],
+    "h1": "Is It Good to Cook With Extra Virgin Olive Oil, or a Waste of It?",
+    "excerpt": "Heat does not make extra virgin olive oil dangerous. It makes it quieter. Whether that is a waste depends entirely on which of three heat bands you are cooking in.",
+    "keyTakeaway": "Yes, and most home cooking never gets near the limit. Extra virgin olive oil smokes somewhere around 190 to 210 degrees Celsius, while ordinary sauteing sits at 140 to 180. Heat costs you aroma and flavour, not safety, so the real question is whether the dish will taste of the oil at all.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressIsItGoodToCookWithExtraVirginOliveOilHero",
+      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+    },
+    "ogImage": "/og/blog-is-it-good-to-cook-with-extra-virgin-olive-oil.jpg",
+    "intro": [
+      "Someone buys a bottle of extra virgin olive oil, reads that heat destroys it, then stands over the stove wondering whether pouring it into a hot pan is throwing money away.",
+      "Cooking with it is fine, and most Malaysian home cooking never reaches the temperature people worry about. But there are three quite different kinds of heat in a kitchen, and this oil is the right tool in two of them."
+    ],
+    "sections": [
+      {
+        "heading": "What does heat actually take away?",
+        "id": "what-heat-costs",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Heat takes the flavour first. The aromatic compounds that make a fresh extra virgin oil smell grassy and taste peppery are volatile, and they start leaving the moment the pan warms up. The fat itself, which is most of the bottle, is far more stable and changes very little at normal cooking temperatures."
+          },
+          {
+            "type": "p",
+            "text": "So you are not losing a safe oil and gaining a dangerous one. You are losing the part you paid a premium for. The polyphenols behind the bitterness go the same way, and deep-frying at around 200 degrees Celsius is where that loss becomes total rather than partial."
+          },
+          {
+            "type": "image",
+            "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "Where does the smoke point actually sit?",
+        "id": "smoke-point-in-context",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil smokes somewhere between 190 and 210 degrees Celsius, depending on how fresh it is and how much sediment it carries. Normal home sauteing runs at 140 to 180 degrees. That gap is the whole reason this question has a comfortable answer for most of what a kitchen does."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Oil",
+              "Approximate smoke point"
+            ],
+            "rows": [
+              [
+                "Extra virgin olive oil",
+                "190 to 210 degrees Celsius"
+              ],
+              [
+                "Virgin coconut oil",
+                "175 to 190 degrees Celsius"
+              ],
+              [
+                "Refined sunflower oil",
+                "around 225 degrees Celsius"
+              ],
+              [
+                "Palm cooking oil",
+                "around 230 degrees Celsius"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          },
+          {
+            "type": "p",
+            "text": "A shimmering pan is inside the range. A smoking pan has told you, with no equipment, that you have passed it. The detail sits in [what heat olive oil can take](/blog/olive-oil-smoke-point-what-heat-it-can-take)."
+          }
+        ]
+      },
+      {
+        "heading": "Which heat band are you cooking in?",
+        "id": "three-heat-bands",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Almost every decision here comes down to sorting the dish into one of three bands. Raw and finishing, where nothing is heated. Moderate heat, which covers most stovetop and oven work. And high heat, meaning a wok at full flame or a pot of oil deep enough to swim in."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Heat band",
+              "What it covers",
+              "Which oil deserves it"
+            ],
+            "rows": [
+              [
+                "Raw and finishing",
+                "Dressings, drizzles, dipping, cold dishes",
+                "Extra virgin, and nothing else is worth buying"
+              ],
+              [
+                "Moderate heat",
+                "Sauteing, roasting, baking, tumis",
+                "Extra virgin is comfortable and still adds flavour"
+              ],
+              [
+                "High heat",
+                "Wok at full flame, deep-frying, hard searing",
+                "A cheaper refined oil, extra virgin on the plate"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "When is a cheaper oil the right answer?",
+        "id": "when-cheaper-wins",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "When the volume is large and the heat is high, a refined oil is not a compromise, it is the correct choice. Filling a pot to deep-fry uses far more oil than a saute and destroys the qualities you paid extra for while doing it. Nothing is gained by insisting on one bottle."
+          },
+          {
+            "type": "p",
+            "text": "A kitchen holding two oils, one neutral and one extra virgin, costs less over a month than one bottle doing both jobs."
+          },
+          {
+            "type": "image",
+            "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      },
+      {
+        "heading": "Does cooking with it make it bad value?",
+        "id": "cost-per-use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It depends on how much the pan swallows. A finishing drizzle uses a spoonful and the flavour is the entire point. A pan of vegetables uses a little more and still tastes of the oil. A deep-fry uses a great deal and returns almost none of it to the plate."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "A spoonful raw over a finished dish: the whole flavour survives",
+              "A tablespoon in a moderate pan: much of the character survives",
+              "A potful at high heat: almost nothing you paid for survives"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          },
+          {
+            "type": "p",
+            "text": "Judge value as cost per dish that actually tastes of olive oil, not as price per litre."
+          }
+        ]
+      },
+      {
+        "heading": "What ruins the oil faster than the pan does?",
+        "id": "storage-not-heat",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most households lose more quality to storage than to cooking. A bottle standing open in the warm cupboard beside the hob degrades steadily between meals, which is a far longer exposure than any single pan gives it. Light and heat are the real enemies, and both are usually free to fix."
+          },
+          {
+            "type": "p",
+            "text": "Keep it closed, away from the stove, out of direct light, and use it within about two months of opening. The refrigerator is unnecessary rather than forbidden, and cold oil simply clouds before clearing again at room temperature."
+          },
+          {
+            "type": "image",
+            "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "So, should you cook with it?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yes, for anything raw and anything at moderate heat, which between them cover most of what a home kitchen does. Keep a cheaper refined oil for the wok at full flame and for deep-frying, and stop worrying about the pan. The bottle left open beside the stove is doing more damage than the sauteing ever will."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is it good to cook with extra virgin olive oil every day?",
+        "a": "For everyday sauteing, roasting and gentle pan-frying, yes. Those sit at 140 to 180 degrees Celsius, well below the point where the oil starts to smoke and lose its character."
+      },
+      {
+        "q": "Does heating extra virgin olive oil make it unhealthy?",
+        "a": "Heating changes flavour, not safety, within normal cooking temperatures. Questions about diet and health belong with a doctor or a registered dietitian rather than with a cooking article."
+      },
+      {
+        "q": "Can I deep-fry in extra virgin olive oil?",
+        "a": "You can, but it is poor value. Deep-frying uses a lot of oil at a temperature that removes almost everything you paid extra for. A refined oil does that job cheaper."
+      },
+      {
+        "q": "How do I know the pan is too hot?",
+        "a": "The oil tells you. A shimmering surface is fine. Visible smoke means you have passed the smoke point, and that oil should be discarded rather than cooked in further."
+      },
+      {
+        "q": "Is extra virgin olive oil suitable for tumis?",
+        "a": "Yes. A tumis is moderate-heat cooking at roughly 140 to 180 degrees Celsius, comfortably inside the range extra virgin olive oil handles without smoking."
+      },
+      {
+        "q": "Does cooking destroy the polyphenols in olive oil?",
+        "a": "Moderate heat reduces them gradually. Deep-frying at around 200 degrees Celsius removes them almost entirely, which is one more reason to keep this bottle away from the fryer."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, for the raw and moderate-heat half of the kitchen."
+      },
+      {
+        "label": "Olive oil smoke point: what heat it can take",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The temperature detail behind the three heat bands, and how a smoke point drifts as an oil ages."
+      },
+      {
+        "label": "How to cook with olive oil in a Malaysian kitchen",
+        "path": "blog/how-to-cook-with-olive-oil-in-a-malaysian-kitchen",
+        "description": "Dish by dish, where olive oil fits alongside the oils a Malaysian kitchen already uses."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "olive-oil-is-it-healthy",
+    "slug": "olive-oil-is-it-healthy",
+    "seoTitle": "Olive Oil: Is It Healthy? Read the Label First",
+    "metaTitle": "Olive Oil: Is It Healthy? What a Label Can Say",
+    "metaDescription": "Why a Malaysian seller answers this carefully, what a bottle can honestly carry — grade, harvest date, origin, the 0.8% ceiling — and what it cannot.",
+    "focusKeyword": "olive oil is it healthy",
+    "relatedKeywords": [
+      "is olive oil healthy",
+      "is olive oil good for you",
+      "olive oil health claims",
+      "olive oil label meaning",
+      "olive oil acidity 0.8%",
+      "harvest date olive oil",
+      "extra virgin olive oil grade",
+      "olive oil regulations Malaysia",
+      "how to read an olive oil label",
+      "olive oil qualified health claim"
+    ],
+    "category": "Wellness & Health",
+    "tags": [
+      "Label literacy",
+      "Extra Virgin Olive Oil",
+      "Malaysia",
+      "Regulation"
+    ],
+    "h1": "Olive Oil: Is It Healthy, and What Can a Label Actually Tell You?",
+    "excerpt": "A blunt health question answered the only honest way a Malaysian seller can answer it: by explaining what a label may legally say, what it verifiably carries, and where the information stops.",
+    "keyTakeaway": "A Malaysian seller cannot legally tell you olive oil is healthy — Regulation 18(6) forbids it. What a label can honestly carry is the grade, the harvest date, a single named origin, the 0.8% category acidity ceiling and dark glass. Everything past that belongs to your doctor.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilIsItHealthyHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+    },
+    "ogImage": "/og/blog-olive-oil-is-it-healthy.jpg",
+    "intro": [
+      "\"Is olive oil healthy?\" is among the most common questions typed about this bottle, and the one a seller in Malaysia is least free to answer.",
+      "So this page answers a narrower question: what a label may legally say, and what it never tells you."
+    ],
+    "sections": [
+      {
+        "heading": "Why a Malaysian seller answers this carefully",
+        "id": "why-the-answer-is-careful",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Under the Malaysian Food Regulations 1985, Regulation 18(6), no food may be labelled or advertised as preventing, alleviating, treating or curing any disease. A seller here is not being evasive when the answer arrives as grade and composition rather than an outcome."
+          },
+          {
+            "type": "p",
+            "text": "The useful information moves onto what a buyer can check: grade, harvest year, origin, container. Those are verifiable; an outcome is not."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIsItHealthyInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "What a label can honestly carry",
+        "id": "what-a-label-can-carry",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Five things on a bottle are verifiable rather than promotional, and together they say more about quality than any marketing sentence: the grade, the harvest date, a single named origin, the free acidity ceiling that defines the category, and the glass."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Grade.** \"Extra virgin\" is a trade category, not an adjective: mechanically extracted, no heat, no solvent. [Lower grades](/blog/extra-virgin-olive-oil-vs-pure-olive-oil) lose that.",
+              "**Harvest date.** The year the fruit was picked — best-before never tells you.",
+              "**A single named origin.** One country, ideally one region; a blend names no grove.",
+              "**The 0.8% ceiling.** Extra virgin may not exceed 0.8% free acidity; virgin 2.0%, refined 0.3%. A category standard, not a bottle's figure.",
+              "**Dark glass.** Light degrades oil; a clear bottle on a lit shelf suffers."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIsItHealthyInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "What the label tells you, and what it does not",
+        "id": "label-tells-and-does-not",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A label is a document about the oil's identity and history. It is not a document about your body. That gap is where most confusion about olive oil and health lives, so it is worth setting out column by column."
+          },
+          {
+            "type": "table",
+            "head": [
+              "What the label tells you",
+              "What it cannot tell you"
+            ],
+            "rows": [
+              [
+                "Grade: extra virgin, virgin, refined, pomace",
+                "Whether it does anything for you"
+              ],
+              [
+                "The harvest year, and so the oil's age",
+                "How it was stored before purchase"
+              ],
+              [
+                "A single named country or region",
+                "Which grove, unless the seller traces it"
+              ],
+              [
+                "The 0.8% category ceiling for acidity",
+                "This bottle's figure, without a certificate"
+              ],
+              [
+                "Ingredients: olive oil, nothing else",
+                "Any medical outcome — 18(6) forbids it"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIsItHealthyInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "The three claims regulators have actually allowed",
+        "id": "the-three-approved-claims",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Internationally, three carefully hedged statements exist about olive oil, and each one is narrower than the headlines built on it. The qualifiers matter, because they are the part that gets dropped when a claim is copied onto a marketplace listing."
+          },
+          {
+            "type": "p",
+            "text": "[The WHO](https://www.who.int/) supports replacing saturated fat with unsaturated fat to help maintain normal blood cholesterol; replacing is the hedge. [EFSA](https://www.efsa.europa.eu/) accepted that olive oil polyphenols contribute to protecting blood lipids from oxidative stress, at a defined daily intake. [The US FDA](https://www.fda.gov/) permitted a **qualified** claim on oleic acid and coronary heart disease; \"qualified\" means the evidence was judged limited and the claim must say so. All three studied a whole dietary pattern, not a spoonful added to an unchanged diet: [the long version](/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families)."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIsItHealthyInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "Replacement, not addition",
+        "id": "replacement-not-addition",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Every one of those statements is about substitution. Olive oil carries roughly 120 kcal per tablespoon, like any cooking oil, so pouring it on top of an unchanged diet only adds energy. Instead of a heavily saturated fat it is a swap; alongside one, it is not."
+          },
+          {
+            "type": "p",
+            "text": "In a Malaysian kitchen the swap that holds is the everyday fat: dressing, finishing, moderate-heat sautéing. No dish is given up."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIsItHealthyInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      },
+      {
+        "heading": "What to check instead of a health claim",
+        "id": "what-to-check-instead",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "If the health question cannot be answered on a label, the answerable ones deserve the attention instead. Who is the named seller, and is there an address you could walk into? Is a harvest date printed anywhere? Is the origin one place or a blend?"
+          },
+          {
+            "type": "p",
+            "text": "[Choosing authentic extra virgin olive oil in Malaysia](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia) works through those checks. Arabian Village reaches Malaysia through one named distributor with two branches you can walk into; [the products page](/products) carries grade and sizes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilIsItHealthyInline",
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short version",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Regulation 18(6) is why no Malaysian seller can tell you whether olive oil is healthy. A label carries grade, harvest date, origin, the 0.8% ceiling and dark glass. Olive oil does not treat, cure or prevent any disease and does not replace medication; with a diagnosed condition ask your doctor or a registered dietitian. Nothing here is medical advice, only food information."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil healthy?",
+        "a": "No food label in Malaysia may answer that, because Regulation 18(6) forbids representing food as treating or preventing disease. A label tells you grade, harvest date, origin and the category acidity ceiling."
+      },
+      {
+        "q": "What does the 0.8% figure mean?",
+        "a": "It is the maximum free acidity allowed in the extra virgin category, against 2.0% for virgin and 0.3% for refined. It is a trade standard for the grade, not one bottle's figure."
+      },
+      {
+        "q": "Why does the harvest date matter more than the expiry date?",
+        "a": "Best-before is counted backwards from bottling, so two bottles sharing an expiry can be a year apart in age. Only the harvest date says when the fruit itself was picked."
+      },
+      {
+        "q": "What does a qualified health claim mean?",
+        "a": "It is a legal category, not a compliment. When the US Food and Drug Administration permits a qualified claim, it has judged the evidence limited and requires the wording to say so."
+      },
+      {
+        "q": "Does adding olive oil to my meals make them healthier?",
+        "a": "The approved statements are about replacing saturated fat, not adding oil. At roughly 120 kcal a tablespoon, olive oil poured on top of an unchanged diet is extra energy, not a swap."
+      },
+      {
+        "q": "Can a seller in Malaysia say olive oil is good for the heart?",
+        "a": "Not lawfully. The Food Regulations 1985 bar any food from being advertised as preventing, alleviating, treating or curing disease, so a seller may describe the grade but not promise an outcome."
+      }
+    ],
+    "related": [
+      {
+        "label": "Extra virgin olive oil health benefits for Malaysian families",
+        "path": "blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families",
+        "description": "The composition behind the label, and the exact wording of what health authorities are willing to say."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "Label wording, harvest dates and the traps to avoid when the bottle is the only evidence you have."
+      },
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Grade, origin and the two sizes sold in Malaysia, with one named distributor behind them."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "vitamins-in-extra-virgin-olive-oil",
+    "slug": "vitamins-in-extra-virgin-olive-oil",
+    "seoTitle": "Vitamins in Extra Virgin Olive Oil, and What Else",
+    "metaTitle": "Vitamins in Extra Virgin Olive Oil, and What Else",
+    "metaDescription": "What is actually in the bottle: the fat fraction, vitamin E, the polyphenols behind the bitterness, and why no number on a label proves anything.",
+    "focusKeyword": "vitamins in extra virgin olive oil",
+    "relatedKeywords": [
+      "what is in extra virgin olive oil",
+      "extra virgin olive oil composition",
+      "vitamin e in olive oil",
+      "alpha tocopherol olive oil",
+      "polyphenols in olive oil",
+      "oleocanthal",
+      "hydroxytyrosol",
+      "oleic acid monounsaturated fat",
+      "what refining removes from olive oil",
+      "light olive oil calories"
+    ],
+    "category": "Understanding olive oil",
+    "tags": [
+      "composition",
+      "polyphenols",
+      "vitamin e",
+      "grades"
+    ],
+    "h1": "The Vitamins in Extra Virgin Olive Oil, and Everything Else in the Bottle",
+    "excerpt": "A plain description of what extra virgin olive oil is made of, why the minor compounds are there, and why this site publishes no laboratory number for its own bottle.",
+    "keyTakeaway": "Extra virgin olive oil is roughly 70 to 80 percent oleic acid, a monounsaturated fat, plus a small fraction of minor compounds. The best known is vitamin E as alpha-tocopherol, alongside polyphenols such as hydroxytyrosol, tyrosol and oleocanthal. Refining strips most of that minor fraction out.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressVitaminsInExtraVirginOliveOilHero",
+      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+    },
+    "ogImage": "/og/blog-vitamins-in-extra-virgin-olive-oil.jpg",
+    "intro": [
+      "This is a description of what is in the bottle, not an argument about what it does to a person. Those are different subjects and only one of them belongs on a page written by a seller.",
+      "Everything below is at category level, and there are almost no numbers in it. That absence is deliberate, and the last section explains why."
+    ],
+    "sections": [
+      {
+        "heading": "What is most of the bottle?",
+        "id": "the-fat-fraction",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fat, and mostly one kind of it. Roughly 70 to 80 percent of extra virgin olive oil is oleic acid, a monounsaturated fatty acid, with smaller amounts of polyunsaturated and saturated fats making up the rest. Monounsaturated simply describes the shape of the molecule: one double bond in the chain."
+          },
+          {
+            "type": "p",
+            "text": "That shape is why olive oil behaves as it does in a kitchen. It is liquid at room temperature, it thickens and clouds when cold rather than setting hard, and it is more stable in a warm pan than an oil built mostly of polyunsaturated fats."
+          },
+          {
+            "type": "image",
+            "src": "pressVitaminsInExtraVirginOliveOilInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "Where do the vitamins come in?",
+        "id": "vitamin-e",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In the small remainder. The vitamin present in any meaningful way is vitamin E, in the form of alpha-tocopherol, and it is worth understanding why it is there. Alpha-tocopherol is an antioxidant that protects the oil itself from going rancid. It is part of the fruit's own preservation system."
+          },
+          {
+            "type": "p",
+            "text": "Vitamins A, C and the B group are not present in any quantity that a page like this should be discussing. Olive oil is a fat, and it carries what a fat carries."
+          },
+          {
+            "type": "image",
+            "src": "pressVitaminsInExtraVirginOliveOilInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "What are the polyphenols, and why can you taste them?",
+        "id": "polyphenols",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Polyphenols are the other half of the minor fraction, and they are the reason a good extra virgin oil tastes of something. Hydroxytyrosol, tyrosol, oleocanthal and the oleuropein derivatives are the ones usually named. Together they account for the bitterness on the tongue and the peppery catch at the back of the throat."
+          },
+          {
+            "type": "p",
+            "text": "This is the useful part for a buyer: those compounds are audible in the mouth. An oil that tastes flat has fewer of them, and no label can tell you that. [Why olive oil tastes bitter](/blog/why-does-olive-oil-taste-bitter) goes further into it."
+          },
+          {
+            "type": "image",
+            "src": "pressVitaminsInExtraVirginOliveOilInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "What does refining take out?",
+        "id": "what-refining-removes",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Almost all of the minor fraction. Refining uses heat, and sometimes solvents, to clean up an oil that failed the extra virgin tests. It works, in the sense that the result is edible and neutral, but the aroma compounds, most of the polyphenols and a good deal of the tocopherol go with the faults."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Compound",
+              "What it does in the oil"
+            ],
+            "rows": [
+              [
+                "Oleic acid",
+                "Most of the volume; sets how the oil behaves hot and cold"
+              ],
+              [
+                "Alpha-tocopherol (vitamin E)",
+                "Protects the oil from going rancid"
+              ],
+              [
+                "Hydroxytyrosol and tyrosol",
+                "Contribute the bitterness on the tongue"
+              ],
+              [
+                "Oleocanthal",
+                "The peppery catch at the back of the throat"
+              ],
+              [
+                "Chlorophyll and carotenoids",
+                "The green and gold colour"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressVitaminsInExtraVirginOliveOilInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "Is light olive oil lower in calories?",
+        "id": "light-is-not-lighter",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No. Light and extra light on an olive oil label describe flavour and colour, not energy. Every olive oil, refined or not, is around 120 calories per tablespoon, the same as any other cooking oil. A light oil is lighter in taste because refining removed the taste."
+          },
+          {
+            "type": "p",
+            "text": "It is one of the most persistently misread words in the category. The grade ladder is set out properly in [extra virgin versus pure olive oil](/blog/extra-virgin-olive-oil-vs-pure-olive-oil)."
+          },
+          {
+            "type": "image",
+            "src": "pressVitaminsInExtraVirginOliveOilInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      },
+      {
+        "heading": "Why are there no numbers on this page?",
+        "id": "no-numbers-here",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Because this site publishes no laboratory analysis of its own bottle, and a number without a certificate behind it is decoration. Polyphenol content varies by cultivar, harvest timing, pressing and age, so a figure quoted for olive oil in general says very little about the specific bottle in your hand."
+          },
+          {
+            "type": "p",
+            "text": "The same test applies to any brand. If a label carries a figure, ask what test produced it, when, and whether the certificate is available. If none of that can be answered, treat the number as marketing."
+          },
+          {
+            "type": "image",
+            "src": "pressVitaminsInExtraVirginOliveOilInline",
+            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What to take from this",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Extra virgin olive oil is a fat carrying a small, fragile fraction of vitamin E and polyphenols that refining removes and that you can taste directly. If your real question is about diet or a health condition, that belongs with a doctor or a registered dietitian, not with a bottle. Nothing here is medical advice."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What vitamins are in extra virgin olive oil?",
+        "a": "Vitamin E, as alpha-tocopherol, is the one present in any meaningful way. It functions as an antioxidant that protects the oil itself from turning rancid."
+      },
+      {
+        "q": "Does extra virgin olive oil contain more vitamin E than refined?",
+        "a": "It retains more of the minor fraction generally, because it is never refined. How much any given bottle holds depends on cultivar, harvest and age."
+      },
+      {
+        "q": "What are polyphenols in olive oil?",
+        "a": "Compounds including hydroxytyrosol, tyrosol and oleocanthal that survive only in unrefined oil. They are what you taste as bitterness and the peppery catch in the throat."
+      },
+      {
+        "q": "Is light olive oil lower in calories?",
+        "a": "No. Light describes flavour and colour after refining. All olive oil is around 120 calories per tablespoon, the same as any other cooking oil."
+      },
+      {
+        "q": "Can I tell the polyphenol level by tasting?",
+        "a": "Roughly. A pronounced bitterness and a throat catch indicate they are present. A flat, waxy oil has fewer, and no home test gives you a figure."
+      },
+      {
+        "q": "Why does this page not give quantities?",
+        "a": "Because no laboratory analysis of this site's own bottle is published, and category averages say little about a specific bottle. A number without a certificate behind it is decoration."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil, unrefined, in 250 ml and 500 ml."
+      },
+      {
+        "label": "Extra virgin vs pure olive oil",
+        "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+        "description": "The grade ladder, and exactly what refining takes out of a bottle."
+      },
+      {
+        "label": "Why does olive oil taste bitter?",
+        "path": "blog/why-does-olive-oil-taste-bitter",
+        "description": "The polyphenols behind the bitterness, and why their absence is the worrying result."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "which-olive-oil-to-buy",
+    "slug": "which-olive-oil-to-buy",
+    "seoTitle": "Which Olive Oil to Buy: A Four-Question Ladder",
+    "metaTitle": "Which Olive Oil to Buy: A Four-Question Ladder",
+    "metaDescription": "Four questions asked in order, each one narrowing the shelf, ending in a grade and a size. For the person standing in the aisle right now.",
+    "focusKeyword": "which olive oil to buy",
+    "relatedKeywords": [
+      "what olive oil should i buy",
+      "olive oil buying guide",
+      "which olive oil for cooking",
+      "which olive oil for salad",
+      "olive oil grade to choose",
+      "olive oil bottle size to buy",
+      "should i buy two olive oils",
+      "cheap vs expensive olive oil",
+      "olive oil for beginners",
+      "first olive oil bottle"
+    ],
+    "category": "Buying olive oil",
+    "tags": [
+      "buying",
+      "decision",
+      "grades",
+      "sizes"
+    ],
+    "h1": "Which Olive Oil to Buy: Four Questions, in Order",
+    "excerpt": "A short question ladder for someone standing in front of a shelf. Each answer narrows the choice, and the last one lands on a grade and a size.",
+    "keyTakeaway": "Which olive oil to buy comes down to four questions asked in order: what will you mostly do with it, how fast will you get through it, are you buying for flavour or for volume, and can you check the label. Most households are better served by two oils than by one compromise bottle.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressWhichOliveOilToBuyHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-which-olive-oil-to-buy.jpg",
+    "intro": [
+      "Standing in front of a shelf with eight bottles on it is not the moment for a grade lecture. It is the moment for a decision.",
+      "Four questions, asked in this order, will narrow the shelf to one or two bottles. The reasoning behind each is a link, not a paragraph."
+    ],
+    "sections": [
+      {
+        "heading": "Question one: what will you mostly do with it?",
+        "id": "what-will-you-do-with-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This decides the grade, and it is the only question that really has to be answered first. If most of the use is raw or moderate heat, buy extra virgin. If most of the use is a wok at full flame or deep-frying, buy a refined oil and stop reading, because nothing else on this page will change that answer."
+          },
+          {
+            "type": "p",
+            "text": "Most kitchens do some of both, which is why the honest answer for many households is two bottles rather than one."
+          },
+          {
+            "type": "image",
+            "src": "pressWhichOliveOilToBuyInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Question two: how fast will you get through it?",
+        "id": "how-fast-will-you-use-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This decides the size, and it is really a freshness question wearing a value disguise. An opened bottle holds its flavour for roughly two months. A larger bottle costs less per litre and is worse value if the last third has already flattened by the time you reach it."
+          },
+          {
+            "type": "p",
+            "text": "So buy the size you will finish inside that window, not the size with the best headline price. [What size olive oil bottle to buy](/blog/what-size-olive-oil-bottle-to-buy) works the arithmetic through."
+          },
+          {
+            "type": "image",
+            "src": "pressWhichOliveOilToBuyInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Question three: flavour or volume?",
+        "id": "flavour-or-volume",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "If the oil is going on the plate, you are buying flavour and the newest harvest wins. If the oil is going into the pan in quantity, you are buying volume and freshness matters far less. Trying to satisfy both with one purchase is how people end up with an expensive bottle used for frying."
+          },
+          {
+            "type": "table",
+            "head": [
+              "If your answer is",
+              "Buy",
+              "In this size"
+            ],
+            "rows": [
+              [
+                "Mostly raw: dressings, dipping, finishing",
+                "Extra virgin, newest harvest you can find",
+                "Small, so it stays fresh in use"
+              ],
+              [
+                "Mixed: some raw, mostly moderate heat",
+                "Extra virgin",
+                "Whichever you finish in two months"
+              ],
+              [
+                "Mostly high heat and volume",
+                "A refined cooking oil",
+                "Large, price per litre is the point"
+              ],
+              [
+                "Both, honestly",
+                "One of each",
+                "Small extra virgin, large refined"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressWhichOliveOilToBuyInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Question four: can you check the label?",
+        "id": "can-you-check-the-label",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Whatever the first three answers were, the bottle still has to say what it is. The words extra virgin olive oil in full, a date, one named country of origin, and glass dark enough to keep light out. A bottle missing all four is not a bargain, it is an unknown."
+          },
+          {
+            "type": "p",
+            "text": "The longer version of this check, including a taste test, is in [how to choose authentic extra virgin olive oil](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia)."
+          },
+          {
+            "type": "image",
+            "src": "pressWhichOliveOilToBuyInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Why two bottles beats one compromise",
+        "id": "two-bottles",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Because a single bottle chosen to do everything does each job slightly badly and costs more overall. A cheap refined oil handles the frying that would have burned off everything you paid for, and a small extra virgin bottle reaches the table while it still tastes of something."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Decide the dominant use, and let it pick the grade",
+              "Pick the size you will finish in about two months",
+              "Read the label for grade, date, origin and glass",
+              "If your kitchen genuinely does both jobs, buy one of each"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressWhichOliveOilToBuyInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "If you only buy one bottle",
+        "id": "if-only-one",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Buy a small extra virgin olive oil, and use it raw. That is where the difference between grades is unmistakable, where the quantities are spoonfuls rather than potfuls, and where a bottle gets finished before it flattens. Keep whatever you already fry with for frying."
+          },
+          {
+            "type": "p",
+            "text": "It is a smaller purchase than most people expect and it answers the question the shelf was really asking."
+          },
+          {
+            "type": "image",
+            "src": "pressWhichOliveOilToBuyInline",
+            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "The short answer",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Extra virgin for anything raw or gently cooked, refined for anything hot and high-volume, and a size you will finish in two months. If that means two bottles, it means two bottles, and it will still cost less than one bottle used wrongly."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Which olive oil should I buy first?",
+        "a": "A small extra virgin bottle, used raw. That is where the grade difference is obvious, the quantities are small, and the bottle gets finished while it still tastes of something."
+      },
+      {
+        "q": "Is extra virgin worth it if I only fry?",
+        "a": "No. High-heat frying removes the aroma and bitterness you paid extra for. A refined cooking oil does that job better and far more cheaply."
+      },
+      {
+        "q": "Should I buy the biggest bottle for value?",
+        "a": "Only if you will finish it in about two months. Beyond that the last of it has flattened, which cancels the saving you made per litre."
+      },
+      {
+        "q": "Can one bottle do everything?",
+        "a": "It can, but it does each job slightly badly. Two oils, one cheap and neutral and one extra virgin, usually cost less over a month and cook better."
+      },
+      {
+        "q": "What if the label says pure or light olive oil?",
+        "a": "Those are refined grades. They are fine for heat and volume but will not give you the aroma or the peppery finish that extra virgin is bought for."
+      },
+      {
+        "q": "Does a cheaper extra virgin oil mean a worse one?",
+        "a": "Not necessarily, but a price far below the rest of the category is worth questioning. Check the grade wording, the date and the origin before assuming it is a bargain."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, the two sizes this ladder ends on."
+      },
+      {
+        "label": "What size olive oil bottle to buy",
+        "path": "blog/what-size-olive-oil-bottle-to-buy",
+        "description": "The freshness arithmetic behind question two, and when the larger bottle stops being cheaper."
+      },
+      {
+        "label": "Extra virgin vs pure olive oil",
+        "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+        "description": "What the grade words on a label actually mean, and what refining takes out."
       }
     ]
   },

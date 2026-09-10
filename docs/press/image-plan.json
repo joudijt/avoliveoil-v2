@@ -1314,6 +1314,168 @@
   "cy": 0.6
  },
  {
+  "id": "advantages-of-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "advantages-of-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "best-extra-virgin-olive-oil-in-malaysia",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.94,
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "best-extra-virgin-olive-oil-in-malaysia",
+  "lang": "en",
+  "slot": "inline",
+  "src": "HeroAVOliveOilBottleInTheField.png",
+  "zoom": 0.62,
+  "cx": 0.16,
+  "cy": 0.6
+ },
+ {
+  "id": "consuming-extra-virgin-olive-oil-day-to-day",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.55
+ },
+ {
+  "id": "consuming-extra-virgin-olive-oil-day-to-day",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-02-sunset.webp",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.6
+ },
+ {
+  "id": "extra-virgin-olive-oil-in-malaysia",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.94,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "extra-virgin-olive-oil-in-malaysia",
+  "lang": "en",
+  "slot": "inline",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "extra-virgin-olive-oil-uses",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "extra-virgin-olive-oil-uses",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "is-it-good-to-cook-with-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.4,
+  "cy": 0.6
+ },
+ {
+  "id": "is-it-good-to-cook-with-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-01-grove.webp",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.6
+ },
+ {
+  "id": "olive-oil-is-it-healthy",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "olive-oil-is-it-healthy",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-06-press.webp",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.35
+ },
+ {
+  "id": "vitamins-in-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "vitamins-in-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "which-olive-oil-to-buy",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.94,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "which-olive-oil-to-buy",
+  "lang": "en",
+  "slot": "inline",
+  "src": "FarmerPouringOliveOilInTheField.png",
+  "zoom": 1.0,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
   "id": "beli-minyak-zaitun-kl",
   "lang": "ms",
   "slot": "hero",
@@ -2050,5 +2212,113 @@
   "zoom": 0.97,
   "cx": 0.4,
   "cy": 0.6
+ },
+ {
+  "id": "cara-makan-minyak-zaitun-setiap-hari",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.94,
+  "cx": 0.4,
+  "cy": 0.5
+ },
+ {
+  "id": "cara-makan-minyak-zaitun-setiap-hari",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "kelebihan-extra-virgin-olive-oil-berbanding-gred-lain",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "kelebihan-extra-virgin-olive-oil-berbanding-gred-lain",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "kelebihan-olive-oil-untuk-dapur-harian",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.4,
+  "cy": 0.6
+ },
+ {
+  "id": "kelebihan-olive-oil-untuk-dapur-harian",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-01-grove.webp",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.6
+ },
+ {
+  "id": "maksud-olive-oil-dalam-bahasa-malaysia",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "maksud-olive-oil-dalam-bahasa-malaysia",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-06-press.webp",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.35
+ },
+ {
+  "id": "minyak-zaitun-original-cara-pastikan",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.5
+ },
+ {
+  "id": "minyak-zaitun-original-cara-pastikan",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "journey-06-testing.webp",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "minyak-zaitun-panduan-lengkap",
+  "lang": "ms",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.94,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "minyak-zaitun-panduan-lengkap",
+  "lang": "ms",
+  "slot": "inline",
+  "src": "FarmerPouringOliveOilInTheField.png",
+  "zoom": 1.0,
+  "cx": 0.6,
+  "cy": 0.5
  }
 ]

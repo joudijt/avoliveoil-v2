@@ -246,6 +246,36 @@ import pressZaytAlzaytunWalsimsimHero from '../../assets/images/press/zayt-alzay
 import pressZaytAlzaytunWalsimsimInline from '../../assets/images/press/zayt-alzaytun-walsimsim-inline.webp';
 import pressZaytAlzaytunWazaytAbadAlshamsHero from '../../assets/images/press/zayt-alzaytun-wazayt-abad-alshams-hero.webp';
 import pressZaytAlzaytunWazaytAbadAlshamsInline from '../../assets/images/press/zayt-alzaytun-wazayt-abad-alshams-inline.webp';
+import pressAdvantagesOfExtraVirginOliveOilHero from '../../assets/images/press/advantages-of-extra-virgin-olive-oil-hero.webp';
+import pressAdvantagesOfExtraVirginOliveOilInline from '../../assets/images/press/advantages-of-extra-virgin-olive-oil-inline.webp';
+import pressBestExtraVirginOliveOilInMalaysiaHero from '../../assets/images/press/best-extra-virgin-olive-oil-in-malaysia-hero.webp';
+import pressBestExtraVirginOliveOilInMalaysiaInline from '../../assets/images/press/best-extra-virgin-olive-oil-in-malaysia-inline.webp';
+import pressCaraMakanMinyakZaitunSetiapHariHero from '../../assets/images/press/cara-makan-minyak-zaitun-setiap-hari-hero.webp';
+import pressCaraMakanMinyakZaitunSetiapHariInline from '../../assets/images/press/cara-makan-minyak-zaitun-setiap-hari-inline.webp';
+import pressConsumingExtraVirginOliveOilDayToDayHero from '../../assets/images/press/consuming-extra-virgin-olive-oil-day-to-day-hero.webp';
+import pressConsumingExtraVirginOliveOilDayToDayInline from '../../assets/images/press/consuming-extra-virgin-olive-oil-day-to-day-inline.webp';
+import pressExtraVirginOliveOilInMalaysiaHero from '../../assets/images/press/extra-virgin-olive-oil-in-malaysia-hero.webp';
+import pressExtraVirginOliveOilInMalaysiaInline from '../../assets/images/press/extra-virgin-olive-oil-in-malaysia-inline.webp';
+import pressExtraVirginOliveOilUsesHero from '../../assets/images/press/extra-virgin-olive-oil-uses-hero.webp';
+import pressExtraVirginOliveOilUsesInline from '../../assets/images/press/extra-virgin-olive-oil-uses-inline.webp';
+import pressIsItGoodToCookWithExtraVirginOliveOilHero from '../../assets/images/press/is-it-good-to-cook-with-extra-virgin-olive-oil-hero.webp';
+import pressIsItGoodToCookWithExtraVirginOliveOilInline from '../../assets/images/press/is-it-good-to-cook-with-extra-virgin-olive-oil-inline.webp';
+import pressKelebihanExtraVirginOliveOilBerbandingGredLainHero from '../../assets/images/press/kelebihan-extra-virgin-olive-oil-berbanding-gred-lain-hero.webp';
+import pressKelebihanExtraVirginOliveOilBerbandingGredLainInline from '../../assets/images/press/kelebihan-extra-virgin-olive-oil-berbanding-gred-lain-inline.webp';
+import pressKelebihanOliveOilUntukDapurHarianHero from '../../assets/images/press/kelebihan-olive-oil-untuk-dapur-harian-hero.webp';
+import pressKelebihanOliveOilUntukDapurHarianInline from '../../assets/images/press/kelebihan-olive-oil-untuk-dapur-harian-inline.webp';
+import pressMaksudOliveOilDalamBahasaMalaysiaHero from '../../assets/images/press/maksud-olive-oil-dalam-bahasa-malaysia-hero.webp';
+import pressMaksudOliveOilDalamBahasaMalaysiaInline from '../../assets/images/press/maksud-olive-oil-dalam-bahasa-malaysia-inline.webp';
+import pressMinyakZaitunOriginalCaraPastikanHero from '../../assets/images/press/minyak-zaitun-original-cara-pastikan-hero.webp';
+import pressMinyakZaitunOriginalCaraPastikanInline from '../../assets/images/press/minyak-zaitun-original-cara-pastikan-inline.webp';
+import pressMinyakZaitunPanduanLengkapHero from '../../assets/images/press/minyak-zaitun-panduan-lengkap-hero.webp';
+import pressMinyakZaitunPanduanLengkapInline from '../../assets/images/press/minyak-zaitun-panduan-lengkap-inline.webp';
+import pressOliveOilIsItHealthyHero from '../../assets/images/press/olive-oil-is-it-healthy-hero.webp';
+import pressOliveOilIsItHealthyInline from '../../assets/images/press/olive-oil-is-it-healthy-inline.webp';
+import pressVitaminsInExtraVirginOliveOilHero from '../../assets/images/press/vitamins-in-extra-virgin-olive-oil-hero.webp';
+import pressVitaminsInExtraVirginOliveOilInline from '../../assets/images/press/vitamins-in-extra-virgin-olive-oil-inline.webp';
+import pressWhichOliveOilToBuyHero from '../../assets/images/press/which-olive-oil-to-buy-hero.webp';
+import pressWhichOliveOilToBuyInline from '../../assets/images/press/which-olive-oil-to-buy-inline.webp';
 
 /**
  * Article bodies reference photos by key rather than by import so the content
@@ -493,4 +523,34 @@ export const ARTICLE_IMAGES: Record<ImageKey, string> = {
   pressZaytAlzaytunWalsimsimInline,
   pressZaytAlzaytunWazaytAbadAlshamsHero,
   pressZaytAlzaytunWazaytAbadAlshamsInline,
+  pressAdvantagesOfExtraVirginOliveOilHero,
+  pressAdvantagesOfExtraVirginOliveOilInline,
+  pressBestExtraVirginOliveOilInMalaysiaHero,
+  pressBestExtraVirginOliveOilInMalaysiaInline,
+  pressCaraMakanMinyakZaitunSetiapHariHero,
+  pressCaraMakanMinyakZaitunSetiapHariInline,
+  pressConsumingExtraVirginOliveOilDayToDayHero,
+  pressConsumingExtraVirginOliveOilDayToDayInline,
+  pressExtraVirginOliveOilInMalaysiaHero,
+  pressExtraVirginOliveOilInMalaysiaInline,
+  pressExtraVirginOliveOilUsesHero,
+  pressExtraVirginOliveOilUsesInline,
+  pressIsItGoodToCookWithExtraVirginOliveOilHero,
+  pressIsItGoodToCookWithExtraVirginOliveOilInline,
+  pressKelebihanExtraVirginOliveOilBerbandingGredLainHero,
+  pressKelebihanExtraVirginOliveOilBerbandingGredLainInline,
+  pressKelebihanOliveOilUntukDapurHarianHero,
+  pressKelebihanOliveOilUntukDapurHarianInline,
+  pressMaksudOliveOilDalamBahasaMalaysiaHero,
+  pressMaksudOliveOilDalamBahasaMalaysiaInline,
+  pressMinyakZaitunOriginalCaraPastikanHero,
+  pressMinyakZaitunOriginalCaraPastikanInline,
+  pressMinyakZaitunPanduanLengkapHero,
+  pressMinyakZaitunPanduanLengkapInline,
+  pressOliveOilIsItHealthyHero,
+  pressOliveOilIsItHealthyInline,
+  pressVitaminsInExtraVirginOliveOilHero,
+  pressVitaminsInExtraVirginOliveOilInline,
+  pressWhichOliveOilToBuyHero,
+  pressWhichOliveOilToBuyInline,
 };

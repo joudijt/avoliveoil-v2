@@ -311,6 +311,11 @@ export const MS_ARTICLES: Article[] = [
         path: 'products',
         description: 'Minyak zaitun dara perahan sejuk pertama dari kebun Palestin berusia ratusan tahun.',
       },
+      {
+        "label": "Minyak zaitun: panduan lengkap",
+        "path": "blog/minyak-zaitun-panduan-lengkap",
+        "description": "Enam soalan asas dijawab ringkas, dengan pautan ke bacaan penuh."
+      }
     ],
   },
 
@@ -601,6 +606,11 @@ export const MS_ARTICLES: Article[] = [
         path: 'why-us',
         description: 'Asal usul Palestin yang boleh dikesan, tuaian tangan, dan perahan dalam beberapa jam.',
       },
+      {
+        "label": "Kelebihan olive oil untuk dapur harian",
+        "path": "blog/kelebihan-olive-oil-untuk-dapur-harian",
+        "description": "Kelebihan di dapur dan pada bil belanja, berserta lajur had yang jujur."
+      }
     ],
   },
 
@@ -2028,6 +2038,16 @@ export const MS_ARTICLES: Article[] = [
         "label": "Rasa minyak zaitun: pahit dan pedas",
         "path": "blog/rasa-minyak-zaitun-pahit-dan-pedas",
         "description": "Kenapa minyak muda terasa pahit dan pedas di tekak, dan bila ia tanda rosak."
+      },
+      {
+        "label": "Kelebihan extra virgin berbanding gred lain",
+        "path": "blog/kelebihan-extra-virgin-olive-oil-berbanding-gred-lain",
+        "description": "Kelebihannya ialah apa yang masih tinggal, dan bila ia boleh musnah."
+      },
+      {
+        "label": "Maksud olive oil dalam bahasa Malaysia",
+        "path": "blog/maksud-olive-oil-dalam-bahasa-malaysia",
+        "description": "Jambatan istilah antara label Inggeris dan perbualan Melayu."
       }
     ]
   },
@@ -6325,6 +6345,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian rasmi Berkat Madinah Store."
+      },
+      {
+        "label": "Minyak zaitun original: apa perkataan itu janjikan",
+        "path": "blog/minyak-zaitun-original-cara-pastikan",
+        "description": "Apa yang boleh disahkan sebelum bayar, dan apa yang tidak boleh."
       }
     ]
   },
@@ -8843,6 +8868,11 @@ export const MS_ARTICLES: Article[] = [
         "label": "Minyak zaitun untuk pizza",
         "path": "blog/minyak-zaitun-untuk-pizza",
         "description": "Adunan dan kerak, bukan lopak untuk mencelup — minyak dilipat dan disapu."
+      },
+      {
+        "label": "Cara makan minyak zaitun setiap hari",
+        "path": "blog/cara-makan-minyak-zaitun-setiap-hari",
+        "description": "Slot sebenar dalam menu Malaysia, diukur ikut hidangan bukan ikut orang."
       }
     ]
   },
@@ -12136,6 +12166,1604 @@ export const MS_ARTICLES: Article[] = [
         "label": "Tempat membeli dan cawangan",
         "path": "shop",
         "description": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "cara-makan-minyak-zaitun-setiap-hari",
+    "slug": "cara-makan-minyak-zaitun-setiap-hari",
+    "seoTitle": "Cara Makan Minyak Zaitun dalam Menu Harian",
+    "metaTitle": "Cara Makan Minyak Zaitun dalam Menu Harian",
+    "metaDescription": "Di mana sebotol minyak zaitun benar-benar masuk dalam seminggu menu Malaysia: hidangan mana, cara ia masuk, dan berapa banyak setiap hidangan.",
+    "focusKeyword": "cara makan minyak zaitun",
+    "relatedKeywords": [
+      "cara guna minyak zaitun harian",
+      "minyak zaitun atas nasi",
+      "minyak zaitun untuk roti canai",
+      "minyak zaitun dalam sambal",
+      "minyak zaitun mentah",
+      "minyak zaitun atas ikan bakar",
+      "berapa banyak minyak zaitun setiap hidangan",
+      "minyak zaitun sebagai perasa akhir",
+      "botol minyak zaitun berapa lama habis",
+      "minyak zaitun tanpa dimasak"
+    ],
+    "category": "Memasak dengan minyak zaitun",
+    "tags": [
+      "harian",
+      "mentah",
+      "hidangan",
+      "menu Malaysia"
+    ],
+    "h1": "Cara Makan Minyak Zaitun Tanpa Menjadikannya Satu Upacara",
+    "excerpt": "Kebanyakan orang beli sebotol, guna dua kali, dan botol itu duduk di belakang almari sehingga rasanya hilang. Ini tentang slot sebenar dalam menu Malaysia seminggu.",
+    "keyTakeaway": "Cara paling mudah memakan minyak zaitun ialah menjadikannya perasa akhir, bukan minyak masak: sesudu atas nasi panas, dalam pinggan cicahan roti, dititis ke dalam sambal selepas api ditutup, atas ikan bakar, atau dalam salad. Ukur ikut hidangan, bukan ikut orang.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressCaraMakanMinyakZaitunSetiapHariHero",
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+    },
+    "ogImage": "/og/blog-cara-makan-minyak-zaitun-setiap-hari.jpg",
+    "intro": [
+      "Sebotol sampai, dipakai sekali untuk salad, kemudian duduk di belakang almari sehingga rasanya sudah datar. Itu cerita biasa, dan ia sebenarnya masalah tabiat yang menyamar sebagai masalah resipi.",
+      "Halaman ini tentang di mana minyak itu masuk dalam seminggu menu biasa, dalam kuantiti sebesar hidangan."
+    ],
+    "sections": [
+      {
+        "heading": "Mentah atau dipanaskan, apa bezanya?",
+        "id": "mentah-atau-panas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Mentah, anda dapat semuanya: bau rumput atau buah, rasa pahit, dan pedas di pangkal tekak. Dipanaskan, aroma pergi dahulu dan kesan akhir menjadi lembut, dan semakin tinggi haba semakin sedikit yang sampai ke pinggan. Tiada apa menjadi tidak selamat, ia cuma menjadi senyap."
+          },
+          {
+            "type": "p",
+            "text": "Jadi cara paling mudah mendapat nilai daripada sebotol ialah menambahnya selepas haba, bukan sebelum. Minyak itu kemudian berkelakuan seperti perasa."
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      },
+      {
+        "heading": "Di mana slotnya dalam menu Malaysia?",
+        "id": "slot-dalam-menu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Lebih banyak daripada yang disangka, dan kebanyakannya slot yang memang sudah ada. Di mana-mana hidangan yang sekarang menerima sesudu sesuatu yang berlemak pada penghujungnya, minyak zaitun boleh mengambil kerja itu tanpa mengubah resipi di bawahnya."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Hidangan",
+              "Cara ia masuk",
+              "Berapa banyak"
+            ],
+            "rows": [
+              [
+                "Nasi putih panas",
+                "Digaul sejurus sebelum dihidang",
+                "Kira-kira satu sudu kecil semangkuk"
+              ],
+              [
+                "Roti canai atau roti bakar",
+                "Dituang ke dalam pinggan cicahan",
+                "Satu sudu besar untuk semeja"
+              ],
+              [
+                "Sambal atau tumisan",
+                "Digaul selepas api ditutup",
+                "Satu sudu kecil, di luar api"
+              ],
+              [
+                "Ikan bakar atau ayam panggang",
+                "Dititis atas hidangan yang sudah dipinggan",
+                "Satu sudu kecil sebahagian"
+              ],
+              [
+                "Salad atau ulam",
+                "Dipukul dengan bahan masam jadi sos",
+                "Dua sudu besar untuk empat orang"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa ukur ikut hidangan, bukan ikut orang?",
+        "id": "ikut-hidangan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kerana hidangan ada kuantiti yang betul, tetapi seorang manusia tidak. Pinggan cicahan cukup untuk sesiapa yang ada di meja. Sos salad diukur ikut besar mangkuk daun. Berfikir dalam bentuk sukatan harian mengubah bahan masakan menjadi satu regimen, dan itu bukan sesuatu yang halaman makanan boleh tetapkan."
+          },
+          {
+            "type": "p",
+            "text": "Kalau soalan sebenarnya tentang kesihatan, itu soalan untuk doktor atau pakar diet berdaftar. Versi berhati-hati tentang apa yang diketahui ada di [manfaat kesihatan minyak zaitun dara](/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia)."
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      },
+      {
+        "heading": "Berapa lama sebotol patut bertahan?",
+        "id": "berapa-lama-sebotol",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Digunakan mentah dalam sudu kecil dan sudu besar, jauh lebih lama daripada sangkaan ramai, dan itulah sebab soal saiz sebenarnya soal kesegaran. Botol yang belum dibuka tahan sehingga kira-kira lapan belas bulan. Selepas dibuka, rasanya bertahan kira-kira dua bulan."
+          },
+          {
+            "type": "p",
+            "text": "Jadi saiz yang patut dibeli ialah saiz yang anda mampu habiskan dalam tempoh itu. [Botol minyak zaitun dan saiz](/blog/botol-minyak-zaitun-kaca-gelap-dan-saiz) mengira bahagian itu."
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      },
+      {
+        "heading": "Apa satu tabiat yang merosakkannya?",
+        "id": "tabiat-yang-merosakkan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Membiarkan botol terbuka di sebelah dapur. Antara udara panas, cahaya dan leher botol yang terdedah, minyak yang disimpan di situ hilang lebih banyak dalam dua minggu berbanding apa yang mana-mana kuali ambil daripadanya. Ini cara paling biasa isi rumah membazir beza harga yang dibayar."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tutup penutup setiap kali menuang, bukan hanya selepas selesai memasak",
+              "Simpan dalam almari jauh dari dapur, bukan di kaunter sebelahnya",
+              "Nilai dengan bau, bukan dengan tarikh pada label",
+              "Peti sejuk tidak perlu, dan juga bukan bahaya; minyak sejuk cuma berkabus sehingga kembali suam"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      },
+      {
+        "heading": "Gred mana sesuai untuk penggunaan mentah?",
+        "id": "gred-untuk-mentah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin, dan hanya itu. Semua slot dalam jadual di atas menggunakan minyak tanpa dimasak, jadi setiap kebaikan dan setiap kecacatan minyak itu sampai terus ke mulut. Minyak tapisan, yang sering dilabel pure atau light, tiada bau dan tiada kesan akhir, jadi ia tidak menambah apa-apa pada pinggan."
+          },
+          {
+            "type": "p",
+            "text": "Ini juga bahagian yang paling murah untuk dijalankan, kerana kuantitinya sudu kecil dan sudu besar, bukan cawan. Sebotol 250 ml boleh bertahan berminggu-minggu jika digunakan begini."
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      },
+      {
+        "heading": "Bolehkah minyak zaitun berperisa masuk dalam menu harian?",
+        "id": "minyak-berperisa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Boleh, dan tempatnya sama seperti minyak zaitun biasa: sebagai perasa akhir, bukan minyak masak. Enam perisa dalam koleksi ini ialah thyme liar, blackseed, kunyit dan lada hitam, rosemary dan basil, adas manis, serta lavender dan chamomile, setiap satunya minyak zaitun dara yang direndam dengan tumbuhan kering."
+          },
+          {
+            "type": "p",
+            "text": "Kerana perisanya halus, memanaskannya dengan kuat menghilangkan sebab ia dibeli. Titiskan pada penghujung, sama seperti minyak klasik."
+          },
+          {
+            "type": "image",
+            "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Versi jujurnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Anggap ia perasa akhir dan bukan minyak masak, dan ia akan digunakan, terasa, serta habis sebelum rasanya datar. Pilih dua slot daripada jadual di atas, tutup botol dan jauhkan dari dapur, dan selebihnya berjalan sendiri."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Berapa banyak minyak zaitun patut digunakan?",
+        "a": "Fikir ikut hidangan, bukan ikut orang: sesudu kecil atas semangkuk nasi, sesudu besar dalam pinggan cicahan, dua sudu besar dalam sos salad untuk empat orang."
+      },
+      {
+        "q": "Lebih baik mentah atau dimasak?",
+        "a": "Mentah mengekalkan aroma, pahit dan pedas di tekak. Memasak bukan salah, tetapi semakin tinggi haba semakin sedikit rasa itu sampai ke pinggan."
+      },
+      {
+        "q": "Boleh masuk minyak zaitun dalam sambal?",
+        "a": "Boleh, digaul selepas api ditutup. Menambahnya ke dalam kuali panas menghilangkan aroma yang menjadi sebab ia ditambah."
+      },
+      {
+        "q": "Minyak zaitun sesuai dengan nasi?",
+        "a": "Sesuai. Sesudu kecil digaul ke dalam nasi putih panas sejurus sebelum dihidang berkelakuan seperti perasa, memberi nota buah dan sedikit pedas."
+      },
+      {
+        "q": "Berapa lama tahan selepas botol dibuka?",
+        "a": "Kira-kira dua bulan untuk rasa, walaupun ia selamat lebih lama. Bau ujian yang paling boleh dipercayai; bau datar bermakna ia sudah lepas tempoh terbaiknya."
+      },
+      {
+        "q": "Patut beli 250 ml atau 500 ml?",
+        "a": "Yang mana boleh dihabiskan dalam kira-kira dua bulan. Jika hanya digunakan mentah, botol kecil selalunya sampai ke meja dalam keadaan lebih baik."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk pertama dari Palestin, dalam saiz 250 ml dan 500 ml."
+      },
+      {
+        "label": "Minyak zaitun untuk roti dan cicahan",
+        "path": "blog/minyak-zaitun-untuk-roti-dan-cicahan",
+        "description": "Pinggan cicahan, apa yang masuk ke dalamnya, dan kenapa minyaknya dituang bukan dimasak."
+      },
+      {
+        "label": "Minyak zaitun untuk salad dan hidangan sejuk",
+        "path": "blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk",
+        "description": "Nisbah sos yang tidak berpecah, dan bahan masam mana sesuai dengan daun apa."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "kelebihan-extra-virgin-olive-oil-berbanding-gred-lain",
+    "slug": "kelebihan-extra-virgin-olive-oil-berbanding-gred-lain",
+    "seoTitle": "Kelebihan Extra Virgin Olive Oil Berbanding Gred Lain",
+    "metaTitle": "Kelebihan Extra Virgin Olive Oil: Apa Yang Tinggal",
+    "metaDescription": "Kelebihan gred tertinggi ialah apa yang masih tinggal dalam botol selepas gred lain membuangnya, dan bila kelebihan itu musnah.",
+    "focusKeyword": "kelebihan extra virgin olive oil",
+    "relatedKeywords": [
+      "extra virgin vs minyak zaitun ditapis",
+      "gred minyak zaitun",
+      "minyak zaitun dara maksud",
+      "keasidan minyak zaitun",
+      "polifenol minyak zaitun",
+      "minyak zaitun light maksud",
+      "kenapa extra virgin mahal",
+      "minyak zaitun pomace beza",
+      "rasa pahit minyak zaitun",
+      "minyak zaitun perahan sejuk"
+    ],
+    "category": "Memilih minyak zaitun",
+    "tags": [
+      "gred",
+      "extra virgin",
+      "polifenol",
+      "rasa"
+    ],
+    "h1": "Kelebihan Extra Virgin Olive Oil Ialah Apa Yang Masih Tinggal",
+    "excerpt": "Gred tertinggi tidak menambah apa-apa. Ia sekadar tidak membuang apa-apa. Itulah kelebihannya, dan itu juga sebab kelebihan itu boleh musnah dalam sekelip mata di dapur.",
+    "keyTakeaway": "Kelebihan extra virgin olive oil bukan sesuatu yang ditambah, tetapi sesuatu yang tidak dibuang. Aroma, rasa pahit, pedas di tekak dan sebatian polifenol masih ada kerana minyak itu tidak pernah ditapis. Haba tinggi, cahaya dan botol yang dibiar terbuka boleh menghapuskan kelebihan itu.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainHero",
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
+    },
+    "ogImage": "/og/blog-kelebihan-extra-virgin-olive-oil-berbanding-gred-lain.jpg",
+    "intro": [
+      "Orang selalu bertanya apa yang extra virgin tambahkan kepada minyak zaitun. Jawapannya tiada apa-apa. Kelebihannya datang daripada senarai perkara yang tidak dibuat kepadanya.",
+      "Sebab itu kelebihan ini rapuh. Ia bukan bahan tambah yang kekal dalam botol, tetapi sesuatu yang boleh hilang di rak kedai, di dalam almari, atau di dalam kuali."
+    ],
+    "sections": [
+      {
+        "heading": "Apa yang gred lain sudah buang?",
+        "id": "apa-yang-dibuang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gred tapisan dibuat daripada minyak yang tidak lulus ujian extra virgin, kemudian dibersihkan dengan haba dan kadangkala pelarut. Proses itu berjaya membuang kecacatan, tetapi ia turut membawa pergi aroma, warna dan sebahagian besar sebatian yang memberi rasa. Hasilnya minyak yang neutral dan hampir tiada bau."
+          },
+          {
+            "type": "p",
+            "text": "Jadi perbandingan sebenar bukan antara minyak baik dan minyak jahat. Ia antara minyak yang masih membawa isi buah dan minyak yang sudah dibersihkan sehingga senyap."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang masih tinggal dalam botol extra virgin?",
+        "id": "apa-yang-tinggal",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Aroma rumput atau buah, rasa pahit di lidah, dan pedas yang mencengkam di pangkal tekak. Ketiga-tiganya datang daripada sebatian polifenol yang hanya bertahan dalam minyak yang tidak ditapis, antaranya hidroksitirosol, tirosol dan oleokantal. Warna hijau atau keemasan pula datang daripada klorofil dan karotenoid."
+          },
+          {
+            "type": "p",
+            "text": "Yang berguna untuk pembeli: semua itu boleh dirasa. Tiada label yang boleh memberitahu anda perkara yang lidah boleh sahkan dalam dua saat."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      },
+      {
+        "heading": "Apa maksud had keasidan yang selalu disebut?",
+        "id": "had-keasidan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Keasidan bebas ialah ukuran makmal terhadap penguraian lemak dalam minyak, ditulis sebagai peratusan. Piawai perdagangan menetapkan had extra virgin pada 0.8 peratus, minyak dara pada 2.0 peratus, dan minyak tapisan pada 0.3 peratus. Angka itu had kategori, bukan ukuran rasa."
+          },
+          {
+            "type": "p",
+            "text": "Angka rendah tidak menjamin minyak yang sedap, tetapi angka tinggi menjamin minyak yang penat. Mana-mana angka yang dicetak pada label sepatutnya ada sijil ujian di belakangnya, dan berhak ditanya."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa perkataan ditapis sering disalah faham?",
+        "id": "perkataan-ditapis",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dalam kategori minyak zaitun, ditapis merujuk kepada gred tapisan, bukan kepada minyak yang ditapis halus daripada hampas. Banyak label menggunakan perkataan pure atau light untuk gred yang sama. Light pula bermaksud ringan pada rasa, bukan ringan pada kalori."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Gred",
+              "Apa yang tinggal",
+              "Sesuai untuk"
+            ],
+            "rows": [
+              [
+                "Extra virgin",
+                "Aroma, pahit, pedas, polifenol",
+                "Mentah, salad, cicahan, tumis"
+              ],
+              [
+                "Dara (virgin)",
+                "Sebahagian aroma dan rasa",
+                "Masakan harian"
+              ],
+              [
+                "Ditapis, pure atau light",
+                "Hampir tiada rasa atau bau",
+                "Goreng bersuhu tinggi"
+              ],
+              [
+                "Pomace atau hampas",
+                "Diekstrak daripada sisa perahan",
+                "Kegunaan pukal"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      },
+      {
+        "heading": "Bila kelebihan itu musnah?",
+        "id": "bila-kelebihan-musnah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga keadaan. Haba tinggi melebihi takat berasapnya pada kira-kira 190 hingga 210 darjah Celsius. Cahaya yang menembusi botol jernih di rak yang terang. Dan botol yang dibiarkan terbuka di sebelah dapur, di mana udara panas mengambil sedikit demi sedikit antara waktu masak."
+          },
+          {
+            "type": "p",
+            "text": "Yang ketiga paling kerap berlaku dan paling mudah dielakkan. Tutup botol setiap kali, simpan jauh dari dapur, dan habiskan dalam kira-kira dua bulan selepas dibuka."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      },
+      {
+        "heading": "Jadi bila gred lain lebih masuk akal?",
+        "id": "bila-gred-lain-sesuai",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Apabila haba tinggi dan jumlahnya banyak. Mengisi periuk untuk goreng dalam menggunakan minyak jauh lebih banyak daripada tumis, dan haba itu menghapuskan setiap kelebihan yang anda bayar lebih untuknya. Minyak tapisan bukan kompromi di situ, ia pilihan yang betul."
+          },
+          {
+            "type": "p",
+            "text": "Dapur yang menyimpan dua botol, satu neutral dan satu extra virgin, biasanya berbelanja lebih rendah sebulan berbanding satu botol yang cuba buat kedua-dua kerja."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      },
+      {
+        "heading": "Macam mana nak uji kelebihan itu di rumah?",
+        "id": "uji-di-rumah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dengan merasa, dan itu satu-satunya ujian yang benar-benar boleh dibuat tanpa makmal. Tuang sedikit ke dalam tangan atau gelas kecil, hangatkannya sebentar, hidu, kemudian hirup dan biarkan ia sampai ke pangkal tekak. Minyak yang masih membawa kelebihannya akan berbau hijau dan mencengkam sedikit."
+          },
+          {
+            "type": "p",
+            "text": "Minyak yang datar, berlilin atau berbau seperti krayon sudah kehilangan bahagian yang anda bayar lebih untuknya, walaupun label masih menulis extra virgin. Label bercakap tentang gred pada masa pembotolan; lidah bercakap tentang keadaan botol itu hari ini."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Ringkasnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kelebihan extra virgin ialah apa yang masih ada dalam botol, bukan apa yang ditambah. Jaga tiga perkara yang boleh menghapuskannya, guna ia untuk hidangan mentah dan haba sederhana, dan biarkan minyak tapisan yang murah menguruskan kuali api penuh."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Apa kelebihan extra virgin olive oil berbanding gred lain?",
+        "a": "Ia tidak pernah ditapis, jadi aroma, rasa pahit, pedas di tekak dan sebatian polifenol masih ada. Gred tapisan membuang semua itu bersama kecacatannya."
+      },
+      {
+        "q": "Minyak zaitun light lebih rendah kalori?",
+        "a": "Tidak. Light merujuk kepada rasa dan warna selepas ditapis. Semua minyak zaitun lebih kurang sama dari segi kalori, sama seperti minyak masak lain."
+      },
+      {
+        "q": "Adakah ditapis bermaksud minyak yang lebih bersih?",
+        "a": "Dalam kategori ini ditapis merujuk kepada gred tapisan, bukan penapisan halus. Ia minyak yang gagal ujian extra virgin dan dibersihkan secara industri selepas itu."
+      },
+      {
+        "q": "Apa maksud keasidan 0.8 peratus?",
+        "a": "Itu had kategori untuk gred extra virgin dalam piawai perdagangan. Ia mengukur penguraian lemak, bukan rasa, dan angka tinggi menandakan minyak yang sudah penat."
+      },
+      {
+        "q": "Boleh saya tahu tahap polifenol dengan merasa?",
+        "a": "Secara kasar boleh. Pahit yang jelas dan pedas di pangkal tekak menandakan ia masih ada. Ujian di rumah tidak memberi angka, hanya arah."
+      },
+      {
+        "q": "Kelebihan ini hilang kalau dimasak?",
+        "a": "Sebahagiannya. Tumis pada 140 hingga 180 darjah masih mengekalkan banyak. Goreng dalam pada sekitar 200 darjah menghapuskan hampir kesemuanya."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk pertama dari Palestin, tidak ditapis, dalam 250 ml dan 500 ml."
+      },
+      {
+        "label": "Apa itu minyak zaitun extra virgin dan gred lain",
+        "path": "blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain",
+        "description": "Tangga gred penuh, daripada extra virgin hingga hampas, dan apa maksud setiap perkataan pada label."
+      },
+      {
+        "label": "Rasa minyak zaitun pahit dan pedas",
+        "path": "blog/rasa-minyak-zaitun-pahit-dan-pedas",
+        "description": "Dari mana datangnya pahit dan pedas itu, dan kenapa ketiadaannya lebih membimbangkan."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "kelebihan-olive-oil-untuk-dapur-harian",
+    "slug": "kelebihan-olive-oil-untuk-dapur-harian",
+    "seoTitle": "Kelebihan Olive Oil di Dapur, dan Hadnya",
+    "metaTitle": "Kelebihan Olive Oil di Dapur, dan Hadnya",
+    "metaDescription": "Apa yang minyak zaitun benar-benar beri di dapur harian, di mana kelebihan itu terbazir, dan tiga had yang jarang disebut penjual.",
+    "focusKeyword": "kelebihan olive oil",
+    "relatedKeywords": [
+      "kelebihan minyak zaitun untuk masak",
+      "olive oil untuk dapur",
+      "kenapa guna minyak zaitun",
+      "minyak zaitun berbaloi ke",
+      "kelemahan minyak zaitun",
+      "minyak zaitun vs minyak masak biasa",
+      "rasa minyak zaitun dalam masakan",
+      "minyak zaitun untuk tumis",
+      "kos minyak zaitun setiap guna",
+      "minyak zaitun satu bahan"
+    ],
+    "category": "Memilih minyak zaitun",
+    "tags": [
+      "kelebihan",
+      "dapur",
+      "extra virgin",
+      "nilai"
+    ],
+    "h1": "Kelebihan Olive Oil di Dapur Harian, dan Di Mana Ia Berhenti",
+    "excerpt": "Kelebihan minyak zaitun paling ketara pada rasa dan pada apa yang tidak dibuat kepadanya. Ia juga ada tiga had sebenar, dan halaman yang hanya menyenaraikan kelebihan sedang menjual, bukan menerangkan.",
+    "keyTakeaway": "Kelebihan olive oil di dapur ialah rasa yang boleh dikesan, satu bahan sahaja dalam botol, dan ia serba boleh untuk hidangan mentah serta masakan panas sederhana. Hadnya pula tiga: harganya lebih tinggi, umurnya pendek selepas dibuka, dan ia bukan alat untuk kuali di api penuh.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressKelebihanOliveOilUntukDapurHarianHero",
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
+    },
+    "ogImage": "/og/blog-kelebihan-olive-oil-untuk-dapur-harian.jpg",
+    "intro": [
+      "Kebanyakan senarai kelebihan minyak zaitun sebenarnya senarai sebab untuk membeli. Halaman ini bercakap tentang apa yang gred ini buat di dapur, kemudian lajur yang selalunya hilang.",
+      "Ringkasnya: kelebihannya ialah tiada apa yang dibuang daripada minyak itu, dan hadnya datang daripada fakta yang sama."
+    ],
+    "sections": [
+      {
+        "heading": "Apa sebenarnya kelebihan gred extra virgin?",
+        "id": "kelebihan-gred",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin ialah gred, bukan perkataan pemasaran. Minyaknya keluar daripada buah secara mekanikal, tanpa haba dan tanpa pelarut, dan lulus had keasidan 0.8 peratus. Kerana tiada langkah pemprosesan, aroma, warna dan rasa asal masih ada dalam botol itu."
+          },
+          {
+            "type": "p",
+            "text": "Gred tapisan pula dibuat daripada minyak yang gagal ujian itu, kemudian dibersihkan secara industri. Tangga gred penuh ada dalam [apa itu minyak zaitun extra virgin](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Rasa itu benar-benar boleh dikesan?",
+        "id": "rasa-boleh-dikesan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ya, dan paling jelas apabila minyak itu tidak dipanaskan. Minyak zaitun dara yang segar berbau rumput atau buah, meninggalkan sedikit pahit di lidah dan pedas yang mencengkam di pangkal tekak. Minyak tapisan hampir tiada bau dan tiada kesan akhir langsung."
+          },
+          {
+            "type": "p",
+            "text": "Kelebihan itu nyata pada roti, dalam salad, atas ikan bakar atau dititis ke atas nasi panas. Ia hilang hampir sepenuhnya dalam kuali goreng yang dalam."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa satu bahan itu penting?",
+        "id": "satu-bahan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sebotol minyak zaitun dara mengandungi zaitun yang diperah dan tiada yang lain. Tiada campuran minyak yang tidak dinamakan, tiada sisa pelarut, tiada langkah menghilangkan bau, tiada bahan tambah. Untuk isi rumah yang membaca label, itu jarang berlaku dalam kategori minyak masak."
+          },
+          {
+            "type": "p",
+            "text": "Ia juga bermakna label boleh disemak. Gred, tarikh tuai dan satu negara asal sama ada tertulis pada botol atau tidak."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Sejauh mana ia serba boleh?",
+        "id": "serba-boleh",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Lebih daripada reputasinya. Minyak zaitun dara mula berasap pada kira-kira 190 hingga 210 darjah Celsius, sedangkan tumis biasa di rumah berlegar antara 140 hingga 180 darjah. Jadi satu botol boleh menampung salad, cicahan, panggang, bakar dan kebanyakan masakan di atas dapur."
+          },
+          {
+            "type": "p",
+            "text": "Yang di luar jangkauannya hanyalah kuali di api penuh dan goreng dalam minyak banyak. [Panduan dapur](/blog/minyak-zaitun-untuk-masak-panduan-dapur) mengupasnya hidangan demi hidangan."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Apa hadnya yang sebenar?",
+        "id": "kelebihan-dan-had",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga, dan tiada satu pun rahsia. Harganya beberapa kali ganda minyak masak tapisan. Umurnya pendek selepas dibuka, kira-kira dua bulan sebelum rasanya menjadi datar. Dan ia alat yang salah di atas takat berasapnya, kerana haba mengambil semula perkara yang anda bayar lebih untuknya."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kelebihan",
+              "Had yang datang bersamanya"
+            ],
+            "rows": [
+              [
+                "Rasa kekal kerana tiada apa yang ditapis keluar",
+                "Rasa itulah yang mula-mula diambil oleh haba"
+              ],
+              [
+                "Satu bahan, boleh disemak pada label",
+                "Tiada label membuktikan apa yang ada dalam botol"
+              ],
+              [
+                "Sesuai mentah dan pada haba sederhana",
+                "Bukan minyak untuk kuali api penuh atau goreng dalam"
+              ],
+              [
+                "Botol kecil kekal segar sepanjang guna",
+                "Kos seliter lebih tinggi berbanding botol besar"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Adakah ini hujah kesihatan?",
+        "id": "bukan-hujah-kesihatan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bukan pada halaman ini. Semua di atas tentang memasak dan tentang isi botol. Soal pemakanan ialah topik berasingan dengan perkataan yang perlu berhati-hati, dan ia sudah ada di [manfaat kesihatan minyak zaitun dara](/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia)."
+          },
+          {
+            "type": "p",
+            "text": "Minyak zaitun ialah makanan, bukan rawatan untuk apa-apa penyakit. Jika ada keadaan kesihatan yang didiagnosis, orang yang patut ditanya ialah doktor atau pakar diet berdaftar."
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          }
+        ]
+      },
+      {
+        "heading": "Bagaimana kelebihan itu boleh hilang di rumah?",
+        "id": "bagaimana-kelebihan-hilang",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Paling kerap bukan di dalam kuali, tetapi di dalam almari. Botol yang dibiarkan terbuka di sebelah dapur terdedah kepada udara panas dan cahaya sepanjang hari, dan kehilangan itu berlaku antara waktu masak, bukan semasa memasak. Ia cara paling biasa isi rumah membazir beza harga yang telah dibayar."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tutup penutup setiap kali menuang, bukan hanya selepas habis memasak",
+              "Simpan dalam almari jauh daripada dapur dan jauh daripada cahaya matahari",
+              "Habiskan dalam kira-kira dua bulan selepas dibuka",
+              "Nilai dengan bau; bau datar atau seperti krayon bermakna ia sudah lepas tempoh terbaiknya"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressKelebihanOliveOilUntukDapurHarianInline",
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
+          },
+          {
+            "type": "p",
+            "text": "Butiran penyimpanan penuh ada dalam [cara simpan minyak zaitun](/blog/cara-simpan-minyak-zaitun)."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Berbaloi atau tidak?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kalau kebanyakan penggunaan anda mentah atau pada haba sederhana, berbaloi, kerana di situlah setiap kelebihan di atas masih utuh apabila makanan sampai ke meja. Kalau kebanyakannya goreng dalam, beli minyak tapisan untuk periuk dan botol kecil minyak zaitun dara untuk pinggan."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Apa kelebihan utama olive oil di dapur?",
+        "a": "Rasa yang kekal kerana tiada apa yang ditapis keluar, label satu bahan yang boleh disemak, dan cukup tahan haba untuk menampung hidangan mentah serta kebanyakan masakan atas dapur."
+      },
+      {
+        "q": "Minyak zaitun dara lebih baik daripada minyak zaitun biasa?",
+        "a": "Untuk apa-apa yang mentah atau dimasak perlahan, ya, kerana penapisan membuang aroma dan pahitnya. Untuk goreng bersuhu tinggi, minyak tapisan buat kerja itu dengan kos jauh lebih rendah."
+      },
+      {
+        "q": "Berapa lama minyak zaitun tahan selepas dibuka?",
+        "a": "Kira-kira dua bulan untuk rasa, dan sehingga lapan belas bulan jika belum dibuka. Haba dan cahaya memendekkannya, jadi almari sebelah dapur tempat paling teruk."
+      },
+      {
+        "q": "Boleh guna minyak zaitun untuk tumis?",
+        "a": "Boleh. Tumis berlegar antara 140 hingga 180 darjah Celsius, selesa di bawah takat minyak zaitun dara mula berasap."
+      },
+      {
+        "q": "Rasa pedas di tekak itu tanda rosak?",
+        "a": "Bukan, itu tanda minyak masih membawa polifenol asalnya. Minyak yang datar dan berlilin tanpa kesan akhir itulah yang patut dicurigai."
+      },
+      {
+        "q": "Saiz mana lebih berbaloi?",
+        "a": "Saiz yang anda mampu habiskan dalam kira-kira dua bulan. Botol besar lebih murah seliter tetapi rugi jika satu pertiga terakhir sudah hilang rasa."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk pertama dari Palestin, dalam botol 250 ml dan 500 ml."
+      },
+      {
+        "label": "Manfaat kesihatan minyak zaitun dara",
+        "path": "blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia",
+        "description": "Soal pemakanan, ditulis dengan hujah antarabangsa dan batasannya dinyatakan dengan jelas."
+      },
+      {
+        "label": "Minyak zaitun vs minyak masak lain",
+        "path": "blog/minyak-zaitun-vs-minyak-masak-lain",
+        "description": "Perbandingan dengan minyak yang sudah ada di dapur Malaysia, dari segi rasa dan haba."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "maksud-olive-oil-dalam-bahasa-malaysia",
+    "slug": "maksud-olive-oil-dalam-bahasa-malaysia",
+    "seoTitle": "Maksud Olive Oil dalam Bahasa Malaysia: Minyak Zaitun",
+    "metaTitle": "Maksud Olive Oil dalam Bahasa Malaysia",
+    "metaDescription": "Olive oil bermaksud minyak zaitun. Jadual istilah label Inggeris dan padanan Melayunya, termasuk gred, perahan sejuk dan tarikh tuai.",
+    "focusKeyword": "maksud olive oil dalam bahasa malaysia",
+    "relatedKeywords": [
+      "olive oil dalam bahasa melayu",
+      "minyak zaitun bahasa inggeris",
+      "maksud extra virgin dalam bahasa melayu",
+      "cold pressed maksud",
+      "minyak zaitun dara maksud",
+      "zaitun dan zaiton ejaan",
+      "istilah label minyak zaitun",
+      "harvest date maksud",
+      "refined olive oil bahasa melayu",
+      "pomace maksud melayu"
+    ],
+    "category": "Asas minyak zaitun",
+    "tags": [
+      "istilah",
+      "label",
+      "bahasa",
+      "gred"
+    ],
+    "h1": "Maksud Olive Oil dalam Bahasa Malaysia dan Istilah Label Lain",
+    "excerpt": "Olive oil ialah minyak zaitun. Selebihnya pada label pula bercampur antara dua bahasa, dan beberapa terjemahan yang biasa digunakan sebenarnya salah.",
+    "keyTakeaway": "Olive oil bermaksud minyak zaitun dalam bahasa Malaysia. Zaitun ialah buahnya dan minyak zaitun ialah minyaknya. Extra virgin ialah minyak zaitun dara, cold pressed ialah perahan sejuk, dan refined atau pure ialah gred ditapis. Ejaan zaiton yang muncul dalam carian merujuk kepada perkara yang sama.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressMaksudOliveOilDalamBahasaMalaysiaHero",
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
+    },
+    "ogImage": "/og/blog-maksud-olive-oil-dalam-bahasa-malaysia.jpg",
+    "intro": [
+      "Label botol ditulis dalam bahasa Inggeris, perbualan di kedai dalam bahasa Melayu, dan carian di telefon bercampur kedua-duanya. Halaman ini jambatan antara ketiga-tiganya.",
+      "Beberapa terjemahan yang biasa dipakai sebenarnya salah, dan satu daripadanya boleh menyebabkan pembeli memilih gred yang bukan yang dia mahu."
+    ],
+    "sections": [
+      {
+        "heading": "Olive oil bermaksud apa?",
+        "id": "maksud-asas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil bermaksud minyak zaitun. Zaitun ialah nama buahnya dan minyak zaitun ialah minyak yang diperah daripada buah itu. Kedua-dua perkataan digunakan di Malaysia, kerap dalam ayat yang sama, dan tiada satu pun lebih betul daripada yang lain."
+          },
+          {
+            "type": "p",
+            "text": "Ejaan zaiton juga muncul dalam carian dan pada sesetengah pembungkusan. Ia merujuk kepada perkara yang sama; cuma cara ejaan yang berbeza sahaja."
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Apa padanan istilah gred?",
+        "id": "istilah-gred",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Di sinilah kebanyakan kekeliruan berlaku, kerana perkataan Inggeris pada label bukan penerangan biasa tetapi nama gred yang ditetapkan piawai perdagangan. Extra virgin ialah gred tertinggi dan padanan Melayunya minyak zaitun dara. Pure dan light pula bukan pujian; kedua-duanya merujuk kepada gred ditapis."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Istilah label",
+              "Padanan Melayu",
+              "Maksudnya"
+            ],
+            "rows": [
+              [
+                "Extra virgin olive oil",
+                "Minyak zaitun dara",
+                "Gred tertinggi, tidak ditapis"
+              ],
+              [
+                "Virgin olive oil",
+                "Minyak zaitun dara",
+                "Diperah mekanikal, gred kedua"
+              ],
+              [
+                "Refined, pure atau light",
+                "Ditapis",
+                "Minyak yang gagal ujian, dibersihkan"
+              ],
+              [
+                "Pomace olive oil",
+                "Minyak hampas zaitun",
+                "Diekstrak daripada sisa perahan"
+              ],
+              [
+                "Cold pressed",
+                "Perahan sejuk",
+                "Diperah tanpa haba ditambah"
+              ],
+              [
+                "First cold press",
+                "Perahan sejuk pertama",
+                "Satu perahan mekanikal sahaja"
+              ],
+              [
+                "Harvest date",
+                "Tarikh tuai",
+                "Bila buah itu dituai"
+              ],
+              [
+                "Acidity",
+                "Keasidan",
+                "Ukuran makmal penguraian lemak"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa sejuk-tekan salah?",
+        "id": "sejuk-tekan-salah",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kerana ia terjemahan perkataan demi perkataan yang tidak wujud dalam bahasa Melayu sebenar. Cold pressed diterjemah dengan betul sebagai perahan sejuk, kerana proses itu memerah, bukan menekan. Sejuk-tekan muncul dalam terjemahan mesin dan pada beberapa penyenaraian dalam talian."
+          },
+          {
+            "type": "p",
+            "text": "Kalau sebuah penyenaraian menggunakan istilah itu, ia petunjuk kecil bahawa penerangan produk tidak ditulis oleh orang yang mengenali kategori ini."
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa perkataan ditapis paling mengelirukan?",
+        "id": "perkataan-ditapis",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kerana dalam bahasa harian ditapis membawa maksud yang baik, iaitu dibersihkan daripada kotoran. Dalam kategori minyak zaitun ia nama gred, dan gred itu dibuat daripada minyak yang gagal ujian extra virgin kemudian dibersihkan dengan haba dan kadangkala pelarut."
+          },
+          {
+            "type": "p",
+            "text": "Jadi sebotol yang dilabel pure bukan lebih tulen daripada extra virgin. Ia lebih neutral, kerana rasanya sudah dibuang. Tangga gred penuh ada dalam [apa itu minyak zaitun extra virgin](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Istilah mana yang paling berguna semasa membeli?",
+        "id": "istilah-paling-berguna",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga sahaja. Perkataan extra virgin olive oil yang ditulis penuh, bukan versi yang dipendekkan atau dilembutkan. Satu tarikh, dan tarikh tuai lebih berguna daripada tarikh luput. Dan satu negara asal yang dinamakan, bukan ayat samar tentang tempat ia dibungkus."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Extra virgin olive oil ditulis penuh, bukan olive oil sahaja",
+              "Tarikh tuai lebih memberitahu daripada tarikh luput",
+              "Satu negara asal yang dinamakan, bukan dibungkus di",
+              "Kaca gelap, kerana cahaya menjejaskan rasa"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Apa maksud istilah rasa yang muncul pada label?",
+        "id": "istilah-rasa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Label dan penerangan produk kerap menggunakan perkataan rasa yang bunyinya seperti aduan tetapi sebenarnya pujian. Bitter bermaksud pahit, dan itu tanda baik. Pungent bermaksud pedas atau mencengkam di pangkal tekak, juga tanda baik. Fruity bermaksud berbau buah, iaitu aroma zaitun segar itu sendiri."
+          },
+          {
+            "type": "p",
+            "text": "Ketiga-tiganya datang daripada sebatian polifenol yang hanya bertahan dalam minyak yang tidak ditapis. Minyak yang langsung tiada ketiga-tiga sifat ini biasanya minyak yang sudah lama atau sudah ditapis. [Rasa minyak zaitun pahit dan pedas](/blog/rasa-minyak-zaitun-pahit-dan-pedas) mengupasnya lebih lanjut."
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa istilah ini penting semasa membeli dalam talian?",
+        "id": "istilah-dalam-talian",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kerana penyenaraian dalam talian ditulis oleh banyak penjual berlainan, dan sebahagiannya menterjemah label dengan mesin. Penyenaraian yang menulis minyak zaitun tulen sedangkan gambar botol menunjukkan pure olive oil sedang bercakap tentang dua perkara berbeza, dan pembeli yang mengenali istilah akan perasan percanggahan itu."
+          },
+          {
+            "type": "p",
+            "text": "Jadi bacalah gambar label, bukan tajuk penyenaraian. Tajuk ditulis untuk carian; label dicetak oleh pengeluar, dan hanya satu daripada dua itu terikat kepada piawai."
+          },
+          {
+            "type": "image",
+            "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
+          },
+          {
+            "type": "p",
+            "text": "Perkara yang sama berlaku pada perkataan original, yang muncul dalam ribuan penyenaraian tetapi bukan gred dan bukan piawai kualiti. Ia dakwaan tentang siapa yang menjual botol itu, bukan tentang apa yang ada di dalamnya, dan kedua-dua soalan itu perlu dijawab berasingan."
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Langkah seterusnya",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Setelah istilahnya jelas, selebihnya lebih mudah dibaca di rak. [Panduan lengkap minyak zaitun](/blog/minyak-zaitun-panduan-lengkap) mengumpulkan soalan asas yang lain dalam satu halaman, daripada gred hinggalah cara simpan."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Olive oil dalam bahasa Malaysia apa?",
+        "a": "Minyak zaitun. Zaitun ialah nama buahnya dan minyak zaitun ialah minyak yang diperah daripada buah itu. Kedua-dua istilah digunakan di Malaysia."
+      },
+      {
+        "q": "Apa maksud extra virgin dalam bahasa Melayu?",
+        "a": "Minyak zaitun dara, iaitu gred tertinggi. Ia diperah secara mekanikal tanpa haba dan tanpa pelarut, dan tidak pernah melalui proses penapisan."
+      },
+      {
+        "q": "Zaiton dan zaitun sama?",
+        "a": "Sama. Zaiton ialah ejaan lain yang muncul dalam carian dan pada sesetengah pembungkusan. Kedua-duanya merujuk kepada buah dan minyak yang sama."
+      },
+      {
+        "q": "Kenapa sejuk-tekan tidak digunakan?",
+        "a": "Kerana ia terjemahan perkataan demi perkataan yang tidak wujud dalam bahasa Melayu sebenar. Istilah yang betul untuk cold pressed ialah perahan sejuk."
+      },
+      {
+        "q": "Minyak zaitun pure lebih tulen?",
+        "a": "Tidak. Pure ialah nama gred ditapis, bukan pujian. Ia lebih neutral kerana rasanya sudah dibuang semasa proses pembersihan."
+      },
+      {
+        "q": "Tarikh mana yang patut dicari pada botol?",
+        "a": "Tarikh tuai, jika ada. Ia memberitahu umur sebenar minyak itu, sedangkan tarikh luput hanya memberitahu bila penjual mahu botol itu habis."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk pertama dari Palestin, dalam 250 ml dan 500 ml."
+      },
+      {
+        "label": "Minyak zaitun: panduan lengkap",
+        "path": "blog/minyak-zaitun-panduan-lengkap",
+        "description": "Enam soalan asas dijawab ringkas, dengan pautan ke bacaan penuh bagi setiap satu."
+      },
+      {
+        "label": "Apa itu minyak zaitun extra virgin dan gred lain",
+        "path": "blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain",
+        "description": "Tangga gred penuh dan apa yang dibuang pada setiap anak tangga."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "minyak-zaitun-original-cara-pastikan",
+    "slug": "minyak-zaitun-original-cara-pastikan",
+    "seoTitle": "Minyak Zaitun Original: Apa Perkataan Itu Janjikan",
+    "metaTitle": "Minyak Zaitun Original: Apa Perkataan Itu Janjikan",
+    "metaDescription": "Perkataan original dalam penyenaraian Shopee dan TikTok bukan gred dan bukan piawai. Apa yang boleh disahkan, dan apa yang tidak boleh.",
+    "focusKeyword": "minyak zaitun original",
+    "relatedKeywords": [
+      "minyak zaitun original shopee",
+      "minyak zaitun asli atau tiruan",
+      "penjual rasmi minyak zaitun",
+      "cara semak penjual minyak zaitun",
+      "minyak zaitun tiktok shop",
+      "meterai botol minyak zaitun",
+      "tarikh tuai minyak zaitun",
+      "negara asal minyak zaitun",
+      "pengedar rasmi malaysia",
+      "beli minyak zaitun dengan selamat"
+    ],
+    "category": "Membeli minyak zaitun",
+    "tags": [
+      "original",
+      "penyenaraian",
+      "pengedar",
+      "pengesahan"
+    ],
+    "h1": "Minyak Zaitun Original: Apa Perkataan Itu Janjikan, dan Apa Tidak",
+    "excerpt": "Original ialah perkataan penyenaraian, bukan gred dan bukan piawai. Ini tentang apa yang boleh disahkan sebelum bayar, dan apa yang tidak boleh disahkan daripada sekeping gambar.",
+    "keyTakeaway": "Dalam penyenaraian marketplace, original biasanya bermaksud bukan tiruan penjual semula. Ia bukan gred, bukan piawai kualiti, dan bukan jaminan kesegaran. Yang boleh disahkan ialah siapa penjual rasmi, ada atau tiada kedai fizikal, meterai botol, tarikh tuai dan negara asal yang dinamakan.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunOriginalCaraPastikanHero",
+      "alt": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-original-cara-pastikan.jpg",
+    "intro": [
+      "Taip minyak zaitun original ke dalam mana-mana marketplace dan ratusan penyenaraian akan menggunakan perkataan itu. Ia jarang bermaksud perkara yang pembeli fikirkan.",
+      "Halaman ini tentang apa yang perkataan itu janjikan, apa yang boleh disahkan sebelum bayar, dan di mana pengesahan itu berhenti."
+    ],
+    "sections": [
+      {
+        "heading": "Apa maksud original dalam penyenaraian?",
+        "id": "maksud-original",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dalam bahasa marketplace, original biasanya bermaksud bukan tiruan dan bukan barang penjual semula yang tidak dibenarkan. Ia dakwaan tentang rantaian bekalan, bukan tentang isi botol. Tiada badan yang mengeluarkan gred bernama original, dan tiada ujian makmal yang menghasilkannya."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu dua penyenaraian boleh sama-sama menulis original sedangkan satu daripadanya menjual botol yang sudah dua tahun di gudang. Perkataan itu tidak menyentuh kesegaran langsung."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Apa bezanya dengan tulen dan palsu?",
+        "id": "beza-tulen-dan-palsu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga perkataan berlainan yang selalu dicampur aduk. Tulen bercakap tentang gred dan ketiadaan campuran. Palsu bercakap tentang penipuan pada isi botol. Original pula bercakap tentang siapa yang menjualnya kepada anda. Satu penyenaraian boleh original tetapi menjual gred yang lebih rendah daripada sangkaan anda."
+          },
+          {
+            "type": "p",
+            "text": "Maksud tulen dikupas dalam [maksud minyak zaitun tulen](/blog/maksud-minyak-zaitun-tulen), dan tanda-tanda penipuan dalam [cara kenal minyak zaitun palsu](/blog/cara-kenal-minyak-zaitun-palsu)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang boleh disahkan sebelum bayar?",
+        "id": "boleh-disahkan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Lebih banyak daripada yang disangka, dan semuanya boleh dibuat dalam beberapa minit. Siapa penjual rasmi jenama itu di Malaysia. Ada atau tiada kedai fizikal yang boleh didatangi. Sama ada penyenaraian menunjukkan meterai penutup, tarikh, gred penuh dan satu negara asal yang dinamakan."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Boleh disahkan",
+              "Tidak boleh disahkan dari penyenaraian"
+            ],
+            "rows": [
+              [
+                "Nama penjual rasmi dan alamat kedai fizikal",
+                "Berapa lama botol itu berada di gudang"
+              ],
+              [
+                "Meterai penutup masih utuh apabila sampai",
+                "Suhu semasa penghantaran dan penyimpanan"
+              ],
+              [
+                "Gred penuh tertulis pada label",
+                "Rasa sebenar minyak dalam botol itu"
+              ],
+              [
+                "Satu negara asal yang dinamakan",
+                "Ladang atau kilang perahan yang tepat"
+              ],
+              [
+                "Nombor yang menjawab jika ada masalah",
+                "Sama ada gambar itu gambar stok semasa"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang tidak boleh disahkan daripada gambar?",
+        "id": "tidak-boleh-disahkan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Segala yang penting tentang rasa. Umur minyak, suhu gudang, berapa lama ia berdiri di bawah lampu, dan sama ada gambar penyenaraian itu gambar stok semasa atau gambar pemasaran berumur tiga tahun. Tiada tangkapan skrin yang menjawab satu pun daripadanya."
+          },
+          {
+            "type": "p",
+            "text": "Sebab itu pembelian dalam talian bergantung kepada akauntabiliti penjual, bukan kepada penyenaraian. [Beli minyak zaitun online](/blog/beli-minyak-zaitun-online-di-malaysia) mengupas bahagian penghantaran dan pembungkusan."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Apa rupa rantaian yang boleh dijejaki?",
+        "id": "rantaian-boleh-dijejaki",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Setiap sambungan boleh dinamakan, dan di hujungnya ada orang yang boleh ditemui. Bukan satu akaun marketplace tanpa muka, tetapi satu premis dengan alamat. Ujian ringkasnya: berapa banyak sambungan yang penjual boleh namakan apabila ditanya, dan berapa cepat mereka menjawab."
+          },
+          {
+            "type": "p",
+            "text": "Arabian Village satu contoh rantaian sebegitu: ladang zaitun Palestin, dituai dengan tangan, diperah dalam beberapa jam, dan dijual di Malaysia melalui Berkat Madinah Store dengan cawangan di Ampang Jaya dan Batu Caves serta kaunter Shopee dan TikTok Shop milik penjual yang sama."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Soalan apa yang patut ditanya penjual?",
+        "id": "soalan-kepada-penjual",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Empat soalan pendek yang jawapannya lebih bermakna daripada perkataan original itu sendiri. Penjual yang benar-benar rasmi menjawabnya tanpa teragak, dan penjual semula yang tidak dibenarkan biasanya tidak boleh menjawab yang kedua dan keempat."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Siapa pengedar rasmi jenama ini di Malaysia, dan adakah anda mereka?",
+              "Bila stok ini sampai ke gudang anda?",
+              "Ada tarikh tuai atau tarikh pengeluaran pada botol?",
+              "Ada kedai fizikal yang saya boleh datang kalau botol sampai pecah?"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang berlaku selepas bungkusan sampai?",
+        "id": "selepas-sampai",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Di situlah pengesahan sebenar bermula, kerana buat kali pertama anda memegang botol itu. Periksa meterai penutup masih utuh, baca gred yang tertulis penuh, cari tarikh, dan hidu minyaknya. Kalau meterai sudah pecah sebelum anda membukanya, itu sebab yang munasabah untuk menolak penghantaran."
+          },
+          {
+            "type": "p",
+            "text": "Ujian terakhir ialah rasa. Minyak zaitun dara yang sihat berbau hijau, terasa sedikit pahit, dan mencengkam di pangkal tekak. Minyak yang datar atau berbau seperti krayon sudah memberitahu apa yang perlu diketahui, tanpa mengira apa yang ditulis pada penyenaraian."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunOriginalCaraPastikanInline",
+            "alt": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Cara guna perkataan itu",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Anggap original sebagai permulaan perbualan, bukan jawapan. Sahkan penjual, sahkan meterai, sahkan tarikh dan negara asal, dan tanya empat soalan di atas. Kalau penjual boleh menjawab kesemuanya, perkataan itu baru bermakna."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Apa maksud minyak zaitun original?",
+        "a": "Dalam penyenaraian marketplace ia biasanya bermaksud bukan tiruan atau bukan barang penjual semula yang tidak dibenarkan. Ia bukan gred dan bukan piawai kualiti."
+      },
+      {
+        "q": "Original sama dengan tulen?",
+        "a": "Tidak. Tulen bercakap tentang gred dan ketiadaan campuran dalam botol. Original bercakap tentang siapa yang menjual botol itu kepada anda."
+      },
+      {
+        "q": "Macam mana nak tahu penjual itu rasmi?",
+        "a": "Tanya siapa pengedar rasmi jenama itu di Malaysia dan sama ada mereka mempunyai kedai fizikal. Penjual rasmi menjawab kedua-duanya tanpa teragak."
+      },
+      {
+        "q": "Meterai botol penting?",
+        "a": "Penting apabila bungkusan sampai. Meterai penutup yang sudah pecah sebelum anda membukanya sebab yang munasabah untuk menolak penghantaran itu."
+      },
+      {
+        "q": "Boleh percaya gambar dalam penyenaraian?",
+        "a": "Gambar tidak memberitahu umur minyak, suhu gudang atau sama ada ia stok semasa. Ia sekadar menunjukkan rupa botol, bukan keadaan isinya."
+      },
+      {
+        "q": "Berapa cawangan Berkat Madinah Store?",
+        "a": "Dua di Selangor, di Ampang Jaya dan Batu Caves, dengan Batu Caves yang lebih besar. Kedua-duanya buka 8:00 pagi hingga 12:00 tengah malam setiap hari."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk pertama dari Palestin, dengan satu pengedar rasmi di Malaysia."
+      },
+      {
+        "label": "Cara kenal minyak zaitun palsu",
+        "path": "blog/cara-kenal-minyak-zaitun-palsu",
+        "description": "Tanda-tanda penipuan pada isi botol, dan ujian mana yang benar-benar berfungsi di rumah."
+      },
+      {
+        "label": "Beli minyak zaitun online di Malaysia",
+        "path": "blog/beli-minyak-zaitun-online-di-malaysia",
+        "description": "Penyenaraian, pembungkusan dan risiko penghantaran dalam cuaca panas."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 8 ---------------- */
+  {
+    "id": "minyak-zaitun-panduan-lengkap",
+    "slug": "minyak-zaitun-panduan-lengkap",
+    "seoTitle": "Minyak Zaitun: Panduan Lengkap untuk Dapur Malaysia",
+    "metaTitle": "Minyak Zaitun: Panduan Lengkap untuk Dapur Malaysia",
+    "metaDescription": "Enam soalan asas tentang minyak zaitun, dijawab ringkas, dengan pautan ke bacaan penuh bagi setiap satu. Peta, bukan syarahan.",
+    "focusKeyword": "minyak zaitun",
+    "relatedKeywords": [
+      "apa itu minyak zaitun",
+      "gred minyak zaitun",
+      "minyak zaitun untuk masak",
+      "cara simpan minyak zaitun",
+      "beli minyak zaitun di malaysia",
+      "rasa minyak zaitun",
+      "minyak zaitun extra virgin",
+      "minyak zaitun dari mana",
+      "harga minyak zaitun",
+      "minyak zaitun halal"
+    ],
+    "category": "Asas minyak zaitun",
+    "tags": [
+      "panduan",
+      "asas",
+      "indeks",
+      "Malaysia"
+    ],
+    "h1": "Minyak Zaitun: Enam Soalan Asas dan Ke Mana Nak Baca Lanjut",
+    "excerpt": "Satu halaman untuk sesiapa yang baru bermula: apa itu minyak zaitun, gredanya, cara guna, cara simpan, di mana beli, dan kenapa rasanya begitu. Setiap jawapan ringkas, dengan pautan ke bacaan penuh.",
+    "keyTakeaway": "Minyak zaitun ialah minyak yang diperah daripada buah zaitun. Gred tertinggi, extra virgin, diperah secara mekanikal tanpa haba dan tanpa pelarut. Di Malaysia semuanya diimport, jadi tarikh tuai dan cara simpan lebih penting di sini berbanding di negara pengeluar.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressMinyakZaitunPanduanLengkapHero",
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
+    },
+    "ogImage": "/og/blog-minyak-zaitun-panduan-lengkap.jpg",
+    "intro": [
+      "Halaman ini peta, bukan syarahan. Enam soalan yang paling kerap ditanya tentang minyak zaitun, setiap satu dijawab dalam beberapa ayat, dengan pautan ke artikel yang mengupasnya sepenuhnya.",
+      "Kalau anda tahu soalan mana yang anda ada, terus ke bahagian itu."
+    ],
+    "sections": [
+      {
+        "heading": "Apa itu minyak zaitun dan dari mana ia datang?",
+        "id": "apa-dan-dari-mana",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minyak zaitun ialah minyak yang diperah daripada buah pokok zaitun, sama seperti jus diperah daripada buah lain. Zaitun ialah buahnya; minyak zaitun ialah minyaknya. Buah itu dituai, dikisar menjadi pes, dan minyaknya diasingkan secara mekanikal tanpa haba jika ia hendak dipanggil perahan sejuk."
+          },
+          {
+            "type": "p",
+            "text": "Malaysia tidak menanam zaitun, jadi setiap botol di sini diimport. Kisah dari ladang ke botol ada dalam [minyak zaitun Palestin](/blog/minyak-zaitun-palestin-dari-ladang-ke-botol), dan sebab kategori ini membesar di sini dalam [kenapa minyak zaitun semakin popular](/blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Apa beza gred pada label?",
+        "id": "gred",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin ialah gred tertinggi: diperah secara mekanikal, tanpa haba dan tanpa pelarut, dan lulus had keasidan 0.8 peratus. Gred ditapis, yang sering dilabel pure atau light, dibuat daripada minyak yang gagal ujian itu kemudian dibersihkan. Pomace pula diekstrak daripada hampas perahan."
+          },
+          {
+            "type": "p",
+            "text": "Perbezaan itu terasa di lidah, bukan hanya pada harga. Tangga gred penuh ada dalam [apa itu minyak zaitun extra virgin](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Boleh guna untuk masak Melayu?",
+        "id": "guna-di-dapur",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Boleh, untuk kebanyakan masakan. Minyak zaitun dara mula berasap pada kira-kira 190 hingga 210 darjah Celsius, sedangkan tumis biasa di rumah berlegar antara 140 hingga 180 darjah. Yang di luar jangkauannya hanyalah kuali di api penuh dan goreng dalam minyak banyak."
+          },
+          {
+            "type": "p",
+            "text": "Panduan hidangan demi hidangan ada dalam [minyak zaitun untuk masak](/blog/minyak-zaitun-untuk-masak-panduan-dapur), dan penggunaan mentah dalam [salad dan hidangan sejuk](/blog/minyak-zaitun-untuk-salad-dan-hidangan-sejuk)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Macam mana nak simpan?",
+        "id": "simpan",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Jauh dari haba dan cahaya, dengan penutup rapat. Botol yang belum dibuka tahan sehingga kira-kira lapan belas bulan; selepas dibuka, rasanya bertahan kira-kira dua bulan. Almari sebelah dapur ialah tempat paling teruk kerana ia panas sepanjang hari."
+          },
+          {
+            "type": "p",
+            "text": "Peti sejuk tidak perlu, tetapi juga bukan bahaya: minyak sejuk berkabus dan memekat, kemudian jernih semula pada suhu bilik tanpa kehilangan apa-apa. Butirannya dalam [cara simpan minyak zaitun](/blog/cara-simpan-minyak-zaitun)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Di mana nak beli dan berapa harganya?",
+        "id": "beli-dan-harga",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Tiga tempat: rak pasar raya, kedai runcit Arab, dan penyenaraian dalam talian. Kedai runcit Arab selalunya mempunyai pusing ganti stok lebih laju kerana minyak zaitun barang teras di situ, jadi botolnya cenderung lebih segar berbanding rak pasar raya yang terang dan suam."
+          },
+          {
+            "type": "p",
+            "text": "Untuk harga dan cara mengira seliter, lihat [harga minyak zaitun di Malaysia](/blog/harga-minyak-zaitun-di-malaysia). Untuk lokasi di Lembah Klang, lihat [di mana beli di Kuala Lumpur](/blog/di-mana-beli-minyak-zaitun-di-kuala-lumpur)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Kenapa rasanya pahit dan pedas?",
+        "id": "kenapa-rasa-begitu",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kerana sebatian polifenol yang masih tinggal dalam minyak yang tidak ditapis. Rasa pahit di lidah dan pedas yang mencengkam di pangkal tekak ialah tanda minyak itu masih hidup, bukan tanda ia rosak. Minyak yang datar dan berlilin tanpa kesan akhir itulah yang patut dicurigai."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Soalan",
+              "Jawapan ringkas",
+              "Baca lanjut"
+            ],
+            "rows": [
+              [
+                "Apa itu minyak zaitun?",
+                "Minyak yang diperah daripada buah zaitun",
+                "Minyak zaitun Palestin"
+              ],
+              [
+                "Gred mana yang terbaik?",
+                "Extra virgin untuk mentah dan haba sederhana",
+                "Apa itu minyak zaitun extra virgin"
+              ],
+              [
+                "Boleh masak dengannya?",
+                "Boleh, di bawah 190 darjah Celsius",
+                "Minyak zaitun untuk masak"
+              ],
+              [
+                "Perlu masuk peti sejuk?",
+                "Tidak perlu, dan juga bukan bahaya",
+                "Cara simpan minyak zaitun"
+              ],
+              [
+                "Halal atau tidak?",
+                "Ia buah yang diperah, tanpa bahan haiwan",
+                "Status halal minyak zaitun"
+              ],
+              [
+                "Macam mana kenal yang asli?",
+                "Gred, tarikh, negara asal, dan rasa",
+                "Cara memilih minyak zaitun dara asli"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      },
+      {
+        "heading": "Apa yang perlu disemak sebelum bayar?",
+        "id": "sebelum-bayar",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Empat perkara, dan semuanya mengambil masa kurang seminit di hadapan rak. Perkataan extra virgin olive oil ditulis penuh, bukan versi yang dipendekkan. Satu tarikh, dan tarikh tuai lebih berguna daripada tarikh luput. Satu negara asal yang dinamakan. Dan botol yang tidak berdiri lama di bawah lampu rak yang suam."
+          },
+          {
+            "type": "p",
+            "text": "Ujian penuh, termasuk ujian rasa di rumah, ada dalam [cara memilih minyak zaitun dara asli](/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia). Status halal pula dikupas dalam [status halal minyak zaitun](/blog/status-halal-minyak-zaitun)."
+          },
+          {
+            "type": "image",
+            "src": "pressMinyakZaitunPanduanLengkapInline",
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Mula dari mana",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Kalau ini botol pertama anda, mulakan dengan gred dan rasa: baca [apa itu extra virgin](/blog/apa-itu-minyak-zaitun-extra-virgin-dan-gred-lain), kemudian [rasa minyak zaitun](/blog/rasa-minyak-zaitun-pahit-dan-pedas). Selebihnya dalam jadual di atas boleh ditunggu sehingga anda memerlukannya."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Apa maksud minyak zaitun dara?",
+        "a": "Itu istilah Melayu untuk virgin, iaitu minyak yang diperah secara mekanikal tanpa penapisan. Extra virgin ialah gred tertinggi dalam kumpulan itu."
+      },
+      {
+        "q": "Minyak zaitun halal?",
+        "a": "Ia buah yang diperah, tanpa bahan berasaskan haiwan dan tanpa alkohol. Butiran tentang status dan apa yang perlu disemak ada pada artikel halal."
+      },
+      {
+        "q": "Minyak zaitun boleh untuk goreng?",
+        "a": "Untuk goreng cetek pada haba sederhana, boleh. Untuk goreng dalam minyak banyak, minyak tapisan yang murah pilihan yang lebih masuk akal."
+      },
+      {
+        "q": "Kenapa minyak zaitun mahal di Malaysia?",
+        "a": "Semuanya diimport, jadi tambang, duti, gred dan tahun tuai semuanya duduk dalam harga rak. Artikel harga mengupas setiap bahagiannya."
+      },
+      {
+        "q": "Berapa lama minyak zaitun boleh disimpan?",
+        "a": "Sehingga kira-kira lapan belas bulan jika belum dibuka, dan kira-kira dua bulan untuk rasa selepas dibuka. Bau ujian yang paling boleh dipercayai."
+      },
+      {
+        "q": "Kenapa minyak saya jadi keruh?",
+        "a": "Biasanya kerana sejuk. Kabus itu perubahan fizikal, bukan tanda rosak, dan ia jernih semula dalam kira-kira sejam pada suhu bilik."
+      }
+    ],
+    "related": [
+      {
+        "label": "Minyak zaitun Arabian Village",
+        "path": "products",
+        "description": "Minyak zaitun dara perahan sejuk pertama dari Palestin, dalam 250 ml dan 500 ml."
+      },
+      {
+        "label": "Mengapa minyak zaitun semakin popular di Malaysia",
+        "path": "blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia",
+        "description": "Apa yang berubah dalam pasaran Malaysia, dan kenapa kategori ini membesar di sini."
+      },
+      {
+        "label": "Minyak zaitun untuk masak: panduan dapur",
+        "path": "blog/minyak-zaitun-untuk-masak-panduan-dapur",
+        "description": "Hidangan demi hidangan, di mana minyak zaitun sesuai dalam dapur Malaysia."
+      },
+      {
+        "label": "Cara simpan minyak zaitun",
+        "path": "blog/cara-simpan-minyak-zaitun",
+        "description": "Haba, cahaya dan penutup botol, dan kenapa peti sejuk bukan jawapannya."
       }
     ]
   },
