@@ -224,32 +224,63 @@ def build_plan(manifest):
     for entry in manifest:
         per_lang[entry["lang"]].append(entry)
 
+    def take(candidates, slot, lang, previous):
+        """First candidate frame with a distinct box left for this (lang, slot).
+
+        The rotation below is a *preference*, not an allocation. Frames do not hold equal
+        numbers of crops — measured hero-legal boxes are 153 / 142 / 132 / 21 / 21 / 7 — so a
+        strict `i % 6` demands seven heroes from `journey-06-testing.webp`, which has exactly
+        seven, and then aborts the whole run while 400+ boxes sit unused on the wide frames.
+        That put a hard ceiling of 46 articles per language on a 476-box pool.
+
+        Falling through to the next frame that still has a box removes the ceiling without
+        cutting a single extra crop from an exhausted frame — it cuts *fewer*. It is also
+        strictly additive: any article the old allocator could place gets the identical frame
+        and the identical box, because the cursors advance in the same article order.
+        """
+        for src in candidates:
+            if src == previous and len(candidates) > 1:
+                continue        # never two neighbours on one frame in a language
+            pools.setdefault((src, slot), variants(src, slot))
+            pool = pools[(src, slot)]
+            key = (lang, src, slot)
+            # Scoped by (lang, slot), not just lang: a hero crop and an inline crop of the
+            # same source never collide on disk even when the box is identical, because they
+            # resize to different output dimensions. Sharing one budget across both slots
+            # wasted crops and caused a false "pool exhausted" failure.
+            tkey = (lang, slot)
+            while cursor[key] < len(pool):
+                z, cx, cy, b = pool[cursor[key]]
+                cursor[key] += 1
+                if b in taken_boxes[tkey]:
+                    continue
+                taken_boxes[tkey].add(b)
+                return src, z, cx, cy
+        return None
+
     for lang, entries in per_lang.items():
+        prev_hero = prev_inline = None
         for i, entry in enumerate(entries):
             aid = entry["id"]
-            hero_src = HERO_FRAMES[i % len(HERO_FRAMES)]
-            inline_src = INLINE_FRAMES[(i * 5 + 3) % len(INLINE_FRAMES)]
-            if inline_src == hero_src:
-                inline_src = INLINE_FRAMES[(i * 5 + 4) % len(INLINE_FRAMES)]
-            for slot, src in (("hero", hero_src), ("inline", inline_src)):
-                pools.setdefault((src, slot), variants(src, slot))
-                pool = pools[(src, slot)]
-                key = (lang, src, slot)
-                # Scoped by (lang, slot), not just lang: a hero crop and an inline crop of the
-                # same source never collide on disk even when the box is identical, because they
-                # resize to different output dimensions. Sharing one budget across both slots
-                # wasted crops and caused a false "pool exhausted" failure.
-                tkey = (lang, slot)
-                z = cx = cy = None
-                while cursor[key] < len(pool):
-                    z, cx, cy, b = pool[cursor[key]]
-                    cursor[key] += 1
-                    if b in taken_boxes[tkey]:
-                        continue
-                    taken_boxes[tkey].add(b)
-                    break
+            h = i % len(HERO_FRAMES)
+            hero_order = [HERO_FRAMES[(h + k) % len(HERO_FRAMES)] for k in range(len(HERO_FRAMES))]
+            n = (i * 5 + 3) % len(INLINE_FRAMES)
+            inline_order = [INLINE_FRAMES[(n + k) % len(INLINE_FRAMES)] for k in range(len(INLINE_FRAMES))]
+            for slot, order, previous in (("hero", hero_order, prev_hero),
+                                          ("inline", inline_order, prev_inline)):
+                if slot == "inline":
+                    order = [s for s in order if s != hero_src] or order
+                got = take(order, slot, lang, previous)
+                if got is None:
+                    raise SystemExit(
+                        f"no frame has a distinct {slot} crop left for {aid} in {lang} — "
+                        f"the pool is genuinely out, not merely mis-allocated. "
+                        f"New photography is the only fix.")
+                src, z, cx, cy = got
+                if slot == "hero":
+                    hero_src, prev_hero = src, src
                 else:
-                    raise SystemExit(f"{src} has no distinct crop left for {aid} {slot} in {lang}")
+                    prev_inline = src
                 plan.append(dict(id=aid, lang=lang, slot=slot, src=src,
                                  zoom=z, cx=cx, cy=cy))
     return plan

@@ -1,0 +1,184 @@
+{
+  "id": "which-olive-oil-to-buy",
+  "lang": "en",
+  "slug": "which-olive-oil-to-buy",
+  "seoTitle": "Which Olive Oil to Buy: A Four-Question Ladder",
+  "metaTitle": "Which Olive Oil to Buy: A Four-Question Ladder",
+  "metaDescription": "Four questions asked in order, each one narrowing the shelf, ending in a grade and a size. For the person standing in the aisle right now.",
+  "focusKeyword": "which olive oil to buy",
+  "relatedKeywords": [
+    "what olive oil should i buy",
+    "olive oil buying guide",
+    "which olive oil for cooking",
+    "which olive oil for salad",
+    "olive oil grade to choose",
+    "olive oil bottle size to buy",
+    "should i buy two olive oils",
+    "cheap vs expensive olive oil",
+    "olive oil for beginners",
+    "first olive oil bottle"
+  ],
+  "category": "Buying olive oil",
+  "tags": ["buying", "decision", "grades", "sizes"],
+  "h1": "Which Olive Oil to Buy: Four Questions, in Order",
+  "excerpt": "A short question ladder for someone standing in front of a shelf. Each answer narrows the choice, and the last one lands on a grade and a size.",
+  "keyTakeaway": "Which olive oil to buy comes down to four questions asked in order: what will you mostly do with it, how fast will you get through it, are you buying for flavour or for volume, and can you check the label. Most households are better served by two oils than by one compromise bottle.",
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10",
+  "readingTime": 4,
+  "heroAlt": "A hand reaching for a bottle of olive oil on a shelf",
+  "inlineAlt": "Two olive oil bottles of different sizes side by side",
+  "intro": [
+    "Standing in front of a shelf with eight bottles on it is not the moment for a grade lecture. It is the moment for a decision.",
+    "Four questions, asked in this order, will narrow the shelf to one or two bottles. The reasoning behind each is a link, not a paragraph."
+  ],
+  "sections": [
+    {
+      "heading": "Question one: what will you mostly do with it?",
+      "id": "what-will-you-do-with-it",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This decides the grade, and it is the only question that really has to be answered first. If most of the use is raw or moderate heat, buy extra virgin. If most of the use is a wok at full flame or deep-frying, buy a refined oil and stop reading, because nothing else on this page will change that answer."
+        },
+        {
+          "type": "p",
+          "text": "Most kitchens do some of both, which is why the honest answer for many households is two bottles rather than one."
+        }
+      ]
+    },
+    {
+      "heading": "Question two: how fast will you get through it?",
+      "id": "how-fast-will-you-use-it",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This decides the size, and it is really a freshness question wearing a value disguise. An opened bottle holds its flavour for roughly two months. A larger bottle costs less per litre and is worse value if the last third has already flattened by the time you reach it."
+        },
+        {
+          "type": "p",
+          "text": "So buy the size you will finish inside that window, not the size with the best headline price. [What size olive oil bottle to buy](/blog/what-size-olive-oil-bottle-to-buy) works the arithmetic through."
+        }
+      ]
+    },
+    {
+      "heading": "Question three: flavour or volume?",
+      "id": "flavour-or-volume",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If the oil is going on the plate, you are buying flavour and the newest harvest wins. If the oil is going into the pan in quantity, you are buying volume and freshness matters far less. Trying to satisfy both with one purchase is how people end up with an expensive bottle used for frying."
+        },
+        {
+          "type": "table",
+          "head": ["If your answer is", "Buy", "In this size"],
+          "rows": [
+            ["Mostly raw: dressings, dipping, finishing", "Extra virgin, newest harvest you can find", "Small, so it stays fresh in use"],
+            ["Mixed: some raw, mostly moderate heat", "Extra virgin", "Whichever you finish in two months"],
+            ["Mostly high heat and volume", "A refined cooking oil", "Large, price per litre is the point"],
+            ["Both, honestly", "One of each", "Small extra virgin, large refined"]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Question four: can you check the label?",
+      "id": "can-you-check-the-label",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Whatever the first three answers were, the bottle still has to say what it is. The words extra virgin olive oil in full, a date, one named country of origin, and glass dark enough to keep light out. A bottle missing all four is not a bargain, it is an unknown."
+        },
+        {
+          "type": "p",
+          "text": "The longer version of this check, including a taste test, is in [how to choose authentic extra virgin olive oil](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia)."
+        }
+      ]
+    },
+    {
+      "heading": "Why two bottles beats one compromise",
+      "id": "two-bottles",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Because a single bottle chosen to do everything does each job slightly badly and costs more overall. A cheap refined oil handles the frying that would have burned off everything you paid for, and a small extra virgin bottle reaches the table while it still tastes of something."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Decide the dominant use, and let it pick the grade",
+            "Pick the size you will finish in about two months",
+            "Read the label for grade, date, origin and glass",
+            "If your kitchen genuinely does both jobs, buy one of each"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "If you only buy one bottle",
+      "id": "if-only-one",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Buy a small extra virgin olive oil, and use it raw. That is where the difference between grades is unmistakable, where the quantities are spoonfuls rather than potfuls, and where a bottle gets finished before it flattens. Keep whatever you already fry with for frying."
+        },
+        {
+          "type": "p",
+          "text": "It is a smaller purchase than most people expect and it answers the question the shelf was really asking."
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "heading": "The short answer",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Extra virgin for anything raw or gently cooked, refined for anything hot and high-volume, and a size you will finish in two months. If that means two bottles, it means two bottles, and it will still cost less than one bottle used wrongly."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Which olive oil should I buy first?",
+      "a": "A small extra virgin bottle, used raw. That is where the grade difference is obvious, the quantities are small, and the bottle gets finished while it still tastes of something."
+    },
+    {
+      "q": "Is extra virgin worth it if I only fry?",
+      "a": "No. High-heat frying removes the aroma and bitterness you paid extra for. A refined cooking oil does that job better and far more cheaply."
+    },
+    {
+      "q": "Should I buy the biggest bottle for value?",
+      "a": "Only if you will finish it in about two months. Beyond that the last of it has flattened, which cancels the saving you made per litre."
+    },
+    {
+      "q": "Can one bottle do everything?",
+      "a": "It can, but it does each job slightly badly. Two oils, one cheap and neutral and one extra virgin, usually cost less over a month and cook better."
+    },
+    {
+      "q": "What if the label says pure or light olive oil?",
+      "a": "Those are refined grades. They are fine for heat and volume but will not give you the aroma or the peppery finish that extra virgin is bought for."
+    },
+    {
+      "q": "Does a cheaper extra virgin oil mean a worse one?",
+      "a": "Not necessarily, but a price far below the rest of the category is worth questioning. Check the grade wording, the date and the origin before assuming it is a bargain."
+    }
+  ],
+  "related": [
+    {
+      "label": "Arabian Village extra virgin olive oil",
+      "path": "products",
+      "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, the two sizes this ladder ends on."
+    },
+    {
+      "label": "What size olive oil bottle to buy",
+      "path": "blog/what-size-olive-oil-bottle-to-buy",
+      "description": "The freshness arithmetic behind question two, and when the larger bottle stops being cheaper."
+    },
+    {
+      "label": "Extra virgin vs pure olive oil",
+      "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+      "description": "What the grade words on a label actually mean, and what refining takes out."
+    }
+  ]
+}
