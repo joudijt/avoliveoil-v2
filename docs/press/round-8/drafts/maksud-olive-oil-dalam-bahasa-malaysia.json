@@ -53,14 +53,14 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Di sinilah kebanyakan kekeliruan berlaku, kerana perkataan Inggeris pada label bukan penerangan biasa tetapi nama gred yang ditetapkan piawai perdagangan. Extra virgin ialah gred tertinggi dan padanan Melayunya minyak zaitun dara. Pure dan light pula bukan pujian; kedua-duanya merujuk kepada gred ditapis."
+          "text": "Di sinilah kebanyakan kekeliruan berlaku, kerana perkataan Inggeris pada label bukan penerangan biasa tetapi nama gred yang ditetapkan piawai perdagangan. Extra virgin ialah gred tertinggi dan padanan Melayunya minyak zaitun dara ekstra — bukan sekadar dara, yang merujuk kepada gred kedua. Pure dan light pula bukan pujian; kedua-duanya merujuk kepada gred ditapis."
         },
         {
           "type": "table",
           "head": ["Istilah label", "Padanan Melayu", "Maksudnya"],
           "rows": [
-            ["Extra virgin olive oil", "Minyak zaitun dara", "Gred tertinggi, tidak ditapis"],
-            ["Virgin olive oil", "Minyak zaitun dara", "Diperah mekanikal, gred kedua"],
+            ["Extra virgin olive oil", "Minyak zaitun dara ekstra", "Gred tertinggi, tidak ditapis"],
+            ["Virgin olive oil", "Minyak zaitun dara", "Diperah mekanikal, gred kedua, lebih tinggi keasidan"],
             ["Refined, pure atau light", "Ditapis", "Minyak yang gagal ujian, dibersihkan"],
             ["Pomace olive oil", "Minyak hampas zaitun", "Diekstrak daripada sisa perahan"],
             ["Cold pressed", "Perahan sejuk", "Diperah tanpa haba ditambah"],
@@ -167,7 +167,7 @@
     },
     {
       "q": "Apa maksud extra virgin dalam bahasa Melayu?",
-      "a": "Minyak zaitun dara, iaitu gred tertinggi. Ia diperah secara mekanikal tanpa haba dan tanpa pelarut, dan tidak pernah melalui proses penapisan."
+      "a": "Minyak zaitun dara ekstra, iaitu gred tertinggi — bukan sekadar dara, yang merujuk kepada gred kedua. Ia diperah secara mekanikal tanpa haba dan tanpa pelarut, dan tidak pernah melalui proses penapisan."
     },
     {
       "q": "Zaiton dan zaitun sama?",

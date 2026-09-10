@@ -11257,7 +11257,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressBestExtraVirginOliveOilInMalaysiaHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Several olive oil bottles standing together on a wooden surface"
     },
     "ogImage": "/og/blog-best-extra-virgin-olive-oil-in-malaysia.jpg",
     "intro": [
@@ -11280,7 +11280,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Olive oil poured into a small glass for tasting"
           }
         ]
       },
@@ -11320,7 +11320,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Olive oil poured into a small glass for tasting"
           }
         ]
       },
@@ -11339,7 +11339,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Olive oil poured into a small glass for tasting"
           }
         ]
       },
@@ -11358,7 +11358,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Olive oil poured into a small glass for tasting"
           }
         ]
       },
@@ -11377,26 +11377,26 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Olive oil poured into a small glass for tasting"
           }
         ]
       },
       {
-        "heading": "So how should you actually compare bottles?",
-        "id": "how-to-compare",
+        "heading": "What should you actually do with this?",
+        "id": "what-to-do-with-it",
         "blocks": [
           {
             "type": "p",
-            "text": "With a method rather than a ranking, and one already exists on this site. It works through the grade wording, the date, the glass, the origin line and the price per litre in a fixed order, so two bottles get judged on the same terms rather than on which packaging you liked."
+            "text": "Stop looking for a ranking and start naming your use out loud before you shop. A dressing, a hot pan, a tight month's budget: say which one you are buying for, and half the shelf sorts itself out before you read a single label."
           },
           {
             "type": "p",
-            "text": "That method is [how to compare olive oil brands in Malaysia](/blog/how-to-compare-olive-oil-brands-in-malaysia). This page is the argument for why a method beats a list; that page is the method."
+            "text": "A step-by-step way to read any single bottle against that use, label line by label line, is at [how to compare olive oil brands in Malaysia](/blog/how-to-compare-olive-oil-brands-in-malaysia). This page answered why a ranking cannot exist; that one is the checklist for the bottle in your hand."
           },
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Olive oil poured into a small glass for tasting"
           }
         ]
       }
