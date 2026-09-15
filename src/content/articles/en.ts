@@ -3691,6 +3691,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Advantages of extra virgin olive oil",
         "path": "blog/advantages-of-extra-virgin-olive-oil",
         "description": "What the top grade gives a kitchen, and the three limits attached to it."
+      },
+      {
+        "label": "Extra light olive oil vs extra virgin olive oil",
+        "path": "blog/extra-light-olive-oil-vs-extra-virgin-olive-oil",
+        "description": "A step further along the same refining process, and what it changes."
       }
     ]
   },
@@ -5021,6 +5026,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Rosemary infused olive oil, and how to make it safely",
+        "path": "blog/rosemary-infused-olive-oil",
+        "description": "The same fridge-and-strain rule, applied to fresh rosemary instead of garlic."
       }
     ]
   },
@@ -6401,6 +6411,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus the Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Olive oil vs canola oil",
+        "path": "blog/olive-oil-vs-canola-oil",
+        "description": "How the other everyday kitchen oil compares on taste, heat and price."
       }
     ]
   },
@@ -6917,6 +6932,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Where to buy in Malaysia",
         "path": "shop",
         "description": "Berkat Madinah Store in Ampang Jaya and Batu Caves, plus their Shopee and TikTok Shop counters."
+      },
+      {
+        "label": "Olive oil color: what it means",
+        "path": "blog/olive-oil-color-what-it-means",
+        "description": "Why colour ranges from green to gold, and why it is not a grade indicator."
       }
     ]
   },
@@ -11257,7 +11277,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressBestExtraVirginOliveOilInMalaysiaHero",
-      "alt": "Several olive oil bottles standing together on a wooden surface"
+      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
     },
     "ogImage": "/og/blog-best-extra-virgin-olive-oil-in-malaysia.jpg",
     "intro": [
@@ -11280,7 +11300,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "Olive oil poured into a small glass for tasting"
+            "alt": "A sunlit path running between old olive trees in the grove"
           }
         ]
       },
@@ -11320,7 +11340,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "Olive oil poured into a small glass for tasting"
+            "alt": "A sunlit path running between old olive trees in the grove"
           }
         ]
       },
@@ -11339,7 +11359,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "Olive oil poured into a small glass for tasting"
+            "alt": "A sunlit path running between old olive trees in the grove"
           }
         ]
       },
@@ -11358,7 +11378,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "Olive oil poured into a small glass for tasting"
+            "alt": "A sunlit path running between old olive trees in the grove"
           }
         ]
       },
@@ -11377,7 +11397,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "Olive oil poured into a small glass for tasting"
+            "alt": "A sunlit path running between old olive trees in the grove"
           }
         ]
       },
@@ -11396,7 +11416,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "Olive oil poured into a small glass for tasting"
+            "alt": "A sunlit path running between old olive trees in the grove"
           }
         ]
       }
@@ -12911,6 +12931,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Why does olive oil taste bitter?",
         "path": "blog/why-does-olive-oil-taste-bitter",
         "description": "The polyphenols behind the bitterness, and why their absence is the worrying result."
+      },
+      {
+        "label": "Olive oil calories",
+        "path": "blog/olive-oil-calories",
+        "description": "Why the calorie count stays the same no matter which grade is on the label."
       }
     ]
   },
@@ -13153,6 +13178,1222 @@ export const EN_ARTICLES: Article[] = [
         "label": "Extra virgin vs pure olive oil",
         "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
         "description": "What the grade words on a label actually mean, and what refining takes out."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 9 ---------------- */
+  {
+    "id": "extra-light-olive-oil-vs-extra-virgin-olive-oil",
+    "slug": "extra-light-olive-oil-vs-extra-virgin-olive-oil",
+    "seoTitle": "Extra Light Olive Oil vs Extra Virgin Olive Oil",
+    "metaTitle": "Extra Light Olive Oil vs Extra Virgin Olive Oil",
+    "metaDescription": "What \"extra light\" actually means on an olive oil label, how it differs from extra virgin in taste, smoke point and processing, and which one to buy.",
+    "focusKeyword": "extra light olive oil vs extra virgin olive oil",
+    "relatedKeywords": [
+      "what is extra light olive oil",
+      "extra light olive oil taste",
+      "extra light olive oil smoke point",
+      "is extra light olive oil healthier",
+      "extra light vs extra virgin",
+      "light olive oil meaning",
+      "extra light olive oil for frying",
+      "difference between light and extra virgin olive oil",
+      "extra light olive oil calories",
+      "is extra light olive oil real olive oil"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "grades",
+      "extra virgin",
+      "extra light",
+      "buying guide"
+    ],
+    "h1": "Extra Light Olive Oil vs Extra Virgin Olive Oil: What Changes",
+    "excerpt": "\"Extra light\" is a real olive oil, heavily refined for a mild taste and a high smoke point. It is not lighter in calories and it is not a higher grade than extra virgin. Here is what the label actually promises.",
+    "keyTakeaway": "Extra light olive oil is a refined oil blended with a small amount of virgin oil for flavour, chosen for a mild taste, pale colour and high smoke point. Extra virgin is unrefined, mechanically extracted and full-flavoured. \"Light\" refers to taste and colour, never to calories or fat, which are the same in both.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressExtraLightOliveOilVsExtraVirginOliveOilHero",
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-extra-light-olive-oil-vs-extra-virgin-olive-oil.jpg",
+    "intro": [
+      "\"Extra light\" is the most misread word on an olive oil shelf. It sounds like a diet product, but it describes flavour and colour, not calories.",
+      "Extra light and extra virgin sit at opposite ends of the same grade ladder: one is heavily processed for a neutral taste, the other is left alone so the fruit's own flavour survives."
+    ],
+    "sections": [
+      {
+        "heading": "What does \"extra light\" actually mean?",
+        "id": "what-extra-light-means",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra light olive oil is a refined oil, meaning it has been processed with heat and filtration to strip out flavour, aroma and colour, then blended with a small amount of virgin oil to bring back a trace of olive taste. \"Extra light\" and \"light\" describe the same product; the wording is a marketing choice, not a regulated grade name."
+          },
+          {
+            "type": "p",
+            "text": "This is different from [extra virgin versus pure olive oil](/blog/extra-virgin-olive-oil-vs-pure-olive-oil), where \"pure\" already means a refined-and-virgin blend. Extra light sits a step further along the same refining process, blended for an even milder result."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "How is extra virgin different?",
+        "id": "how-extra-virgin-differs",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil is mechanically extracted with no heat and no solvents, and must pass a free acidity limit and a taste panel with no defects. Nothing is refined out, so the fruit's own flavour, aroma and colour all carry through into the bottle."
+          },
+          {
+            "type": "table",
+            "head": [
+              "",
+              "Extra light",
+              "Extra virgin"
+            ],
+            "rows": [
+              [
+                "Extraction",
+                "Refined with heat and solvents, then blended",
+                "Mechanical extraction only, no heat"
+              ],
+              [
+                "Flavour",
+                "Very mild, close to neutral",
+                "Fruity, grassy or peppery"
+              ],
+              [
+                "Colour",
+                "Pale gold, consistent",
+                "Green to gold, varies by harvest"
+              ],
+              [
+                "Smoke point",
+                "Roughly 230 to 242°C",
+                "Roughly 190 to 210°C"
+              ],
+              [
+                "Calories per tablespoon",
+                "About 119 kcal",
+                "About 119 kcal"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "Does extra light have fewer calories?",
+        "id": "does-it-have-fewer-calories",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No. Both are close to 100% fat, so both come to roughly 119 kcal per tablespoon. \"Light\" on the label has never meant fewer calories for olive oil; it means a lighter colour and a milder taste. [Olive oil calories](/blog/olive-oil-calories) sets out the numbers by grade."
+          },
+          {
+            "type": "p",
+            "text": "Anyone buying extra light specifically to cut calories is buying the wrong thing for that goal, since the fat content does not change between grades."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "Which one handles heat better?",
+        "id": "which-handles-heat-better",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra light, by a real margin. Refining raises the smoke point to roughly 230 to 242°C, well above most home cooking, which makes it a practical choice for high-heat frying where flavour is not the point. Extra virgin smokes lower, around 190 to 210°C, which still covers ordinary sauteing but not a hard sear or deep frying."
+          },
+          {
+            "type": "p",
+            "text": "A kitchen that fries often can reasonably keep both: extra light for the pan and a small extra virgin bottle finished raw, on bread or in a dressing."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "Is extra virgin always the better buy?",
+        "id": "is-extra-virgin-always-better",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Not for every use. Extra virgin wins on flavour, aroma and on being a single-ingredient food with nothing refined out. Extra light wins when a recipe needs heat tolerance or a neutral taste that will not compete with other ingredients, such as a delicate cake or a high-heat fry."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Choose extra virgin** for dressings, dipping, finishing a dish, or any raw or moderate-heat use.",
+              "**Choose extra light** for deep frying, or a recipe where a strong olive taste would be unwelcome.",
+              "**Do not choose extra light** expecting a health or calorie advantage — there is none."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      },
+      {
+        "heading": "Is extra light still genuinely olive oil?",
+        "id": "is-it-still-olive-oil",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Yes. It is made from olives, through legitimate refining and blending, and it is a recognised category rather than a synthetic product. It is simply a different point on the same grade ladder that runs from extra virgin down to refined pomace oil."
+          },
+          {
+            "type": "p",
+            "text": "[Olive oil vs pomace oil](/blog/olive-oil-vs-pomace-oil-what-the-grades-mean) covers the far end of that ladder, where refining goes furthest and the oil is extracted from the leftover pulp rather than the first pressing."
+          },
+          {
+            "type": "image",
+            "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
+            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Which one should be in your kitchen?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Buy extra light for its smoke point, not for its name. If the goal is flavour, nutrients close to their natural state, or a single-ingredient label, extra virgin is the one to reach for. Many kitchens are better served by keeping a bottle of each, used for what each one is actually good at."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is extra light olive oil lower in calories than extra virgin?",
+        "a": "No. Both are close to 100% fat and both come to roughly 119 kcal per tablespoon. \"Light\" refers to colour and flavour, not calories."
+      },
+      {
+        "q": "What does \"extra light\" mean on an olive oil label?",
+        "a": "A heavily refined oil with a small amount of virgin oil blended back in for taste, chosen for a mild flavour, pale colour and high smoke point."
+      },
+      {
+        "q": "Can extra light olive oil be used for deep frying?",
+        "a": "Yes, that is its main advantage. Its smoke point of roughly 230 to 242°C is well above extra virgin's, and its neutral taste will not compete with the food."
+      },
+      {
+        "q": "Is extra virgin olive oil healthier than extra light?",
+        "a": "Extra virgin keeps more of the compounds that refining removes, since nothing is stripped out during extraction. That is a processing difference, not a claim this article makes about treating any condition."
+      },
+      {
+        "q": "Why does extra light olive oil taste almost nothing?",
+        "a": "Refining with heat and filtration removes most of the aroma and flavour compounds. A small amount of virgin oil is blended back in afterward, which is why a faint olive taste remains."
+      },
+      {
+        "q": "Is extra light olive oil cheaper than extra virgin?",
+        "a": "Usually, yes, because refining allows lower-grade fruit to be used and the process is more industrial. Extra virgin's cost reflects the fruit quality and the taste panel it has to pass."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Extra virgin vs pure olive oil",
+        "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+        "description": "The other step on the same grade ladder, and what refining removes at each stage."
+      },
+      {
+        "label": "Olive oil calories",
+        "path": "blog/olive-oil-calories",
+        "description": "Why every grade carries the same calorie count per tablespoon."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 9 ---------------- */
+  {
+    "id": "olive-oil-calories",
+    "slug": "olive-oil-calories",
+    "seoTitle": "Olive Oil Calories: Per Tablespoon, Teaspoon and 100ml",
+    "metaTitle": "Olive Oil Calories: Per Tablespoon, Teaspoon and 100ml",
+    "metaDescription": "How many calories are in olive oil per tablespoon, teaspoon and 100ml, why every grade has the same count, and what that means for a normal serving.",
+    "focusKeyword": "olive oil calories",
+    "relatedKeywords": [
+      "how many calories in olive oil",
+      "olive oil calories per tablespoon",
+      "olive oil calories per teaspoon",
+      "olive oil nutrition facts",
+      "olive oil fat content",
+      "calories in extra virgin olive oil",
+      "olive oil 100ml calories",
+      "is olive oil high in calories",
+      "olive oil calories vs other oils",
+      "olive oil serving size"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "nutrition",
+      "calories",
+      "olive oil basics",
+      "cooking"
+    ],
+    "h1": "Olive Oil Calories: What a Real Serving Actually Costs You",
+    "excerpt": "Olive oil is pure fat, so its calorie count is fixed and grade does not change it. Here is the number per tablespoon, teaspoon and 100ml, and why extra virgin costs the same as any other bottle.",
+    "keyTakeaway": "One tablespoon of olive oil (about 13.5g) is roughly 119 kcal, and one teaspoon is about 40 kcal. That figure is the same for extra virgin, pure or light olive oil, because all three are close to 100% fat. The grade changes flavour and processing, never the calorie count.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilCaloriesHero",
+      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+    },
+    "ogImage": "/og/blog-olive-oil-calories.jpg",
+    "intro": [
+      "Olive oil is calorie-dense because it is almost entirely fat, and fat carries more than double the calories of protein or carbohydrate, gram for gram. That single fact explains every number below.",
+      "The count does not move with the grade on the label. Extra virgin, pure and light olive oil are all close to 100% fat, so a tablespoon of any of them costs about the same."
+    ],
+    "sections": [
+      {
+        "heading": "How many calories are in a tablespoon?",
+        "id": "per-tablespoon",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A level tablespoon of olive oil is about 13.5g and comes to roughly 119 kcal, almost all of it fat. A teaspoon, at about 4.5g, is close to 40 kcal. These are standard figures for any pure vegetable oil, not something specific to one brand or bottle."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Amount",
+              "Weight",
+              "Calories",
+              "Fat"
+            ],
+            "rows": [
+              [
+                "1 teaspoon",
+                "4.5g",
+                "~40 kcal",
+                "4.5g"
+              ],
+              [
+                "1 tablespoon",
+                "13.5g",
+                "~119 kcal",
+                "13.5g"
+              ],
+              [
+                "50ml",
+                "~46g",
+                "~405 kcal",
+                "46g"
+              ],
+              [
+                "100ml",
+                "~91g",
+                "~805 kcal",
+                "91g"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCaloriesInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Does extra virgin have more calories than pure or light?",
+        "id": "does-grade-change-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No. Extra virgin, pure and light olive oil are all essentially 100% fat by weight, so the calorie count per tablespoon is the same across all three. What changes between grades is how the oil was extracted and refined, which is a flavour and processing story, not a calorie one."
+          },
+          {
+            "type": "p",
+            "text": "The word \"light\" on a bottle refers to colour and taste, not to calories. [Extra light olive oil vs extra virgin olive oil](/blog/extra-light-olive-oil-vs-extra-virgin-olive-oil) covers what that grade actually changes."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCaloriesInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "How does it compare with other cooking oils?",
+        "id": "compared-to-other-oils",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Almost every liquid cooking oil sits in the same range, because they are all close to pure fat: canola, sunflower, corn and coconut oil all land around 120 kcal per tablespoon, give or take a few. Butter is lower per tablespoon because it carries some water and milk solids rather than being pure fat."
+          },
+          {
+            "type": "p",
+            "text": "Choosing an oil for the calorie count alone rarely changes much. The bigger swing in a dish is usually how much oil is used, not which bottle it came from."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCaloriesInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Does frying add more calories than a salad drizzle?",
+        "id": "frying-vs-drizzling",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Yes, but the reason is portion, not the oil itself. A salad drizzle is usually a measured tablespoon or two. Shallow-frying can pull in far more, because food absorbs oil as it cooks, particularly anything breaded or porous like aubergine."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**A teaspoon drizzle** on a finished dish adds about 40 kcal.",
+              "**A tablespoon in a dressing** adds about 119 kcal to the whole bowl, not per portion.",
+              "**Shallow-frying** can add well over 100 kcal per portion depending on how absorbent the food is.",
+              "**Wiping a pan with a paper towel** dipped in oil for a non-stick coat adds only a small fraction of a tablespoon."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCaloriesInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "Is a higher calorie count a reason to avoid it?",
+        "id": "not-a-reason-to-avoid",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Not on its own. Calorie density is a property of fat in general, not a mark against olive oil specifically, and the same tablespoon applies to any oil in the kitchen. What differs between oils is flavour, smoke point and what has been done to them during processing."
+          },
+          {
+            "type": "p",
+            "text": "Olive oil is a food, not a diet plan. Anyone managing calorie intake for a medical reason should get portion guidance from a doctor or registered dietitian rather than a blog post."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCaloriesInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      },
+      {
+        "heading": "How do you measure a serving accurately?",
+        "id": "measuring-a-serving",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A free-pour from the bottle is usually more than a tablespoon, because the spout does not measure. A proper tablespoon or teaspoon measure, or a bottle with a built-in pourer, keeps a dressing or a drizzle at the amount actually intended."
+          },
+          {
+            "type": "p",
+            "text": "For cooking rather than dressing, a light coating of a pan with a tablespoon is normally enough for two to three servings, which brings the added calories per portion down to well under 50 kcal."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilCaloriesInline",
+            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What should you take from the number?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Use the tablespoon and teaspoon figures above to judge a real serving rather than guessing, and do not pick a lower grade expecting fewer calories, because the count will not move. If calories matter to your cooking, the lever that actually works is how much oil goes in the pan, not which bottle it comes from."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How many calories are in one tablespoon of olive oil?",
+        "a": "About 119 kcal for a level tablespoon (roughly 13.5g), almost all of it fat. A teaspoon comes to about 40 kcal."
+      },
+      {
+        "q": "Does extra virgin olive oil have more calories than regular olive oil?",
+        "a": "No. Extra virgin, pure and light olive oil are all close to 100% fat, so the calorie count per tablespoon is essentially the same across every grade."
+      },
+      {
+        "q": "How many calories are in 100ml of olive oil?",
+        "a": "About 805 kcal, based on roughly 91g of oil in 100ml and around 8.8 kcal per gram of fat."
+      },
+      {
+        "q": "Is olive oil lower in calories than other cooking oils?",
+        "a": "Not meaningfully. Canola, sunflower, corn and coconut oil all sit close to 120 kcal per tablespoon too, because they are all nearly pure fat."
+      },
+      {
+        "q": "Does light olive oil have fewer calories?",
+        "a": "No. \"Light\" describes the colour and mild flavour of a refined grade, not a lower calorie count. Gram for gram it has the same energy as extra virgin."
+      },
+      {
+        "q": "How many calories does frying add compared to a raw drizzle?",
+        "a": "More, but because of the amount absorbed rather than the oil itself. A measured drizzle might add 40 to 119 kcal; shallow-frying porous food can add well over 100 kcal per portion."
+      },
+      {
+        "q": "Is butter lower in calories than olive oil?",
+        "a": "Per tablespoon, yes, slightly, because butter contains some water and milk solids rather than being pure fat. The difference is modest, not large."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Extra light olive oil vs extra virgin olive oil",
+        "path": "blog/extra-light-olive-oil-vs-extra-virgin-olive-oil",
+        "description": "What \"light\" actually changes on a label, and what it does not."
+      },
+      {
+        "label": "Vitamins in extra virgin olive oil",
+        "path": "blog/vitamins-in-extra-virgin-olive-oil",
+        "description": "What is actually inside the bottle beyond the fat and the calories."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 9 ---------------- */
+  {
+    "id": "olive-oil-color",
+    "slug": "olive-oil-color-what-it-means",
+    "seoTitle": "Olive Oil Color: What Green or Gold Actually Tells You",
+    "metaTitle": "Olive Oil Color: What Green or Gold Actually Tells You",
+    "metaDescription": "Why olive oil ranges from deep green to pale gold, what causes the colour, and why professional tasters are not allowed to see it when they judge quality.",
+    "focusKeyword": "olive oil color",
+    "relatedKeywords": [
+      "why is olive oil green",
+      "olive oil color meaning",
+      "does olive oil color indicate quality",
+      "green vs gold olive oil",
+      "olive oil color chart",
+      "why is my olive oil yellow",
+      "olive oil chlorophyll",
+      "unfiltered olive oil color",
+      "does olive oil color matter",
+      "olive oil dark bottle color"
+    ],
+    "category": "Storage and quality",
+    "tags": [
+      "quality",
+      "authenticity",
+      "olive oil basics",
+      "storage"
+    ],
+    "h1": "Olive Oil Color: What Green or Gold Actually Tells You",
+    "excerpt": "Olive oil colour swings from deep green to pale gold depending on harvest timing, variety and filtration, and professional tasters are deliberately kept from seeing it. Colour is a clue, not a grade.",
+    "keyTakeaway": "Olive oil colour comes from chlorophyll and carotenoid pigments in the fruit, so it ranges naturally from deep green to pale gold. Early-harvest and unfiltered oils tend to be greener; late-harvest and filtered oils tend to be more golden. Colour alone does not tell you the grade or the quality.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilColorHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+    },
+    "ogImage": "/og/blog-olive-oil-color.jpg",
+    "intro": [
+      "A bottle of olive oil can be anywhere from grassy green to pale straw gold, and both can be genuine, good oil. The colour comes from pigments in the fruit, not from a rule about quality.",
+      "Professional taste panels judge olive oil in coloured glasses specifically so the colour cannot influence the score. That single fact says most of what you need to know about how much weight to give it."
+    ],
+    "sections": [
+      {
+        "heading": "What causes the colour in the first place?",
+        "id": "what-causes-the-colour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Two groups of pigments carried over from the olive fruit: chlorophyll, which gives green, and carotenoids, which give gold and amber. Every olive oil contains both in different ratios, and the balance depends on the fruit itself, not on any additive, since nothing is added to a genuine extra virgin oil."
+          },
+          {
+            "type": "p",
+            "text": "Riper, later-harvest olives carry less chlorophyll and more carotenoid, which is why late-season oils tend to lean gold. Earlier, greener harvests carry more chlorophyll, which is why early-harvest oils tend to be more intensely green."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilColorInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Does green mean higher quality than gold?",
+        "id": "green-vs-gold-quality",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No. Colour reflects harvest timing and olive variety, not grade. A pale gold extra virgin oil and a deep green extra virgin oil can both pass the same acidity and taste-panel tests. Grade is decided by extraction method, free acidity and a sensory panel, none of which involve looking at the oil."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Colour tendency",
+              "Common cause",
+              "What it does NOT tell you"
+            ],
+            "rows": [
+              [
+                "Deep green",
+                "Early harvest, high chlorophyll, often unfiltered",
+                "Not automatically higher grade"
+              ],
+              [
+                "Pale gold",
+                "Later harvest, more carotenoid, often filtered",
+                "Not automatically lower grade"
+              ],
+              [
+                "Cloudy or hazy",
+                "Unfiltered, fine olive particles still suspended",
+                "See cloudy olive oil for what that means"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilColorInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Why do professional tasters use coloured glasses?",
+        "id": "why-tasters-hide-the-colour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "International Olive Council tasting panels use small cobalt-blue glasses that mask the oil's colour entirely, warmed in the taster's hand and covered with a watch glass. The point is to stop colour biasing the score, because tasters consistently rate darker green oils as \"fresher\" or \"more intense\" even when blind tasting shows no difference."
+          },
+          {
+            "type": "p",
+            "text": "That practice is the clearest signal in the whole industry that colour and quality are two separate things, judged by two separate methods."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilColorInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Does filtration change the colour?",
+        "id": "does-filtration-change-colour",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Yes, noticeably. Unfiltered oil still carries microscopic olive particles and moisture, which scatter light and give a cloudy, often deeper green appearance. Filtered oil has those particles removed, so it looks clearer and can appear a shade lighter even from the same batch."
+          },
+          {
+            "type": "p",
+            "text": "Neither version is wrong. Some producers filter for shelf stability and a clear bottle; others leave oil unfiltered for a short period after pressing, which is a style choice rather than a defect."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilColorInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Does the colour fade as the bottle ages?",
+        "id": "does-colour-fade-with-age",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Slowly, yes. Chlorophyll and carotenoid pigments break down with light and time, so an oil that started deep green can drift toward a duller, more yellow-green shade over many months, especially if it has seen light. That shift is a better clue to age than to quality on its own."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**A dark glass bottle** slows this fading by blocking most light — see the bottle guide for why colour and size are chosen the way they are.",
+              "**A clear glass bottle** left near a window fades faster, colour and flavour together.",
+              "**A colour shift alone**, without a change in smell or taste, is not proof the oil has gone off."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilColorInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      },
+      {
+        "heading": "So what should you actually judge a bottle on?",
+        "id": "what-to-judge-instead",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The label, not the shade in the glass: the grade stated, a harvest or production date, a named country of origin, and how the oil smells and tastes once opened. Colour is a visual note worth knowing about, not a checklist item."
+          },
+          {
+            "type": "p",
+            "text": "[How to choose authentic extra virgin olive oil](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia) covers the checks that actually separate a genuine bottle from a poor one."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilColorInline",
+            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Should colour ever be a reason to buy or avoid a bottle?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "On its own, no. Use colour as one small observation, not a verdict: a deep green oil is not automatically fresher or better than a gold one, and a gold oil is not automatically weaker. Judge the label, the date and how the oil actually tastes, the same way a professional taste panel is forced to."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Why is my olive oil green instead of gold?",
+        "a": "It likely came from an earlier harvest, which carries more chlorophyll, or it is unfiltered, which keeps fine particles suspended that deepen the colour. Both are normal."
+      },
+      {
+        "q": "Does a darker green olive oil taste stronger?",
+        "a": "Not reliably from colour alone. Flavour intensity comes from the olive variety, ripeness at harvest and polyphenol content, which do not map cleanly onto colour."
+      },
+      {
+        "q": "Is pale gold olive oil lower quality?",
+        "a": "No. Gold usually just means a later harvest or a filtered oil. It can be extra virgin exactly as easily as a green one."
+      },
+      {
+        "q": "Why do taste panels use blue glasses?",
+        "a": "To hide the oil's colour so it cannot bias the score. Tasters have been shown to rate darker oils as fresher even when there is no real difference, so colour is deliberately removed from the test."
+      },
+      {
+        "q": "Does olive oil colour change as it ages?",
+        "a": "Slowly, yes. The pigments break down with light and time, so colour can dull or shift over many months. That is a clue to age, not proof of spoilage on its own."
+      },
+      {
+        "q": "Should I choose an oil based on its colour in the shop?",
+        "a": "Better to check the grade, harvest or production date and country of origin on the label, and judge the oil itself once opened. Colour alone is not a reliable guide."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "How to choose authentic extra virgin olive oil in Malaysia",
+        "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+        "description": "The label checks and taste signs that actually separate a genuine bottle from a poor one."
+      },
+      {
+        "label": "Why is my olive oil cloudy?",
+        "path": "blog/why-is-my-olive-oil-cloudy",
+        "description": "What causes haze and sediment, and when it is normal rather than a fault."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 9 ---------------- */
+  {
+    "id": "olive-oil-vs-canola-oil",
+    "slug": "olive-oil-vs-canola-oil",
+    "seoTitle": "Olive Oil vs Canola Oil: Taste, Heat and Processing",
+    "metaTitle": "Olive Oil vs Canola Oil: Taste, Heat and Processing",
+    "metaDescription": "Olive oil and canola oil compared on extraction, flavour, smoke point and price, so you know which one actually suits the dish in front of you.",
+    "focusKeyword": "olive oil vs canola oil",
+    "relatedKeywords": [
+      "is olive oil or canola oil better",
+      "canola oil vs olive oil for cooking",
+      "canola oil vs olive oil for frying",
+      "olive oil vs canola oil smoke point",
+      "olive oil vs canola oil taste",
+      "canola oil vs extra virgin olive oil",
+      "difference between canola oil and olive oil",
+      "can I substitute canola oil for olive oil",
+      "canola oil vs olive oil price",
+      "which oil is healthier canola or olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "comparison",
+      "canola oil",
+      "cooking oils",
+      "buying guide"
+    ],
+    "h1": "Olive Oil vs Canola Oil: Which One Actually Suits Your Cooking",
+    "excerpt": "Olive oil is mechanically extracted from fruit; canola oil is industrially refined from rapeseed. That single difference explains the gap in flavour, price and what each oil is actually good for.",
+    "keyTakeaway": "Olive oil is pressed from a fruit and keeps its flavour and aroma, especially extra virgin. Canola oil is refined from rapeseed into a neutral, flavourless oil with a higher smoke point and a lower price. Neither is simply \"better\" — they suit different jobs in the same kitchen.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsCanolaOilHero",
+      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-canola-oil.jpg",
+    "intro": [
+      "Olive oil and canola oil sit in almost every Malaysian kitchen, often side by side, and they are used for different reasons rather than as substitutes for each other.",
+      "The gap between them starts at the source: one is squeezed from a fruit, the other is refined from a seed. Everything else in this comparison follows from that."
+    ],
+    "sections": [
+      {
+        "heading": "Where does each oil actually come from?",
+        "id": "where-each-comes-from",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil is pressed from the fruit of the olive tree, and in its extra virgin form nothing is added or refined out. Canola oil is extracted from rapeseed and is industrially refined, using heat and chemical solvents to remove colour, smell and bitterness before it reaches a bottle."
+          },
+          {
+            "type": "p",
+            "text": "That refining step is why canola oil is consistently pale and flavourless, while olive oil's colour and taste vary with the fruit it came from — see [olive oil colour](/blog/olive-oil-color-what-it-means) for what causes that."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCanolaOilInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "How do they compare on taste?",
+        "id": "taste-comparison",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This is where the two oils differ most. Extra virgin olive oil carries real flavour — grassy, fruity, sometimes peppery at the back of the throat. Canola oil is deliberately neutral, with almost no smell or taste, because refining is built to remove exactly that."
+          },
+          {
+            "type": "table",
+            "head": [
+              "",
+              "Olive oil (extra virgin)",
+              "Canola oil"
+            ],
+            "rows": [
+              [
+                "Flavour",
+                "Grassy, fruity, peppery finish",
+                "Neutral, close to flavourless"
+              ],
+              [
+                "Colour",
+                "Green to gold, varies",
+                "Pale yellow, consistent"
+              ],
+              [
+                "Best raw use",
+                "Dressings, dipping, finishing",
+                "Rarely used raw"
+              ],
+              [
+                "Price in Malaysia",
+                "Higher, imported fruit oil",
+                "Lower, widely refined and blended"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCanolaOilInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "Which one handles higher heat?",
+        "id": "smoke-point-comparison",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Canola oil, clearly. Its smoke point sits around 204°C, similar to a refined \"extra light\" olive oil, and its neutral taste means it will not compete with strongly flavoured dishes cooked hot and fast. Extra virgin olive oil smokes lower, around 190 to 210°C, which covers most home cooking but not a hard wok-fry."
+          },
+          {
+            "type": "p",
+            "text": "For a dish that genuinely needs high, sustained heat — a deep fry, a wok at full flame — canola oil or a refined olive oil are both more practical choices than extra virgin."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCanolaOilInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "What is the price difference in a Malaysian kitchen?",
+        "id": "price-in-malaysian-kitchen",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Canola oil is one of the cheaper bottled oils on a Malaysian supermarket shelf, produced at industrial scale from a widely grown crop. Olive oil, especially extra virgin, costs more because it is imported fruit oil with a shorter, more labour-intensive extraction process and a smaller yield per tree."
+          },
+          {
+            "type": "p",
+            "text": "That gap is the main reason many households keep both: canola for everyday high-heat cooking, olive oil kept for where its flavour actually shows."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCanolaOilInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "Can you substitute one for the other?",
+        "id": "can-you-substitute",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In a pinch, yes, for most cooked dishes — both are liquid fats and will fry, saute or bake a dish through. What changes is the result: swapping canola into a dressing loses the flavour the dish was built around, and swapping extra virgin into a deep fryer wastes an expensive oil below its ideal heat range."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Swap freely** in baking recipes that call for a neutral oil — canola is usually the better fit there anyway.",
+              "**Do not swap** extra virgin into high-heat frying if cost matters, since a cheaper neutral oil does the same job.",
+              "**Do not swap** canola into a dressing or dip meant to taste of olive oil — the flavour will simply be absent."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCanolaOilInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      },
+      {
+        "heading": "Is one genuinely healthier than the other?",
+        "id": "is-one-healthier",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Both are mostly monounsaturated fat, and both are considered reasonable cooking fats in general dietary guidance. Extra virgin olive oil additionally retains polyphenols and other compounds that refining removes from canola oil, which is a processing difference rather than a claim this article makes about treating any condition."
+          },
+          {
+            "type": "p",
+            "text": "Olive oil is a food, not a treatment. Anyone with a specific dietary or medical concern should get guidance from a doctor or registered dietitian rather than a comparison article."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsCanolaOilInline",
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "So which one belongs in your kitchen?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Both, used for different jobs. Reach for canola oil when the dish needs high, sustained heat and no flavour of its own, and reach for olive oil when the oil is meant to be tasted — raw, in a dressing, or finishing a dish. Picking one to replace the other everywhere usually means losing what each does best."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil or canola oil better for cooking?",
+        "a": "Depends on the dish. Canola suits high-heat, neutral-flavour cooking; olive oil, especially extra virgin, suits dressings, dipping and moderate-heat cooking where its flavour matters."
+      },
+      {
+        "q": "Which has a higher smoke point, olive oil or canola oil?",
+        "a": "Canola oil, at roughly 204°C, slightly above extra virgin olive oil's 190 to 210°C range, and close to a refined extra light olive oil."
+      },
+      {
+        "q": "Can I use canola oil instead of olive oil?",
+        "a": "For cooked dishes, usually yes. For a dressing or anything meant to taste of olive oil, no, because canola oil is deliberately neutral and flavourless."
+      },
+      {
+        "q": "Why is canola oil cheaper than olive oil?",
+        "a": "It is refined at industrial scale from a widely grown crop, while olive oil is a lower-yield fruit oil, often imported, with a more labour-intensive extraction process."
+      },
+      {
+        "q": "Is canola oil as natural as olive oil?",
+        "a": "No. Extra virgin olive oil is mechanically extracted with nothing refined out. Canola oil goes through industrial refining with heat and solvents before it reaches a bottle."
+      },
+      {
+        "q": "Does canola oil have any flavour at all?",
+        "a": "Very little by design. Refining removes almost all smell and taste, which is exactly why it is chosen for dishes where a neutral oil is wanted."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Olive oil vs coconut oil in a Malaysian kitchen",
+        "path": "blog/olive-oil-vs-coconut-oil-in-a-malaysian-kitchen",
+        "description": "How olive oil compares with another everyday kitchen oil beyond canola."
+      },
+      {
+        "label": "Extra light olive oil vs extra virgin olive oil",
+        "path": "blog/extra-light-olive-oil-vs-extra-virgin-olive-oil",
+        "description": "The refined olive oil option for the same high-heat jobs canola is often used for."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 9 ---------------- */
+  {
+    "id": "rosemary-infused-olive-oil",
+    "slug": "rosemary-infused-olive-oil",
+    "seoTitle": "Rosemary Infused Olive Oil, and How to Make It Safely",
+    "metaTitle": "Rosemary Infused Olive Oil, and How to Make It Safely",
+    "metaDescription": "How to make rosemary infused olive oil at home, the fridge rule that applies to any fresh herb in oil, and the dried-herb version that keeps longer.",
+    "focusKeyword": "rosemary infused olive oil",
+    "relatedKeywords": [
+      "how to make rosemary olive oil",
+      "rosemary olive oil recipe",
+      "fresh rosemary infused oil safety",
+      "dried rosemary infused olive oil",
+      "how long does rosemary oil last",
+      "rosemary oil for bread",
+      "infusing herbs in olive oil",
+      "cold infused rosemary oil",
+      "warm infused rosemary oil",
+      "homemade herb infused olive oil"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "infused oil",
+      "food safety",
+      "home cooking",
+      "herbs"
+    ],
+    "h1": "Rosemary Infused Olive Oil, and How to Make It Safely",
+    "excerpt": "Rosemary infused olive oil is simple, fragrant and easy to make badly, because any fresh herb sealed in oil at room temperature carries the same risk as fresh garlic does. Here is the safe method and the dried-herb alternative.",
+    "keyTakeaway": "Rosemary infused olive oil should be made in small batches, refrigerated immediately, strained of the sprigs, and used within about a week. Fresh herbs in oil at room temperature can support the same low-acid, airless conditions that make garlic in oil a botulism risk. Dried rosemary avoids that risk entirely.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressRosemaryInfusedOliveOilHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-rosemary-infused-olive-oil.jpg",
+    "intro": [
+      "Rosemary infused olive oil is one of the simplest things to flavour at home, and the same rule that governs garlic infused olive oil applies here: fresh plant material sealed in oil at room temperature is a food safety risk, not just a style choice.",
+      "The fix is the same too. Make it in a small batch, refrigerate it the moment it is made, and use it within about a week."
+    ],
+    "sections": [
+      {
+        "heading": "Why does the same safety rule apply to rosemary?",
+        "id": "why-the-safety-rule-applies",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Any fresh, low-acid plant material sealed under oil creates an airless, low-acid environment, which is what Clostridium botulinum needs to grow and produce its toxin. This is the same mechanism behind the fridge rule for [garlic infused olive oil](/blog/garlic-infused-olive-oil-and-how-to-do-it-safely), and it applies to fresh rosemary in oil for the same reason, not a different one."
+          },
+          {
+            "type": "p",
+            "text": "Nothing in the smell or taste of the oil would warn you if this had happened. The safe habit is to refrigerate any fresh herb oil regardless of how low the risk feels for a particular herb."
+          },
+          {
+            "type": "image",
+            "src": "pressRosemaryInfusedOliveOilInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Fresh rosemary or dried — which is safer?",
+        "id": "fresh-or-dried",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dried rosemary is the shelf-stable option, because it carries almost no free moisture for bacteria to use, and oil infused with dried herbs alone can be kept at room temperature. Fresh rosemary carries moisture on the leaf and stem, which is exactly the condition that needs refrigeration and a short window."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Version",
+              "Storage",
+              "Typical window"
+            ],
+            "rows": [
+              [
+                "Fresh rosemary in oil",
+                "Refrigerate immediately",
+                "About a week"
+              ],
+              [
+                "Dried rosemary in oil",
+                "Room temperature, out of direct light",
+                "Several months"
+              ],
+              [
+                "Commercial bottled rosemary oil",
+                "As labelled by the producer",
+                "Set by a validated industrial process"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRosemaryInfusedOliveOilInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "How do you make it safely at home?",
+        "id": "how-to-make-it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Wash and thoroughly dry two or three fresh rosemary sprigs, since any residual water shortens the oil's life further. Submerge them fully in 250ml of extra virgin olive oil in a clean glass jar, seal it, and refrigerate straight away rather than leaving it to steep on the counter."
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Wash the rosemary and pat it completely dry.",
+              "Warm the oil gently with the sprigs for ten minutes on the lowest heat, or steep cold in the fridge from the start.",
+              "Transfer to a clean jar, seal, and refrigerate immediately.",
+              "Strain out the rosemary after two to three days once the flavour has developed.",
+              "Keep refrigerated and use within about a week; discard anything left after that."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressRosemaryInfusedOliveOilInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Cold infusion or gentle warm infusion?",
+        "id": "cold-vs-warm-infusion",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cold infusion means the sprigs steep in the refrigerator from the start, giving a slower, more subtle rosemary note over two to three days. Warm infusion means holding the oil and rosemary over the lowest heat for about ten minutes before chilling, which draws out more flavour faster. Both still need the fridge and the same short window afterward."
+          },
+          {
+            "type": "p",
+            "text": "Warm infusion is not the same as frying the rosemary — a bare shimmer, never a simmer, is enough. Overheating scorches the leaves and turns the flavour bitter."
+          },
+          {
+            "type": "image",
+            "src": "pressRosemaryInfusedOliveOilInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "What is rosemary infused olive oil actually good for?",
+        "id": "what-its-good-for",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bread dipping, drizzled over roasted potatoes or vegetables, finishing a grilled dish, or brushed over focaccia before baking. Its flavour is closer to pine and resin than garlic's, and a little goes further than most cooks expect on the first try."
+          },
+          {
+            "type": "p",
+            "text": "It pairs particularly well with dishes that also carry olive oil as the base fat, since the rosemary note layers onto a flavour the dish already has rather than fighting it."
+          },
+          {
+            "type": "p",
+            "text": "A **rosemary and basil** flavour, made with dried botanicals and strained out rather than fresh sprigs, is already part of the [Arabian Village Infused Collection](/products) — the shelf-stable version of exactly this idea, for anyone who would rather skip the fridge window."
+          },
+          {
+            "type": "image",
+            "src": "pressRosemaryInfusedOliveOilInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      },
+      {
+        "heading": "Can you use the same jar for other fresh herbs?",
+        "id": "other-fresh-herbs",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The same rule applies to any fresh herb infused in oil — thyme, basil, chilli or garlic all create the same low-acid, airless conditions once submerged. Treat every fresh-herb oil as a refrigerate-and-use-soon product, and treat only fully dried ingredients as safe to leave at room temperature."
+          },
+          {
+            "type": "p",
+            "text": "Mixing fresh herbs with garlic in the same jar does not add extra risk beyond what garlic alone already carries, but it does not remove it either — the same fridge and short window still apply."
+          },
+          {
+            "type": "image",
+            "src": "pressRosemaryInfusedOliveOilInline",
+            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "Is it worth making at home?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yes, in small batches and with the fridge rule respected — it is one of the easiest ways to lift a plain oil, and the safe method costs nothing beyond a little patience. If the short window feels inconvenient, a dried-rosemary version or a commercially bottled infused oil, made under a controlled process, is the shelf-stable alternative."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is fresh rosemary infused olive oil safe to leave on the counter?",
+        "a": "No. Any fresh herb sealed in oil at room temperature can create low-acid, airless conditions that support Clostridium botulinum. Refrigerate it as soon as it is made."
+      },
+      {
+        "q": "How long does rosemary infused olive oil last?",
+        "a": "About a week, refrigerated and strained. Dried rosemary infused oil, kept at room temperature out of light, lasts considerably longer."
+      },
+      {
+        "q": "Can I make rosemary infused olive oil with dried rosemary instead?",
+        "a": "Yes, and it is the safer, longer-lasting option, since dried herbs carry almost no moisture for bacteria to use."
+      },
+      {
+        "q": "Does warming the oil make rosemary infused oil unsafe?",
+        "a": "A gentle ten-minute warm still needs the same fridge and short window afterward as a cold infusion. The heat speeds up flavour, not safety."
+      },
+      {
+        "q": "Should I strain the rosemary out before storing?",
+        "a": "Yes. Straining out the sprigs after two to three days removes plant material that could otherwise continue supporting bacterial growth in storage."
+      },
+      {
+        "q": "Is rosemary infused olive oil as risky as garlic infused olive oil?",
+        "a": "The same underlying mechanism applies to both, so the same precautions apply: refrigerate immediately, strain, and use within about a week rather than treating either as shelf-stable."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Garlic infused olive oil, and how to make it safely",
+        "path": "blog/garlic-infused-olive-oil-and-how-to-do-it-safely",
+        "description": "The same botulism-safety rule, applied to garlic, with a step-by-step method."
+      },
+      {
+        "label": "Olive oil for bread and dipping",
+        "path": "blog/olive-oil-for-bread-and-dipping",
+        "description": "Where an infused oil like this one actually gets used at the table."
       }
     ]
   },

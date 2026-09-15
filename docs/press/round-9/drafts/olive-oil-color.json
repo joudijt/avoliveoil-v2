@@ -1,0 +1,182 @@
+{
+  "id": "olive-oil-color",
+  "lang": "en",
+  "slug": "olive-oil-color-what-it-means",
+  "seoTitle": "Olive Oil Color: What Green or Gold Actually Tells You",
+  "metaTitle": "Olive Oil Color: What Green or Gold Actually Tells You",
+  "metaDescription": "Why olive oil ranges from deep green to pale gold, what causes the colour, and why professional tasters are not allowed to see it when they judge quality.",
+  "focusKeyword": "olive oil color",
+  "relatedKeywords": [
+    "why is olive oil green",
+    "olive oil color meaning",
+    "does olive oil color indicate quality",
+    "green vs gold olive oil",
+    "olive oil color chart",
+    "why is my olive oil yellow",
+    "olive oil chlorophyll",
+    "unfiltered olive oil color",
+    "does olive oil color matter",
+    "olive oil dark bottle color"
+  ],
+  "category": "Storage and quality",
+  "tags": ["quality", "authenticity", "olive oil basics", "storage"],
+  "h1": "Olive Oil Color: What Green or Gold Actually Tells You",
+  "excerpt": "Olive oil colour swings from deep green to pale gold depending on harvest timing, variety and filtration, and professional tasters are deliberately kept from seeing it. Colour is a clue, not a grade.",
+  "keyTakeaway": "Olive oil colour comes from chlorophyll and carotenoid pigments in the fruit, so it ranges naturally from deep green to pale gold. Early-harvest and unfiltered oils tend to be greener; late-harvest and filtered oils tend to be more golden. Colour alone does not tell you the grade or the quality.",
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-09-15",
+  "readingTime": 5,
+  "heroAlt": "Two small glass bowls of olive oil, one deep green and one pale gold, side by side on wood",
+  "inlineAlt": "Green olive oil catching the light as it is poured into a glass",
+  "intro": [
+    "A bottle of olive oil can be anywhere from grassy green to pale straw gold, and both can be genuine, good oil. The colour comes from pigments in the fruit, not from a rule about quality.",
+    "Professional taste panels judge olive oil in coloured glasses specifically so the colour cannot influence the score. That single fact says most of what you need to know about how much weight to give it."
+  ],
+  "sections": [
+    {
+      "heading": "What causes the colour in the first place?",
+      "id": "what-causes-the-colour",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Two groups of pigments carried over from the olive fruit: chlorophyll, which gives green, and carotenoids, which give gold and amber. Every olive oil contains both in different ratios, and the balance depends on the fruit itself, not on any additive, since nothing is added to a genuine extra virgin oil."
+        },
+        {
+          "type": "p",
+          "text": "Riper, later-harvest olives carry less chlorophyll and more carotenoid, which is why late-season oils tend to lean gold. Earlier, greener harvests carry more chlorophyll, which is why early-harvest oils tend to be more intensely green."
+        }
+      ]
+    },
+    {
+      "heading": "Does green mean higher quality than gold?",
+      "id": "green-vs-gold-quality",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "No. Colour reflects harvest timing and olive variety, not grade. A pale gold extra virgin oil and a deep green extra virgin oil can both pass the same acidity and taste-panel tests. Grade is decided by extraction method, free acidity and a sensory panel, none of which involve looking at the oil."
+        },
+        {
+          "type": "table",
+          "head": ["Colour tendency", "Common cause", "What it does NOT tell you"],
+          "rows": [
+            ["Deep green", "Early harvest, high chlorophyll, often unfiltered", "Not automatically higher grade"],
+            ["Pale gold", "Later harvest, more carotenoid, often filtered", "Not automatically lower grade"],
+            ["Cloudy or hazy", "Unfiltered, fine olive particles still suspended", "See cloudy olive oil for what that means"]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Why do professional tasters use coloured glasses?",
+      "id": "why-tasters-hide-the-colour",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "International Olive Council tasting panels use small cobalt-blue glasses that mask the oil's colour entirely, warmed in the taster's hand and covered with a watch glass. The point is to stop colour biasing the score, because tasters consistently rate darker green oils as \"fresher\" or \"more intense\" even when blind tasting shows no difference."
+        },
+        {
+          "type": "p",
+          "text": "That practice is the clearest signal in the whole industry that colour and quality are two separate things, judged by two separate methods."
+        }
+      ]
+    },
+    {
+      "heading": "Does filtration change the colour?",
+      "id": "does-filtration-change-colour",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yes, noticeably. Unfiltered oil still carries microscopic olive particles and moisture, which scatter light and give a cloudy, often deeper green appearance. Filtered oil has those particles removed, so it looks clearer and can appear a shade lighter even from the same batch."
+        },
+        {
+          "type": "p",
+          "text": "Neither version is wrong. Some producers filter for shelf stability and a clear bottle; others leave oil unfiltered for a short period after pressing, which is a style choice rather than a defect."
+        }
+      ]
+    },
+    {
+      "heading": "Does the colour fade as the bottle ages?",
+      "id": "does-colour-fade-with-age",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Slowly, yes. Chlorophyll and carotenoid pigments break down with light and time, so an oil that started deep green can drift toward a duller, more yellow-green shade over many months, especially if it has seen light. That shift is a better clue to age than to quality on its own."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**A dark glass bottle** slows this fading by blocking most light — see the bottle guide for why colour and size are chosen the way they are.",
+            "**A clear glass bottle** left near a window fades faster, colour and flavour together.",
+            "**A colour shift alone**, without a change in smell or taste, is not proof the oil has gone off."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "So what should you actually judge a bottle on?",
+      "id": "what-to-judge-instead",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The label, not the shade in the glass: the grade stated, a harvest or production date, a named country of origin, and how the oil smells and tastes once opened. Colour is a visual note worth knowing about, not a checklist item."
+        },
+        {
+          "type": "p",
+          "text": "[How to choose authentic extra virgin olive oil](/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia) covers the checks that actually separate a genuine bottle from a poor one."
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "heading": "Should colour ever be a reason to buy or avoid a bottle?",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "On its own, no. Use colour as one small observation, not a verdict: a deep green oil is not automatically fresher or better than a gold one, and a gold oil is not automatically weaker. Judge the label, the date and how the oil actually tastes, the same way a professional taste panel is forced to."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Why is my olive oil green instead of gold?",
+      "a": "It likely came from an earlier harvest, which carries more chlorophyll, or it is unfiltered, which keeps fine particles suspended that deepen the colour. Both are normal."
+    },
+    {
+      "q": "Does a darker green olive oil taste stronger?",
+      "a": "Not reliably from colour alone. Flavour intensity comes from the olive variety, ripeness at harvest and polyphenol content, which do not map cleanly onto colour."
+    },
+    {
+      "q": "Is pale gold olive oil lower quality?",
+      "a": "No. Gold usually just means a later harvest or a filtered oil. It can be extra virgin exactly as easily as a green one."
+    },
+    {
+      "q": "Why do taste panels use blue glasses?",
+      "a": "To hide the oil's colour so it cannot bias the score. Tasters have been shown to rate darker oils as fresher even when there is no real difference, so colour is deliberately removed from the test."
+    },
+    {
+      "q": "Does olive oil colour change as it ages?",
+      "a": "Slowly, yes. The pigments break down with light and time, so colour can dull or shift over many months. That is a clue to age, not proof of spoilage on its own."
+    },
+    {
+      "q": "Should I choose an oil based on its colour in the shop?",
+      "a": "Better to check the grade, harvest or production date and country of origin on the label, and judge the oil itself once opened. Colour alone is not a reliable guide."
+    }
+  ],
+  "related": [
+    {
+      "label": "Arabian Village extra virgin olive oil",
+      "path": "products",
+      "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+    },
+    {
+      "label": "How to choose authentic extra virgin olive oil in Malaysia",
+      "path": "blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
+      "description": "The label checks and taste signs that actually separate a genuine bottle from a poor one."
+    },
+    {
+      "label": "Why is my olive oil cloudy?",
+      "path": "blog/why-is-my-olive-oil-cloudy",
+      "description": "What causes haze and sediment, and when it is normal rather than a fault."
+    }
+  ]
+}

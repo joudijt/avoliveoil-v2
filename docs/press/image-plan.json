@@ -1476,6 +1476,96 @@
   "cy": 0.5
  },
  {
+  "id": "extra-light-olive-oil-vs-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "extra-light-olive-oil-vs-extra-virgin-olive-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-05-carrying.webp",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.35
+ },
+ {
+  "id": "olive-oil-calories",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.6
+ },
+ {
+  "id": "olive-oil-calories",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-color",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-color",
+  "lang": "en",
+  "slot": "inline",
+  "src": "FarmerPickingOliveOfTheTreeInTheField.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.35
+ },
+ {
+  "id": "olive-oil-vs-canola-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-05-filtering.png",
+  "zoom": 0.94,
+  "cx": 0.4,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-vs-canola-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-04-crates.webp",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.35
+ },
+ {
+  "id": "rosemary-infused-olive-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.94,
+  "cx": 0.6,
+  "cy": 0.4
+ },
+ {
+  "id": "rosemary-infused-olive-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-04-extraction.png",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.45
+ },
+ {
   "id": "beli-minyak-zaitun-kl",
   "lang": "ms",
   "slot": "hero",

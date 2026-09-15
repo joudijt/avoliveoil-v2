@@ -12204,7 +12204,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressCaraMakanMinyakZaitunSetiapHariHero",
-      "alt": "Botol minyak zaitun di atas meja makan keluarga"
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
     },
     "ogImage": "/og/blog-cara-makan-minyak-zaitun-setiap-hari.jpg",
     "intro": [
@@ -12227,7 +12227,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
-            "alt": "Minyak zaitun dititiskan ke atas pinggan nasi dan ikan bakar"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -12246,7 +12246,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
-            "alt": "Minyak zaitun dititiskan ke atas pinggan nasi dan ikan bakar"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -12286,7 +12286,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
-            "alt": "Minyak zaitun dititiskan ke atas pinggan nasi dan ikan bakar"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -12305,7 +12305,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
-            "alt": "Minyak zaitun dititiskan ke atas pinggan nasi dan ikan bakar"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       },
@@ -12324,7 +12324,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
-            "alt": "Minyak zaitun dititiskan ke atas pinggan nasi dan ikan bakar"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           },
           {
             "type": "p",
@@ -12347,7 +12347,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCaraMakanMinyakZaitunSetiapHariInline",
-            "alt": "Minyak zaitun dititiskan ke atas pinggan nasi dan ikan bakar"
+            "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
           }
         ]
       }
@@ -12440,7 +12440,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainHero",
-      "alt": "Minyak zaitun hijau dalam gelas kaca dilihat menentang cahaya"
+      "alt": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"
     },
     "ogImage": "/og/blog-kelebihan-extra-virgin-olive-oil-berbanding-gred-lain.jpg",
     "intro": [
@@ -12463,7 +12463,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -12482,7 +12482,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -12501,7 +12501,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -12546,7 +12546,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -12565,7 +12565,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -12584,7 +12584,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       },
@@ -12603,7 +12603,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanExtraVirginOliveOilBerbandingGredLainInline",
-            "alt": "Minyak zaitun dituang perlahan daripada botol"
+            "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
           }
         ]
       }
@@ -12696,7 +12696,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressKelebihanOliveOilUntukDapurHarianHero",
-      "alt": "Botol kaca gelap berisi minyak zaitun di atas meja dapur"
+      "alt": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut"
     },
     "ogImage": "/og/blog-kelebihan-olive-oil-untuk-dapur-harian.jpg",
     "intro": [
@@ -12719,7 +12719,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanOliveOilUntukDapurHarianInline",
-            "alt": "Minyak zaitun dituang ke dalam mangkuk kecil di sebelah roti"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -12764,7 +12764,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanOliveOilUntukDapurHarianInline",
-            "alt": "Minyak zaitun dituang ke dalam mangkuk kecil di sebelah roti"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -12783,7 +12783,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanOliveOilUntukDapurHarianInline",
-            "alt": "Minyak zaitun dituang ke dalam mangkuk kecil di sebelah roti"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -12823,7 +12823,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanOliveOilUntukDapurHarianInline",
-            "alt": "Minyak zaitun dituang ke dalam mangkuk kecil di sebelah roti"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       },
@@ -12847,7 +12847,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanOliveOilUntukDapurHarianInline",
-            "alt": "Minyak zaitun dituang ke dalam mangkuk kecil di sebelah roti"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           },
           {
             "type": "p",
@@ -12870,7 +12870,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressKelebihanOliveOilUntukDapurHarianInline",
-            "alt": "Minyak zaitun dituang ke dalam mangkuk kecil di sebelah roti"
+            "alt": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"
           }
         ]
       }
@@ -12963,7 +12963,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressMaksudOliveOilDalamBahasaMalaysiaHero",
-      "alt": "Label botol minyak zaitun dibaca dari dekat"
+      "alt": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki"
     },
     "ogImage": "/og/blog-maksud-olive-oil-dalam-bahasa-malaysia.jpg",
     "intro": [
@@ -12986,7 +12986,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -13051,7 +13051,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -13070,7 +13070,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -13089,7 +13089,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -13113,7 +13113,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -13132,7 +13132,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           }
         ]
       },
@@ -13151,7 +13151,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMaksudOliveOilDalamBahasaMalaysiaInline",
-            "alt": "Buah zaitun hijau dan ungu di atas meja kayu"
+            "alt": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"
           },
           {
             "type": "p",
@@ -13508,7 +13508,7 @@ export const MS_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunPanduanLengkapHero",
-      "alt": "Pokok zaitun tua di ladang dengan botol minyak di hadapan"
+      "alt": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli"
     },
     "ogImage": "/og/blog-minyak-zaitun-panduan-lengkap.jpg",
     "intro": [
@@ -13531,7 +13531,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -13550,7 +13550,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -13569,7 +13569,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -13588,7 +13588,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -13607,7 +13607,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -13662,7 +13662,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       },
@@ -13681,7 +13681,7 @@ export const MS_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressMinyakZaitunPanduanLengkapInline",
-            "alt": "Minyak zaitun hijau dalam mangkuk kecil di atas meja"
+            "alt": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu"
           }
         ]
       }

@@ -276,6 +276,16 @@ import pressVitaminsInExtraVirginOliveOilHero from '../../assets/images/press/vi
 import pressVitaminsInExtraVirginOliveOilInline from '../../assets/images/press/vitamins-in-extra-virgin-olive-oil-inline.webp';
 import pressWhichOliveOilToBuyHero from '../../assets/images/press/which-olive-oil-to-buy-hero.webp';
 import pressWhichOliveOilToBuyInline from '../../assets/images/press/which-olive-oil-to-buy-inline.webp';
+import pressExtraLightOliveOilVsExtraVirginOliveOilHero from '../../assets/images/press/extra-light-olive-oil-vs-extra-virgin-olive-oil-hero.webp';
+import pressExtraLightOliveOilVsExtraVirginOliveOilInline from '../../assets/images/press/extra-light-olive-oil-vs-extra-virgin-olive-oil-inline.webp';
+import pressOliveOilCaloriesHero from '../../assets/images/press/olive-oil-calories-hero.webp';
+import pressOliveOilCaloriesInline from '../../assets/images/press/olive-oil-calories-inline.webp';
+import pressOliveOilColorHero from '../../assets/images/press/olive-oil-color-hero.webp';
+import pressOliveOilColorInline from '../../assets/images/press/olive-oil-color-inline.webp';
+import pressOliveOilVsCanolaOilHero from '../../assets/images/press/olive-oil-vs-canola-oil-hero.webp';
+import pressOliveOilVsCanolaOilInline from '../../assets/images/press/olive-oil-vs-canola-oil-inline.webp';
+import pressRosemaryInfusedOliveOilHero from '../../assets/images/press/rosemary-infused-olive-oil-hero.webp';
+import pressRosemaryInfusedOliveOilInline from '../../assets/images/press/rosemary-infused-olive-oil-inline.webp';
 
 /**
  * Article bodies reference photos by key rather than by import so the content
@@ -553,4 +563,14 @@ export const ARTICLE_IMAGES: Record<ImageKey, string> = {
   pressVitaminsInExtraVirginOliveOilInline,
   pressWhichOliveOilToBuyHero,
   pressWhichOliveOilToBuyInline,
+  pressExtraLightOliveOilVsExtraVirginOliveOilHero,
+  pressExtraLightOliveOilVsExtraVirginOliveOilInline,
+  pressOliveOilCaloriesHero,
+  pressOliveOilCaloriesInline,
+  pressOliveOilColorHero,
+  pressOliveOilColorInline,
+  pressOliveOilVsCanolaOilHero,
+  pressOliveOilVsCanolaOilInline,
+  pressRosemaryInfusedOliveOilHero,
+  pressRosemaryInfusedOliveOilInline,
 };
