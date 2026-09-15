@@ -19,6 +19,14 @@ DirectorySlash Off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+  # www. and bare answer 200 with no redirect, so Google indexes them as three
+  # separate homepages despite the matching canonical tag (found live in GSC
+  # 2026-09-10: www./bare/en all return 200, canonical is ignored because the
+  # duplicate is never redirected away). Fold www. into the apex before any
+  # other rule runs.
+  RewriteCond %{HTTP_HOST} ^www\.avoliveoil\.com$ [NC]
+  RewriteRule ^ https://avoliveoil.com%{REQUEST_URI} [R=301,L]
+
   # The bare domain used to fall through to DirectoryIndex and serve the empty
   # 442-byte SPA shell: no title, no description, no og:image, no JSON-LD. That
   # is the single most-shared URL of the site (pasting avoliveoil.com into

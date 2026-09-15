@@ -1,0 +1,180 @@
+{
+  "id": "vitamins-in-extra-virgin-olive-oil",
+  "lang": "en",
+  "slug": "vitamins-in-extra-virgin-olive-oil",
+  "seoTitle": "Vitamins in Extra Virgin Olive Oil, and What Else",
+  "metaTitle": "Vitamins in Extra Virgin Olive Oil, and What Else",
+  "metaDescription": "What is actually in the bottle: the fat fraction, vitamin E, the polyphenols behind the bitterness, and why no number on a label proves anything.",
+  "focusKeyword": "vitamins in extra virgin olive oil",
+  "relatedKeywords": [
+    "what is in extra virgin olive oil",
+    "extra virgin olive oil composition",
+    "vitamin e in olive oil",
+    "alpha tocopherol olive oil",
+    "polyphenols in olive oil",
+    "oleocanthal",
+    "hydroxytyrosol",
+    "oleic acid monounsaturated fat",
+    "what refining removes from olive oil",
+    "light olive oil calories"
+  ],
+  "category": "Understanding olive oil",
+  "tags": ["composition", "polyphenols", "vitamin e", "grades"],
+  "h1": "The Vitamins in Extra Virgin Olive Oil, and Everything Else in the Bottle",
+  "excerpt": "A plain description of what extra virgin olive oil is made of, why the minor compounds are there, and why this site publishes no laboratory number for its own bottle.",
+  "keyTakeaway": "Extra virgin olive oil is roughly 70 to 80 percent oleic acid, a monounsaturated fat, plus a small fraction of minor compounds. The best known is vitamin E as alpha-tocopherol, alongside polyphenols such as hydroxytyrosol, tyrosol and oleocanthal. Refining strips most of that minor fraction out.",
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10",
+  "readingTime": 5,
+  "heroAlt": "Green olive oil in a clear glass against daylight",
+  "inlineAlt": "Olive oil poured slowly from a bottle into a glass",
+  "intro": [
+    "This is a description of what is in the bottle, not an argument about what it does to a person. Those are different subjects and only one of them belongs on a page written by a seller.",
+    "Everything below is at category level, and there are almost no numbers in it. That absence is deliberate, and the last section explains why."
+  ],
+  "sections": [
+    {
+      "heading": "What is most of the bottle?",
+      "id": "the-fat-fraction",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Fat, and mostly one kind of it. Roughly 70 to 80 percent of extra virgin olive oil is oleic acid, a monounsaturated fatty acid, with smaller amounts of polyunsaturated and saturated fats making up the rest. Monounsaturated simply describes the shape of the molecule: one double bond in the chain."
+        },
+        {
+          "type": "p",
+          "text": "That shape is why olive oil behaves as it does in a kitchen. It is liquid at room temperature, it thickens and clouds when cold rather than setting hard, and it is more stable in a warm pan than an oil built mostly of polyunsaturated fats."
+        }
+      ]
+    },
+    {
+      "heading": "Where do the vitamins come in?",
+      "id": "vitamin-e",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "In the small remainder. The vitamin present in any meaningful way is vitamin E, in the form of alpha-tocopherol, and it is worth understanding why it is there. Alpha-tocopherol is an antioxidant that protects the oil itself from going rancid. It is part of the fruit's own preservation system."
+        },
+        {
+          "type": "p",
+          "text": "Vitamins A, C and the B group are not present in any quantity that a page like this should be discussing. Olive oil is a fat, and it carries what a fat carries."
+        }
+      ]
+    },
+    {
+      "heading": "What are the polyphenols, and why can you taste them?",
+      "id": "polyphenols",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Polyphenols are the other half of the minor fraction, and they are the reason a good extra virgin oil tastes of something. Hydroxytyrosol, tyrosol, oleocanthal and the oleuropein derivatives are the ones usually named. Together they account for the bitterness on the tongue and the peppery catch at the back of the throat."
+        },
+        {
+          "type": "p",
+          "text": "This is the useful part for a buyer: those compounds are audible in the mouth. An oil that tastes flat has fewer of them, and no label can tell you that. [Why olive oil tastes bitter](/blog/why-does-olive-oil-taste-bitter) goes further into it."
+        }
+      ]
+    },
+    {
+      "heading": "What does refining take out?",
+      "id": "what-refining-removes",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Almost all of the minor fraction. Refining uses heat, and sometimes solvents, to clean up an oil that failed the extra virgin tests. It works, in the sense that the result is edible and neutral, but the aroma compounds, most of the polyphenols and a good deal of the tocopherol go with the faults."
+        },
+        {
+          "type": "table",
+          "head": ["Compound", "What it does in the oil"],
+          "rows": [
+            ["Oleic acid", "Most of the volume; sets how the oil behaves hot and cold"],
+            ["Alpha-tocopherol (vitamin E)", "Protects the oil from going rancid"],
+            ["Hydroxytyrosol and tyrosol", "Contribute the bitterness on the tongue"],
+            ["Oleocanthal", "The peppery catch at the back of the throat"],
+            ["Chlorophyll and carotenoids", "The green and gold colour"]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Is light olive oil lower in calories?",
+      "id": "light-is-not-lighter",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "No. Light and extra light on an olive oil label describe flavour and colour, not energy. Every olive oil, refined or not, is around 120 calories per tablespoon, the same as any other cooking oil. A light oil is lighter in taste because refining removed the taste."
+        },
+        {
+          "type": "p",
+          "text": "It is one of the most persistently misread words in the category. The grade ladder is set out properly in [extra virgin versus pure olive oil](/blog/extra-virgin-olive-oil-vs-pure-olive-oil)."
+        }
+      ]
+    },
+    {
+      "heading": "Why are there no numbers on this page?",
+      "id": "no-numbers-here",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Because this site publishes no laboratory analysis of its own bottle, and a number without a certificate behind it is decoration. Polyphenol content varies by cultivar, harvest timing, pressing and age, so a figure quoted for olive oil in general says very little about the specific bottle in your hand."
+        },
+        {
+          "type": "p",
+          "text": "The same test applies to any brand. If a label carries a figure, ask what test produced it, when, and whether the certificate is available. If none of that can be answered, treat the number as marketing."
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "heading": "What to take from this",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Extra virgin olive oil is a fat carrying a small, fragile fraction of vitamin E and polyphenols that refining removes and that you can taste directly. If your real question is about diet or a health condition, that belongs with a doctor or a registered dietitian, not with a bottle. Nothing here is medical advice."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "What vitamins are in extra virgin olive oil?",
+      "a": "Vitamin E, as alpha-tocopherol, is the one present in any meaningful way. It functions as an antioxidant that protects the oil itself from turning rancid."
+    },
+    {
+      "q": "Does extra virgin olive oil contain more vitamin E than refined?",
+      "a": "It retains more of the minor fraction generally, because it is never refined. How much any given bottle holds depends on cultivar, harvest and age."
+    },
+    {
+      "q": "What are polyphenols in olive oil?",
+      "a": "Compounds including hydroxytyrosol, tyrosol and oleocanthal that survive only in unrefined oil. They are what you taste as bitterness and the peppery catch in the throat."
+    },
+    {
+      "q": "Is light olive oil lower in calories?",
+      "a": "No. Light describes flavour and colour after refining. All olive oil is around 120 calories per tablespoon, the same as any other cooking oil."
+    },
+    {
+      "q": "Can I tell the polyphenol level by tasting?",
+      "a": "Roughly. A pronounced bitterness and a throat catch indicate they are present. A flat, waxy oil has fewer, and no home test gives you a figure."
+    },
+    {
+      "q": "Why does this page not give quantities?",
+      "a": "Because no laboratory analysis of this site's own bottle is published, and category averages say little about a specific bottle. A number without a certificate behind it is decoration."
+    }
+  ],
+  "related": [
+    {
+      "label": "Arabian Village extra virgin olive oil",
+      "path": "products",
+      "description": "Palestinian first cold pressed oil, unrefined, in 250 ml and 500 ml."
+    },
+    {
+      "label": "Extra virgin vs pure olive oil",
+      "path": "blog/extra-virgin-olive-oil-vs-pure-olive-oil",
+      "description": "The grade ladder, and exactly what refining takes out of a bottle."
+    },
+    {
+      "label": "Why does olive oil taste bitter?",
+      "path": "blog/why-does-olive-oil-taste-bitter",
+      "description": "The polyphenols behind the bitterness, and why their absence is the worrying result."
+    }
+  ]
+}
