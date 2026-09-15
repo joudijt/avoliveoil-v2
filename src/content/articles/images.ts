@@ -286,6 +286,16 @@ import pressOliveOilVsCanolaOilHero from '../../assets/images/press/olive-oil-vs
 import pressOliveOilVsCanolaOilInline from '../../assets/images/press/olive-oil-vs-canola-oil-inline.webp';
 import pressRosemaryInfusedOliveOilHero from '../../assets/images/press/rosemary-infused-olive-oil-hero.webp';
 import pressRosemaryInfusedOliveOilInline from '../../assets/images/press/rosemary-infused-olive-oil-inline.webp';
+import pressIsOliveOilAVegetableOilHero from '../../assets/images/press/is-olive-oil-a-vegetable-oil-hero.webp';
+import pressIsOliveOilAVegetableOilInline from '../../assets/images/press/is-olive-oil-a-vegetable-oil-inline.webp';
+import pressOliveOilHarvestSeasonHero from '../../assets/images/press/olive-oil-harvest-season-hero.webp';
+import pressOliveOilHarvestSeasonInline from '../../assets/images/press/olive-oil-harvest-season-inline.webp';
+import pressOliveOilVarietiesHero from '../../assets/images/press/olive-oil-varieties-hero.webp';
+import pressOliveOilVarietiesInline from '../../assets/images/press/olive-oil-varieties-inline.webp';
+import pressOliveOilVsGrapeseedOilHero from '../../assets/images/press/olive-oil-vs-grapeseed-oil-hero.webp';
+import pressOliveOilVsGrapeseedOilInline from '../../assets/images/press/olive-oil-vs-grapeseed-oil-inline.webp';
+import pressOliveOilVsRedPalmOilHero from '../../assets/images/press/olive-oil-vs-red-palm-oil-hero.webp';
+import pressOliveOilVsRedPalmOilInline from '../../assets/images/press/olive-oil-vs-red-palm-oil-inline.webp';
 
 /**
  * Article bodies reference photos by key rather than by import so the content
@@ -573,4 +583,14 @@ export const ARTICLE_IMAGES: Record<ImageKey, string> = {
   pressOliveOilVsCanolaOilInline,
   pressRosemaryInfusedOliveOilHero,
   pressRosemaryInfusedOliveOilInline,
+  pressIsOliveOilAVegetableOilHero,
+  pressIsOliveOilAVegetableOilInline,
+  pressOliveOilHarvestSeasonHero,
+  pressOliveOilHarvestSeasonInline,
+  pressOliveOilVarietiesHero,
+  pressOliveOilVarietiesInline,
+  pressOliveOilVsGrapeseedOilHero,
+  pressOliveOilVsGrapeseedOilInline,
+  pressOliveOilVsRedPalmOilHero,
+  pressOliveOilVsRedPalmOilInline,
 };

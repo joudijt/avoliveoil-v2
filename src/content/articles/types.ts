@@ -305,7 +305,17 @@ export type ImageKey =
   | 'pressOliveOilVsCanolaOilHero'
   | 'pressOliveOilVsCanolaOilInline'
   | 'pressRosemaryInfusedOliveOilHero'
-  | 'pressRosemaryInfusedOliveOilInline';
+  | 'pressRosemaryInfusedOliveOilInline'
+  | 'pressIsOliveOilAVegetableOilHero'
+  | 'pressIsOliveOilAVegetableOilInline'
+  | 'pressOliveOilHarvestSeasonHero'
+  | 'pressOliveOilHarvestSeasonInline'
+  | 'pressOliveOilVarietiesHero'
+  | 'pressOliveOilVarietiesInline'
+  | 'pressOliveOilVsGrapeseedOilHero'
+  | 'pressOliveOilVsGrapeseedOilInline'
+  | 'pressOliveOilVsRedPalmOilHero'
+  | 'pressOliveOilVsRedPalmOilInline';
 
 export interface FaqItem {
   q: string;

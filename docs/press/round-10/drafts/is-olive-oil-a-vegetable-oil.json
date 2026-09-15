@@ -1,0 +1,170 @@
+{
+  "id": "is-olive-oil-a-vegetable-oil",
+  "lang": "en",
+  "slug": "is-olive-oil-a-vegetable-oil",
+  "seoTitle": "Is Olive Oil a Vegetable Oil? The Short Answer",
+  "metaTitle": "Is Olive Oil a Vegetable Oil? The Short Answer",
+  "metaDescription": "Olive oil is technically a vegetable oil, but the label on a Malaysian shelf usually means something narrower. Here is what that word actually covers.",
+  "focusKeyword": "is olive oil a vegetable oil",
+  "relatedKeywords": [
+    "olive oil vegetable oil difference",
+    "is olive oil considered a vegetable oil",
+    "what counts as vegetable oil",
+    "vegetable oil vs olive oil",
+    "types of vegetable oil",
+    "why is olive oil not called vegetable oil",
+    "olive oil classification",
+    "plant based oils list",
+    "fruit oil vs seed oil",
+    "olive oil vs cooking oil"
+  ],
+  "category": "Olive oil basics",
+  "tags": ["basics", "vegetable oil", "classification", "olive oil basics"],
+  "h1": "Is Olive Oil a Vegetable Oil? Yes, but the Label Means Something Narrower",
+  "excerpt": "Botanically, olive oil is a vegetable oil, since that term covers any oil pressed from a plant. On a Malaysian shelf, \"vegetable oil\" almost always means a specific blended seed oil, not olive oil.",
+  "keyTakeaway": "Yes, technically. \"Vegetable oil\" is a broad botanical category for any oil extracted from a plant, and olive oil qualifies. In everyday shopping, though, the bottle labelled simply \"vegetable oil\" on a Malaysian shelf is almost always a refined, neutral blend of seed oils, a specific product category that olive oil is never grouped into.",
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-09-15",
+  "readingTime": 4,
+  "heroAlt": "A bottle of green olive oil standing apart from a row of generic pale cooking oil bottles on a shelf",
+  "inlineAlt": "A hand reaching past a shelf of blended cooking oils toward a single bottle of olive oil",
+  "intro": [
+    "This is really two questions wearing one sentence. Botanically, is olive oil a plant-derived oil? Yes, obviously. Is it the product a Malaysian shopper means when they pick up a bottle labelled \"vegetable oil\"? No, and the gap between those two answers is the whole point of this page.",
+    "Both answers are true at the same time, because \"vegetable oil\" is used loosely to mean two different things: a scientific category, and a specific supermarket product."
+  ],
+  "sections": [
+    {
+      "heading": "What does \"vegetable oil\" actually mean botanically?",
+      "id": "botanical-meaning",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "In food science, vegetable oil is any oil extracted from a plant source, as opposed to an animal fat like butter or lard. That definition covers oil pressed from a fruit, a seed, a nut or a bean. Olive oil is pressed from the flesh of a fruit, so under this definition it is unambiguously a vegetable oil."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**Fruit oils** — olive oil, palm oil, avocado oil",
+            "**Seed oils** — canola, sunflower, grapeseed, sesame",
+            "**Bean oils** — soybean oil",
+            "**Nut oils** — groundnut (peanut) oil"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "So why doesn't a bottle of olive oil ever say \"vegetable oil\"?",
+      "id": "why-not-labelled-that-way",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Because \"vegetable oil\" has become a specific product name in the shop, not just a category. When Malaysian packaging says \"vegetable oil\" with no other qualifier, it almost always means a refined, neutral-tasting blend, commonly soybean, canola, sunflower or palm-based, sold as an everyday cooking oil with no fruit or seed named on the front."
+        },
+        {
+          "type": "p",
+          "text": "Olive oil is always labelled by name specifically, because the flavour, the origin and the grade are the entire reason someone is buying it rather than the cheaper generic blend."
+        }
+      ]
+    },
+    {
+      "heading": "How is olive oil different from a bottle labelled \"vegetable oil\"?",
+      "id": "how-they-differ",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The named oil is usually a single source, mechanically pressed rather than chemically refined, especially in its extra virgin form. The generic bottle is usually a blend of several refined seed oils chosen for cost and a high smoke point, with flavour deliberately removed rather than preserved."
+        },
+        {
+          "type": "table",
+          "head": ["", "Olive oil", "Generic \"vegetable oil\""],
+          "rows": [
+            ["Source", "Single fruit, named on the label", "Blend, rarely specified"],
+            ["Processing", "Mechanically pressed (extra virgin)", "Refined, heat and solvent processed"],
+            ["Flavour", "Present, varies by grade", "Deliberately neutral"],
+            ["Typical price", "Higher", "Lower, everyday oil"]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Does the label matter for cooking?",
+      "id": "does-it-matter-for-cooking",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yes, in practice. A recipe that calls for \"vegetable oil\" is usually asking for a neutral, high-heat oil and does not expect olive oil's own flavour in the finished dish. Using extra virgin olive oil in its place changes the taste of the result, not just the ingredient list."
+        },
+        {
+          "type": "p",
+          "text": "A refined \"light\" or \"pure\" olive oil sits closer to what a generic vegetable oil recipe expects, since refining strips out most of the flavour that makes extra virgin distinct. See [extra light olive oil vs extra virgin olive oil](/blog/extra-light-olive-oil-vs-extra-virgin-olive-oil) for what that grade actually changes."
+        }
+      ]
+    },
+    {
+      "heading": "Is olive oil ever grouped with other vegetable oils on a label?",
+      "id": "grouped-on-labels",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Sometimes, in nutrition science and on ingredient panels for packaged food, where a product might list \"contains vegetable oil (olive)\" to satisfy a regulatory category while still naming the specific source. That is a labelling convention for processed food, not something you will see on a standalone bottle of olive oil."
+        },
+        {
+          "type": "p",
+          "text": "On the shelf itself, the distinction holds: named oils are sold and marketed on their identity, generic vegetable oil is sold on price and neutrality."
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "heading": "What should you take from this?",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "If a recipe or a nutrition label says \"vegetable oil,\" it almost certainly means a generic refined blend, not olive oil, even though olive oil technically belongs to the same broad plant-oil family. Read the specific name on the bottle rather than the category, because that is where the actual difference in flavour, processing and price lives."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Is olive oil technically a vegetable oil?",
+      "a": "Yes. Vegetable oil is any oil extracted from a plant, and olive oil, pressed from the fruit of the olive tree, fits that definition."
+    },
+    {
+      "q": "Why isn't olive oil sold as \"vegetable oil\"?",
+      "a": "Because \"vegetable oil\" on a shelf has become a specific product name for a generic refined blend, usually soybean, canola, sunflower or palm-based, not a catch-all label for every plant oil."
+    },
+    {
+      "q": "Can I substitute vegetable oil for olive oil?",
+      "a": "For high-heat, neutral-flavour cooking, usually yes. For a dish where olive oil's own taste matters, no, because generic vegetable oil is refined to have almost no flavour."
+    },
+    {
+      "q": "Is canola oil a vegetable oil?",
+      "a": "Yes, and canola is one of the seed oils commonly blended into bottles labelled simply \"vegetable oil\" in Malaysia."
+    },
+    {
+      "q": "What oils count as vegetable oils?",
+      "a": "Any oil pressed from a plant: fruit oils like olive and palm, seed oils like canola, sunflower and grapeseed, bean oils like soybean, and nut oils like peanut."
+    },
+    {
+      "q": "Is extra virgin olive oil refined like generic vegetable oil?",
+      "a": "No. Extra virgin olive oil is mechanically pressed with nothing refined out. Generic vegetable oil blends go through industrial refining with heat and solvents."
+    }
+  ],
+  "related": [
+    {
+      "label": "Arabian Village extra virgin olive oil",
+      "path": "products",
+      "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+    },
+    {
+      "label": "Olive oil vs canola oil",
+      "path": "blog/olive-oil-vs-canola-oil",
+      "description": "A named oil compared directly against a common blended vegetable oil ingredient."
+    },
+    {
+      "label": "Extra light olive oil vs extra virgin olive oil",
+      "path": "blog/extra-light-olive-oil-vs-extra-virgin-olive-oil",
+      "description": "The refined olive oil grade closest in behaviour to a generic vegetable oil."
+    }
+  ]
+}

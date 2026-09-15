@@ -1566,6 +1566,96 @@
   "cy": 0.45
  },
  {
+  "id": "is-olive-oil-a-vegetable-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.6
+ },
+ {
+  "id": "is-olive-oil-a-vegetable-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-08-final.png",
+  "zoom": 0.62,
+  "cx": 0.12,
+  "cy": 0.35
+ },
+ {
+  "id": "olive-oil-harvest-season",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-07-bottling.png",
+  "zoom": 0.94,
+  "cx": 0.5,
+  "cy": 0.6
+ },
+ {
+  "id": "olive-oil-harvest-season",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-03-picking.webp",
+  "zoom": 0.97,
+  "cx": 0.5,
+  "cy": 0.65
+ },
+ {
+  "id": "olive-oil-varieties",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero.png",
+  "zoom": 0.97,
+  "cx": 0.6,
+  "cy": 0.6
+ },
+ {
+  "id": "olive-oil-varieties",
+  "lang": "en",
+  "slot": "inline",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.94,
+  "cx": 0.5,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-vs-grapeseed-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "OliveGroveSunsetHero-ar.png",
+  "zoom": 0.91,
+  "cx": 0.5,
+  "cy": 0.5
+ },
+ {
+  "id": "olive-oil-vs-grapeseed-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "HeroAVOliveOilBottleInTheField.png",
+  "zoom": 0.62,
+  "cx": 0.16,
+  "cy": 0.35
+ },
+ {
+  "id": "olive-oil-vs-red-palm-oil",
+  "lang": "en",
+  "slot": "hero",
+  "src": "journey-04-extraction.png",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.4
+ },
+ {
+  "id": "olive-oil-vs-red-palm-oil",
+  "lang": "en",
+  "slot": "inline",
+  "src": "journey-02-sunset.webp",
+  "zoom": 0.97,
+  "cx": 0.4,
+  "cy": 0.65
+ },
+ {
   "id": "beli-minyak-zaitun-kl",
   "lang": "ms",
   "slot": "hero",

@@ -1,0 +1,173 @@
+{
+  "id": "olive-oil-harvest-season",
+  "lang": "en",
+  "slug": "olive-oil-harvest-season-early-vs-late",
+  "seoTitle": "Olive Harvest Season: Early vs Late Harvest Oil",
+  "metaTitle": "Olive Harvest Season: Early vs Late Harvest Oil",
+  "metaDescription": "Olive harvest runs autumn into winter, and when the fruit was picked changes the oil more than most buyers realise. Early vs late harvest, explained.",
+  "focusKeyword": "olive oil harvest season",
+  "relatedKeywords": [
+    "when is olive harvest season",
+    "olive picking season",
+    "early harvest olive oil",
+    "late harvest olive oil",
+    "olive harvest month",
+    "when are olives picked",
+    "fresh harvest olive oil",
+    "olive oil harvest date",
+    "green olive vs ripe olive oil",
+    "olive harvest Palestine"
+  ],
+  "category": "Origin & provenance",
+  "tags": ["harvest", "origin", "provenance", "olive oil basics"],
+  "h1": "Olive Oil Harvest Season, and Why Early vs Late Actually Matters",
+  "excerpt": "Olive harvest runs roughly October to January in the Northern Hemisphere, and whether the fruit was picked early, still green, or later, fully ripe, is one of the biggest single factors in how the finished oil tastes.",
+  "keyTakeaway": "Olive harvest runs roughly October through January in Mediterranean and Levantine groves, moving north to south as the fruit ripens. Olives picked early, still green, give a sharper, more peppery oil. Olives picked later, once purple-black, give a milder, softer oil. Neither timing is a defect — they are two different styles from the same tree.",
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-09-15",
+  "readingTime": 5,
+  "heroAlt": "A hand holding a small branch of olives, some still green and some turning purple-black",
+  "inlineAlt": "Baskets of freshly picked green olives beside a stone wall in a grove",
+  "intro": [
+    "A bottle rarely says outright whether its fruit was picked early or late in the season, but the difference shows up in the first sip: one style bites at the back of the throat, the other barely does.",
+    "Harvest timing is a genuine production choice, not an accident of weather, and understanding it explains a lot of the flavour variation between two extra virgin oils that otherwise look identical on the shelf."
+  ],
+  "sections": [
+    {
+      "heading": "When does olive harvest season actually happen?",
+      "id": "when-harvest-happens",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "In the Mediterranean and Levant, harvest runs roughly from October through January, starting earlier in northern groves and later further south, and shifting a few weeks year to year with the weather. Olives do not all ripen at once even on the same tree, so a single grove's harvest can stretch across several weeks of picking."
+        },
+        {
+          "type": "p",
+          "text": "Malaysia grows no olives, so every bottle sold here carries a harvest that happened months earlier on another continent, which is also part of why the price moves with a heavy or light harvest year — see [olive oil price in Malaysia: what you are paying for](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for) for that side of it."
+        }
+      ]
+    },
+    {
+      "heading": "What changes between an early and a late harvest?",
+      "id": "early-vs-late",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "An olive's colour tracks its ripeness: green when unripe, moving through purple to black as it fully ripens. Pressing the fruit early, while still green, gives an oil with more chlorophyll, sharper bitterness and a stronger peppery finish. Waiting for the fruit to ripen further gives a softer, milder, sometimes sweeter oil with less bite."
+        },
+        {
+          "type": "table",
+          "head": ["", "Early harvest", "Late harvest"],
+          "rows": [
+            ["Fruit colour at picking", "Green, unripe", "Purple to black, ripe"],
+            ["Flavour", "Sharp, bitter, peppery", "Mild, soft, sometimes sweet"],
+            ["Yield per tree", "Lower", "Higher"],
+            ["Typical price", "Higher", "Lower"]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Why would a producer pick early on purpose?",
+      "id": "why-pick-early",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "An unripe olive yields less oil per kilo than a ripe one, so picking early is a deliberate trade: less oil, at higher cost, for a sharper, more assertive flavour and generally a higher polyphenol content, since those compounds are more concentrated before the fruit fully ripens."
+        },
+        {
+          "type": "p",
+          "text": "That trade-off is why early-harvest oil usually costs more and why it is often marketed on the bottle as a selling point rather than left unmentioned."
+        }
+      ]
+    },
+    {
+      "heading": "Does harvest timing affect how long the oil keeps?",
+      "id": "harvest-and-shelf-life",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Generally, yes, in favour of early harvest. Oil from greener, less ripe fruit tends to carry more natural antioxidant compounds, which slow the oxidation that eventually turns any olive oil rancid. That is a difference in how the oil ages, not a claim about what it does once eaten — see [olive oil shelf life](/blog/olive-oil-shelf-life-how-long-a-bottle-lasts) for storage advice that applies regardless of harvest timing."
+        },
+        {
+          "type": "p",
+          "text": "Late-harvest oil is not fragile by comparison, but it typically has a somewhat shorter practical window before its flavour starts to fade."
+        }
+      ]
+    },
+    {
+      "heading": "Can you tell harvest timing from the bottle alone?",
+      "id": "telling-from-the-bottle",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Not reliably from colour, since colour in the bottle depends on filtering and variety as much as harvest timing. The clearest signal is taste: a strong peppery catch in the throat points toward an earlier harvest, while a soft, buttery finish points toward a later one. A harvest date printed on the label, where one exists, is a more direct clue than guessing from appearance."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "**Peppery, sharp finish** — usually points to an earlier harvest.",
+            "**Mild, soft finish** — usually points to a later harvest.",
+            "**A printed harvest or pressing date** — the most direct evidence, when the label carries one."
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "heading": "What should you take from harvest timing?",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Neither early nor late harvest is the \"correct\" oil — they are two genuinely different styles from the same fruit, and which one suits you depends on whether you want a bold, peppery oil or a mild, soft one. If a bottle tastes noticeably sharper or noticeably gentler than another extra virgin you have tried, harvest timing is very likely part of why."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "When is olive harvest season?",
+      "a": "Roughly October through January in Mediterranean and Levantine groves, starting earlier in the north and later further south, shifting a few weeks year to year with weather."
+    },
+    {
+      "q": "What is the difference between early and late harvest olive oil?",
+      "a": "Early harvest, from greener fruit, gives a sharper, more bitter, peppery oil with typically higher polyphenol content. Late harvest, from riper fruit, gives a milder, softer, sometimes sweeter oil."
+    },
+    {
+      "q": "Is early harvest olive oil better than late harvest?",
+      "a": "Not objectively — they are different styles. Early harvest suits someone who wants a bold, assertive oil; late harvest suits someone who prefers mild and soft."
+    },
+    {
+      "q": "Why is early harvest olive oil more expensive?",
+      "a": "Unripe olives yield less oil per kilo than ripe ones, so picking early trades a lower yield for a sharper flavour, which raises the cost per bottle."
+    },
+    {
+      "q": "Does harvest timing affect shelf life?",
+      "a": "Generally yes. Oil from greener, less ripe fruit tends to carry more natural antioxidant compounds, which slow the oxidation that eventually turns any olive oil rancid."
+    },
+    {
+      "q": "Can you tell if an oil is early or late harvest just by looking at it?",
+      "a": "Not reliably by colour alone, since colour also depends on variety and filtering. Taste is a better signal: peppery and sharp usually points to earlier harvest, mild and soft to later."
+    },
+    {
+      "q": "When is olive harvest in Palestine?",
+      "a": "Palestinian groves typically harvest from October into November, a period that has stayed a community and village event rather than an industrial one."
+    }
+  ],
+  "related": [
+    {
+      "label": "Palestinian olive oil: what makes it different",
+      "path": "blog/palestinian-olive-oil-what-makes-it-different",
+      "description": "The grove, the community harvest and the Nabali variety this site's own oil comes from."
+    },
+    {
+      "label": "Arabian Village extra virgin olive oil",
+      "path": "products",
+      "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+    },
+    {
+      "label": "Why does olive oil taste bitter?",
+      "path": "blog/why-does-olive-oil-taste-bitter",
+      "description": "Bitterness explained in full, one of the traits harvest timing most directly shapes."
+    }
+  ]
+}

@@ -2215,6 +2215,16 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil for bread and dipping",
         "path": "blog/olive-oil-for-bread-and-dipping",
         "description": "The unheated use that shows an oil’s character, and what to serve with it."
+      },
+      {
+        "label": "Olive oil varieties: Arbequina, Koroneiki and beyond",
+        "path": "blog/olive-oil-varieties-arbequina-koroneiki-and-more",
+        "description": "Where Nabali sits among the world's other named olive cultivars."
+      },
+      {
+        "label": "Olive harvest season, early vs late",
+        "path": "blog/olive-oil-harvest-season-early-vs-late",
+        "description": "What picking timing changes in the oil, beyond this grove's own harvest."
       }
     ]
   },
@@ -6401,6 +6411,11 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil smoke point: what heat it can take",
         "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
         "description": "What temperature olive oil actually reaches in a home pan, and where frying stops making sense."
+      },
+      {
+        "label": "Olive oil vs grapeseed oil",
+        "path": "blog/olive-oil-vs-grapeseed-oil",
+        "description": "Another refined, neutral high-heat oil compared against olive oil."
       },
       {
         "label": "How to cook with olive oil in a Malaysian kitchen",
@@ -14152,6 +14167,16 @@ export const EN_ARTICLES: Article[] = [
         "label": "Extra light olive oil vs extra virgin olive oil",
         "path": "blog/extra-light-olive-oil-vs-extra-virgin-olive-oil",
         "description": "The refined olive oil option for the same high-heat jobs canola is often used for."
+      },
+      {
+        "label": "Olive oil vs red palm oil",
+        "path": "blog/olive-oil-vs-red-palm-oil",
+        "description": "Canola's refined-seed-oil territory, compared against an unrefined local alternative instead."
+      },
+      {
+        "label": "Is olive oil a vegetable oil?",
+        "path": "blog/is-olive-oil-a-vegetable-oil",
+        "description": "Where canola and other blended seed oils fit into the \"vegetable oil\" label olive oil never carries."
       }
     ]
   },
@@ -14394,6 +14419,1191 @@ export const EN_ARTICLES: Article[] = [
         "label": "Olive oil for bread and dipping",
         "path": "blog/olive-oil-for-bread-and-dipping",
         "description": "Where an infused oil like this one actually gets used at the table."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 10 ---------------- */
+  {
+    "id": "is-olive-oil-a-vegetable-oil",
+    "slug": "is-olive-oil-a-vegetable-oil",
+    "seoTitle": "Is Olive Oil a Vegetable Oil? The Short Answer",
+    "metaTitle": "Is Olive Oil a Vegetable Oil? The Short Answer",
+    "metaDescription": "Olive oil is technically a vegetable oil, but the label on a Malaysian shelf usually means something narrower. Here is what that word actually covers.",
+    "focusKeyword": "is olive oil a vegetable oil",
+    "relatedKeywords": [
+      "olive oil vegetable oil difference",
+      "is olive oil considered a vegetable oil",
+      "what counts as vegetable oil",
+      "vegetable oil vs olive oil",
+      "types of vegetable oil",
+      "why is olive oil not called vegetable oil",
+      "olive oil classification",
+      "plant based oils list",
+      "fruit oil vs seed oil",
+      "olive oil vs cooking oil"
+    ],
+    "category": "Olive oil basics",
+    "tags": [
+      "basics",
+      "vegetable oil",
+      "classification",
+      "olive oil basics"
+    ],
+    "h1": "Is Olive Oil a Vegetable Oil? Yes, but the Label Means Something Narrower",
+    "excerpt": "Botanically, olive oil is a vegetable oil, since that term covers any oil pressed from a plant. On a Malaysian shelf, \"vegetable oil\" almost always means a specific blended seed oil, not olive oil.",
+    "keyTakeaway": "Yes, technically. \"Vegetable oil\" is a broad botanical category for any oil extracted from a plant, and olive oil qualifies. In everyday shopping, though, the bottle labelled simply \"vegetable oil\" on a Malaysian shelf is almost always a refined, neutral blend of seed oils, a specific product category that olive oil is never grouped into.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 4,
+    "hero": {
+      "src": "pressIsOliveOilAVegetableOilHero",
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-is-olive-oil-a-vegetable-oil.jpg",
+    "intro": [
+      "This is really two questions wearing one sentence. Botanically, is olive oil a plant-derived oil? Yes, obviously. Is it the product a Malaysian shopper means when they pick up a bottle labelled \"vegetable oil\"? No, and the gap between those two answers is the whole point of this page.",
+      "Both answers are true at the same time, because \"vegetable oil\" is used loosely to mean two different things: a scientific category, and a specific supermarket product."
+    ],
+    "sections": [
+      {
+        "heading": "What does \"vegetable oil\" actually mean botanically?",
+        "id": "botanical-meaning",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In food science, vegetable oil is any oil extracted from a plant source, as opposed to an animal fat like butter or lard. That definition covers oil pressed from a fruit, a seed, a nut or a bean. Olive oil is pressed from the flesh of a fruit, so under this definition it is unambiguously a vegetable oil."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Fruit oils** — olive oil, palm oil, avocado oil",
+              "**Seed oils** — canola, sunflower, grapeseed, sesame",
+              "**Bean oils** — soybean oil",
+              "**Nut oils** — groundnut (peanut) oil"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressIsOliveOilAVegetableOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "So why doesn't a bottle of olive oil ever say \"vegetable oil\"?",
+        "id": "why-not-labelled-that-way",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Because \"vegetable oil\" has become a specific product name in the shop, not just a category. When Malaysian packaging says \"vegetable oil\" with no other qualifier, it almost always means a refined, neutral-tasting blend, commonly soybean, canola, sunflower or palm-based, sold as an everyday cooking oil with no fruit or seed named on the front."
+          },
+          {
+            "type": "p",
+            "text": "Olive oil is always labelled by name specifically, because the flavour, the origin and the grade are the entire reason someone is buying it rather than the cheaper generic blend."
+          },
+          {
+            "type": "image",
+            "src": "pressIsOliveOilAVegetableOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "How is olive oil different from a bottle labelled \"vegetable oil\"?",
+        "id": "how-they-differ",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The named oil is usually a single source, mechanically pressed rather than chemically refined, especially in its extra virgin form. The generic bottle is usually a blend of several refined seed oils chosen for cost and a high smoke point, with flavour deliberately removed rather than preserved."
+          },
+          {
+            "type": "table",
+            "head": [
+              "",
+              "Olive oil",
+              "Generic \"vegetable oil\""
+            ],
+            "rows": [
+              [
+                "Source",
+                "Single fruit, named on the label",
+                "Blend, rarely specified"
+              ],
+              [
+                "Processing",
+                "Mechanically pressed (extra virgin)",
+                "Refined, heat and solvent processed"
+              ],
+              [
+                "Flavour",
+                "Present, varies by grade",
+                "Deliberately neutral"
+              ],
+              [
+                "Typical price",
+                "Higher",
+                "Lower, everyday oil"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressIsOliveOilAVegetableOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Does the label matter for cooking?",
+        "id": "does-it-matter-for-cooking",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Yes, in practice. A recipe that calls for \"vegetable oil\" is usually asking for a neutral, high-heat oil and does not expect olive oil's own flavour in the finished dish. Using extra virgin olive oil in its place changes the taste of the result, not just the ingredient list."
+          },
+          {
+            "type": "p",
+            "text": "A refined \"light\" or \"pure\" olive oil sits closer to what a generic vegetable oil recipe expects, since refining strips out most of the flavour that makes extra virgin distinct. See [extra light olive oil vs extra virgin olive oil](/blog/extra-light-olive-oil-vs-extra-virgin-olive-oil) for what that grade actually changes."
+          },
+          {
+            "type": "image",
+            "src": "pressIsOliveOilAVegetableOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      },
+      {
+        "heading": "Is olive oil ever grouped with other vegetable oils on a label?",
+        "id": "grouped-on-labels",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Sometimes, in nutrition science and on ingredient panels for packaged food, where a product might list \"contains vegetable oil (olive)\" to satisfy a regulatory category while still naming the specific source. That is a labelling convention for processed food, not something you will see on a standalone bottle of olive oil."
+          },
+          {
+            "type": "p",
+            "text": "On the shelf itself, the distinction holds: named oils are sold and marketed on their identity, generic vegetable oil is sold on price and neutrality."
+          },
+          {
+            "type": "image",
+            "src": "pressIsOliveOilAVegetableOilInline",
+            "alt": "Whole olives and olive leaves scattered across a wooden table"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What should you take from this?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If a recipe or a nutrition label says \"vegetable oil,\" it almost certainly means a generic refined blend, not olive oil, even though olive oil technically belongs to the same broad plant-oil family. Read the specific name on the bottle rather than the category, because that is where the actual difference in flavour, processing and price lives."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil technically a vegetable oil?",
+        "a": "Yes. Vegetable oil is any oil extracted from a plant, and olive oil, pressed from the fruit of the olive tree, fits that definition."
+      },
+      {
+        "q": "Why isn't olive oil sold as \"vegetable oil\"?",
+        "a": "Because \"vegetable oil\" on a shelf has become a specific product name for a generic refined blend, usually soybean, canola, sunflower or palm-based, not a catch-all label for every plant oil."
+      },
+      {
+        "q": "Can I substitute vegetable oil for olive oil?",
+        "a": "For high-heat, neutral-flavour cooking, usually yes. For a dish where olive oil's own taste matters, no, because generic vegetable oil is refined to have almost no flavour."
+      },
+      {
+        "q": "Is canola oil a vegetable oil?",
+        "a": "Yes, and canola is one of the seed oils commonly blended into bottles labelled simply \"vegetable oil\" in Malaysia."
+      },
+      {
+        "q": "What oils count as vegetable oils?",
+        "a": "Any oil pressed from a plant: fruit oils like olive and palm, seed oils like canola, sunflower and grapeseed, bean oils like soybean, and nut oils like peanut."
+      },
+      {
+        "q": "Is extra virgin olive oil refined like generic vegetable oil?",
+        "a": "No. Extra virgin olive oil is mechanically pressed with nothing refined out. Generic vegetable oil blends go through industrial refining with heat and solvents."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Olive oil vs canola oil",
+        "path": "blog/olive-oil-vs-canola-oil",
+        "description": "A named oil compared directly against a common blended vegetable oil ingredient."
+      },
+      {
+        "label": "Extra light olive oil vs extra virgin olive oil",
+        "path": "blog/extra-light-olive-oil-vs-extra-virgin-olive-oil",
+        "description": "The refined olive oil grade closest in behaviour to a generic vegetable oil."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 10 ---------------- */
+  {
+    "id": "olive-oil-harvest-season",
+    "slug": "olive-oil-harvest-season-early-vs-late",
+    "seoTitle": "Olive Harvest Season: Early vs Late Harvest Oil",
+    "metaTitle": "Olive Harvest Season: Early vs Late Harvest Oil",
+    "metaDescription": "Olive harvest runs autumn into winter, and when the fruit was picked changes the oil more than most buyers realise. Early vs late harvest, explained.",
+    "focusKeyword": "olive oil harvest season",
+    "relatedKeywords": [
+      "when is olive harvest season",
+      "olive picking season",
+      "early harvest olive oil",
+      "late harvest olive oil",
+      "olive harvest month",
+      "when are olives picked",
+      "fresh harvest olive oil",
+      "olive oil harvest date",
+      "green olive vs ripe olive oil",
+      "olive harvest Palestine"
+    ],
+    "category": "Origin & provenance",
+    "tags": [
+      "harvest",
+      "origin",
+      "provenance",
+      "olive oil basics"
+    ],
+    "h1": "Olive Oil Harvest Season, and Why Early vs Late Actually Matters",
+    "excerpt": "Olive harvest runs roughly October to January in the Northern Hemisphere, and whether the fruit was picked early, still green, or later, fully ripe, is one of the biggest single factors in how the finished oil tastes.",
+    "keyTakeaway": "Olive harvest runs roughly October through January in Mediterranean and Levantine groves, moving north to south as the fruit ripens. Olives picked early, still green, give a sharper, more peppery oil. Olives picked later, once purple-black, give a milder, softer oil. Neither timing is a defect — they are two different styles from the same tree.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilHarvestSeasonHero",
+      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+    },
+    "ogImage": "/og/blog-olive-oil-harvest-season.jpg",
+    "intro": [
+      "A bottle rarely says outright whether its fruit was picked early or late in the season, but the difference shows up in the first sip: one style bites at the back of the throat, the other barely does.",
+      "Harvest timing is a genuine production choice, not an accident of weather, and understanding it explains a lot of the flavour variation between two extra virgin oils that otherwise look identical on the shelf."
+    ],
+    "sections": [
+      {
+        "heading": "When does olive harvest season actually happen?",
+        "id": "when-harvest-happens",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In the Mediterranean and Levant, harvest runs roughly from October through January, starting earlier in northern groves and later further south, and shifting a few weeks year to year with the weather. Olives do not all ripen at once even on the same tree, so a single grove's harvest can stretch across several weeks of picking."
+          },
+          {
+            "type": "p",
+            "text": "Malaysia grows no olives, so every bottle sold here carries a harvest that happened months earlier on another continent, which is also part of why the price moves with a heavy or light harvest year — see [olive oil price in Malaysia: what you are paying for](/blog/olive-oil-price-in-malaysia-what-you-are-paying-for) for that side of it."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilHarvestSeasonInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "What changes between an early and a late harvest?",
+        "id": "early-vs-late",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An olive's colour tracks its ripeness: green when unripe, moving through purple to black as it fully ripens. Pressing the fruit early, while still green, gives an oil with more chlorophyll, sharper bitterness and a stronger peppery finish. Waiting for the fruit to ripen further gives a softer, milder, sometimes sweeter oil with less bite."
+          },
+          {
+            "type": "table",
+            "head": [
+              "",
+              "Early harvest",
+              "Late harvest"
+            ],
+            "rows": [
+              [
+                "Fruit colour at picking",
+                "Green, unripe",
+                "Purple to black, ripe"
+              ],
+              [
+                "Flavour",
+                "Sharp, bitter, peppery",
+                "Mild, soft, sometimes sweet"
+              ],
+              [
+                "Yield per tree",
+                "Lower",
+                "Higher"
+              ],
+              [
+                "Typical price",
+                "Higher",
+                "Lower"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilHarvestSeasonInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Why would a producer pick early on purpose?",
+        "id": "why-pick-early",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An unripe olive yields less oil per kilo than a ripe one, so picking early is a deliberate trade: less oil, at higher cost, for a sharper, more assertive flavour and generally a higher polyphenol content, since those compounds are more concentrated before the fruit fully ripens."
+          },
+          {
+            "type": "p",
+            "text": "That trade-off is why early-harvest oil usually costs more and why it is often marketed on the bottle as a selling point rather than left unmentioned."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilHarvestSeasonInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Does harvest timing affect how long the oil keeps?",
+        "id": "harvest-and-shelf-life",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Generally, yes, in favour of early harvest. Oil from greener, less ripe fruit tends to carry more natural antioxidant compounds, which slow the oxidation that eventually turns any olive oil rancid. That is a difference in how the oil ages, not a claim about what it does once eaten — see [olive oil shelf life](/blog/olive-oil-shelf-life-how-long-a-bottle-lasts) for storage advice that applies regardless of harvest timing."
+          },
+          {
+            "type": "p",
+            "text": "Late-harvest oil is not fragile by comparison, but it typically has a somewhat shorter practical window before its flavour starts to fade."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilHarvestSeasonInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      },
+      {
+        "heading": "Can you tell harvest timing from the bottle alone?",
+        "id": "telling-from-the-bottle",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Not reliably from colour, since colour in the bottle depends on filtering and variety as much as harvest timing. The clearest signal is taste: a strong peppery catch in the throat points toward an earlier harvest, while a soft, buttery finish points toward a later one. A harvest date printed on the label, where one exists, is a more direct clue than guessing from appearance."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Peppery, sharp finish** — usually points to an earlier harvest.",
+              "**Mild, soft finish** — usually points to a later harvest.",
+              "**A printed harvest or pressing date** — the most direct evidence, when the label carries one."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilHarvestSeasonInline",
+            "alt": "Pickers working through the branches during the olive harvest"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What should you take from harvest timing?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Neither early nor late harvest is the \"correct\" oil — they are two genuinely different styles from the same fruit, and which one suits you depends on whether you want a bold, peppery oil or a mild, soft one. If a bottle tastes noticeably sharper or noticeably gentler than another extra virgin you have tried, harvest timing is very likely part of why."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "When is olive harvest season?",
+        "a": "Roughly October through January in Mediterranean and Levantine groves, starting earlier in the north and later further south, shifting a few weeks year to year with weather."
+      },
+      {
+        "q": "What is the difference between early and late harvest olive oil?",
+        "a": "Early harvest, from greener fruit, gives a sharper, more bitter, peppery oil with typically higher polyphenol content. Late harvest, from riper fruit, gives a milder, softer, sometimes sweeter oil."
+      },
+      {
+        "q": "Is early harvest olive oil better than late harvest?",
+        "a": "Not objectively — they are different styles. Early harvest suits someone who wants a bold, assertive oil; late harvest suits someone who prefers mild and soft."
+      },
+      {
+        "q": "Why is early harvest olive oil more expensive?",
+        "a": "Unripe olives yield less oil per kilo than ripe ones, so picking early trades a lower yield for a sharper flavour, which raises the cost per bottle."
+      },
+      {
+        "q": "Does harvest timing affect shelf life?",
+        "a": "Generally yes. Oil from greener, less ripe fruit tends to carry more natural antioxidant compounds, which slow the oxidation that eventually turns any olive oil rancid."
+      },
+      {
+        "q": "Can you tell if an oil is early or late harvest just by looking at it?",
+        "a": "Not reliably by colour alone, since colour also depends on variety and filtering. Taste is a better signal: peppery and sharp usually points to earlier harvest, mild and soft to later."
+      },
+      {
+        "q": "When is olive harvest in Palestine?",
+        "a": "Palestinian groves typically harvest from October into November, a period that has stayed a community and village event rather than an industrial one."
+      }
+    ],
+    "related": [
+      {
+        "label": "Palestinian olive oil: what makes it different",
+        "path": "blog/palestinian-olive-oil-what-makes-it-different",
+        "description": "The grove, the community harvest and the Nabali variety this site's own oil comes from."
+      },
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Why does olive oil taste bitter?",
+        "path": "blog/why-does-olive-oil-taste-bitter",
+        "description": "Bitterness explained in full, one of the traits harvest timing most directly shapes."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 10 ---------------- */
+  {
+    "id": "olive-oil-varieties",
+    "slug": "olive-oil-varieties-arbequina-koroneiki-and-more",
+    "seoTitle": "Olive Oil Varieties: Arbequina, Koroneiki and Beyond",
+    "metaTitle": "Olive Oil Varieties: Arbequina, Koroneiki and Beyond",
+    "metaDescription": "Arbequina, Koroneiki and the other olive varieties you'll see named on a bottle, what each one actually tastes like, and where Nabali fits among them.",
+    "focusKeyword": "olive oil varieties",
+    "relatedKeywords": [
+      "arbequina olive oil",
+      "koroneiki olive oil",
+      "types of olive oils",
+      "single varietal olive oil",
+      "arbequina vs koroneiki",
+      "olive oil cultivars",
+      "picual olive oil",
+      "hojiblanca olive oil",
+      "what is arbequina",
+      "olive varieties taste"
+    ],
+    "category": "Origin & provenance",
+    "tags": [
+      "olive varieties",
+      "origin",
+      "arbequina",
+      "koroneiki"
+    ],
+    "h1": "Olive Oil Varieties: What Arbequina, Koroneiki and Others Actually Taste Like",
+    "excerpt": "A bottle naming Arbequina, Koroneiki or another variety is telling you about a specific olive, the way a wine label names a grape. Here is what each of the common ones actually changes in the glass.",
+    "keyTakeaway": "Olive oil varieties are named after the specific olive cultivar an oil was pressed from, the same way a wine names its grape. Arbequina gives a mild, buttery oil; Koroneiki gives a robust, peppery one with a reputation for high polyphenol content; Picual and Hojiblanca sit between the two. The variety a grove grows shapes the oil's flavour as much as anything done to it after pressing.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVarietiesHero",
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+    },
+    "ogImage": "/og/blog-olive-oil-varieties.jpg",
+    "intro": [
+      "A wine label names its grape because the grape shapes the taste more than almost anything the winemaker does afterward. Olive oil works the same way, and some labels are starting to say so: Arbequina, Koroneiki, Picual, Hojiblanca, Nabali.",
+      "None of these names describe a grade or a region on their own. They describe the specific olive the oil came from, and that choice changes the flavour in the bottle more than most buyers realise."
+    ],
+    "sections": [
+      {
+        "heading": "What does an olive variety name actually tell you?",
+        "id": "what-a-variety-tells-you",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It tells you which cultivar of olive tree the fruit came from, out of several hundred that exist worldwide. A grove can be planted with a single variety, producing a \"single varietal\" oil, or with several, producing a blend, the way a wine can be one grape or several."
+          },
+          {
+            "type": "p",
+            "text": "Variety shapes flavour, aroma, colour and how long the oil keeps, independent of the grade on the label. A single-varietal oil and a blended oil can both be genuinely extra virgin while tasting quite different."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVarietiesInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "What does Arbequina taste like?",
+        "id": "arbequina",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Arbequina is a small, round olive originally from Catalonia, Spain, now also widely planted in California. It gives a mild, buttery, fruity oil with low bitterness and little of the peppery throat catch stronger varieties carry, making it one of the more approachable single-varietal oils."
+          },
+          {
+            "type": "table",
+            "head": [
+              "Variety",
+              "Typical profile",
+              "Common origin"
+            ],
+            "rows": [
+              [
+                "Arbequina",
+                "Mild, buttery, fruity",
+                "Catalonia, California"
+              ],
+              [
+                "Koroneiki",
+                "Robust, peppery, grassy",
+                "Crete, mainland Greece"
+              ],
+              [
+                "Picual",
+                "Bold, bitter, peppery, stable",
+                "Jaén, southern Spain"
+              ],
+              [
+                "Hojiblanca",
+                "Balanced, mildly bitter",
+                "Andalusia, Spain"
+              ],
+              [
+                "Nabali",
+                "Green, faintly bitter, peppery",
+                "Palestinian groves"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVarietiesInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "What does Koroneiki taste like?",
+        "id": "koroneiki",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Koroneiki is a small Greek olive, dominant in Crete and much of mainland Greece, known for a robust, grassy, distinctly peppery oil. It is also frequently cited for a higher natural polyphenol content than milder varieties, which contributes to both its sharper taste and its reputation for keeping well."
+          },
+          {
+            "type": "p",
+            "text": "Where Arbequina is chosen for approachability, Koroneiki is usually chosen by people who specifically want that assertive, peppery character in a raw drizzle or a dip."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVarietiesInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "How do Picual and Hojiblanca compare?",
+        "id": "picual-and-hojiblanca",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Picual, grown heavily around Jaén in southern Spain, is one of the most widely planted olives in the world and gives a bold, bitter, peppery oil that is also known for oxidising slowly, which is one reason it turns up so often in blends meant to travel and store well. Hojiblanca, also Andalusian, sits closer to the middle: balanced, mildly bitter, without Picual's intensity or Arbequina's softness."
+          },
+          {
+            "type": "p",
+            "text": "Neither is objectively better than the other. They are simply different points on the same spectrum from mild to assertive that every variety on this page sits somewhere along."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVarietiesInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "Where does Nabali fit among these?",
+        "id": "where-nabali-fits",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nabali is the dominant olive in Palestinian groves, also called Baladi, meaning local, with Nabali Muhassan and Souri grown alongside it. It sits closer to the Koroneiki end of the spectrum than the Arbequina end: green rather than sweet, grassy, faintly bitter, peppery in the throat."
+          },
+          {
+            "type": "p",
+            "text": "This site's own oil is a Nabali-dominant single-origin — [Palestinian olive oil: what makes it different](/blog/palestinian-olive-oil-what-makes-it-different) covers the grove, the harvest and the variety in more detail than fits on this page."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVarietiesInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      },
+      {
+        "heading": "Does variety matter more than grade?",
+        "id": "variety-vs-grade",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "They answer different questions, so neither replaces the other. Grade (extra virgin, virgin, refined) tells you how the oil was processed and how much of the fruit's character survived that process. Variety tells you which fruit it was to begin with. Two extra virgin oils can be equally well made and still taste noticeably different because one is Arbequina and the other is Koroneiki."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Want mild and approachable?** Look for Arbequina or a blend leaning that way.",
+              "**Want bold and peppery?** Look for Koroneiki, Picual or Nabali.",
+              "**Not sure?** A blend of several varieties, which is how most supermarket extra virgin oil is made, aims for a middle ground rather than either extreme."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVarietiesInline",
+            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "What should you take from the variety name?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Treat a named variety on a label the way you would a grape on a wine label: a real clue to what is in the glass, worth reading before you buy if you already know which end of the mild-to-peppery spectrum you prefer. If the label names no variety at all, it is very likely a blend built for a consistent middle ground rather than a strong personality."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the difference between Arbequina and Koroneiki olive oil?",
+        "a": "Arbequina gives a mild, buttery, low-bitterness oil. Koroneiki gives a robust, grassy, distinctly peppery oil often cited for higher polyphenol content. They sit at opposite ends of the mild-to-assertive spectrum."
+      },
+      {
+        "q": "Is one olive variety better than another?",
+        "a": "No, they suit different preferences. Variety shapes flavour intensity and character, not objective quality — a well-made Arbequina and a well-made Koroneiki can both be excellent extra virgin oils."
+      },
+      {
+        "q": "What variety is Palestinian olive oil made from?",
+        "a": "Mainly Nabali, also called Baladi, alongside Nabali Muhassan and Souri. It gives a green, faintly bitter, peppery oil closer to Koroneiki's profile than Arbequina's."
+      },
+      {
+        "q": "Does the olive variety affect the grade?",
+        "a": "No. Grade describes how the oil was processed (extra virgin, virgin, refined). Variety describes which olive it was pressed from. An oil can be extra virgin regardless of which variety or blend of varieties it came from."
+      },
+      {
+        "q": "What is a single-varietal olive oil?",
+        "a": "An oil pressed from one named olive cultivar rather than a blend of several, the way a wine can be one grape variety rather than a blend."
+      },
+      {
+        "q": "Which olive variety has the highest polyphenol content?",
+        "a": "Koroneiki is frequently cited for high natural polyphenol content among common varieties, though the exact level in any bottle depends on harvest timing and processing, not variety alone."
+      },
+      {
+        "q": "Where is Picual olive oil from?",
+        "a": "Picual is grown heavily around Jaén in southern Spain and is one of the most widely planted olive varieties in the world, known for a bold, bitter, peppery oil that keeps well."
+      }
+    ],
+    "related": [
+      {
+        "label": "Palestinian olive oil: what makes it different",
+        "path": "blog/palestinian-olive-oil-what-makes-it-different",
+        "description": "The Nabali-dominant groves this site's own oil is pressed from, in full."
+      },
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Why does olive oil taste bitter?",
+        "path": "blog/why-does-olive-oil-taste-bitter",
+        "description": "Bitterness explained in more depth, one factor variety also shapes."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 10 ---------------- */
+  {
+    "id": "olive-oil-vs-grapeseed-oil",
+    "slug": "olive-oil-vs-grapeseed-oil",
+    "seoTitle": "Olive Oil vs Grapeseed Oil: Taste, Heat and Best Use",
+    "metaTitle": "Olive Oil vs Grapeseed Oil: Taste, Heat and Best Use",
+    "metaDescription": "Olive oil and grapeseed oil compared on extraction, flavour, smoke point and price, so you know which one actually suits the dish in front of you.",
+    "focusKeyword": "olive oil vs grapeseed oil",
+    "relatedKeywords": [
+      "grapeseed oil vs olive oil",
+      "is grapeseed oil healthier than olive oil",
+      "grapeseed oil smoke point",
+      "grapeseed oil for cooking",
+      "grape oil vs olive oil",
+      "grapeseed oil vs extra virgin olive oil",
+      "can I substitute grapeseed oil for olive oil",
+      "grapeseed oil vs olive oil for frying",
+      "difference between grapeseed oil and olive oil",
+      "grapeseed oil taste"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "comparison",
+      "grapeseed oil",
+      "cooking oils",
+      "buying guide"
+    ],
+    "h1": "Olive Oil vs Grapeseed Oil: Which One Actually Suits Your Cooking",
+    "excerpt": "Olive oil is pressed from a fruit and keeps its flavour; grapeseed oil is a refined by-product of winemaking, extracted from the seeds left over after grapes are pressed for wine.",
+    "keyTakeaway": "Olive oil is mechanically pressed from olives and, in its extra virgin form, keeps its flavour and aroma. Grapeseed oil is a refined by-product of winemaking, pressed from grape seeds left over after wine production and processed into a neutral, high-heat oil. One is chosen for taste, the other for what it does not taste of.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsGrapeseedOilHero",
+      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-grapeseed-oil.jpg",
+    "intro": [
+      "Grapeseed oil turns up in a lot of Malaysian kitchens as the neutral option for searing and frying, often bought without much thought about where it actually comes from.",
+      "The two oils start from a completely different place: olive oil is the point of pressing an olive, while grapeseed oil is what a winery does with a seed it would otherwise throw away. That difference shapes almost everything else below."
+    ],
+    "sections": [
+      {
+        "heading": "Where does each oil actually come from?",
+        "id": "where-each-comes-from",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil is pressed from the fruit of the olive tree, and extra virgin olive oil keeps that fruit's flavour with nothing refined out. Grapeseed oil is extracted from the seeds left over after grapes are crushed for wine, then refined using heat and solvents to make it usable, since raw grape seed oil is not something anyone would cook with directly."
+          },
+          {
+            "type": "p",
+            "text": "That refining step is the same process canola and other neutral seed oils go through, which is why grapeseed oil behaves more like [canola oil](/blog/olive-oil-vs-canola-oil) than like olive oil in a kitchen."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsGrapeseedOilInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "How do they compare on taste?",
+        "id": "taste-comparison",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil carries real flavour from the fruit it was pressed from: grassy, fruity, sometimes peppery. Grapeseed oil is refined to be almost flavourless, with only the faintest nutty note if any, which is exactly why it is chosen when a dish needs an oil that stays out of the way."
+          },
+          {
+            "type": "table",
+            "head": [
+              "",
+              "Olive oil (extra virgin)",
+              "Grapeseed oil"
+            ],
+            "rows": [
+              [
+                "Flavour",
+                "Grassy, fruity, peppery finish",
+                "Neutral, faint or no taste"
+              ],
+              [
+                "Colour",
+                "Green to gold, varies",
+                "Pale gold, consistent"
+              ],
+              [
+                "Best raw use",
+                "Dressings, dipping, finishing",
+                "Rarely used raw"
+              ],
+              [
+                "Source",
+                "Pressed olives, mechanical extraction",
+                "Winery by-product, refined"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsGrapeseedOilInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "Which one handles higher heat?",
+        "id": "smoke-point-comparison",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Grapeseed oil, clearly. Refining gives it a high smoke point, noticeably above extra virgin olive oil's range, which is why it is often chosen for a hard sear or a hot wok where a neutral oil that will not smoke is the priority. Extra virgin olive oil smokes lower, which covers most home cooking but not the hottest, fastest jobs."
+          },
+          {
+            "type": "p",
+            "text": "For sustained high heat with no flavour of its own, grapeseed oil or a refined olive oil are both more practical than extra virgin."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsGrapeseedOilInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "What is the price and availability difference?",
+        "id": "price-and-availability",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Grapeseed oil is a by-product of an industry that already exists to make wine, so its cost depends heavily on the winemaking supply chain rather than on olive harvests. In Malaysia it is usually a specialty item on import shelves, while olive oil, though also imported, is far more widely stocked."
+          },
+          {
+            "type": "p",
+            "text": "Neither is a cheap everyday oil here. The choice between them tends to come down to what the dish needs rather than price alone."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsGrapeseedOilInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "Can you substitute one for the other?",
+        "id": "can-you-substitute",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For a hard sear or a neutral-flavoured bake, yes, grapeseed oil and a refined light olive oil do a similar job. For anything where olive oil's own taste is the point — a dressing, a dip, a finishing drizzle — grapeseed oil leaves the dish flatter, because it was refined specifically to have as little flavour as possible."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Swap freely** for high-heat searing or frying where neither oil's flavour matters.",
+              "**Do not swap** grapeseed oil into a dressing or dip meant to taste of olive oil — the flavour will simply be absent.",
+              "**Do not swap** extra virgin olive oil into a hard sear if avoiding smoke matters — grapeseed handles that heat better."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsGrapeseedOilInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      },
+      {
+        "heading": "Is one genuinely healthier than the other?",
+        "id": "is-one-healthier",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Extra virgin olive oil is mostly monounsaturated fat and retains polyphenols from the fruit it came from. Grapeseed oil is mostly polyunsaturated fat, a different fat profile shaped by the refining it goes through, which is a composition difference rather than a claim this article makes about treating any condition."
+          },
+          {
+            "type": "p",
+            "text": "Both are foods, not treatments. Anyone with a specific dietary or medical concern should get guidance from a doctor or registered dietitian rather than a comparison article."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsGrapeseedOilInline",
+            "alt": "A sunlit path running between old olive trees in the grove"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "So which one belongs in your kitchen?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Both, used for different jobs. Reach for grapeseed oil when the dish needs high, sustained heat and no flavour of its own, and reach for olive oil when the oil is meant to be tasted — raw, in a dressing, or finishing a dish. Picking one to replace the other everywhere usually means losing what each does best."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is olive oil or grapeseed oil better for cooking?",
+        "a": "Depends on the dish. Grapeseed suits high-heat, neutral-flavour cooking; olive oil, especially extra virgin, suits dressings, dipping and moderate-heat cooking where its flavour matters."
+      },
+      {
+        "q": "Which has a higher smoke point, olive oil or grapeseed oil?",
+        "a": "Grapeseed oil, by a clear margin, because refining removes the compounds that would otherwise break down first under heat. Extra virgin olive oil smokes at a lower range."
+      },
+      {
+        "q": "Can I use grapeseed oil instead of olive oil?",
+        "a": "For cooked, high-heat dishes, usually yes. For a dressing or anything meant to taste of olive oil, no, because grapeseed oil is refined to be nearly flavourless."
+      },
+      {
+        "q": "Where does grapeseed oil actually come from?",
+        "a": "It is extracted from grape seeds left over after grapes are pressed for wine, then refined with heat and solvents into a usable cooking oil."
+      },
+      {
+        "q": "Is grapeseed oil as natural as olive oil?",
+        "a": "No. Extra virgin olive oil is mechanically extracted with nothing refined out. Grapeseed oil goes through industrial refining before it reaches a bottle."
+      },
+      {
+        "q": "Does grapeseed oil have any flavour at all?",
+        "a": "Very little. Refining leaves it close to neutral, with at most a faint nutty note, which is why it is chosen for dishes where a flavourless oil is wanted."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Olive oil vs canola oil",
+        "path": "blog/olive-oil-vs-canola-oil",
+        "description": "Another refined, neutral seed oil compared against olive oil in a Malaysian kitchen."
+      },
+      {
+        "label": "Olive oil smoke point",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The heat range extra virgin olive oil actually handles, in more detail."
+      }
+    ]
+  },
+  /* ---------------- PRESS round 10 ---------------- */
+  {
+    "id": "olive-oil-vs-red-palm-oil",
+    "slug": "olive-oil-vs-red-palm-oil",
+    "seoTitle": "Olive Oil vs Red Palm Oil: Colour, Smoke Point and Use",
+    "metaTitle": "Olive Oil vs Red Palm Oil: Colour, Smoke Point and Use",
+    "metaDescription": "Olive oil and red palm oil compared on extraction, colour, smoke point and flavour, so you know which one actually suits the dish in front of you.",
+    "focusKeyword": "olive oil vs red palm oil",
+    "relatedKeywords": [
+      "red palm oil vs olive oil",
+      "is red palm oil better than olive oil",
+      "red palm oil smoke point",
+      "unrefined red palm oil",
+      "olive oil vs palm oil malaysia",
+      "red palm oil colour",
+      "red palm oil carotenoids",
+      "red palm oil vs extra virgin olive oil",
+      "difference between red palm oil and olive oil",
+      "red palm oil taste"
+    ],
+    "category": "Cooking with olive oil",
+    "tags": [
+      "comparison",
+      "red palm oil",
+      "cooking oils",
+      "buying guide"
+    ],
+    "h1": "Olive Oil vs Red Palm Oil: Which One Actually Suits Your Cooking",
+    "excerpt": "Olive oil is pressed from a Mediterranean fruit; red palm oil is pressed unrefined from the fruit of the oil palm and keeps its natural orange-red colour. The two rarely compete for the same dish.",
+    "keyTakeaway": "Olive oil is cold-pressed from olives and kept as close to the fruit as possible in its extra virgin form. Red palm oil is pressed from the fruit of the oil palm and left unrefined, which is why it keeps a deep orange-red colour from natural carotenoids. They come from different fruits, taste nothing alike, and are rarely substitutes for one another in the same recipe.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "readingTime": 5,
+    "hero": {
+      "src": "pressOliveOilVsRedPalmOilHero",
+      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+    },
+    "ogImage": "/og/blog-olive-oil-vs-red-palm-oil.jpg",
+    "intro": [
+      "Malaysia is one of the few places in the world where these two oils genuinely sit side by side in the same kitchen: one imported and pressed from a Mediterranean fruit, the other grown and pressed a short drive from most homes that use it.",
+      "They rarely compete for the same job. Olive oil is chosen for flavour and for finishing a dish; red palm oil is chosen for its own distinct taste, its colour, and the way local cooking has used it for generations."
+    ],
+    "sections": [
+      {
+        "heading": "Where does each oil actually come from?",
+        "id": "where-each-comes-from",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil is pressed from the fruit of the olive tree, mechanically extracted with nothing added in its extra virgin form. Red palm oil is pressed from the fleshy fruit of the oil palm and, unlike the pale refined palm oil sold as a generic cooking oil, is left unrefined, so it keeps the fruit's natural colour and much of its flavour."
+          },
+          {
+            "type": "p",
+            "text": "That unrefined state is the whole identity of red palm oil. Refining it, as most everyday frying palm oil is refined, strips the colour and most of the taste, leaving the pale neutral oil found in packaged foods."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsRedPalmOilInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "How do they compare on colour and taste?",
+        "id": "colour-and-taste",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This is where the two oils are least alike. Extra virgin olive oil runs green to gold and tastes of the fruit it came from: grassy, sometimes peppery. Red palm oil is a deep orange-red from natural carotenoids and carries an earthy, nutty flavour that is unmistakable once tasted."
+          },
+          {
+            "type": "table",
+            "head": [
+              "",
+              "Olive oil (extra virgin)",
+              "Red palm oil (unrefined)"
+            ],
+            "rows": [
+              [
+                "Colour",
+                "Green to gold",
+                "Deep orange-red"
+              ],
+              [
+                "Flavour",
+                "Grassy, fruity, peppery finish",
+                "Earthy, nutty, slightly sweet"
+              ],
+              [
+                "Typical use",
+                "Dressings, dipping, finishing",
+                "Traditional stews, rice dishes, frying"
+              ],
+              [
+                "Source",
+                "Imported Mediterranean fruit oil",
+                "Grown and pressed locally"
+              ]
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsRedPalmOilInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "Which one handles higher heat?",
+        "id": "smoke-point-comparison",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Unrefined red palm oil sits at a moderate smoke point, broadly similar to extra virgin olive oil, because neither has been refined to strip out the compounds that break down first under heat. Refined palm oil, the pale everyday cooking oil, tolerates noticeably higher and more sustained heat than either unrefined option."
+          },
+          {
+            "type": "p",
+            "text": "For a dish that needs a hard, sustained fry, a refined oil of either kind is the more practical choice. For a stew, braise or moderate saute, both extra virgin olive oil and unrefined red palm oil hold up well."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsRedPalmOilInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "What is each one actually used for?",
+        "id": "typical-uses",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Olive oil, particularly extra virgin, is used raw or at gentle heat: dressings, dipping, drizzling over a finished dish. Red palm oil's role is different: it colours and flavours the dish itself, stirred into stews, rice and braises where its earthy taste is the point, not a background note."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "**Reach for olive oil** when the oil is meant to be tasted on its own, raw or gently warmed.",
+              "**Reach for red palm oil** when the dish is built around its colour and earthy flavour, cooked in rather than added at the end.",
+              "**Neither substitutes cleanly for the other** — swapping one in changes the dish's identity, not just its oil."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsRedPalmOilInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "Can you use them in the same recipe?",
+        "id": "using-them-together",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Occasionally, yes, but not as a swap. Some cooks finish a red-palm-oil-based stew with a small drizzle of extra virgin olive oil off the heat, purely for contrast rather than to replace the base fat."
+          },
+          {
+            "type": "p",
+            "text": "Used this way they complement rather than compete: red palm oil carries the dish, olive oil adds a last layer on top."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsRedPalmOilInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      },
+      {
+        "heading": "Is one genuinely healthier than the other?",
+        "id": "is-one-healthier",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Both carry natural compounds beyond plain fat. Extra virgin olive oil retains polyphenols from the fruit it was pressed from. Unrefined red palm oil retains carotenoids, the same family of plant pigments that gives it the orange-red colour, which is a composition difference rather than a claim this article makes about treating any condition."
+          },
+          {
+            "type": "p",
+            "text": "Both oils are foods, not treatments. Anyone with a specific dietary or medical concern should get guidance from a doctor or registered dietitian rather than a comparison article."
+          },
+          {
+            "type": "image",
+            "src": "pressOliveOilVsRedPalmOilInline",
+            "alt": "Rows of olive trees in the last light of the afternoon"
+          }
+        ]
+      }
+    ],
+    "conclusion": {
+      "heading": "So which one belongs in your kitchen?",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Both, for different reasons. Keep red palm oil for the traditional dishes built around its own colour and flavour, and keep olive oil for where you want a fruit oil's own taste to show, raw or gently cooked. Treating one as a substitute for the other loses what each does best."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is red palm oil the same as regular palm oil?",
+        "a": "No. Regular palm oil sold for everyday cooking is refined, pale and neutral. Red palm oil is unrefined and keeps the fruit's natural orange-red colour and flavour."
+      },
+      {
+        "q": "Can I substitute olive oil for red palm oil?",
+        "a": "Not cleanly. Red palm oil's colour and earthy flavour are usually the point of the dish, and olive oil will not reproduce either. They suit different recipes rather than swapping for one another."
+      },
+      {
+        "q": "Which has a higher smoke point, olive oil or red palm oil?",
+        "a": "Unrefined red palm oil and extra virgin olive oil sit in a broadly similar moderate range, because neither is refined. Refined palm oil tolerates noticeably higher heat than either."
+      },
+      {
+        "q": "Why is red palm oil orange-red?",
+        "a": "Natural carotenoids in the palm fruit, the same family of pigments found in carrots, give unrefined red palm oil its deep orange-red colour."
+      },
+      {
+        "q": "Is red palm oil healthier than olive oil?",
+        "a": "Neither is simply healthier. Each retains different natural compounds from its own fruit — polyphenols in olive oil, carotenoids in red palm oil — which is a composition difference, not a health claim about either product."
+      },
+      {
+        "q": "What is red palm oil traditionally used for?",
+        "a": "Stews, rice dishes and braises where its colour and earthy, slightly sweet flavour are part of the finished dish, rather than as a neutral cooking medium."
+      },
+      {
+        "q": "Does red palm oil taste like olive oil?",
+        "a": "No. Olive oil tastes of the olive fruit — grassy, sometimes peppery. Red palm oil has an earthy, nutty, slightly sweet flavour that is entirely its own."
+      }
+    ],
+    "related": [
+      {
+        "label": "Arabian Village extra virgin olive oil",
+        "path": "products",
+        "description": "Palestinian first cold pressed oil in 250 ml and 500 ml, one ingredient and one named origin."
+      },
+      {
+        "label": "Olive oil vs canola oil",
+        "path": "blog/olive-oil-vs-canola-oil",
+        "description": "How olive oil compares with another everyday kitchen oil in Malaysia."
+      },
+      {
+        "label": "Olive oil smoke point",
+        "path": "blog/olive-oil-smoke-point-what-heat-it-can-take",
+        "description": "The heat range extra virgin olive oil actually handles, in more detail."
       }
     ]
   },
