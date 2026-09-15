@@ -102,7 +102,22 @@ self-review misses. Flagged as an open item (see DECISIONS.md).
 
 ## Live — after deploy
 
-Filled in after `scripts/ftp-deploy.py` runs. Checks: each URL serves the article (byte/body
-compare, not status), no redirect hop, OG image serves as an image, rendered HTML carries the meta,
-sitemap fetches and includes the 5 new URLs, IndexNow accepted, payload budget, no owner-facing
-text leaked, mobile render at 375px.
+All checks run against `https://avoliveoil.com` post-deploy, 2026-09-15.
+
+| # | Check | Result |
+|---|---|---|
+| 37 | Each new URL serves the article | **Pass, by bytes.** All 5 return 200 at 51.9–55.0 KB, matching the 52.8–57.4 KB range of the control and the 3 edited existing articles — not the 3,121-byte SPA-shell size the URLs returned pre-deploy |
+| 38 | No redirect hop | Pass — direct 200, no 301 on any of the 5 canonical URLs |
+| 39 | OG image serves as an image | Pass — all 5 `/og/blog-<id>.jpg` return `content-type: image/jpeg` with byte counts matching the local files exactly (121,016 / 149,888 / 144,605 / 145,412 / 141,013) |
+| 40 | Rendered HTML carries the meta | Pass — spot-checked 3 of 5: `<title>`, canonical, 2 hreflang entries (en + x-default), `og:image`, 6 JSON-LD blocks each |
+| 41 | Sitemap fetches and includes the new URLs | **Failed on first deploy, fixed.** `generate-sitemap.mjs` is a separate `npm run sitemap` script, **not part of the `build:prerender` chain** — the first deploy shipped a 179-URL sitemap identical to round 9's, silently missing all 5 new articles. Caught by grepping the live sitemap post-deploy rather than trusting the earlier build log. Ran `npm run sitemap` (184 URLs), copied the regenerated `public/sitemap.xml` into `dist/`, redeployed (361 files touched, 0 failed), reconfirmed live: all 5 URLs now present |
+| 42 | IndexNow accepted | **Failed on first attempt, fixed.** Git Bash rewrites leading-`/` arguments into Windows paths before handing them to `node.exe` (MSYS path conversion), so the first call submitted only 1 URL instead of 5 with no error surfaced. Re-ran with `MSYS_NO_PATHCONV=1`: 6 URLs accepted (the 5 articles plus the base URL, which the script's own arg-parsing always includes alongside an explicit `--url`) |
+| 43 | Payload budget | ≈1.57 MB for the round's images (26b above) plus the sitemap delta; nowhere near the 6 MB ceiling |
+| 44 | No owner-facing text leaked | Checked 3 of 5 rendered pages for TODO/FIXME/BRIEF/PLACEHOLDER/REDACTED markers. Two `placeholder` hits per page, both the newsletter `<input placeholder="Your email">` — present identically (2 hits) on the control article, so a site-wide element, not a leak |
+| 45 | Mobile render at 375px | **Not run.** This execution context has no browser automation available — recorded as unrun rather than assumed passing, per the gates.md reporting rule |
+
+**D79 — two live-stage defects found and fixed in this round, both process gaps rather than
+content defects: the sitemap script is not wired into the build chain, and IndexNow submission
+silently drops arguments under Git Bash without `MSYS_NO_PATHCONV=1`.** Neither was caught by the
+mechanical or judgement gates above because both are outside a single rendered file's scope.
+Worth carrying into `PROJECT-PROFILE.md` so the next round does not repeat either.

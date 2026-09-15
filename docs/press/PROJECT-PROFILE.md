@@ -16,6 +16,7 @@ Every line cites what proved it. Hierarchy of truth: codebase → docs → chat.
 | Images | Keyed map, 12 keys, imported from `src/assets/images` | `src/content/articles/images.ts` \| Code \| High |
 | Routes | Enumerated in the prerender script from `slugs.json` | `scripts/prerender.mjs` L18–39 \| Code \| High |
 | Build | `npm run build:prerender` (llms → surfaces → tsc → vite → puppeteer) | `package.json` \| Code \| High |
+| Sitemap | **⛔ `npm run sitemap` (`generate-sitemap.mjs`) is a SEPARATE script, not part of `build:prerender`.** Round 10 deployed a stale sitemap missing all 5 new articles because of this; caught by grepping the live sitemap post-deploy, not by any build-time check. Run it explicitly every round, copy the regenerated `public/sitemap.xml` into `dist/` before deploying (the sitemap generator writes to `public/`, not `dist/`) | `package.json` \| Code \| High, found round 10 |
 | Gates present | `check:llms`, `check:ai`, `ai:coverage`, `ai:gate`, `ai:answers` | `package.json` \| Code \| High |
 | AI surfaces | `llms.txt`, `llms-ms.txt`, `llms-ar.txt`, `llms-full.txt`, `about.md`, `pricing.md`, `faq.md`, `AGENTS.md`, `AI-FACTS.yml` | repo + live \| Code \| High |
 | Facts source of truth | `src/data/storeFacts.json` — seller, hours, 2 branches, prices, compliance | file \| Code \| High |
@@ -67,3 +68,7 @@ it.** Benefit words belong in keyword lists as things people type, never as clai
 4. **`ai:gate` 429s itself** on this host after ~20 rapid requests — expected, not a defect.
 5. **`ai:gate` reports a false "no /{lang}/llms.txt links"** — this site publishes `/llms-ms.txt`,
    not `/ms/llms.txt`. Do not "fix" the site to satisfy the pattern.
+6. **⛔ Git Bash silently drops leading-`/` CLI arguments passed to `node`/`python` on Windows**
+   (MSYS path conversion rewrites `/en/blog/foo` before the process ever sees it). Round 10's first
+   `indexnow.mjs` call submitted 1 URL instead of 5 with no error. Prefix any such command with
+   `MSYS_NO_PATHCONV=1` when passing site-relative paths as arguments.
