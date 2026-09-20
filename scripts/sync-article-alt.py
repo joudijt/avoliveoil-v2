@@ -29,7 +29,7 @@ INLINE_RE = re.compile(r"""(["']?src["']?\s*:\s*["'][A-Za-z0-9]*Inline["']\s*,\s
 def main():
     plan = json.loads((ROOT / "docs" / "press" / "image-plan.json").read_text(encoding="utf-8"))
     frames = json.loads((ROOT / "docs" / "press" / "frame-alt.json").read_text(encoding="utf-8"))
-    want = {(p["id"], p["slot"]): frames[p["src"]][p["lang"]] for p in plan}
+    want = {(p["id"], p["slot"]): p["src"] for p in plan}   # id -> frame; alt is per language below
 
     changed = missing = 0
     for lang in ("en", "ms", "ar"):
@@ -42,7 +42,7 @@ def main():
             block = src[pos:stop]
             new_block = block
 
-            hero_alt = want.get((aid, "hero"))
+            hero_alt = frames[want[(aid, "hero")]][lang] if (aid, "hero") in want else None
             if hero_alt:
                 m = HERO_RE.search(new_block)
                 if not m:
@@ -52,7 +52,7 @@ def main():
                     new_block = new_block[:m.start()] + m.group(1) + q + hero_alt + q + new_block[m.end():]
                     changed += 1
 
-            inline_alt = want.get((aid, "inline"))
+            inline_alt = frames[want[(aid, "inline")]][lang] if (aid, "inline") in want else None
             if inline_alt:
                 hits = list(INLINE_RE.finditer(new_block))
                 if not hits:

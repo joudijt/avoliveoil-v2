@@ -48,8 +48,8 @@ export const EN_ARTICLES: Article[] = [
     readingTime: 11,
 
     hero: {
-      src: 'bottleField',
-      alt: 'Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki',
+      src: 'pressOliveOilPopularityMalaysiaHero',
+      alt: 'Workers carrying the harvest along a track between the olive trees',
     },
     ogImage: '/og/blog-olive-oil-popularity-malaysia.jpg',
 
@@ -78,10 +78,8 @@ export const EN_ARTICLES: Article[] = [
           },
           {
             type: 'image',
-            src: 'kampungBottle',
-            alt: 'A Malaysian woman in a hijab holding a bottle of Arabian Village Palestinian olive oil outside a traditional kampung house',
-            caption:
-              'A Palestinian bottle outside a kampung house — the distance olive oil has travelled in a decade, from rare import to kitchen ingredient.',
+            src: 'pressOliveOilPopularityMalaysiaInline',
+            alt: 'An olive grove seen from above, rows of trees running to the horizon',
           },
         ],
       },
@@ -373,8 +371,8 @@ export const EN_ARTICLES: Article[] = [
     readingTime: 12,
 
     hero: {
-      src: 'pouringField',
-      alt: 'Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki',
+      src: 'pressEvooHealthBenefitsFamiliesHero',
+      alt: 'Stacked crates filled with freshly picked green and purple olives',
     },
     ogImage: '/og/blog-evoo-health-benefits-families.jpg',
 
@@ -471,10 +469,8 @@ export const EN_ARTICLES: Article[] = [
           },
           {
             type: 'image',
-            src: 'tasting',
-            alt: 'A Malaysian man wearing a songkok evaluating the aroma of extra virgin olive oil from a blue tasting glass',
-            caption:
-              'Quality assessment starts with the nose. Fresh oil smells of grass, green fruit and sometimes tomato leaf.',
+            src: 'pressEvooHealthBenefitsFamiliesInline',
+            alt: 'Green and purple olives moving down a stainless chute towards the press',
           },
         ],
       },
@@ -672,8 +668,8 @@ export const EN_ARTICLES: Article[] = [
     readingTime: 13,
 
     hero: {
-      src: 'bottling',
-      alt: 'Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut',
+      src: 'pressChooseAuthenticEvooMalaysiaHero',
+      alt: 'An old olive tree above a hillside grove, with a village and the sea behind it at sunset',
     },
     ogImage: '/og/blog-choose-authentic-evoo-malaysia.jpg',
 
@@ -761,9 +757,8 @@ export const EN_ARTICLES: Article[] = [
           },
           {
             type: 'image',
-            src: 'filtering',
-            alt: 'Golden green olive oil being filtered and settled after the first cold press',
-            caption: 'Between press and bottle, every extra step and extra week costs the oil something.',
+            src: 'pressChooseAuthenticEvooMalaysiaInline',
+            alt: 'Stacked crates filled with freshly picked green and purple olives',
           },
         ],
       },
@@ -996,7 +991,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressColdPressedOliveOilExplainedHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-cold-pressed-olive-oil-explained.jpg",
     "intro": [
@@ -1015,7 +1010,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -1034,7 +1029,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -1058,7 +1053,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -1113,7 +1108,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -1128,7 +1123,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -1153,7 +1148,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressColdPressedOliveOilExplainedInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           },
           {
             "type": "p",
@@ -1260,7 +1255,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressCompareOliveOilBrandsMalaysiaHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-compare-olive-oil-brands-malaysia.jpg",
     "intro": [
@@ -1289,7 +1284,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -1308,7 +1303,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -1323,7 +1318,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -1358,7 +1353,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           },
           {
             "type": "p",
@@ -1381,7 +1376,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -1407,7 +1402,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCompareOliveOilBrandsMalaysiaInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           },
           {
             "type": "note",
@@ -1519,7 +1514,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressHalalOliveOilMalaysiaHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-halal-olive-oil-malaysia.jpg",
     "intro": [
@@ -1543,7 +1538,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -1567,7 +1562,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -1586,7 +1581,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -1605,7 +1600,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -1624,7 +1619,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -1664,7 +1659,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressHalalOliveOilMalaysiaInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           },
           {
             "type": "note",
@@ -1762,7 +1757,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilPriceMalaysiaHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-olive-oil-price-malaysia.jpg",
     "intro": [
@@ -1801,7 +1796,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -1816,7 +1811,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -1836,7 +1831,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -1859,7 +1854,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -1878,7 +1873,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -1897,7 +1892,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPriceMalaysiaInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -2001,7 +1996,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressPalestinianOliveOilOriginHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-palestinian-olive-oil-origin.jpg",
     "intro": [
@@ -2024,7 +2019,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -2048,7 +2043,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -2067,7 +2062,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -2112,7 +2107,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -2131,7 +2126,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -2150,7 +2145,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressPalestinianOliveOilOriginInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           },
           {
             "type": "note",
@@ -2265,7 +2260,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilForCookingHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-olive-oil-for-cooking.jpg",
     "intro": [
@@ -2288,7 +2283,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForCookingInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -2312,7 +2307,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForCookingInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -2362,7 +2357,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForCookingInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -2412,7 +2407,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForCookingInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -2438,7 +2433,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForCookingInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -2462,7 +2457,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForCookingInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           },
           {
             "type": "p",
@@ -2596,7 +2591,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilSmokePointHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-olive-oil-smoke-point.jpg",
     "intro": [
@@ -2615,7 +2610,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilSmokePointInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -2675,7 +2670,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilSmokePointInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -2699,7 +2694,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilSmokePointInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -2724,7 +2719,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilSmokePointInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           },
           {
             "type": "p",
@@ -2752,7 +2747,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilSmokePointInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -2771,7 +2766,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilSmokePointInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -2907,7 +2902,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilVsPomaceOilHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-olive-oil-vs-pomace-oil.jpg",
     "intro": [
@@ -2930,7 +2925,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsPomaceOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -2949,7 +2944,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsPomaceOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -2974,7 +2969,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsPomaceOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -3030,7 +3025,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsPomaceOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -3049,7 +3044,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsPomaceOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -3074,7 +3069,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsPomaceOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           },
           {
             "type": "p",
@@ -3187,7 +3182,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressEvooSaladDressingHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-evoo-salad-dressing.jpg",
     "intro": [
@@ -3236,7 +3231,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooSaladDressingInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -3260,7 +3255,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooSaladDressingInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -3284,7 +3279,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooSaladDressingInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -3303,7 +3298,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooSaladDressingInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -3327,7 +3322,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooSaladDressingInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -3372,7 +3367,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooSaladDressingInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       }
@@ -3480,7 +3475,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressEvooVsPureOliveOilHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-evoo-vs-pure-olive-oil.jpg",
     "intro": [
@@ -3508,7 +3503,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooVsPureOliveOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -3536,7 +3531,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooVsPureOliveOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -3559,7 +3554,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooVsPureOliveOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -3603,7 +3598,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooVsPureOliveOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -3627,7 +3622,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressEvooVsPureOliveOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -3744,7 +3739,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilAirFryerHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-olive-oil-air-fryer.jpg",
     "intro": [
@@ -3772,7 +3767,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAirFryerInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -3822,7 +3817,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAirFryerInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -3841,7 +3836,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAirFryerInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -3865,7 +3860,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAirFryerInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -3884,7 +3879,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAirFryerInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -3907,7 +3902,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAirFryerInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -4005,7 +4000,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForBreadHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-olive-oil-for-bread.jpg",
     "intro": [
@@ -4028,7 +4023,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBreadInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -4052,7 +4047,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBreadInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -4077,7 +4072,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBreadInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           },
           {
             "type": "p",
@@ -4126,7 +4121,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBreadInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -4151,7 +4146,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBreadInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -4170,7 +4165,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBreadInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       }
@@ -4288,7 +4283,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilMarinadeHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-olive-oil-marinade.jpg",
     "intro": [
@@ -4315,7 +4310,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMarinadeInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -4340,7 +4335,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMarinadeInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -4364,7 +4359,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMarinadeInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -4419,7 +4414,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMarinadeInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -4438,7 +4433,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMarinadeInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -4462,7 +4457,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMarinadeInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       }
@@ -4570,7 +4565,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilShelfLifeHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-olive-oil-shelf-life.jpg",
     "intro": [
@@ -4589,7 +4584,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilShelfLifeInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -4613,7 +4608,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilShelfLifeInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           },
           {
             "type": "p",
@@ -4662,7 +4657,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilShelfLifeInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -4681,7 +4676,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilShelfLifeInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -4705,7 +4700,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilShelfLifeInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -4724,7 +4719,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilShelfLifeInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -4827,7 +4822,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressGarlicInfusedOliveOilHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-garlic-infused-olive-oil.jpg",
     "intro": [
@@ -4855,7 +4850,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressGarlicInfusedOliveOilInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -4870,7 +4865,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressGarlicInfusedOliveOilInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -4908,7 +4903,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressGarlicInfusedOliveOilInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -4934,7 +4929,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressGarlicInfusedOliveOilInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -4953,7 +4948,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressGarlicInfusedOliveOilInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -4972,7 +4967,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressGarlicInfusedOliveOilInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           },
           {
             "type": "p",
@@ -5080,7 +5075,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilBitterTasteHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-olive-oil-bitter-taste.jpg",
     "intro": [
@@ -5099,7 +5094,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -5122,7 +5117,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -5141,7 +5136,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -5191,7 +5186,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -5217,7 +5212,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -5240,7 +5235,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -5264,7 +5259,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBitterTasteInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           },
           {
             "type": "p",
@@ -5371,7 +5366,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilBottleSizeHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-olive-oil-bottle-size.jpg",
     "intro": [
@@ -5398,7 +5393,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBottleSizeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -5448,7 +5443,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBottleSizeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -5471,7 +5466,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBottleSizeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -5495,7 +5490,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBottleSizeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -5519,7 +5514,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBottleSizeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -5538,7 +5533,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilBottleSizeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       }
@@ -5641,7 +5636,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForBakingHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-olive-oil-for-baking.jpg",
     "intro": [
@@ -5695,7 +5690,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBakingInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Pickers working through the branches during the olive harvest"
           },
           {
             "type": "p",
@@ -5722,7 +5717,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBakingInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -5737,7 +5732,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBakingInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -5756,7 +5751,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBakingInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -5775,7 +5770,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBakingInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -5800,7 +5795,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForBakingInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -6193,7 +6188,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsCoconutOilHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-olive-oil-vs-coconut-oil.jpg",
     "intro": [
@@ -6217,7 +6212,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCoconutOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -6240,7 +6235,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCoconutOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -6259,7 +6254,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCoconutOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -6278,7 +6273,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCoconutOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -6297,7 +6292,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCoconutOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -6357,7 +6352,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCoconutOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       }
@@ -6469,7 +6464,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressAglioEOlioHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-aglio-e-olio.jpg",
     "intro": [
@@ -6528,7 +6523,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAglioEOlioInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -6556,7 +6551,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAglioEOlioInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -6580,7 +6575,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAglioEOlioInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -6603,7 +6598,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAglioEOlioInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -6622,7 +6617,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAglioEOlioInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -6641,7 +6636,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAglioEOlioInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -6739,7 +6734,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressCloudyOliveOilHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-cloudy-olive-oil.jpg",
     "intro": [
@@ -6788,7 +6783,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCloudyOliveOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -6807,7 +6802,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCloudyOliveOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -6830,7 +6825,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCloudyOliveOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -6849,7 +6844,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCloudyOliveOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -6868,7 +6863,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCloudyOliveOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -6887,7 +6882,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressCloudyOliveOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       }
@@ -6990,7 +6985,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilAndBalsamicHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-olive-oil-and-balsamic.jpg",
     "intro": [
@@ -7013,7 +7008,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAndBalsamicInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -7058,7 +7053,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAndBalsamicInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           },
           {
             "type": "p",
@@ -7085,7 +7080,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAndBalsamicInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           },
           {
             "type": "p",
@@ -7112,7 +7107,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAndBalsamicInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -7136,7 +7131,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAndBalsamicInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -7155,7 +7150,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilAndBalsamicInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       }
@@ -7253,7 +7248,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForGrillingHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-olive-oil-for-grilling.jpg",
     "intro": [
@@ -7280,7 +7275,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForGrillingInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -7299,7 +7294,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForGrillingInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -7322,7 +7317,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForGrillingInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -7367,7 +7362,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForGrillingInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -7394,7 +7389,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForGrillingInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -7417,7 +7412,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForGrillingInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       }
@@ -7519,7 +7514,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForHummusHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-olive-oil-for-hummus.jpg",
     "intro": [
@@ -7542,7 +7537,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForHummusInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -7580,7 +7575,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForHummusInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Pickers working through the branches during the olive harvest"
           },
           {
             "type": "p",
@@ -7649,7 +7644,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForHummusInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -7673,7 +7668,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForHummusInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -7692,7 +7687,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForHummusInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -7718,7 +7713,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForHummusInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Pickers working through the branches during the olive harvest"
           },
           {
             "type": "p",
@@ -7820,7 +7815,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsAvocadoOilHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-olive-oil-vs-avocado-oil.jpg",
     "intro": [
@@ -7847,7 +7842,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsAvocadoOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -7866,7 +7861,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsAvocadoOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -7885,7 +7880,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsAvocadoOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -7940,7 +7935,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsAvocadoOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -7959,7 +7954,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsAvocadoOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -7978,7 +7973,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsAvocadoOilInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       }
@@ -8076,7 +8071,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilFocacciaHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-olive-oil-focaccia.jpg",
     "intro": [
@@ -8099,7 +8094,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilFocacciaInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -8154,7 +8149,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilFocacciaInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -8173,7 +8168,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilFocacciaInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -8196,7 +8191,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilFocacciaInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -8222,7 +8217,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilFocacciaInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -8241,7 +8236,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilFocacciaInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       }
@@ -8339,7 +8334,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForSteakHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-olive-oil-for-steak.jpg",
     "intro": [
@@ -8358,7 +8353,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForSteakInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -8393,7 +8388,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForSteakInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -8419,7 +8414,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForSteakInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -8434,7 +8429,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForSteakInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -8457,7 +8452,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForSteakInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -8472,7 +8467,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilForSteakInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -8574,7 +8569,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilFriedEggHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-olive-oil-fried-egg.jpg",
     "intro": [
@@ -8802,7 +8797,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilPopcornHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-olive-oil-popcorn.jpg",
     "intro": [
@@ -8825,7 +8820,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPopcornInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -8865,7 +8860,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPopcornInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -8884,7 +8879,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPopcornInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -8910,7 +8905,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPopcornInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -8925,7 +8920,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPopcornInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -8944,7 +8939,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilPopcornInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       }
@@ -9042,7 +9037,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilRoastedVegetablesHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-olive-oil-roasted-vegetables.jpg",
     "intro": [
@@ -9065,7 +9060,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilRoastedVegetablesInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -9084,7 +9079,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilRoastedVegetablesInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -9139,7 +9134,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilRoastedVegetablesInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           },
           {
             "type": "p",
@@ -9166,7 +9161,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilRoastedVegetablesInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -9188,7 +9183,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilRoastedVegetablesInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -9207,7 +9202,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilRoastedVegetablesInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       }
@@ -9309,7 +9304,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsButterHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-olive-oil-vs-butter.jpg",
     "intro": [
@@ -9332,7 +9327,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsButterInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -9351,7 +9346,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsButterInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -9374,7 +9369,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsButterInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -9396,7 +9391,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsButterInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -9451,7 +9446,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsButterInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -9470,7 +9465,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsButterInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -9577,7 +9572,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilCoffeeHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-olive-oil-coffee.jpg",
     "intro": [
@@ -9600,7 +9595,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCoffeeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -9625,7 +9620,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCoffeeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -9644,7 +9639,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCoffeeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -9663,7 +9658,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCoffeeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -9698,7 +9693,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCoffeeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -9717,7 +9712,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCoffeeInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       }
@@ -9819,7 +9814,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilIceCreamHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-olive-oil-ice-cream.jpg",
     "intro": [
@@ -9842,7 +9837,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIceCreamInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -9897,7 +9892,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIceCreamInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -9916,7 +9911,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIceCreamInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -9939,7 +9934,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIceCreamInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -9964,7 +9959,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIceCreamInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -9983,7 +9978,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIceCreamInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       }
@@ -10080,7 +10075,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilMashedPotatoesHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-olive-oil-mashed-potatoes.jpg",
     "intro": [
@@ -10103,7 +10098,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMashedPotatoesInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -10126,7 +10121,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMashedPotatoesInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -10150,7 +10145,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMashedPotatoesInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -10169,7 +10164,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMashedPotatoesInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -10192,7 +10187,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMashedPotatoesInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -10236,7 +10231,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilMashedPotatoesInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -10334,7 +10329,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilOrangeCakeHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-olive-oil-orange-cake.jpg",
     "intro": [
@@ -10357,7 +10352,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilOrangeCakeInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -10376,7 +10371,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilOrangeCakeInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -10395,7 +10390,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilOrangeCakeInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -10421,7 +10416,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilOrangeCakeInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -10440,7 +10435,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilOrangeCakeInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -10459,7 +10454,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilOrangeCakeInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       }
@@ -10557,7 +10552,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsSesameOilHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-olive-oil-vs-sesame-oil.jpg",
     "intro": [
@@ -10580,7 +10575,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSesameOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -10603,7 +10598,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSesameOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -10622,7 +10617,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSesameOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -10641,7 +10636,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSesameOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -10691,7 +10686,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSesameOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -10710,7 +10705,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSesameOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       }
@@ -10808,7 +10803,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsSunflowerOilHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-olive-oil-vs-sunflower-oil.jpg",
     "intro": [
@@ -10831,7 +10826,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSunflowerOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -10850,7 +10845,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSunflowerOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -10873,7 +10868,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSunflowerOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -10928,7 +10923,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSunflowerOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -10943,7 +10938,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSunflowerOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -10962,7 +10957,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsSunflowerOilInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       }
@@ -11060,7 +11055,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressAdvantagesOfExtraVirginOliveOilHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-advantages-of-extra-virgin-olive-oil.jpg",
     "intro": [
@@ -11083,7 +11078,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAdvantagesOfExtraVirginOliveOilInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -11102,7 +11097,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAdvantagesOfExtraVirginOliveOilInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -11121,7 +11116,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAdvantagesOfExtraVirginOliveOilInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -11140,7 +11135,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAdvantagesOfExtraVirginOliveOilInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -11180,7 +11175,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAdvantagesOfExtraVirginOliveOilInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -11199,7 +11194,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressAdvantagesOfExtraVirginOliveOilInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -11292,7 +11287,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressBestExtraVirginOliveOilInMalaysiaHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-best-extra-virgin-olive-oil-in-malaysia.jpg",
     "intro": [
@@ -11315,7 +11310,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -11355,7 +11350,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -11374,7 +11369,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -11393,7 +11388,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -11412,7 +11407,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -11431,7 +11426,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressBestExtraVirginOliveOilInMalaysiaInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       }
@@ -11524,7 +11519,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressConsumingExtraVirginOliveOilDayToDayHero",
-      "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-consuming-extra-virgin-olive-oil-day-to-day.jpg",
     "intro": [
@@ -11752,7 +11747,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressExtraVirginOliveOilInMalaysiaHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-extra-virgin-olive-oil-in-malaysia.jpg",
     "intro": [
@@ -11796,7 +11791,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilInMalaysiaInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -11815,7 +11810,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilInMalaysiaInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -11839,7 +11834,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilInMalaysiaInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -11858,7 +11853,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilInMalaysiaInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -11877,7 +11872,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilInMalaysiaInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -11896,7 +11891,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilInMalaysiaInline",
-            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -11989,7 +11984,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressExtraVirginOliveOilUsesHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-extra-virgin-olive-oil-uses.jpg",
     "intro": [
@@ -12012,7 +12007,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilUsesInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -12031,7 +12026,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilUsesInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -12050,7 +12045,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilUsesInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -12069,7 +12064,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilUsesInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -12124,7 +12119,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilUsesInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -12143,7 +12138,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraVirginOliveOilUsesInline",
-            "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       }
@@ -12241,7 +12236,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressIsItGoodToCookWithExtraVirginOliveOilHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-is-it-good-to-cook-with-extra-virgin-olive-oil.jpg",
     "intro": [
@@ -12264,7 +12259,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -12304,7 +12299,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           },
           {
             "type": "p",
@@ -12348,7 +12343,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -12367,7 +12362,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -12390,7 +12385,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           },
           {
             "type": "p",
@@ -12413,7 +12408,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsItGoodToCookWithExtraVirginOliveOilInline",
-            "alt": "An olive grove seen from above, rows of trees running to the horizon"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       }
@@ -12506,7 +12501,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilIsItHealthyHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-olive-oil-is-it-healthy.jpg",
     "intro": [
@@ -12529,7 +12524,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIsItHealthyInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -12554,7 +12549,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIsItHealthyInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -12598,7 +12593,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIsItHealthyInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -12617,7 +12612,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIsItHealthyInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -12636,7 +12631,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIsItHealthyInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -12655,7 +12650,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilIsItHealthyInline",
-            "alt": "Green and purple olives moving down a stainless chute towards the press"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       }
@@ -12748,7 +12743,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressVitaminsInExtraVirginOliveOilHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-vitamins-in-extra-virgin-olive-oil.jpg",
     "intro": [
@@ -12771,7 +12766,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressVitaminsInExtraVirginOliveOilInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -12790,7 +12785,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressVitaminsInExtraVirginOliveOilInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -12809,7 +12804,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressVitaminsInExtraVirginOliveOilInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -12853,7 +12848,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressVitaminsInExtraVirginOliveOilInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -12872,7 +12867,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressVitaminsInExtraVirginOliveOilInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -12891,7 +12886,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressVitaminsInExtraVirginOliveOilInline",
-            "alt": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -12989,7 +12984,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressWhichOliveOilToBuyHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-which-olive-oil-to-buy.jpg",
     "intro": [
@@ -13012,7 +13007,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressWhichOliveOilToBuyInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -13031,7 +13026,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressWhichOliveOilToBuyInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -13076,7 +13071,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressWhichOliveOilToBuyInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -13095,7 +13090,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressWhichOliveOilToBuyInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -13119,7 +13114,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressWhichOliveOilToBuyInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -13138,7 +13133,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressWhichOliveOilToBuyInline",
-            "alt": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       }
@@ -13231,7 +13226,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressExtraLightOliveOilVsExtraVirginOliveOilHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-extra-light-olive-oil-vs-extra-virgin-olive-oil.jpg",
     "intro": [
@@ -13254,7 +13249,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -13304,7 +13299,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -13323,7 +13318,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -13342,7 +13337,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -13365,7 +13360,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -13384,7 +13379,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressExtraLightOliveOilVsExtraVirginOliveOilInline",
-            "alt": "Workers carrying the day's harvest along a track between the olive trees"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       }
@@ -13477,7 +13472,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilCaloriesHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-olive-oil-calories.jpg",
     "intro": [
@@ -13531,7 +13526,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCaloriesInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -13550,7 +13545,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCaloriesInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -13569,7 +13564,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCaloriesInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -13593,7 +13588,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCaloriesInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -13612,7 +13607,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCaloriesInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -13631,7 +13626,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilCaloriesInline",
-            "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -13728,7 +13723,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilColorHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-olive-oil-color.jpg",
     "intro": [
@@ -13751,7 +13746,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilColorInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -13791,7 +13786,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilColorInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -13810,7 +13805,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilColorInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -13829,7 +13824,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilColorInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -13852,7 +13847,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilColorInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -13871,7 +13866,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilColorInline",
-            "alt": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       }
@@ -13964,7 +13959,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsCanolaOilHero",
-      "alt": "Green olive oil pouring from a stainless pipe into an open vat at the mill"
+      "alt": "Rows of olive trees in the last light of the afternoon"
     },
     "ogImage": "/og/blog-olive-oil-vs-canola-oil.jpg",
     "intro": [
@@ -13987,7 +13982,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCanolaOilInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -14032,7 +14027,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCanolaOilInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -14051,7 +14046,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCanolaOilInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -14070,7 +14065,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCanolaOilInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -14093,7 +14088,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCanolaOilInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       },
@@ -14112,7 +14107,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsCanolaOilInline",
-            "alt": "Stacked crates filled with freshly picked green and purple olives"
+            "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
           }
         ]
       }
@@ -14215,7 +14210,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressRosemaryInfusedOliveOilHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "Workers carrying the harvest along a track between the olive trees"
     },
     "ogImage": "/og/blog-rosemary-infused-olive-oil.jpg",
     "intro": [
@@ -14238,7 +14233,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRosemaryInfusedOliveOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -14278,7 +14273,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRosemaryInfusedOliveOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -14303,7 +14298,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRosemaryInfusedOliveOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -14322,7 +14317,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRosemaryInfusedOliveOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -14345,7 +14340,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRosemaryInfusedOliveOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       },
@@ -14364,7 +14359,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressRosemaryInfusedOliveOilInline",
-            "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+            "alt": "An olive grove seen from above, rows of trees running to the horizon"
           }
         ]
       }
@@ -14457,7 +14452,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 4,
     "hero": {
       "src": "pressIsOliveOilAVegetableOilHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "Green and purple olives moving down a stainless chute towards the press"
     },
     "ogImage": "/og/blog-is-olive-oil-a-vegetable-oil.jpg",
     "intro": [
@@ -14485,7 +14480,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsOliveOilAVegetableOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -14504,7 +14499,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsOliveOilAVegetableOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -14549,7 +14544,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsOliveOilAVegetableOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -14568,7 +14563,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsOliveOilAVegetableOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       },
@@ -14587,7 +14582,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressIsOliveOilAVegetableOilInline",
-            "alt": "Whole olives and olive leaves scattered across a wooden table"
+            "alt": "Pickers working through the branches during the olive harvest"
           }
         ]
       }
@@ -14680,7 +14675,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilHarvestSeasonHero",
-      "alt": "Dark glass bottles moving along a filling line under stainless steel filling heads"
+      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
     },
     "ogImage": "/og/blog-olive-oil-harvest-season.jpg",
     "intro": [
@@ -14703,7 +14698,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilHarvestSeasonInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -14748,7 +14743,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilHarvestSeasonInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -14767,7 +14762,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilHarvestSeasonInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -14786,7 +14781,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilHarvestSeasonInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       },
@@ -14809,7 +14804,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilHarvestSeasonInline",
-            "alt": "Pickers working through the branches during the olive harvest"
+            "alt": "Stacked crates filled with freshly picked green and purple olives"
           }
         ]
       }
@@ -14906,7 +14901,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVarietiesHero",
-      "alt": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset"
+      "alt": "An olive grove seen from above, rows of trees running to the horizon"
     },
     "ogImage": "/og/blog-olive-oil-varieties.jpg",
     "intro": [
@@ -14929,7 +14924,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVarietiesInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -14979,7 +14974,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVarietiesInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -14998,7 +14993,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVarietiesInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -15017,7 +15012,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVarietiesInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -15036,7 +15031,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVarietiesInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       },
@@ -15059,7 +15054,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVarietiesInline",
-            "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+            "alt": "Rows of olive trees in the last light of the afternoon"
           }
         ]
       }
@@ -15156,7 +15151,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsGrapeseedOilHero",
-      "alt": "Olive trees on a hillside at sunset, the grove running down towards the sea"
+      "alt": "Pickers working through the branches during the olive harvest"
     },
     "ogImage": "/og/blog-olive-oil-vs-grapeseed-oil.jpg",
     "intro": [
@@ -15179,7 +15174,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsGrapeseedOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -15224,7 +15219,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsGrapeseedOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -15243,7 +15238,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsGrapeseedOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -15262,7 +15257,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsGrapeseedOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -15285,7 +15280,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsGrapeseedOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       },
@@ -15304,7 +15299,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsGrapeseedOilInline",
-            "alt": "A sunlit path running between old olive trees in the grove"
+            "alt": "Workers carrying the harvest along a track between the olive trees"
           }
         ]
       }
@@ -15397,7 +15392,7 @@ export const EN_ARTICLES: Article[] = [
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsRedPalmOilHero",
-      "alt": "Olive paste coming out of a stainless mill with green oil running into the vat below"
+      "alt": "Stacked crates filled with freshly picked green and purple olives"
     },
     "ogImage": "/og/blog-olive-oil-vs-red-palm-oil.jpg",
     "intro": [
@@ -15420,7 +15415,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsRedPalmOilInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -15465,7 +15460,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsRedPalmOilInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -15484,7 +15479,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsRedPalmOilInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -15507,7 +15502,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsRedPalmOilInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -15526,7 +15521,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsRedPalmOilInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       },
@@ -15545,7 +15540,7 @@ export const EN_ARTICLES: Article[] = [
           {
             "type": "image",
             "src": "pressOliveOilVsRedPalmOilInline",
-            "alt": "Rows of olive trees in the last light of the afternoon"
+            "alt": "Green and purple olives moving down a stainless chute towards the press"
           }
         ]
       }

@@ -25,7 +25,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src" / "assets" / "images"
@@ -33,80 +33,50 @@ OUT = SRC / "press"
 OG = ROOT / "public" / "og"
 ARTICLES = ROOT / "src" / "content" / "articles"
 
+# The three hand-written articles share ONE id (and so one image file) across en/ms/ar, unlike
+# the press articles, which have a slug-per-language id. Cut them once, from the English entry.
 LEGACY_IDS = {"olive-oil-popularity-malaysia", "evoo-health-benefits-families",
               "choose-authentic-evoo-malaysia"}
 
 HERO = (1280, 720)
+HERO_SMALL = (1024, 576)   # 600 px journey photos: 1280 would be a 2.5x blow-up
+MIN_CROP_W = 480            # never crop tighter than this — below it the picture turns to mush
 CARD = (1200, 630)
 
 # --------------------------------------------------------------------------- frames
 # `hero_cx` bounds the crop centre for frames where the product bottle sits in shot, so the
 # label can never be enlarged. `None` means the whole frame is usable.
+# Owner ruling, 2026-09-20: the blog shows ONLY the photographs the home page and the why-us page
+# already carry — the hero backdrop and the six scenes of the olive journey. The mill, bottling
+# line, tasting bench, farmer-pouring and bottle-in-shot frames are out, and so is the why-us
+# bottle photo (its label is legible at any width — the fifth label rejection). Order alternates
+# warm / green / people so neighbours on the blog index rarely look alike.
 FRAMES = {
     "OliveGroveSunsetHero.png": dict(hero=True, hero_cx=None, alt={
         "en": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset",
         "ms": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja",
         "ar": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"}),
-    "OliveGroveSunsetHero-ar.png": dict(hero=True, hero_cx=None, alt={
-        "en": "Olive trees on a hillside at sunset, the grove running down towards the sea",
-        "ms": "Pokok zaitun di lereng bukit ketika senja, ladang menuruni bukit ke arah laut",
-        "ar": "أشجار زيتون على سفح تل عند الغروب، والبستان ينحدر نحو البحر"}),
-    "journey-04-extraction.png": dict(hero=True, hero_cx=None, alt={
-        "en": "Olive paste coming out of a stainless mill with green oil running into the vat below",
-        "ms": "Pes zaitun keluar dari kilang perahan keluli dengan minyak hijau mengalir ke dalam tangki",
-        "ar": "عجينة الزيتون تخرج من المعصرة الفولاذية والزيت الأخضر ينساب إلى الخزان"}),
-    "journey-05-filtering.png": dict(hero=True, hero_cx=None, alt={
-        "en": "Green olive oil pouring from a stainless pipe into an open vat at the mill",
-        "ms": "Minyak zaitun hijau mengalir dari paip keluli ke dalam tangki terbuka di kilang perahan",
-        "ar": "زيت زيتون أخضر يتدفق من أنبوب فولاذي إلى خزان مفتوح في المعصرة"}),
-    "journey-06-testing.webp": dict(hero=True, hero_cx=None, alt={
-        "en": "A man in a songkok nosing olive oil from a blue tasting glass at a bench of sample flasks",
-        "ms": "Seorang lelaki bersongkok menghidu minyak zaitun dari gelas rasa biru di meja kelalang sampel",
-        "ar": "رجل يرتدي الطاقية يشمّ زيت الزيتون من كأس تذوّق أزرق على طاولة قوارير العيّنات"}),
-    "journey-07-bottling.png": dict(hero=True, hero_cx=None, alt={
-        "en": "Dark glass bottles moving along a filling line under stainless steel filling heads",
-        "ms": "Botol kaca gelap bergerak di atas talian pengisian di bawah kepala pengisi keluli",
-        "ar": "زجاجات داكنة تتحرّك على خط التعبئة تحت رؤوس التعبئة الفولاذية"}),
-    # bottle in shot on the right — heroes and cards must stay left of it
-    "HeroAVOliveOilBottleInTheField.png": dict(hero=False, hero_cx=(0.16, 0.30), alt={
-        "en": "A sunlit path running between old olive trees in the grove",
-        "ms": "Laluan yang terkena cahaya matahari di celah pokok zaitun tua di ladang",
-        "ar": "ممر تسطع عليه الشمس بين أشجار الزيتون المعمّرة في البستان"}),
-    # bottle at centre-right on a table — same rule
-    "journey-08-final.png": dict(hero=False, hero_cx=(0.12, 0.26), alt={
-        "en": "Whole olives and olive leaves scattered across a wooden table",
-        "ms": "Buah zaitun dan daun zaitun bertaburan di atas meja kayu",
-        "ar": "حبات زيتون وأوراق زيتون منثورة على طاولة خشبية"}),
-    # inline-only frames
-    "FarmerPickingOliveOfTheTreeInTheField.png": dict(hero=False, hero_cx=None, alt={
-        "en": "A Palestinian farmer in a keffiyeh checking olives on the branch during the harvest",
-        "ms": "Seorang petani Palestin berkeffiyeh memeriksa buah zaitun di dahan ketika musim tuai",
-        "ar": "مزارع فلسطيني يرتدي الكوفية يفحص ثمار الزيتون على الغصن أثناء القطاف"}),
-    "FarmerPouringOliveOilInTheField.png": dict(hero=False, hero_cx=None, alt={
-        "en": "A farmer pouring olive oil from a dark bottle into a stoneware bowl on a wooden table",
-        "ms": "Seorang petani menuang minyak zaitun dari botol gelap ke dalam mangkuk tembikar di atas meja kayu",
-        "ar": "مزارع يصبّ زيت الزيتون من زجاجة داكنة في وعاء فخاري على طاولة خشبية"}),
-    "journey-01-grove.webp": dict(hero=False, hero_cx=None, alt={
+    "journey-01-grove.webp": dict(hero=True, hero_cx=None, alt={
         "en": "An olive grove seen from above, rows of trees running to the horizon",
         "ms": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk",
         "ar": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"}),
-    "journey-02-sunset.webp": dict(hero=False, hero_cx=None, alt={
-        "en": "Rows of olive trees in the last light of the afternoon",
-        "ms": "Barisan pokok zaitun dalam cahaya terakhir petang",
-        "ar": "صفوف أشجار الزيتون في آخر ضوء العصر"}),
-    "journey-03-picking.webp": dict(hero=False, hero_cx=None, alt={
+    "journey-03-picking.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Pickers working through the branches during the olive harvest",
         "ms": "Pekerja menuai zaitun di celah dahan ketika musim tuai",
         "ar": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"}),
-    "journey-04-crates.webp": dict(hero=False, hero_cx=None, alt={
+    "journey-04-crates.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Stacked crates filled with freshly picked green and purple olives",
         "ms": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai",
         "ar": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"}),
-    "journey-05-carrying.webp": dict(hero=False, hero_cx=None, alt={
-        "en": "Workers carrying the day's harvest along a track between the olive trees",
+    "journey-02-sunset.webp": dict(hero=True, hero_cx=None, alt={
+        "en": "Rows of olive trees in the last light of the afternoon",
+        "ms": "Barisan pokok zaitun dalam cahaya terakhir petang",
+        "ar": "صفوف أشجار الزيتون في آخر ضوء العصر"}),
+    "journey-05-carrying.webp": dict(hero=True, hero_cx=None, alt={
+        "en": "Workers carrying the harvest along a track between the olive trees",
         "ms": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun",
         "ar": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"}),
-    "journey-06-press.webp": dict(hero=False, hero_cx=None, alt={
+    "journey-06-press.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Green and purple olives moving down a stainless chute towards the press",
         "ms": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan",
         "ar": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"}),
@@ -165,6 +135,14 @@ def _save(im, path, max_kb, qadj=0):
     return 52 + qadj
 
 
+def up(im, size):
+    """Resize with a light sharpen when the crop is enlarged — the journey photos are 600 px."""
+    out = im.resize(size, Image.LANCZOS)
+    if size[0] > im.width * 1.25:
+        out = out.filter(ImageFilter.UnsharpMask(radius=1.4, percent=70, threshold=2))
+    return out
+
+
 def box_for(src, zoom, cx, cy):
     """The crop box actually taken, after clamping — two different parameter triples can
     clamp onto the same box, which is how the first run produced byte-identical files."""
@@ -200,8 +178,8 @@ def variants(src, slot):
         for cy in CYS:
             for cx in cxs:
                 b = box_for(src, z, cx, cy)
-                if slot == "hero" and (b[2] - b[0]) < HERO[0]:
-                    continue   # never upscale a hero, and never zoom into the label
+                if (b[2] - b[0]) < MIN_CROP_W:
+                    continue   # never zoom into a small photo until it turns soft
                 if b in seen:
                     continue
                 seen.add(b)
@@ -252,9 +230,11 @@ def build_plan(manifest):
             while cursor[key] < len(pool):
                 z, cx, cy, b = pool[cursor[key]]
                 cursor[key] += 1
-                if b in taken_boxes[tkey]:
+                # keyed by source too: the six journey photos are all 600x450, so the bare
+                # numbers collide across different pictures and starve all but one of them
+                if (src, b) in taken_boxes[tkey]:
                     continue
-                taken_boxes[tkey].add(b)
+                taken_boxes[tkey].add((src, b))
                 return src, z, cx, cy
         return None
 
@@ -264,7 +244,7 @@ def build_plan(manifest):
             aid = entry["id"]
             h = i % len(HERO_FRAMES)
             hero_order = [HERO_FRAMES[(h + k) % len(HERO_FRAMES)] for k in range(len(HERO_FRAMES))]
-            n = (i * 5 + 3) % len(INLINE_FRAMES)
+            n = (i + 3) % len(INLINE_FRAMES)
             inline_order = [INLINE_FRAMES[(n + k) % len(INLINE_FRAMES)] for k in range(len(INLINE_FRAMES))]
             for slot, order, previous in (("hero", hero_order, prev_hero),
                                           ("inline", inline_order, prev_inline)):
@@ -295,7 +275,7 @@ def main():
     # The three original hand-written articles carry the site's own image keys
     # (bottleField / pouringField / bottling), not press files, so they are already
     # website photography and must not be re-cut or re-alt'd.
-    manifest = [m for m in manifest if m["id"] not in LEGACY_IDS]
+    manifest = [m for m in manifest if m["id"] not in LEGACY_IDS or m["lang"] == "en"]
     plan = build_plan(manifest)
 
     if args.check:
@@ -309,21 +289,21 @@ def main():
         im = Image.open(SRC / p["src"]).convert("RGB")
         c = crop_169(im, p["zoom"], p["cx"], p["cy"])
         if p["slot"] == "hero":
-            c2 = c.resize(HERO, Image.LANCZOS)
+            c2 = up(c, HERO if c.width >= HERO[0] else HERO_SMALL)
             save_budget(c2, OUT / f"{p['id']}-hero.webp", 170, LANG_Q[p["lang"]])
             card = None
             for step in (0.06, 0.10, 0.14, 0.02, 0.18, -0.06, -0.10):
                 ccy = min(0.80, max(0.20, p["cy"] + step))
                 b = box_for(p["src"], p["zoom"], p["cx"], ccy)
-                if b in card_boxes[p["lang"]]:
+                if (p["src"], b) in card_boxes[p["lang"]]:
                     continue
-                card_boxes[p["lang"]].add(b)
-                card = crop_169(im, p["zoom"], p["cx"], ccy).resize(CARD, Image.LANCZOS)
+                card_boxes[p["lang"]].add((p["src"], b))
+                card = up(crop_169(im, p["zoom"], p["cx"], ccy), CARD)
                 break
             if card is None:
                 # falling back to this article's own hero framing is fine — the card and the
                 # hero belong to the same page, and the hero box is already unique per language
-                card = crop_169(im, p["zoom"], p["cx"], p["cy"]).resize(CARD, Image.LANCZOS)
+                card = up(crop_169(im, p["zoom"], p["cx"], p["cy"]), CARD)
             path = OG / f"blog-{p['id']}.jpg"
             q = 86
             while True:
@@ -333,28 +313,8 @@ def main():
                 q -= 4
         else:
             w = min(1024, c.width)
-            c2 = c.resize((w, int(round(w * 9 / 16))), Image.LANCZOS)
+            c2 = up(c, (w, int(round(w * 9 / 16))))
             save_budget(c2, OUT / f"{p['id']}-inline.webp", 110, LANG_Q[p["lang"]])
-
-    # The three legacy articles keep their on-page hero (the site's own original image keys),
-    # but their OG cards were cut by round 2 from boxes this plan also wants, so they are
-    # re-cut here from frames nothing else uses at these boxes.
-    for aid, srcname, z, cx, cy in (
-        ("olive-oil-popularity-malaysia", "OliveGroveSunsetHero.png", 0.78, 0.30, 0.44),
-        ("evoo-health-benefits-families", "journey-04-extraction.png", 0.78, 0.62, 0.40),
-        ("choose-authentic-evoo-malaysia", "journey-07-bottling.png", 0.86, 0.36, 0.58),
-    ):
-        b = box_for(srcname, z, cx, cy)
-        card_boxes["en"].add(b)
-        im = Image.open(SRC / srcname).convert("RGB")
-        card = crop_169(im, z, cx, cy).resize(CARD, Image.LANCZOS)
-        path = OG / f"blog-{aid}.jpg"
-        q = 86
-        while True:
-            card.save(path, "JPEG", quality=q, optimize=True, progressive=True)
-            if path.stat().st_size <= 150 * 1024 or q <= 58:
-                break
-            q -= 4
 
     # the frame each article ended up with, for scripts/sync-article-alt.py
     (ROOT / 'docs' / 'press' / 'image-plan.json').write_text(

@@ -17,6 +17,12 @@ import finalBottle from '../../assets/opt/journey-08-final-1200.webp';
 import womanHoldingBottle from '../../assets/images/woman-holding-bottle-nobg.webp';
 import kampungBottle from '../../assets/images/malaysian-woman-bottle-kampung.webp';
 
+import pressOliveOilPopularityMalaysiaHero from '../../assets/images/press/olive-oil-popularity-malaysia-hero.webp';
+import pressOliveOilPopularityMalaysiaInline from '../../assets/images/press/olive-oil-popularity-malaysia-inline.webp';
+import pressEvooHealthBenefitsFamiliesHero from '../../assets/images/press/evoo-health-benefits-families-hero.webp';
+import pressEvooHealthBenefitsFamiliesInline from '../../assets/images/press/evoo-health-benefits-families-inline.webp';
+import pressChooseAuthenticEvooMalaysiaHero from '../../assets/images/press/choose-authentic-evoo-malaysia-hero.webp';
+import pressChooseAuthenticEvooMalaysiaInline from '../../assets/images/press/choose-authentic-evoo-malaysia-inline.webp';
 import pressHifzZaytAlzaytunHero from '../../assets/images/press/hifz-zayt-alzaytun-hero.webp';
 import pressHifzZaytAlzaytunInline from '../../assets/images/press/hifz-zayt-alzaytun-inline.webp';
 import pressMinyakZaitunHabbatusSaudaHero from '../../assets/images/press/minyak-zaitun-habbatus-sauda-hero.webp';
@@ -593,4 +599,10 @@ export const ARTICLE_IMAGES: Record<ImageKey, string> = {
   pressOliveOilVsGrapeseedOilInline,
   pressOliveOilVsRedPalmOilHero,
   pressOliveOilVsRedPalmOilInline,
+  pressOliveOilPopularityMalaysiaHero,
+  pressOliveOilPopularityMalaysiaInline,
+  pressEvooHealthBenefitsFamiliesHero,
+  pressEvooHealthBenefitsFamiliesInline,
+  pressChooseAuthenticEvooMalaysiaHero,
+  pressChooseAuthenticEvooMalaysiaInline,
 };
