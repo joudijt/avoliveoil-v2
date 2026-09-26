@@ -97,6 +97,22 @@ Two fixes were needed to make it run on Windows (both already applied, don't rev
 2. `waitUntil: 'domcontentloaded'`, not `networkidle0`. The page ships ~25 MB of imagery, so the
    network never goes quiet for 500 ms.
 
+## Sitemap `<lastmod>` (2026-09-26 — docs/sitemap-lastmod/)
+
+Never a blanket build date. `node scripts/generate-sitemap.mjs` (`npm run sitemap`) writes
+`public/sitemap.xml`:
+- **article** = its own `dateModified` in `src/content/articles/{en,ar,ms}.ts` (same value as its
+  BlogPosting JSON-LD). A PRESS round that edits an article must bump `dateModified` there.
+- **/:lang/blog** = newest `dateModified` in that language.
+- **15 static + 18 infused pages** = committed `scripts/sitemap-manifest.json` `{path: {hash, lastmod}}`,
+  hash = sha1 of the prerendered `<main>` (Vite hash suffixes stripped), so header/footer/nav edits
+  never move a date. No manifest entry -> no `<lastmod>`.
+
+Release order when static page copy changed: `npm run build:prerender` -> `npm run sitemap:manifest`
+(bumps lastmod to today only where `<main>` changed) -> if it changed anything, `npm run build:prerender`
+again (the sitemap reaches dist/ only via Vite's public/ copy) -> `npm run check:sitemap -- --live`.
+Sitemap-only upload: `python scripts/upload-one.py dist/sitemap.xml` (never ftp-deploy.py for this).
+
 ## Stack notes
 
 - **Tailwind v4** via `@tailwindcss/vite` (no `tailwind.config.js`, no PostCSS file — theme lives
