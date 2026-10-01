@@ -109,6 +109,98 @@ export type FormWidget = WidgetBase<'form', { formId?: number; title?: Localized
 export type QuoteWidget = WidgetBase<'quote', { text: Localized; author: Localized; place?: Localized }>;
 export type WhatsappWidget = WidgetBase<'whatsapp', { label: Localized; message: Localized; align: Align }>;
 
+/**
+ * A call-to-action button used by the landing widgets (LP-SPEC §3).
+ * kind 'whatsapp' → wa.me link with `message`; 'form' → scrolls to the page's first form
+ * (anchor #cms-form); 'store' → one of the seller's fixed store URLs; 'link' → `href`
+ * (same rules as the button widget: site path, https URL, mailto:, tel:).
+ */
+export interface CtaButton {
+  id: string;
+  kind: 'link' | 'whatsapp' | 'form' | 'store';
+  label: Localized;
+  href?: string;
+  store?: StoreKey;
+  message?: Localized;
+  style: ButtonStyle;
+  newTab?: boolean;
+}
+
+/** The seller's three fixed shop fronts; URLs come from storeFacts.json, never from the doc. */
+export type StoreKey = 'madinah' | 'shopee' | 'tiktok';
+
+export type HeroFormWidget = WidgetBase<
+  'heroForm',
+  {
+    kicker?: Localized;
+    title: Localized;
+    /** a substring of `title` painted gold (per language; ignored when not found) */
+    highlight: Localized;
+    sub: Localized;
+    chips: { id: string; text: Localized }[];
+    buttons: CtaButton[];
+    /** the form shown in the card on the right (phone: below the copy) */
+    formId?: number;
+    formTitle: Localized;
+    formSub: Localized;
+    /** optional background photo + dark overlay 0–80 */
+    media?: number;
+    overlay: number;
+    tone: 'dark' | 'light';
+  }
+>;
+export type CardsWidget = WidgetBase<
+  'cards',
+  {
+    kicker?: Localized;
+    title: Localized;
+    sub: Localized;
+    columns: 2 | 3 | 4;
+    items: { id: string; icon: CmsIcon; title: Localized; text: Localized }[];
+    media?: number;
+    mediaAlt: Localized;
+    mediaSide: 'none' | 'left' | 'right';
+  }
+>;
+export type StepsWidget = WidgetBase<
+  'steps',
+  {
+    kicker?: Localized;
+    title: Localized;
+    sub: Localized;
+    items: { id: string; title: Localized; text: Localized }[];
+    media?: number;
+    mediaAlt: Localized;
+  }
+>;
+export type CtaBandWidget = WidgetBase<
+  'ctaBand',
+  { icon: CmsIcon | 'none'; title: Localized; sub: Localized; buttons: CtaButton[]; tone: 'olive' | 'dark' | 'gold' | 'cream' }
+>;
+export type BadgesWidget = WidgetBase<
+  'badges',
+  { kicker?: Localized; title: Localized; sub: Localized; items: { id: string; icon: CmsIcon; title: Localized; text?: Localized }[] }
+>;
+export type ReviewsWidget = WidgetBase<
+  'reviews',
+  {
+    kicker?: Localized;
+    title: Localized;
+    sub?: Localized;
+    stats: { id: string; value: Localized; label: Localized }[];
+    items: { id: string; quote: Localized; name: Localized; place: Localized }[];
+  }
+>;
+export type StoresWidget = WidgetBase<
+  'stores',
+  {
+    kicker?: Localized;
+    title: Localized;
+    sub: Localized;
+    items: { id: string; store: StoreKey; title: Localized; text: Localized; button: Localized }[];
+  }
+>;
+
 export type Widget =
   | HeadingWidget
   | TextWidget
@@ -123,7 +215,14 @@ export type Widget =
   | ProductsWidget
   | FormWidget
   | QuoteWidget
-  | WhatsappWidget;
+  | WhatsappWidget
+  | HeroFormWidget
+  | CardsWidget
+  | StepsWidget
+  | CtaBandWidget
+  | BadgesWidget
+  | ReviewsWidget
+  | StoresWidget;
 
 export type WidgetType = Widget['type'];
 
@@ -142,10 +241,21 @@ export const WIDGET_TYPES: WidgetType[] = [
   'form',
   'quote',
   'whatsapp',
+  'heroForm',
+  'cards',
+  'steps',
+  'ctaBand',
+  'badges',
+  'reviews',
+  'stores',
 ];
 
 /** Icon names available to the icon list (mapped to react-icons in the renderer). */
-export const CMS_ICONS = ['check', 'leaf', 'olive', 'drop', 'medal', 'star', 'truck', 'shield', 'heart', 'phone', 'mail', 'pin', 'clock'] as const;
+export const CMS_ICONS = [
+  'check', 'leaf', 'olive', 'drop', 'medal', 'star', 'truck', 'shield', 'heart', 'phone', 'mail', 'pin', 'clock',
+  // added 2026-10-02 for the landing sections (docs/cms/LP-SPEC.md)
+  'whatsapp', 'store', 'gift', 'hand', 'sun', 'award', 'users', 'globe', 'bottle', 'chat',
+] as const;
 export type CmsIcon = (typeof CMS_ICONS)[number];
 
 export interface PageSeo {
@@ -158,6 +268,12 @@ export interface PageSeo {
 export interface CmsPageDoc {
   /** bumped when the shape changes; renderer refuses unknown majors */
   schema: 1;
+  /**
+   * 'site' (default/missing) = full site header, breadcrumb, footer.
+   * 'landing' = minimal ad-landing chrome: logo + language + WhatsApp header, no menu, no
+   * breadcrumb, short footer, phone bottom bar (LP-SPEC §2). Optional so old docs stay valid.
+   */
+  layout?: 'site' | 'landing';
   title: Localized;
   /**
    * Optional short link text for the header/footer menus (≤ 20 characters per language).
@@ -249,6 +365,9 @@ export interface PublicForm {
 
 /** Honeypot input name; must stay empty. */
 export const FORM_HONEYPOT = 'company_website';
+
+/** Anchor id of the first form on a CMS page; CtaButton kind 'form' scrolls here. */
+export const FORM_ANCHOR = 'cms-form';
 
 // ---------------------------------------------------------------- boot payload
 
@@ -377,6 +496,7 @@ export const RESERVED_SLUGS = [
   'en',
   'ms',
   '__cms-template',
+  '__cms-template-landing',
   'sitemap',
   'robots',
   'index',

@@ -4,6 +4,8 @@
  * mutates its input, so the shell can keep an undo stack of plain references.
  */
 import type {
+  CtaButton,
+  StoreKey,
   CmsLang,
   CmsPageDoc,
   Column,
@@ -75,6 +77,126 @@ export function createWidget(type: WidgetType): Widget {
       return { id, type, settings: { text: L('A short quote from a customer.'), author: L('Name') } };
     case 'whatsapp':
       return { id, type, settings: { label: L('Chat on WhatsApp'), message: L('Hello, I would like to ask about your olive oil.'), align: 'start' } };
+    // Landing widgets (docs/cms/LP-SPEC.md). Defaults are neutral prompts, never claims.
+    case 'heroForm':
+      return {
+        id,
+        type,
+        settings: {
+          title: L('Your headline goes here', 'Tajuk utama anda di sini'),
+          highlight: L('Your headline', 'Tajuk utama'),
+          sub: L('One or two sentences that tell the visitor what you offer.', 'Satu atau dua ayat tentang apa yang anda tawarkan.'),
+          chips: [
+            { id: newId('i'), text: L('First point', 'Perkara pertama') },
+            { id: newId('i'), text: L('Second point', 'Perkara kedua') },
+          ],
+          buttons: [
+            createCtaButton('whatsapp'),
+            createCtaButton('form'),
+          ],
+          formTitle: L('Send us a message', 'Hantar mesej kepada kami'),
+          formSub: L('Leave your details and we will get back to you.', 'Tinggalkan butiran anda dan kami akan menghubungi anda.'),
+          overlay: 55,
+          tone: 'dark',
+        },
+      };
+    case 'cards':
+      return {
+        id,
+        type,
+        settings: {
+          title: L('Section title', 'Tajuk bahagian'),
+          sub: L('A short introduction to this section.', 'Pengenalan ringkas bahagian ini.'),
+          columns: 3,
+          items: [1, 2, 3].map((n) => ({
+            id: newId('i'),
+            icon: 'check' as const,
+            title: L(`Card ${n}`, `Kad ${n}`),
+            text: L('Describe this point in a sentence or two.', 'Terangkan perkara ini dalam satu atau dua ayat.'),
+          })),
+          mediaAlt: emptyLocalized(),
+          mediaSide: 'none',
+        },
+      };
+    case 'steps':
+      return {
+        id,
+        type,
+        settings: {
+          title: L('How it works', 'Bagaimana ia berfungsi'),
+          sub: emptyLocalized(),
+          items: [1, 2, 3].map((n) => ({
+            id: newId('i'),
+            title: L(`Step ${n}`, `Langkah ${n}`),
+            text: L('What happens in this step.', 'Apa yang berlaku dalam langkah ini.'),
+          })),
+          mediaAlt: emptyLocalized(),
+        },
+      };
+    case 'ctaBand':
+      return {
+        id,
+        type,
+        settings: {
+          icon: 'none',
+          title: L('Ready to order?', 'Sedia untuk membuat pesanan?'),
+          sub: L('Ask us anything on WhatsApp.', 'Tanya kami apa sahaja di WhatsApp.'),
+          buttons: [createCtaButton('whatsapp'), createCtaButton('form')],
+          tone: 'olive',
+        },
+      };
+    case 'badges':
+      return {
+        id,
+        type,
+        settings: {
+          title: L('Why customers trust us', 'Mengapa pelanggan mempercayai kami'),
+          sub: emptyLocalized(),
+          items: [1, 2, 3, 4].map((n) => ({ id: newId('i'), icon: 'award' as const, title: L(`Badge ${n}`, `Lencana ${n}`) })),
+        },
+      };
+    case 'reviews':
+      return {
+        id,
+        type,
+        settings: {
+          title: L('What customers say', 'Kata pelanggan'),
+          stats: [],
+          items: [
+            { id: newId('q'), quote: L('[Paste a real customer review here.]', '[Tampal ulasan pelanggan sebenar di sini.]'), name: L('[Customer name]', '[Nama pelanggan]'), place: L('[Town]', '[Bandar]') },
+          ],
+        },
+      };
+    case 'stores':
+      return {
+        id,
+        type,
+        settings: {
+          title: L('Where to buy', 'Di mana untuk membeli'),
+          sub: emptyLocalized(),
+          items: [
+            { id: newId('i'), store: 'madinah', title: L('Berkat Madinah Store'), text: emptyLocalized(), button: L('Visit the store', 'Lawati kedai') },
+            { id: newId('i'), store: 'shopee', title: L('Shopee'), text: emptyLocalized(), button: L('Shop on Shopee', 'Beli di Shopee') },
+            { id: newId('i'), store: 'tiktok', title: L('TikTok Shop'), text: emptyLocalized(), button: L('Shop on TikTok', 'Beli di TikTok') },
+          ].map((i) => ({ ...i, title: { en: i.title.en, ms: i.title.ms || i.title.en } })) as StoresItem[],
+        },
+      };
+  }
+}
+
+type StoresItem = { id: string; store: StoreKey; title: Localized; text: Localized; button: Localized };
+
+export function createCtaButton(kind: CtaButton['kind']): CtaButton {
+  const id = newId('b');
+  switch (kind) {
+    case 'whatsapp':
+      return { id, kind, label: L('WhatsApp us', 'WhatsApp kami'), message: L('Hello, I would like to ask about your olive oil.', 'Hai, saya ingin bertanya tentang minyak zaitun anda.'), style: 'whatsapp' };
+    case 'form':
+      return { id, kind, label: L('Fill the form', 'Isi borang'), style: 'outline' };
+    case 'store':
+      return { id, kind, label: L('Buy at Berkat Madinah Store', 'Beli di Berkat Madinah Store'), store: 'madinah', style: 'gold', newTab: true };
+    case 'link':
+      return { id, kind, label: L('Learn more', 'Ketahui lagi'), href: '/en/products', style: 'primary' };
   }
 }
 
@@ -330,6 +452,8 @@ const plain = (html: string) => html.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, 
 export function missingTranslations(doc: CmsPageDoc, lang: CmsLang = 'ms'): string[] {
   const other: CmsLang = lang === 'ms' ? 'en' : 'ms';
   return collectLocalized(doc)
+    // `highlight` is optional decoration (LP-SPEC §8 M9): an untranslated one never blocks publishing.
+    .filter(({ path }) => !/\.highlight$/.test(path))
     .filter(({ value }) => plain(value[other]) !== '' && plain(value[lang]) === '')
     .map(({ path }) => path);
 }
@@ -343,6 +467,7 @@ export function usedMediaIds(doc: CmsPageDoc): number[] {
       for (const w of c.widgets) {
         if (w.type === 'image' && w.settings.media) ids.add(w.settings.media);
         if (w.type === 'gallery') w.settings.media.forEach((m) => ids.add(m));
+        if ((w.type === 'heroForm' || w.type === 'cards' || w.type === 'steps') && w.settings.media) ids.add(w.settings.media);
       }
   }
   return [...ids];
@@ -351,6 +476,7 @@ export function usedMediaIds(doc: CmsPageDoc): number[] {
 export function usedFormIds(doc: CmsPageDoc): number[] {
   const ids = new Set<number>();
   for (const s of doc.sections)
-    for (const c of s.columns) for (const w of c.widgets) if (w.type === 'form' && w.settings.formId) ids.add(w.settings.formId);
+    for (const c of s.columns)
+      for (const w of c.widgets) if ((w.type === 'form' || w.type === 'heroForm') && w.settings.formId) ids.add(w.settings.formId);
   return [...ids];
 }
