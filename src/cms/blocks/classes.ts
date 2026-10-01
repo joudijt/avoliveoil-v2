@@ -352,6 +352,9 @@ export const FORM = {
   submitWrap: 'mt-6',
   alert: 'pt-4 text-sm text-[#9b2c2c]',
   success: 'rounded-xl border border-olive/20 bg-cream p-6 text-center text-base font-light leading-relaxed text-olive-dark',
+  /** no-JS result after the server's 303 back to #form-sent-<id> / #form-error-<id> (CSS :target) */
+  noJsSent: 'hidden target:block mb-6 scroll-mt-28 rounded-xl border border-olive/20 bg-cream p-6 text-center text-base font-light leading-relaxed text-olive-dark',
+  noJsError: 'hidden target:block mb-6 scroll-mt-28 text-sm text-[#9b2c2c]',
 } as const;
 
 // ---------------------------------------------------------------- quote

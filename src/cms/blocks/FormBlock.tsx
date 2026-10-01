@@ -8,6 +8,13 @@ import { CanvasEmpty } from './CanvasEmpty';
 import { ui } from './strings';
 import { placeholderAttr, shown } from './text';
 
+/** Focus without the browser's edge scroll, then bring the element to the middle of the screen. */
+function reveal(el: HTMLElement | null) {
+  if (!el) return;
+  el.focus({ preventScroll: true });
+  el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+}
+
 type Status = { kind: 'idle' } | { kind: 'sending' } | { kind: 'sent' } | { kind: 'error'; message: string };
 
 /** POST target of a form; the no-JS fallback posts urlencoded to the same URL. */
@@ -54,6 +61,11 @@ function CmsForm({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const startedAt = useRef(0);
   const successRef = useRef<HTMLDivElement>(null);
+  // With JavaScript the server's field errors (in the page's language) are shown, so the
+  // browser's own bubbles — always in the browser's language, English on a BM page — are
+  // switched off. Set after mount only: the published no-JS HTML keeps native validation.
+  const [js, setJs] = useState(false);
+  useEffect(() => setJs(true), []);
   const idFor = (f: FormField) => `cmsf-${widgetId}-${f.name}`;
 
   useEffect(() => {
@@ -61,7 +73,9 @@ function CmsForm({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; 
   }, []);
 
   useEffect(() => {
-    if (status.kind === 'sent') successRef.current?.focus();
+    // Centre it: a plain focus() scrolls it to the top edge, under the site's fixed header,
+    // and the visitor sees the form vanish with no thank-you.
+    if (status.kind === 'sent') reveal(successRef.current);
   }, [status.kind]);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -112,7 +126,7 @@ function CmsForm({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; 
         setErrors(fieldErrors);
         setStatus({ kind: 'error', message: ui(lang, 'checkFields') });
         const first = def.fields.find((f) => fieldErrors[f.name]);
-        if (first) (el.querySelector(`#${CSS.escape(idFor(first))}`) as HTMLElement | null)?.focus();
+        if (first) reveal(el.querySelector<HTMLElement>(`#${CSS.escape(idFor(first))}`));
         return;
       }
       setStatus({ kind: 'error', message: ui(lang, 'failed') });
@@ -131,29 +145,38 @@ function CmsForm({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; 
 
   const sending = status.kind === 'sending';
   return (
-    <form action={formAction(form.id)} method="post" className={cx(FORM.form, afterTitle && FORM.formAfterTitle)} onSubmit={onSubmit}>
-      <input type="hidden" name="_page" value={env.pageId !== undefined ? String(env.pageId) : ''} />
-      <input type="hidden" name="_lang" value={lang} />
-      <div className={FORM.honeypot} aria-hidden="true">
-        <label htmlFor={`cmsf-${widgetId}-${FORM_HONEYPOT}`}>{ui(lang, 'honeypot')}</label>
-        <input id={`cmsf-${widgetId}-${FORM_HONEYPOT}`} type="text" name={FORM_HONEYPOT} tabIndex={-1} autoComplete="off" />
-      </div>
-      <div className={FORM.grid}>
-        {def.fields.map((f) => (
-          <Field key={f.id} f={f} id={idFor(f)} env={env} tone={tone} error={errors[f.name]} />
-        ))}
-      </div>
-      <div className={FORM.submitWrap}>
-        <button type="submit" className={FORM.submit} disabled={sending}>
-          {sending ? ui(lang, 'sending') : def.submitLabel?.[lang] || def.submitLabel?.en || 'Send'}
-        </button>
-        {status.kind === 'error' ? (
-          <p className={FORM.alert} role="alert">
-            {status.message}
-          </p>
-        ) : null}
-      </div>
-    </form>
+    <>
+      {/* Without JavaScript the server answers 303 back to #form-sent-<id> / #form-error-<id>: shown by :target. */}
+      <p id={`form-sent-${form.id}`} role="status" className={cx(FORM.noJsSent, afterTitle && FORM.formAfterTitle)}>
+        {def.successMessage?.[lang] || def.successMessage?.en}
+      </p>
+      <p id={`form-error-${form.id}`} role="alert" className={cx(FORM.noJsError, afterTitle && FORM.formAfterTitle)}>
+        {ui(lang, 'notSent')}
+      </p>
+      <form action={formAction(form.id)} method="post" noValidate={js} className={cx(FORM.form, afterTitle && FORM.formAfterTitle)} onSubmit={onSubmit}>
+        <input type="hidden" name="_page" value={env.pageId !== undefined ? String(env.pageId) : ''} />
+        <input type="hidden" name="_lang" value={lang} />
+        <div className={FORM.honeypot} aria-hidden="true">
+          <label htmlFor={`cmsf-${widgetId}-${FORM_HONEYPOT}`}>{ui(lang, 'honeypot')}</label>
+          <input id={`cmsf-${widgetId}-${FORM_HONEYPOT}`} type="text" name={FORM_HONEYPOT} tabIndex={-1} autoComplete="off" />
+        </div>
+        <div className={FORM.grid}>
+          {def.fields.map((f) => (
+            <Field key={f.id} f={f} id={idFor(f)} env={env} tone={tone} error={errors[f.name]} />
+          ))}
+        </div>
+        <div className={FORM.submitWrap}>
+          <button type="submit" className={FORM.submit} disabled={sending}>
+            {sending ? ui(lang, 'sending') : def.submitLabel?.[lang] || def.submitLabel?.en || 'Send'}
+          </button>
+          {status.kind === 'error' ? (
+            <p className={FORM.alert} role="alert">
+              {status.message}
+            </p>
+          ) : null}
+        </div>
+      </form>
+    </>
   );
 }
 

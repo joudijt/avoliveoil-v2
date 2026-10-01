@@ -26,6 +26,10 @@ const STYLE_ID = 'cms-inline-edit-css';
 const STYLES = `
 [data-cms], [data-cms-num], [data-cms-words], [data-cms-attr]:not(img) { cursor: text; }
 img[data-cms-img] { cursor: pointer; }
+/* Some layouts make their text click-through (pointer-events: none, e.g. the Home hero copy over
+   its photo); while editing, every marked element must take the click itself. */
+html[data-cms-inline] [data-cms], html[data-cms-inline] [data-cms-num], html[data-cms-inline] [data-cms-words],
+html[data-cms-inline] [data-cms-attr], html[data-cms-inline] img[data-cms-img] { pointer-events: auto !important; }
 html[data-cms-inline] [data-cms]:hover, html[data-cms-inline] [data-cms-num]:hover, html[data-cms-inline] [data-cms-words]:hover,
 html[data-cms-inline] [data-cms-attr]:not(img):hover, html[data-cms-inline] img[data-cms-img]:hover {
   outline: 2px dashed #b88a2a !important; outline-offset: 3px;
@@ -266,9 +270,28 @@ function collectKeys(): { keys: string[]; imageKeys: string[] } {
   return { keys: [...keys], imageKeys: [...imageKeys] };
 }
 
-function onClickCapture(e: MouseEvent) {
+const MARKED = 'img[data-cms-img], [data-cms-words], [data-cms-num], [data-cms], [data-cms-attr]';
+
+/**
+ * The element the owner meant. Some layouts stack an empty positioning layer over their
+ * text (the Home hero's z-20 grid covers its headline, sub text and photo), so the click
+ * target is that layer: look through it to the first marked element under the pointer,
+ * stopping at anything interactive so a real button or link is never skipped.
+ */
+function clickTarget(e: MouseEvent): Element | null {
   const t = e.target;
-  if (!(t instanceof Element)) return;
+  if (!(t instanceof Element)) return null;
+  if (t.closest(MARKED) || t.closest('a, button, input, select, textarea, label, summary')) return t;
+  for (const el of document.elementsFromPoint(e.clientX, e.clientY)) {
+    if (el.closest(MARKED)) return el;
+    if (el.closest('a, button, input, select, textarea, label, summary')) break;
+  }
+  return t;
+}
+
+function onClickCapture(e: MouseEvent) {
+  const t = clickTarget(e);
+  if (!t) return;
   if (t.closest('.cms-ov-input')) return;
 
   const img = t.closest<HTMLElement>('img[data-cms-img]');

@@ -497,6 +497,39 @@ test('menu: page in header/footer is injected into snapshots and the boot', func
     eq($ms->querySelectorAll('[data-cms-menu-item]')->length, 0, 'no item on Malay pages');
 });
 
+test('menu label: ≤ 20 chars, title too long for a menu needs one; menus use label || title', function () use ($admin, $anon) {
+    $id = $GLOBALS['S']['pageId'];
+    $draft = function () use ($admin, $id) { return $admin->get("/api/pages/$id")->json(); };
+    $save = function (array $doc) use ($admin, $id, $draft) { return $admin->put("/api/pages/$id/draft", ['doc' => $doc, 'baseVersion' => $draft()['page']['version']]); };
+    $publish = fn (array $doc) => $admin->post("/api/pages/$id/publish", ['doc' => $doc, 'htmlB64' => ['en' => b64('<p>Offer</p>')], 'langs' => ['en', 'ms'], 'build' => C('build')]);
+    $orig = $draft()['draft'];
+    $long = $orig;
+    $long['title']['en'] = 'Our big summer olive oil offer';
+    status($save($long), 200, 'a long title is fine in a draft');
+    $r = $publish($long);
+    status($r, 400, 'publish refused while in a menu with a too-long title and no label');
+    eq($r->json()['error']['code'] ?? null, 'menu_label', 'menu_label code');
+    status($admin->patch("/api/pages/$id", ['inHeader' => false, 'inFooter' => false]), 200, 'out of the menus');
+    status($publish($long), 200, 'not in a menu: a long title publishes');
+    $r = $admin->patch("/api/pages/$id", ['inHeader' => true]);
+    status($r, 400, 'cannot put a long-titled page in the menu');
+    contains($r->json()['error']['message'] ?? '', 'menu label', 'message asks for a menu label');
+    $bad = $long;
+    $bad['menuLabel'] = L('Twenty-one characters', '');
+    status($save($bad), 400, 'menu label over 20 characters refused');
+    $ok = $long;
+    $ok['menuLabel'] = L('Summer deal', '');
+    status($save($ok), 200, 'short menu label saved');
+    status($admin->patch("/api/pages/$id", ['inHeader' => true, 'inFooter' => true]), 200, 'now it may join the menus');
+    status($publish($ok), 200, 'publish with the label');
+    $d = $anon->get('/en/why-us')->doc();
+    eq($d->querySelector('nav[data-cms-menu="header"]')->lastElementChild?->textContent, 'Summer deal', 'header uses the menu label');
+    eq($anon->get('/en/why-us')->boot()['menu']['en']['footer'][0]['label'] ?? null, 'Summer deal', 'boot menu uses the menu label');
+    status($save($orig), 200, 'back to the original doc');
+    status($publish($orig), 200, 'republish original');
+    eq($anon->get('/en/why-us')->doc()->querySelector('nav[data-cms-menu="header"]')->lastElementChild?->textContent, 'Summer offer', 'no label → the title');
+});
+
 test('unpublish → 404; republish; slug change → 301; trash → 410; restore', function () use ($admin, $anon) {
     $id = $GLOBALS['S']['pageId'];
     status($admin->post("/api/pages/$id/unpublish"), 200, 'unpublish');
@@ -569,7 +602,7 @@ test('media: jpeg + transparent png → webp variants, alpha kept; non-image ref
     $r = $up("$tmp/photo.jpg", 'image/jpeg');
     status($r, 200, 'upload jpeg');
     $m = $r->json();
-    eq(array_column($m['variants'], 'w'), [480, 960], 'variants ≤ original width');
+    eq(array_column($m['variants'], 'w'), [480, 960, 1200], 'variants ≤ original width, plus the original');
     eq($m['hasAlpha'], false, 'jpeg has no alpha');
     foreach ($m['variants'] as $v) {
         ok(preg_match('~^/uploads/cms/\d{4}/\d{2}/[0-9a-f]{20}-\d+\.webp$~', $v['url']), 'random webp name ' . $v['url']);
@@ -583,7 +616,7 @@ test('media: jpeg + transparent png → webp variants, alpha kept; non-image ref
     status($r, 200, 'upload png');
     $p = $r->json();
     eq($p['hasAlpha'], true, 'png alpha detected');
-    eq(array_column($p['variants'], 'w'), [480], 'one variant');
+    eq(array_column($p['variants'], 'w'), [480, 600], 'step + original');
     $im = imagecreatefromwebp(rpath($p['variants'][0]['url']));
     $corner = (imagecolorat($im, 2, 2) >> 24) & 0x7F;
     $centre = (imagecolorat($im, 240, 160) >> 24) & 0x7F;
@@ -597,6 +630,47 @@ test('media: jpeg + transparent png → webp variants, alpha kept; non-image ref
     contains((string) file_get_contents(rpath('uploads/.htaccess')), 'Require all denied', 'script execution disabled');
     status($admin->patch("/api/media/{$p['id']}", ['altEn' => 'Bottle', 'altMs' => 'Botol']), 200, 'alt edit');
     eq(count($admin->get('/api/media')->json()), 2, 'media list');
+
+    // Share-image copies: JPEG, at most 1200 px wide, transparency flattened onto white.
+    eq([$m['og']['width'] ?? null, $m['og']['height'] ?? null], [1200, 800], 'jpeg og copy of the 1200 px photo');
+    ok(preg_match('~^/uploads/cms/\d{4}/\d{2}/[0-9a-f]{20}-og\.jpg$~', $m['og']['url'] ?? ''), 'og url');
+    eq(getimagesize(rpath($m['og']['url']))[2], IMAGETYPE_JPEG, 'og copy is a JPEG');
+    eq([$p['og']['width'] ?? null, $p['og']['height'] ?? null], [600, 400], 'og copy never wider than the original');
+    $og = imagecreatefromjpeg(rpath($p['og']['url']));
+    $c = imagecolorsforindex($og, imagecolorat($og, 2, 2));
+    ok($c['red'] > 245 && $c['green'] > 245 && $c['blue'] > 245, 'transparent corner flattened onto white');
+});
+
+test('ids are never reused after a delete (old versions must not point at a new photo)', function () use ($admin) {
+    $f = C('data') . '/upload-src/photo.jpg';
+    $up = fn () => $admin->req('POST', '/api/media', ['form' => ['file' => new CURLFile($f, 'image/jpeg', 'photo.jpg')], 'multipart' => true])->json();
+    $a = $up();
+    status($admin->delete("/api/media/{$a['id']}"), 200, 'delete the newest photo');
+    $b = $up();
+    ok($b['id'] > $a['id'], "next upload gets a fresh id ({$a['id']} → {$b['id']})");
+    status($admin->delete("/api/media/{$b['id']}"), 200, 'clean up');
+});
+
+test('share image: a page share image is served as the JPEG copy (og:image, twitter:image, type, size)', function () use ($admin, $anon) {
+    $id = $GLOBALS['S']['pageId'];
+    $payload = $admin->get("/api/pages/$id")->json();
+    $orig = $payload['draft'];
+    $doc = $orig;
+    $doc['seo']['ogImage'] = $GLOBALS['S']['mediaJpg'];
+    status($admin->put("/api/pages/$id/draft", ['doc' => $doc, 'baseVersion' => $payload['page']['version']]), 200, 'save share image');
+    status($admin->post("/api/pages/$id/publish", ['doc' => $doc, 'htmlB64' => ['en' => b64('<p>Offer</p>')], 'langs' => ['en', 'ms'], 'build' => C('build')]), 200, 'publish');
+    $slug = $admin->get("/api/pages/$id")->json()['page']['slug'];
+    $r = $anon->get("/en/$slug");
+    $d = $r->doc();
+    $og = (string) $d->querySelector('meta[property="og:image"]')?->getAttribute('content');
+    ok(str_starts_with($og, 'https://avoliveoil.com/uploads/cms/') && str_ends_with($og, '-og.jpg'), "og:image is the JPEG copy ($og)");
+    eq($d->querySelector('meta[name="twitter:image"]')?->getAttribute('content'), $og, 'twitter:image too');
+    eq($d->querySelector('meta[property="og:image:type"]')?->getAttribute('content'), 'image/jpeg', 'og:image:type');
+    eq([$d->querySelector('meta[property="og:image:width"]')?->getAttribute('content'), $d->querySelector('meta[property="og:image:height"]')?->getAttribute('content')], ['1200', '800'], 'og size');
+    eq($r->boot()['page']['seo']['ogImage']['url'] ?? null, $og, 'React gets the same ResolvedSeo');
+    $p2 = $admin->get("/api/pages/$id")->json();
+    status($admin->put("/api/pages/$id/draft", ['doc' => $orig, 'baseVersion' => $p2['page']['version']]), 200, 'restore doc');
+    status($admin->post("/api/pages/$id/publish", ['doc' => $orig, 'htmlB64' => ['en' => b64('<p>Offer</p>')], 'langs' => ['en', 'ms'], 'build' => C('build')]), 200, 'republish');
 });
 
 // ---------------------------------------------------------------- site text overrides
@@ -660,6 +734,24 @@ test('overrides: publish only the listed keys; pending list keeps the rest', fun
     ok(!isset($text['ms']['hero.sub']), 'Malay draft not published');
 });
 
+test('overrides: an admin can discard another user\'s pending change (audited)', function () use ($admin) {
+    tdb()->exec('DELETE FROM login_attempts');
+    $ed = new Client();
+    status($ed->post('/api/auth/login', ['email' => 'editor@example.com', 'password' => 'emergency pass 1']), 200, 'editor login');
+    $ed->build = C('build');
+    status($ed->put('/api/site/overrides', ['lang' => 'ms', 'items' => [['key' => 'nav.home', 'kind' => 'text', 'value' => 'Mula']]]), 200, 'editor draft');
+    $mine = fn () => array_values(array_filter($admin->get('/api/site/pending')->json(), fn ($p) => $p['userId'] === $GLOBALS['S']['editorId']));
+    eq(count($mine()), 1, 'editor draft pending');
+    status($admin->post('/api/site/discard-other', ['userId' => $GLOBALS['S']['editorId'], 'lang' => 'ms', 'key' => 'nav.home']), 200, 'admin discards it');
+    eq(count($mine()), 0, 'gone from pending');
+    $a = tdb()->query("SELECT target, detail FROM audit WHERE action = 'site.draft.discard_other' ORDER BY id DESC LIMIT 1")->fetch();
+    eq($a['target'] ?? null, 'user:' . $GLOBALS['S']['editorId'], 'audit target');
+    contains((string) ($a['detail'] ?? ''), 'ms:nav.home', 'audit detail');
+    status($admin->post('/api/site/discard-other', ['userId' => $GLOBALS['S']['editorId'], 'lang' => 'ms', 'key' => 'nav.home']), 404, 'already gone');
+    status($admin->post('/api/site/discard-other', ['userId' => 'x', 'lang' => 'ms', 'key' => 'nav.home']), 400, 'bad input');
+    status((new Client())->post('/api/site/discard-other', ['userId' => 1, 'lang' => 'ms', 'key' => 'nav.home']), 401, 'needs a session');
+});
+
 test('serve applies text / attr / num / words / img / head / JSON-LD; boot JSON valid and </script>-safe', function () use ($anon) {
     $r = $anon->get('/en');
     status($r, 200, '/en');
@@ -681,7 +773,7 @@ test('serve applies text / attr / num / words / img / head / JSON-LD; boot JSON 
     eq($words, [['Liquid', true], ['Olive', false], ['Gold', true], ['Today', false]], 'words rebuilt with gold flags');
     ok(str_contains($h1->firstElementChild->getAttribute('class'), 'me-3'), 'outer span cloned');
     $img = $d->querySelector('img[data-cms-img="home.hero.bg"]');
-    ok(preg_match('~^/uploads/cms/.+-960\.webp$~', $img->getAttribute('src')), 'img src = widest variant');
+    ok(preg_match('~^/uploads/cms/.+-1200\.webp$~', $img->getAttribute('src')), 'img src = widest variant');
     contains($img->getAttribute('srcset'), '-480.webp 480w', 'srcset');
     eq([$img->getAttribute('width'), $img->getAttribute('height'), $img->getAttribute('alt')], ['1200', '800', 'New grove'], 'img size + alt');
     eq($img->getAttribute('style'), 'opacity:0.9;object-position:30% 70%', 'focal merged into style');
@@ -912,12 +1004,12 @@ test('submit: urlencoded no-JS fallback → 303 to the embedding page; bogus pag
     $c = new Client();
     $r = $c->req('POST', "/api/forms/$fid/submit", ['form' => ['name' => 'No JS', 'email' => 'nojs@example.com', 'consent' => 'on', '_page' => (string) $pid, '_lang' => 'en', 'company_website' => '']]);
     status($r, 303, 'urlencoded → 303');
-    eq($r->header('location'), '/en/summer-deal#form-sent', 'back to the embedding page');
+    eq($r->header('location'), "/en/summer-deal#form-sent-$fid", 'back to the embedding page');
     $r = $c->req('POST', "/api/forms/$fid/submit", ['form' => ['name' => 'No JS', 'email' => 'nojs@example.com', 'consent' => 'on', '_page' => '99999', '_lang' => 'en'], 'headers' => ['Referer' => 'https://evil.example/']]);
     status($r, 303, 'bogus page');
-    eq($r->header('location'), '/en#form-sent', 'never to Referer');
+    eq($r->header('location'), "/en#form-sent-$fid", 'never to Referer');
     $r = $c->req('POST', "/api/forms/$fid/submit", ['form' => ['name' => '', '_page' => (string) $pid, '_lang' => 'en']]);
-    eq($r->header('location'), '/en/summer-deal#form-error', 'invalid no-JS submit → #form-error');
+    eq($r->header('location'), "/en/summer-deal#form-error-$fid", 'invalid no-JS submit → #form-error');
     $f2 = $GLOBALS['S']['form2Id'];
     $r = $c->req('POST', "/api/forms/$f2/submit", ['form' => ['name' => 'R', 'email' => 'r@example.com', 'consent' => 'on', '_lang' => 'en']]);
     eq($r->header('location'), '/en/thank-you', 'redirectPath used after success');

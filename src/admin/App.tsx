@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation } from 'rea
 import { LuRefreshCw } from 'react-icons/lu';
 import { api, session, type AdminUser } from './api';
 import { SessionContext, useSession, type SessionState } from './lib/session';
+import { reloadWithoutPrompt } from './lib/navGuard';
 import { AppLayout } from './layout/AppLayout';
 import { ConfirmHost, Toaster } from './ui/Hosts';
 import { Modal } from './ui/Modal';
@@ -127,7 +128,7 @@ function Root() {
       <ConfirmHost />
       <Modal open={stale} onClose={() => {}} dismissable={false} title="The site was updated" size="sm"
         footer={
-          <Button variant="primary" icon={<LuRefreshCw />} onClick={() => window.location.reload()} data-autofocus>
+          <Button variant="primary" icon={<LuRefreshCw />} onClick={reloadWithoutPrompt} data-autofocus>
             Reload the panel
           </Button>
         }

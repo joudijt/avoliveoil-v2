@@ -13,6 +13,7 @@ import {
   LuSmartphone,
   LuTablet,
   LuTrash2,
+  LuTriangleAlert,
   LuX,
 } from 'react-icons/lu';
 import type { Align, CmsLang, HideOn, Localized, TextColor } from '../../../../cms/contracts';
@@ -289,18 +290,32 @@ function hrefHint(v: string): string | undefined {
 
 // ---------------------------------------------------------------- media
 
+/** Warns (never blocks) when a photo is narrower than the space it will fill. */
+export function SmallPhotoWarning({ width, need }: { width: number; need: number }) {
+  if (!width || width >= need) return null;
+  return (
+    <p className="flex items-start gap-1.5 rounded-lg bg-warn-soft px-2.5 py-2 text-[12px] leading-snug text-warn">
+      <LuTriangleAlert className="mt-0.5 shrink-0" />
+      This photo is only {width} px wide, but this spot can show it up to {need} px wide, so it may look blurry. A photo at least {need} px wide works best.
+    </p>
+  );
+}
+
 export function MediaField({
   label,
   value,
   onChange,
   hint,
   allowClear = true,
+  minWidth,
 }: {
   label: string;
   value: number | undefined;
   onChange: (id: number | undefined, item?: MediaItem) => void;
   hint?: ReactNode;
   allowClear?: boolean;
+  /** width the photo can be shown at; a narrower photo gets a "may look blurry" warning */
+  minWidth?: number;
 }) {
   const { media, registerMedia } = useBuilder();
   const [open, setOpen] = useState(false);
@@ -331,6 +346,7 @@ export function MediaField({
           <span className="text-[13px] font-medium">Choose a photo</span>
         </button>
       )}
+      {ref && minWidth ? <SmallPhotoWarning width={ref.width} need={minWidth} /> : null}
       <MediaPicker
         open={open}
         onClose={() => setOpen(false)}
@@ -420,6 +436,13 @@ export function ItemList<T extends { id: string }>({
   max?: number;
 }) {
   const [openId, setOpenId] = useState<string | null>(items[0]?.id ?? null);
+  // An item appended from outside (e.g. the form editor's "Add field" menu) opens like one added here.
+  const prevIds = useRef(items.map((x) => x.id));
+  useEffect(() => {
+    const prev = prevIds.current;
+    prevIds.current = items.map((x) => x.id);
+    if (items.length === prev.length + 1 && prev.every((id, i) => items[i]?.id === id)) setOpenId(items[items.length - 1].id);
+  }, [items]);
   const update = (id: string, patch: Partial<T>) => onChange(items.map((x) => (x.id === id ? { ...x, ...patch } : x)));
   const move = (i: number, d: -1 | 1) => {
     const j = i + d;

@@ -87,7 +87,9 @@ function Counter({
        locale is pinned for the same reason: the snapshot and every visitor must
        group digits identically to the server. */
     <span ref={ref} suppressHydrationWarning className="text-5xl text-cream md:text-6xl">
-      <span {...(numberEditable ? cmsNum(`${cmsKey}.value`) : {})}>{display.toLocaleString('en-US')}</span>
+      {/* No count-up in a static render: show the value itself, so a number changed in the
+          CMS editor shows at once (display only follows `value` through the animation). */}
+      <span {...(numberEditable ? cmsNum(`${cmsKey}.value`) : {})}>{(isStaticRender() ? value : display).toLocaleString('en-US')}</span>
       <span {...cmsText(`${cmsKey}.suffix`)}>{suffix}</span>
     </span>
   );

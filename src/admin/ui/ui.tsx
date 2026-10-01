@@ -2,7 +2,7 @@
  * Admin UI primitives. Calm olive/cream look: white cards on warm background,
  * olive primary actions, gold only for focus + highlights.
  */
-import { forwardRef, useId, type ButtonHTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes, type TextareaHTMLAttributes } from 'react';
+import { forwardRef, useEffect, useId, type ButtonHTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes, type TextareaHTMLAttributes } from 'react';
 import { LuLoaderCircle } from 'react-icons/lu';
 
 import { cx } from '../lib/cx';
@@ -122,6 +122,19 @@ export function Select({ className, children, ...rest }: SelectHTMLAttributes<HT
   );
 }
 
+// An error that appears out of view (e.g. at the top of a long dialog after clicking Save at the
+// bottom) would make Save look like it did nothing: bring the FIRST visible error into view.
+let errorScrollQueued = false;
+function revealFirstError() {
+  if (errorScrollQueued) return;
+  errorScrollQueued = true;
+  requestAnimationFrame(() => {
+    errorScrollQueued = false;
+    // the whole field (label + input + message), not just the message line
+    document.querySelector('[data-field-error]')?.parentElement?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  });
+}
+
 export function Field({
   label,
   hint,
@@ -139,6 +152,9 @@ export function Field({
   aside?: ReactNode;
   className?: string;
 }) {
+  useEffect(() => {
+    if (error) revealFirstError();
+  }, [error]);
   return (
     <div className={cx('flex flex-col gap-1.5', className)}>
       {(label || aside) && (
@@ -153,7 +169,7 @@ export function Field({
       )}
       {children}
       {error ? (
-        <p className="text-xs text-danger" role="alert">
+        <p className="text-xs text-danger" role="alert" data-field-error="">
           {error}
         </p>
       ) : hint ? (

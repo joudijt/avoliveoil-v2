@@ -550,16 +550,22 @@ function BuilderInner({ payload }: { payload: PagePayload }) {
   };
 
   const saveSettings = async ({ doc: d, patch }: SettingsResult) => {
+    const { menuLabel: _old, ...rest } = docRef.current;
+    const next: CmsPageDoc = {
+      ...rest,
+      ...(d.menuLabel ? { menuLabel: d.menuLabel } : {}),
+      title: d.title,
+      seo: { ...rest.seo, metaTitle: d.metaTitle, metaDescription: d.metaDescription, ogImage: d.ogImage },
+    };
+    commit(next);
+    // The server checks the menu link text against the saved draft, so save it before the menu switch.
+    docRef.current = next;
     if (Object.keys(patch).length) {
+      if (!(await save())) throw new Error('The settings could not be saved. Try again.');
       const r = await api.patchPage(pageId, patch);
       setPage((p) => ({ ...p, ...r }));
       void pages.reload(true);
     }
-    commit((cur) => ({
-      ...cur,
-      title: d.title,
-      seo: { ...cur.seo, metaTitle: d.metaTitle, metaDescription: d.metaDescription, ogImage: d.ogImage },
-    }));
     toast.ok(page.status === 'published' && (patch.slug || patch.inHeader !== undefined || patch.inFooter !== undefined) ? 'Settings saved. Address and menu changes are live now.' : 'Settings saved.');
   };
 

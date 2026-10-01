@@ -291,9 +291,13 @@ function SiteEditorInner({ pageKey, structure }: { pageKey: string; structure: S
       return { label: g.label, items: g.keys.map((k) => byKey.get(k)).filter((i): i is SiteKeyItem => !!i && i.type !== 'image') };
     });
     const rest = list.filter((i) => !known.has(i.key) && i.type !== 'image' && !def.images.includes(i.key));
-    if (rest.length) out.push({ label: 'Other texts', items: rest });
+    const shared = new Set(pageKey === 'global' ? [] : (structure.pages.global?.groups ?? []).flatMap((g) => g.keys));
+    const headerFooter = rest.filter((i) => shared.has(i.key));
+    const other = rest.filter((i) => !shared.has(i.key));
+    if (headerFooter.length) out.push({ label: 'Header & footer (every page)', items: headerFooter });
+    if (other.length) out.push({ label: 'Other texts', items: other });
     return out.filter((g) => g.items.length);
-  }, [items, lang, def, byKey]);
+  }, [items, lang, def, byKey, pageKey, structure.pages]);
 
   const imageItems = useMemo(
     () =>
@@ -312,13 +316,34 @@ function SiteEditorInner({ pageKey, structure }: { pageKey: string; structure: S
     return i.key.toLowerCase().includes(needle) || humanizeKey(i.key).toLowerCase().includes(needle) || JSON.stringify(v ?? '').toLowerCase().includes(needle);
   };
 
-  const pageKeys = useMemo(() => new Set([...def.groups.flatMap((g) => g.keys), ...def.images]), [def]);
+  const pageKeys = useMemo(
+    () => new Set([...def.groups.flatMap((g) => g.keys), ...def.images, ...(structure.pages.global?.groups ?? []).flatMap((g) => g.keys)]),
+    [def, structure.pages]
+  );
   const others: PendingOverride[] = (pending.data ?? []).filter((p) => pageKeys.has(p.key) && p.userId !== me.id);
+  const discardOther = async (o: PendingOverride) => {
+    const who = o.userName ?? 'this person';
+    const ok = await confirmDialog({
+      title: `Discard ${who}’s change?`,
+      message: `“${humanizeKey(o.key)}” (${o.lang === 'en' ? 'English' : 'Bahasa Melayu'}) was changed by ${who} but never published. Discarding deletes that unpublished text; the website keeps what it shows now. This cannot be undone.`,
+      confirmLabel: 'Discard change',
+      danger: true,
+    });
+    if (!ok || o.userId == null) return;
+    try {
+      await api.discardOtherDraft(o.userId, o.lang, o.key);
+      toast.ok('Change discarded.');
+    } catch (e) {
+      toastError(e);
+    }
+    void pending.reload(true);
+  };
+
   const changesCount = myDrafts.length + Object.keys(edits.en).length + Object.keys(edits.ms).length;
   const src = `/${lang}${path ? '/' + path : ''}?cms-edit=1`;
 
   const panel = (
-    <aside className={cx('flex min-h-0 flex-col bg-cream', wide ? 'w-[400px] shrink-0 border-l border-line' : 'flex-1')}>
+    <aside className={cx('flex min-h-0 min-w-0 flex-col bg-cream', wide ? 'w-[400px] shrink-0 border-l border-line' : 'flex-1')}>
       <div className="border-b border-line px-4 py-3">
         <div className="flex items-center justify-between gap-2">
           <h2 className="font-display text-lg text-olive-dark">All texts on this page</h2>
@@ -340,9 +365,16 @@ function SiteEditorInner({ pageKey, structure }: { pageKey: string; structure: S
               <LuUsers /> {plural(others.length, 'change')} by other people, not published yet
             </div>
             <ul className="mt-1 flex flex-col gap-0.5">
-              {others.slice(0, 5).map((o) => (
-                <li key={o.lang + o.key} className="truncate">
-                  {humanizeKey(o.key)} ({o.lang === 'en' ? 'EN' : 'BM'}) — {o.userName ?? 'someone'}, {fmtAgo(o.updatedAt)}
+              {others.map((o) => (
+                <li key={`${o.userId}:${o.lang}:${o.key}`} className="flex items-center gap-2">
+                  <span className="min-w-0 flex-1 truncate">
+                    {humanizeKey(o.key)} ({o.lang === 'en' ? 'EN' : 'BM'}) — {o.userName ?? 'someone'}, {fmtAgo(o.updatedAt)}
+                  </span>
+                  {o.userId != null && (
+                    <button type="button" className="shrink-0 font-medium underline hover:no-underline" onClick={() => void discardOther(o)}>
+                      Discard
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>

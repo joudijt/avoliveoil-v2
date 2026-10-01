@@ -117,7 +117,21 @@ async function main() {
         }
       });
 
+      // Vite's preload helper inserts <link rel="modulepreload"> for lazy chunks (articles,
+      // CMS page blocks) with ABSOLUTE urls — the preview server's origin. Snapshotted as is,
+      // every article and CMS page asked browsers for http://localhost:4173/assets/…
+      // (blocked by CSP + mixed content: console errors live). Keep them, same-origin.
+      await page.evaluate((origin) => {
+        for (const el of document.querySelectorAll(`[href^="${origin}/"], [src^="${origin}/"]`)) {
+          for (const attr of ['href', 'src']) {
+            const v = el.getAttribute(attr);
+            if (v?.startsWith(origin + '/')) el.setAttribute(attr, v.slice(origin.length));
+          }
+        }
+      }, base);
+
       const html = await page.content();
+      if (html.includes(base)) throw new Error(`${route}: snapshot still contains ${base}`);
 
       const outDir = join(distDir, route);
       mkdirSync(outDir, { recursive: true });

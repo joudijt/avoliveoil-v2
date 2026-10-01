@@ -48,7 +48,6 @@ export function VideoBlock({ w }: { w: VideoWidget }) {
           title={title}
           loading="lazy"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
         />
       )}

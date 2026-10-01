@@ -91,7 +91,7 @@ export function ElementSettings({ id, onBack, onDuplicate, onDelete }: { id: str
           <LuArrowLeft />
         </button>
         <span className="flex h-7 w-7 items-center justify-center rounded-md bg-mist text-olive">{icon ?? <span className="text-[10px] font-bold">{ref.kind === 'section' ? '§' : '▥'}</span>}</span>
-        <h2 className="flex-1 truncate text-sm font-semibold text-ink">Edit {title.toLowerCase()}</h2>
+        <h2 className="flex-1 truncate text-sm font-semibold text-ink">Edit {title.split(' ').map((w) => (/[A-Z].*[A-Z]/.test(w) ? w : w.toLowerCase())).join(' ')}</h2>
         {ref.kind !== 'column' && (
           <>
             <button type="button" onClick={onDuplicate} className="flex h-8 w-8 items-center justify-center rounded-md text-muted hover:bg-sand hover:text-ink" aria-label="Duplicate" title="Duplicate (Ctrl+D)">
@@ -115,8 +115,12 @@ export function ElementSettings({ id, onBack, onDuplicate, onDelete }: { id: str
 
 // ---------------------------------------------------------------- widgets
 
+/** Photo width a widget can be shown at: a full-width section is up to ~1600 px, a boxed one ~800. */
+const PHOTO_NEED_FULL = 1600;
+const PHOTO_NEED_BOXED = 800;
+
 function WidgetSettings({ w, tab }: { w: Widget; tab: Tab }) {
-  const { commit, lang } = useBuilder();
+  const { commit, lang, doc } = useBuilder();
   const set = (patch: Record<string, unknown>, key?: string) => commit((d) => updateWidgetSettings(d, w.id, patch), key ? `${w.id}.${key}` : undefined);
   const text = (field: string) => (v: string) => commit((d) => setLoc(d, w.id, field, lang, v), `${w.id}.${field}.${lang}`);
 
@@ -185,6 +189,11 @@ function WidgetSettings({ w, tab }: { w: Widget; tab: Tab }) {
           <MediaField
             label="Photo"
             value={s.media}
+            minWidth={(() => {
+              const node = findNode(doc, w.id);
+              const need = node && node.kind === 'widget' && node.section.settings.layout === 'full' ? PHOTO_NEED_FULL : PHOTO_NEED_BOXED;
+              return s.maxWidth > 0 ? Math.min(need, s.maxWidth) : need;
+            })()}
             onChange={(media, item) => {
               const patch: Record<string, unknown> = { media };
               // Pre-fill the description from the library when the widget has none yet.
@@ -477,7 +486,7 @@ function VideoContent({ w }: { w: Extract<Widget, { type: 'video' }> }) {
   const err = url.trim() && !parsed ? 'Paste a YouTube or Vimeo link, e.g. https://www.youtube.com/watch?v=…' : null;
   return (
     <Group>
-      <Field label="Video link" error={err} hint={!url.trim() ? 'Copy the link from YouTube (Share → Copy) or Vimeo and paste it here.' : parsed ? `Found a ${parsed.kind === 'mp4' ? 'video file' : parsed.kind === 'youtube' ? 'YouTube' : 'Vimeo'} video.` : undefined}>
+      <Field label="Video link" error={err} hint={!url.trim() ? 'Copy the link from YouTube (Share → Copy) or Vimeo and paste it here.' : parsed ? (parsed.kind === 'mp4' ? 'Found a video file.' : `Found a ${parsed.kind === 'youtube' ? 'YouTube' : 'Vimeo'} video.`) : undefined}>
         <Input
           value={url}
           invalid={!!err}
@@ -521,12 +530,14 @@ function ProductsContent({ w }: { w: Extract<Widget, { type: 'products' }> }) {
           const idx = ids.indexOf(p.id);
           return (
             <li key={p.id} className={cx('flex items-center gap-2.5 rounded-lg border px-2 py-1.5', on ? 'border-olive/40 bg-mist/50' : 'border-line bg-white')}>
-              <input type="checkbox" checked={on} onChange={() => toggle(p.id)} className="h-4 w-4 accent-[#556b2f]" aria-label={p.name.en} />
-              <img src={variantUrl(p.image, 120)} alt="" className="h-10 w-8 shrink-0 object-contain" />
-              <div className="min-w-0 flex-1">
-                <div className="truncate text-[13px] font-medium text-ink">{p.name[lang] || p.name.en}</div>
-                <div className="truncate text-[11px] text-muted">{p.kind === 'infused' ? 'Infused' : 'Classic'}</div>
-              </div>
+              <label className="flex min-w-0 flex-1 cursor-pointer items-center gap-2.5">
+                <input type="checkbox" checked={on} onChange={() => toggle(p.id)} className="h-4 w-4 accent-[#556b2f]" aria-label={p.name.en} />
+                <img src={variantUrl(p.image, 120)} alt="" className="h-10 w-8 shrink-0 object-contain" />
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-[13px] font-medium text-ink">{p.name[lang] || p.name.en}</div>
+                  <div className="truncate text-[11px] text-muted">{p.kind === 'infused' ? 'Infused' : 'Classic'}</div>
+                </div>
+              </label>
               {on && (
                 <div className="flex">
                   <button type="button" className="rounded p-1 text-muted hover:bg-white disabled:opacity-30" disabled={idx === 0} onClick={() => move(idx, -1)} aria-label="Move up">
@@ -704,7 +715,7 @@ function SectionSettingsPanel({ s, tab }: { s: Section; tab: Tab }) {
           </div>
           {s.settings.bg === 'image' && (
             <>
-              <MediaField label="Background photo" value={s.settings.bgImage} onChange={(bgImage) => set({ bgImage })} />
+              <MediaField label="Background photo" value={s.settings.bgImage} onChange={(bgImage) => set({ bgImage })} minWidth={PHOTO_NEED_FULL} />
               {!s.settings.bgImage && <p className="rounded-lg bg-warn-soft px-3 py-2 text-xs text-warn">Choose a photo, or the section shows a plain background.</p>}
               <NumberField
                 label="Darken the photo"

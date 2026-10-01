@@ -25,13 +25,18 @@ function avo_media_ref(array $row): array
 {
     $widths = json_decode((string) $row['widths_json'], true) ?: [];
     sort($widths);
-    return [
+    $ref = [
         'id' => (int) $row['id'],
         'width' => (int) $row['width'],
         'height' => (int) $row['height'],
         'variants' => array_map(fn ($w) => ['w' => (int) $w, 'url' => '/uploads/cms/' . $row['file_base'] . '-' . (int) $w . '.webp'], $widths),
         'alt' => ['en' => (string) $row['alt_en'], 'ms' => (string) $row['alt_ms']],
     ];
+    $og = json_decode((string) ($row['og_json'] ?? ''), true);
+    if (is_array($og) && isset($og['w'], $og['h'])) {
+        $ref['og'] = ['url' => '/uploads/cms/' . $row['file_base'] . '-og.jpg', 'width' => (int) $og['w'], 'height' => (int) $og['h']];
+    }
+    return $ref;
 }
 
 /** @param int[] $ids @return array<string, array> id => MediaRef */
@@ -41,7 +46,7 @@ function avo_media_refs(array $ids): array
     if (!$ids) return [];
     $rows = db_all('SELECT * FROM media WHERE id IN (' . implode(',', array_fill(0, count($ids), '?')) . ')', $ids);
     $out = [];
-    foreach ($rows as $r) $out[(string) $r['id']] = avo_media_ref($r);
+    foreach ($rows as $r) $out[(string) $r['id']] = avo_media_ref(avo_media_ensure_og($r));
     return $out;
 }
 
@@ -166,7 +171,7 @@ function avo_write_published(): int
                 'publishedAt' => $file['publishedAt'],
             ];
             foreach ($file['langs'] as $l) {
-                $label = trim(avo_loc($file['doc']['title'] ?? null, $l));
+                $label = avo_menu_label($file['doc'], $l);
                 $item = ['slug' => (string) $row['slug'], 'label' => $label, 'order' => (int) $row['menu_order']];
                 if ((int) $row['in_header']) $menu[$l]['header'][] = $item;
                 if ((int) $row['in_footer']) $menu[$l]['footer'][] = $item;

@@ -40,3 +40,5 @@ docs/press/round-5/gen/
 .cms-selftest
 # ftp-deploy.py keeps the previous live .htaccess here for rollback
 .htaccess.prev-*
+.harness-shots/
+.harness-walk/

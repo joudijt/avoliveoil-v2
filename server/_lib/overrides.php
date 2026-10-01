@@ -103,6 +103,12 @@ function avo_overrides_save(array $s, array $body): array
     db_tx(function () use ($s, $lang, $rows) {
         $now = avo_now();
         foreach ($rows as [$key, $kind, $value]) {
+            // "Back to the original" of something never published is no change at all: drop the
+            // draft instead of keeping a pending reset (it showed as a change to publish).
+            if ($value === null && !db_one('SELECT 1 FROM overrides WHERE lang = ? AND key = ?', [$lang, $key])) {
+                db_exec('DELETE FROM override_drafts WHERE lang = ? AND key = ? AND user_id = ?', [$lang, $key, $s['user_id']]);
+                continue;
+            }
             db_exec('INSERT INTO override_drafts(lang,key,user_id,kind,value,updated_at) VALUES(?,?,?,?,?,?)
                      ON CONFLICT(lang,key,user_id) DO UPDATE SET kind = excluded.kind, value = excluded.value, updated_at = excluded.updated_at', [
                 $lang, $key, $s['user_id'], $kind, $value === null ? null : json_encode($value, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $now,
@@ -200,6 +206,25 @@ function avo_overrides_discard(array $s, array $body): array
     return ['ok' => true, 'discarded' => $n];
 }
 
+/**
+ * POST /api/site/discard-other {userId, lang, key} — delete ANOTHER person's unpublished change
+ * (e.g. someone who left: their drafts would otherwise stay "waiting" forever). Audited.
+ */
+function avo_overrides_discard_other(array $s, array $body): array
+{
+    $userId = $body['userId'] ?? null;
+    $lang = $body['lang'] ?? null;
+    $key = $body['key'] ?? null;
+    if (!is_int($userId) || !in_array($lang, AVO_LANGS, true) || !is_string($key) || $key === '') {
+        avo_fail(400, 'invalid', 'Choose which change to discard.');
+    }
+    $row = db_one('SELECT kind, value FROM override_drafts WHERE lang = ? AND key = ? AND user_id = ?', [$lang, $key, $userId]);
+    if (!$row) avo_fail(404, 'not_found', 'This change was already published or discarded. Reload the page.');
+    db_exec('DELETE FROM override_drafts WHERE lang = ? AND key = ? AND user_id = ?', [$lang, $key, $userId]);
+    avo_audit($s['user_id'], 'site.draft.discard_other', 'user:' . $userId, $lang . ':' . $key . ' ' . mb_substr((string) $row['value'], 0, 300));
+    return ['ok' => true];
+}
+
 function avo_decode_value(?string $json): mixed
 {
     return $json === null ? null : json_decode($json, true);
@@ -216,6 +241,9 @@ function avo_site_keys(array $s, string $page, string $lang): array
         if (!isset($pages[$page])) avo_fail(404, 'not_found', 'This page is not editable.');
         $keys = [];
         foreach ($pages[$page]['groups'] ?? [] as $g) foreach ($g['keys'] ?? [] as $k) $keys[] = $k;
+        // The header and footer are on every page and clickable in its preview, so their texts
+        // belong to every page's list (and to its Publish), not only to "Header & footer".
+        if ($page !== 'global') foreach ($pages['global']['groups'] ?? [] as $g) foreach ($g['keys'] ?? [] as $k) $keys[] = $k;
         $imageKeys = $pages[$page]['images'] ?? [];
     } else {
         $keys = array_keys($defaults);

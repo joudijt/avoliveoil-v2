@@ -18,18 +18,50 @@ const TOKEN_LABEL: Record<string, string> = { store: 'Store name' };
  * Text with automatic parts ({{store}}): the owner edits the text between fixed chips,
  * so a token can never be deleted or invented.
  */
-function TemplateInput({ value, onChange, onFocus, id }: { value: string; onChange: (v: string) => void; onFocus: () => void; id: string }) {
+type Slot = { text: string } | { token: string };
+
+function toSlots(value: string): Slot[] {
   const parts = splitTemplate(value);
   // Make sure there is an editable text slot before, between and after every token.
-  const slots: ({ text: string } | { token: string })[] = [];
+  const slots: Slot[] = [];
   parts.forEach((p, i) => {
     if ('token' in p && (i === 0 || 'token' in parts[i - 1])) slots.push({ text: '' });
     slots.push(p);
   });
   if (!slots.length || 'token' in slots[slots.length - 1]) slots.push({ text: '' });
+  return slots;
+}
+
+/**
+ * Join the slots back into the template. The space next to a chip is invisible in the box,
+ * so an owner retyping "sold only by" got "sold only byBerkat Madinah Store" live: put the
+ * word space back on each side of a token unless punctuation or a space is already there.
+ */
+function joinSlots(slots: Slot[]): string {
+  return slots
+    .map((s, i) => {
+      if ('token' in s) return `{{${s.token}}}`;
+      let t = s.text;
+      if (t && i + 1 < slots.length && 'token' in slots[i + 1] && !/[\s(“"'‘]$/.test(t)) t += ' ';
+      if (t && i > 0 && 'token' in slots[i - 1] && /^[\p{L}\p{N}—–-]/u.test(t)) t = ' ' + t;
+      return t;
+    })
+    .join('');
+}
+
+function TemplateInput({ value, onChange, onFocus, id }: { value: string; onChange: (v: string) => void; onFocus: () => void; id: string }) {
+  // Local slots so the automatic spaces never jump the caret while typing; re-read only when the
+  // value changes from outside (reset, discard, language switch).
+  const [slots, setSlots] = useState<Slot[]>(() => toSlots(value));
+  const emitted = useRef<string | null>(null);
+  useEffect(() => {
+    if (value !== emitted.current) setSlots(toSlots(value));
+  }, [value]);
   const update = (idx: number, text: string) => {
-    const clean = text.replace(/\{\{|\}\}/g, '');
-    onChange(slots.map((s, i) => (i === idx ? clean : 'text' in s ? s.text : `{{${s.token}}}`)).join(''));
+    const next = slots.map((s, i) => (i === idx && 'text' in s ? { text: text.replace(/\{\{|\}\}/g, '') } : s));
+    setSlots(next);
+    emitted.current = joinSlots(next);
+    onChange(emitted.current);
   };
   let firstText = true;
   return (
@@ -50,7 +82,7 @@ function TemplateInput({ value, onChange, onFocus, id }: { value: string; onChan
             value={s.text}
             onFocus={onFocus}
             onChange={(e) => update(i, e.target.value)}
-            className="h-7 min-w-[40px] flex-1 bg-transparent px-1 text-sm focus:outline-none"
+            className="h-7 min-w-[40px] max-w-full flex-1 bg-transparent px-1 text-sm focus:outline-none"
             style={{ width: Math.max(40, s.text.length * 7.5) }}
             aria-label={isFirst ? undefined : 'Text after the automatic part'}
           />
@@ -367,6 +399,12 @@ export function ImageSpotField({
           </div>
         </div>
       </div>
+      {value && spot && value.media.width < spot.default.width && (
+        <p className="mt-2 flex items-start gap-1.5 rounded-lg bg-warn-soft px-2.5 py-2 text-[12px] leading-snug text-warn">
+          <LuTriangleAlert className="mt-0.5 shrink-0" />
+          This photo is only {value.media.width} px wide; the original here is {spot.default.width} px, so it may look blurry. A photo at least {spot.default.width} px wide works best.
+        </p>
+      )}
       {noAlpha && (
         <p className="mt-2 flex items-start gap-1.5 rounded-lg bg-warn-soft px-2.5 py-2 text-[12px] leading-snug text-warn">
           <LuTriangleAlert className="mt-0.5 shrink-0" />

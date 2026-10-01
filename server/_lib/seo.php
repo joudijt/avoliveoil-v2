@@ -27,6 +27,10 @@ function avo_plain(string $html): string
 /** The 1600 variant (spec), else the widest below it, else the narrowest. */
 function avo_og_variant(array $ref): ?array
 {
+    // The JPEG share copy: WhatsApp and some apps show no preview for a WebP og:image.
+    if (isset($ref['og']['url'])) {
+        return ['url' => AVO_SITE_URL . $ref['og']['url'], 'width' => (int) $ref['og']['width'], 'height' => (int) $ref['og']['height']];
+    }
     $variants = $ref['variants'] ?? [];
     if (!$variants) return null;
     usort($variants, fn ($a, $b) => $a['w'] <=> $b['w']);

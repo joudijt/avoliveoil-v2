@@ -95,6 +95,48 @@ function avo_media_usage(int $id): array
     return $used;
 }
 
+/** Widest share-image (og:image) copy. JPEG, because WhatsApp and some apps show no preview for WebP. */
+const AVO_MEDIA_OG_WIDTH = 1200;
+
+/**
+ * Write <file_base>-og.jpg (at most 1200 px wide, q85, transparency flattened onto white) and
+ * return {w,h}, or null when GD cannot write it (the share image then falls back to the WebP).
+ */
+function avo_media_write_og(GdImage $img, string $base): ?array
+{
+    $w = imagesx($img);
+    $h = imagesy($img);
+    $tw = min(AVO_MEDIA_OG_WIDTH, $w);
+    $th = max(1, (int) round($h * $tw / $w));
+    $out = imagecreatetruecolor($tw, $th);
+    imagefill($out, 0, 0, imagecolorallocate($out, 255, 255, 255));
+    imagealphablending($out, true);
+    imagecopyresampled($out, $img, 0, 0, 0, 0, $tw, $th, $w, $h);
+    $path = avo_uploads_dir() . '/cms/' . $base . '-og.jpg';
+    if (!@imagejpeg($out, $path, 85)) {
+        @unlink($path);
+        avo_log('error', 'media og jpeg failed for ' . $base);
+        return null;
+    }
+    return ['w' => $tw, 'h' => $th];
+}
+
+/** A photo uploaded before share copies existed gets its JPEG once, made from its widest WebP. */
+function avo_media_ensure_og(array $row): array
+{
+    if (!array_key_exists('og_json', $row) || !empty($row['og_json'])) return $row;
+    $widths = json_decode((string) $row['widths_json'], true) ?: [];
+    if (!$widths) return $row;
+    $src = avo_uploads_dir() . '/cms/' . $row['file_base'] . '-' . (int) max($widths) . '.webp';
+    $img = is_file($src) ? @imagecreatefromwebp($src) : false;
+    if (!$img) return $row;
+    $og = avo_media_write_og($img, (string) $row['file_base']);
+    if (!$og) return $row;
+    $row['og_json'] = json_encode($og);
+    db_exec('UPDATE media SET og_json = ? WHERE id = ?', [$row['og_json'], (int) $row['id']]);
+    return $row;
+}
+
 function avo_media_out(array $row, bool $withUsage = true): array
 {
     $ref = avo_media_ref($row);
@@ -174,7 +216,9 @@ function avo_media_upload(array $s): array
     $hasAlpha = $mime !== 'image/jpeg' && avo_image_has_alpha($img);
 
     $widths = array_values(array_filter(AVO_MEDIA_WIDTHS, fn ($x) => $x <= $w));
-    if (!$widths) $widths = [$w];
+    // Keep the full resolution too: a 928 px photo must not top out at its 480 px copy (blurry
+    // when shown in a wide column). Skipped when the largest step is within 10 % of the original.
+    if (!$widths || $w > end($widths) * 1.1) $widths[] = $w;
     $sub = gmdate('Y/m');
     $base = $sub . '/' . bin2hex(random_bytes(10));
     $dir = avo_uploads_dir() . '/cms/' . $sub;
@@ -206,13 +250,18 @@ function avo_media_upload(array $s): array
         avo_log('error', 'media encode failed: ' . $e->getMessage());
         avo_fail(500, 'encode_failed', 'The photo could not be converted. Try another file.');
     }
+    $og = avo_media_write_og($img, $base);
+    if ($og) $bytes += (int) filesize(avo_uploads_dir() . '/cms/' . $base . '-og.jpg');
     $orig = mb_substr(basename(avo_clean_text((string) ($f['name'] ?? 'image'))), 0, 200);
     $altEn = is_string($_POST['altEn'] ?? null) ? mb_substr(trim(avo_clean_text($_POST['altEn'])), 0, 300) : '';
     $altMs = is_string($_POST['altMs'] ?? null) ? mb_substr(trim(avo_clean_text($_POST['altMs'])), 0, 300) : '';
-    db_exec('INSERT INTO media(file_base,original_name,width,height,widths_json,bytes,alt_en,alt_ms,has_alpha,created_at,user_id) VALUES(?,?,?,?,?,?,?,?,?,?,?)', [
-        $base, $orig, $w, $h, json_encode($widths), $bytes, $altEn, $altMs, $hasAlpha ? 1 : 0, avo_now(), $s['user_id'],
-    ]);
-    $id = (int) db()->lastInsertId();
+    $id = db_tx(function () use ($base, $orig, $w, $h, $widths, $bytes, $altEn, $altMs, $hasAlpha, $og, $s) {
+        $id = db_next_id('media');
+        db_exec('INSERT INTO media(id,file_base,original_name,width,height,widths_json,bytes,alt_en,alt_ms,has_alpha,og_json,created_at,user_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)', [
+            $id, $base, $orig, $w, $h, json_encode($widths), $bytes, $altEn, $altMs, $hasAlpha ? 1 : 0, $og ? json_encode($og) : null, avo_now(), $s['user_id'],
+        ]);
+        return $id;
+    });
     avo_audit($s['user_id'], 'media.upload', 'media:' . $id, $orig);
     return avo_media_out(db_one('SELECT * FROM media WHERE id = ?', [$id]));
 }
@@ -244,6 +293,7 @@ function avo_media_delete(array $s, int $id): array
     foreach (json_decode((string) $row['widths_json'], true) ?: [] as $w) {
         @unlink(avo_uploads_dir() . '/cms/' . $row['file_base'] . '-' . (int) $w . '.webp');
     }
+    @unlink(avo_uploads_dir() . '/cms/' . $row['file_base'] . '-og.jpg');
     avo_audit($s['user_id'], 'media.delete', 'media:' . $id, (string) $row['original_name']);
     return ['ok' => true];
 }

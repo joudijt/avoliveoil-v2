@@ -159,6 +159,11 @@ export interface CmsPageDoc {
   /** bumped when the shape changes; renderer refuses unknown majors */
   schema: 1;
   title: Localized;
+  /**
+   * Optional short link text for the header/footer menus (≤ 20 characters per language).
+   * Empty or missing = the title is used. Optional so docs saved before it stay valid.
+   */
+  menuLabel?: Localized;
   seo: PageSeo;
   sections: Section[];
 }
@@ -189,6 +194,8 @@ export interface MediaRef {
   height: number;
   variants: MediaVariant[];
   alt: Localized;
+  /** JPEG copy (at most 1200 px wide) used as og:image; absent only if GD could not write it */
+  og?: { url: string; width: number; height: number };
 }
 
 // ---------------------------------------------------------------- forms

@@ -10,6 +10,8 @@ const AVO_RESERVED_SLUGS = ['products', 'shop', 'why-us', 'contact', 'blog', 'ad
 const AVO_WIDGET_TYPES = ['heading', 'text', 'image', 'button', 'spacer', 'divider', 'video', 'gallery', 'iconList', 'faq',
     'products', 'form', 'quote', 'whatsapp'];
 const AVO_MAX_HEADER_ITEMS = 3;
+/** Longest link text that fits the header pill and the footer column. */
+const AVO_MENU_LABEL_MAX = 20;
 const AVO_DOC_MAX_BYTES = 1_000_000;
 
 // ---------------------------------------------------------------- doc analysis (mirrors src/cms/doc.ts)
@@ -105,6 +107,29 @@ function avo_lang_problem(array $doc, string $lang): ?string
     return null;
 }
 
+/** The page's link text in the menus: its own menu label, else its title (contracts: doc.menuLabel). */
+function avo_menu_label(array $doc, string $lang): string
+{
+    $own = trim(avo_loc($doc['menuLabel'] ?? null, $lang));
+    return $own !== '' ? $own : trim(avo_loc($doc['title'] ?? null, $lang));
+}
+
+/**
+ * Why this page cannot be in a menu (link text too long in a language that has a title), or null.
+ * @param string[]|null $langs only these languages (default: every language with a title)
+ */
+function avo_menu_label_problem(array $doc, ?array $langs = null): ?string
+{
+    foreach ($langs ?? AVO_LANGS as $l) {
+        if (trim(avo_loc($doc['title'] ?? null, $l)) === '') continue;
+        if (mb_strlen(avo_menu_label($doc, $l)) > AVO_MENU_LABEL_MAX) {
+            $name = $l === 'en' ? 'English' : 'Malay';
+            return "The $name page title is too long for a menu. Add a short $name menu label (" . AVO_MENU_LABEL_MAX . ' characters or fewer) in Page settings.';
+        }
+    }
+    return null;
+}
+
 function avo_valid_video_url(string $url): bool
 {
     if ($url === '') return true;
@@ -141,6 +166,13 @@ function avo_validate_doc(mixed $doc): array
         }
     }
     if (isset($doc['seo']['ogImage']) && !is_int($doc['seo']['ogImage'])) $bad('The share image is damaged. Choose it again.', 'seo.ogImage');
+    if (array_key_exists('menuLabel', $doc)) {
+        $ml = $doc['menuLabel'];
+        if (!avo_is_localized($ml) || !is_string($ml['en']) || !is_string($ml['ms'])) $bad('The menu label is damaged.', 'menuLabel');
+        foreach (AVO_LANGS as $l) {
+            if (mb_strlen(trim($ml[$l])) > AVO_MENU_LABEL_MAX) $bad('Keep the menu label to ' . AVO_MENU_LABEL_MAX . ' characters or fewer.', "menuLabel.$l");
+        }
+    }
     if (!is_array($doc['sections'] ?? null) || !array_is_list($doc['sections'])) $bad('The page sections are damaged.', 'sections');
     if (count($doc['sections']) > 100) $bad('A page can have at most 100 sections.', 'sections');
     foreach ($doc['sections'] as $si => &$section) {
@@ -295,9 +327,10 @@ function avo_page_create(array $s, array $body): array
         $now = avo_now();
         db_exec('DELETE FROM redirects WHERE from_slug = ?', [$slug]);
         db_exec('DELETE FROM gone WHERE slug = ?', [$slug]);
-        db_exec("INSERT INTO pages(slug,status,langs_json,draft_json,draft_version,created_at,updated_at,updated_by)
-                 VALUES(?,'draft','[]',?,1,?,?,?)", [$slug, json_encode($doc, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $now, $now, $s['user_id']]);
-        return (int) db()->lastInsertId();
+        $newId = db_next_id('pages');
+        db_exec("INSERT INTO pages(id,slug,status,langs_json,draft_json,draft_version,created_at,updated_at,updated_by)
+                 VALUES(?,?,'draft','[]',?,1,?,?,?)", [$newId, $slug, json_encode($doc, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $now, $now, $s['user_id']]);
+        return $newId;
     });
     avo_audit($s['user_id'], 'page.create', 'page:' . $id, $slug);
     return avo_page_payload($id);
@@ -369,6 +402,11 @@ function avo_page_publish(array $s, int $id, array $body): array
     }
     if (!$langs) {
         avo_fail(400, 'nothing_to_publish', 'Nothing could be published: ' . implode(' ', $skipped), $skipped);
+    }
+    $menuRow = avo_page_row($id, false);
+    if ((int) $menuRow['in_header'] || (int) $menuRow['in_footer']) {
+        $problem = avo_menu_label_problem($doc, $langs);
+        if ($problem) avo_fail(400, 'menu_label', $problem, ['menuLabel' => $problem]);
     }
     $html = avo_decode_html_map($body['htmlB64'] ?? null, $langs);
     foreach ($langs as $l) {
@@ -475,6 +513,12 @@ function avo_page_patch(array $s, int $id, array $body): array
                 }
             }
         }
+        $menuOn = (!empty($body['inHeader']) && !(int) $row['in_header']) || (!empty($body['inFooter']) && !(int) $row['in_footer']);
+        if ($menuOn) {
+            $draft = json_decode((string) ($row['draft_json'] ?? ''), true) ?: [];
+            $problem = avo_menu_label_problem($draft);
+            if ($problem) avo_fail(400, 'menu_label', $problem, ['menuLabel' => $problem]);
+        }
         if (array_key_exists('inHeader', $body)) {
             $on = (bool) $body['inHeader'];
             if ($on && !(int) $row['in_header']) {
@@ -530,9 +574,10 @@ function avo_page_duplicate(array $s, int $id): array
         $now = avo_now();
         db_exec('DELETE FROM redirects WHERE from_slug = ?', [$slug]);
         db_exec('DELETE FROM gone WHERE slug = ?', [$slug]);
-        db_exec("INSERT INTO pages(slug,status,langs_json,noindex,draft_json,draft_version,created_at,updated_at,updated_by)
-                 VALUES(?,'draft','[]',?,?,1,?,?,?)", [$slug, $row['noindex'], json_encode($doc, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $now, $now, $s['user_id']]);
-        return (int) db()->lastInsertId();
+        $copyId = db_next_id('pages');
+        db_exec("INSERT INTO pages(id,slug,status,langs_json,noindex,draft_json,draft_version,created_at,updated_at,updated_by)
+                 VALUES(?,?,'draft','[]',?,?,1,?,?,?)", [$copyId, $slug, $row['noindex'], json_encode($doc, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $now, $now, $s['user_id']]);
+        return $copyId;
     });
     avo_audit($s['user_id'], 'page.duplicate', 'page:' . $newId, 'from page:' . $id);
     return avo_page_list_item(avo_page_row($newId));
@@ -542,7 +587,8 @@ function avo_page_trash(array $s, int $id): array
 {
     $info = db_tx(function () use ($id) {
         $row = avo_page_row($id, false);
-        db_exec('UPDATE pages SET deleted_at = ?, in_header = 0, in_footer = 0 WHERE id = ?', [avo_now(), $id]);
+        // Menu places are kept (menus skip trashed pages) so "Restore" really brings the page back as it was.
+        db_exec('UPDATE pages SET deleted_at = ? WHERE id = ?', [avo_now(), $id]);
         avo_bump_version();
         return $row['status'] === 'published' ? avo_page_urls((string) $row['slug'], json_decode((string) $row['langs_json'], true) ?: []) : [];
     });
@@ -556,7 +602,9 @@ function avo_page_restore(array $s, int $id): array
     $urls = db_tx(function () use ($id) {
         $row = avo_page_row($id);
         if ($row['deleted_at'] === null) return [];
-        db_exec('UPDATE pages SET deleted_at = NULL, updated_at = ? WHERE id = ?', [avo_now(), $id]);
+        // Its top-menu place is given back only while the menu still has room.
+        $full = (int) $row['in_header'] && (int) db_val('SELECT COUNT(*) FROM pages WHERE in_header = 1 AND deleted_at IS NULL AND id <> ?', [$id]) >= AVO_MAX_HEADER_ITEMS;
+        db_exec('UPDATE pages SET deleted_at = NULL, updated_at = ?' . ($full ? ', in_header = 0' : '') . ' WHERE id = ?', [avo_now(), $id]);
         avo_bump_version();
         return $row['status'] === 'published' ? avo_page_urls((string) $row['slug'], json_decode((string) $row['langs_json'], true) ?: []) : [];
     });

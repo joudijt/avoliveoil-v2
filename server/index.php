@@ -79,6 +79,7 @@ function avo_routes(): array
         ['PUT', '#^/api/site/overrides$#', fn ($p, $s) => avo_overrides_save($s, $b()), true],
         ['POST', '#^/api/site/publish$#', fn ($p, $s) => avo_overrides_publish($s, $b()), true],
         ['POST', '#^/api/site/discard$#', fn ($p, $s) => avo_overrides_discard($s, $b()), true],
+        ['POST', '#^/api/site/discard-other$#', fn ($p, $s) => avo_overrides_discard_other($s, $b()), true],
         ['GET', '#^/api/site/pending$#', fn () => avo_site_pending(), true],
         ['GET', '#^/api/site/orphans$#', fn () => avo_site_orphans(), true],
         ['GET', '#^/api/site/revisions$#', fn () => avo_site_revisions(), true],

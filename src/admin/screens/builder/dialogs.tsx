@@ -9,11 +9,11 @@ import { Modal } from '../../ui/Modal';
 import { Button, Checkbox, Chip, Counter, Field, Input, LoadingBlock, Segmented, Switch, Textarea, ErrorBlock } from '../../ui/ui';
 import { MediaPicker } from '../media/MediaPicker';
 import { useBuilder } from './context';
-import { langChecks, pageProblems, type LangCheck } from './readiness';
+import { langChecks, MENU_LABEL_MAX, pageProblems, type LangCheck } from './readiness';
 
 const LANG_LABEL: Record<CmsLang, string> = { en: 'English', ms: 'Bahasa Melayu' };
 /** CMS menu items show the page title; longer labels break the header pill. */
-const MENU_MAX = 20;
+const MENU_MAX = MENU_LABEL_MAX;
 
 // ---------------------------------------------------------------- publish
 
@@ -34,7 +34,8 @@ export function PublishDialog({
   onUnpublish: () => Promise<void>;
   onOpenSettings: () => void;
 }) {
-  const checks = useMemo(() => Object.fromEntries(CMS_LANGS.map((l) => [l, langChecks(doc, l)])) as Record<CmsLang, LangCheck[]>, [doc]);
+  const inMenu = page.inHeader || page.inFooter;
+  const checks = useMemo(() => Object.fromEntries(CMS_LANGS.map((l) => [l, langChecks(doc, l, inMenu)])) as Record<CmsLang, LangCheck[]>, [doc, inMenu]);
   const ready = (l: CmsLang) => checks[l].every((c) => c.ok || !c.blocking);
   const problems = useMemo(() => pageProblems(doc), [doc]);
   const [langs, setLangs] = useState<CmsLang[]>([]);
@@ -254,7 +255,7 @@ function Snippet({ title, desc, url }: { title: string; desc: string; url: strin
 }
 
 export interface SettingsResult {
-  doc: { title: Localized; metaTitle: Localized; metaDescription: Localized; ogImage?: number };
+  doc: { title: Localized; menuLabel?: Localized; metaTitle: Localized; metaDescription: Localized; ogImage?: number };
   patch: { slug?: string; inHeader?: boolean; inFooter?: boolean; menuOrder?: number; noindex?: boolean };
 }
 
@@ -273,6 +274,7 @@ export function PageSettingsDialog({
   const [lang, setLang] = useState<CmsLang>(builderLang);
   const [slug, setSlug] = useState(page.slug);
   const [title, setTitle] = useState(doc.title);
+  const [menuLabel, setMenuLabel] = useState<Localized>(doc.menuLabel ?? { en: '', ms: '' });
   const [metaTitle, setMetaTitle] = useState(doc.seo.metaTitle);
   const [metaDesc, setMetaDesc] = useState(doc.seo.metaDescription);
   const [ogImage, setOgImage] = useState<number | undefined>(doc.seo.ogImage);
@@ -289,6 +291,7 @@ export function PageSettingsDialog({
     setLang(builderLang);
     setSlug(page.slug);
     setTitle(doc.title);
+    setMenuLabel(doc.menuLabel ?? { en: '', ms: '' });
     setMetaTitle(doc.seo.metaTitle);
     setMetaDesc(doc.seo.metaDescription);
     setOgImage(doc.seo.ogImage);
@@ -313,11 +316,18 @@ export function PageSettingsDialog({
       setFields({ title: 'Give the page a title.' });
       return;
     }
-    // The page title is also the menu link text, and the menu has room for short labels only.
-    const tooLong = (inHeader || inFooter) && (['en', 'ms'] as CmsLang[]).find((l) => title[l].trim().length > MENU_MAX);
-    if (tooLong) {
-      setLang(tooLong);
-      setFields({ title: `In a menu, the title is the link text: keep it to ${MENU_MAX} characters or fewer (${tooLong === 'en' ? 'English' : 'Bahasa Melayu'}), or take the page out of the menus.` });
+    // The menu has room for short link texts only: the menu label, or the title when there is none.
+    const langs = ['en', 'ms'] as CmsLang[];
+    const labelTooLong = langs.find((l) => menuLabel[l].trim().length > MENU_MAX);
+    if (labelTooLong) {
+      setFields({ [`menuLabel.${labelTooLong}`]: `Keep the menu label to ${MENU_MAX} characters or fewer.` });
+      return;
+    }
+    const titleTooLong = (inHeader || inFooter) && langs.find((l) => title[l].trim() && !menuLabel[l].trim() && title[l].trim().length > MENU_MAX);
+    if (titleTooLong) {
+      setFields({
+        [`menuLabel.${titleTooLong}`]: `The ${LANG_LABEL[titleTooLong]} page title is too long for a menu. Add a short menu label (${MENU_MAX} characters or fewer), or take the page out of the menus.`,
+      });
       return;
     }
     const patch: SettingsResult['patch'] = {};
@@ -336,11 +346,12 @@ export function PageSettingsDialog({
     }
     setBusy(true);
     try {
-      await onSave({ doc: { title, metaTitle, metaDescription: metaDesc, ogImage }, patch });
+      const label = { en: menuLabel.en.trim(), ms: menuLabel.ms.trim() };
+      await onSave({ doc: { title, menuLabel: label.en || label.ms ? label : undefined, metaTitle, metaDescription: metaDesc, ogImage }, patch });
       onClose();
     } catch (e) {
       const f = (e as { fields?: Record<string, string> }).fields;
-      if (f && Object.keys(f).length) setFields(f);
+      if (f && Object.keys(f).length) setFields(f.menuLabel ? { ...f, 'menuLabel.en': f.menuLabel } : f);
       else toastError(e);
     } finally {
       setBusy(false);
@@ -402,14 +413,7 @@ export function PageSettingsDialog({
           <Field
             label="Page title"
             error={fields.title}
-            aside={inHeader || inFooter ? <Counter value={title[lang].trim()} ideal={[1, MENU_MAX]} max={MENU_MAX} /> : undefined}
-            hint={
-              inHeader || inFooter
-                ? `Also the menu link text, so at most ${MENU_MAX} characters.${title[other] ? ` ${LANG_LABEL[other]}: ${title[other]}` : ''}`
-                : title[other]
-                  ? `${LANG_LABEL[other]}: ${title[other]}`
-                  : 'Used in the page’s breadcrumb and in menus.'
-            }
+            hint={title[other] ? `${LANG_LABEL[other]}: ${title[other]}` : 'Used in the page’s breadcrumb and, without a menu label, in menus.'}
           >
             <Input value={title[lang]} onChange={(e) => setL(setTitle)(e.target.value)} maxLength={120} />
           </Field>
@@ -462,6 +466,27 @@ export function PageSettingsDialog({
             hint={headerFull ? 'The top menu already has 3 of your pages (the most that fit). Remove one of them from the top menu first.' : `${headerCount + (inHeader ? 1 : 0)} of 3 places used.`}
           />
           <Switch checked={inFooter} onChange={setInFooter} label="Show in the footer" />
+          {(inHeader || inFooter) && (
+            <div className="grid gap-3 sm:grid-cols-2">
+              {(['en', 'ms'] as CmsLang[]).map((l) => (
+                <Field
+                  key={l}
+                  label={`Menu label (${LANG_LABEL[l]})`}
+                  aside={<Counter value={menuLabel[l].trim() || title[l].trim()} ideal={[1, MENU_MAX]} max={MENU_MAX} />}
+                  error={fields[`menuLabel.${l}`]}
+                  hint={`Optional. The link text in the menu, at most ${MENU_MAX} characters. Empty = the page title.`}
+                >
+                  <Input
+                    value={menuLabel[l]}
+                    placeholder={title[l] || undefined}
+                    maxLength={40}
+                    invalid={!!fields[`menuLabel.${l}`]}
+                    onChange={(e) => setMenuLabel((cur) => ({ ...cur, [l]: e.target.value }))}
+                  />
+                </Field>
+              ))}
+            </div>
+          )}
           {(inHeader || inFooter) && (
             <Field label="Order in the menu" hint="Lower numbers come first.">
               <Input type="number" min={0} max={99} value={menuOrder} onChange={(e) => setMenuOrder(Math.max(0, Math.min(99, Number(e.target.value) || 0)))} className="w-24" />

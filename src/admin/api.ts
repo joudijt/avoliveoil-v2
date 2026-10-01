@@ -447,6 +447,8 @@ export const api = {
   publishSite: (keys: { lang: CmsLang; key: string }[]) => post<{ publishId: number }>('/api/site/publish', { keys }),
   discardSite: (keys: { lang: CmsLang; key: string }[]) => post<unknown>('/api/site/discard', { keys }),
   sitePending: () => get<PendingOverride[]>('/api/site/pending'),
+  /** delete another person's unpublished change (audited) */
+  discardOtherDraft: (userId: number, lang: CmsLang, key: string) => post<{ ok: true }>('/api/site/discard-other', { userId, lang, key }),
   siteOrphans: () => get<OrphanOverride[]>('/api/site/orphans'),
   siteRevisions: () => get<SiteRevision[]>('/api/site/revisions'),
   revertSite: (publishId: number) => post<unknown>(`/api/site/revisions/${publishId}/revert`, {}),

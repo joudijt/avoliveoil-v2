@@ -59,16 +59,16 @@ function avo_form_submit(int $formId): array
     $recent = (int) db_val('SELECT COUNT(*) FROM submissions WHERE ip_hash = ? AND created_at > ?', [$ipHash, $now - 600]);
     $today = (int) db_val('SELECT COUNT(*) FROM submissions WHERE ip_hash = ? AND created_at > ?', [$ipHash, $now - 86400]);
     if ($recent >= AVO_SUBMIT_PER_10MIN || $today >= AVO_SUBMIT_PER_DAY) {
-        if ($isForm) return ['status' => 303, 'location' => $back('#form-error')];
+        if ($isForm) return ['status' => 303, 'location' => $back('#form-error-' . $formId)];
         avo_fail(429, 'rate_limited', $lang === 'ms'
             ? 'Terlalu banyak mesej dihantar. Sila cuba lagi kemudian.'
             : 'Too many messages were sent from your connection. Please try again later.', null, ['Retry-After' => '600']);
     }
 
-    $success = function () use ($def, $lang, $isForm, $back): array {
+    $success = function () use ($def, $lang, $isForm, $back, $formId): array {
         $msg = avo_loc($def['successMessage'] ?? null, $lang) ?: avo_loc($def['successMessage'] ?? null, 'en') ?: 'Thank you!';
         $redirect = isset($def['redirectPath']) && is_string($def['redirectPath']) && preg_match(AVO_FORM_REDIRECT_RE, $def['redirectPath']) ? $def['redirectPath'] : null;
-        if ($isForm) return ['status' => 303, 'location' => $redirect ?? $back('#form-sent')];
+        if ($isForm) return ['status' => 303, 'location' => $redirect ?? $back('#form-sent-' . $formId)];
         return ['status' => 200, 'json' => ['ok' => true, 'message' => $msg] + ($redirect ? ['redirectPath' => $redirect] : [])];
     };
 
@@ -138,7 +138,7 @@ function avo_form_submit(int $formId): array
 
     $isHoneypot = is_string($honeypot) ? trim($honeypot) !== '' : !empty($honeypot);
     if (!$isHoneypot && $errors) {
-        if ($isForm) return ['status' => 303, 'location' => $back('#form-error')];
+        if ($isForm) return ['status' => 303, 'location' => $back('#form-error-' . $formId)];
         avo_fail(422, 'invalid', $lang === 'ms' ? 'Sila semak ruangan yang ditanda.' : 'Please check the highlighted fields.', $errors);
     }
     $urls = preg_match_all('~(https?://|www\.)~i', implode(' ', array_map('strval', $data)));
@@ -327,9 +327,10 @@ function avo_submissions_export(array $q): void
     header('X-Content-Type-Options: nosniff');
     $out = fopen('php://output', 'w');
     fwrite($out, "\xEF\xBB\xBF");
-    fputcsv($out, array_map('avo_csv_cell', array_merge(['Date (UTC)', 'Form', 'Page', 'Language', 'Email status'], array_values($labels))), ',', '"', '');
+    fputcsv($out, array_map('avo_csv_cell', array_merge(['Date (Malaysia time)', 'Form', 'Page', 'Language', 'Email status'], array_values($labels))), ',', '"', '');
     foreach ($items as $o) {
-        $line = [(string) $o['createdAt'], (string) $o['formName'], (string) ($o['pageSlug'] ?? ''), (string) $o['lang'], (string) $o['mailStatus']];
+        // Same clock as the notification email: the owner reads these in Malaysia, not in UTC.
+        $line = [gmdate('Y-m-d H:i', (int) strtotime((string) $o['createdAt']) + 8 * 3600), (string) $o['formName'], (string) ($o['pageSlug'] ?? ''), (string) $o['lang'], (string) $o['mailStatus']];
         $data = (array) $o['data'];
         foreach (array_keys($cols) as $k) $line[] = (string) ($data[$k] ?? '');
         fputcsv($out, array_map('avo_csv_cell', $line), ',', '"', '');

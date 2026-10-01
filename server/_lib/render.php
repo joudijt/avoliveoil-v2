@@ -337,11 +337,21 @@ function avo_apply_seo(Dom\HTMLDocument $doc, array $seo, string $lang, array $l
         $t = is_array($data) ? ($data['@type'] ?? null) : null;
         if (in_array($t, ['WebPage', 'BreadcrumbList', 'FAQPage'], true)) $s->remove();
     }
+    // Next to the site-wide JSON-LD, i.e. inside React's #root: the client render replaces
+    // them there. Appended to <head> they survived it and the rendered page (what Googlebot
+    // indexes) carried every WebPage / BreadcrumbList / FAQPage twice.
+    $after = null;
+    foreach ($doc->querySelectorAll('script[type="application/ld+json"]') as $s) $after = $s;
     foreach ($seo['jsonLd'] as $obj) {
         $s = $doc->createElement('script');
         $s->setAttribute('type', 'application/ld+json');
         $s->textContent = (string) json_encode($obj, AVO_JSON_SCRIPT);
-        $head->append($s);
+        if ($after) {
+            $after->after($s);
+            $after = $s;
+        } else {
+            $head->append($s);
+        }
     }
 }
 

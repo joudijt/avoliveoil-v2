@@ -153,6 +153,8 @@ function db_migrations(): array
         CREATE TABLE audit (id INTEGER PRIMARY KEY, user_id INTEGER, action TEXT NOT NULL, target TEXT, at INTEGER NOT NULL, detail TEXT);
         CREATE INDEX audit_at ON audit(at);
         SQL,
+        // 2 — JPEG copy for share images (og:image): {"w":…,"h":…}; file <file_base>-og.jpg
+        'ALTER TABLE media ADD COLUMN og_json TEXT',
     ];
 }
 
@@ -207,6 +209,21 @@ function db_all(string $sql, array $params = []): array
     $st = db()->prepare($sql);
     $st->execute($params);
     return $st->fetchAll();
+}
+
+/**
+ * Next id for a table whose rows can be hard-deleted (media, purged pages). SQLite hands the
+ * highest deleted id out again, so old references (site-text versions, page versions, form
+ * entries) would silently point at the NEW row. Ids come from a high-water mark instead.
+ * Call inside db_tx().
+ */
+function db_next_id(string $table): int
+{
+    if (!in_array($table, ['media', 'pages'], true)) throw new InvalidArgumentException('db_next_id: ' . $table);
+    $key = 'seq.' . $table;
+    $id = max((int) db_val('SELECT value FROM settings WHERE key = ?', [$key]), (int) db_val("SELECT COALESCE(MAX(id), 0) FROM $table")) + 1;
+    db_exec('INSERT INTO settings(key, value) VALUES(?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value', [$key, (string) $id]);
+    return $id;
 }
 
 function db_val(string $sql, array $params = []): mixed

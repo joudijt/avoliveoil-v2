@@ -13,5 +13,7 @@ RUN mkdir -p /home/madinahcom/avoliveoil.com /home/madinahcom/avoliveoil-cms \
  && chown -R www-data:www-data /home/madinahcom \
  && sed -i 's#/var/www/html#/home/madinahcom/avoliveoil.com#g' /etc/apache2/sites-available/000-default.conf \
  && printf '<Directory /home/madinahcom/avoliveoil.com>\n  AllowOverride All\n  Require all granted\n</Directory>\n' > /etc/apache2/conf-enabled/docroot.conf
+# HTTPS like production (the site forces https and the session cookie is Secure)
+RUN apt-get update && apt-get install -y --no-install-recommends ssl-cert && rm -rf /var/lib/apt/lists/*  && a2enmod ssl && a2ensite default-ssl  && sed -i 's#/var/www/html#/home/madinahcom/avoliveoil.com#g' /etc/apache2/sites-available/default-ssl.conf
 ENV AVO_CMS_MAIL=file
 RUN echo 'variables_order = "EGPCS"' > /usr/local/etc/php/conf.d/env.ini && echo 'upload_max_filesize=64M\npost_max_size=64M\nmemory_limit=512M' > /usr/local/etc/php/conf.d/limits.ini

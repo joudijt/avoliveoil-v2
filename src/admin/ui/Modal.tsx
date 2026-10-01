@@ -4,12 +4,21 @@ import { LuX } from 'react-icons/lu';
 import { cx } from '../lib/cx';
 import { IconButton } from './ui';
 
+/**
+ * Open dialogs, innermost last. A dialog opened from another one (the media picker inside page
+ * settings) must be the only one that reacts to Esc / Tab — otherwise Esc closes both and the
+ * outer dialog's unsaved edits are lost.
+ */
+const layers: HTMLElement[] = [];
+const isTop = (el: HTMLElement | null) => !!el && layers[layers.length - 1] === el;
+
 /** Trap Tab inside `root` and restore focus to the opener on close. */
 function useFocusTrap(open: boolean, root: React.RefObject<HTMLElement | null>) {
   useEffect(() => {
     if (!open) return;
     const opener = document.activeElement as HTMLElement | null;
     const el = root.current;
+    if (el) layers.push(el);
     const focusables = () =>
       el
         ? Array.from(
@@ -24,7 +33,7 @@ function useFocusTrap(open: boolean, root: React.RefObject<HTMLElement | null>) 
     const first = el?.querySelector<HTMLElement>('[data-autofocus]') ?? inBody ?? focusables()[0];
     requestAnimationFrame(() => first?.focus());
     const onKey = (e: KeyboardEvent) => {
-      if (e.key !== 'Tab' || !el) return;
+      if (e.key !== 'Tab' || !el || !isTop(el)) return;
       const f = focusables();
       if (!f.length) return;
       const a = f[0];
@@ -40,6 +49,8 @@ function useFocusTrap(open: boolean, root: React.RefObject<HTMLElement | null>) 
     document.addEventListener('keydown', onKey);
     return () => {
       document.removeEventListener('keydown', onKey);
+      const i = el ? layers.lastIndexOf(el) : -1;
+      if (i >= 0) layers.splice(i, 1);
       opener?.focus?.();
     };
   }, [open, root]);
@@ -71,7 +82,7 @@ export function Modal({
   useEffect(() => {
     if (!open || !dismissable) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && isTop(ref.current)) {
         e.stopPropagation();
         onClose();
       }
@@ -133,7 +144,7 @@ export function Drawer({
   useFocusTrap(open, ref);
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && isTop(ref.current) && onClose();
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, [open, onClose]);

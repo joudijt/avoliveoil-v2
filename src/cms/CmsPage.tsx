@@ -44,6 +44,19 @@ function bootPageFor(slug: string, lang: CmsLang): PublicPagePayload | null {
   return page && isPayload(page, slug, lang) ? page : null;
 }
 
+/**
+ * True when this document was served for exactly this address and the server's boot data
+ * carries no page: serve.php already answered 404/410, so asking the API again would only
+ * log a second 404 in the console. (No boot at all = the static fallback: still ask.)
+ */
+function serverSaidMissing(slug: string, lang: CmsLang): boolean {
+  const boot = getBoot();
+  if (!boot || boot.page) return false;
+  const nav = performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming | undefined;
+  const docPath = nav ? new URL(nav.name).pathname : '';
+  return docPath.replace(/\/+$/, '') === `/${lang}/${slug}`;
+}
+
 function markReady() {
   document.body.setAttribute('data-app-ready', 'true');
 }
@@ -59,7 +72,8 @@ function CmsPageView({ rawLang, slug }: { rawLang: string | undefined; slug: str
   const [state, setState] = useState<State>(() => {
     if (!isLang(rawLang)) return { kind: 'missing' };
     const boot = bootPageFor(slug, lang);
-    return boot ? { kind: 'ready', page: boot } : { kind: 'loading' };
+    if (boot) return { kind: 'ready', page: boot };
+    return serverSaidMissing(slug, lang) ? { kind: 'missing' } : { kind: 'loading' };
   });
 
   useEffect(() => {

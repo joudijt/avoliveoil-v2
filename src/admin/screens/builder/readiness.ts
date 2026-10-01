@@ -10,10 +10,22 @@ export interface LangCheck {
   blocking: boolean;
 }
 
-export function langChecks(doc: CmsPageDoc, lang: CmsLang): LangCheck[] {
+/** Longest menu link text (same rule as the server, AVO_MENU_LABEL_MAX). */
+export const MENU_LABEL_MAX = 20;
+
+/** The link text of the page in the menus: its menu label, else its title. */
+export function menuLabelOf(doc: CmsPageDoc, lang: CmsLang): string {
+  return doc.menuLabel?.[lang]?.trim() || doc.title[lang].trim();
+}
+
+export function langChecks(doc: CmsPageDoc, lang: CmsLang, inMenu = false): LangCheck[] {
   const missing = missingTranslations(doc, lang).length;
+  const menuText = menuLabelOf(doc, lang);
   return [
     { label: 'Page title', ok: !!doc.title[lang].trim(), blocking: true },
+    ...(inMenu
+      ? [{ label: menuText.length > MENU_LABEL_MAX ? `Menu label too long (${menuText.length}/${MENU_LABEL_MAX}) — shorten it in Page settings` : 'Menu label fits the menu', ok: menuText.length <= MENU_LABEL_MAX, blocking: true }]
+      : []),
     { label: 'Title for Google (page settings)', ok: !!doc.seo.metaTitle[lang].trim(), blocking: true },
     { label: missing ? `${missing} text${missing === 1 ? '' : 's'} still to translate` : 'Every text is translated', ok: missing === 0, blocking: true },
     { label: 'Description for Google (recommended)', ok: !!doc.seo.metaDescription[lang].trim(), blocking: false },

@@ -118,7 +118,7 @@ export function SystemScreen() {
               <Row label="Data folder writable" value={d.dataWritable ? 'Yes' : 'No — saving will fail'} ok={d.dataWritable} />
               <Row label="Emails not delivered" value={`${d.failedMails} failed · ${d.heldMails} waiting`} ok={d.failedMails + d.heldMails === 0} />
               <Row label="Last backup" value={d.lastBackupAt ? fmtDateTime(d.lastBackupAt) : 'None yet (made on every publish)'} ok={!!d.lastBackupAt} />
-              <Row label="Ready-made pages" value={`${d.renderedFiles} files · ${fmtBytes(d.renderedBytes)}`} />
+              <Row label="Ready-made pages" value={`${d.renderedFiles} ${d.renderedFiles === 1 ? 'file' : 'files'} · ${fmtBytes(d.renderedBytes)}`} />
               <Row label="Website version" value={<code className="text-xs">{d.build}</code>} />
               <Row label="Content version" value={d.contentVersion} />
               <Row label="PHP / SQLite" value={`${d.php} / ${d.sqlite}`} />

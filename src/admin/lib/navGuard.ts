@@ -59,6 +59,13 @@ if (typeof window !== 'undefined') {
   });
 }
 
+/** Set when the panel itself reloads after telling the owner why (e.g. a new site version): no second "Leave site?" prompt. */
+let leavingOnPurpose = false;
+export function reloadWithoutPrompt() {
+  leavingOnPurpose = true;
+  window.location.reload();
+}
+
 export function useUnsavedGuard(dirty: boolean | (() => boolean), message = 'You have changes that are not saved yet. Leave anyway?') {
   const get = useRef<() => boolean>(() => false);
   get.current = typeof dirty === 'function' ? dirty : () => dirty;
@@ -84,7 +91,7 @@ export function useUnsavedGuard(dirty: boolean | (() => boolean), message = 'You
   // 1. tab close / reload
   useEffect(() => {
     const h = (e: BeforeUnloadEvent) => {
-      if (bypass.current || !get.current()) return;
+      if (leavingOnPurpose || bypass.current || !get.current()) return;
       e.preventDefault();
       e.returnValue = '';
     };
