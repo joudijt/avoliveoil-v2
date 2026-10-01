@@ -448,3 +448,24 @@ Error body always `{error:{code,message,fields?}}`; `message` is plain owner-rea
   `scripts/gen-ar-redirects.mjs`, `public/robots.txt`, `.gitignore`.
 * **B4 admin**: `admin.html`, `src/admin/**`.
 * Integrator (me): spec, contracts, Apache test harness, live deploy.
+
+## 15. HTML marking contract between the React site (B3a) and serve.php (B2) — BINDING
+| Marker | Emitted by | serve.php action |
+|---|---|---|
+| `data-cms="<key>"` | element whose ENTIRE text is `t(key)` (no element children) | `textContent` = override (interpolated `{{store}}`) |
+| `data-cms-attr="placeholder:<key>;alt:<key>;aria-label:<key>;title:<key>"` | element with translated attributes | set each named attribute |
+| `data-cms-num="<key>"` | span holding ONLY the number of a statistic | `textContent` = `number_format(value)` (en-US grouping) |
+| `data-cms-words="hero.headlineWords"` | the hero `h1`; children = `span.word` (gold ones also carry `text-gold`) | rebuild children from HeadlineWord[] by cloning an existing plain/gold span; keep a single space text node between spans exactly as React renders |
+| `data-cms-img="<spot>"` | the `<img>` of a photo spot | set `src` (widest variant), `srcset`, `width`, `height`, `alt`; `style` object-position from focal (merge, keep other declarations) |
+| `data-cms-menu="header" \| "header-mobile" \| "footer"` | container of the built-in nav links | append one clone of the container's LAST element child per CMS menu item: the clone's `<a>` (itself or first descendant) gets `href=/<lang>/<slug>`, text = label, `data-cms-menu-item=""`; React renders the identical markup from `boot.menu` |
+| `data-cms-page-root` | the element inside `<main>` of the `__cms-template` route | innerHTML = sanitised `published html[lang]` |
+| `data-cms-lang-link="<lang>"` | language-switcher links | on a CMS page: `href=/<lang>/<slug>` if the page has that lang, else `/<lang>` |
+Head tags of snapshot pages: for every overridden key whose **default (interpolated) value** equals the full
+content of `<title>` or the `content` attribute of `meta[name=description]`, `meta[property=og:title|og:description|og:image:alt]`,
+`meta[name=twitter:title|twitter:description|twitter:image:alt]`, replace it. JSON-LD: replace the exact JSON string
+token `json_encode(default)` with `json_encode(new)` inside every `script[type="application/ld+json"]` (flags §13.3).
+The boot script is appended as the last child of `<body>`:
+`<script id="cms-boot" type="application/json">…</script>` (JSON with `JSON_HEX_TAG|JSON_HEX_AMP`).
+Snapshot files: `DOCROOT/<lang>/<path>/index.html`; CMS template: `DOCROOT/<lang>/__cms-template/index.html`
+(prerendered by B3a: Navbar + `<main><div data-cms-page-root></div></main>` + Footer, SEO with placeholder values
+that serve.php replaces from `ResolvedSeo`); SPA shell: `DOCROOT/index.html`.
