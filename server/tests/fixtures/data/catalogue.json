@@ -1,0 +1,29 @@
+[
+ {
+  "id": "classic-500",
+  "kind": "classic",
+  "href": {
+   "en": "/en/products",
+   "ms": "/ms/products"
+  },
+  "name": {
+   "en": "Classic 500 ml",
+   "ms": "Klasik 500 ml"
+  },
+  "tagline": {
+   "en": "Cold pressed",
+   "ms": "Perahan sejuk"
+  },
+  "image": {
+   "name": "bottle",
+   "variants": [
+    {
+     "w": 480,
+     "url": "/cms-assets/bottle-480.webp"
+    }
+   ],
+   "width": 480,
+   "height": 960
+  }
+ }
+]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>CMS canvas harness (dev only)</title>
+    <style>
+      html, body { margin: 0; background: #d9d6cf; }
+      #f { border: 0; display: block; background: #fff; height: 900px; }
+    </style>
+  </head>
+  <body>
+    <!-- Stands in for the admin shell (B4): frames the canvas or an edit-mode page,
+         records every message it gets back, and lets the harness post messages in. -->
+    <iframe id="f" title="canvas"></iframe>
+    <script>
+      const f = document.getElementById('f');
+      window.__msgs = [];
+      window.addEventListener('message', (e) => {
+        if (e.origin !== location.origin || e.source !== f.contentWindow) return;
+        window.__msgs.push(e.data);
+        if (e.data && e.data.type === 'cms:height') f.style.height = Math.max(200, e.data.px) + 'px';
+      });
+      window.__send = (m) => f.contentWindow.postMessage(m, location.origin);
+      window.__open = (src, width) => {
+        window.__msgs = [];
+        f.style.width = width + 'px';
+        f.style.height = '900px';
+        f.src = src;
+      };
+    </script>
+  </body>
+</html>

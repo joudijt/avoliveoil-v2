@@ -1,0 +1,225 @@
+<?php
+declare(strict_types=1);
+
+defined('AVO_CMS') || exit;
+
+/**
+ * One SQLite file above the docroot (spec §2.2, §13.6). WAL is probed on first open
+ * and falls back to DELETE journalling where the filesystem can't do shared memory.
+ */
+function db(): PDO
+{
+    static $pdo = null;
+    if ($pdo !== null) return $pdo;
+    $dir = avo_data_dir();
+    $file = $dir . '/cms.sqlite';
+    $pdo = new PDO('sqlite:' . $file, null, null, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_TIMEOUT => 5,
+    ]);
+    @chmod($file, 0600);
+    $pdo->exec('PRAGMA busy_timeout = 5000');
+    $pdo->exec('PRAGMA foreign_keys = ON');
+    $modeFile = $dir . '/journal_mode.txt';
+    $mode = is_file($modeFile) ? trim((string) @file_get_contents($modeFile)) : '';
+    if ($mode === '') {
+        try {
+            $got = strtolower((string) $pdo->query('PRAGMA journal_mode = WAL')->fetchColumn());
+        } catch (Throwable) {
+            $got = '';
+        }
+        if ($got !== 'wal') {
+            $pdo->exec('PRAGMA journal_mode = DELETE');
+            $got = 'delete';
+        }
+        @file_put_contents($modeFile, $got);
+    } elseif ($mode === 'wal') {
+        $pdo->exec('PRAGMA journal_mode = WAL');
+    } else {
+        $pdo->exec('PRAGMA journal_mode = DELETE');
+    }
+    $pdo->exec('PRAGMA synchronous = NORMAL');
+    db_migrate($pdo);
+    return $pdo;
+}
+
+/** @return list<string> */
+function db_migrations(): array
+{
+    return [
+        // 1 — spec §4 + §13 additions
+        <<<'SQL'
+        CREATE TABLE users (
+          id INTEGER PRIMARY KEY,
+          email TEXT NOT NULL UNIQUE COLLATE NOCASE,
+          name TEXT NOT NULL DEFAULT '',
+          pass_hash TEXT NOT NULL,
+          is_active INTEGER NOT NULL DEFAULT 1,
+          created_at INTEGER NOT NULL,
+          last_login_at INTEGER
+        );
+        CREATE TABLE sessions (
+          token_hash TEXT PRIMARY KEY,
+          user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          csrf TEXT NOT NULL,
+          created_at INTEGER NOT NULL,
+          last_seen_at INTEGER NOT NULL,
+          expires_at INTEGER NOT NULL,
+          ip TEXT, ua TEXT
+        );
+        CREATE INDEX sessions_user ON sessions(user_id);
+        CREATE TABLE login_attempts (id INTEGER PRIMARY KEY, ip TEXT, email TEXT, at INTEGER NOT NULL);
+        CREATE INDEX login_attempts_at ON login_attempts(at);
+        CREATE TABLE password_resets (
+          token_hash TEXT PRIMARY KEY,
+          user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          created_at INTEGER NOT NULL,
+          expires_at INTEGER NOT NULL,
+          used_at INTEGER
+        );
+        CREATE TABLE pages (
+          id INTEGER PRIMARY KEY,
+          slug TEXT NOT NULL UNIQUE,
+          status TEXT NOT NULL DEFAULT 'draft',
+          langs_json TEXT NOT NULL DEFAULT '[]',
+          in_header INTEGER NOT NULL DEFAULT 0,
+          in_footer INTEGER NOT NULL DEFAULT 0,
+          menu_order INTEGER NOT NULL DEFAULT 0,
+          noindex INTEGER NOT NULL DEFAULT 0,
+          draft_json TEXT NOT NULL,
+          draft_version INTEGER NOT NULL DEFAULT 1,
+          published_json TEXT,
+          published_html_json TEXT,
+          render_build TEXT,
+          deps_json TEXT NOT NULL DEFAULT '[]',
+          needs_render INTEGER NOT NULL DEFAULT 0,
+          created_at INTEGER NOT NULL,
+          updated_at INTEGER NOT NULL,
+          published_at INTEGER,
+          deleted_at INTEGER,
+          updated_by INTEGER
+        );
+        CREATE TABLE page_revisions (
+          id INTEGER PRIMARY KEY,
+          page_id INTEGER NOT NULL REFERENCES pages(id) ON DELETE CASCADE,
+          json TEXT NOT NULL,
+          html_json TEXT,
+          langs_json TEXT,
+          created_at INTEGER NOT NULL,
+          user_id INTEGER,
+          note TEXT
+        );
+        CREATE INDEX page_revisions_page ON page_revisions(page_id);
+        CREATE TABLE redirects (from_slug TEXT PRIMARY KEY, to_slug TEXT NOT NULL, created_at INTEGER NOT NULL);
+        CREATE TABLE gone (slug TEXT PRIMARY KEY, at INTEGER NOT NULL);
+        CREATE TABLE overrides (
+          lang TEXT NOT NULL, key TEXT NOT NULL, kind TEXT NOT NULL,
+          published_value TEXT NOT NULL,
+          updated_at INTEGER NOT NULL, updated_by INTEGER,
+          PRIMARY KEY (lang, key)
+        );
+        CREATE TABLE override_drafts (
+          lang TEXT NOT NULL, key TEXT NOT NULL, user_id INTEGER NOT NULL, kind TEXT NOT NULL,
+          value TEXT,
+          updated_at INTEGER NOT NULL,
+          PRIMARY KEY (lang, key, user_id)
+        );
+        CREATE TABLE site_publishes (id INTEGER PRIMARY KEY, user_id INTEGER, created_at INTEGER NOT NULL, note TEXT);
+        CREATE TABLE override_revisions (
+          id INTEGER PRIMARY KEY, publish_id INTEGER NOT NULL, lang TEXT NOT NULL, key TEXT NOT NULL, kind TEXT NOT NULL,
+          old_value TEXT, new_value TEXT, created_at INTEGER NOT NULL, user_id INTEGER
+        );
+        CREATE INDEX override_revisions_publish ON override_revisions(publish_id);
+        CREATE TABLE forms (
+          id INTEGER PRIMARY KEY, name TEXT NOT NULL, recipients_json TEXT NOT NULL, subject TEXT NOT NULL DEFAULT '',
+          def_json TEXT NOT NULL, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL, deleted_at INTEGER
+        );
+        CREATE TABLE submissions (
+          id INTEGER PRIMARY KEY, form_id INTEGER NOT NULL, page_id INTEGER, lang TEXT NOT NULL,
+          data_json TEXT NOT NULL, labels_json TEXT, ip_hash TEXT, ua TEXT, created_at INTEGER NOT NULL,
+          mail_status TEXT NOT NULL DEFAULT 'pending', mail_error TEXT, read_at INTEGER
+        );
+        CREATE INDEX submissions_form ON submissions(form_id, created_at);
+        CREATE INDEX submissions_ip ON submissions(ip_hash, created_at);
+        CREATE TABLE mail_log (id INTEGER PRIMARY KEY, at INTEGER NOT NULL, purpose TEXT, ok INTEGER NOT NULL);
+        CREATE INDEX mail_log_at ON mail_log(at);
+        CREATE TABLE media (
+          id INTEGER PRIMARY KEY, file_base TEXT NOT NULL, original_name TEXT NOT NULL, width INTEGER NOT NULL,
+          height INTEGER NOT NULL, widths_json TEXT NOT NULL, bytes INTEGER NOT NULL, alt_en TEXT NOT NULL DEFAULT '',
+          alt_ms TEXT NOT NULL DEFAULT '', has_alpha INTEGER NOT NULL DEFAULT 0, created_at INTEGER NOT NULL, user_id INTEGER
+        );
+        CREATE TABLE settings (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+        CREATE TABLE audit (id INTEGER PRIMARY KEY, user_id INTEGER, action TEXT NOT NULL, target TEXT, at INTEGER NOT NULL, detail TEXT);
+        CREATE INDEX audit_at ON audit(at);
+        SQL,
+    ];
+}
+
+function db_migrate(PDO $pdo): void
+{
+    $migrations = db_migrations();
+    $target = count($migrations);
+    if ((int) $pdo->query('PRAGMA user_version')->fetchColumn() >= $target) return;
+    $pdo->exec('BEGIN IMMEDIATE');
+    try {
+        // re-read under the write lock: another request may have migrated meanwhile
+        $current = (int) $pdo->query('PRAGMA user_version')->fetchColumn();
+        for ($v = $current; $v < $target; $v++) {
+            $pdo->exec($migrations[$v]);
+        }
+        $pdo->exec('PRAGMA user_version = ' . $target);
+        $pdo->exec('COMMIT');
+    } catch (Throwable $e) {
+        $pdo->exec('ROLLBACK');
+        throw $e;
+    }
+}
+
+/** Run $fn inside BEGIN IMMEDIATE (one writer at a time, no upgrade deadlocks). */
+function db_tx(callable $fn): mixed
+{
+    $pdo = db();
+    $pdo->exec('BEGIN IMMEDIATE');
+    try {
+        $result = $fn($pdo);
+        $pdo->exec('COMMIT');
+        return $result;
+    } catch (Throwable $e) {
+        try {
+            $pdo->exec('ROLLBACK');
+        } catch (Throwable) {
+        }
+        throw $e;
+    }
+}
+
+function db_one(string $sql, array $params = []): ?array
+{
+    $st = db()->prepare($sql);
+    $st->execute($params);
+    $row = $st->fetch();
+    return $row === false ? null : $row;
+}
+
+function db_all(string $sql, array $params = []): array
+{
+    $st = db()->prepare($sql);
+    $st->execute($params);
+    return $st->fetchAll();
+}
+
+function db_val(string $sql, array $params = []): mixed
+{
+    $st = db()->prepare($sql);
+    $st->execute($params);
+    $v = $st->fetchColumn();
+    return $v === false ? null : $v;
+}
+
+function db_exec(string $sql, array $params = []): int
+{
+    $st = db()->prepare($sql);
+    $st->execute($params);
+    return $st->rowCount();
+}

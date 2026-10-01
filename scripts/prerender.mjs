@@ -43,6 +43,11 @@ const ROUTES = [
       .map((perLang) => `/${lang}/blog/${perLang[lang]}`)
   ),
   ...LANGS.flatMap((lang) => INFUSED_SLUGS.map((slug) => `/${lang}/products/${slug}`)),
+  // The page shell for pages built in the control panel (docs/cms/CMS-SPEC.md §5,
+  // §15): Navbar + <main><div data-cms-page-root></div></main> + Footer, which
+  // serve.php fills with a published page. Never a public URL (.htaccess 404s it),
+  // never in the sitemap, llms files or the per-page gates.
+  ...LANGS.map((lang) => `/${lang}/__cms-template`),
 ];
 const PORT = 4173;
 

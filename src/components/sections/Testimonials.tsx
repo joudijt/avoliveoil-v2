@@ -2,7 +2,8 @@ import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,8 +20,8 @@ export function Testimonials() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRefs.current,
@@ -46,8 +47,8 @@ export function Testimonials() {
       />
 
       <div className="relative z-10 mx-auto max-w-2xl text-center">
-        <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('testimonials.kicker')}</p>
-        <h2 className="mx-auto mt-3 text-4xl text-cream md:text-5xl">{t('testimonials.title')}</h2>
+        <p {...cmsText('testimonials.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('testimonials.kicker')}</p>
+        <h2 {...cmsText('testimonials.title')} className="mx-auto mt-3 text-4xl text-cream md:text-5xl">{t('testimonials.title')}</h2>
       </div>
 
       <div className="relative z-10 mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
@@ -61,9 +62,10 @@ export function Testimonials() {
             style={{ animation: `testimonial-float ${7 + i}s ease-in-out ${i * 0.5}s infinite` }}
           >
             <span className="font-display text-4xl text-gold">“</span>
-            <p className="mt-2 font-light leading-relaxed text-cream/85">{item.quote}</p>
+            <p {...cmsText(`testimonials.items.${i}.quote`)} className="mt-2 font-light leading-relaxed text-cream/85">{item.quote}</p>
             <p className="mt-6 text-sm text-cream/60">
-              <span className="text-gold">{item.name}</span> · {item.place}
+              <span {...cmsText(`testimonials.items.${i}.name`)} className="text-gold">{item.name}</span> ·{' '}
+              <span {...cmsText(`testimonials.items.${i}.place`)}>{item.place}</span>
             </p>
           </div>
         ))}

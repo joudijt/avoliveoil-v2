@@ -469,3 +469,11 @@ The boot script is appended as the last child of `<body>`:
 Snapshot files: `DOCROOT/<lang>/<path>/index.html`; CMS template: `DOCROOT/<lang>/__cms-template/index.html`
 (prerendered by B3a: Navbar + `<main><div data-cms-page-root></div></main>` + Footer, SEO with placeholder values
 that serve.php replaces from `ResolvedSeo`); SPA shell: `DOCROOT/index.html`.
+
+## 16. Integrator measurements (2026-10-01)
+* Live WAF probe (temporary `probe_w9q4.php`, deleted, verified 404): JSON bodies with `<script>`, `onerror=`,
+  `<iframe>`, SQL-like text, URL-laden urlencoded bodies, PUT/PATCH/DELETE and custom headers (`X-HTTP-Method-Override`,
+  `X-CSRF-Token`, `Origin`) all reach PHP with 200. `REMOTE_ADDR` = the real client IP. Base64 HTML + POST-only stay as
+  defence in depth, not a necessity.
+* Apache harness: `server-harness/Dockerfile` (`php:8.4-apache` + gd/webp + rewrite/headers/expires/deflate,
+  docroot `/home/madinahcom/avoliveoil.com`, data dir one level up like production).

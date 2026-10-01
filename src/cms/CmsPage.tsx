@@ -1,6 +1,159 @@
 /**
- * STUB — owned by builder B3b (blocks/canvas). Route element for /:lang/:slug (CMS pages).
+ * Public route `/:lang/:slug` — a page built in the control panel (spec §5, §13.2).
+ *
+ * Three ways in:
+ *  - `/<lang>/__cms-template` (prerender only): the empty page shell serve.php fills
+ *    with a page's published HTML — Navbar, `<main><div data-cms-page-root>`, Footer,
+ *    placeholder head. Never fetches.
+ *  - a full page load of a CMS URL: serve.php put the page in `#cms-boot`, so React
+ *    renders it synchronously, the same markup the server already sent.
+ *  - client-side navigation: no boot page for this slug → GET /api/public/page.
+ * The markup inside `[data-cms-page-root]` is <CmsBlocks> — the very component
+ * render.tsx turns into the published HTML.
  */
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useParams } from 'react-router-dom';
+import { Navbar } from '../components/ui/Navbar';
+import { Footer } from '../components/ui/Footer';
+import { SEO } from '../components/SEO';
+import { useMarkAppReady } from '../hooks/useMarkAppReady';
+import { OG_IMAGE_HEIGHT, OG_IMAGE_PATH, OG_IMAGE_WIDTH, SITE_URL } from '../config/site';
+import { getBoot } from './boot';
+import { CMS_LANGS, PUBLIC_PAGE_ENDPOINT, type CmsLang, type PublicPagePayload, type ResolvedSeo } from './contracts';
+import { CmsBlocks } from './blocks/CmsBlocks';
+import { PAGE_CHROME } from './blocks/classes';
+import { ui } from './blocks/strings';
+
+const TEMPLATE_SLUG = '__cms-template';
+
+type State = { kind: 'loading' } | { kind: 'ready'; page: PublicPagePayload } | { kind: 'missing' };
+
+function isLang(v: string | undefined): v is CmsLang {
+  return !!v && (CMS_LANGS as readonly string[]).includes(v);
+}
+
+function isPayload(v: unknown, slug: string, lang: CmsLang): v is PublicPagePayload {
+  if (!v || typeof v !== 'object') return false;
+  const p = v as PublicPagePayload;
+  return p.slug === slug && p.lang === lang && !!p.doc && p.doc.schema === 1 && Array.isArray(p.doc.sections) && !!p.seo;
+}
+
+function bootPageFor(slug: string, lang: CmsLang): PublicPagePayload | null {
+  const page = getBoot()?.page;
+  return page && isPayload(page, slug, lang) ? page : null;
+}
+
+function markReady() {
+  document.body.setAttribute('data-app-ready', 'true');
+}
+
 export function CmsPage() {
-  return null;
+  const { lang: rawLang, slug = '' } = useParams<{ lang: string; slug: string }>();
+  if (slug === TEMPLATE_SLUG && isLang(rawLang)) return <CmsTemplate lang={rawLang} />;
+  return <CmsPageView key={`${rawLang}/${slug}`} rawLang={rawLang} slug={slug} />;
+}
+
+function CmsPageView({ rawLang, slug }: { rawLang: string | undefined; slug: string }) {
+  const lang: CmsLang = isLang(rawLang) ? rawLang : 'en';
+  const [state, setState] = useState<State>(() => {
+    if (!isLang(rawLang)) return { kind: 'missing' };
+    const boot = bootPageFor(slug, lang);
+    return boot ? { kind: 'ready', page: boot } : { kind: 'loading' };
+  });
+
+  useEffect(() => {
+    if (state.kind !== 'loading') return;
+    const ctrl = new AbortController();
+    const qs = new URLSearchParams({ slug, lang }).toString();
+    fetch(`${PUBLIC_PAGE_ENDPOINT}?${qs}`, { headers: { Accept: 'application/json' }, signal: ctrl.signal })
+      .then(async (res) => {
+        if (!res.ok) return setState({ kind: 'missing' });
+        const body: unknown = await res.json();
+        setState(isPayload(body, slug, lang) ? { kind: 'ready', page: body } : { kind: 'missing' });
+      })
+      .catch((err: unknown) => {
+        if ((err as { name?: string })?.name !== 'AbortError') setState({ kind: 'missing' });
+      });
+    return () => ctrl.abort();
+  }, [state.kind, slug, lang]);
+
+  useEffect(() => {
+    if (state.kind !== 'loading') markReady();
+  }, [state.kind]);
+
+  if (state.kind === 'missing') return <NotFound lang={lang} />;
+
+  const preview = !!getBoot()?.preview;
+  return (
+    <>
+      {state.kind === 'ready' ? <SEO page="cms" resolved={state.page.seo} /> : null}
+      <Navbar />
+      <main className={PAGE_CHROME.main}>
+        {state.kind === 'ready' ? (
+          <div data-cms-page-root="">
+            <CmsBlocks doc={state.page.doc} lang={lang} media={state.page.media ?? {}} forms={state.page.forms ?? {}} pageId={state.page.id} />
+          </div>
+        ) : (
+          <div data-cms-page-root="" className={PAGE_CHROME.loading} />
+        )}
+      </main>
+      <Footer />
+      {preview ? <div className={PAGE_CHROME.previewBadge}>Preview — not published</div> : null}
+    </>
+  );
+}
+
+/** Placeholder head the prerender snapshots; serve.php rewrites every tag from ResolvedSeo. */
+function templateSeo(lang: CmsLang): ResolvedSeo {
+  const url = `${SITE_URL}/${lang}/${TEMPLATE_SLUG}`;
+  return {
+    title: 'CMS template',
+    description: 'CMS template',
+    canonical: url,
+    robots: 'noindex, follow',
+    alternates: { en: `${SITE_URL}/en/${TEMPLATE_SLUG}`, ms: `${SITE_URL}/ms/${TEMPLATE_SLUG}` },
+    ogImage: { url: `${SITE_URL}${OG_IMAGE_PATH}`, width: OG_IMAGE_WIDTH, height: OG_IMAGE_HEIGHT },
+    jsonLd: [],
+  };
+}
+
+function CmsTemplate({ lang }: { lang: CmsLang }) {
+  useMarkAppReady();
+  return (
+    <>
+      <SEO page="cms" resolved={templateSeo(lang)} />
+      <Navbar />
+      <main className={PAGE_CHROME.main}>
+        <div data-cms-page-root="" />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function NotFound({ lang }: { lang: CmsLang }) {
+  useMarkAppReady();
+  return (
+    <>
+      <Helmet htmlAttributes={{ lang, dir: 'ltr' }}>
+        <title>{`${ui(lang, 'notFoundTitle')} | Arabian Village`}</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      <Navbar />
+      <main className={PAGE_CHROME.main}>
+        <section className={PAGE_CHROME.notFound}>
+          <div className={PAGE_CHROME.notFoundInner}>
+            <p className={PAGE_CHROME.notFoundKicker}>{ui(lang, 'notFoundKicker')}</p>
+            <h1 className={PAGE_CHROME.notFoundTitle}>{ui(lang, 'notFoundTitle')}</h1>
+            <p className={PAGE_CHROME.notFoundText}>{ui(lang, 'notFoundText')}</p>
+            <a href={`/${lang}`} className={PAGE_CHROME.notFoundLink}>
+              {ui(lang, 'backHome')}
+            </a>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 }

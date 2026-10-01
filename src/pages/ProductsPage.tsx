@@ -9,6 +9,7 @@ import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { Picture } from '../components/ui/Picture';
 import { INFUSED_PRODUCTS } from '../data/infusedProducts';
 import { PRICES, STORE, STORE_BRANCHES, MADINAH_NAME } from '../config/site';
+import { cmsText } from '../cms/editable';
 
 interface Highlight {
   label: string;
@@ -38,23 +39,25 @@ export function ProductsPage() {
       />
       <Navbar />
       <main className="bg-bg">
-        <Breadcrumbs items={[{ name: t('breadcrumb.products'), path: 'products' }]} />
+        <Breadcrumbs items={[{ name: t('breadcrumb.products'), path: 'products', cmsKey: 'breadcrumb.products' }]} />
 
         <section className="px-6 pb-20 pt-10 md:px-16 md:pb-28">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
             <div className="text-start">
-              <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('productsPage.kicker')}</p>
-              <h1 className="mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
+              <p {...cmsText('productsPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('productsPage.kicker')}</p>
+              <h1 {...cmsText('productsPage.title')} className="mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
                 {t('productsPage.title')}
               </h1>
-              <p className="mt-6 max-w-md font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+              <p {...cmsText('productsPage.intro')} className="mt-6 max-w-md font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
                 {t('productsPage.intro')}
               </p>
             </div>
             <div className="flex items-center justify-center">
               <Picture
                 name="bottle-cutout"
-                alt="Arabian Village Organic Palestinian Olive Oil 500ml bottle, first cold pressed"
+                alt={t('alt.productsHero')}
+                cmsKey="products.hero"
+                cmsAltKey="alt.productsHero"
                 className="h-[46vh] w-auto object-contain md:h-[56vh]"
                 style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
                 sizes="(min-width: 768px) 12vh, 10vh"
@@ -66,32 +69,36 @@ export function ProductsPage() {
 
         <section className="bg-cream px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-5xl">
-            <h2 className="text-3xl text-olive-dark md:text-4xl">{t('productsPage.product.name')}</h2>
-            <p className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-gold">
+            <h2 {...cmsText('productsPage.product.name')} className="text-3xl text-olive-dark md:text-4xl">{t('productsPage.product.name')}</h2>
+            <p {...cmsText('productsPage.product.tagline')} className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-gold">
               {t('productsPage.product.tagline')}
             </p>
-            <p className="mt-6 max-w-2xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p {...cmsText('productsPage.product.description')} className="mt-6 max-w-2xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
               {t('productsPage.product.description')}
             </p>
 
             {/* Price comes from storeFacts.json via config, never from translated copy —
                 the same values the JSON-LD offers and llms.txt publish. */}
             <p className="mt-6 text-lg font-medium text-olive-dark">
-              <span className="text-gold">{t('productsPage.product.priceLabel')}</span>{' '}
+              <span {...cmsText('productsPage.product.priceLabel')} className="text-gold">{t('productsPage.product.priceLabel')}</span>{' '}
               250ml — {PRICES.ml250.display} · 500ml — {PRICES.ml500.display}
             </p>
-            <p className="mt-1 font-body text-sm font-light text-brown/70">
+            <p {...cmsText('productsPage.product.priceNote')} className="mt-1 font-body text-sm font-light text-brown/70">
               {t('productsPage.product.priceNote', { store: MADINAH_NAME })}
             </p>
 
             <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-              {highlights.map((h) => (
+              {highlights.map((h, i) => (
                 <div
                   key={h.label}
                   className="rounded-2xl border border-olive-dark/10 bg-bg p-5 text-start shadow-[0_10px_30px_rgba(46,58,36,0.05)]"
                 >
-                  <h3 className="text-xs uppercase tracking-[0.2em] text-gold">{h.label}</h3>
-                  <p className="mt-2 text-sm font-medium text-olive-dark">{h.value}</p>
+                  <h3 {...cmsText(`productsPage.product.highlights.${i}.label`)} className="text-xs uppercase tracking-[0.2em] text-gold">
+                    {h.label}
+                  </h3>
+                  <p {...cmsText(`productsPage.product.highlights.${i}.value`)} className="mt-2 text-sm font-medium text-olive-dark">
+                    {h.value}
+                  </p>
                 </div>
               ))}
             </div>
@@ -100,11 +107,11 @@ export function ProductsPage() {
 
         <section className="px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-5xl text-start">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('infusedPage.kicker')}</p>
-            <h2 className="mt-3 max-w-2xl text-3xl text-olive-dark md:text-4xl">
+            <p {...cmsText('infusedPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('infusedPage.kicker')}</p>
+            <h2 {...cmsText('infusedPage.collectionTitle')} className="mt-3 max-w-2xl text-3xl text-olive-dark md:text-4xl">
               {t('infusedPage.collectionTitle')}
             </h2>
-            <p className="mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('infusedPage.collectionIntro')} className="mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
               {t('infusedPage.collectionIntro', { store: MADINAH_NAME })}
             </p>
 
@@ -115,13 +122,16 @@ export function ProductsPage() {
                   to={`/${lang}/products/${product.slug}`}
                   className="group rounded-2xl border border-olive-dark/10 bg-cream p-6 text-start transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]"
                 >
-                  <span className="inline-block rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
+                  <span {...cmsText('infusedPage.availableBadge')} className="inline-block rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
                     {t('infusedPage.availableBadge', { store: MADINAH_NAME })}
                   </span>
-                  <h3 className="mt-4 text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold">
+                  <h3
+                    {...cmsText(`infusedPage.products.${product.id}.name`)}
+                    className="mt-4 text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold"
+                  >
                     {t(`infusedPage.products.${product.id}.name`)}
                   </h3>
-                  <p className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
+                  <p {...cmsText(`infusedPage.products.${product.id}.tagline`)} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
                     {t(`infusedPage.products.${product.id}.tagline`)}
                   </p>
                 </Link>
@@ -135,13 +145,13 @@ export function ProductsPage() {
             announcement nobody can honour is an invented promise. Where to buy replaces it. */}
         <section className="bg-[#E8E2D7] px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-5xl text-start">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">
+            <p {...cmsText('productsPage.whereToBuy.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">
               {t('productsPage.whereToBuy.kicker')}
             </p>
-            <h2 className="mt-3 max-w-2xl text-3xl text-olive-dark md:text-4xl">
+            <h2 {...cmsText('productsPage.whereToBuy.title')} className="mt-3 max-w-2xl text-3xl text-olive-dark md:text-4xl">
               {t('productsPage.whereToBuy.title', { store: MADINAH_NAME })}
             </h2>
-            <p className="mt-4 max-w-2xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('productsPage.whereToBuy.text')} className="mt-4 max-w-2xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
               {t('productsPage.whereToBuy.text', { store: MADINAH_NAME })}
             </p>
 
@@ -155,7 +165,7 @@ export function ProductsPage() {
                   <p className="mt-2 font-body text-sm font-light leading-relaxed text-brown/70">
                     {branch.street}, {branch.postalCode} {branch.locality}, {branch.region}
                   </p>
-                  <p className="mt-3 text-sm font-medium text-olive-dark">
+                  <p {...cmsText('productsPage.whereToBuy.hours')} className="mt-3 text-sm font-medium text-olive-dark">
                     {t('productsPage.whereToBuy.hours')}
                   </p>
                 </div>
@@ -166,6 +176,7 @@ export function ProductsPage() {
               href={`https://wa.me/${STORE.seller.whatsappDigits}`}
               target="_blank"
               rel="noopener noreferrer"
+              {...cmsText('productsPage.whereToBuy.whatsappCta')}
               className="mt-8 inline-block rounded-full bg-olive-dark px-8 py-3 text-sm uppercase tracking-[0.2em] text-cream transition-colors duration-300 hover:bg-gold"
             >
               {t('productsPage.whereToBuy.whatsappCta')}
@@ -175,19 +186,21 @@ export function ProductsPage() {
 
         <section className="bg-olive-dark px-6 py-20 text-center md:px-16 md:py-28">
           <div className="mx-auto max-w-2xl">
-            <h2 className="text-3xl text-cream md:text-4xl">{t('productsPage.links.shopTitle')}</h2>
-            <p className="mt-4 font-body text-base font-light leading-relaxed text-cream/70">
+            <h2 {...cmsText('productsPage.links.shopTitle')} className="text-3xl text-cream md:text-4xl">{t('productsPage.links.shopTitle')}</h2>
+            <p {...cmsText('productsPage.links.shopText')} className="mt-4 font-body text-base font-light leading-relaxed text-cream/70">
               {t('productsPage.links.shopText')}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 to={`/${lang}/shop`}
+                {...cmsText('productsPage.links.shopCta')}
                 className="rounded-full bg-gold px-7 py-3.5 text-sm font-medium tracking-wide text-olive-dark transition-colors duration-300 hover:bg-cream"
               >
                 {t('productsPage.links.shopCta')}
               </Link>
               <Link
                 to={`/${lang}/why-us`}
+                {...cmsText('productsPage.links.whyUsCta')}
                 className="rounded-full border border-cream/30 px-7 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors duration-300 hover:border-gold hover:text-gold"
               >
                 {t('productsPage.links.whyUsCta')}
@@ -210,6 +223,7 @@ export function ProductsPage() {
           kicker={t('productsPage.faq.kicker')}
           title={t('productsPage.faq.title')}
           items={faqItems}
+          keyPrefix="productsPage.faq"
         />
       </main>
       <Footer />

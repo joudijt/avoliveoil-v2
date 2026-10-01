@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Picture } from '../ui/Picture';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { isCmsStatic } from '../../cms/boot';
+import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +31,10 @@ export function BottleOpening() {
   const dropRefs = useRef<(HTMLDivElement | null)[]>([]);
   const copyRef = useRef<HTMLDivElement>(null);
   const kickerRef = useRef<HTMLParagraphElement>(null);
+  // The copy waits off-screen for the scroll-scrubbed pour; an edit session has no
+  // scroll animation, so it shows the finished frame instead. The 170vh scroll track
+  // only exists for the pin, so it collapses to the pinned screen there too.
+  const editing = isCmsStatic();
 
   // gsap sets its initial states here — opacity 0, yPercent 120 and friends.
   // This runs in useLayoutEffect, NOT useEffect, because the page now HYDRATES a
@@ -38,8 +44,8 @@ export function BottleOpening() {
   // and replayed — a visible flash above the fold on every load. useLayoutEffect
   // lands the reset before the first paint.
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const ctx = gsap.context(() => {
       gsap.set(streamRef.current, { scaleY: 0, transformOrigin: 'top center' });
       gsap.set(poolRef.current, { scaleX: 0, opacity: 0 });
@@ -76,7 +82,7 @@ export function BottleOpening() {
   }, []);
 
   return (
-    <section id="bottle-opening" ref={sectionRef} className="relative h-[170vh] w-full">
+    <section id="bottle-opening" ref={sectionRef} className={`relative ${editing ? 'h-screen' : 'h-[170vh]'} w-full`}>
       <div ref={pinRef} className="relative h-screen w-full overflow-hidden bg-olive-dark">
         <div
           className="pointer-events-none absolute inset-0"
@@ -92,7 +98,9 @@ export function BottleOpening() {
             >
               <Picture
                 name="bottle-cutout"
-                alt="Arabian Village Palestinian Olive Oil bottle, open and pouring"
+                alt={t('alt.bottlePour')}
+                cmsKey="home.bottle.pour"
+                cmsAltKey="alt.bottlePour"
                 className="relative z-10 h-full w-full object-contain"
                 style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.4))' }}
                 sizes="(min-width: 640px) 220px, 110px"
@@ -140,14 +148,19 @@ export function BottleOpening() {
           </div>
 
           <div className="flex flex-col items-start text-start">
-            <p ref={kickerRef} className="text-xs uppercase tracking-[0.35em] text-gold opacity-0" style={{ transform: 'translateY(16px)' }}>
+            <p
+              ref={kickerRef}
+              {...cmsText('bottleOpening.kicker')}
+              className={`text-xs uppercase tracking-[0.35em] text-gold${editing ? '' : ' opacity-0'}`}
+              style={editing ? undefined : { transform: 'translateY(16px)' }}
+            >
               {t('bottleOpening.kicker')}
             </p>
-            <div ref={copyRef} className="opacity-0" style={{ transform: 'translateX(40px)' }}>
-              <h2 className="mt-3 max-w-lg text-4xl leading-[1.15] text-cream md:text-5xl">
+            <div ref={copyRef} className={editing ? undefined : 'opacity-0'} style={editing ? undefined : { transform: 'translateX(40px)' }}>
+              <h2 {...cmsText('bottleOpening.title')} className="mt-3 max-w-lg text-4xl leading-[1.15] text-cream md:text-5xl">
                 {t('bottleOpening.title')}
               </h2>
-              <p className="mt-6 max-w-md font-body text-base font-light leading-relaxed tracking-wide text-cream/75 md:text-lg">
+              <p {...cmsText('bottleOpening.body')} className="mt-6 max-w-md font-body text-base font-light leading-relaxed tracking-wide text-cream/75 md:text-lg">
                 {t('bottleOpening.body')}
               </p>
             </div>

@@ -1,58 +1,94 @@
 User-agent: *
 Allow: /
+# The control panel and its API are private in every group below too (each named
+# crawler obeys only its own group, so the rule is repeated there).
+Disallow: /admin
+Disallow: /api/
 
 # AI answer and search engines — named explicitly so the permission is
 # unambiguous to operators who read this file literally. `User-agent: *` above
 # already allows them; being named is what stops a cautious crawler guessing.
 User-agent: GPTBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: meta-externalagent
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: DuckAssistBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 # Bulk training scraper with no citation or search surface — nothing comes back
 # from letting it through, so it is the one crawler that is turned away.
 User-agent: CCBot
 Disallow: /
+Disallow: /admin
+Disallow: /api/
 
 Sitemap: https://avoliveoil.com/sitemap.xml
 

@@ -1,0 +1,8 @@
+{
+  "_comment": "Pre-CMS public bundle sizes (gzip level 9, node zlib) for scripts/check-bundles.mjs. Measured on 2026-10-01 from the dist/ built at 19:47 out of the working tree committed as a80d708 (Arabic removal, before any CMS code): entry index-S88XVoFD.js, react-vendor-ioC11qDb.js, plus everything else dist/index.html loads statically (rolldown-runtime, animation).",
+  "measuredFrom": "a80d708",
+  "entryGzip": 79939,
+  "reactVendorGzip": 73216,
+  "staticJsGzip": 202414,
+  "budgetBytes": 15360
+}

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from 'node:url'
 
 /**
  * Chunking rationale
@@ -25,10 +26,23 @@ import tailwindcss from '@tailwindcss/vite'
  *
  * Note: react and react-dom MUST stay in the same chunk (react-dom reaches
  * into react's internals at module scope). Do not split them.
+ *
+ * Control panel (docs/cms/CMS-SPEC.md §13.3): admin.html is a second entry. Its
+ * code under src/admin and react-dom/server (which the admin uses to render CMS
+ * pages to HTML at publish time) must never reach a chunk the public site loads.
+ * react-dom/server is left to rolldown's own splitting (it lands in the admin's
+ * lazy chunks): naming it as a manual chunk made rolldown capture react ITSELF
+ * into that group as a dependency, and the public entry then preloaded the whole
+ * server renderer. scripts/check-bundles.mjs enforces both.
  */
 function chunkFor(id: string): string | undefined {
   // Rollup ids are absolute paths; normalise Windows separators before matching.
   const path = id.replace(/\\/g, '/')
+
+  if (path.includes('/src/admin/')) return undefined
+
+  // Must be tested before the react-vendor rule below, which would otherwise match it.
+  if (/\/node_modules\/react-dom\/(server[^/]*\.js|cjs\/react-dom-server)/.test(path)) return undefined
 
   if (path.includes('/src/content/articles/en.ts')) return 'articles-en'
   if (path.includes('/src/content/articles/ms.ts')) return 'articles-ms'
@@ -55,9 +69,18 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     port: 5180,
+    // The PHP API (server/, run locally with `php -S 127.0.0.1:8091`) and its uploads.
+    proxy: {
+      '/api': 'http://127.0.0.1:8091',
+      '/uploads': 'http://127.0.0.1:8091',
+    },
   },
   build: {
     rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        admin: fileURLToPath(new URL('./admin.html', import.meta.url)),
+      },
       output: {
         manualChunks: (id) => chunkFor(id),
       },

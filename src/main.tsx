@@ -6,6 +6,8 @@ import i18n from './i18n'
 import './index.css'
 import App from './App.tsx'
 import { ensureArticles } from './content/articles/registry'
+import { applyBootToI18n, getBoot } from './cms/boot'
+import { isCmsRoute, preloadCmsPage } from './routes/cmsLoader'
 
 // `/en`, `/ms/why-us`, `/ms/blog/foo` — the first segment is the language.
 const LANG_RE = /^\/(en|ms)(?:\/|$)/
@@ -33,6 +35,19 @@ const BLOG_RE = /^\/(en|ms)\/blog(?:\/|$)/
 async function start() {
   const path = window.location.pathname
 
+  // CMS overrides (spec §13.2) travel in the same HTML response as #cms-boot and
+  // must be in i18next before the first render, or the visitor sees the old copy
+  // flash to the new one. Edit mode also freezes the page: no animations, no
+  // smooth scroll, every reveal already finished (lib/prerender isStaticRender).
+  const boot = getBoot()
+  if (boot) {
+    applyBootToI18n(i18n, boot)
+    if (boot.edit) {
+      window.__CMS_STATIC__ = true
+      document.documentElement.setAttribute('data-cms-static', '')
+    }
+  }
+
   const lang = LANG_RE.exec(path)?.[1]
   if (lang && i18n.language !== lang) {
     // Resources are bundled inline, so this settles in a microtask — but await
@@ -43,6 +58,10 @@ async function start() {
 
   const blogLang = BLOG_RE.exec(path)?.[1]
   if (blogLang) await ensureArticles(blogLang)
+
+  // A CMS page renders from a lazy chunk; load it first so the first render is the
+  // page itself and never an empty Suspense fallback over the server's HTML.
+  if (isCmsRoute(path)) await preloadCmsPage()
 
   const container = document.getElementById('root')!
 
@@ -76,6 +95,13 @@ async function start() {
    * deliberately corrupted snapshot.
    */
   createRoot(container).render(tree)
+
+  if (boot?.edit) {
+    // Only an admin opening /<page>?cms-edit=1 ever downloads the editor.
+    requestAnimationFrame(() => {
+      void import('./cms/inlineEdit').then((m) => m.startInlineEdit())
+    })
+  }
 }
 
 // If boot fails (a language chunk that will not download, say) we deliberately

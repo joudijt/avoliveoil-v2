@@ -1,0 +1,102 @@
+{
+ "nav.home": {
+  "v": "Home",
+  "t": "string",
+  "editable": true
+ },
+ "nav.products": {
+  "v": "Products",
+  "t": "string",
+  "editable": true
+ },
+ "hero.sub": {
+  "v": "Cold-pressed in Palestine",
+  "t": "string",
+  "editable": true
+ },
+ "hero.headlineWords": {
+  "v": [
+   {
+    "text": "Pure",
+    "gold": false
+   },
+   {
+    "text": "Palestinian",
+    "gold": true
+   },
+   {
+    "text": "Gold",
+    "gold": false
+   }
+  ],
+  "t": "words",
+  "editable": true
+ },
+ "hero.icon": {
+  "v": "leaf",
+  "t": "string",
+  "editable": false
+ },
+ "stats.customers.value": {
+  "v": 500000,
+  "t": "number",
+  "editable": true
+ },
+ "stats.customers.suffix": {
+  "v": "+",
+  "t": "string",
+  "editable": true
+ },
+ "about.seller": {
+  "v": "Sold by {{store}}",
+  "vi": "Sold by Berkat Madinah Store",
+  "t": "string",
+  "tokens": [
+   "store"
+  ],
+  "editable": true
+ },
+ "article.readingTime": {
+  "v": "{{count}} min read",
+  "t": "string",
+  "tokens": [
+   "count"
+  ],
+  "editable": true
+ },
+ "home.mixed": {
+  "v": "Mixed bold",
+  "t": "string",
+  "editable": true
+ },
+ "contact.namePlaceholder": {
+  "v": "Your name",
+  "t": "string",
+  "editable": true
+ },
+ "alt.heroBg": {
+  "v": "Olive grove",
+  "t": "string",
+  "editable": true
+ },
+ "seo.whyUs.title": {
+  "v": "Why Choose Us | Arabian Village",
+  "t": "string",
+  "editable": true
+ },
+ "seo.whyUs.description": {
+  "v": "Why Arabian Village olive oil is different.",
+  "t": "string",
+  "editable": true
+ },
+ "faq.items.0.q": {
+  "v": "Is it cold pressed?",
+  "t": "string",
+  "editable": true
+ },
+ "faq.items.0.a": {
+  "v": "Yes, first cold pressed.",
+  "t": "string",
+  "editable": true
+ }
+}

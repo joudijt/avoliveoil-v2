@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Picture } from '../ui/Picture';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { cmsText } from '../../cms/editable';
 
 interface JourneyScene {
   key: string;
@@ -47,8 +48,8 @@ export function OliveJourney() {
   // and replayed — a visible flash above the fold on every load. useLayoutEffect
   // lands the reset before the first paint.
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     gsap.fromTo(captionRef.current, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
   }, [index]);
 
@@ -56,11 +57,16 @@ export function OliveJourney() {
     <section id="journey" className="relative w-full bg-[#E8E2D7] px-6 py-28 md:px-16 md:py-32">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
         <div className="order-2 flex flex-col items-start text-start md:order-1">
-          <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('oliveJourney.kicker')}</p>
-          <h2 className="mt-3 text-4xl text-olive-dark md:text-5xl">{t('oliveJourney.title')}</h2>
+          <p {...cmsText('oliveJourney.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('oliveJourney.kicker')}</p>
+          <h2 {...cmsText('oliveJourney.title')} className="mt-3 text-4xl text-olive-dark md:text-5xl">{t('oliveJourney.title')}</h2>
 
           <p ref={captionRef} className="mt-8 max-w-md text-xl font-light leading-relaxed text-olive-dark/80 md:text-2xl">
-            <span className="text-gold">{scene.title}:</span> {scene.caption}
+            {/* The title and caption are separate keys; each sits in its own inline span
+                so the CMS can replace one without touching the colon or the other. */}
+            <span className="text-gold">
+              <span {...cmsText(`oliveJourney.scenes.${index}.title`)}>{scene.title}</span>:
+            </span>{' '}
+            <span {...cmsText(`oliveJourney.scenes.${index}.caption`)}>{scene.caption}</span>
           </p>
 
           <p className="mt-8 text-sm tracking-[0.2em] text-olive-dark/40">
@@ -88,10 +94,12 @@ export function OliveJourney() {
                 key={s.key}
                 name={PHOTOS[s.key]}
                 alt={s.title}
+                cmsKey={`home.journey.${s.key}`}
+                cmsAltKey={`oliveJourney.scenes.${i}.title`}
                 aria-hidden={i !== index}
                 sizes={JOURNEY_SIZES}
                 className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-out ${
-                  i === index ? 'opacity-100' : 'opacity-0'
+                  i === index ? 'opacity-100' : 'pointer-events-none opacity-0'
                 }`}
               />
             ))}

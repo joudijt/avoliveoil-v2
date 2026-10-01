@@ -1,4 +1,7 @@
 import type { CSSProperties, Ref } from 'react';
+import { useTranslation } from 'react-i18next';
+import { getImageOverride } from '../../cms/boot';
+import { cmsAttr } from '../../cms/editable';
 
 /**
  * Owned by builder A (images). The props below are final: other components are
@@ -24,6 +27,13 @@ export interface PictureProps {
   'aria-hidden'?: boolean;
   /** Optional handle on the underlying <img> (React 19 passes it as a prop). */
   ref?: Ref<HTMLImageElement>;
+  /**
+   * CMS photo spot (spec §11), e.g. `home.hero.bg`. Emits `data-cms-img` and, when
+   * the owner replaced the photo, renders the uploaded one instead.
+   */
+  cmsKey?: string;
+  /** i18n key of `alt`, so the description is editable in place (`data-cms-attr`). */
+  cmsAltKey?: string;
 }
 
 /** Every generated variant, keyed by `<name>-<width>.webp`. */
@@ -53,7 +63,39 @@ export function Picture({
   style,
   'aria-hidden': ariaHidden,
   ref,
+  cmsKey,
+  cmsAltKey,
 }: PictureProps) {
+  const { i18n } = useTranslation();
+  const override = cmsKey ? getImageOverride(cmsKey, i18n.language) : null;
+  const marks = {
+    ...(cmsKey ? { 'data-cms-img': cmsKey } : {}),
+    ...(cmsAltKey && !override ? cmsAttr({ alt: cmsAltKey }) : {}),
+  };
+
+  if (override) {
+    const variants = [...override.media.variants].sort((a, b) => a.w - b.w);
+    const focal = override.focal;
+    return (
+      <img
+        ref={ref}
+        src={variants[variants.length - 1].url}
+        srcSet={variants.map((v) => `${v.url} ${v.w}w`).join(', ')}
+        sizes={sizes}
+        alt={override.alt}
+        aria-hidden={ariaHidden}
+        width={override.media.width}
+        height={override.media.height}
+        className={className}
+        style={focal ? { ...style, objectPosition: `${focal.x}% ${focal.y}%` } : style}
+        decoding="async"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
+        {...marks}
+      />
+    );
+  }
+
   const entry = MANIFEST[name];
   if (!entry) {
     /**
@@ -94,6 +136,7 @@ export function Picture({
       decoding="async"
       loading={priority ? 'eager' : 'lazy'}
       fetchPriority={priority ? 'high' : undefined}
+      {...marks}
     />
   );
 }

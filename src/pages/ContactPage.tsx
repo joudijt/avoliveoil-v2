@@ -9,6 +9,7 @@ import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { buildWhatsAppUrl, WHATSAPP_NUMBER } from '../utils/whatsapp';
 import { SOCIAL_LINKS } from '../data/social';
+import { cmsAttr, cmsText } from '../cms/editable';
 import {
   MADINAH_NAME,
   MADINAH_URL,
@@ -42,15 +43,15 @@ export function ContactPage() {
       <SEO page="contact" breadcrumbs={[{ name: t('breadcrumb.contact'), path: 'contact' }]} faqs={faqItems} />
       <Navbar />
       <main className="bg-bg">
-        <Breadcrumbs items={[{ name: t('breadcrumb.contact'), path: 'contact' }]} />
+        <Breadcrumbs items={[{ name: t('breadcrumb.contact'), path: 'contact', cmsKey: 'breadcrumb.contact' }]} />
 
         <section className="px-6 pb-16 pt-10 text-center md:px-16 md:pb-20">
           <div className="mx-auto max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('contactPage.kicker')}</p>
-            <h1 className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
+            <p {...cmsText('contactPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('contactPage.kicker')}</p>
+            <h1 {...cmsText('contactPage.title')} className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
               {t('contactPage.title')}
             </h1>
-            <p className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p {...cmsText('contactPage.intro')} className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
               {t('contactPage.intro')}
             </p>
           </div>
@@ -66,7 +67,7 @@ export function ContactPage() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/15 text-gold">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h2 className="mt-6 text-sm uppercase tracking-[0.2em] text-gold">
+                <h2 {...cmsText(`contactPage.info.${key}.label`)} className="mt-6 text-sm uppercase tracking-[0.2em] text-gold">
                   {t(`contactPage.info.${key}.label`)}
                 </h2>
                 {/* Each card's value is actionable where it can be: WhatsApp
@@ -77,6 +78,7 @@ export function ContactPage() {
                     href={`https://wa.me/${WHATSAPP_NUMBER}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    {...cmsText(`contactPage.info.${key}.value`)}
                     className="mt-2 block text-base text-olive-dark/70 transition-colors duration-300 hover:text-gold"
                   >
                     {t(`contactPage.info.${key}.value`)}
@@ -85,6 +87,7 @@ export function ContactPage() {
                 {key === 'email' && (
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
+                    {...cmsText(`contactPage.info.${key}.value`)}
                     className="mt-2 block break-words text-base text-olive-dark/70 transition-colors duration-300 hover:text-gold"
                   >
                     {t(`contactPage.info.${key}.value`)}
@@ -95,6 +98,7 @@ export function ContactPage() {
                     href={GOOGLE_MAPS_LINK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    {...cmsText(`contactPage.info.${key}.value`)}
                     className="mt-2 block text-base leading-relaxed text-olive-dark/70 transition-colors duration-300 hover:text-gold"
                   >
                     {t(`contactPage.info.${key}.value`)}
@@ -113,6 +117,7 @@ export function ContactPage() {
             <iframe
               src={GOOGLE_MAPS_EMBED_URL}
               title={t('contactPage.info.address.label')}
+              {...cmsAttr({ title: 'contactPage.info.address.label' })}
               className="block h-[320px] w-full md:h-[420px]"
               style={{ border: 0 }}
               loading="lazy"
@@ -147,7 +152,7 @@ export function ContactPage() {
           </div>
 
           <div className="mx-auto mt-12 max-w-2xl rounded-2xl bg-[#D6D2C4] p-8 shadow-[0_25px_50px_rgba(46,58,36,0.18)] sm:p-12">
-            <h2 className="text-2xl text-olive-dark md:text-3xl">{t('contactPage.form.title')}</h2>
+            <h2 {...cmsText('contactPage.form.title')} className="text-2xl text-olive-dark md:text-3xl">{t('contactPage.form.title')}</h2>
             <form
               className="mt-8 space-y-3 text-start"
               onSubmit={(e) => {
@@ -163,23 +168,26 @@ export function ContactPage() {
               }}
             >
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <input name="name" placeholder={t('contactPage.form.name') ?? undefined} className={inputClass} />
+                <input name="name" placeholder={t('contactPage.form.name') ?? undefined} {...cmsAttr({ placeholder: 'contactPage.form.name' })} className={inputClass} />
                 <input
                   name="email"
                   type="email"
                   placeholder={t('contactPage.form.email') ?? undefined}
+                  {...cmsAttr({ placeholder: 'contactPage.form.email' })}
                   className={inputClass}
                 />
               </div>
-              <input name="subject" placeholder={t('contactPage.form.subject') ?? undefined} className={inputClass} />
+              <input name="subject" placeholder={t('contactPage.form.subject') ?? undefined} {...cmsAttr({ placeholder: 'contactPage.form.subject' })} className={inputClass} />
               <textarea
                 name="message"
                 placeholder={t('contactPage.form.message') ?? undefined}
+                {...cmsAttr({ placeholder: 'contactPage.form.message' })}
                 rows={5}
                 className={`${inputClass} resize-none`}
               />
               <button
                 type="submit"
+                {...cmsText('contactPage.form.submit')}
                 className="w-full rounded-lg bg-gold py-4 text-sm font-semibold uppercase tracking-wider text-olive-dark transition-colors duration-300 hover:bg-olive-dark hover:text-cream"
               >
                 {t('contactPage.form.submit')}
@@ -188,7 +196,7 @@ export function ContactPage() {
           </div>
         </section>
 
-        <FAQ kicker={t('contactPage.faq.kicker')} title={t('contactPage.faq.title')} items={faqItems} />
+        <FAQ kicker={t('contactPage.faq.kicker')} title={t('contactPage.faq.title')} items={faqItems} keyPrefix="contactPage.faq" />
       </main>
       <Footer />
     </>

@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Picture } from '../ui/Picture';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { isCmsStatic } from '../../cms/boot';
+import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,21 +28,27 @@ function Card({
   text,
   className,
   cardRef,
+  cmsKey,
 }: {
   order: string;
   title: string;
   text: string;
   className: string;
   cardRef: (el: HTMLDivElement | null) => void;
+  /** i18n prefix of this card, e.g. `scrollStory.leftCards.0`. */
+  cmsKey: string;
 }) {
+  // The cards wait at opacity 0 for their scroll-triggered reveal; an edit session
+  // has no reveal, so they start visible there.
+  const hidden = isCmsStatic() ? '' : 'opacity-0 ';
   return (
     <div
       ref={cardRef}
-      className={`w-full max-w-[300px] rounded-2xl border border-white/60 bg-white/40 p-6 opacity-0 shadow-[0_20px_45px_rgba(46,58,36,0.1)] backdrop-blur-md lg:p-7 ${className}`}
+      className={`w-full max-w-[300px] rounded-2xl border border-white/60 bg-white/40 p-6 ${hidden}shadow-[0_20px_45px_rgba(46,58,36,0.1)] backdrop-blur-md lg:p-7 ${className}`}
     >
-      <span className="text-[11px] tracking-[0.3em] text-gold">{order}</span>
-      <h3 className="mt-3 font-display text-xl tracking-wide text-olive-dark lg:text-2xl">{title}</h3>
-      <p className="mt-3 font-body text-sm font-light leading-relaxed text-brown/75">{text}</p>
+      <span {...cmsText(`${cmsKey}.order`)} className="text-[11px] tracking-[0.3em] text-gold">{order}</span>
+      <h3 {...cmsText(`${cmsKey}.title`)} className="mt-3 font-display text-xl tracking-wide text-olive-dark lg:text-2xl">{title}</h3>
+      <p {...cmsText(`${cmsKey}.text`)} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/75">{text}</p>
     </div>
   );
 }
@@ -63,6 +71,10 @@ export function ScrollStory() {
   const leftCards = t('scrollStory.leftCards', { returnObjects: true }) as StoryCard[];
   const rightCards = t('scrollStory.rightCards', { returnObjects: true }) as StoryCard[];
   const cards = [...leftCards, ...rightCards];
+  const cardKeys = [
+    ...leftCards.map((_, i) => `scrollStory.leftCards.${i}`),
+    ...rightCards.map((_, i) => `scrollStory.rightCards.${i}`),
+  ];
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -74,8 +86,8 @@ export function ScrollStory() {
   // and replayed — a visible flash above the fold on every load. useLayoutEffect
   // lands the reset before the first paint.
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
@@ -117,8 +129,8 @@ export function ScrollStory() {
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[60vh] w-[60vh] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30" style={{ background: 'radial-gradient(circle, rgba(184,138,42,0.14) 0%, rgba(232,226,215,0) 70%)' }} />
 
       <div className="relative mx-auto max-w-7xl text-center">
-        <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('scrollStory.kicker')}</p>
-        <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl text-olive-dark md:text-5xl">
+        <p {...cmsText('scrollStory.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('scrollStory.kicker')}</p>
+        <h2 {...cmsText('scrollStory.title')} className="mx-auto mt-3 max-w-2xl font-display text-4xl text-olive-dark md:text-5xl">
           {t('scrollStory.title')}
         </h2>
 
@@ -127,6 +139,7 @@ export function ScrollStory() {
             <Card
               key={card.order}
               {...card}
+              cmsKey={cardKeys[i]}
               className={PLACEMENT[i]}
               cardRef={(el) => {
                 cardRefs.current[i] = el;
@@ -136,7 +149,9 @@ export function ScrollStory() {
 
           <Picture
             name="woman-holding-bottle-nobg"
-            alt="Woman holding a bottle of Arabian Village organic Palestinian olive oil"
+            alt={t('alt.storyWoman')}
+            cmsKey="home.story.woman"
+            cmsAltKey="alt.storyWoman"
             className="h-[45vh] w-auto object-contain lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:h-[65vh]"
             style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
             sizes="(min-width: 1024px) 46vh, 32vh"
@@ -146,6 +161,7 @@ export function ScrollStory() {
             <Card
               key={card.order}
               {...card}
+              cmsKey={cardKeys[i + 2]}
               className={PLACEMENT[i + 2]}
               cardRef={(el) => {
                 cardRefs.current[i + 2] = el;

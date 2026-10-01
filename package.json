@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run check:slugs && npm run check:images && npm run build:llms && node scripts/ai/surfaces.mjs && tsc -b && vite build",
+    "build": "npm run check:slugs && npm run check:images && npm run build:llms && node scripts/ai/surfaces.mjs && node scripts/gen-ar-redirects.mjs --check && tsc -b && vite build && node scripts/cms-build-data.mjs && node scripts/copy-server.mjs",
+    "cms:data": "node scripts/cms-build-data.mjs",
+    "check:cms": "node scripts/check-bundles.mjs && node scripts/check-cms-classes.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "sitemap:manifest": "node scripts/generate-sitemap.mjs --update-manifest",
     "check:sitemap": "node scripts/check-sitemap.mjs",

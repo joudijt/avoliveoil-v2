@@ -1,3 +1,5 @@
+import { isCmsStatic } from '../cms/boot';
+
 /**
  * True only inside scripts/prerender.mjs's headless browser.
  *
@@ -25,4 +27,15 @@ export function isPrerender(): boolean {
     typeof window !== 'undefined' &&
     (window as Window & { __PRERENDER__?: boolean }).__PRERENDER__ === true
   );
+}
+
+/**
+ * True when the page must show its FINISHED state with nothing moving: during the
+ * prerender snapshot (above) and when the CMS opens the page as an in-place edit
+ * surface (`boot.edit`, spec §13.7) — the owner clicks text and photos, which
+ * cannot sit at opacity 0 waiting for a scroll trigger or drift under the cursor.
+ * Every animation and smooth-scroll guard uses this, not isPrerender().
+ */
+export function isStaticRender(): boolean {
+  return isPrerender() || isCmsStatic();
 }

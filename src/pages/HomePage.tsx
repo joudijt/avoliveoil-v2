@@ -14,6 +14,7 @@ import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
 import { useLenis } from '../hooks/useLenis';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
+import { isStaticRender } from '../lib/prerender';
 
 export function HomePage() {
   const { t } = useTranslation();
@@ -23,7 +24,8 @@ export function HomePage() {
   // bottle cutout twice before anything else could paint. Lenis is therefore
   // enabled from the first render — its argument is "mount the smooth-scroll
   // instance", which used to be gated on the splash having finished.
-  useLenis(true);
+  // Except where nothing may move: the prerender snapshot and a CMS edit session.
+  useLenis(!isStaticRender());
 
   // Marks the DOM as fully rendered so the build-time prerender script knows
   // when to snapshot — scripts/prerender.mjs (and perf-probe/walk-brand) wait

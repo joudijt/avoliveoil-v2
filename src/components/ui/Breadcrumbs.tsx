@@ -1,10 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { cmsText } from '../../cms/editable';
 
 interface Crumb {
   name: string;
   /** Path segment under /:lang. */
   path: string;
+  /** i18n key of `name`, so the crumb is editable in place. */
+  cmsKey?: string;
 }
 
 /**
@@ -22,7 +25,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl text-sm text-brown/60">
         <ol className="flex flex-wrap items-center gap-2">
           <li>
-            <Link to={`/${lang}`} className="transition-colors duration-300 hover:text-gold">
+            <Link to={`/${lang}`} {...cmsText('nav.home')} className="transition-colors duration-300 hover:text-gold">
               {t('nav.home')}
             </Link>
           </li>
@@ -32,11 +35,15 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                 /
               </span>
               {i === items.length - 1 ? (
-                <span className="text-olive-dark" aria-current="page">
+                <span {...(item.cmsKey ? cmsText(item.cmsKey) : {})} className="text-olive-dark" aria-current="page">
                   {item.name}
                 </span>
               ) : (
-                <Link to={`/${lang}/${item.path}`} className="transition-colors duration-300 hover:text-gold">
+                <Link
+                  to={`/${lang}/${item.path}`}
+                  {...(item.cmsKey ? cmsText(item.cmsKey) : {})}
+                  className="transition-colors duration-300 hover:text-gold"
+                >
                   {item.name}
                 </Link>
               )}

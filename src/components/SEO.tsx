@@ -25,6 +25,7 @@ import {
   MADINAH_NAME,
   MADINAH_URL,
 } from '../config/site';
+import type { ResolvedSeo } from '../cms/contracts';
 
 interface FaqItem {
   q: string;
@@ -37,7 +38,7 @@ export interface BreadcrumbItem {
   path: string;
 }
 
-export type Page = 'home' | 'products' | 'shop' | 'why-us' | 'contact' | 'blog' | 'article';
+export type Page = 'home' | 'products' | 'shop' | 'why-us' | 'contact' | 'blog' | 'article' | 'cms';
 
 const ALL_LANGS = ['en', 'ms'] as const;
 
@@ -50,6 +51,8 @@ const PAGE_SLUG: Record<Page, string> = {
   blog: 'blog',
   // Articles have a different slug per language, so they always pass `pathByLang`.
   article: 'blog',
+  // CMS pages always pass `resolved`, which carries their own URLs.
+  cms: '',
 };
 
 const SEO_KEY: Record<Page, string> = {
@@ -60,6 +63,7 @@ const SEO_KEY: Record<Page, string> = {
   contact: 'contact',
   blog: 'blog',
   article: 'blog',
+  cms: 'home',
 };
 
 /** Everything an article page adds on top of the standard per-page metadata. */
@@ -98,6 +102,13 @@ interface SEOProps {
   descriptionOverride?: string;
   /** Emits BlogPosting JSON-LD and switches og:type to `article`. */
   article?: ArticleMeta;
+  /**
+   * A CMS page's head, computed ONCE by the server (spec §13.2) and passed through
+   * the boot payload. When given, every page-specific tag comes from it verbatim so
+   * React's head is the head serve.php wrote; only the site-wide graph nodes
+   * (Organization, seller, WebSite) are added, as on every other page.
+   */
+  resolved?: ResolvedSeo;
 }
 
 /**
@@ -116,6 +127,7 @@ export function SEO({
   titleOverride,
   descriptionOverride,
   article,
+  resolved,
 }: SEOProps) {
   const { t } = useTranslation();
   const { lang = 'en' } = useParams<{ lang: string }>();
@@ -310,6 +322,17 @@ export function SEO({
         }
       : null;
 
+  if (resolved) {
+    return (
+      <ResolvedHead
+        resolved={resolved}
+        lang={lang}
+        brandName={brandName}
+        siteSchemas={[organizationSchema, sellerSchema, websiteSchema]}
+      />
+    );
+  }
+
   return (
     <Helmet htmlAttributes={{ lang, dir: 'ltr' }}>
       <title>{title}</title>
@@ -363,6 +386,91 @@ export function SEO({
       {articleSchema && <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>}
       {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
+    </Helmet>
+  );
+}
+
+/** Media type of an og:image, from its extension — uploads are webp, the site card is jpeg. */
+function imageType(url: string): string | undefined {
+  const ext = /\.([a-z0-9]+)(?:[?#].*)?$/i.exec(url)?.[1]?.toLowerCase();
+  if (ext === 'jpg' || ext === 'jpeg') return 'image/jpeg';
+  if (ext === 'png') return 'image/png';
+  if (ext === 'webp') return 'image/webp';
+  return undefined;
+}
+
+/**
+ * The head of a CMS page: exactly the server's ResolvedSeo, plus the same
+ * site-wide icons/manifest/app names and graph nodes every page carries. Nothing
+ * here may contradict `resolved` — alternates, og:locale:alternate and x-default
+ * are derived from `resolved.alternates` alone.
+ */
+function ResolvedHead({
+  resolved,
+  lang,
+  brandName,
+  siteSchemas,
+}: {
+  resolved: ResolvedSeo;
+  lang: string;
+  brandName: string;
+  siteSchemas: object[];
+}) {
+  const alternates = (['en', 'ms'] as const).filter((l) => resolved.alternates[l]);
+  const xDefault = resolved.alternates.en ?? (alternates[0] ? resolved.alternates[alternates[0]] : undefined);
+  const og = resolved.ogImage;
+  const ogType = imageType(og.url);
+
+  return (
+    <Helmet htmlAttributes={{ lang, dir: 'ltr' }}>
+      <title>{resolved.title}</title>
+      <meta name="description" content={resolved.description} />
+      <link rel="canonical" href={resolved.canonical} />
+      <meta name="robots" content={resolved.robots} />
+
+      {alternates.map((l) => (
+        <link key={l} rel="alternate" hrefLang={l} href={resolved.alternates[l]} />
+      ))}
+      {xDefault && <link rel="alternate" hrefLang="x-default" href={xDefault} />}
+
+      <link rel="manifest" href={MANIFEST_BY_LANG[lang] ?? MANIFEST_BY_LANG.en} />
+      <meta name="application-name" content={brandName} />
+      <meta name="apple-mobile-web-app-title" content={brandName} />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={resolved.title} />
+      <meta property="og:description" content={resolved.description} />
+      <meta property="og:url" content={resolved.canonical} />
+      <meta property="og:image" content={og.url} />
+      <meta property="og:image:secure_url" content={og.url} />
+      {ogType && <meta property="og:image:type" content={ogType} />}
+      <meta property="og:image:width" content={String(og.width)} />
+      <meta property="og:image:height" content={String(og.height)} />
+      <meta property="og:image:alt" content={resolved.title} />
+      <meta property="og:locale" content={OG_LOCALES[lang]} />
+      {alternates
+        .filter((l) => l !== lang)
+        .map((l) => (
+          <meta key={l} property="og:locale:alternate" content={OG_LOCALES[l]} />
+        ))}
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={resolved.title} />
+      <meta name="twitter:description" content={resolved.description} />
+      <meta name="twitter:image" content={og.url} />
+      <meta name="twitter:image:alt" content={resolved.title} />
+
+      {siteSchemas.map((schema, i) => (
+        <script key={`site-${i}`} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+      {resolved.jsonLd.map((schema, i) => (
+        <script key={`page-${i}`} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 }

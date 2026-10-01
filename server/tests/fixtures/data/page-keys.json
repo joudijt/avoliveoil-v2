@@ -1,0 +1,59 @@
+{
+ "home": {
+  "path": "",
+  "label": "Home",
+  "groups": [
+   {
+    "label": "Hero",
+    "keys": [
+     "hero.sub",
+     "hero.headlineWords",
+     "stats.customers.value",
+     "stats.customers.suffix",
+     "about.seller",
+     "home.mixed",
+     "contact.namePlaceholder",
+     "hero.icon"
+    ]
+   }
+  ],
+  "images": [
+   "home.hero.bg"
+  ]
+ },
+ "why-us": {
+  "path": "why-us",
+  "label": "Why Us",
+  "groups": [
+   {
+    "label": "SEO",
+    "keys": [
+     "seo.whyUs.title",
+     "seo.whyUs.description"
+    ]
+   },
+   {
+    "label": "FAQ",
+    "keys": [
+     "faq.items.0.q",
+     "faq.items.0.a"
+    ]
+   }
+  ],
+  "images": []
+ },
+ "global": {
+  "path": "",
+  "label": "Header & footer",
+  "groups": [
+   {
+    "label": "Menu",
+    "keys": [
+     "nav.home",
+     "nav.products"
+    ]
+   }
+  ],
+  "images": []
+ }
+}

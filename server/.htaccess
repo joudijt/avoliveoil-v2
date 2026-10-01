@@ -1,0 +1,20 @@
+# /api — PHP backend of the control panel (docs/cms/CMS-SPEC.md §9, §13.1).
+# Deliberately no mod_rewrite directives here: a RewriteEngine line in this file would
+# replace the docroot rules for every /api request and break the /api/* -> index.php route.
+Options -Indexes
+DirectoryIndex index.php
+
+# Library code, build data, setup tokens and tests are never served. The docroot
+# .htaccess already answers 404 for these (rule 4); this is the second lock, and each
+# of those folders carries its own "Require all denied" as the third.
+RedirectMatch 404 ^/api/(_lib|_data|_setup|tests)(/.*)?$
+
+<FilesMatch "(\.(token|reset|sqlite|log|md|json)|^\.user\.ini)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

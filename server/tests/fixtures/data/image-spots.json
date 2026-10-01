@@ -1,0 +1,11 @@
+{
+ "home.hero.bg": {
+  "label": "Home › Hero background",
+  "needsAlpha": false,
+  "default": {
+   "name": "hero-bg",
+   "width": 1600,
+   "height": 900
+  }
+ }
+}

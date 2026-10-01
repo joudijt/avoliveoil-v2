@@ -3,16 +3,21 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 import { FaStore } from 'react-icons/fa';
 import logo from '../../assets/logo/logo_theme.svg';
 import { NAV_LINKS, LANGS } from '../../data/content';
-import { langSwitchPath } from '../../utils/langSwitch';
+import { langSwitchTarget } from '../../lib/cmsLangSwitch';
+import { useCmsMenu } from '../../cms/boot';
+import { cmsAttr, cmsText } from '../../cms/editable';
 import { MADINAH_NAME, MADINAH_URL } from '../../config/site';
 import { SOCIAL_LINKS } from '../../data/social';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
+
+const NAV_LINK = 'font-light text-cream/70 transition-colors duration-300 hover:text-gold';
 
 export function Footer() {
   const { t } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
   const location = useLocation();
   const subPath = lang ? location.pathname.replace(new RegExp(`^/${lang}`), '') : '';
+  const cmsMenu = useCmsMenu(lang);
 
   return (
     <footer className="relative w-full overflow-hidden bg-olive-dark px-6 pb-10 pt-20 md:px-16 md:pt-28">
@@ -24,8 +29,8 @@ export function Footer() {
       */}
       <div dir="ltr" className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1.2fr]">
         <div>
-          <img src={logo} alt="Arabian Village" className="h-10 brightness-0 invert" />
-          <p className="mt-6 max-w-xs font-light leading-relaxed text-cream/60">
+          <img src={logo} alt={t('alt.logo')} {...cmsAttr({ alt: 'alt.logo' })} className="h-10 brightness-0 invert" />
+          <p {...cmsText('footer.tagline')} className="mt-6 max-w-xs font-light leading-relaxed text-cream/60">
             {t('footer.tagline')}
           </p>
           <div className="mt-6 flex gap-3">
@@ -55,7 +60,8 @@ export function Footer() {
             {LANGS.map((l) => (
               <Link
                 key={l.code}
-                to={langSwitchPath(lang, l.code, subPath)}
+                {...langSwitchTarget(lang, l.code, subPath)}
+                data-cms-lang-link={l.code}
                 className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
                   l.code === lang ? 'text-gold' : 'text-cream/60 hover:text-gold'
                 }`}
@@ -67,33 +73,35 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.navigate')}</p>
-          <ul className="mt-5 space-y-3">
+          <p {...cmsText('footer.navigate')} className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.navigate')}</p>
+          <ul data-cms-menu="footer" className="mt-5 space-y-3">
             {NAV_LINKS.map((link) => (
               <li key={link.key}>
-                <Link
-                  to={`/${lang}${link.path ? `/${link.path}` : ''}`}
-                  className="font-light text-cream/70 transition-colors duration-300 hover:text-gold"
-                >
+                <Link to={`/${lang}${link.path ? `/${link.path}` : ''}`} {...cmsText(`nav.${link.key}`)} className={NAV_LINK}>
                   {t(`nav.${link.key}`)}
                 </Link>
               </li>
             ))}
             {/* Footer-only link — Blog is intentionally not in the top Navbar. */}
             <li>
-              <Link
-                to={`/${lang}/blog`}
-                className="font-light text-cream/70 transition-colors duration-300 hover:text-gold"
-              >
+              <Link to={`/${lang}/blog`} {...cmsText('nav.blog')} className={NAV_LINK}>
                 {t('nav.blog')}
               </Link>
             </li>
+            {/* Pages the owner added in the control panel (full-load links). */}
+            {cmsMenu.footer.map((item) => (
+              <li key={item.slug}>
+                <a href={`/${lang}/${item.slug}`} data-cms-menu-item="" className={NAV_LINK}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.stayInTouch')}</p>
-          <p className="mt-5 font-light text-cream/60">{t('footer.newsletterText')}</p>
+          <p {...cmsText('footer.stayInTouch')} className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.stayInTouch')}</p>
+          <p {...cmsText('footer.newsletterText')} className="mt-5 font-light text-cream/60">{t('footer.newsletterText')}</p>
           <form
             className="mt-5 flex overflow-hidden rounded-full border border-cream/20 focus-within:border-gold"
             onSubmit={(e) => {
@@ -110,10 +118,12 @@ export function Footer() {
               name="email"
               type="email"
               placeholder={t('footer.emailPlaceholder') ?? undefined}
+              {...cmsAttr({ placeholder: 'footer.emailPlaceholder' })}
               className="w-full bg-transparent px-5 py-3 text-sm text-cream placeholder:text-cream/40 focus:outline-none"
             />
             <button
               type="submit"
+              {...cmsText('footer.join')}
               className="shrink-0 bg-gold px-5 py-3 text-sm font-medium text-olive-dark transition-colors duration-300 hover:bg-cream"
             >
               {t('footer.join')}
@@ -130,7 +140,7 @@ export function Footer() {
         suppressHydrationWarning
         className="relative z-10 mx-auto mt-16 max-w-6xl border-t border-cream/10 pt-6 text-center text-xs font-light text-cream/40 md:text-start"
       >
-        © {new Date().getFullYear()} Arabian Village. {t('footer.rights')}
+        © {new Date().getFullYear()} Arabian Village. <span {...cmsText('footer.rights')}>{t('footer.rights')}</span>
       </div>
     </footer>
   );

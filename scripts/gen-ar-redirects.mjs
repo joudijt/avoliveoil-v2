@@ -15,9 +15,12 @@
  * Arabic-only and point at the English article closest in topic (one, za'atar,
  * at the wild-thyme infused product page it was about).
  *
- * The block is placed right after the www -> apex rule (so the redirect target
- * is already https + apex) and before `RewriteRule ^$ /en/index.html`, i.e.
- * before every rule that could serve or rewrite an /ar path.
+ * The block lives between its own BEGIN/END markers, which public/.htaccess keeps
+ * right after the https and www -> apex redirects (so the redirect target is
+ * already https + apex) and before every rule that could serve or rewrite an /ar
+ * path. Only the text between the markers is ever replaced — the script does not
+ * anchor on any other rule, so the rest of .htaccess can be reorganised freely
+ * (docs/cms/CMS-SPEC.md §13.1).
  *
  * Usage:
  *   node scripts/gen-ar-redirects.mjs           rewrite the block in public/.htaccess
@@ -104,12 +107,12 @@ const block = [
   BEGIN,
   '  # Arabic was removed from the site on 2026-10-01. Every old /ar URL 301s to',
   '  # its closest English page. Do not hand-edit: change the table in the script',
-  '  # and re-run it.',
-  ...ARTICLES.map(([from, to]) => `  RewriteRule ^ar/blog/${from}/?$ /en/${to} [R=301,L]`),
-  '  RewriteRule ^ar/products/([a-z0-9-]+)/?$ /en/products/$1 [R=301,L]',
-  '  RewriteRule ^ar/(products|shop|why-us|contact|blog)/?$ /en/$1 [R=301,L]',
-  '  RewriteRule ^ar/?$ /en [R=301,L]',
-  '  RewriteRule ^ar/.*$ /en [R=301,L]',
+  '  # and re-run it. [NC]: /AR/... and /Ar/... redirect in one hop too.',
+  ...ARTICLES.map(([from, to]) => `  RewriteRule ^ar/blog/${from}/?$ /en/${to} [NC,R=301,L]`),
+  '  RewriteRule ^ar/products/([a-z0-9-]+)/?$ /en/products/$1 [NC,R=301,L]',
+  '  RewriteRule ^ar/(products|shop|why-us|contact|blog)/?$ /en/$1 [NC,R=301,L]',
+  '  RewriteRule ^ar/?$ /en [NC,R=301,L]',
+  '  RewriteRule ^ar/.*$ /en [NC,R=301,L]',
   `  ${END}`,
 ].join('\n');
 
@@ -117,24 +120,26 @@ const raw = readFileSync(HTACCESS, 'utf8');
 const eol = raw.includes('\r\n') ? '\r\n' : '\n';
 const text = raw.replace(/\r\n/g, '\n');
 
-let next;
 const b = text.indexOf(BEGIN);
-if (b !== -1) {
-  const lineStart = text.lastIndexOf('\n', b) + 1;
-  const e = text.indexOf(END, b);
-  if (e === -1) { console.error(`✗ ${BEGIN} without ${END}`); process.exit(1); }
-  next = text.slice(0, lineStart) + '  ' + block + text.slice(e + END.length);
-} else {
-  // Right after the www -> apex redirect, before the bare-domain rewrite.
-  const anchor = '  RewriteRule ^ https://avoliveoil.com%{REQUEST_URI} [R=301,L]\n';
-  const at = text.indexOf(anchor);
-  if (at === -1) { console.error('✗ could not find the www -> apex rule in public/.htaccess'); process.exit(1); }
-  const insert = at + anchor.length;
-  next = text.slice(0, insert) + '\n  ' + block + '\n' + text.slice(insert);
+const e = b === -1 ? -1 : text.indexOf(END, b);
+if (b === -1 || e === -1 || text.indexOf(BEGIN, b + 1) !== -1) {
+  console.error(
+    `✗ public/.htaccess must contain exactly one "${BEGIN}" … "${END}" pair ` +
+      '(placed right after the https and www -> apex redirects)'
+  );
+  process.exit(1);
 }
+const lineStart = text.lastIndexOf('\n', b) + 1;
+const next = text.slice(0, lineStart) + '  ' + block + text.slice(e + END.length);
 
-if (next.indexOf(BEGIN) > next.indexOf('RewriteRule ^$ /en/index.html')) {
-  console.error('✗ the ar-redirects block must come before RewriteRule ^$ /en/index.html');
+// Nothing may serve or rewrite a request before the block: every RewriteRule above
+// it must be an external redirect (the https and www -> apex ones).
+const early = next
+  .slice(0, next.indexOf(BEGIN))
+  .split('\n')
+  .filter((l) => /^\s*RewriteRule\b/.test(l) && !/\[(?:[^\]]*,)?R=30[18]\b/.test(l));
+if (early.length) {
+  console.error(`✗ the ar-redirects block must come before every non-redirect rule; above it:\n  ${early.join('\n  ')}`);
   process.exit(1);
 }
 

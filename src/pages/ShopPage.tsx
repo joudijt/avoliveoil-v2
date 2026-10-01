@@ -11,6 +11,7 @@ import { FAQ } from '../components/sections/FAQ';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { SHOPEE_URL, TIKTOK_SHOP_URL, MADINAH_NAME } from '../config/site';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
+import { cmsAttr, cmsText } from '../cms/editable';
 
 interface FaqItem {
   q: string;
@@ -63,15 +64,15 @@ export function ShopPage() {
       <SEO page="shop" breadcrumbs={[{ name: t('breadcrumb.shop'), path: 'shop' }]} faqs={faqItems} />
       <Navbar />
       <main className="bg-bg">
-        <Breadcrumbs items={[{ name: t('breadcrumb.shop'), path: 'shop' }]} />
+        <Breadcrumbs items={[{ name: t('breadcrumb.shop'), path: 'shop', cmsKey: 'breadcrumb.shop' }]} />
 
         <section className="px-6 pb-20 pt-10 text-center md:px-16 md:pb-28">
           <div className="mx-auto max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('shopPage.kicker')}</p>
-            <h1 className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
+            <p {...cmsText('shopPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('shopPage.kicker')}</p>
+            <h1 {...cmsText('shopPage.title')} className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
               {t('shopPage.title')}
             </h1>
-            <p className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p {...cmsText('shopPage.subtitle')} className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
               {t('shopPage.subtitle', { store: MADINAH_NAME })}
             </p>
           </div>
@@ -87,14 +88,15 @@ export function ShopPage() {
                 <div className={`flex h-16 w-16 items-center justify-center rounded-full text-cream ${iconBg}`}>
                   <Icon className="h-7 w-7" />
                 </div>
-                <h2 className="mt-6 text-xl text-olive-dark">{t(`shopPage.cards.${key}.title`)}</h2>
-                <p className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
+                <h2 {...cmsText(`shopPage.cards.${key}.title`)} className="mt-6 text-xl text-olive-dark">{t(`shopPage.cards.${key}.title`)}</h2>
+                <p {...cmsText(`shopPage.cards.${key}.desc`)} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
                   {t(`shopPage.cards.${key}.desc`)}
                 </p>
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  {...cmsText(`shopPage.cards.${key}.button`)}
                   className="mt-auto w-full rounded-full bg-gold px-7 py-3.5 text-sm font-medium tracking-wide text-olive-dark transition-colors duration-300 hover:bg-olive-dark hover:text-cream"
                 >
                   {t(`shopPage.cards.${key}.button`)}
@@ -106,15 +108,16 @@ export function ShopPage() {
 
         <section className="bg-[#E8E2D7] px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-3xl rounded-2xl bg-[#D6D2C4] p-10 text-center shadow-[0_25px_50px_rgba(46,58,36,0.18)] sm:p-14">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('purchasePath.kicker')}</p>
-            <h2 className="mx-auto mt-3 text-2xl text-olive-dark md:text-3xl">
+            <p {...cmsText('purchasePath.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('purchasePath.kicker')}</p>
+            <h2 {...cmsText('purchasePath.partnerCard.title')} className="mx-auto mt-3 text-2xl text-olive-dark md:text-3xl">
               {t('purchasePath.partnerCard.title')}
             </h2>
-            <p className="mx-auto mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('purchasePath.partnerCard.desc')} className="mx-auto mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
               {t('purchasePath.partnerCard.desc')}
             </p>
             <button
               onClick={() => setPartnerOpen(true)}
+              {...cmsText('purchasePath.partnerCard.button')}
               className="mt-8 rounded-full bg-gold px-7 py-3.5 text-sm font-medium tracking-wide text-olive-dark transition-colors duration-300 hover:bg-olive-dark hover:text-cream"
             >
               {t('purchasePath.partnerCard.button')}
@@ -122,15 +125,15 @@ export function ShopPage() {
           </div>
         </section>
 
-        <FAQ kicker={t('shopPage.faq.kicker')} title={t('shopPage.faq.title')} items={faqItems} />
+        <FAQ kicker={t('shopPage.faq.kicker')} title={t('shopPage.faq.title')} items={faqItems} keyPrefix="shopPage.faq" />
       </main>
 
       <Modal open={partnerOpen} onClose={() => setPartnerOpen(false)}>
         <div className="text-center">
-          <h3 className="font-display text-3xl leading-tight text-olive-dark md:text-4xl">
+          <h3 {...cmsText('purchasePath.partnerModal.title')} className="font-display text-3xl leading-tight text-olive-dark md:text-4xl">
             {t('purchasePath.partnerModal.title')}
           </h3>
-          <p className="mt-3 font-body text-brown/70">{t('purchasePath.partnerModal.sub')}</p>
+          <p {...cmsText('purchasePath.partnerModal.sub')} className="mt-3 font-body text-brown/70">{t('purchasePath.partnerModal.sub')}</p>
 
           <form
             className="mt-8 space-y-3 text-start"
@@ -149,16 +152,17 @@ export function ShopPage() {
             }}
           >
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <input name="name" placeholder={t('purchasePath.partnerModal.name') ?? undefined} className={inputClass} />
-              <input name="businessName" placeholder={t('purchasePath.partnerModal.businessName') ?? undefined} className={inputClass} />
+              <input name="name" placeholder={t('purchasePath.partnerModal.name') ?? undefined} {...cmsAttr({ placeholder: 'purchasePath.partnerModal.name' })} className={inputClass} />
+              <input name="businessName" placeholder={t('purchasePath.partnerModal.businessName') ?? undefined} {...cmsAttr({ placeholder: 'purchasePath.partnerModal.businessName' })} className={inputClass} />
             </div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <input name="phone" placeholder={t('purchasePath.partnerModal.phone') ?? undefined} className={inputClass} />
-              <input name="location" placeholder={t('purchasePath.partnerModal.location') ?? undefined} className={inputClass} />
+              <input name="phone" placeholder={t('purchasePath.partnerModal.phone') ?? undefined} {...cmsAttr({ placeholder: 'purchasePath.partnerModal.phone' })} className={inputClass} />
+              <input name="location" placeholder={t('purchasePath.partnerModal.location') ?? undefined} {...cmsAttr({ placeholder: 'purchasePath.partnerModal.location' })} className={inputClass} />
             </div>
-            <input name="volume" placeholder={t('purchasePath.partnerModal.volume') ?? undefined} className={inputClass} />
+            <input name="volume" placeholder={t('purchasePath.partnerModal.volume') ?? undefined} {...cmsAttr({ placeholder: 'purchasePath.partnerModal.volume' })} className={inputClass} />
             <button
               type="submit"
+              {...cmsText('purchasePath.partnerModal.submit')}
               className="w-full rounded-lg bg-gold py-4 text-sm font-semibold uppercase tracking-wider text-olive-dark transition-colors duration-300 hover:bg-olive-dark hover:text-cream"
             >
               {t('purchasePath.partnerModal.submit')}

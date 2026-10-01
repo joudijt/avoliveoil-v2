@@ -4,11 +4,13 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scrollToHash } from '../../hooks/useLenis';
 import { Picture } from '../ui/Picture';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: number }> }) {
+  const { t } = useTranslation();
   const imgRef = useRef<HTMLImageElement>(null);
   const current = useRef({ x: 0, y: 0 });
 
@@ -20,8 +22,8 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
   // and replayed — a visible flash above the fold on every load. useLayoutEffect
   // lands the reset before the first paint.
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     let raf: number;
     const tick = () => {
       current.current.x += (mouse.current.x - current.current.x) * 0.06;
@@ -42,7 +44,9 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
     <Picture
       ref={imgRef}
       name="bottle-cutout"
-      alt="Arabian Village Palestinian Olive Oil bottle"
+      alt={t('alt.heroBottle')}
+      cmsKey="home.hero.bottle"
+      cmsAltKey="alt.heroBottle"
       className="relative z-10 h-[40vh] w-auto object-contain sm:h-[52vh] md:h-[68vh]"
       sizes="(min-width: 768px) 14vh, 11vh"
       priority
@@ -71,8 +75,8 @@ export function Hero() {
   const bottleExitRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const handleMove = (e: MouseEvent) => {
       mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = (e.clientY / window.innerHeight) * 2 - 1;
@@ -82,8 +86,8 @@ export function Hero() {
   }, []);
 
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const words = headingRef.current?.querySelectorAll('span.word');
     const tl = gsap.timeline({ delay: 0.2 });
     if (words?.length) {
@@ -117,6 +121,7 @@ export function Hero() {
         name="OliveGroveSunsetHero"
         alt=""
         aria-hidden
+        cmsKey="home.hero.bg"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: '68% 62%' }}
         sizes="100vw"
@@ -157,7 +162,7 @@ export function Hero() {
 
       <div className="relative z-20 grid w-full grid-cols-1 items-center gap-5 px-6 pt-24 sm:gap-8 sm:pt-20 md:grid-cols-2 md:px-16 md:pt-0">
         <div className="pointer-events-none flex flex-col items-start text-start">
-          <h1 ref={headingRef} className="max-w-xl text-4xl leading-[1.1] text-olive-dark sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 ref={headingRef} data-cms-words="hero.headlineWords" className="max-w-xl text-4xl leading-[1.1] text-olive-dark sm:text-5xl md:text-6xl lg:text-7xl">
             {headlineWords.map((w, i) => (
               <span key={i} className="me-3 inline-block overflow-hidden align-bottom last:me-0">
                 <span className={`word inline-block ${w.gold ? 'text-gold' : ''}`}>{w.text}</span>
@@ -165,7 +170,7 @@ export function Hero() {
             ))}
           </h1>
 
-          <p ref={subRef} className="mt-4 max-w-md font-body text-base font-light tracking-wide text-brown/80 sm:mt-6 md:text-lg">
+          <p ref={subRef} {...cmsText('hero.sub')} className="mt-4 max-w-md font-body text-base font-light tracking-wide text-brown/80 sm:mt-6 md:text-lg">
             {t('hero.sub')}
           </p>
 
@@ -176,6 +181,7 @@ export function Hero() {
                 e.preventDefault();
                 scrollToHash('#shop');
               }}
+              {...cmsText('hero.shopNow')}
               className="rounded-full bg-olive-dark px-9 py-3.5 text-center text-sm font-medium tracking-wide text-cream transition-all duration-300 hover:bg-gold hover:shadow-lg hover:shadow-gold/30"
             >
               {t('hero.shopNow')}
@@ -186,6 +192,7 @@ export function Hero() {
                 e.preventDefault();
                 scrollToHash('#journey');
               }}
+              {...cmsText('hero.discoverStory')}
               className="rounded-full border border-olive-dark/25 px-9 py-3.5 text-center text-sm font-medium tracking-wide text-olive-dark transition-all duration-300 hover:border-gold hover:text-gold"
             >
               {t('hero.discoverStory')}
@@ -204,7 +211,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-8 left-1/2 z-20 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-olive-dark/40">
+      <div {...cmsText('hero.scroll')} className="pointer-events-none absolute bottom-8 left-1/2 z-20 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-olive-dark/40">
         {t('hero.scroll')}
       </div>
 

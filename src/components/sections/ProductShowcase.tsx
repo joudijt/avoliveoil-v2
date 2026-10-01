@@ -4,7 +4,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PRODUCTS } from '../../data/products';
 import { Picture } from '../ui/Picture';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,8 +28,8 @@ export function ProductShowcase() {
   // and replayed — a visible flash above the fold on every load. useLayoutEffect
   // lands the reset before the first paint.
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRefs.current,
@@ -51,8 +52,8 @@ export function ProductShowcase() {
   return (
     <section id="shop" ref={sectionRef} className="relative w-full bg-bg px-6 pb-10 pt-28 md:px-16 md:pb-14 md:pt-36">
       <div className="mx-auto max-w-6xl text-center">
-        <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('productShowcase.kicker')}</p>
-        <h2 className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">{t('productShowcase.title')}</h2>
+        <p {...cmsText('productShowcase.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('productShowcase.kicker')}</p>
+        <h2 {...cmsText('productShowcase.title')} className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">{t('productShowcase.title')}</h2>
 
         {/* Mobile: fixed 2-up grid, top-aligned so the equal-height bottles line up regardless of
             how many lines each description wraps to. Desktop keeps the bottom-aligned flex row,
@@ -88,15 +89,20 @@ export function ProductShowcase() {
                   <Picture
                     name="bottle-cutout"
                     alt={text.name}
+                    cmsKey={`home.showcase.${product.id}`}
+                    cmsAltKey={`productShowcase.products.${product.id}.name`}
                     className="relative h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:rotate-3"
                     style={{ filter: 'drop-shadow(0 20px 20px rgba(46,58,36,0.18))' }}
                     sizes={isCenter ? '(min-width: 1024px) 11vh, 7vh' : '(min-width: 1024px) 8vh, 7vh'}
                   />
                 </div>
-                <p className={`mt-4 text-sm text-olive-dark ${isCenter ? 'font-medium' : 'font-light text-olive-dark/70'}`}>
+                <p
+                  {...cmsText(`productShowcase.products.${product.id}.name`)}
+                  className={`mt-4 text-sm text-olive-dark ${isCenter ? 'font-medium' : 'font-light text-olive-dark/70'}`}
+                >
                   {text.name}
                 </p>
-                <p className="mt-1 max-w-full text-xs font-light text-brown/60 md:max-w-[160px]">{text.description}</p>
+                <p {...cmsText(`productShowcase.products.${product.id}.description`)} className="mt-1 max-w-full text-xs font-light text-brown/60 md:max-w-[160px]">{text.description}</p>
               </div>
             );
           })}

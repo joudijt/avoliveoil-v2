@@ -1,0 +1,4 @@
+# One-time setup / emergency reset files (spec §13.4). Created by hand, uploaded by FTP,
+# deleted by the server on use. Never commit them.
+*.token
+*.reset

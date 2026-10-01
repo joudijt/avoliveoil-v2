@@ -1,0 +1,102 @@
+{
+ "nav.home": {
+  "v": "Utama",
+  "t": "string",
+  "editable": true
+ },
+ "nav.products": {
+  "v": "Produk",
+  "t": "string",
+  "editable": true
+ },
+ "hero.sub": {
+  "v": "Diperah sejuk di Palestin",
+  "t": "string",
+  "editable": true
+ },
+ "hero.headlineWords": {
+  "v": [
+   {
+    "text": "Tulen",
+    "gold": false
+   },
+   {
+    "text": "Palestin",
+    "gold": true
+   },
+   {
+    "text": "Emas",
+    "gold": false
+   }
+  ],
+  "t": "words",
+  "editable": true
+ },
+ "hero.icon": {
+  "v": "leaf",
+  "t": "string",
+  "editable": false
+ },
+ "stats.customers.value": {
+  "v": 500000,
+  "t": "number",
+  "editable": true
+ },
+ "stats.customers.suffix": {
+  "v": "+",
+  "t": "string",
+  "editable": true
+ },
+ "about.seller": {
+  "v": "Dijual oleh {{store}}",
+  "vi": "Dijual oleh Berkat Madinah Store",
+  "t": "string",
+  "tokens": [
+   "store"
+  ],
+  "editable": true
+ },
+ "article.readingTime": {
+  "v": "{{count}} min read",
+  "t": "string",
+  "tokens": [
+   "count"
+  ],
+  "editable": true
+ },
+ "home.mixed": {
+  "v": "Campur bold",
+  "t": "string",
+  "editable": true
+ },
+ "contact.namePlaceholder": {
+  "v": "Nama anda",
+  "t": "string",
+  "editable": true
+ },
+ "alt.heroBg": {
+  "v": "Ladang zaitun",
+  "t": "string",
+  "editable": true
+ },
+ "seo.whyUs.title": {
+  "v": "Kenapa Pilih Kami | Arabian Village",
+  "t": "string",
+  "editable": true
+ },
+ "seo.whyUs.description": {
+  "v": "Kenapa minyak zaitun Arabian Village berbeza.",
+  "t": "string",
+  "editable": true
+ },
+ "faq.items.0.q": {
+  "v": "Adakah ia diperah sejuk?",
+  "t": "string",
+  "editable": true
+ },
+ "faq.items.0.a": {
+  "v": "Ya, perahan sejuk pertama.",
+  "t": "string",
+  "editable": true
+ }
+}

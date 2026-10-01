@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaAppleAlt, FaSnowflake, FaLeaf, FaTint, FaMedal } from 'react-icons/fa';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,8 +45,8 @@ export function Ingredients() {
   // and replayed — a visible flash above the fold on every load. useLayoutEffect
   // lands the reset before the first paint.
   useLayoutEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headingRef.current,
@@ -91,8 +92,8 @@ export function Ingredients() {
       />
 
       <div className="mx-auto max-w-6xl text-center">
-        <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('ingredients.kicker')}</p>
-        <h2 ref={headingRef} className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">
+        <p {...cmsText('ingredients.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('ingredients.kicker')}</p>
+        <h2 ref={headingRef} {...cmsText('ingredients.title')} className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">
           {t('ingredients.title')}
         </h2>
 
@@ -110,8 +111,8 @@ export function Ingredients() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/15 text-gold">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-6 text-xl text-olive-dark">{item.title}</h3>
-                <p className="mt-2 text-sm font-light leading-relaxed text-brown/70">{item.desc}</p>
+                <h3 {...cmsText(`ingredients.items.${i}.title`)} className="mt-6 text-xl text-olive-dark">{item.title}</h3>
+                <p {...cmsText(`ingredients.items.${i}.desc`)} className="mt-2 text-sm font-light leading-relaxed text-brown/70">{item.desc}</p>
               </div>
             );
           })}

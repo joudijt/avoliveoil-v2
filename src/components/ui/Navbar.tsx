@@ -1,13 +1,53 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
 import logo from '../../assets/logo/logo_theme.svg';
 import { NAV_LINKS, LANGS } from '../../data/content';
-import { langSwitchPath } from '../../utils/langSwitch';
+import { langSwitchTarget } from '../../lib/cmsLangSwitch';
+import { useCmsMenu } from '../../cms/boot';
+import { cmsAttr, cmsText } from '../../cms/editable';
+
+const DESKTOP_LINK =
+  'rounded-full px-4 py-1.5 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold';
+const MOBILE_LINK =
+  'w-full rounded-xl px-4 py-4 text-xl font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold';
 
 function linkPath(lang: string | undefined, path: string) {
   return `/${lang}${path ? `/${path}` : ''}`;
+}
+
+/**
+ * Owner-added header links (control panel, up to 3) can make the desktop pill wider
+ * than the row — Malay labels, a long page name. When the pill's natural width does
+ * not fit between the logo and the language switcher, the header switches to the
+ * menu button at that width (index.css, `data-cms-menu-compact`) instead of letting
+ * links collide. Never runs without CMS items, so the built-in header is untouched.
+ */
+function usePillOverflow(enabled: boolean) {
+  const rowRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const need = useRef(0);
+  const [on, setOn] = useState(false);
+
+  useLayoutEffect(() => {
+    const row = rowRef.current;
+    const nav = navRef.current;
+    if (!enabled || !row || !nav) return;
+    const check = () => {
+      // Measure only while the pill is laid out; when it is hidden keep the last width.
+      if (getComputedStyle(nav).display !== 'none') need.current = nav.scrollWidth;
+      const others = [...row.children].filter((el) => el !== nav).reduce((w, el) => w + (el as HTMLElement).offsetWidth, 0);
+      setOn(need.current > 0 && need.current + others + 32 > row.clientWidth);
+    };
+    check();
+    const ro = new ResizeObserver(check);
+    ro.observe(row);
+    ro.observe(nav);
+    return () => ro.disconnect();
+  }, [enabled]);
+
+  return { on, rowRef, navRef };
 }
 
 export function Navbar() {
@@ -19,6 +59,8 @@ export function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const langMenuRef = useRef<HTMLDivElement>(null);
+  const cmsMenu = useCmsMenu(lang);
+  const compact = usePillOverflow(cmsMenu.header.length > 0);
 
   // Path after the /:lang segment, e.g. "/en/products" -> "/products", "/en" -> "".
   // Used so the language switcher stays on the current page instead of
@@ -53,10 +95,16 @@ export function Navbar() {
   }, [mobileOpen]);
 
   const chromeIsLight = scrolled || mobileOpen;
+  // White controls only make sense over the home hero photo. Every other page
+  // (inner pages, CMS pages) starts on the cream background, where white text and
+  // a white menu icon were invisible until the visitor scrolled.
+  const onHomeHero = subPath === '' || subPath === '/';
+  const darkControls = chromeIsLight || !onHomeHero;
 
   return (
     <>
       <header
+        {...(compact.on ? { 'data-cms-menu-compact': '' } : {})}
         dir="ltr"
         className={`fixed inset-x-0 top-0 z-50 px-6 py-3 transition-all duration-500 sm:py-4 md:px-16 ${
           chromeIsLight ? 'bg-cream/80 shadow-sm backdrop-blur-md' : 'bg-transparent'
@@ -68,22 +116,27 @@ export function Navbar() {
           the logo/links/language switcher now line up with that column
           instead of spreading out to the raw viewport edges.
         */}
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
+        <div ref={compact.rowRef} className="mx-auto flex max-w-6xl items-center justify-between">
           <Link to={`/${lang}`} className="shrink-0">
-            <img src={logo} alt="Arabian Village" className="h-7 sm:h-9 md:h-10" />
+            <img src={logo} alt={t('alt.logo')} {...cmsAttr({ alt: 'alt.logo' })} className="h-7 sm:h-9 md:h-10" />
           </Link>
 
           <nav
+            ref={compact.navRef}
+            data-cms-menu="header"
             className="hidden items-center gap-2 rounded-full bg-[#333D24]/85 px-3 py-2 backdrop-blur-sm md:flex"
           >
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.key}
-                to={linkPath(lang, link.path)}
-                className="rounded-full px-4 py-1.5 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold"
-              >
+              <Link key={link.key} to={linkPath(lang, link.path)} {...cmsText(`nav.${link.key}`)} className={DESKTOP_LINK}>
                 {t(`nav.${link.key}`)}
               </Link>
+            ))}
+            {/* Pages the owner added in the control panel. Plain links (full load):
+                the server sends a CMS page together with its content. */}
+            {cmsMenu.header.map((item) => (
+              <a key={item.slug} href={`/${lang}/${item.slug}`} data-cms-menu-item="" className={DESKTOP_LINK}>
+                {item.label}
+              </a>
             ))}
           </nav>
 
@@ -95,7 +148,7 @@ export function Navbar() {
                 aria-expanded={langOpen}
                 aria-haspopup="listbox"
                 className={`flex items-center gap-1 text-xs font-medium tracking-wide transition-colors duration-300 hover:text-gold sm:gap-1.5 sm:text-sm ${
-                  chromeIsLight ? 'text-gold' : 'text-white'
+                  darkControls ? 'text-gold' : 'text-white'
                 }`}
               >
                 <span className="sm:hidden">{currentLang.short}</span>
@@ -113,7 +166,8 @@ export function Navbar() {
                   {LANGS.map((l) => (
                     <li key={l.code}>
                       <Link
-                        to={langSwitchPath(lang, l.code, subPath)}
+                        {...langSwitchTarget(lang, l.code, subPath)}
+                        data-cms-lang-link={l.code}
                         onClick={() => setLangOpen(false)}
                         className={`block px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${
                           l.code === lang ? 'text-gold' : 'text-olive-dark/80 hover:text-gold'
@@ -132,8 +186,10 @@ export function Navbar() {
               onClick={() => setMobileOpen((o) => !o)}
               aria-expanded={mobileOpen}
               aria-label={(mobileOpen ? t('nav.close') : t('nav.menu')) ?? undefined}
+              data-cms-menu-toggle=""
+              {...cmsAttr({ 'aria-label': mobileOpen ? 'nav.close' : 'nav.menu' })}
               className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-300 md:hidden ${
-                chromeIsLight ? 'text-olive-dark' : 'text-white'
+                darkControls ? 'text-olive-dark' : 'text-white'
               }`}
             >
               {mobileOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
@@ -150,19 +206,22 @@ export function Navbar() {
         instead of the viewport.
       */}
       <div
+        data-cms-menu-overlay=""
+        {...(compact.on ? { 'data-cms-menu-compact': '' } : {})}
         className={`fixed inset-0 z-40 bg-olive-dark transition-opacity duration-300 md:hidden ${
           mobileOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <nav className="flex flex-col items-start gap-1 px-6 pt-24 sm:pt-28">
+        <nav data-cms-menu="header-mobile" className="flex flex-col items-start gap-1 px-6 pt-24 sm:pt-28">
           {NAV_LINKS.map((link) => (
-            <Link
-              key={link.key}
-              to={linkPath(lang, link.path)}
-              className="w-full rounded-xl px-4 py-4 text-xl font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold"
-            >
+            <Link key={link.key} to={linkPath(lang, link.path)} {...cmsText(`nav.${link.key}`)} className={MOBILE_LINK}>
               {t(`nav.${link.key}`)}
             </Link>
+          ))}
+          {cmsMenu.header.map((item) => (
+            <a key={item.slug} href={`/${lang}/${item.slug}`} data-cms-menu-item="" className={MOBILE_LINK}>
+              {item.label}
+            </a>
           ))}
         </nav>
 
@@ -170,7 +229,8 @@ export function Navbar() {
           {LANGS.map((l) => (
             <Link
               key={l.code}
-              to={langSwitchPath(lang, l.code, subPath)}
+              {...langSwitchTarget(lang, l.code, subPath)}
+              data-cms-lang-link={l.code}
               className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
                 l.code === lang ? 'text-gold' : 'text-cream/70 hover:text-gold'
               }`}

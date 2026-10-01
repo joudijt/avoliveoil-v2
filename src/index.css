@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+/* The control panel (src/admin) has its own stylesheet and Tailwind sources; its
+   classes must not leak into the public CSS every visitor downloads. */
+@source not "./admin";
+
 /* Self-hosted fonts (PERF-1). This file used to open with an @import of
    Google's hosted stylesheet, which is a render-blocking round trip to two
    extra origins (one for the CSS, then another for the files) before a
@@ -141,4 +145,53 @@ button {
 ::selection {
   background: var(--color-gold);
   color: var(--color-cream);
+}
+
+/* CMS in-place edit session (main.tsx sets data-cms-static from boot.edit): the
+   owner edits a still page, so the decorative CSS loops (leaves, bobbing bottles,
+   floating cards) and transitions stop. Never present for visitors. */
+html[data-cms-static] *,
+html[data-cms-static] *::before,
+html[data-cms-static] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* Pages the owner adds to the header menu in the control panel (up to 3, spec
+   §13.6). The five built-in links already fill the desktop pill, so ONLY when CMS
+   items are present: below 1024px the header switches to the menu button (the
+   pill cannot hold eight links at that width), and from 1024px the links tighten.
+   Keyed on the markup markers so the server-rendered HTML and React agree; with
+   no CMS items nothing here matches and the header is exactly as designed. */
+nav[data-cms-menu='header']:has(> [data-cms-menu-item]) > a {
+  white-space: nowrap;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body:has(nav[data-cms-menu='header'] > [data-cms-menu-item]) nav[data-cms-menu='header'] {
+    display: none;
+  }
+  body:has(nav[data-cms-menu='header'] > [data-cms-menu-item]) [data-cms-menu-toggle] {
+    display: flex;
+  }
+  body:has(nav[data-cms-menu='header'] > [data-cms-menu-item]) [data-cms-menu-overlay] {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  nav[data-cms-menu='header']:has(> [data-cms-menu-item]) > a {
+    padding-inline: 0.625rem;
+  }
+}
+/* Wider screens where the pill still does not fit (Navbar usePillOverflow). */
+@media (min-width: 768px) {
+  header[data-cms-menu-compact] nav[data-cms-menu='header'] {
+    display: none;
+  }
+  header[data-cms-menu-compact] [data-cms-menu-toggle] {
+    display: flex;
+  }
+  [data-cms-menu-overlay][data-cms-menu-compact] {
+    display: block;
+  }
 }

@@ -4,7 +4,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaCrown } from 'react-icons/fa';
 import { STORE } from '../../config/site';
-import { isPrerender } from '../../lib/prerender';
+import { isStaticRender } from '../../lib/prerender';
+import { cmsNum, cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +24,19 @@ interface StatItem {
   fromFoundedYear?: boolean;
 }
 
-function Counter({ value, suffix }: { value: number; suffix: string }) {
+function Counter({
+  value,
+  suffix,
+  cmsKey,
+  numberEditable,
+}: {
+  value: number;
+  suffix: string;
+  /** i18n prefix of this tile, e.g. `statistics.items.1`. */
+  cmsKey: string;
+  /** False for the years-trading tile: its number is computed, not copy. */
+  numberEditable: boolean;
+}) {
   /**
    * Seeded with the REAL value, not 0.
    *
@@ -41,8 +54,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    // No gsap during the prerender snapshot — see src/lib/prerender.ts.
-    if (isPrerender()) return;
+    // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
+    if (isStaticRender()) return;
     const proxy = { v: 0 };
     const st = ScrollTrigger.create({
       trigger: ref.current,
@@ -69,9 +82,13 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
        new Date().getFullYear(), so a page prerendered on 31 Dec and read on
        1 Jan differs by one — a text mismatch that would otherwise throw away
        the whole hydrated tree for a cosmetic difference. */
+    /* Number and suffix sit in their own inline spans so the CMS can replace each
+       (spec §15: serve.php formats the number like toLocaleString('en-US')). The
+       locale is pinned for the same reason: the snapshot and every visitor must
+       group digits identically to the server. */
     <span ref={ref} suppressHydrationWarning className="text-5xl text-cream md:text-6xl">
-      {display.toLocaleString()}
-      {suffix}
+      <span {...(numberEditable ? cmsNum(`${cmsKey}.value`) : {})}>{display.toLocaleString('en-US')}</span>
+      <span {...cmsText(`${cmsKey}.suffix`)}>{suffix}</span>
     </span>
   );
 }
@@ -83,13 +100,15 @@ export function Statistics() {
   return (
     <section className="relative w-full bg-olive-dark px-6 pb-12 pt-28 md:px-16 md:pb-16 md:pt-32">
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 text-center sm:grid-cols-2 md:grid-cols-4">
-        {stats.map((s) => (
+        {stats.map((s, i) => (
           <div key={s.label}>
             <Counter
               value={s.fromFoundedYear ? YEARS_TRADING : s.value}
               suffix={s.suffix}
+              cmsKey={`statistics.items.${i}`}
+              numberEditable={!s.fromFoundedYear}
             />
-            <p className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{s.label}</p>
+            <p {...cmsText(`statistics.items.${i}.label`)} className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{s.label}</p>
           </div>
         ))}
 
@@ -97,7 +116,7 @@ export function Statistics() {
           <div className="flex justify-center text-gold">
             <FaCrown className="h-10 w-10 md:h-12 md:w-12" />
           </div>
-          <p className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{t('statistics.premiumQuality')}</p>
+          <p {...cmsText('statistics.premiumQuality')} className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{t('statistics.premiumQuality')}</p>
         </div>
       </div>
     </section>

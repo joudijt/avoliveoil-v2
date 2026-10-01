@@ -784,5 +784,13 @@
       }
     },
     "availableBadge": "Kini di {{store}}"
+  },
+  "alt": {
+    "logo": "Arabian Village",
+    "heroBottle": "Botol Minyak Zaitun Palestin Arabian Village",
+    "bottlePour": "Botol Minyak Zaitun Palestin Arabian Village, terbuka dan sedang dituang",
+    "storyWoman": "Wanita memegang sebotol minyak zaitun Palestin organik Arabian Village",
+    "productsHero": "Botol 500ml Minyak Zaitun Palestin Organik Arabian Village, perahan sejuk pertama",
+    "whyUsField": "Botol minyak zaitun Arabian Village di tengah kebun zaitun Palestin"
   }
 }

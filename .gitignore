@@ -31,3 +31,12 @@ __pycache__/
 *.pyc
 docs/press/round-4/gen/
 docs/press/round-5/gen/
+
+# CMS local Apache harness docroot copy
+.harness-root/
+.build.lock/
+
+# CMS per-build deploy self-test token (scripts/cms-build-data.mjs writes it, ftp-deploy.py reads it)
+.cms-selftest
+# ftp-deploy.py keeps the previous live .htaccess here for rollback
+.htaccess.prev-*

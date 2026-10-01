@@ -784,5 +784,13 @@
       }
     },
     "availableBadge": "Now at {{store}}"
+  },
+  "alt": {
+    "logo": "Arabian Village",
+    "heroBottle": "Arabian Village Palestinian Olive Oil bottle",
+    "bottlePour": "Arabian Village Palestinian Olive Oil bottle, open and pouring",
+    "storyWoman": "Woman holding a bottle of Arabian Village organic Palestinian olive oil",
+    "productsHero": "Arabian Village Organic Palestinian Olive Oil 500ml bottle, first cold pressed",
+    "whyUsField": "Arabian Village olive oil bottle among Palestinian olive groves in the field"
   }
 }
