@@ -268,6 +268,31 @@ await classAudit(f, 'main', 'canvas');
 const h1 = byType('heading')[0];
 const sec2 = DOC.sections[1];
 
+// no room for a navbar on the canvas (it has none)
+const crumbTop = await f.evaluate(() => document.querySelector('nav[aria-label="Breadcrumb"]').getBoundingClientRect().top + window.scrollY);
+check(crumbTop < 50, 'canvas: breadcrumb starts at the top (no fixed-navbar padding)', crumbTop);
+
+// a selection made by the shell scrolls into view (iframe sized to content → the shell page scrolls)
+await page.evaluate(() => window.scrollTo(0, 0));
+const far = DOC.sections[8].columns[0].widgets[6];
+await send({ type: 'cms:select', id: far.id });
+// smooth scrolling: wait until the position stops changing
+for (let last = -1, i = 0; i < 40; i++) {
+  await sleep(150);
+  const y = await page.evaluate(() => window.scrollY);
+  if (y === last && y > 0) break;
+  last = y;
+}
+const inView = await page.evaluate(async (id) => {
+  const fr = document.getElementById('f');
+  const el = fr.contentDocument.querySelector(`[data-node-id="${id}"]`);
+  const top = fr.getBoundingClientRect().top + el.getBoundingClientRect().top;
+  return { top, bottom: top + el.getBoundingClientRect().height, vh: innerHeight, scrollY };
+}, far.id);
+check(inView.scrollY > 0 && inView.top >= 0 && inView.bottom <= inView.vh + 1, 'cms:select from the shell scrolls the node into view', inView);
+await page.evaluate(() => window.scrollTo(0, 0));
+await send({ type: 'cms:select', id: null });
+
 // spacing: index.css zeroes p/h margins outside any layer, so blocks must space with gap/padding
 const gaps = await f.evaluate(() => {
   const r = (el) => el.getBoundingClientRect();
@@ -618,6 +643,14 @@ for (const lang of ['en', 'ms']) {
   check(title === payloadFor(DOC, SLUG, lang).seo.title, `public ${lang}: <title> from ResolvedSeo`, title);
   const htmlLang = await page.$eval('html', (el) => el.getAttribute('lang'));
   check(htmlLang === lang, `public ${lang}: <html lang>`, htmlLang);
+  const crumb = await page.$eval('nav[aria-label="Breadcrumb"]', (el) => el.getBoundingClientRect().top);
+  check(crumb >= 100, `public ${lang}: breadcrumb clears the fixed navbar`, crumb);
+  if (lang === 'ms') {
+    const enLinks = await page.$$eval('[data-cms-page-root] a[href]', (as) => as.map((a) => a.getAttribute('href')).filter((h) => /^\/en(\/|$|[?#])/.test(h)));
+    check(enLinks.length === 0, 'public ms: internal /en links rewritten to /ms (button, image link, rich text)', enLinks);
+    const ms = await page.$$eval('[data-cms-page-root] a[href]', (as) => as.map((a) => a.getAttribute('href')));
+    check(['/ms/why-us', '/ms/shop', '/ms/contact', '/ms/products'].every((h) => ms.includes(h)), 'public ms: rewritten targets present', ms);
+  }
   await classAudit(page, '[data-cms-page-root]', `public ${lang}`);
   await page.evaluate(async () => {
     for (let y = 0; y < document.body.scrollHeight; y += 600) {

@@ -120,7 +120,7 @@ export function buildDoc() {
             w('text', {
               html: L(
                 '<p>We bottle in <em>small batches</em> so every case is fresh. <a href="/en/products">See the range</a> or <a href="https://madinah.com.my/en/">visit the store</a>.</p><ul><li>Minimum order 12 bottles</li><li>Mixed cases welcome</li></ul><h3>Storage</h3><blockquote>Keep away from light and heat.</blockquote><script>alert(1)</script><p onclick="x()">Clean <span style="color:red">styles</span> removed.</p>',
-                '<p>Kami membotol dalam <em>kelompok kecil</em>. <a href="/ms/products">Lihat produk</a>.</p><ul><li>Pesanan minimum 12 botol</li></ul>'
+                '<p>Kami membotol dalam <em>kelompok kecil</em>. <a href="/ms/products">Lihat produk</a> atau <a href="/en/contact">hubungi kami</a>.</p><ul><li>Pesanan minimum 12 botol</li></ul>'
               ),
               align: 'start',
               color: 'default',

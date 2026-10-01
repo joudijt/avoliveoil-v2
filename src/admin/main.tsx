@@ -1,4 +1,12 @@
-// STUB — owned by builder B4 (admin app). Replaced by the real implementation.
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import './admin.css';
+// must load before the router mounts: its Back-button listener has to run before React Router's
+import './lib/navGuard';
+import { AdminApp } from './App';
 
-createRoot(document.getElementById('admin-root')!).render(<p>Control panel</p>);
+createRoot(document.getElementById('admin-root')!).render(
+  <StrictMode>
+    <AdminApp />
+  </StrictMode>
+);

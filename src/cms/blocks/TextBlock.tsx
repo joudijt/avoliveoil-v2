@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { TextWidget } from '../contracts';
-import { sanitizeRichText } from '../sanitize';
+import { localizeHtmlLinks, sanitizeRichText } from '../sanitize';
 import { ALIGN_TEXT, TEXT, cx } from './classes';
 import { fieldAttr, useBlockEnv } from './context';
 import { placeholderAttr, shown } from './text';
@@ -10,7 +10,7 @@ export function TextBlock({ w }: { w: TextWidget }) {
   const s = w.settings;
   const raw = shown(env, s.html, '<p>Text — double-click to type</p>');
   // Only sanitised markup ever reaches dangerouslySetInnerHTML (the server cleans it again on publish).
-  const html = useMemo(() => sanitizeRichText(raw.text), [raw.text]);
+  const html = useMemo(() => localizeHtmlLinks(sanitizeRichText(raw.text), env.lang), [raw.text, env.lang]);
   if (!html) return null;
   return (
     <div

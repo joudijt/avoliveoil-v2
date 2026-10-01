@@ -152,3 +152,19 @@ export function richTextToPlain(html: string): string {
     .replace(/\s+/g, ' ')
     .trim();
 }
+
+/**
+ * A site-internal English link on a Malay page points at the Malay page instead
+ * (`/en` → `/ms`, `/en/contact` → `/ms/contact`); owners type one link for both
+ * languages. Anything else — external, mailto, already /ms — is left as it is.
+ */
+export function localizeHref(href: string, lang: 'en' | 'ms'): string {
+  if (lang !== 'ms') return href;
+  return /^\/en(?=$|[/?#])/.test(href) ? `/ms${href.slice(3)}` : href;
+}
+
+/** Same rewrite for every href="/en…" inside sanitised rich text. */
+export function localizeHtmlLinks(html: string, lang: 'en' | 'ms'): string {
+  if (lang !== 'ms') return html;
+  return html.replace(/href="\/en(?=["/?#])/g, 'href="/ms');
+}

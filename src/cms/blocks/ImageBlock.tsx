@@ -1,6 +1,6 @@
 import type { ImageWidget } from '../contracts';
 import { mediaFor, sizesForSpan, srcSetOf, widestUrl } from '../media';
-import { isExternalHref, safeHref } from '../sanitize';
+import { isExternalHref, localizeHref, safeHref } from '../sanitize';
 import { ALIGN_TEXT, IMAGE, cx } from './classes';
 import { fieldAttr, useBlockEnv } from './context';
 import { CanvasEmpty } from './CanvasEmpty';
@@ -16,7 +16,8 @@ export function ImageBlock({ w }: { w: ImageWidget }) {
   const maxWidth = s.maxWidth > 0 ? Math.round(s.maxWidth) : 0;
   const sizes = maxWidth ? `(min-width: ${maxWidth + 96}px) ${maxWidth}px, ${sizesForSpan(env.span, env.full)}` : sizesForSpan(env.span, env.full);
   const caption = shown(env, s.caption, '');
-  const href = safeHref(s.href);
+  const safe = safeHref(s.href);
+  const href = safe ? localizeHref(safe, env.lang) : null;
 
   const img = (
     <img

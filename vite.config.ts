@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from 'node:url'
@@ -64,9 +64,25 @@ function chunkFor(id: string): string | undefined {
   return undefined
 }
 
+/**
+ * Dev server only: production sends /admin/* to admin.html from .htaccess, the
+ * dev server would otherwise fall back to index.html (the public site).
+ */
+function adminDevRewrite(): Plugin {
+  return {
+    name: 'avo-admin-dev-rewrite',
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        if (req.url && /^\/admin(\/|\?|$)/.test(req.url)) req.url = '/admin.html'
+        next()
+      })
+    },
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), adminDevRewrite()],
   server: {
     port: 5180,
     // The PHP API (server/, run locally with `php -S 127.0.0.1:8091`) and its uploads.

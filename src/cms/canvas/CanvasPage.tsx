@@ -49,6 +49,10 @@ export default function CanvasPage() {
   const rootRef = useRef<HTMLDivElement>(null);
   const dataRef = useRef<CanvasData | null>(null);
   dataRef.current = data;
+  const selectedRef = useRef<string | null>(null);
+  selectedRef.current = selectedId;
+  /** a selection made by the SHELL (panel click, new widget inserted) that should be brought into view */
+  const scrollPending = useRef<string | null>(null);
 
   // Canvas-only stylesheet + marker; removed again if the route ever unmounts.
   useLayoutEffect(() => {
@@ -80,10 +84,12 @@ export default function CanvasPage() {
           const lang: CmsLang = (CMS_LANGS as readonly string[]).includes(msg.lang) ? msg.lang : 'en';
           if (i18n.language !== lang) void i18n.changeLanguage(lang);
           setData({ doc: msg.doc, lang, media: msg.media ?? {}, forms: msg.forms ?? {} });
+          if (msg.selectedId && msg.selectedId !== selectedRef.current) scrollPending.current = msg.selectedId;
           setSelectedId(msg.selectedId ?? null);
           break;
         }
         case 'cms:select':
+          if (msg.id) scrollPending.current = msg.id;
           setSelectedId(msg.id ?? null);
           break;
         case 'cms:drag-start':
@@ -118,6 +124,17 @@ export default function CanvasPage() {
     report();
     return () => ro.disconnect();
   }, []);
+
+  // After the doc / selection has rendered: scroll a shell-selected node into view. In an
+  // iframe sized to its content this scrolls the admin's canvas pane (same origin).
+  useEffect(() => {
+    const id = scrollPending.current;
+    if (!id) return;
+    const el = document.querySelector(`[data-node-id="${CSS.escape(id)}"]`);
+    if (!el) return;
+    scrollPending.current = null;
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [data, selectedId]);
 
   const onSelect = useCallback((id: string | null) => {
     setSelectedId(id);

@@ -1,6 +1,6 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import type { ButtonWidget, WhatsappWidget } from '../contracts';
-import { isExternalHref, safeHref } from '../sanitize';
+import { isExternalHref, localizeHref, safeHref } from '../sanitize';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 import { ALIGN_FLEX, BUTTON, cx } from './classes';
 import { fieldAttr, useBlockEnv } from './context';
@@ -11,7 +11,7 @@ export function ButtonBlock({ w }: { w: ButtonWidget }) {
   const s = w.settings;
   const label = shown(env, s.label, 'Button');
   if (!label.text) return null;
-  const href = safeHref(s.href) ?? '#';
+  const href = localizeHref(safeHref(s.href) ?? '#', env.lang);
   const newTab = s.newTab || isExternalHref(href);
   const style = BUTTON.style[env.tone][s.style] ?? BUTTON.style[env.tone].primary;
   return (

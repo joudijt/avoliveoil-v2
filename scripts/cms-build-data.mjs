@@ -412,7 +412,13 @@ const SPOTS = {
   'whyus.field': { label: 'Why us › Field photo', needsAlpha: false, image: 'AVOliveOilInTheField' },
 };
 const imageSpots = Object.fromEntries(
-  Object.entries(SPOTS).map(([spot, { image, ...rest }]) => [spot, { ...rest, default: stableImage(image) }]),
+  Object.entries(SPOTS).map(([spot, { image, ...rest }]) => {
+    const img = stableImage(image);
+    // `url` = the widest stable variant (stableImage has copied every variant to dist/cms-assets/),
+    // so the admin can show the built-in photo without knowing the variant list.
+    const widest = img.variants.reduce((a, b) => (b.w > a.w ? b : a));
+    return [spot, { ...rest, default: { ...img, url: widest.url } }];
+  }),
 );
 const listedSpots = Object.values(PAGES).flatMap((p) => p.images);
 const unlisted = Object.keys(imageSpots).filter((s) => !listedSpots.includes(s));

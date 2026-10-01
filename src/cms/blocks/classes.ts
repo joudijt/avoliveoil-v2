@@ -19,6 +19,8 @@ export type Tone = 'light' | 'dark';
 
 export const PAGE = {
   crumbsWrap: 'px-6 pt-28 md:px-16 md:pt-32',
+  /** canvas: no fixed navbar above the content, so no room is kept for it */
+  crumbsWrapCanvas: 'px-6 pt-8 md:px-16 md:pt-10',
   crumbsNav: 'mx-auto max-w-6xl text-sm text-brown/60',
   crumbsList: 'flex flex-wrap items-center gap-2',
   crumbsItem: 'flex items-center gap-2',

@@ -1,0 +1,221 @@
+@import 'tailwindcss' source(none);
+@source "./";
+@source "../cms";
+
+/* Same self-hosted fonts as the public site (src/index.css), declared here because
+   the admin is a separate Vite entry and must never import the public stylesheet. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/playfair-display-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/playfair-display-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+@theme {
+  --color-bg: #f7f4ed;
+  --color-cream: #fffdf8;
+  --color-olive: #556b2f;
+  --color-olive-dark: #2e3a24;
+  --color-gold: #b88a2a;
+  --color-brown: #6b4f32;
+
+  /* admin-only neutrals, tuned to sit next to the olive/cream brand */
+  --color-ink: #26301e;
+  --color-muted: #6b705f;
+  --color-faint: #9a9d8f;
+  --color-line: #e5dfd0;
+  --color-line-strong: #d4ccb8;
+  --color-sand: #f1ecdf;
+  --color-mist: #eef0e6;
+  --color-danger: #b3402e;
+  --color-danger-soft: #fbece8;
+  --color-ok: #3b7a3a;
+  --color-ok-soft: #e9f3e4;
+  --color-warn: #a86a12;
+  --color-warn-soft: #fbf1dc;
+  --color-info: #3c6382;
+  --color-info-soft: #e7f0f6;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(46 58 36 / 0.05), 0 1px 1px rgb(46 58 36 / 0.03);
+  --shadow-pop: 0 12px 32px -8px rgb(38 48 30 / 0.22), 0 2px 6px rgb(38 48 30 / 0.08);
+}
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#admin-root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+/* Keyboard focus must always be visible (quality bar), mouse focus stays quiet. */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+/* text fields already show an olive ring on focus; a second gold outline looks heavy */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[contenteditable]:focus-visible {
+  outline: none;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Thin, warm scrollbars inside panels */
+.avo-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+/* Rich-text editor and preview content */
+.avo-rich {
+  line-height: 1.6;
+}
+.avo-rich p {
+  margin: 0 0 0.6em;
+}
+.avo-rich h2 {
+  font-family: var(--font-display);
+  font-size: 1.35em;
+  margin: 0.4em 0 0.3em;
+}
+.avo-rich h3 {
+  font-family: var(--font-display);
+  font-size: 1.15em;
+  margin: 0.4em 0 0.3em;
+}
+.avo-rich ul,
+.avo-rich ol {
+  margin: 0 0 0.6em;
+  padding-left: 1.3em;
+}
+.avo-rich ul {
+  list-style: disc;
+}
+.avo-rich ol {
+  list-style: decimal;
+}
+.avo-rich a {
+  color: var(--color-olive);
+  text-decoration: underline;
+}
+.avo-rich blockquote {
+  border-left: 3px solid var(--color-gold);
+  padding-left: 0.8em;
+  color: var(--color-muted);
+}
+
+@keyframes avo-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes avo-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes avo-slide {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.avo-in {
+  animation: avo-in 0.18s ease-out both;
+}
+.avo-fade {
+  animation: avo-fade 0.15s ease-out both;
+}
+.avo-slide {
+  animation: avo-slide 0.2s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .avo-in,
+  .avo-fade,
+  .avo-slide {
+    animation: none;
+  }
+}
+
+/* Checkerboard behind images so transparency is visible */
+.avo-checker {
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #ece7da 25%, transparent 25%),
+    linear-gradient(-45deg, #ece7da 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ece7da 75%),
+    linear-gradient(-45deg, transparent 75%, #ece7da 75%);
+  background-size: 14px 14px;
+  background-position:
+    0 0,
+    0 7px,
+    7px -7px,
+    -7px 0;
+}

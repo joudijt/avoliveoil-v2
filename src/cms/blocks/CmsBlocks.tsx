@@ -36,7 +36,7 @@ export function CmsBlocks({ doc, lang, media, forms, mode = 'public', pageId, re
 
   return (
     <BlockContext.Provider value={env}>
-      <div className={PAGE.crumbsWrap}>
+      <div className={mode === 'canvas' ? PAGE.crumbsWrapCanvas : PAGE.crumbsWrap}>
         <nav aria-label={ui(lang, 'breadcrumb')} className={PAGE.crumbsNav}>
           <ol className={PAGE.crumbsList}>
             <li>
