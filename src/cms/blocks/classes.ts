@@ -143,7 +143,8 @@ export const HEADING = {
       white: 'text-cream',
     },
   } satisfies Record<Tone, Record<TextColor, string>>,
-  kicker: 'text-xs uppercase tracking-[0.35em] text-gold',
+  // #8a6516 on light (4.8:1); the site gold is 2.8:1 on cream — too low for 12 px text
+  kicker: { light: 'text-xs uppercase tracking-[0.35em] text-[#8a6516]', dark: 'text-xs uppercase tracking-[0.35em] text-[#e3b856]' } satisfies Record<Tone, string>,
   /** kicker + heading: spaced with gap, because index.css zeroes h1–h4 / p margins outside any layer */
   withKicker: 'flex flex-col gap-3',
   wrap: 'min-w-0 break-words',
@@ -317,17 +318,19 @@ export const FAQ = {
 export const PRODUCTS = {
   grid: {
     2: 'grid grid-cols-1 gap-6 sm:grid-cols-2',
-    3: 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3',
-    4: 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4',
+    // 3–4 columns: two bottles side by side on phones too (one per row made 7 bottles ~3,000 px tall)
+    3: 'grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3',
+    4: 'grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4',
   } as Record<number, string>,
   card:
-    'group flex h-full flex-col rounded-2xl border border-olive-dark/10 bg-cream p-6 text-start transition-shadow duration-300 ' +
+    'group flex h-full flex-col rounded-2xl border border-olive-dark/10 bg-cream p-3 text-start sm:p-6 transition-shadow duration-300 ' +
     'hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
-  imgWrap: 'flex h-60 items-end justify-center rounded-xl bg-bg pt-6',
+  imgWrap: 'flex h-40 items-end justify-center rounded-xl bg-bg pt-4 sm:h-60 sm:pt-6',
   img: 'h-full w-auto object-contain drop-shadow-[0_20px_20px_rgba(46,58,36,0.18)] transition-transform duration-500 group-hover:-translate-y-1',
-  name: 'pt-5 text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold',
-  tagline: 'pt-2 font-body text-sm font-light leading-relaxed text-brown/70',
-  cta: 'mt-auto pt-4 text-xs font-medium uppercase tracking-[0.2em] text-gold',
+  name: 'min-w-0 break-words pt-3 text-base leading-snug sm:pt-5 sm:text-lg text-olive-dark transition-colors duration-300 group-hover:text-gold',
+  tagline: 'pt-1.5 font-body text-xs font-light sm:pt-2 sm:text-sm leading-relaxed text-brown/70',
+  // #8a6516: 4.8:1 on cream (the site gold is 3.1:1)
+  cta: 'mt-auto pt-3 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#8a6516] sm:pt-4 sm:text-xs sm:tracking-[0.2em]',
 } as const;
 
 // ---------------------------------------------------------------- form
@@ -501,8 +504,9 @@ export const HERO = {
     alone: 'flex min-w-0 max-w-3xl flex-col items-start gap-5 text-start lg:col-span-12',
   },
   kicker: {
-    dark: 'inline-flex items-center gap-2 rounded-full border border-[#e3b856]/40 bg-[#e3b856]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e3b856]',
-    light: 'inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#8a6516]',
+    // rounded-2xl below md: the kicker wraps to 2–3 lines on phones and a pill turns into a lozenge
+    dark: 'inline-flex items-center gap-2 rounded-2xl border border-[#e3b856]/40 bg-[#e3b856]/10 px-4 py-1.5 text-xs font-semibold uppercase leading-relaxed tracking-[0.16em] text-[#e3b856] md:rounded-full md:tracking-[0.2em]',
+    light: 'inline-flex items-center gap-2 rounded-2xl border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase leading-relaxed tracking-[0.16em] text-[#8a6516] md:rounded-full md:tracking-[0.2em]',
   },
   title: {
     dark: 'min-w-0 max-w-full break-words font-display text-[2.2rem] leading-[1.08] text-cream sm:text-5xl lg:text-[3.6rem]',
@@ -579,7 +583,7 @@ export const STEPS = {
   /** row variant on phones: number left, title beside it */
   rowNum: 'row-span-2',
   rowTitle: 'pt-2.5 md:pt-0',
-  num: 'relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold font-display text-xl text-[#1f2818] shadow-[0_8px_20px_-8px_rgba(184,138,42,0.8)]',
+  num: 'relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold font-display text-xl lining-nums text-[#1f2818] shadow-[0_8px_20px_-8px_rgba(184,138,42,0.8)]',
   /** photo beside: a vertical timeline */
   split: 'grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-14',
   mediaCol: 'min-w-0 lg:col-span-5',
@@ -692,8 +696,9 @@ export const BADGES = {
   },
   icon: 'h-7 w-7',
   title: {
-    light: 'min-w-0 max-w-full break-words font-display text-base leading-snug text-olive-dark md:text-lg',
-    dark: 'min-w-0 max-w-full break-words font-display text-base leading-snug text-cream md:text-lg',
+    // lining-nums: Playfair's default old-style digits made "500,000+" look smaller than its words
+    light: 'min-w-0 max-w-full break-words font-display text-base leading-snug lining-nums text-olive-dark md:text-lg',
+    dark: 'min-w-0 max-w-full break-words font-display text-base leading-snug lining-nums text-cream md:text-lg',
   },
   text: {
     light: 'font-body text-xs font-light leading-relaxed text-brown/85 md:text-sm',
@@ -707,8 +712,8 @@ export const REVIEWS = {
   stats: 'mb-10 flex flex-wrap justify-center gap-x-14 gap-y-6 md:mb-14',
   stat: 'flex flex-col items-center text-center',
   statValue: {
-    light: 'font-display text-4xl leading-none text-olive-dark md:text-5xl',
-    dark: 'font-display text-4xl leading-none text-[#e3b856] md:text-5xl',
+    light: 'font-display text-4xl leading-none lining-nums text-olive-dark md:text-5xl',
+    dark: 'font-display text-4xl leading-none lining-nums text-[#e3b856] md:text-5xl',
   },
   statLabel: { light: 'pt-2 font-body text-sm font-light text-brown/85', dark: 'pt-2 font-body text-sm font-light text-cream/75' },
   grid: {
@@ -736,8 +741,11 @@ export const STORES = {
   grid: {
     1: 'mx-auto grid max-w-md grid-cols-1 gap-5',
     2: 'mx-auto grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2',
-    3: 'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3',
+    // 3 cards: 2 + 1 centred on tablets (a grid left the third card stranded on the left)
+    3: 'flex flex-wrap justify-center gap-5',
   } as Record<number, string>,
+  /** width of each card of the 3-card row */
+  cell: { 1: '', 2: '', 3: 'w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc((100%-2.5rem)/3)]' } as Record<number, string>,
   card: {
     light: `flex h-full flex-col items-center rounded-2xl border bg-cream p-8 text-center ${SOFT_SHADOW} ${LIFT}`,
     dark: `flex h-full flex-col items-center rounded-2xl border bg-cream/[0.06] p-8 text-center ${LIFT}`,
@@ -768,28 +776,32 @@ export const STORES = {
  * an edge-to-edge dark hero/band (marker `data-cms-dark-top`, emitted by the blocks)
  * and the visitor has not scrolled (`data-scrolled`, set by React). Pure CSS, so the
  * template header serve.php sends is already right before any JavaScript runs.
+ * Never while the address has a fragment that matches (`:target`): a page opened at
+ * #cms-form / #form-sent-… / #form-error-… (the no-JS form round trip) is scrolled
+ * down before any script could set `data-scrolled`, and a see-through header would
+ * lie over the form card.
  */
 export const LP_HEADER = {
   root:
     'fixed inset-x-0 top-0 z-50 bg-cream/95 px-4 py-3 shadow-[0_1px_0_rgba(46,58,36,0.08),0_10px_30px_-18px_rgba(46,58,36,0.45)] backdrop-blur-md ' +
     'transition-[background-color,box-shadow] duration-300 sm:px-6 sm:py-4 md:px-16 ' +
-    '[body:has([data-cms-dark-top])_&:not([data-scrolled])]:bg-transparent [body:has([data-cms-dark-top])_&:not([data-scrolled])]:shadow-none ' +
-    '[body:has([data-cms-dark-top])_&:not([data-scrolled])]:backdrop-blur-none',
+    '[body:has([data-cms-dark-top]):not(:has(:target))_&:not([data-scrolled])]:bg-transparent [body:has([data-cms-dark-top]):not(:has(:target))_&:not([data-scrolled])]:shadow-none ' +
+    '[body:has([data-cms-dark-top]):not(:has(:target))_&:not([data-scrolled])]:backdrop-blur-none',
   row: 'mx-auto flex max-w-6xl items-center justify-between gap-3',
   logoLink: 'shrink-0 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold',
   logo:
-    'h-8 w-auto sm:h-10 [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:brightness-0 ' +
-    '[body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:invert',
+    'h-8 w-auto sm:h-10 [body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:brightness-0 ' +
+    '[body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:invert',
   actions: 'flex items-center gap-2 sm:gap-3',
   langs:
-    'flex items-center rounded-full border border-olive-dark/15 p-0.5 [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:border-cream/30',
+    'flex items-center rounded-full border border-olive-dark/15 p-0.5 [body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:border-cream/30',
   lang:
     'rounded-full px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors duration-200 sm:px-3 ' +
     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
   langOn:
-    'bg-olive-dark text-cream [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:bg-cream ' +
-    '[body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:text-olive-dark',
-  langOff: 'text-olive-dark/75 hover:text-[#8a6516] [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:text-cream/85',
+    'bg-olive-dark text-cream [body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:bg-cream ' +
+    '[body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:text-olive-dark',
+  langOff: 'text-olive-dark/75 hover:text-[#8a6516] [body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:text-cream/85',
   wa:
     'inline-flex min-h-10 items-center gap-2 rounded-full bg-[#25D366] px-3 py-2 text-sm font-semibold text-[#073b1c] shadow-[0_8px_20px_-10px_rgba(37,211,102,0.9)] ' +
     'transition-colors duration-200 hover:bg-[#3ee07b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:px-5 sm:py-2.5',

@@ -27,7 +27,7 @@ export function HeadingBlock({ w }: { w: HeadingWidget }) {
   if (!showKicker) return heading;
   return (
     <div className={cx(HEADING.withKicker, ALIGN_TEXT[s.align])}>
-      <p className={HEADING.kicker} {...fieldAttr(env, 'kicker')} {...placeholderAttr(kicker)}>
+      <p className={HEADING.kicker[env.tone]} {...fieldAttr(env, 'kicker')} {...placeholderAttr(kicker)}>
         {kicker.text}
       </p>
       {heading}

@@ -454,7 +454,7 @@ export function StoresBlock({ w }: { w: StoresWidget }) {
         {items.map(({ it, i, title, text, button }) => {
           const Icon = STORE_ICONS[it.store];
           return (
-            <li key={it.id} className={cx(STORES.card[tone], STORES.border[it.store === 'madinah' ? 'featured' : 'plain'])}>
+            <li key={it.id} className={cx(STORES.card[tone], STORES.border[it.store === 'madinah' ? 'featured' : 'plain'], STORES.cell[Math.min(3, items.length)])}>
               <span className={cx(STORES.iconWrap, STORES.iconBg[it.store])}>
                 <Icon className={STORES.icon} />
               </span>

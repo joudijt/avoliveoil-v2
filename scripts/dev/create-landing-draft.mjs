@@ -100,9 +100,9 @@ async function main() {
   if (existing.some((p) => p.slug === SLUG)) throw new Error(`a page with the address ${SLUG} already exists — not creating a second one`);
 
   const heroImg = await upload(
-    'src/assets/opt/HeroAVOliveOilBottleInTheField-2000.webp',
-    'A bottle of Arabian Village Palestinian extra virgin olive oil in an olive grove',
-    'Sebotol minyak zaitun extra virgin Palestin Arabian Village di ladang zaitun'
+    'src/assets/opt/OliveGroveSunsetHero-1672.webp',
+    'An olive grove at sunset',
+    'Ladang zaitun ketika matahari terbenam'
   );
   const fieldImg = await upload(
     'src/assets/opt/AVOliveOilInTheField-750.webp',
@@ -173,7 +173,7 @@ async function main() {
         'First cold pressed Palestinian extra virgin olive oil, hand-harvested in Palestine. The classic oil and six infused flavours, sold by Berkat Madinah Store.',
         'Minyak zaitun extra virgin Palestin perahan sejuk pertama, dituai dengan tangan. Minyak klasik dan enam perisa infused, dijual oleh Berkat Madinah Store.'
       ),
-      ogImage: heroImg,
+      ogImage: fieldImg,
     },
     sections: [
       section([
@@ -421,7 +421,7 @@ async function main() {
                   q: L('What is in the Infused Collection?', 'Apakah yang ada dalam Koleksi Infused?'),
                   a: L(
                     "Six flavours, each extra virgin olive oil slow-infused with whole dried botanicals: Lavender & Chamomile, Blackseed (Habbat al-Barakah), Turmeric & Black Pepper, Rosemary & Basil, Fennel & Anise, and Wild Thyme (Za'atar).",
-                    "Enam perisa, setiap satunya minyak zaitun extra virgin yang diinfus perlahan dengan herba kering: Lavender & Chamomile, Habbatus Sauda (Habbat al-Barakah), Kunyit & Lada Hitam, Rosmari & Basil, Adas & Jintan Manis, dan Thyme Liar (Za'atar)."
+                    "Enam perisa, setiap satunya minyak zaitun extra virgin yang diinfus perlahan dengan herba kering: Lavender & Kamomil, Habbatus Sauda (Habbat al-Barakah), Kunyit & Lada Hitam, Rosemary & Selasih, Adas & Jintan Manis, dan Timi Liar (Za'atar)."
                   ),
                 },
                 {
