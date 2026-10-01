@@ -507,6 +507,7 @@ export function slugProblem(slug: string): string | null {
   if (slug.length < 2 || slug.length > 80) return 'Use 2–80 characters.';
   if (!SLUG_RE.test(slug)) return 'Use lowercase letters, numbers and single hyphens only.';
   if ((RESERVED_SLUGS as readonly string[]).includes(slug)) return 'This address is already used by the site.';
+  if (slug.includes('cms-template')) return 'This address is reserved by the control panel.';
   return null;
 }
 
