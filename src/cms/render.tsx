@@ -64,5 +64,9 @@ export function renderBlocksElement(doc: CmsPageDoc, ctx: CmsRenderContext): Rea
 export function renderPageHtml(doc: CmsPageDoc, ctx: CmsRenderContext): string {
   if (!doc || doc.schema !== 1) throw new Error('This page was saved by a newer version of the control panel. Reload the panel and try again.');
   if (ctx.lang !== 'en' && ctx.lang !== 'ms') throw new Error(`Unknown language "${String(ctx.lang)}".`);
-  return renderToStaticMarkup(renderBlocksElement(doc, ctx));
+  // React 19 turns an eager `fetchPriority="high"` <img> (the hero photo) into a
+  // <link rel=preload as=image> hoisted to the START of a server render. In a page-root
+  // fragment that link would sit in <body> (and the server sanitiser drops <link>), so
+  // it goes; on the live page React's client render adds the same preload to <head>.
+  return renderToStaticMarkup(renderBlocksElement(doc, ctx)).replace(/<link\b[^>]*\bas="image"[^>]*>/g, '');
 }

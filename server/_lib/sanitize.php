@@ -20,7 +20,7 @@ const AVO_SAN_PAGE_TAGS = ['section', 'div', 'span', 'p', 'br', 'hr', 'strong', 
     'sub', 'sup', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'cite', 'q', 'figure',
     'figcaption', 'img', 'picture', 'source', 'iframe', 'video', 'form', 'fieldset', 'legend', 'label', 'input',
     'textarea', 'select', 'option', 'button', 'details', 'summary', 'article', 'header', 'footer', 'aside', 'nav',
-    'time', 'address', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'svg'];
+    'time', 'address', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'svg', 'dl', 'dt', 'dd'];
 
 const AVO_SAN_RICH_TAGS = ['p', 'br', 'strong', 'b', 'em', 'i', 'u', 'a', 'ul', 'ol', 'li', 'h2', 'h3', 'h4', 'blockquote', 'span'];
 
@@ -28,7 +28,7 @@ const AVO_SAN_RICH_TAGS = ['p', 'br', 'strong', 'b', 'em', 'i', 'u', 'a', 'ul', 
 const AVO_SAN_GLOBAL_ATTRS = ['class', 'id', 'title', 'role', 'style', 'hidden', 'tabindex'];
 const AVO_SAN_TAG_ATTRS = [
     'a' => ['href', 'target', 'rel'],
-    'img' => ['src', 'srcset', 'sizes', 'alt', 'width', 'height', 'loading', 'decoding'],
+    'img' => ['src', 'srcset', 'sizes', 'alt', 'width', 'height', 'loading', 'decoding', 'fetchpriority'],
     'source' => ['src', 'srcset', 'sizes', 'type', 'width', 'height'],
     'iframe' => ['src', 'width', 'height', 'loading', 'allow', 'allowfullscreen', 'referrerpolicy', 'frameborder'],
     'video' => ['src', 'poster', 'controls', 'playsinline', 'muted', 'loop', 'preload', 'width', 'height'],
@@ -280,6 +280,8 @@ function avo_san_attr_value(Dom\Element $el, string $tag, string $name, string $
             return in_array($value, ['lazy', 'eager'], true);
         case 'decoding':
             return in_array($value, ['async', 'sync', 'auto'], true);
+        case 'fetchpriority':
+            return in_array($value, ['high', 'low', 'auto'], true);
         case 'style':
             $clean = avo_filter_style($value);
             if ($clean === '') return false;

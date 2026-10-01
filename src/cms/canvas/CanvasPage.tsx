@@ -34,6 +34,10 @@ function initialLang(): CmsLang {
 const CanvasDoc = memo(function CanvasDoc({ data, renderKeys }: { data: CanvasData; renderKeys: Record<string, number> }) {
   return (
     <main className={PAGE_CHROME.main}>
+      {data.doc.layout === 'landing' ? (
+        // The live page adds the landing header, footer and phone bar around these sections.
+        <div data-cms-landing-strip="">Landing layout — the short header, footer and phone bar are added on the live page</div>
+      ) : null}
       <CmsBlocks doc={data.doc} lang={data.lang} media={data.media} forms={data.forms} mode="canvas" renderKeys={renderKeys} />
       {data.doc.sections.length === 0 ? <div data-cms-empty-doc="">Add your first section — or drag one here from the panel</div> : null}
     </main>

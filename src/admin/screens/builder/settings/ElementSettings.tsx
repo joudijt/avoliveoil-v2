@@ -1,72 +1,18 @@
-import { useEffect, useState, type ReactNode } from 'react';
-import {
-  LuArrowLeft,
-  LuCheck,
-  LuClock,
-  LuCopy,
-  LuDroplet,
-  LuExternalLink,
-  LuHeart,
-  LuLeaf,
-  LuMail,
-  LuMapPin,
-  LuMedal,
-  LuPhone,
-  LuPlus,
-  LuShieldCheck,
-  LuSprout,
-  LuStar,
-  LuTrash2,
-  LuTruck,
-} from 'react-icons/lu';
-import {
-  CMS_ICONS,
-  type CmsIcon,
-  type CmsLang,
-  type CmsPageDoc,
-  type Localized,
-  type Section,
-  type SectionBg,
-  type Widget,
-} from '../../../../cms/contracts';
-import { COLUMN_LAYOUTS, findNode, newId, setSectionLayout, setWidgetText, updateSection, updateSectionSettings, updateWidget, updateWidgetSettings } from '../../../../cms/doc';
+import { useEffect, useState } from 'react';
+import { LuArrowLeft, LuCopy, LuTrash2 } from 'react-icons/lu';
+import { FORM_ANCHOR, type CmsLang, type Section, type SectionBg, type Widget } from '../../../../cms/contracts';
+import { COLUMN_LAYOUTS, findNode, newId, setSectionLayout, updateSection, updateSectionSettings, updateWidget, updateWidgetSettings } from '../../../../cms/doc';
 import { richTextToPlain } from '../../../../cms/sanitize';
 import { parseVideoUrl } from '../../../../cms/video';
-import { api, variantUrl } from '../../../api';
-import { toastError } from '../../../lib/bus';
+import { variantUrl } from '../../../api';
 import { cx } from '../../../lib/cx';
-import { Button, Field, Input, Select, Switch, Tabs } from '../../../ui/ui';
+import { Button, Field, Input, Switch, Tabs } from '../../../ui/ui';
 import { useBuilder } from '../context';
 import { WIDGET_META } from '../widgetMeta';
-import { AlignField, ChoiceField, ColorField, GalleryField, Group, HideField, ItemList, LinkField, LocField, MediaField, NumberField } from './fields';
+import { AlignField, ChoiceField, ColorField, FormPickerField, GalleryField, Group, HideField, IconPicker, ItemList, LinkField, LocField, MediaField, NumberField } from './fields';
+import { LandingWidgetSettings } from './LandingSettings';
 import { RichText } from './RichText';
-
-const ICONS: Record<CmsIcon, ReactNode> = {
-  check: <LuCheck />,
-  leaf: <LuLeaf />,
-  olive: <LuSprout />,
-  drop: <LuDroplet />,
-  medal: <LuMedal />,
-  star: <LuStar />,
-  truck: <LuTruck />,
-  shield: <LuShieldCheck />,
-  heart: <LuHeart />,
-  phone: <LuPhone />,
-  mail: <LuMail />,
-  pin: <LuMapPin />,
-  clock: <LuClock />,
-};
-
-type Tab = 'content' | 'style' | 'advanced';
-
-/** set one language of a Localized setting, creating the field when it is optional and absent */
-function setLoc(d: CmsPageDoc, id: string, field: string, lang: CmsLang, value: string): CmsPageDoc {
-  const ref = findNode(d, id);
-  if (!ref || ref.kind !== 'widget') return d;
-  const cur = (ref.widget.settings as unknown as Record<string, unknown>)[field] as Localized | undefined;
-  if (cur && typeof cur === 'object') return setWidgetText(d, id, field, lang, value);
-  return updateWidgetSettings(d, id, { [field]: { en: '', ms: '', [lang]: value } });
-}
+import { PHOTO_NEED_BOXED, PHOTO_NEED_FULL, setLoc, type Tab } from './shared';
 
 export function ElementSettings({ id, onBack, onDuplicate, onDelete }: { id: string; onBack: () => void; onDuplicate: () => void; onDelete: () => void }) {
   const { doc } = useBuilder();
@@ -114,10 +60,6 @@ export function ElementSettings({ id, onBack, onDuplicate, onDelete }: { id: str
 }
 
 // ---------------------------------------------------------------- widgets
-
-/** Photo width a widget can be shown at: a full-width section is up to ~1600 px, a boxed one ~800. */
-const PHOTO_NEED_FULL = 1600;
-const PHOTO_NEED_BOXED = 800;
 
 function WidgetSettings({ w, tab }: { w: Widget; tab: Tab }) {
   const { commit, lang, doc } = useBuilder();
@@ -340,26 +282,10 @@ function WidgetSettings({ w, tab }: { w: Widget; tab: Tab }) {
             title={(it) => it.text[lang] || it.text.en}
             addLabel="Add a point"
             min={1}
-            make={() => ({ id: newId('i'), icon: 'check', text: { en: '', ms: '' } })}
+            make={(): (typeof s.items)[number] => ({ id: newId('i'), icon: 'check', text: { en: '', ms: '' } })}
             render={(it, update) => (
               <>
-                <Field label="Icon">
-                  <div className="grid grid-cols-7 gap-1" role="radiogroup" aria-label="Icon">
-                    {CMS_ICONS.map((ic) => (
-                      <button
-                        key={ic}
-                        type="button"
-                        role="radio"
-                        aria-checked={it.icon === ic}
-                        title={ic}
-                        onClick={() => update({ icon: ic })}
-                        className={cx('flex h-8 items-center justify-center rounded-md text-[15px]', it.icon === ic ? 'bg-olive text-cream' : 'bg-sand text-muted hover:text-ink')}
-                      >
-                        {ICONS[ic]}
-                      </button>
-                    ))}
-                  </div>
-                </Field>
+                <IconPicker value={it.icon} onChange={(icon) => update({ icon })} />
                 <LocField label="Text" value={it.text} onChange={(v) => update({ text: { ...it.text, [lang]: v } })} maxLength={160} />
               </>
             )}
@@ -455,6 +381,20 @@ function WidgetSettings({ w, tab }: { w: Widget; tab: Tab }) {
           <AlignField value={w.settings.align} onChange={(align) => set({ align })} />
         </Group>
       );
+    case 'heroForm':
+    case 'cards':
+    case 'steps':
+    case 'ctaBand':
+    case 'badges':
+    case 'reviews':
+    case 'stores':
+      return <LandingWidgetSettings w={w} tab={tab} />;
+    default: {
+      // A new widget type in contracts.ts must get its settings here (compile error otherwise).
+      const never: never = w;
+      void never;
+      return null;
+    }
   }
 }
 
@@ -558,51 +498,14 @@ function ProductsContent({ w }: { w: Extract<Widget, { type: 'products' }> }) {
 }
 
 function FormContent({ w }: { w: Extract<Widget, { type: 'form' }> }) {
-  const { formList, reloadForms, commit, registerForm, lang } = useBuilder();
-  const [loading, setLoading] = useState(false);
-  const choose = async (formId: number | undefined) => {
-    commit((d) => updateWidgetSettings(d, w.id, { formId }));
-    if (!formId) return;
-    setLoading(true);
-    try {
-      const f = await api.form(formId);
-      registerForm({ id: f.id, def: f.def });
-    } catch (e) {
-      toastError(e);
-    } finally {
-      setLoading(false);
-    }
-  };
-  // When the owner comes back from the "new form" tab, show the new form in the list.
-  useEffect(() => {
-    const h = () => document.visibilityState === 'visible' && reloadForms();
-    document.addEventListener('visibilitychange', h);
-    return () => document.removeEventListener('visibilitychange', h);
-  }, [reloadForms]);
-  const current = formList?.find((f) => f.id === w.settings.formId);
+  const { commit, lang } = useBuilder();
   return (
     <Group>
-      <Field label="Form" hint={current ? `Entries are emailed to ${current.recipients.join(', ')}.` : 'Choose which form visitors fill in.'}>
-        <Select value={w.settings.formId ?? ''} onChange={(e) => void choose(e.target.value ? Number(e.target.value) : undefined)} disabled={loading}>
-          <option value="">— Choose a form —</option>
-          {(formList ?? []).map((f) => (
-            <option key={f.id} value={f.id}>
-              {f.name}
-            </option>
-          ))}
-        </Select>
-      </Field>
-      <div className="flex flex-wrap gap-2">
-        <Button size="sm" icon={<LuPlus />} onClick={() => window.open('/admin/forms/new', '_blank')}>
-          Create a new form
-        </Button>
-        {current && (
-          <Button size="sm" variant="ghost" icon={<LuExternalLink />} onClick={() => window.open(`/admin/forms/${current.id}`, '_blank')}>
-            Edit this form
-          </Button>
-        )}
-      </div>
-      {!w.settings.formId && <p className="rounded-lg bg-warn-soft px-3 py-2 text-xs text-warn">Without a form chosen, nothing is shown on the page.</p>}
+      <FormPickerField
+        value={w.settings.formId}
+        onChange={(formId) => commit((d) => updateWidgetSettings(d, w.id, { formId }))}
+        emptyNote="Without a form chosen, nothing is shown on the page."
+      />
       <LocField label="Title above the form (optional)" value={w.settings.title} onChange={(v) => commit((d) => setLoc(d, w.id, 'title', lang, v), `${w.id}.title.${lang}`)} maxLength={120} />
     </Group>
   );
@@ -649,7 +552,12 @@ function SectionSettingsPanel({ s, tab }: { s: Section; tab: Tab }) {
   const set = (patch: Partial<Section['settings']>, key?: string) => commit((d) => updateSectionSettings(d, s.id, patch), key ? `${s.id}.${key}` : undefined);
   const [anchor, setAnchor] = useState(s.settings.anchor ?? '');
   useEffect(() => setAnchor(s.settings.anchor ?? ''), [s.settings.anchor]);
-  const anchorErr = anchor && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(anchor) ? 'Use lowercase letters, numbers and hyphens, e.g. “our-story”.' : null;
+  const anchorErr =
+    anchor && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(anchor)
+      ? 'Use lowercase letters, numbers and hyphens, e.g. “our-story”.'
+      : anchor === FORM_ANCHOR
+        ? `“${FORM_ANCHOR}” is used by the page’s form buttons. Choose another name.`
+        : null;
   const widgets = s.columns.reduce((n, c) => n + c.widgets.length, 0);
 
   if (tab === 'content')
@@ -766,7 +674,7 @@ function SectionSettingsPanel({ s, tab }: { s: Section; tab: Tab }) {
             onChange={(e) => {
               const v = e.target.value.toLowerCase();
               setAnchor(v);
-              if (!v || /^[a-z0-9]+(-[a-z0-9]+)*$/.test(v)) set({ anchor: v || undefined }, 'anchor');
+              if (!v || (/^[a-z0-9]+(-[a-z0-9]+)*$/.test(v) && v !== FORM_ANCHOR)) set({ anchor: v || undefined }, 'anchor');
             }}
           />
         </Field>

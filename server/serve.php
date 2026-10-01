@@ -5,7 +5,8 @@ declare(strict_types=1);
  * HTML front controller (spec §2, §13.1, §13.2, §15). Reached by .htaccess only when
  * /_r/<lang>/<path>/index.html does not exist yet:
  *   snapshot  DOCROOT/<lang>/<path>/index.html  + published overrides + CMS menu + boot
- *   CMS page  DOCROOT/<lang>/__cms-template/index.html + page HTML + ResolvedSeo head + boot
+ *   CMS page  DOCROOT/<lang>/__cms-template/index.html (doc.layout 'landing':
+ *             __cms-template-landing/index.html) + page HTML + ResolvedSeo head + boot
  * The finished HTML is stored in /_r so the next visitor never reaches PHP.
  *
  * Fail-safe: everything runs inside ob_start(); an exception or a fatal error discards
@@ -303,15 +304,37 @@ function avo_serve_main(): void
     avo_shell_page($lang, 404, $text, $images, $menu, $v0);
 }
 
+/**
+ * The parsed CMS template for the doc being rendered (published or draft preview), with its
+ * own name rewritten to the slug. 'landing' uses __cms-template-landing; when that file is
+ * missing or has no page root it falls back to the site template (logged, never a 503 for
+ * that reason). Only a broken SITE template throws (→ fail-safe 503).
+ */
+function avo_cms_template(string $lang, string $layout, string $slug): Dom\HTMLDocument
+{
+    $names = $layout === 'landing' ? ['__cms-template-landing', '__cms-template'] : ['__cms-template'];
+    foreach ($names as $name) {
+        $tplFile = AVO_DOCROOT . '/' . $lang . '/' . $name . '/index.html';
+        $tpl = @file_get_contents($tplFile);
+        $problem = 'is missing';
+        if (is_string($tpl) && $tpl !== '') {
+            // The exact segment name only: '__cms-template' must not eat the start of '__cms-template-landing'.
+            $doc = avo_parse_html((string) preg_replace('~' . preg_quote($name, '~') . '(?![a-z0-9-])~', $slug, $tpl));
+            if ($doc->querySelector('[data-cms-page-root]')) return $doc;
+            $problem = 'has no [data-cms-page-root]';
+        }
+        if ($name === '__cms-template') throw new RuntimeException("CMS template $problem: $tplFile");
+        avo_log('error', "landing template $problem, using the site template", ['file' => $tplFile, 'slug' => $slug]);
+    }
+    throw new LogicException('unreachable');
+}
+
 function avo_render_cms_page(array $file, string $lang, string $html, array $text, array $images, array $menu, int $v, bool $preview): string
 {
-    $tplFile = AVO_DOCROOT . '/' . $lang . '/__cms-template/index.html';
-    $tpl = @file_get_contents($tplFile);
-    if (!is_string($tpl) || $tpl === '') throw new RuntimeException('CMS template missing: ' . $tplFile);
     $slug = (string) $file['slug'];
-    $doc = avo_parse_html(str_replace('__cms-template', $slug, $tpl));
+    $layout = ($file['doc']['layout'] ?? 'site') === 'landing' ? 'landing' : 'site';
+    $doc = avo_cms_template($lang, $layout, $slug);
     $root = $doc->querySelector('[data-cms-page-root]');
-    if (!$root) throw new RuntimeException('CMS template has no [data-cms-page-root]');
     $root->innerHTML = $html;
     avo_apply_overrides($doc, $lang, $text, $images, $menu, false);
     avo_apply_seo($doc, $file['seo'][$lang], $lang, $file['langs']);

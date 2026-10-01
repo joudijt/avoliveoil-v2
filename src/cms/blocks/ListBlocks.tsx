@@ -1,8 +1,7 @@
-import { FiPlus } from 'react-icons/fi';
 import type { FaqWidget, IconListWidget, QuoteWidget } from '../contracts';
 import { FAQ, ICON_LIST, QUOTE, cx } from './classes';
 import { fieldAttr, useBlockEnv } from './context';
-import { CMS_ICON_COMPONENTS } from './icons';
+import { CMS_ICON_COMPONENTS, PlusIcon } from './icons';
 import { placeholderAttr, shown } from './text';
 
 export function IconListBlock({ w }: { w: IconListWidget }) {
@@ -52,7 +51,7 @@ export function FaqBlock({ w }: { w: FaqWidget }) {
             <span className={FAQ.q[env.tone]} {...fieldAttr(env, `items.${i}.q`)} {...placeholderAttr(q)}>
               {q.text}
             </span>
-            <FiPlus className={FAQ.icon} aria-hidden />
+            <PlusIcon className={FAQ.icon} />
           </summary>
           {a.text ? (
             <p className={FAQ.a[env.tone]} {...fieldAttr(env, `items.${i}.a`)} {...placeholderAttr(a)}>

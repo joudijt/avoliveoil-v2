@@ -12,8 +12,9 @@ const AVO_SUBMIT_MAX_URLS = 3;
  * POST /api/forms/{id}/submit — public (spec §7.2, §13.4).
  * JSON body (src/cms/blocks/FormBlock.tsx): {fields:{name:value}, page, lang, company_website, elapsedMs}
  *   (pageId / page_id and a flat {name:value} body are accepted too)
- * urlencoded (no-JS fallback): name=value&_page=&_lang=&company_website= → 303 back to the
- *   embedding CMS page with #form-sent / #form-error, never to Referer.
+ * urlencoded (no-JS fallback): name=value&_page=&_lang=&_widget=&company_website= → 303 back to the
+ *   embedding CMS page with #form-sent-<w> / #form-error-<w>, never to Referer. <w> is the form
+ *   WIDGET id from _widget (LP-SPEC §8 M3: one form may sit on a page twice); else the form id.
  * @return array{status:int, json?:array, location?:string}
  */
 function avo_form_submit(int $formId): array
@@ -47,6 +48,8 @@ function avo_form_submit(int $formId): array
         $p = db_one("SELECT id, slug, langs_json, published_json FROM pages WHERE id = ? AND status = 'published' AND deleted_at IS NULL", [(int) $pageIdIn]);
         if ($p && in_array($formId, avo_doc_form_ids(json_decode((string) $p['published_json'], true) ?: []), true)) $page = $p;
     }
+    $widgetIn = $in['_widget'] ?? null;
+    $anchor = is_string($widgetIn) && preg_match('/^[A-Za-z0-9_-]{1,64}$/', $widgetIn) ? $widgetIn : (string) $formId;
     $back = function (string $hash) use ($page, $lang): string {
         if ($page && in_array($lang, json_decode((string) $page['langs_json'], true) ?: [], true)) {
             return '/' . $lang . '/' . $page['slug'] . $hash;
@@ -59,16 +62,16 @@ function avo_form_submit(int $formId): array
     $recent = (int) db_val('SELECT COUNT(*) FROM submissions WHERE ip_hash = ? AND created_at > ?', [$ipHash, $now - 600]);
     $today = (int) db_val('SELECT COUNT(*) FROM submissions WHERE ip_hash = ? AND created_at > ?', [$ipHash, $now - 86400]);
     if ($recent >= AVO_SUBMIT_PER_10MIN || $today >= AVO_SUBMIT_PER_DAY) {
-        if ($isForm) return ['status' => 303, 'location' => $back('#form-error-' . $formId)];
+        if ($isForm) return ['status' => 303, 'location' => $back('#form-error-' . $anchor)];
         avo_fail(429, 'rate_limited', $lang === 'ms'
             ? 'Terlalu banyak mesej dihantar. Sila cuba lagi kemudian.'
             : 'Too many messages were sent from your connection. Please try again later.', null, ['Retry-After' => '600']);
     }
 
-    $success = function () use ($def, $lang, $isForm, $back, $formId): array {
+    $success = function () use ($def, $lang, $isForm, $back, $anchor): array {
         $msg = avo_loc($def['successMessage'] ?? null, $lang) ?: avo_loc($def['successMessage'] ?? null, 'en') ?: 'Thank you!';
         $redirect = isset($def['redirectPath']) && is_string($def['redirectPath']) && preg_match(AVO_FORM_REDIRECT_RE, $def['redirectPath']) ? $def['redirectPath'] : null;
-        if ($isForm) return ['status' => 303, 'location' => $redirect ?? $back('#form-sent-' . $formId)];
+        if ($isForm) return ['status' => 303, 'location' => $redirect ?? $back('#form-sent-' . $anchor)];
         return ['status' => 200, 'json' => ['ok' => true, 'message' => $msg] + ($redirect ? ['redirectPath' => $redirect] : [])];
     };
 
@@ -138,7 +141,7 @@ function avo_form_submit(int $formId): array
 
     $isHoneypot = is_string($honeypot) ? trim($honeypot) !== '' : !empty($honeypot);
     if (!$isHoneypot && $errors) {
-        if ($isForm) return ['status' => 303, 'location' => $back('#form-error-' . $formId)];
+        if ($isForm) return ['status' => 303, 'location' => $back('#form-error-' . $anchor)];
         avo_fail(422, 'invalid', $lang === 'ms' ? 'Sila semak ruangan yang ditanda.' : 'Please check the highlighted fields.', $errors);
     }
     $urls = preg_match_all('~(https?://|www\.)~i', implode(' ', array_map('strval', $data)));

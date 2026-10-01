@@ -27,6 +27,13 @@ const STRINGS = {
     notFoundText: 'This page may have moved or is no longer available.',
     backHome: 'Back to the home page',
     breadcrumb: 'Breadcrumb',
+    whatsappUs: 'WhatsApp us',
+    fillForm: 'Fill the form',
+    waMessage: 'Hello, I would like to ask about your olive oil.',
+    soldBy: 'Sold in Malaysia by {store}',
+    fullSite: 'Visit the full website',
+    language: 'Language',
+    callToAction: 'Contact options',
   },
   ms: {
     sending: 'Menghantar…',
@@ -50,6 +57,13 @@ const STRINGS = {
     backHome: 'Kembali ke laman utama',
     // Same label the site's own Breadcrumbs component uses on every page.
     breadcrumb: 'Breadcrumb',
+    whatsappUs: 'WhatsApp kami',
+    fillForm: 'Isi borang',
+    waMessage: 'Hai, saya ingin bertanya tentang minyak zaitun anda.',
+    soldBy: 'Dijual di Malaysia oleh {store}',
+    fullSite: 'Lawati laman web penuh',
+    language: 'Bahasa',
+    callToAction: 'Pilihan hubungan',
   },
 } as const satisfies Record<CmsLang, Record<string, string>>;
 

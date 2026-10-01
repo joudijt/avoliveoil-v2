@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { MouseEvent as ReactMouseEvent } from 'react';
-import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
+import { ChevronLeftIcon, ChevronRightIcon, CloseIcon } from './icons';
 import type { GalleryWidget, MediaRef } from '../contracts';
 import { mediaFor, srcSetOf, variantAtLeast, widestUrl } from '../media';
 import { GALLERY, cx } from './classes';
@@ -149,15 +149,15 @@ function Lightbox({
     >
       <img src={widestUrl(m.variants)} srcSet={srcSetOf(m.variants)} sizes="100vw" width={m.width} height={m.height} alt={alt} className={GALLERY.boxImg} />
       <button ref={closeRef} type="button" className={cx(GALLERY.boxBtn, GALLERY.boxClose)} onClick={onClose} aria-label={ui(lang, 'close')}>
-        <FiX className={GALLERY.boxIcon} aria-hidden />
+        <CloseIcon className={GALLERY.boxIcon} />
       </button>
       {many ? (
         <>
           <button type="button" className={cx(GALLERY.boxBtn, GALLERY.boxPrev)} onClick={() => go(-1)} aria-label={ui(lang, 'previous')}>
-            <FiChevronLeft className={GALLERY.boxIcon} aria-hidden />
+            <ChevronLeftIcon className={GALLERY.boxIcon} />
           </button>
           <button type="button" className={cx(GALLERY.boxBtn, GALLERY.boxNext)} onClick={() => go(1)} aria-label={ui(lang, 'next')}>
-            <FiChevronRight className={GALLERY.boxIcon} aria-hidden />
+            <ChevronRightIcon className={GALLERY.boxIcon} />
           </button>
           <p className={GALLERY.boxCount} aria-live="polite">
             {index + 1} / {items.length}

@@ -2,16 +2,18 @@
  * Public route `/:lang/:slug` — a page built in the control panel (spec §5, §13.2).
  *
  * Three ways in:
- *  - `/<lang>/__cms-template` (prerender only): the empty page shell serve.php fills
- *    with a page's published HTML — Navbar, `<main><div data-cms-page-root>`, Footer,
- *    placeholder head. Never fetches.
+ *  - `/<lang>/__cms-template` and `/<lang>/__cms-template-landing` (prerender only):
+ *    the empty page shells serve.php fills with a page's published HTML — site chrome
+ *    (Navbar, Footer) or landing chrome (LandingHeader, LandingFooter) around
+ *    `<main><div data-cms-page-root>`, placeholder head. Never fetch.
  *  - a full page load of a CMS URL: serve.php put the page in `#cms-boot`, so React
  *    renders it synchronously, the same markup the server already sent.
  *  - client-side navigation: no boot page for this slug → GET /api/public/page.
  * The markup inside `[data-cms-page-root]` is <CmsBlocks> — the very component
- * render.tsx turns into the published HTML.
+ * render.tsx turns into the published HTML. The chrome around it follows
+ * `doc.layout` (LP-SPEC §8 B2).
  */
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { Navbar } from '../components/ui/Navbar';
@@ -22,10 +24,24 @@ import { OG_IMAGE_HEIGHT, OG_IMAGE_PATH, OG_IMAGE_WIDTH, SITE_URL } from '../con
 import { getBoot } from './boot';
 import { CMS_LANGS, PUBLIC_PAGE_ENDPOINT, type CmsLang, type PublicPagePayload, type ResolvedSeo } from './contracts';
 import { CmsBlocks } from './blocks/CmsBlocks';
-import { PAGE_CHROME } from './blocks/classes';
+import { PAGE_CHROME, cx } from './blocks/classes';
 import { ui } from './blocks/strings';
+import { LandingFooter, LandingHeader } from './landing/LandingChrome';
+import { setLandingChrome } from './landingChrome';
 
-const TEMPLATE_SLUG = '__cms-template';
+type Layout = 'site' | 'landing';
+
+/** The prerendered page shells serve.php fills, one per layout (LP-SPEC §8 B1). */
+const TEMPLATES: Record<string, Layout> = { '__cms-template': 'site', '__cms-template-landing': 'landing' };
+
+/** While a landing page is mounted, App hides its global WhatsApp button (cleared on unmount). */
+function useLandingFlag(on: boolean) {
+  useLayoutEffect(() => {
+    if (!on) return;
+    setLandingChrome(true);
+    return () => setLandingChrome(false);
+  }, [on]);
+}
 
 type State = { kind: 'loading' } | { kind: 'ready'; page: PublicPagePayload } | { kind: 'missing' };
 
@@ -63,7 +79,8 @@ function markReady() {
 
 export function CmsPage() {
   const { lang: rawLang, slug = '' } = useParams<{ lang: string; slug: string }>();
-  if (slug === TEMPLATE_SLUG && isLang(rawLang)) return <CmsTemplate lang={rawLang} />;
+  const template = Object.hasOwn(TEMPLATES, slug) ? TEMPLATES[slug] : undefined;
+  if (template && isLang(rawLang)) return <CmsTemplate key={`${rawLang}/${slug}`} lang={rawLang} slug={slug} layout={template} />;
   return <CmsPageView key={`${rawLang}/${slug}`} rawLang={rawLang} slug={slug} />;
 }
 
@@ -96,13 +113,16 @@ function CmsPageView({ rawLang, slug }: { rawLang: string | undefined; slug: str
     if (state.kind !== 'loading') markReady();
   }, [state.kind]);
 
+  const landing = state.kind === 'ready' && state.page.doc.layout === 'landing';
+  useLandingFlag(landing);
+
   if (state.kind === 'missing') return <NotFound lang={lang} />;
 
   const preview = !!getBoot()?.preview;
   return (
     <>
       {state.kind === 'ready' ? <SEO page="cms" resolved={state.page.seo} /> : null}
-      <Navbar />
+      {landing ? <LandingHeader lang={lang} slug={slug} /> : <Navbar />}
       <main className={PAGE_CHROME.main}>
         {state.kind === 'ready' ? (
           <div data-cms-page-root="">
@@ -112,36 +132,38 @@ function CmsPageView({ rawLang, slug }: { rawLang: string | undefined; slug: str
           <div data-cms-page-root="" className={PAGE_CHROME.loading} />
         )}
       </main>
-      <Footer />
-      {preview ? <div className={PAGE_CHROME.previewBadge}>Preview — not published</div> : null}
+      {landing ? <LandingFooter lang={lang} /> : <Footer />}
+      {preview ? <div className={cx(PAGE_CHROME.previewBadge, landing && PAGE_CHROME.previewBadgeLanding)}>Preview — not published</div> : null}
     </>
   );
 }
 
 /** Placeholder head the prerender snapshots; serve.php rewrites every tag from ResolvedSeo. */
-function templateSeo(lang: CmsLang): ResolvedSeo {
-  const url = `${SITE_URL}/${lang}/${TEMPLATE_SLUG}`;
+function templateSeo(lang: CmsLang, slug: string): ResolvedSeo {
+  const url = `${SITE_URL}/${lang}/${slug}`;
   return {
     title: 'CMS template',
     description: 'CMS template',
     canonical: url,
     robots: 'noindex, follow',
-    alternates: { en: `${SITE_URL}/en/${TEMPLATE_SLUG}`, ms: `${SITE_URL}/ms/${TEMPLATE_SLUG}` },
+    alternates: { en: `${SITE_URL}/en/${slug}`, ms: `${SITE_URL}/ms/${slug}` },
     ogImage: { url: `${SITE_URL}${OG_IMAGE_PATH}`, width: OG_IMAGE_WIDTH, height: OG_IMAGE_HEIGHT },
     jsonLd: [],
   };
 }
 
-function CmsTemplate({ lang }: { lang: CmsLang }) {
+function CmsTemplate({ lang, slug, layout }: { lang: CmsLang; slug: string; layout: Layout }) {
   useMarkAppReady();
+  const landing = layout === 'landing';
+  useLandingFlag(landing);
   return (
     <>
-      <SEO page="cms" resolved={templateSeo(lang)} />
-      <Navbar />
+      <SEO page="cms" resolved={templateSeo(lang, slug)} />
+      {landing ? <LandingHeader lang={lang} slug={slug} /> : <Navbar />}
       <main className={PAGE_CHROME.main}>
         <div data-cms-page-root="" />
       </main>
-      <Footer />
+      {landing ? <LandingFooter lang={lang} /> : <Footer />}
     </>
   );
 }

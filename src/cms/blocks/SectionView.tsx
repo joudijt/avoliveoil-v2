@@ -31,14 +31,17 @@ export function SectionView({ section, renderKeys }: { section: Section; renderK
   const bgMedia = s.bg === 'image' ? mediaFor(env.media, s.bgImage) : null;
   const tone: Tone = DARK_BG.has(s.bg) ? 'dark' : 'light';
   const full = s.layout === 'full';
+  // Full width with no vertical padding = edge to edge: the side padding goes too, so a
+  // hero or band (which owns its background) reaches the screen edges (LP-SPEC §8 M2).
+  const bleed = full && s.padY === 'none';
   const tabletKeepsSpans = section.columns.length > 0 && section.columns.every((c) => clampSpan(c.span) >= 6);
   const anchor = s.anchor && /^[a-z0-9-]{1,60}$/.test(s.anchor) ? s.anchor : undefined;
   const overlay = SECTION.overlay[overlayStep(s.overlay)];
 
-  const sectionEnv = useMemo<BlockEnv>(() => ({ ...env, tone, align: s.align ?? 'start', full }), [env, tone, s.align, full]);
+  const sectionEnv = useMemo<BlockEnv>(() => ({ ...env, tone, align: s.align ?? 'start', full, bleed }), [env, tone, s.align, full, bleed]);
 
   const cls = cx(
-    SECTION.base,
+    bleed ? SECTION.baseBleed : SECTION.base,
     SECTION.bg[s.bg] ?? SECTION.bg.bg,
     SECTION.pad[s.padY] ?? SECTION.pad.l,
     SECTION.align[s.align] ?? SECTION.align.start,

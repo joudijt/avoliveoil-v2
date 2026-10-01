@@ -37,7 +37,9 @@ export function PublishDialog({
   const inMenu = page.inHeader || page.inFooter;
   const checks = useMemo(() => Object.fromEntries(CMS_LANGS.map((l) => [l, langChecks(doc, l, inMenu)])) as Record<CmsLang, LangCheck[]>, [doc, inMenu]);
   const ready = (l: CmsLang) => checks[l].every((c) => c.ok || !c.blocking);
-  const problems = useMemo(() => pageProblems(doc), [doc]);
+  const { formList } = useBuilder();
+  const knownForms = useMemo(() => (formList ? new Set(formList.map((f) => f.id)) : null), [formList]);
+  const problems = useMemo(() => pageProblems(doc, knownForms), [doc, knownForms]);
   const [langs, setLangs] = useState<CmsLang[]>([]);
   const [busy, setBusy] = useState<'publish' | 'unpublish' | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -146,10 +148,10 @@ export function PublishDialog({
           <div className="rounded-xl border border-warn/30 bg-warn-soft px-4 py-3">
             <p className="text-[13px] font-semibold text-warn">Check before publishing</p>
             <ul className="mt-1.5 list-disc pl-5 text-[13px] text-ink">
-              {problems.slice(0, 8).map((p) => (
-                <li key={p}>{p}</li>
+              {problems.slice(0, 10).map((p, i) => (
+                <li key={i}>{p}</li>
               ))}
-              {problems.length > 8 && <li>…and {problems.length - 8} more.</li>}
+              {problems.length > 10 && <li>…and {problems.length - 10} more.</li>}
             </ul>
           </div>
         )}
@@ -231,6 +233,46 @@ export function VersionsDialog({ open, onClose, pageId, onRestore }: { open: boo
 
 // ---------------------------------------------------------------- page settings
 
+/** Tiny schematic of the two page layouts: full header with menu vs logo-only header + phone bar. */
+function LayoutThumb({ layout }: { layout: PageLayout }) {
+  const bar = 'block h-1 rounded-full';
+  return (
+    <span className="flex h-16 w-14 shrink-0 flex-col gap-1 overflow-hidden rounded-md border border-line bg-sand/70 p-1">
+      {layout === 'site' ? (
+        <>
+          <span className="flex items-center gap-0.5 rounded-sm bg-white px-0.5 py-0.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-olive" />
+            <span className={cx(bar, 'w-1.5 bg-line-strong')} />
+            <span className={cx(bar, 'w-1.5 bg-line-strong')} />
+            <span className={cx(bar, 'w-1.5 bg-line-strong')} />
+          </span>
+          <span className={cx(bar, 'w-6 bg-line')} />
+          <span className="flex-1 rounded-sm bg-[#e9e3d4]" />
+          <span className="h-3 rounded-sm bg-olive-dark" />
+        </>
+      ) : (
+        <>
+          <span className="flex items-center justify-between rounded-sm bg-olive-dark px-0.5 py-0.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-cream" />
+            <span className="h-1.5 w-2.5 rounded-sm bg-[#25d366]" />
+          </span>
+          <span className="flex flex-1 gap-0.5 rounded-sm bg-olive-dark/85 p-0.5">
+            <span className="flex flex-1 flex-col gap-0.5">
+              <span className={cx(bar, 'w-full bg-cream/70')} />
+              <span className={cx(bar, 'w-2/3 bg-gold')} />
+            </span>
+            <span className="w-3 rounded-[2px] bg-cream" />
+          </span>
+          <span className="flex gap-0.5">
+            <span className="h-1.5 flex-1 rounded-sm bg-[#25d366]" />
+            <span className="h-1.5 flex-1 rounded-sm bg-olive" />
+          </span>
+        </>
+      )}
+    </span>
+  );
+}
+
 function Snippet({ title, desc, url }: { title: string; desc: string; url: string }) {
   const t = title.length > 62 ? title.slice(0, 60) + '…' : title;
   const d = desc.length > 158 ? desc.slice(0, 155) + '…' : desc;
@@ -254,8 +296,15 @@ function Snippet({ title, desc, url }: { title: string; desc: string; url: strin
   );
 }
 
+export type PageLayout = NonNullable<CmsPageDoc['layout']>;
+
+const LAYOUTS: { value: PageLayout; title: string; text: string }[] = [
+  { value: 'site', title: 'Site page', text: 'The website’s full header with the menu, the breadcrumb and the full footer.' },
+  { value: 'landing', title: 'Landing page', text: 'For ads: logo, language and WhatsApp at the top (no menu), a short footer, and a WhatsApp + form bar on phones.' },
+];
+
 export interface SettingsResult {
-  doc: { title: Localized; menuLabel?: Localized; metaTitle: Localized; metaDescription: Localized; ogImage?: number };
+  doc: { title: Localized; menuLabel?: Localized; metaTitle: Localized; metaDescription: Localized; ogImage?: number; layout: PageLayout };
   patch: { slug?: string; inHeader?: boolean; inFooter?: boolean; menuOrder?: number; noindex?: boolean };
 }
 
@@ -278,6 +327,7 @@ export function PageSettingsDialog({
   const [metaTitle, setMetaTitle] = useState(doc.seo.metaTitle);
   const [metaDesc, setMetaDesc] = useState(doc.seo.metaDescription);
   const [ogImage, setOgImage] = useState<number | undefined>(doc.seo.ogImage);
+  const [layout, setLayout] = useState<PageLayout>(doc.layout ?? 'site');
   const [inHeader, setInHeader] = useState(page.inHeader);
   const [inFooter, setInFooter] = useState(page.inFooter);
   const [menuOrder, setMenuOrder] = useState(page.menuOrder);
@@ -295,6 +345,7 @@ export function PageSettingsDialog({
     setMetaTitle(doc.seo.metaTitle);
     setMetaDesc(doc.seo.metaDescription);
     setOgImage(doc.seo.ogImage);
+    setLayout(doc.layout ?? 'site');
     setInHeader(page.inHeader);
     setInFooter(page.inFooter);
     setMenuOrder(page.menuOrder);
@@ -347,7 +398,7 @@ export function PageSettingsDialog({
     setBusy(true);
     try {
       const label = { en: menuLabel.en.trim(), ms: menuLabel.ms.trim() };
-      await onSave({ doc: { title, menuLabel: label.en || label.ms ? label : undefined, metaTitle, metaDescription: metaDesc, ogImage }, patch });
+      await onSave({ doc: { title, menuLabel: label.en || label.ms ? label : undefined, metaTitle, metaDescription: metaDesc, ogImage, layout }, patch });
       onClose();
     } catch (e) {
       const f = (e as { fields?: Record<string, string> }).fields;
@@ -394,6 +445,39 @@ export function PageSettingsDialog({
               <input className="h-9 min-w-0 flex-1 px-3 text-sm focus:outline-none" value={slug} onChange={(e) => setSlug(e.target.value.toLowerCase().replace(/\s+/g, '-'))} spellCheck={false} />
             </div>
           </Field>
+        </section>
+
+        <section className="flex flex-col gap-3">
+          <h3 className="font-display text-lg text-olive-dark">Layout</h3>
+          <div className="grid gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Layout">
+            {LAYOUTS.map((o) => (
+              <button
+                key={o.value}
+                type="button"
+                role="radio"
+                aria-checked={layout === o.value}
+                onClick={() => setLayout(o.value)}
+                className={cx(
+                  'flex gap-3 rounded-xl border p-3 text-left transition-colors',
+                  layout === o.value ? 'border-olive bg-mist/50 ring-2 ring-olive/20' : 'border-line bg-white hover:border-line-strong'
+                )}
+              >
+                <LayoutThumb layout={o.value} />
+                <span className="min-w-0">
+                  <span className="flex items-center gap-1.5 text-sm font-semibold text-ink">
+                    <span className={cx('flex h-4 w-4 shrink-0 items-center justify-center rounded-full border', layout === o.value ? 'border-olive bg-olive' : 'border-line-strong bg-white')}>
+                      {layout === o.value && <span className="h-1.5 w-1.5 rounded-full bg-white" />}
+                    </span>
+                    {o.title}
+                  </span>
+                  <span className="mt-1 block text-[12.5px] leading-snug text-muted">{o.text}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+          {layout === 'landing' && (inHeader || inFooter) && (
+            <p className="text-xs leading-snug text-muted">Landing pages are usually reached from an ad, not the menu. The menu switches below still work if you want both.</p>
+          )}
         </section>
 
         <section className="flex flex-col gap-4">

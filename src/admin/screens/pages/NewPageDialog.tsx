@@ -23,7 +23,8 @@ function TemplateThumb({ t, selected, onClick }: { t: PageTemplate; selected: bo
         selected ? 'border-olive ring-2 ring-olive/25' : 'border-line hover:border-line-strong hover:shadow-[var(--shadow-card)]'
       )}
     >
-      <div className="flex h-24 flex-col gap-1 bg-sand/70 p-2.5">
+      <div className="relative flex h-24 flex-col gap-1 bg-sand/70 p-2.5">
+        {t.badge && <span className="absolute bottom-1.5 left-1.5 z-10 rounded bg-[#7a5a14] px-1.5 py-px text-[10px] font-semibold text-white shadow-sm">{t.badge}</span>}
         {t.bands.length ? (
           t.bands.map((b, i) => <div key={i} className={cx('flex-1 rounded-[3px]', bandColor[b])} />)
         ) : (

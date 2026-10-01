@@ -1121,3 +1121,430 @@ test('purge a trashed page keeps 410; every PHP file lints', function () use ($a
         eq($code, 0, 'php -l ' . basename($f));
     }
 });
+
+// ---------------------------------------------------------------- landing pages (docs/cms/LP-SPEC.md §4, §8)
+
+/** In-process access to the doc helpers of _lib/pages.php (no HTTP). */
+function load_pages_lib(): void
+{
+    if (!defined('AVO_CMS')) define('AVO_CMS', true);
+    require_once dirname(__DIR__) . '/_lib/util.php';
+    require_once dirname(__DIR__) . '/_lib/sanitize.php';
+    require_once dirname(__DIR__) . '/_lib/seo.php';
+    require_once dirname(__DIR__) . '/_lib/pages.php';
+}
+
+/** Quoted strings of one TypeScript array / union literal in contracts.ts (comments stripped). */
+function ts_strings(string $ts, string $pattern, string $what): array
+{
+    ok(preg_match($pattern, $ts, $m) === 1, "contracts.ts: $what found");
+    preg_match_all("/'([^']*)'/", (string) preg_replace('~//[^\n]*~', '', $m[1]), $sm);
+    ok(count($sm[1]) > 0, "contracts.ts: $what has entries");
+    return $sm[1];
+}
+
+/** Settings path of the (only) widget of section $si. */
+function lp(int $si, string $rest = ''): string
+{
+    return "sections.$si.columns.0.widgets.0.settings" . ($rest === '' ? '' : ".$rest");
+}
+
+function set_path(array $doc, string $path, mixed $value): array
+{
+    $ref = &$doc;
+    foreach (explode('.', $path) as $k) {
+        if (is_array($ref) && array_is_list($ref) && ctype_digit($k)) $k = (int) $k;
+        $ref = &$ref[$k];
+    }
+    $ref = $value;
+    unset($ref);
+    return $doc;
+}
+
+function cta(string $kind, array $extra = []): array
+{
+    $base = ['id' => 'b' . bin2hex(random_bytes(3)), 'kind' => $kind, 'label' => L("Btn $kind", "Butang $kind"), 'style' => 'primary'];
+    if ($kind === 'whatsapp') $base += ['message' => L('Hello', 'Hai'), 'style' => 'whatsapp'];
+    if ($kind === 'store') $base += ['store' => 'madinah', 'newTab' => true];
+    if ($kind === 'link') $base += ['href' => '/en/products'];
+    return $extra + $base;
+}
+
+function full_section(array $widget): array
+{
+    $s = section([$widget]);
+    $s['settings']['layout'] = 'full';
+    $s['settings']['padY'] = 'none';
+    return $s;
+}
+
+/** A complete landing doc with every new widget; Malay filled everywhere except the hero highlight. */
+function landing_doc(int $formId, int $mHero, int $mCards, int $mSteps): array
+{
+    $items = fn (int $n, callable $f) => array_map($f, range(1, $n));
+    $doc = doc_with([
+        full_section(w('heroForm', [
+            'kicker' => L('From Palestine', 'Dari Palestin'), 'title' => L('Palestinian extra virgin olive oil', 'Minyak zaitun extra virgin Palestin'),
+            'highlight' => L('extra virgin olive oil', ''), 'sub' => L('Cold pressed.', 'Perahan sejuk.'),
+            'chips' => $items(3, fn ($i) => ['id' => "c$i", 'text' => L("Point $i", "Perkara $i")]),
+            'buttons' => [cta('whatsapp'), cta('store'), cta('link')],
+            'formId' => $formId, 'formTitle' => L('Ask us', 'Tanya kami'), 'formSub' => L('We reply.', 'Kami balas.'),
+            'media' => $mHero, 'overlay' => 55, 'tone' => 'dark',
+        ])),
+        section([w('cards', [
+            'title' => L('Why this oil', 'Kenapa minyak ini'), 'sub' => L('Three reasons.', 'Tiga sebab.'), 'columns' => 3,
+            'items' => $items(3, fn ($i) => ['id' => "k$i", 'icon' => ['leaf', 'olive', 'bottle'][$i - 1], 'title' => L("Card $i", "Kad $i"), 'text' => L('Text', 'Teks')]),
+            'media' => $mCards, 'mediaAlt' => L('Bottle in the field', 'Botol di ladang'), 'mediaSide' => 'right',
+        ])]),
+        section([w('steps', [
+            'title' => L('How to order', 'Cara memesan'), 'sub' => L('', ''),
+            'items' => $items(3, fn ($i) => ['id' => "t$i", 'title' => L("Step $i", "Langkah $i"), 'text' => L('Do it', 'Buat')]),
+            'media' => $mSteps, 'mediaAlt' => L('Farmer', 'Petani'),
+        ])]),
+        section([w('ctaBand', ['icon' => 'none', 'title' => L('Ready?', 'Sedia?'), 'sub' => L('Ask us.', 'Tanya.'), 'buttons' => [cta('whatsapp'), cta('form')], 'tone' => 'olive'])]),
+        section([w('badges', ['title' => L('Trust', 'Kepercayaan'), 'sub' => L('', ''),
+            'items' => $items(4, fn ($i) => ['id' => "g$i", 'icon' => 'award', 'title' => L("Badge $i", "Lencana $i")])])]),
+        section([w('reviews', ['title' => L('Reviews', 'Ulasan'),
+            'stats' => [['id' => 's1', 'value' => L('500,000+', '500,000+'), 'label' => L('customers', 'pelanggan')]],
+            'items' => [['id' => 'r1', 'quote' => L('Lovely oil.', 'Minyak yang bagus.'), 'name' => L('Aisha', 'Aisha'), 'place' => L('Shah Alam', 'Shah Alam')]]])]),
+        section([w('stores', ['title' => L('Where to buy', 'Di mana membeli'), 'sub' => L('', ''),
+            'items' => array_map(fn ($s) => ['id' => "st-$s", 'store' => $s, 'title' => L($s, $s), 'text' => L('', ''), 'button' => L('Buy', 'Beli')], ['madinah', 'shopee', 'tiktok'])])]),
+        section([w('faq', ['items' => [['id' => 'q1', 'q' => L('Is it extra virgin?', 'Adakah ia extra virgin?'), 'a' => L('Yes.', 'Ya.')]]])]),
+    ], L('Palestinian Extra Virgin Olive Oil', 'Minyak Zaitun Extra Virgin Palestin'), L('Palestinian olive oil | Arabian Village', 'Minyak zaitun Palestin | Arabian Village'));
+    $doc['seo']['metaDescription'] = L('Palestinian extra virgin olive oil in Malaysia.', 'Minyak zaitun extra virgin Palestin di Malaysia.');
+    $doc['layout'] = 'landing';
+    return $doc;
+}
+
+/** What the landing blocks emit, in miniature (LP-SPEC §3, §8 M3). */
+function landing_html(int $formId, int $pageId, string $widgetId): string
+{
+    return '<section class="cms-s"><div class="relative"><img src="/uploads/cms/x-960.webp" alt="" fetchpriority="high" loading="eager" decoding="async">'
+        . '<h1>Palestinian <span class="text-gold">extra virgin olive oil</span></h1>'
+        . '<a href="#cms-form" class="btn" data-cms-cta="form">Fill the form</a>'
+        . '<a href="https://wa.me/60111119912?text=Hello" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>'
+        . '<div id="cms-form" class="scroll-mt-28"><form action="/api/forms/' . $formId . '/submit" method="post">'
+        . '<input type="hidden" name="_page" value="' . $pageId . '"><input type="hidden" name="_widget" value="' . $widgetId . '">'
+        . '<input name="name"><button type="submit">Send</button></form><p id="form-sent-' . $widgetId . '" role="status">Sent</p></div></div>'
+        . '<ol class="steps"><li>One</li></ol><dl><dt>500,000+</dt><dd>customers</dd></dl>'
+        . '<div data-cms-bottom-bar=""><a href="#cms-form" aria-label="Fill the form">Form</a></div>'
+        . '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 1"></path></svg></section>';
+}
+
+test('landing: PHP lists match contracts.ts (widgets, icons, reserved slugs, CTA kinds, stores, button styles, form anchor)', function () {
+    load_pages_lib();
+    $ts = (string) file_get_contents(dirname(__DIR__, 2) . '/src/cms/contracts.ts');
+    eq(AVO_WIDGET_TYPES, ts_strings($ts, '/export const WIDGET_TYPES: WidgetType\[\] = \[(.*?)\];/s', 'WIDGET_TYPES'), 'AVO_WIDGET_TYPES = WIDGET_TYPES');
+    eq(AVO_CMS_ICONS, ts_strings($ts, '/export const CMS_ICONS = \[(.*?)\] as const;/s', 'CMS_ICONS'), 'AVO_CMS_ICONS = CMS_ICONS');
+    eq(AVO_RESERVED_SLUGS, ts_strings($ts, '/export const RESERVED_SLUGS = \[(.*?)\] as const;/s', 'RESERVED_SLUGS'), 'AVO_RESERVED_SLUGS = RESERVED_SLUGS');
+    eq(AVO_CTA_KINDS, ts_strings($ts, "/interface CtaButton \{.*?kind: ([^;]+);/s", 'CtaButton kind'), 'AVO_CTA_KINDS = CtaButton kind');
+    eq(AVO_STORE_KEYS, ts_strings($ts, '/export type StoreKey = ([^;]+);/', 'StoreKey'), 'AVO_STORE_KEYS = StoreKey');
+    eq(AVO_BUTTON_STYLES, ts_strings($ts, '/export type ButtonStyle = ([^;]+);/', 'ButtonStyle'), 'AVO_BUTTON_STYLES = ButtonStyle');
+    eq([AVO_FORM_ANCHOR], ts_strings($ts, '/export const FORM_ANCHOR = ([^;]+);/', 'FORM_ANCHOR'), 'AVO_FORM_ANCHOR = FORM_ANCHOR');
+    foreach (['cms-template-x', 'my-cms-template', 'cms-templates', '__cms-template-landing'] as $s) ok(avo_slug_problem($s) !== null, "slug $s refused");
+    eq(avo_slug_problem('palestinian-extra-virgin-olive-oil'), null, 'a normal slug is fine');
+});
+
+test('landing: translation counter ignores *.highlight (doc.ts missingTranslations mirror)', function () {
+    load_pages_lib();
+    $doc = landing_doc(1, 1, 2, 3);
+    eq(avo_missing_translations($doc, 'ms'), [], 'an untranslated highlight is not counted');
+    $doc = set_path($doc, lp(0, 'formTitle'), L('Ask us', ''));
+    eq(avo_missing_translations($doc, 'ms'), [lp(0, 'formTitle')], 'any other untranslated text is');
+    $doc = set_path($doc, lp(3, 'buttons.0.label'), L('Chat', ''));
+    eq(count(avo_missing_translations($doc, 'ms')), 2, 'button labels counted (dotted path inside an array)');
+    $doc = set_path(landing_doc(1, 1, 2, 3), 'sections.0.columns.0.widgets.0.settings.highlight', L('', 'minyak zaitun'));
+    eq(avo_missing_translations($doc, 'en'), [], 'also in the other direction');
+});
+
+test('sanitiser keeps the landing markup (#cms-form anchor + id, fetchpriority, ol, dl, data-cms-*, aria-*, rel)', function () {
+    load_pages_lib();
+    $in = landing_html(7, 3, 'wabc123');
+    eq(avo_sanitize_html($in, 'page'), $in, 'landing markup unchanged');
+    eq(avo_sanitize_html('<img src="/a.webp" fetchpriority="urgent" alt="">', 'page'), '<img src="/a.webp" alt="">', 'unknown fetchpriority value dropped');
+    eq(avo_sanitize_html('<a href="https://x.example" target="_blank">x</a>', 'page'), '<a href="https://x.example" target="_blank" rel="noopener noreferrer">x</a>', 'new-tab links get noopener noreferrer');
+});
+
+test('landing: slugs containing cms-template refused; cms-form refused as a section anchor', function () use ($admin) {
+    tdb()->exec('DELETE FROM login_attempts');
+    foreach (['cms-template-x', 'my-cms-template', 'cms-templates', '__cms-template-landing'] as $bad) {
+        $r = $admin->post('/api/pages', ['slug' => $bad, 'title' => L('T')]);
+        status($r, 400, "slug '$bad' refused");
+        ok(isset($r->json()['error']['fields']['slug']), "slug error on the field ($bad)");
+    }
+    contains($admin->post('/api/pages', ['slug' => 'cms-template-x', 'title' => L('T')])->json()['error']['message'], 'reserved', 'plain-language reason');
+    $r = $admin->post('/api/pages', ['slug' => 'palestinian-extra-virgin-olive-oil', 'title' => L('Palestinian Extra Virgin Olive Oil', 'Minyak Zaitun Extra Virgin Palestin')]);
+    status($r, 200, 'landing page created');
+    $GLOBALS['S']['lpId'] = $r->json()['page']['id'];
+    $status = $admin->patch('/api/pages/' . $GLOBALS['S']['lpId'], ['slug' => 'cms-template-landing-2']);
+    status($status, 400, 'rename to a cms-template slug refused');
+    $doc = doc_with([section([w('heading', ['text' => L('Hi', 'Hai'), 'level' => 'h2', 'size' => 'l', 'align' => 'start', 'color' => 'default'])])]);
+    $doc['sections'][0]['settings']['anchor'] = 'cms-form';
+    $r = $admin->put('/api/pages/' . $GLOBALS['S']['lpId'] . '/draft', ['doc' => $doc, 'baseVersion' => 1]);
+    status($r, 400, 'anchor cms-form refused');
+    ok(isset($r->json()['error']['fields']['sections.0.settings.anchor']), 'error points at the anchor');
+    $doc['sections'][0]['settings']['anchor'] = 'cms-form-2';
+    status($admin->put('/api/pages/' . $GLOBALS['S']['lpId'] . '/draft', ['doc' => $doc, 'baseVersion' => 1]), 200, 'a different anchor is fine');
+});
+
+test('landing: validation rejects bad kind / store / icon / href / overlay / columns / layout / tone / list sizes; a full landing doc saves', function () use ($admin) {
+    load_pages_lib();
+    $src = C('data') . '/upload-src/photo.jpg';
+    $up = fn () => $admin->req('POST', '/api/media', ['form' => ['file' => new CURLFile($src, 'image/jpeg', 'photo.jpg'), 'altEn' => 'Grove', 'altMs' => 'Kebun'], 'multipart' => true]);
+    foreach (['lpHero', 'lpCards', 'lpSteps'] as $k) {
+        $r = $up();
+        status($r, 200, "upload $k");
+        $GLOBALS['S'][$k] = $r->json()['id'];
+    }
+    $f = $admin->post('/api/forms', ['name' => 'Olive oil enquiry', 'subject' => 'Olive oil enquiry', 'recipients' => ['cs@example.com'], 'def' => $GLOBALS['S']['formDef']]);
+    status($f, 200, 'enquiry form');
+    $GLOBALS['S']['lpForm'] = $f->json()['id'];
+    $S = $GLOBALS['S'];
+    $id = $S['lpId'];
+    $good = landing_doc($S['lpForm'], $S['lpHero'], $S['lpCards'], $S['lpSteps']);
+    $version = $admin->get("/api/pages/$id")->json()['page']['version'];
+    $chips7 = array_map(fn ($i) => ['id' => "c$i", 'text' => L('x', 'x')], range(1, 7));
+    $cards13 = array_map(fn ($i) => ['id' => "k$i", 'icon' => 'leaf', 'title' => L('x', 'x'), 'text' => L('x', 'x')], range(1, 13));
+    $stats5 = array_map(fn ($i) => ['id' => "s$i", 'value' => L('1', '1'), 'label' => L('x', 'x')], range(1, 5));
+    $bad = [
+        // [path to set, value, field the error must point at]
+        ['layout', 'popup', 'layout'],
+        [lp(0, 'buttons.0.kind'), 'phone', lp(0, 'buttons.0.kind')],
+        [lp(0, 'buttons.1.store'), 'lazada', lp(0, 'buttons.1.store')],
+        [lp(0, 'buttons.1'), ['id' => 'bx', 'kind' => 'store', 'label' => L('x', 'x'), 'style' => 'gold'], lp(0, 'buttons.1.store')],
+        [lp(0, 'buttons.2.href'), 'javascript:alert(1)', lp(0, 'buttons.2.href')],
+        [lp(0, 'buttons.2.href'), '//evil.example/x', lp(0, 'buttons.2.href')],
+        [lp(0, 'buttons.2.href'), ['x'], lp(0, 'buttons.2.href')],
+        [lp(0, 'buttons.0.style'), 'neon', lp(0, 'buttons.0.style')],
+        [lp(0, 'buttons.0.newTab'), 'yes', lp(0, 'buttons.0.newTab')],
+        [lp(0, 'buttons'), [cta('form'), cta('form'), cta('form'), cta('form')], lp(0, 'buttons')],
+        [lp(0, 'chips'), $chips7, lp(0, 'chips')],
+        [lp(0, 'chips.0'), 'just text', lp(0, 'chips.0')],
+        [lp(0, 'overlay'), 90, lp(0, 'overlay')],
+        [lp(0, 'overlay'), -1, lp(0, 'overlay')],
+        [lp(0, 'overlay'), '50', lp(0, 'overlay')],
+        [lp(0, 'tone'), 'blue', lp(0, 'tone')],
+        [lp(0, 'formId'), '3', lp(0, 'formId')],
+        [lp(0, 'media'), 'x', lp(0, 'media')],
+        [lp(0, 'title'), 'not localized', lp(0, 'title')],
+        [lp(1, 'columns'), 5, lp(1, 'columns')],
+        [lp(1, 'columns'), '3', lp(1, 'columns')],
+        [lp(1, 'items.0.icon'), 'skull', lp(1, 'items.0.icon')],
+        [lp(1, 'items'), $cards13, lp(1, 'items')],
+        [lp(1, 'mediaSide'), 'top', lp(1, 'mediaSide')],
+        [lp(3, 'icon'), 'skull', lp(3, 'icon')],
+        [lp(3, 'tone'), 'red', lp(3, 'tone')],
+        [lp(3, 'buttons.1.kind'), null, lp(3, 'buttons.1.kind')],
+        [lp(4, 'items.0.icon'), 'skull', lp(4, 'items.0.icon')],
+        [lp(5, 'stats'), $stats5, lp(5, 'stats')],
+        [lp(6, 'items.0.store'), 'amazon', lp(6, 'items.0.store')],
+    ];
+    foreach ($bad as [$path, $value, $field]) {
+        $r = $admin->put("/api/pages/$id/draft", ['doc' => set_path($good, $path, $value), 'baseVersion' => $version]);
+        $label = "$path = " . json_encode($value);
+        status($r, 400, "refused: $label");
+        ok(isset($r->json()['error']['fields'][$field]), "error points at $field ($label): " . json_encode($r->json()['error']['fields'] ?? null));
+    }
+    // tolerated: unknown fields, icon 'none' on a band, an empty link (a publish-dialog warning, not an error), every icon
+    $ok = set_path($good, lp(0, 'futureField'), ['anything' => 1]);
+    $ok = set_path($ok, lp(3, 'buttons.0'), cta('link', ['href' => '']));
+    $ok = set_path($ok, lp(4, 'items'), array_map(fn ($i) => ['id' => "g$i", 'icon' => $i, 'title' => L('x', 'x')], array_slice(AVO_CMS_ICONS, 0, 12)));
+    $ok = set_path($ok, lp(1, 'items'), array_map(fn ($i) => ['id' => "k$i", 'icon' => $i, 'title' => L('x', 'x'), 'text' => L('x', 'x')], array_slice(AVO_CMS_ICONS, 11)));
+    $r = $admin->put("/api/pages/$id/draft", ['doc' => $ok, 'baseVersion' => $version]);
+    status($r, 200, 'tolerated variations save');
+    $version = $r->json()['version'];
+    $noLayout = $good;
+    unset($noLayout['layout']);
+    $r = $admin->put("/api/pages/$id/draft", ['doc' => $noLayout, 'baseVersion' => $version]);
+    status($r, 200, 'layout is optional (old docs stay valid)');
+    $r = $admin->put("/api/pages/$id/draft", ['doc' => $good, 'baseVersion' => $r->json()['version']]);
+    status($r, 200, 'full landing doc saved');
+    eq($admin->get("/api/pages/$id")->json()['draft']['layout'] ?? null, 'landing', 'layout stored');
+});
+
+test('landing: builder payload, form usage and page list see the heroForm form + heroForm/cards/steps photos', function () use ($admin) {
+    $S = $GLOBALS['S'];
+    $p = $admin->get('/api/pages/' . $S['lpId'])->json();
+    eq(array_map('intval', array_keys($p['media'])), [$S['lpHero'], $S['lpCards'], $S['lpSteps']], 'builder payload media (draft): heroForm, cards, steps');
+    ok(isset($p['forms'][(string) $S['lpForm']]['def']['fields']), 'builder payload forms has the heroForm form');
+    eq($p['page']['needsTranslation'], 0, 'page list: an untranslated highlight is not counted');
+    eq($admin->get('/api/forms/' . $S['lpForm'] . '/usage')->json(), [$S['lpId']], 'form usage counts a heroForm (draft)');
+    $list = array_column($admin->get('/api/forms')->json(), null, 'id');
+    eq($list[$S['lpForm']]['usedOn'], [$S['lpId']], 'forms list usedOn');
+    status($admin->delete('/api/forms/' . $S['lpForm']), 409, 'a form used by a heroForm cannot be deleted');
+    foreach (['lpHero' => 'heroForm', 'lpCards' => 'cards', 'lpSteps' => 'steps'] as $k => $what) {
+        $r = $admin->delete('/api/media/' . $S[$k]);
+        status($r, 409, "photo used by a $what cannot be deleted");
+        contains($r->json()['error']['message'], 'Page: palestinian-extra-virgin-olive-oil', "says where ($what)");
+    }
+});
+
+test('landing: publish → landing template, no menus, no BreadcrumbList; deps + page file carry the heroForm form and photos', function () use ($admin, $anon) {
+    $S = $GLOBALS['S'];
+    $id = $S['lpId'];
+    $doc = $admin->get("/api/pages/$id")->json()['draft'];
+    $wid = $doc['sections'][0]['columns'][0]['widgets'][0]['id'];
+    $GLOBALS['S']['lpWidget'] = $wid;
+    $html = ['en' => b64(landing_html($S['lpForm'], $id, $wid)), 'ms' => b64(landing_html($S['lpForm'], $id, $wid))];
+    $r = $admin->post("/api/pages/$id/publish", ['doc' => $doc, 'htmlB64' => $html, 'langs' => ['en', 'ms'], 'build' => C('build')]);
+    status($r, 200, 'publish landing page');
+    eq($r->json()['langs'], ['en', 'ms'], 'both languages published although the Malay highlight is empty');
+
+    $deps = json_decode((string) tdb()->query("SELECT deps_json FROM pages WHERE id = $id")->fetchColumn(), true);
+    foreach (['form:' . $S['lpForm'], 'media:' . $S['lpHero'], 'media:' . $S['lpCards'], 'media:' . $S['lpSteps']] as $dep) {
+        ok(in_array($dep, $deps, true), "deps has $dep: " . json_encode($deps));
+    }
+    $file = json_decode((string) file_get_contents(C('data') . '/published/pages/palestinian-extra-virgin-olive-oil.json'), true);
+    ok(isset($file['forms'][(string) $S['lpForm']]), 'page file has the heroForm form');
+    eq(array_map('intval', array_keys($file['media'])), [$S['lpHero'], $S['lpCards'], $S['lpSteps']], 'page file has the three photos');
+    lacks(json_encode($file['forms']), 'cs@example.com', 'recipients never in the page file');
+
+    $menuBefore = $anon->get('/en/why-us')->doc()->querySelectorAll('[data-cms-menu-item]')->length;
+    ok($menuBefore > 0, 'another page is in the menus (so a leak would show)');
+    foreach (['en', 'ms'] as $lang) {
+        $res = $anon->get("/$lang/palestinian-extra-virgin-olive-oil");
+        status($res, 200, "landing page ($lang)");
+        $d = $res->doc();
+        ok($d->querySelector('[data-cms-landing-header]') !== null, "landing header ($lang)");
+        eq($d->documentElement->getAttribute('lang'), $lang, "landing template of the language ($lang)");
+        eq($d->querySelectorAll('[data-cms-menu]')->length, 0, "no site menu ($lang)");
+        eq($d->querySelectorAll('[data-cms-menu-item]')->length, 0, "no CMS menu items ($lang)");
+        lacks($res->body, '__cms-template', "template name rewritten ($lang)");
+        eq($d->querySelector('a[data-test-self]')?->getAttribute('href'), "/$lang/palestinian-extra-virgin-olive-oil#top", "the exact template name is rewritten, not a prefix of it ($lang)");
+        eq($d->querySelector('link[rel="canonical"]')->getAttribute('href'), "https://avoliveoil.com/$lang/palestinian-extra-virgin-olive-oil", "canonical ($lang)");
+        eq($d->querySelector('a[data-cms-lang-link="en"]')->getAttribute('href'), '/en/palestinian-extra-virgin-olive-oil', "lang link en ($lang)");
+        eq($d->querySelector('a[data-cms-lang-link="ms"]')->getAttribute('href'), '/ms/palestinian-extra-virgin-olive-oil', "lang link ms ($lang)");
+        $types = [];
+        foreach ($d->querySelectorAll('script[type="application/ld+json"]') as $s) $types[] = json_decode($s->textContent, true)['@type'] ?? null;
+        ok(in_array('WebPage', $types, true) && in_array('FAQPage', $types, true) && in_array('Organization', $types, true), "WebPage + FAQPage + site JSON-LD ($lang): " . json_encode($types));
+        ok(!in_array('BreadcrumbList', $types, true), "no BreadcrumbList on a landing page ($lang): " . json_encode($types));
+        $root = $d->querySelector('[data-cms-page-root]')->innerHTML;
+        foreach (['id="cms-form"', 'href="#cms-form"', 'fetchpriority="high"', '<ol class="steps">', '<dl>', 'data-cms-bottom-bar=""', 'name="_widget"', 'rel="noopener noreferrer"', 'action="/api/forms/' . $S['lpForm'] . '/submit"'] as $needle) {
+            contains($root, $needle, "landing markup served ($lang)");
+        }
+        $boot = $res->boot();
+        eq($boot['page']['doc']['layout'] ?? null, 'landing', "boot doc layout ($lang)");
+        ok(isset($boot['page']['forms'][(string) $S['lpForm']]), "boot forms ($lang)");
+        eq(count((array) $boot['page']['media']), 3, "boot media ($lang)");
+        ok(!in_array('BreadcrumbList', array_column($boot['page']['seo']['jsonLd'], '@type'), true), "ResolvedSeo for React has no BreadcrumbList either ($lang)");
+    }
+    ok(is_file(rpath('_r/en/palestinian-extra-virgin-olive-oil/index.html')), 'landing page cached in /_r');
+    // a site page is unchanged: site template, menus, breadcrumb
+    $site = $anon->get('/en/summer-deal')->doc();
+    ok($site->querySelector('[data-cms-menu="header"]') !== null && $site->querySelector('[data-cms-landing-header]') === null, 'site page keeps the site template');
+    $types = [];
+    foreach ($site->querySelectorAll('script[type="application/ld+json"]') as $s) $types[] = json_decode($s->textContent, true)['@type'] ?? null;
+    ok(in_array('BreadcrumbList', $types, true), 'site page keeps its BreadcrumbList');
+    $api = $anon->get('/api/public/page?slug=palestinian-extra-virgin-olive-oil&lang=ms');
+    status($api, 200, 'public page API');
+    eq($api->json()['doc']['layout'] ?? null, 'landing', 'public API carries the layout');
+});
+
+test('landing: the template follows the doc being rendered — draft preview vs published', function () use ($admin, $anon) {
+    // a published SITE page whose draft switches to landing: preview = landing, public = site
+    $sid = $GLOBALS['S']['pageId'];
+    $p = $admin->get("/api/pages/$sid")->json();
+    $draft = $p['draft'];
+    $draft['layout'] = 'landing';
+    status($admin->put("/api/pages/$sid/draft", ['doc' => $draft, 'baseVersion' => $p['page']['version']]), 200, 'draft → landing');
+    $pv = $admin->get('/en/summer-deal?cms-preview=1');
+    status($pv, 200, 'preview');
+    $d = $pv->doc();
+    ok($d->querySelector('[data-cms-landing-header]') !== null, 'preview of a landing draft uses the landing template');
+    eq($d->querySelectorAll('[data-cms-menu]')->length, 0, 'preview: no site menu');
+    eq($pv->boot()['preview'] ?? null, true, 'boot.preview');
+    $types = array_column($pv->boot()['page']['seo']['jsonLd'], '@type');
+    ok(!in_array('BreadcrumbList', $types, true), 'preview ResolvedSeo has no BreadcrumbList');
+    $pub = $anon->get('/en/summer-deal?cms-nocache=1')->doc();
+    ok($pub->querySelector('[data-cms-menu="header"]') !== null && $pub->querySelector('[data-cms-landing-header]') === null, 'public page still renders the published (site) doc');
+    $draft['layout'] = 'site';
+    status($admin->put("/api/pages/$sid/draft", ['doc' => $draft, 'baseVersion' => $p['page']['version'] + 1]), 200, 'draft back to site');
+    ok($admin->get('/en/summer-deal?cms-preview=1')->doc()->querySelector('[data-cms-menu="header"]') !== null, 'preview of a site draft uses the site template');
+    // a never-published landing draft
+    $r = $admin->post('/api/pages', ['slug' => 'olive-oil-offer', 'title' => L('Offer', 'Tawaran')]);
+    status($r, 200, 'second landing page');
+    $nid = $r->json()['page']['id'];
+    $S = $GLOBALS['S'];
+    status($admin->put("/api/pages/$nid/draft", ['doc' => landing_doc($S['lpForm'], $S['lpHero'], $S['lpCards'], $S['lpSteps']), 'baseVersion' => 1]), 200, 'landing draft');
+    $pv = $admin->get('/ms/olive-oil-offer?cms-preview=1');
+    status($pv, 200, 'preview of a never-published landing draft');
+    ok($pv->doc()->querySelector('[data-cms-landing-header]') !== null, 'landing template');
+    eq($pv->doc()->documentElement->getAttribute('lang'), 'ms', 'Malay landing template');
+    $boot = $pv->boot();
+    ok(isset($boot['page']['forms'][(string) $S['lpForm']]), 'preview payload has the heroForm form');
+    eq(count((array) $boot['page']['media']), 3, 'preview payload has the heroForm/cards/steps photos');
+    status($anon->get('/en/olive-oil-offer'), 404, 'a draft is not public');
+    status($anon->get('/en/olive-oil-offer?cms-preview=1'), 404, 'preview needs a session');
+    eq($admin->get("/api/forms/{$S['lpForm']}/usage")->json(), [$S['lpId'], $nid], 'form usage lists both pages');
+    $GLOBALS['S']['lpDraftId'] = $nid;
+});
+
+test('landing: saving the form or editing a photo description marks the landing page for re-render', function () use ($admin) {
+    $S = $GLOBALS['S'];
+    $id = $S['lpId'];
+    $admin->post("/api/pages/$id/html", ['htmlB64' => ['en' => b64('<p>x</p>')], 'build' => C('build')]);
+    ok(!in_array($id, $admin->get('/api/pages/dirty')->json(), true), 'clean to start with');
+    $f = $admin->get("/api/forms/{$S['lpForm']}")->json();
+    $r = $admin->put("/api/forms/{$S['lpForm']}", ['name' => $f['name'], 'subject' => $f['subject'], 'recipients' => $f['recipients'], 'def' => $f['def']]);
+    status($r, 200, 'save form');
+    eq($r->json()['dirtyPages'], [$id], 'the published landing page is a dependant of its heroForm form');
+    $admin->post("/api/pages/$id/html", ['htmlB64' => ['en' => b64(landing_html($S['lpForm'], $id, $S['lpWidget'])), 'ms' => b64(landing_html($S['lpForm'], $id, $S['lpWidget']))], 'build' => C('build')]);
+    foreach (['lpHero', 'lpCards', 'lpSteps'] as $k) {
+        ok(!in_array($id, $admin->get('/api/pages/dirty')->json(), true), "clean before the $k alt edit");
+        status($admin->patch('/api/media/' . $S[$k], ['altEn' => "New $k", 'altMs' => "Baru $k"]), 200, "alt edit $k");
+        ok(in_array($id, $admin->get('/api/pages/dirty')->json(), true), "alt edit of the $k photo marks the page");
+        $admin->post("/api/pages/$id/html", ['htmlB64' => ['en' => b64(landing_html($S['lpForm'], $id, $S['lpWidget'])), 'ms' => b64(landing_html($S['lpForm'], $id, $S['lpWidget']))], 'build' => C('build')]);
+    }
+});
+
+test('landing: no-JS heroForm submit → 303 back to the landing page at the form widget', function () {
+    age_submissions();
+    $S = $GLOBALS['S'];
+    $c = new Client();
+    $form = ['name' => 'No JS', 'email' => 'nojs@example.com', 'consent' => 'on', '_page' => (string) $S['lpId'], '_lang' => 'ms', '_widget' => $S['lpWidget']];
+    $r = $c->req('POST', "/api/forms/{$S['lpForm']}/submit", ['form' => $form]);
+    status($r, 303, 'urlencoded → 303');
+    eq($r->header('location'), "/ms/palestinian-extra-virgin-olive-oil#form-sent-{$S['lpWidget']}", 'back to the landing page that embeds the form, at the widget');
+    $r = $c->req('POST', "/api/forms/{$S['lpForm']}/submit", ['form' => ['name' => ''] + $form]);
+    eq($r->header('location'), "/ms/palestinian-extra-virgin-olive-oil#form-error-{$S['lpWidget']}", 'invalid → #form-error-<widget>');
+    $r = $c->req('POST', "/api/forms/{$S['lpForm']}/submit", ['form' => ['_widget' => '"><script>alert(1)</script>'] + $form]);
+    eq($r->header('location'), "/ms/palestinian-extra-virgin-olive-oil#form-sent-{$S['lpForm']}", 'a bogus widget id falls back to the form id');
+    $r = $c->req('POST', "/api/forms/{$S['lpForm']}/submit", ['form' => ['_page' => (string) $S['pageId']] + $form]);
+    eq($r->header('location'), "/ms#form-sent-{$S['lpWidget']}", 'a page that does not embed the form → language root');
+    age_submissions();
+});
+
+test('landing: landing template missing or without a page root → site template + log, never 503', function () use ($anon) {
+    $tpl = rpath('en/__cms-template-landing/index.html');
+    $orig = (string) file_get_contents($tpl);
+    $log = C('data') . '/logs/cms.log';
+    try {
+        rename($tpl, "$tpl.bak");
+        $r = $anon->get('/en/palestinian-extra-virgin-olive-oil?cms-nocache=1');
+        status($r, 200, 'missing landing template → still 200');
+        $d = $r->doc();
+        ok($d->querySelector('[data-cms-menu="header"]') !== null && $d->querySelector('[data-cms-landing-header]') === null, 'site template used');
+        contains($d->querySelector('[data-cms-page-root]')->innerHTML, 'id="cms-form"', 'page content still served');
+        lacks($r->body, '__cms-template', 'site template name rewritten');
+        contains((string) file_get_contents($log), 'landing template is missing, using the site template', 'logged');
+        rename("$tpl.bak", $tpl);
+        file_put_contents($tpl, str_replace('data-cms-page-root=""', 'data-x=""', $orig));
+        $r = $anon->get('/en/palestinian-extra-virgin-olive-oil?cms-nocache=1');
+        status($r, 200, 'landing template without a root → still 200');
+        ok($r->doc()->querySelector('[data-cms-menu="header"]') !== null, 'site template used');
+        contains((string) file_get_contents($log), 'landing template has no [data-cms-page-root], using the site template', 'logged');
+        $r = $anon->get('/ms/palestinian-extra-virgin-olive-oil?cms-nocache=1');
+        ok($r->doc()->querySelector('[data-cms-landing-header]') !== null, 'the other language keeps its landing template');
+    } finally {
+        if (is_file("$tpl.bak")) rename("$tpl.bak", $tpl);
+        file_put_contents($tpl, $orig);
+    }
+    ok($anon->get('/en/palestinian-extra-virgin-olive-oil?cms-nocache=1')->doc()->querySelector('[data-cms-landing-header]') !== null, 'landing template again once restored');
+});
+
+test('landing: template URLs are 404 under every spelling', function () use ($anon) {
+    foreach (['/en/__cms-template-landing', '/en/__cms-template-landing/', '/en/__cms-template-landing/index.html', '/ms/__cms-template-landing',
+        '/EN/__CMS-TEMPLATE-LANDING', '/en/__cms-template/index.html', '/en/cms-template-landing'] as $u) {
+        status($anon->get($u), 404, "$u hidden");
+    }
+});

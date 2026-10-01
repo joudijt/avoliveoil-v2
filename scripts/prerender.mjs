@@ -31,6 +31,8 @@ const INFUSED_SLUGS = JSON.parse(
   readFileSync(join(__dirname, '..', 'src/data/infusedSlugs.json'), 'utf-8')
 );
 
+const CMS_TEMPLATES = ['__cms-template', '__cms-template-landing'];
+
 const ROUTES = [
   ...LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`))),
   // Only the languages an article was actually written in. Without the filter
@@ -43,11 +45,12 @@ const ROUTES = [
       .map((perLang) => `/${lang}/blog/${perLang[lang]}`)
   ),
   ...LANGS.flatMap((lang) => INFUSED_SLUGS.map((slug) => `/${lang}/products/${slug}`)),
-  // The page shell for pages built in the control panel (docs/cms/CMS-SPEC.md §5,
-  // §15): Navbar + <main><div data-cms-page-root></div></main> + Footer, which
-  // serve.php fills with a published page. Never a public URL (.htaccess 404s it),
-  // never in the sitemap, llms files or the per-page gates.
-  ...LANGS.map((lang) => `/${lang}/__cms-template`),
+  // The page shells for pages built in the control panel (docs/cms/CMS-SPEC.md §5,
+  // §15; LP-SPEC §8 B1): site chrome (Navbar + Footer) or landing chrome (landing
+  // header + footer) around <main><div data-cms-page-root></div></main>, which
+  // serve.php fills with a published page according to its layout. Never public URLs
+  // (.htaccess 404s them), never in the sitemap, llms files or the per-page gates.
+  ...LANGS.flatMap((lang) => CMS_TEMPLATES.map((name) => `/${lang}/${name}`)),
 ];
 const PORT = 4173;
 
@@ -142,6 +145,30 @@ async function main() {
     await browser.close();
     await new Promise((resolve) => server.httpServer.close(resolve));
   }
+  checkTemplates();
+}
+
+/**
+ * serve.php trusts these two snapshots blindly, so a template that lost its page root
+ * or got the wrong chrome would break every CMS page of that layout. Fail the build.
+ */
+function checkTemplates() {
+  const problems = [];
+  for (const lang of LANGS) {
+    const read = (name) => readFileSync(join(distDir, lang, name, 'index.html'), 'utf-8');
+    const site = read('__cms-template');
+    const landing = read('__cms-template-landing');
+    if (!site.includes('data-cms-page-root')) problems.push(`/${lang}/__cms-template: no data-cms-page-root`);
+    if (!site.includes('data-cms-menu')) problems.push(`/${lang}/__cms-template: no data-cms-menu (site header missing)`);
+    if (!landing.includes('data-cms-page-root')) problems.push(`/${lang}/__cms-template-landing: no data-cms-page-root`);
+    if (!landing.includes('data-cms-landing-header')) problems.push(`/${lang}/__cms-template-landing: no data-cms-landing-header`);
+    if (landing.includes('data-cms-menu')) problems.push(`/${lang}/__cms-template-landing: contains data-cms-menu (site menu on a landing page)`);
+    // the landing page brings its own WhatsApp buttons: no global floating one (fixed, wa.me)
+    if (/<a\b[^>]*href="https:\/\/wa\.me\/[^"]*"[^>]*class="fixed\b/.test(landing)) problems.push(`/${lang}/__cms-template-landing: global floating WhatsApp button present`);
+    if (!/data-cms-lang-link="en"/.test(landing) || !/data-cms-lang-link="ms"/.test(landing)) problems.push(`/${lang}/__cms-template-landing: language links missing`);
+  }
+  if (problems.length) throw new Error(`CMS template check failed:\n  ${problems.join('\n  ')}`);
+  console.log('CMS templates OK (site + landing, en + ms)');
 }
 
 main().catch((err) => {

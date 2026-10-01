@@ -16,4 +16,11 @@ export const WIDGET_LABELS: Record<WidgetType, string> = {
   form: 'Form',
   quote: 'Quote',
   whatsapp: 'WhatsApp button',
+  heroForm: 'Hero with form',
+  cards: 'Icon cards',
+  steps: 'Steps',
+  ctaBand: 'Call to action band',
+  badges: 'Badges',
+  reviews: 'Reviews',
+  stores: 'Where to buy',
 };

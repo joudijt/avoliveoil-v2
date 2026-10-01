@@ -282,7 +282,7 @@ adding/removing FAQ items or list entries — the list shapes stay as built).
   `/api/_setup/`, `/api/tests/` → 404 (`THE_REQUEST`) · 5 `^api/(.*)$` → `/api/index.php` (except real files
   `api/serve.php`, `api/sitemap.php`, `api/index.php`) · 6 `^sitemap\.xml$` → `/api/sitemap.php` ·
   7 `^admin(/.*)?$` → `/admin.html` (+ `X-Robots-Tag: noindex, nofollow`) · 8 external request for
-  `/(en|ms)/…/index.html` → 301 clean path; any `__cms-template` / `cms-template` path → 404 · 9 uppercase in
+  `/(en|ms)/…/index.html` → 301 clean path; any path segment matching `_*cms-template[a-z0-9-]*` → 404 (since 2026-10-02 this runs BEFORE the `index.html` 301, so `/en/__cms-template/index.html` is a 404 too) · 9 uppercase in
   `/(en|ms)…` → 301 lowercase · 10 trailing slash on `/(en|ms)/x/` → 301 slashless (roots `/en/` → `/en`) ·
   11 `^$` and `^(en|ms)(/[a-z0-9-]+)*$` → `/_r/<path>/index.html` if it exists (bare `/` uses `_r/en`), else
   `/api/serve.php` · 12 `^cms-canvas$` → SPA shell · 13 existing file/dir passthrough · 14 extension-404

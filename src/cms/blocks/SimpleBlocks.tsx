@@ -1,10 +1,10 @@
-import { FaLeaf } from 'react-icons/fa';
 import type { DividerWidget, SpacerWidget, VideoWidget } from '../contracts';
 import { parseVideoUrl } from '../video';
 import { ALIGN_FLEX, DIVIDER, SPACER, VIDEO, cx } from './classes';
 import { useBlockEnv } from './context';
 import { CanvasEmpty } from './CanvasEmpty';
 import { ui } from './strings';
+import { LeafSolidIcon } from './icons';
 
 export function SpacerBlock({ w }: { w: SpacerWidget }) {
   return <div className={SPACER[w.settings.size] ?? SPACER.m} aria-hidden="true" />;
@@ -18,7 +18,7 @@ export function DividerBlock({ w }: { w: DividerWidget }) {
       <div className={ALIGN_FLEX[env.align]}>
         <div className={cx(DIVIDER.leaf, DIVIDER.leafWidth[s.width] ?? DIVIDER.leafWidth.s)} role="separator">
           <span className={DIVIDER.leafLine} />
-          <FaLeaf className={DIVIDER.leafIcon} aria-hidden />
+          <LeafSolidIcon className={DIVIDER.leafIcon} />
           <span className={DIVIDER.leafLine} />
         </div>
       </div>

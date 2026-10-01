@@ -1,10 +1,10 @@
-import { FaWhatsapp } from 'react-icons/fa';
 import type { ButtonWidget, WhatsappWidget } from '../contracts';
 import { isExternalHref, localizeHref, safeHref } from '../sanitize';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 import { ALIGN_FLEX, BUTTON, cx } from './classes';
 import { fieldAttr, useBlockEnv } from './context';
 import { placeholderAttr, shown } from './text';
+import { WhatsappIcon } from './icons';
 
 export function ButtonBlock({ w }: { w: ButtonWidget }) {
   const env = useBlockEnv();
@@ -21,7 +21,7 @@ export function ButtonBlock({ w }: { w: ButtonWidget }) {
         className={cx(BUTTON.base, BUTTON.size[s.size] ?? BUTTON.size.m, style)}
         {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       >
-        {s.style === 'whatsapp' ? <FaWhatsapp className={BUTTON.icon} aria-hidden /> : null}
+        {s.style === 'whatsapp' ? <WhatsappIcon className={BUTTON.icon} /> : null}
         <span {...fieldAttr(env, 'label')} {...placeholderAttr(label)}>
           {label.text}
         </span>
@@ -40,7 +40,7 @@ export function WhatsappBlock({ w }: { w: WhatsappWidget }) {
   return (
     <div className={ALIGN_FLEX[s.align]}>
       <a href={href} target="_blank" rel="noopener noreferrer" className={cx(BUTTON.base, BUTTON.size.m, BUTTON.style[env.tone].whatsapp)}>
-        <FaWhatsapp className={BUTTON.icon} aria-hidden />
+        <WhatsappIcon className={BUTTON.icon} />
         <span {...fieldAttr(env, 'label')} {...placeholderAttr(label)}>
           {label.text}
         </span>

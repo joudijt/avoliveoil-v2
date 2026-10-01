@@ -30,6 +30,12 @@ html[data-cms-canvas] [data-node-kind="widget"] { cursor: default; }
 [data-cms-empty-col] { cursor: pointer; min-height: 120px; }
 [data-cms-empty-col]:hover { border-color: ${GOLD}; color: ${GOLD}; }
 [data-cms-empty-col][data-drop-active] { border-color: ${BLUE}; color: ${BLUE}; background: rgba(59,130,246,.06); }
+[data-cms-landing-strip] {
+  display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px;
+  background: ${OLIVE_DARK}; color: #fffdf8; font: 600 11px/16px Inter, system-ui, sans-serif;
+  letter-spacing: .04em; text-align: center; pointer-events: none; user-select: none;
+}
+[data-cms-landing-strip]::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: ${GOLD}; flex: none; }
 [data-cms-empty-doc] { min-height: 260px; margin: 48px 24px; cursor: pointer; font-size: 15px; }
 [data-cms-empty-doc]:hover { border-color: ${GOLD}; color: ${GOLD}; }
 

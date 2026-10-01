@@ -5,6 +5,8 @@ import {
   LuAlignRight,
   LuArrowDown,
   LuArrowUp,
+  LuBan,
+  LuExternalLink,
   LuGripVertical,
   LuImagePlus,
   LuLink,
@@ -16,13 +18,15 @@ import {
   LuTriangleAlert,
   LuX,
 } from 'react-icons/lu';
-import type { Align, CmsLang, HideOn, Localized, TextColor } from '../../../../cms/contracts';
+import { CMS_ICONS, type Align, type CmsIcon, type CmsLang, type HideOn, type Localized, type TextColor } from '../../../../cms/contracts';
 import { linkProblem } from './linkRules';
-import { variantUrl, type MediaItem } from '../../../api';
+import { api, variantUrl, type MediaItem } from '../../../api';
+import { toastError } from '../../../lib/bus';
 import { cx } from '../../../lib/cx';
 import { MediaPicker } from '../../media/MediaPicker';
 import { useBuilder } from '../context';
-import { Button, Field, IconButton, Input, Segmented, Switch, Textarea } from '../../../ui/ui';
+import { Button, Field, IconButton, Input, Segmented, Select, Switch, Textarea } from '../../../ui/ui';
+import { CMS_ICON_VIEW } from '../cmsIcons';
 
 const LANG_NAME: Record<CmsLang, string> = { en: 'English', ms: 'Bahasa Melayu' };
 
@@ -54,6 +58,7 @@ export function LocField({
   maxLength,
   hint,
   rows = 3,
+  optionalTranslation,
 }: {
   label: string;
   value: Localized | undefined;
@@ -63,13 +68,15 @@ export function LocField({
   maxLength?: number;
   hint?: ReactNode;
   rows?: number;
+  /** decoration that may stay untranslated (excluded from the "needs translation" count) */
+  optionalTranslation?: boolean;
 }) {
   const { lang } = useBuilder();
   const id = useId();
   const other: CmsLang = lang === 'en' ? 'ms' : 'en';
   const cur = value?.[lang] ?? '';
   const ref = value?.[other] ?? '';
-  const missing = lang === 'ms' && !cur.trim() && !!ref.trim();
+  const missing = !optionalTranslation && lang === 'ms' && !cur.trim() && !!ref.trim();
   return (
     <Field
       label={label}
@@ -488,5 +495,97 @@ export function ItemList<T extends { id: string }>({
         {addLabel}
       </Button>
     </div>
+  );
+}
+
+// ---------------------------------------------------------------- icons
+
+/** Visual grid of every CMS icon; `allowNone` adds a "no icon" choice first. */
+export function IconPicker<T extends CmsIcon | 'none'>({ label = 'Icon', value, onChange, allowNone }: { label?: string; value: T; onChange: (v: T) => void; allowNone?: boolean }) {
+  const choices = (allowNone ? ['none', ...CMS_ICONS] : [...CMS_ICONS]) as T[];
+  return (
+    <Field label={label} aside={value === 'none' ? 'No icon' : CMS_ICON_VIEW[value as CmsIcon]?.label}>
+      <div className="grid grid-cols-6 gap-1" role="radiogroup" aria-label={label}>
+        {choices.map((ic) => {
+          const name = ic === 'none' ? 'No icon' : CMS_ICON_VIEW[ic as CmsIcon].label;
+          return (
+            <button
+              key={ic}
+              type="button"
+              role="radio"
+              aria-checked={value === ic}
+              aria-label={name}
+              title={name}
+              onClick={() => onChange(ic)}
+              className={cx(
+                'flex h-9 items-center justify-center rounded-md text-[16px] transition-colors',
+                value === ic ? 'bg-olive text-cream shadow-[var(--shadow-card)]' : 'bg-sand text-muted hover:bg-mist hover:text-ink'
+              )}
+            >
+              {ic === 'none' ? <LuBan className="opacity-70" /> : CMS_ICON_VIEW[ic as CmsIcon].icon}
+            </button>
+          );
+        })}
+      </div>
+    </Field>
+  );
+}
+
+// ---------------------------------------------------------------- forms
+
+/** Choose one of the site's forms (+ shortcuts to create or edit one in a new tab). */
+export function FormPickerField({ label = 'Form', value, onChange, emptyNote }: { label?: string; value: number | undefined; onChange: (id: number | undefined) => void; emptyNote?: string }) {
+  const { formList, reloadForms, registerForm } = useBuilder();
+  const [loading, setLoading] = useState(false);
+  const choose = async (formId: number | undefined) => {
+    onChange(formId);
+    if (!formId) return;
+    setLoading(true);
+    try {
+      const f = await api.form(formId);
+      registerForm({ id: f.id, def: f.def });
+    } catch (e) {
+      toastError(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+  // When the owner comes back from the "new form" tab, show the new form in the list.
+  useEffect(() => {
+    const h = () => document.visibilityState === 'visible' && reloadForms();
+    document.addEventListener('visibilitychange', h);
+    return () => document.removeEventListener('visibilitychange', h);
+  }, [reloadForms]);
+  const current = formList?.find((f) => f.id === value);
+  const missing = value != null && formList != null && !current;
+  return (
+    <>
+      <Field
+        label={label}
+        error={missing ? 'This form was deleted. Choose another one.' : null}
+        hint={current ? `Entries are emailed to ${current.recipients.join(', ')}.` : 'Choose which form visitors fill in.'}
+      >
+        <Select value={value ?? ''} onChange={(e) => void choose(e.target.value ? Number(e.target.value) : undefined)} disabled={loading}>
+          <option value="">— Choose a form —</option>
+          {missing && <option value={value}>Deleted form</option>}
+          {(formList ?? []).map((f) => (
+            <option key={f.id} value={f.id}>
+              {f.name}
+            </option>
+          ))}
+        </Select>
+      </Field>
+      <div className="flex flex-wrap gap-2">
+        <Button size="sm" icon={<LuPlus />} onClick={() => window.open('/admin/forms/new', '_blank')}>
+          Create a new form
+        </Button>
+        {current && (
+          <Button size="sm" variant="ghost" icon={<LuExternalLink />} onClick={() => window.open(`/admin/forms/${current.id}`, '_blank')}>
+            Edit this form
+          </Button>
+        )}
+      </div>
+      {!value && emptyNote && <p className="rounded-lg bg-warn-soft px-3 py-2 text-xs text-warn">{emptyNote}</p>}
+    </>
   );
 }

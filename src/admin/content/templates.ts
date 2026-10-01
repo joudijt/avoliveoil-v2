@@ -2,8 +2,8 @@
  * Starter content for new pages and the "Sections" library. Every factory builds fresh
  * ids through doc.ts so two inserts of the same template never share ids.
  */
-import type { CmsPageDoc, HideOn, Localized, Section, SectionSettings, Widget, WidgetType } from '../../cms/contracts';
-import { createColumn, createSection, createWidget, emptyDoc, newId } from '../../cms/doc';
+import type { CmsPageDoc, CtaButton, HideOn, Localized, Section, SectionSettings, Widget, WidgetType } from '../../cms/contracts';
+import { createColumn, createCtaButton, createSection, createWidget, emptyDoc, newId } from '../../cms/doc';
 
 const L = (en: string, ms: string): Localized => ({ en, ms });
 
@@ -32,6 +32,8 @@ export interface SectionTemplate {
   id: string;
   name: string;
   description: string;
+  /** 'landing' = listed under "Landing sections" (the ad-landing widgets) */
+  group?: 'landing';
   make: (ctx: TemplateCtx) => Section;
 }
 
@@ -152,6 +154,118 @@ const products = (ctx: TemplateCtx) =>
     )
   );
 
+// ---------------------------------------------------------------- landing sections (LP-SPEC §5)
+// Each is ONE widget in a full-width, one-column section. Copy is neutral: words in [brackets]
+// are for the owner to replace (the publish dialog lists any left), and nothing states a fact
+// about the product — no prices, claims, certifications or delivery promises.
+
+/** a full-width one-column section holding one landing widget; hero and band own their padding */
+const lp = (bg: SectionSettings['bg'], widget: Widget, padY: SectionSettings['padY'] = 'l') => sec({ layout: 'full', bg, padY }, col(12, widget));
+
+const btn = (kind: CtaButton['kind']) => createCtaButton(kind);
+
+const lpHeroForm = () =>
+  lp(
+    'olive-dark',
+    w('heroForm', {
+      kicker: L('[Short line above the headline]', '[Baris pendek di atas tajuk]'),
+      title: L('[Your headline] with a few words in gold', '[Tajuk anda] dengan beberapa perkataan emas'),
+      highlight: L('a few words in gold', 'beberapa perkataan emas'),
+      sub: L('[One or two sentences: what the visitor gets and why it matters to them.]', '[Satu atau dua ayat: apa yang pelawat dapat dan mengapa ia penting kepada mereka.]'),
+      chips: [
+        { id: newId('i'), text: L('[First reason to choose you]', '[Sebab pertama memilih anda]') },
+        { id: newId('i'), text: L('[Second reason]', '[Sebab kedua]') },
+        { id: newId('i'), text: L('[Third reason]', '[Sebab ketiga]') },
+      ],
+      buttons: [btn('whatsapp'), btn('form')],
+    }),
+    'none'
+  );
+
+const lpCards = (mediaSide: 'none' | 'right' = 'none') =>
+  lp(
+    'cream',
+    w('cards', {
+      kicker: L('Why choose us', 'Mengapa pilih kami'),
+      title: L('[What makes your product different]', '[Apa yang membezakan produk anda]'),
+      sub: L('[A short introduction to the points below.]', '[Pengenalan ringkas kepada perkara di bawah.]'),
+      columns: mediaSide === 'none' ? 3 : 2,
+      mediaSide,
+      items: (['leaf', 'drop', 'olive', 'medal'] as const).slice(0, mediaSide === 'none' ? 3 : 4).map((icon, i) => ({
+        id: newId('i'),
+        icon,
+        title: L(`[Point ${i + 1}]`, `[Perkara ${i + 1}]`),
+        text: L('[Describe this point in a sentence or two.]', '[Terangkan perkara ini dalam satu atau dua ayat.]'),
+      })),
+    })
+  );
+
+const lpSteps = () =>
+  lp(
+    'bg',
+    w('steps', {
+      kicker: L('How to order', 'Cara membuat pesanan'),
+      title: L('How it works', 'Bagaimana ia berfungsi'),
+      sub: L('', ''),
+      items: [
+        { id: newId('i'), title: L('Contact us', 'Hubungi kami'), text: L('[How the visitor reaches you: WhatsApp or the form.]', '[Cara pelawat menghubungi anda: WhatsApp atau borang.]') },
+        { id: newId('i'), title: L('[Step two]', '[Langkah kedua]'), text: L('[What happens after they contact you.]', '[Apa yang berlaku selepas mereka menghubungi anda.]') },
+        { id: newId('i'), title: L('[Step three]', '[Langkah ketiga]'), text: L('[How they receive or collect their order.]', '[Cara mereka menerima atau mengambil pesanan.]') },
+      ],
+    })
+  );
+
+const lpCtaBand = (variant: 'mid' | 'final' = 'mid') =>
+  lp(
+    variant === 'mid' ? 'olive' : 'olive-dark',
+    variant === 'mid'
+      ? w('ctaBand', {
+          icon: 'whatsapp',
+          title: L('Questions before you order?', 'Ada soalan sebelum membuat pesanan?'),
+          sub: L('Message us on WhatsApp or fill in the form.', 'Hantar mesej kepada kami di WhatsApp atau isi borang.'),
+          buttons: [btn('whatsapp'), btn('form')],
+          tone: 'olive',
+        })
+      : w('ctaBand', {
+          icon: 'chat',
+          title: L('Ready to order?', 'Sedia untuk membuat pesanan?'),
+          sub: L('Message us on WhatsApp, fill in the form, or buy at the store.', 'Hantar mesej di WhatsApp, isi borang, atau beli di kedai.'),
+          buttons: [btn('whatsapp'), btn('form'), btn('store')],
+          tone: 'dark',
+        }),
+    'none'
+  );
+
+const lpBadges = () =>
+  lp(
+    'cream',
+    w('badges', {
+      title: L('[Why customers trust you]', '[Mengapa pelanggan mempercayai anda]'),
+      sub: L('', ''),
+      items: (['award', 'leaf', 'users', 'store'] as const).map((icon, i) => ({ id: newId('i'), icon, title: L(`[Badge ${i + 1}]`, `[Lencana ${i + 1}]`) })),
+    })
+  );
+
+const lpReviews = () => lp('bg', w('reviews', { kicker: L('Reviews', 'Ulasan'), title: L('What customers say', 'Kata pelanggan') }));
+
+const lpStores = () => lp('cream', w('stores', { kicker: L('Where to buy', 'Di mana untuk membeli'), title: L('Buy online or at the store', 'Beli dalam talian atau di kedai'), sub: L('', '') }));
+
+const lpFaq = () =>
+  sec(
+    { bg: 'cream', padY: 'l' },
+    col(
+      12,
+      w('heading', { text: L('Questions and answers', 'Soalan dan jawapan'), level: 'h2', size: 'l', align: 'center' }),
+      w('faq', {
+        items: [1, 2, 3].map(() => ({
+          id: newId('q'),
+          q: L('[A question customers often ask]', '[Soalan yang sering ditanya pelanggan]'),
+          a: L('[The answer, in one or two sentences.]', '[Jawapannya, dalam satu atau dua ayat.]'),
+        })),
+      })
+    )
+  );
+
 export const SECTION_TEMPLATES: SectionTemplate[] = [
   { id: 'hero', name: 'Hero', description: 'Big headline, short text and a button', make: hero },
   { id: 'text-image', name: 'Text + image', description: 'Story text beside a photo', make: textImage },
@@ -162,6 +276,13 @@ export const SECTION_TEMPLATES: SectionTemplate[] = [
   { id: 'contact', name: 'Contact form', description: 'Text with a form beside it', make: contactForm },
   { id: 'gallery', name: 'Gallery', description: 'Grid of photos', make: gallery },
   { id: 'products', name: 'Products', description: 'Your bottles with links to buy', make: products },
+  { id: 'lp-hero-form', group: 'landing', name: 'Hero with form', description: 'Headline, WhatsApp + form buttons, ticks and a form card', make: lpHeroForm },
+  { id: 'lp-cards', group: 'landing', name: 'Icon cards', description: 'Selling points as cards with icons', make: () => lpCards() },
+  { id: 'lp-steps', group: 'landing', name: 'Steps', description: 'Numbered steps, e.g. how to order', make: lpSteps },
+  { id: 'lp-cta-band', group: 'landing', name: 'Call-to-action band', description: 'Coloured band with WhatsApp and form buttons', make: () => lpCtaBand() },
+  { id: 'lp-badges', group: 'landing', name: 'Badges', description: 'Four small tiles with icons', make: lpBadges },
+  { id: 'lp-reviews', group: 'landing', name: 'Reviews', description: 'Customer quotes (paste real ones)', make: lpReviews },
+  { id: 'lp-stores', group: 'landing', name: 'Where to buy', description: 'Berkat Madinah Store, Shopee and TikTok Shop', make: lpStores },
 ];
 
 /** Drag/drop template id for a plain column layout, e.g. "layout:6-6". */
@@ -187,13 +308,16 @@ export interface PageTemplate {
   description: string;
   /** small schematic for the picker: section bands, darkest first */
   bands: ('dark' | 'olive' | 'cream' | 'bg')[];
+  /** shown as a small label on the picker card */
+  badge?: string;
   make: (title: Localized, ctx: TemplateCtx) => CmsPageDoc;
 }
 
-function page(title: Localized, seoDesc: Localized, sections: Section[]): CmsPageDoc {
+function page(title: Localized, seoDesc: Localized, sections: Section[], layout?: CmsPageDoc['layout']): CmsPageDoc {
   const d = emptyDoc(title);
   return {
     ...d,
+    ...(layout ? { layout } : {}),
     seo: { metaTitle: { en: title.en ? title.en + ' | Arabian Village Olive Oil' : '', ms: title.ms ? title.ms + ' | Minyak Zaitun Arabian Village' : '' }, metaDescription: seoDesc },
     sections,
   };
@@ -217,6 +341,20 @@ export const PAGE_TEMPLATES: PageTemplate[] = [
         t,
         L('First cold pressed Palestinian extra virgin olive oil, sold in Malaysia through Berkat Madinah Store.', 'Minyak zaitun extra virgin Palestin perahan sejuk pertama, dijual di Malaysia melalui Berkat Madinah Store.'),
         [hero(), features(), products(ctx), cta()]
+      ),
+  },
+  {
+    id: 'ad-landing',
+    name: 'Ad landing page (form + WhatsApp)',
+    description: 'For ads: hero with a form, selling points, shops, reviews and FAQ',
+    badge: 'Landing',
+    bands: ['dark', 'cream', 'olive', 'bg', 'cream', 'bg', 'cream', 'dark'],
+    make: (t, ctx) =>
+      page(
+        t,
+        L('[Describe the page for Google in 120–155 characters: what you offer and how to order.]', '[Terangkan halaman untuk Google dalam 120–155 aksara: apa yang anda tawarkan dan cara membuat pesanan.]'),
+        [lpHeroForm(), lpCards('right'), lpCtaBand('mid'), lpSteps(), products(ctx), lpStores(), gallery(), lpBadges(), lpReviews(), lpFaq(), lpCtaBand('final')],
+        'landing'
       ),
   },
   {

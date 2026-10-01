@@ -6,9 +6,23 @@ defined('AVO_CMS') || exit;
 /** Identical to SLUG_RE / RESERVED_SLUGS in src/cms/contracts.ts. */
 const AVO_SLUG_RE = '/^[a-z0-9]+(?:-[a-z0-9]+)*$/';
 const AVO_RESERVED_SLUGS = ['products', 'shop', 'why-us', 'contact', 'blog', 'admin', 'api', 'assets', 'uploads', 'fonts',
-    'icons', 'og', 'ar', 'en', 'ms', '__cms-template', 'sitemap', 'robots', 'index', 'cms-template'];
+    'icons', 'og', 'ar', 'en', 'ms', '__cms-template', '__cms-template-landing', 'sitemap', 'robots', 'index', 'cms-template'];
+/** Identical to WIDGET_TYPES in contracts.ts (a test compares the two lists). */
 const AVO_WIDGET_TYPES = ['heading', 'text', 'image', 'button', 'spacer', 'divider', 'video', 'gallery', 'iconList', 'faq',
-    'products', 'form', 'quote', 'whatsapp'];
+    'products', 'form', 'quote', 'whatsapp', 'heroForm', 'cards', 'steps', 'ctaBand', 'badges', 'reviews', 'stores'];
+/** Identical to CMS_ICONS in contracts.ts (a test compares the two lists). */
+const AVO_CMS_ICONS = ['check', 'leaf', 'olive', 'drop', 'medal', 'star', 'truck', 'shield', 'heart', 'phone', 'mail', 'pin',
+    'clock', 'whatsapp', 'store', 'gift', 'hand', 'sun', 'award', 'users', 'globe', 'bottle', 'chat'];
+/** contracts.ts ButtonStyle, CtaButton['kind'], StoreKey */
+const AVO_BUTTON_STYLES = ['primary', 'outline', 'gold', 'whatsapp'];
+const AVO_CTA_KINDS = ['link', 'whatsapp', 'form', 'store'];
+const AVO_STORE_KEYS = ['madinah', 'shopee', 'tiktok'];
+/** contracts.ts FORM_ANCHOR: the page's first form carries this id, so no section may use it. */
+const AVO_FORM_ANCHOR = 'cms-form';
+/** Widgets whose `media` is one photo id (heroForm background, cards / steps side photo). */
+const AVO_SINGLE_MEDIA_WIDGETS = ['image', 'heroForm', 'cards', 'steps'];
+/** Widgets that embed a form through `formId`. */
+const AVO_FORM_WIDGETS = ['form', 'heroForm'];
 const AVO_MAX_HEADER_ITEMS = 3;
 /** Longest link text that fits the header pill and the footer column. */
 const AVO_MENU_LABEL_MAX = 20;
@@ -23,6 +37,7 @@ function avo_slug_problem(string $slug): ?string
     if ($len < 2 || $len > 80) return 'Use 2–80 characters.';
     if (!preg_match(AVO_SLUG_RE, $slug)) return 'Use lowercase letters, numbers and single hyphens only.';
     if (in_array($slug, AVO_RESERVED_SLUGS, true)) return 'This address is already used by the site.';
+    if (str_contains($slug, 'cms-template')) return 'This address is reserved by the control panel.';
     return null;
 }
 
@@ -47,7 +62,7 @@ function avo_doc_media_ids(array $doc): array
         if (is_int($s['settings']['bgImage'] ?? null)) $ids[] = $s['settings']['bgImage'];
     }
     foreach (avo_doc_widgets($doc) as $w) {
-        if (($w['type'] ?? '') === 'image' && is_int($w['settings']['media'] ?? null)) $ids[] = $w['settings']['media'];
+        if (in_array($w['type'] ?? '', AVO_SINGLE_MEDIA_WIDGETS, true) && is_int($w['settings']['media'] ?? null)) $ids[] = $w['settings']['media'];
         if (($w['type'] ?? '') === 'gallery') {
             foreach ($w['settings']['media'] ?? [] as $m) {
                 if (is_int($m)) $ids[] = $m;
@@ -61,7 +76,7 @@ function avo_doc_form_ids(array $doc): array
 {
     $ids = [];
     foreach (avo_doc_widgets($doc) as $w) {
-        if (($w['type'] ?? '') === 'form' && is_int($w['settings']['formId'] ?? null)) $ids[] = $w['settings']['formId'];
+        if (in_array($w['type'] ?? '', AVO_FORM_WIDGETS, true) && is_int($w['settings']['formId'] ?? null)) $ids[] = $w['settings']['formId'];
     }
     return array_values(array_unique($ids));
 }
@@ -89,6 +104,8 @@ function avo_missing_translations(array $doc, string $lang): array
     $other = $lang === 'ms' ? 'en' : 'ms';
     $out = [];
     foreach (avo_doc_localized($doc) as $item) {
+        // `highlight` is optional decoration (LP-SPEC §8 M9): an untranslated one never blocks publishing.
+        if (preg_match('/\.highlight$/', $item['path'])) continue;
         $a = is_string($item['value'][$other] ?? null) ? $item['value'][$other] : '';
         $b = is_string($item['value'][$lang] ?? null) ? $item['value'][$lang] : '';
         if (avo_plain($a) !== '' && avo_plain($b) === '') $out[] = $item['path'];
@@ -147,6 +164,121 @@ function avo_valid_video_url(string $url): bool
 }
 
 /**
+ * Settings of the landing widgets (LP-SPEC §4, §8; shapes in contracts.ts). A field is checked
+ * when it is present; unknown fields are tolerated like on every other widget. $path points at
+ * the widget's settings so the builder can highlight the field.
+ * @param callable(string, string): never $bad
+ */
+function avo_validate_landing_widget(string $type, array $st, string $path, callable $bad): void
+{
+    $loc = function (array $in, string $key, string $p) use ($bad): void {
+        $v = $in[$key] ?? null;
+        if ($v !== null && (!avo_is_localized($v) || !is_string($v['en']) || !is_string($v['ms']))) {
+            $bad('A text of this section is damaged. Retype it, or delete the section and add it again.', "$p.$key");
+        }
+    };
+    $enum = function (array $in, string $key, array $allowed, string $p, string $msg) use ($bad): void {
+        if (array_key_exists($key, $in) && $in[$key] !== null && !in_array($in[$key], $allowed, true)) $bad($msg, "$p.$key");
+    };
+    $media = function (array $in, string $p) use ($bad): void {
+        if (isset($in['media']) && !is_int($in['media'])) $bad('The photo of this section is damaged. Choose it again.', "$p.media");
+    };
+    /** A list of {id, ...} objects with at most $max entries. */
+    $list = function (array $in, string $key, int $max, string $what, string $p) use ($bad): array {
+        $v = $in[$key] ?? null;
+        if ($v === null) return [];
+        if (!is_array($v) || !array_is_list($v)) $bad("The $what of this section are damaged. Delete the section and add it again.", "$p.$key");
+        if (count($v) > $max) $bad("Use at most $max $what.", "$p.$key");
+        foreach ($v as $i => $item) {
+            if (!is_array($item) || !is_string($item['id'] ?? null)) $bad("One of the $what is damaged. Delete it and add it again.", "$p.$key.$i");
+        }
+        return $v;
+    };
+    $iconMsg = 'Choose one of the icons offered in the panel.';
+    $buttons = function (array $in, string $p) use ($list, $loc, $enum, $bad): void {
+        foreach ($list($in, 'buttons', 3, 'buttons', $p) as $i => $b) {
+            $bp = "$p.buttons.$i";
+            if (!in_array($b['kind'] ?? null, AVO_CTA_KINDS, true)) $bad('Choose what this button does: link, WhatsApp, form or store.', "$bp.kind");
+            $enum($b, 'style', AVO_BUTTON_STYLES, $bp, 'Choose one of the button styles.');
+            $loc($b, 'label', $bp);
+            $loc($b, 'message', $bp);
+            if ($b['kind'] === 'store' || ($b['store'] ?? null) !== null) {
+                if (!in_array($b['store'] ?? null, AVO_STORE_KEYS, true)) $bad('Choose a store: Berkat Madinah Store, Shopee or TikTok Shop.', "$bp.store");
+            }
+            $href = $b['href'] ?? null;
+            if ($href !== null && (!is_string($href) || ($href !== '' && !avo_safe_url($href)))) {
+                $bad('This button link is not allowed. Use a web address (https://…), a page path (/en/…), an email (mailto:) or a phone (tel:).', "$bp.href");
+            }
+            if (isset($b['newTab']) && !is_bool($b['newTab'])) $bad('The "open in a new tab" setting of this button is damaged.', "$bp.newTab");
+        }
+    };
+    foreach (['kicker', 'title', 'sub'] as $k) $loc($st, $k, $path);
+
+    switch ($type) {
+        case 'heroForm':
+            foreach (['highlight', 'formTitle', 'formSub'] as $k) $loc($st, $k, $path);
+            $enum($st, 'tone', ['dark', 'light'], $path, 'Choose a dark or a light background.');
+            if (isset($st['overlay']) && (!(is_int($st['overlay']) || is_float($st['overlay'])) || $st['overlay'] < 0 || $st['overlay'] > 80)) {
+                $bad('Keep the photo darkening between 0 and 80 %.', "$path.overlay");
+            }
+            if (isset($st['formId']) && !is_int($st['formId'])) $bad('The form of this section is damaged. Choose it again.', "$path.formId");
+            $media($st, $path);
+            foreach ($list($st, 'chips', 6, 'tick points', $path) as $i => $c) $loc($c, 'text', "$path.chips.$i");
+            $buttons($st, $path);
+            break;
+        case 'cards':
+            $loc($st, 'mediaAlt', $path);
+            $enum($st, 'columns', [2, 3, 4], $path, 'Show 2, 3 or 4 cards per row.');
+            $enum($st, 'mediaSide', ['none', 'left', 'right'], $path, 'Put the photo on the left, on the right, or leave it out.');
+            $media($st, $path);
+            foreach ($list($st, 'items', 12, 'cards', $path) as $i => $it) {
+                $ip = "$path.items.$i";
+                if (!in_array($it['icon'] ?? null, AVO_CMS_ICONS, true)) $bad($iconMsg, "$ip.icon");
+                $loc($it, 'title', $ip);
+                $loc($it, 'text', $ip);
+            }
+            break;
+        case 'steps':
+            $loc($st, 'mediaAlt', $path);
+            $media($st, $path);
+            foreach ($list($st, 'items', 12, 'steps', $path) as $i => $it) {
+                $loc($it, 'title', "$path.items.$i");
+                $loc($it, 'text', "$path.items.$i");
+            }
+            break;
+        case 'ctaBand':
+            $enum($st, 'icon', [...AVO_CMS_ICONS, 'none'], $path, $iconMsg);
+            $enum($st, 'tone', ['olive', 'dark', 'gold', 'cream'], $path, 'Choose one of the band colours.');
+            $buttons($st, $path);
+            break;
+        case 'badges':
+            foreach ($list($st, 'items', 12, 'badges', $path) as $i => $it) {
+                $ip = "$path.items.$i";
+                if (!in_array($it['icon'] ?? null, AVO_CMS_ICONS, true)) $bad($iconMsg, "$ip.icon");
+                $loc($it, 'title', $ip);
+                $loc($it, 'text', $ip);
+            }
+            break;
+        case 'reviews':
+            foreach ($list($st, 'stats', 4, 'figures', $path) as $i => $it) {
+                $loc($it, 'value', "$path.stats.$i");
+                $loc($it, 'label', "$path.stats.$i");
+            }
+            foreach ($list($st, 'items', 12, 'reviews', $path) as $i => $it) {
+                foreach (['quote', 'name', 'place'] as $k) $loc($it, $k, "$path.items.$i");
+            }
+            break;
+        case 'stores':
+            foreach ($list($st, 'items', 12, 'stores', $path) as $i => $it) {
+                $ip = "$path.items.$i";
+                if (!in_array($it['store'] ?? null, AVO_STORE_KEYS, true)) $bad('Choose a store: Berkat Madinah Store, Shopee or TikTok Shop.', "$ip.store");
+                foreach (['title', 'text', 'button'] as $k) $loc($it, $k, $ip);
+            }
+            break;
+    }
+}
+
+/**
  * Validate a CmsPageDoc posted by the builder. Rich text is sanitised in place; unsafe
  * links and video URLs are refused with the widget path so the builder can point at them.
  */
@@ -173,6 +305,9 @@ function avo_validate_doc(mixed $doc): array
             if (mb_strlen(trim($ml[$l])) > AVO_MENU_LABEL_MAX) $bad('Keep the menu label to ' . AVO_MENU_LABEL_MAX . ' characters or fewer.', "menuLabel.$l");
         }
     }
+    if (array_key_exists('layout', $doc) && $doc['layout'] !== null && !in_array($doc['layout'], ['site', 'landing'], true)) {
+        $bad('Choose a page layout: Site page or Landing page.', 'layout');
+    }
     if (!is_array($doc['sections'] ?? null) || !array_is_list($doc['sections'])) $bad('The page sections are damaged.', 'sections');
     if (count($doc['sections']) > 100) $bad('A page can have at most 100 sections.', 'sections');
     foreach ($doc['sections'] as $si => &$section) {
@@ -182,6 +317,9 @@ function avo_validate_doc(mixed $doc): array
         $anchor = $section['settings']['anchor'] ?? null;
         if ($anchor !== null && $anchor !== '' && (!is_string($anchor) || !preg_match('/^[a-z0-9-]{1,40}$/', $anchor))) {
             $bad('A section anchor may only use lowercase letters, numbers and hyphens.', "$sp.settings.anchor");
+        }
+        if ($anchor === AVO_FORM_ANCHOR) {
+            $bad('The anchor "' . AVO_FORM_ANCHOR . '" is reserved for the page\'s form. Choose another anchor.', "$sp.settings.anchor");
         }
         if (!is_array($section['columns'] ?? null) || !array_is_list($section['columns']) || !$section['columns'] || count($section['columns']) > 6) {
             $bad('A section must have 1 to 6 columns.', $sp);
@@ -214,6 +352,15 @@ function avo_validate_doc(mixed $doc): array
                         break;
                     case 'video':
                         if (!avo_valid_video_url((string) ($st['url'] ?? ''))) $bad('Use a YouTube or Vimeo link, or an https link to an .mp4 file.', "$wp.settings.url");
+                        break;
+                    case 'heroForm':
+                    case 'cards':
+                    case 'steps':
+                    case 'ctaBand':
+                    case 'badges':
+                    case 'reviews':
+                    case 'stores':
+                        avo_validate_landing_widget($w['type'], $st, "$wp.settings", $bad);
                         break;
                 }
                 unset($st);

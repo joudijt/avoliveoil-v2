@@ -1,9 +1,9 @@
 // DEV-ONLY harness for the CMS blocks, the builder canvas and the in-place editor
 // (builder B3b). Not part of the build or any gate.
 //
-//   node scripts/dev/cms-harness.mjs [outDir]
+//   node scripts/dev/cms-harness.mjs [outDir] [--only=landing]
 //
-// Starts `vite` on :5182, then with headless Chrome:
+// Starts `vite` on :5191 (CMS_HARNESS_PORT), then with headless Chrome:
 //  1. frames /cms-canvas in scripts/dev/cms-shell.html (a stand-in for the admin
 //     shell), posts a doc using every widget type, screenshots 1280/820/390 × EN/MS,
 //     drives select / toolbar / drag-from-shell / drag-to-move / in-place text and
@@ -13,7 +13,12 @@
 //     renderPageHtml() for the same doc, byte for byte after attribute-order /
 //     style normalisation; drives the form (429 / field error / success), the
 //     lightbox, the FAQ, the not-found view and the prerender template;
-//  3. opens /en/why-us?cms-edit=1 with an injected edit boot and drives inlineEdit.ts.
+//  3. opens /en/why-us?cms-edit=1 with an injected edit boot and drives inlineEdit.ts;
+//  4. landing pages (scripts/dev/cms-landing.mjs): root == renderPageHtml, landing
+//     header/footer/bar parity with the landing template, header states, the phone
+//     bar, #cms-form scrolling, no global WhatsApp button, no horizontal scroll,
+//     contrast spot checks, canvas strip + inline-edit paths, screenshots 1440/820/390.
+// --only=landing runs step 4 alone.
 // Every class in the rendered markup must be in CMS_CLASS_LIST and in the CSS.
 // Exit code 1 when any check fails; screenshots land in outDir.
 import { createServer } from 'vite';
@@ -22,12 +27,14 @@ import { mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { buildDoc, payloadFor, MEDIA, FORMS } from './cms-fixture.mjs';
+import { buildDoc, buildLandingDoc, buildLandingDocNoForm, payloadFor, MEDIA, FORMS } from './cms-fixture.mjs';
+import { runLandingChecks } from './cms-landing.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const OUT = process.argv[2] ?? join(tmpdir(), 'cms-harness');
+const ONLY_LANDING = process.argv.includes('--only=landing');
+const OUT = process.argv.slice(2).find((a) => !a.startsWith('--')) ?? join(tmpdir(), 'cms-harness');
 mkdirSync(OUT, { recursive: true });
-const PORT = 5182;
+const PORT = Number(process.env.CMS_HARNESS_PORT) || 5191;
 const BASE = `http://localhost:${PORT}`;
 const SLUG = 'cms-harness';
 
@@ -43,6 +50,10 @@ function check(cond, name, detail) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DOC = buildDoc();
+const LANDING_DOC = buildLandingDoc();
+const LANDING_NOFORM_DOC = buildLandingDocNoForm();
+/** Fixture pages the intercepted page API answers: slug → doc. */
+const PAGES = { [SLUG]: DOC, 'lp-harness': LANDING_DOC, 'lp-noform': LANDING_NOFORM_DOC };
 const byType = (type) => DOC.sections.flatMap((s) => s.columns.flatMap((c) => c.widgets)).filter((w) => w.type === type);
 
 // ------------------------------------------------------------------ server + browser
@@ -50,7 +61,7 @@ const server = await createServer({
   root: ROOT,
   logLevel: 'warn',
   server: { port: PORT, strictPort: true },
-  optimizeDeps: { include: ['react-dom/server', 'react-icons/gi', 'react-icons/fi', 'react-icons/fa'] },
+  optimizeDeps: { include: ['react-dom/server', 'react-icons/fi', 'react-icons/fa', 'react-icons/si'] },
 });
 await server.listen();
 
@@ -94,8 +105,8 @@ page.on('request', async (req) => {
         pageApiHits++;
         const slug = url.searchParams.get('slug');
         const lang = url.searchParams.get('lang');
-        if (slug === SLUG && (lang === 'en' || lang === 'ms')) {
-          return req.respond({ status: 200, contentType: 'application/json', body: JSON.stringify(payloadFor(DOC, SLUG, lang)) });
+        if (slug && Object.hasOwn(PAGES, slug) && (lang === 'en' || lang === 'ms')) {
+          return req.respond({ status: 200, contentType: 'application/json', body: JSON.stringify(payloadFor(PAGES[slug], slug, lang)) });
         }
         return req.respond({ status: 404, contentType: 'application/json', body: JSON.stringify({ error: { code: 'not_found', message: 'Not found' } }) });
       }
@@ -213,6 +224,27 @@ async function classAudit(ctx, rootSel, label) {
   return res;
 }
 
+/** innerHTML with attribute order and inline style serialisation normalised. */
+async function normalise(html) {
+  return page.evaluate((h) => {
+    const t = document.createElement('template');
+    t.innerHTML = h;
+    t.content.querySelectorAll('[style]').forEach((el) => el.setAttribute('style', el.style.cssText));
+    // FormBlock switches native validation off after mount (its own messages are in the
+    // page language); the published no-JS HTML keeps it. A deliberate difference.
+    t.content.querySelectorAll('form[novalidate]').forEach((el) => el.removeAttribute('novalidate'));
+    // Attribute order is not meaningful.
+    t.content.querySelectorAll('*').forEach((el) => {
+      const attrs = Array.from(el.attributes).map((a) => [a.name, a.value]).sort((a, b) => a[0].localeCompare(b[0]));
+      attrs.forEach(([n]) => el.removeAttribute(n));
+      attrs.forEach(([n, v]) => el.setAttribute(n, v));
+    });
+    return t.innerHTML;
+  }, html);
+}
+
+// Steps 1–3 (site widgets, canvas, in-place editor); skipped with --only=landing.
+if (!ONLY_LANDING) {
 // ================================================================== 1. canvas
 console.log('1. canvas');
 await page.setViewport({ width: 1300, height: 900 });
@@ -597,20 +629,6 @@ for (const [tag, attrs] of Object.entries(inventory)) console.log(`     ${tag}: 
 
 // ================================================================== 2. public page
 console.log('2. public page');
-async function normalise(html) {
-  return page.evaluate((h) => {
-    const t = document.createElement('template');
-    t.innerHTML = h;
-    t.content.querySelectorAll('[style]').forEach((el) => el.setAttribute('style', el.style.cssText));
-    // Attribute order is not meaningful.
-    t.content.querySelectorAll('*').forEach((el) => {
-      const attrs = Array.from(el.attributes).map((a) => [a.name, a.value]).sort((a, b) => a[0].localeCompare(b[0]));
-      attrs.forEach(([n]) => el.removeAttribute(n));
-      attrs.forEach(([n, v]) => el.setAttribute(n, v));
-    });
-    return t.innerHTML;
-  }, html);
-}
 
 for (const lang of ['en', 'ms']) {
   await page.setViewport({ width: 1280, height: 900 });
@@ -888,6 +906,30 @@ if (ready && ready.keys.length > 0) {
 } else {
   console.log('   (no [data-cms] marks on /en/why-us yet — B3a marking pending; overlay checks skipped)');
 }
+
+} // end of steps 1–3
+
+// ================================================================== 4. landing pages
+console.log('4. landing pages');
+await runLandingChecks({
+  page,
+  BASE,
+  OUT,
+  check,
+  sleep,
+  normalise,
+  classAudit,
+  waitMsg,
+  clearMsgs,
+  send,
+  frame,
+  waitImages,
+  shellUrl,
+  docs: { landing: LANDING_DOC, noform: LANDING_NOFORM_DOC },
+  media: MEDIA,
+  forms: FORMS,
+  formBodies,
+});
 
 // ================================================================== done
 check(consoleErrors.length === 0, 'no console errors or warnings', consoleErrors.slice(0, 15));

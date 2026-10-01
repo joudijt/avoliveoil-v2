@@ -249,3 +249,324 @@ export function payloadFor(doc, slug, lang, pageId = 42) {
     },
   };
 }
+
+// ================================================================== landing (LP-SPEC §3)
+// A landing-layout doc using every landing widget and variant: dark hero with photo +
+// form, cards with / without a side photo on light and dark sections, both steps
+// variants, all four band tones (edge to edge and boxed), badges, reviews with stats,
+// stores, every CmsIcon, plus the site widgets a landing page typically mixes in.
+// buildLandingDocNoForm(): light hero without a form, not edge to edge.
+
+MEDIA[8] = img('HeroAVOliveOilBottleInTheField', [400, 800, 1200, 1600, 2000], 2000, 1116, 8, 'Arabian Village bottle in an olive field', 'Botol Arabian Village di ladang zaitun');
+
+FORMS[9] = {
+  id: 9,
+  def: {
+    fields: [
+      { id: 'h1', name: 'name', type: 'text', label: L('Name', 'Nama'), placeholder: L('Your name', 'Nama anda'), required: true, width: 'full' },
+      { id: 'h2', name: 'phone', type: 'tel', label: L('Phone (WhatsApp)', 'Telefon (WhatsApp)'), placeholder: L('+60…', '+60…'), required: true, width: 'half' },
+      { id: 'h3', name: 'email', type: 'email', label: L('Email', 'E-mel'), placeholder: L('you@example.com', 'anda@contoh.com'), required: false, width: 'half' },
+      {
+        id: 'h4',
+        name: 'interest',
+        type: 'select',
+        label: L('Interested in', 'Berminat dengan'),
+        placeholder: L('Choose one', 'Pilih satu'),
+        required: true,
+        width: 'full',
+        options: [
+          opt('i1', 'Classic extra virgin olive oil', 'Minyak zaitun extra virgin klasik'),
+          opt('i2', 'Infused Collection', 'Koleksi Infused'),
+          opt('i3', 'Both', 'Kedua-duanya'),
+          opt('i4', 'Wholesale for my business', 'Borong untuk perniagaan saya'),
+        ],
+      },
+      { id: 'h5', name: 'message', type: 'textarea', label: L('Message', 'Mesej'), placeholder: L('Anything we should know?', 'Apa-apa yang perlu kami tahu?'), required: false, width: 'full' },
+    ],
+    submitLabel: L('Send my enquiry', 'Hantar pertanyaan saya'),
+    successMessage: L('Thank you — your enquiry has been sent.', 'Terima kasih — pertanyaan anda telah dihantar.'),
+  },
+};
+
+/** All 23 CmsIcon values (contracts CMS_ICONS). */
+export const LANDING_ICONS = [
+  'check', 'leaf', 'olive', 'drop', 'medal', 'star', 'truck', 'shield', 'heart', 'phone', 'mail', 'pin', 'clock',
+  'whatsapp', 'store', 'gift', 'hand', 'sun', 'award', 'users', 'globe', 'bottle', 'chat',
+];
+
+const btn = (kind, label, extra = {}) => ({ id: id('b'), kind, label, style: 'primary', ...extra });
+const WA = L('Hello, I would like to ask about your Palestinian olive oil.', 'Hai, saya ingin bertanya tentang minyak zaitun Palestin anda.');
+
+export function buildLandingDoc() {
+  n = 1000;
+  return {
+    schema: 1,
+    layout: 'landing',
+    title: L('Palestinian Extra Virgin Olive Oil', 'Minyak Zaitun Extra Virgin Palestin'),
+    seo: {
+      metaTitle: L('Palestinian Extra Virgin Olive Oil in Malaysia | Arabian Village', 'Minyak Zaitun Extra Virgin Palestin di Malaysia | Arabian Village'),
+      metaDescription: L('First cold pressed olive oil from Palestine.', 'Minyak zaitun perahan sejuk pertama dari Palestin.'),
+    },
+    sections: [
+      sec({ layout: 'full', padY: 'none', bg: 'olive-dark' }, [
+        [
+          12,
+          [
+            w('heroForm', {
+              kicker: L('From the groves of Palestine', 'Dari kebun zaitun Palestin'),
+              title: L('Palestinian extra virgin olive oil, first cold pressed', 'Minyak zaitun extra virgin Palestin, perahan sejuk pertama'),
+              highlight: L('extra virgin olive oil', 'extra virgin Palestin'),
+              sub: L(
+                'The classic bottle and the six-flavour Infused Collection, sold in Malaysia by Berkat Madinah Store. Ask us on WhatsApp or leave your details.',
+                'Botol klasik dan Koleksi Infused enam perisa, dijual di Malaysia oleh Berkat Madinah Store. Tanya kami di WhatsApp atau tinggalkan butiran anda.'
+              ),
+              chips: [
+                { id: id('i'), text: L('First cold pressed', 'Perahan sejuk pertama') },
+                { id: id('i'), text: L('Single origin: Palestine', 'Asal tunggal: Palestin') },
+                { id: id('i'), text: L('250 ml & 500 ml', '250 ml & 500 ml') },
+                { id: id('i'), text: L('Six infused flavours', 'Enam perisa infused') },
+              ],
+              buttons: [
+                btn('whatsapp', L('WhatsApp us', 'WhatsApp kami'), { style: 'whatsapp', message: WA }),
+                btn('form', L('Fill the form', 'Isi borang'), { style: 'outline' }),
+              ],
+              formId: 9,
+              formTitle: L('Ask about our olive oil', 'Tanya tentang minyak zaitun kami'),
+              formSub: L('Leave your details and the store will get back to you.', 'Tinggalkan butiran anda dan kedai akan menghubungi anda.'),
+              media: 8,
+              overlay: 50,
+              tone: 'dark',
+            }),
+          ],
+        ],
+      ]),
+      sec({ padY: 'l' }, [
+        [
+          12,
+          [
+            w('cards', {
+              kicker: L('Why this oil', 'Mengapa minyak ini'),
+              title: L('What makes it different', 'Apa yang membezakannya'),
+              sub: L('Four things customers notice first.', 'Empat perkara yang pelanggan perasan dahulu.'),
+              columns: 3,
+              items: [
+                { id: id('i'), icon: 'olive', title: L('Single origin', 'Asal tunggal'), text: L('Olives from Palestinian groves only.', 'Zaitun dari kebun Palestin sahaja.') },
+                { id: id('i'), icon: 'drop', title: L('First cold pressed', 'Perahan sejuk pertama'), text: L('Pressed once, without heat.', 'Diperah sekali, tanpa haba.') },
+                { id: id('i'), icon: 'leaf', title: L('Six infusions', 'Enam infusi'), text: L('Herb and spice flavours for every dish.', 'Perisa herba dan rempah untuk setiap hidangan.') },
+                { id: id('i'), icon: 'bottle', title: L('Two sizes', 'Dua saiz'), text: L('250 ml and 500 ml bottles.', 'Botol 250 ml dan 500 ml.') },
+              ],
+              media: 2,
+              mediaAlt: L('A bottle of Arabian Village olive oil in the field', 'Sebotol minyak zaitun Arabian Village di ladang'),
+              mediaSide: 'right',
+            }),
+          ],
+        ],
+      ]),
+      sec({ layout: 'full', padY: 'none', bg: 'bg' }, [
+        [
+          12,
+          [
+            w('ctaBand', {
+              icon: 'shield',
+              title: L('Not sure which bottle to choose?', 'Tidak pasti botol mana untuk dipilih?'),
+              sub: L('Tell us how you cook and the store will suggest one.', 'Beritahu kami cara anda memasak dan kedai akan mencadangkan satu.'),
+              buttons: [btn('form', L('Fill the form', 'Isi borang'), { style: 'gold' }), btn('store', L('Visit the store', 'Lawati kedai'), { style: 'outline', store: 'madinah', newTab: true })],
+              tone: 'olive',
+            }),
+          ],
+        ],
+      ]),
+      sec({ bg: 'cream', align: 'center' }, [
+        [
+          12,
+          [
+            w('steps', {
+              kicker: L('How to order', 'Cara memesan'),
+              title: L('Three steps to your bottle', 'Tiga langkah ke botol anda'),
+              sub: L('', ''),
+              items: [
+                { id: id('i'), title: L('Message us', 'Hantar mesej'), text: L('On WhatsApp or with the form above.', 'Di WhatsApp atau dengan borang di atas.') },
+                { id: id('i'), title: L('Choose', 'Pilih'), text: L('Classic, infused, or both.', 'Klasik, infused, atau kedua-duanya.') },
+                { id: id('i'), title: L('Collect or order online', 'Ambil atau pesan dalam talian'), text: L('At the store, Shopee or TikTok Shop.', 'Di kedai, Shopee atau TikTok Shop.') },
+              ],
+              mediaAlt: L('', ''),
+            }),
+          ],
+        ],
+      ]),
+      sec({ padY: 'l' }, [
+        [
+          12,
+          [
+            w('steps', {
+              title: L('From the tree to the bottle', 'Dari pokok ke botol'),
+              sub: L('How the oil is made.', 'Bagaimana minyak dihasilkan.'),
+              items: [
+                { id: id('i'), title: L('Hand picked', 'Dipetik tangan'), text: L('Olives are picked in the harvest season.', 'Zaitun dipetik pada musim tuai.') },
+                { id: id('i'), title: L('Cold pressed', 'Perahan sejuk'), text: L('Pressed without heat.', 'Diperah tanpa haba.') },
+                { id: id('i'), title: L('Bottled', 'Dibotolkan'), text: L('Sealed in dark glass.', 'Dimeterai dalam kaca gelap.') },
+                { id: id('i'), title: L('Shipped to Malaysia', 'Dihantar ke Malaysia'), text: L('', '') },
+              ],
+              media: 4,
+              mediaAlt: L('Pouring fresh olive oil', 'Menuang minyak zaitun segar'),
+            }),
+          ],
+        ],
+      ]),
+      sec({ bg: 'olive-dark', align: 'center' }, [
+        [
+          12,
+          [
+            w('cards', {
+              kicker: L('In the kitchen', 'Di dapur'),
+              title: L('Made for everyday cooking', 'Untuk masakan harian'),
+              sub: L('', ''),
+              columns: 2,
+              items: [
+                { id: id('i'), icon: 'sun', title: L('Salads', 'Salad'), text: L('Drizzle it raw.', 'Siram mentah.') },
+                { id: id('i'), icon: 'heart', title: L('Family meals', 'Hidangan keluarga'), text: L('One bottle for the whole table.', 'Satu botol untuk seluruh meja.') },
+                { id: id('i'), icon: 'gift', title: L('Gifts', 'Hadiah'), text: L('A bottle that travels well.', 'Botol yang sesuai dijadikan hadiah.') },
+                { id: id('i'), icon: 'hand', title: L('Dipping', 'Celup'), text: L('With bread and zaatar.', 'Dengan roti dan zaatar.') },
+              ],
+              media: 3,
+              mediaAlt: L('Farmer picking olives', 'Petani memetik zaitun'),
+              mediaSide: 'left',
+            }),
+            w('badges', {
+              title: L('', ''),
+              sub: L('', ''),
+              items: [
+                { id: id('i'), icon: 'award', title: L('Since 2010', 'Sejak 2010'), text: L('Berkat Madinah Store', 'Berkat Madinah Store') },
+                { id: id('i'), icon: 'users', title: L('500,000+ customers', '500,000+ pelanggan'), text: L('Self-published', 'Diterbitkan sendiri') },
+                { id: id('i'), icon: 'globe', title: L('Palestine to Malaysia', 'Palestin ke Malaysia') },
+              ],
+            }),
+          ],
+        ],
+      ]),
+      sec({ align: 'center' }, [
+        [
+          12,
+          [
+            w('products', { ids: ['classic', 'blackseed', 'rosemary-basil'], cols: 3, showTagline: true }),
+          ],
+        ],
+      ]),
+      sec({ align: 'center', bg: 'white' }, [
+        [
+          12,
+          [
+            w('stores', {
+              kicker: L('Where to buy', 'Di mana membeli'),
+              title: L('Buy it in store or online', 'Beli di kedai atau dalam talian'),
+              sub: L('Three counters, the same oil.', 'Tiga kaunter, minyak yang sama.'),
+              items: [
+                { id: id('i'), store: 'madinah', title: L('Berkat Madinah Store', 'Berkat Madinah Store'), text: L('The official seller, Ampang and online.', 'Penjual rasmi, Ampang dan dalam talian.'), button: L('Visit the store', 'Lawati kedai') },
+                { id: id('i'), store: 'shopee', title: L('Shopee', 'Shopee'), text: L('Order on Shopee.', 'Pesan di Shopee.'), button: L('Shop on Shopee', 'Beli di Shopee') },
+                { id: id('i'), store: 'tiktok', title: L('TikTok Shop', 'TikTok Shop'), text: L('', ''), button: L('Shop on TikTok', 'Beli di TikTok') },
+              ],
+            }),
+          ],
+        ],
+      ]),
+      sec({ bg: 'cream', align: 'center' }, [
+        [
+          12,
+          [
+            w('badges', {
+              kicker: L('Good to know', 'Baik untuk tahu'),
+              title: L('Why customers trust the store', 'Mengapa pelanggan mempercayai kedai'),
+              sub: L('', ''),
+              items: [
+                { id: id('i'), icon: 'store', title: L('Walk-in branches', 'Cawangan fizikal') },
+                { id: id('i'), icon: 'truck', title: L('Shopee & TikTok delivery', 'Penghantaran Shopee & TikTok'), text: L('Nationwide', 'Seluruh negara') },
+                { id: id('i'), icon: 'chat', title: L('WhatsApp help', 'Bantuan WhatsApp') },
+                { id: id('i'), icon: 'medal', title: L('Palestinian origin', 'Asal Palestin') },
+              ],
+            }),
+            w('iconList', { items: LANDING_ICONS.map((icon, i) => ({ id: `li${i}`, icon, text: L(icon, icon) })), color: 'default', layout: 'inline' }),
+          ],
+        ],
+      ]),
+      sec({ align: 'center' }, [
+        [
+          12,
+          [
+            w('reviews', {
+              kicker: L('Reviews', 'Ulasan'),
+              title: L('What customers say', 'Kata pelanggan'),
+              stats: [
+                { id: id('i'), value: L('2010', '2010'), label: L('Store founded', 'Kedai diasaskan') },
+                { id: id('i'), value: L('500,000+', '500,000+'), label: L('Customers served (self-published)', 'Pelanggan dilayan (diterbitkan sendiri)') },
+                { id: id('i'), value: L('7', '7'), label: L('Flavours', 'Perisa') },
+              ],
+              items: [
+                { id: id('q'), quote: L('Hands down the richest, most authentic extra virgin olive oil I have tried.', 'Minyak zaitun extra virgin paling kaya yang pernah saya rasa — kualiti perahan pertama yang sebenar.'), name: L('Layla H.', 'Layla H.'), place: L('Amman', 'Amman') },
+                { id: id('q'), quote: L('Beautifully packaged and even better in the kitchen — real cold-pressed flavor.', 'Tiba dengan pembungkusan cantik, dan rasanya di dapur lebih sedap daripada rupanya.'), name: L('Omar K.', 'Omar K.'), place: L('Kuala Lumpur', 'Kuala Lumpur') },
+                { id: id('q'), quote: L('Our family everyday olive oil now — nothing else compares.', 'Kini satu-satunya minyak zaitun di meja keluarga kami — tiada tandingan.'), name: L('Sara M.', 'Sara M.'), place: L('Dubai', 'Dubai') },
+              ],
+            }),
+          ],
+        ],
+      ]),
+      sec({ bg: 'white', padY: 'm' }, [
+        [6, [w('ctaBand', { icon: 'gift', title: L('Gift sets', 'Set hadiah'), sub: L('Ask about bottles for gifting.', 'Tanya tentang botol untuk hadiah.'), buttons: [btn('whatsapp', L('Ask on WhatsApp', 'Tanya di WhatsApp'), { style: 'whatsapp', message: WA }), btn('link', L('See the range', 'Lihat rangkaian'), { style: 'outline', href: '/en/products' })], tone: 'gold' })]],
+        [6, [w('ctaBand', { icon: 'pin', title: L('Visit a branch', 'Lawati cawangan'), sub: L('See the bottles before you buy.', 'Lihat botol sebelum membeli.'), buttons: [btn('store', L('Shopee', 'Shopee'), { style: 'primary', store: 'shopee' }), btn('store', L('TikTok Shop', 'TikTok Shop'), { style: 'gold', store: 'tiktok' }), btn('link', L('Bad link', 'Pautan buruk'), { href: 'javascript:alert(1)' })], tone: 'cream' })]],
+      ]),
+      sec({ bg: 'cream' }, [
+        [
+          12,
+          [
+            w('heading', { text: L('Questions', 'Soalan'), level: 'h2', size: 'l', align: 'center', color: 'default' }),
+            w('faq', { items: [{ id: 'lq1', q: L('Where is the oil from?', 'Dari mana minyak ini?'), a: L('Palestine.', 'Palestin.') }] }),
+          ],
+        ],
+      ]),
+      sec({ layout: 'full', padY: 'none' }, [
+        [
+          12,
+          [
+            w('ctaBand', {
+              icon: 'whatsapp',
+              title: L('Ready to taste it?', 'Sedia untuk merasainya?'),
+              sub: L('Message the store or leave your details.', 'Hantar mesej kepada kedai atau tinggalkan butiran anda.'),
+              buttons: [btn('whatsapp', L('WhatsApp us', 'WhatsApp kami'), { style: 'whatsapp', message: WA }), btn('form', L('Fill the form', 'Isi borang'), { style: 'gold' })],
+              tone: 'dark',
+            }),
+          ],
+        ],
+      ]),
+    ],
+  };
+}
+
+export function buildLandingDocNoForm() {
+  n = 2000;
+  return {
+    schema: 1,
+    layout: 'landing',
+    title: L('Infused olive oils', 'Minyak zaitun infused'),
+    seo: { metaTitle: L('Infused olive oils | Arabian Village', 'Minyak zaitun infused | Arabian Village'), metaDescription: L('Six flavours.', 'Enam perisa.') },
+    sections: [
+      sec({ padY: 's' }, [
+        [
+          12,
+          [
+            w('heroForm', {
+              title: L('Six infused olive oils', 'Enam minyak zaitun infused'),
+              highlight: L('NOT IN THE TITLE', 'TIADA'),
+              sub: L('Rosemary, black seed, thyme and more.', 'Rosmarin, jintan hitam, thyme dan banyak lagi.'),
+              chips: [{ id: id('i'), text: L('Six flavours', 'Enam perisa') }],
+              buttons: [btn('whatsapp', L('WhatsApp us', 'WhatsApp kami'), { style: 'whatsapp' }), btn('form', L('Fill the form', 'Isi borang'), { style: 'outline' })],
+              formTitle: L('Unused', 'Tidak digunakan'),
+              formSub: L('', ''),
+              overlay: 40,
+              tone: 'light',
+            }),
+          ],
+        ],
+      ]),
+      sec({ bg: 'cream', align: 'center' }, [[12, [w('reviews', { title: L('Reviews', 'Ulasan'), stats: [], items: [{ id: id('q'), quote: L('Lovely.', 'Sedap.'), name: L('A.', 'A.'), place: L('', '') }] })]]]),
+    ],
+  };
+}

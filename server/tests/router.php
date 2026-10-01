@@ -50,9 +50,9 @@ if (preg_match('~^api(/.*)?$~', $rel)) {
 if ($rel === 'sitemap.xml') return $run('sitemap.php');
 // 7. admin (not under test)
 if (preg_match('~^admin(/.*)?$~', $rel)) return $notFound();
-// 8. snapshot file names / template
+// 8. template (any name, also .../index.html) / snapshot file names
+if (preg_match('~(^|/)_*cms-template[a-z0-9-]*(/|$)~i', $rel)) return $notFound();
 if (preg_match('~^((?:en|ms)(?:/.*?)?)/index\.html$~i', $rel, $m)) return $redirect('/' . $m[1]);
-if (preg_match('~(^|/)(__)?cms-template(/|$)~i', $rel)) return $notFound();
 // 9. uppercase
 if (preg_match('~[A-Z]~', $path) && preg_match('~^(en|ms)(/.*)?$~i', $rel)) return $run('serve.php');
 // 10. trailing slash

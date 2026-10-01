@@ -409,7 +409,7 @@ export interface ResolvedSeo {
   /** lang → absolute URL, only for the languages the page is published in */
   alternates: Partial<Record<CmsLang, string>>;
   ogImage: { url: string; width: number; height: number };
-  /** extra JSON-LD objects (WebPage, BreadcrumbList, FAQPage) */
+  /** extra JSON-LD objects: WebPage, FAQPage, and BreadcrumbList for site-layout pages only (landing pages show no breadcrumb) */
   jsonLd: object[];
 }
 

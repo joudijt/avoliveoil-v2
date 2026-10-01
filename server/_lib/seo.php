@@ -103,14 +103,18 @@ function avo_resolve_seo(string $slug, array $doc, string $lang, array $langs, b
     if ($firstPublished) $webPage['datePublished'] = avo_iso($firstPublished);
     if ($published) $webPage['dateModified'] = avo_iso($published);
 
-    $jsonLd = [$webPage, [
-        '@context' => 'https://schema.org',
-        '@type' => 'BreadcrumbList',
-        'itemListElement' => [
-            ['@type' => 'ListItem', 'position' => 1, 'name' => $homeLabel[$lang] ?? 'Home', 'item' => AVO_SITE_URL . '/' . $lang],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => $pageName, 'item' => $canonical],
-        ],
-    ]];
+    $jsonLd = [$webPage];
+    // A landing page shows no breadcrumb (LP-SPEC §8), so it claims none in the structured data either.
+    if (($doc['layout'] ?? 'site') !== 'landing') {
+        $jsonLd[] = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => [
+                ['@type' => 'ListItem', 'position' => 1, 'name' => $homeLabel[$lang] ?? 'Home', 'item' => AVO_SITE_URL . '/' . $lang],
+                ['@type' => 'ListItem', 'position' => 2, 'name' => $pageName, 'item' => $canonical],
+            ],
+        ];
+    }
     $faq = avo_doc_faq($doc, $lang);
     if ($faq) {
         $jsonLd[] = [

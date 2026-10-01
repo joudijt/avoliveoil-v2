@@ -550,9 +550,12 @@ function BuilderInner({ payload }: { payload: PagePayload }) {
   };
 
   const saveSettings = async ({ doc: d, patch }: SettingsResult) => {
-    const { menuLabel: _old, ...rest } = docRef.current;
+    // Every other doc field (schema, sections, …) rides along in `rest`.
+    const { menuLabel: _old, layout: oldLayout, ...rest } = docRef.current;
     const next: CmsPageDoc = {
       ...rest,
+      // 'site' is the default: a doc that never had a layout stays without one
+      ...(d.layout === 'landing' || oldLayout ? { layout: d.layout } : {}),
       ...(d.menuLabel ? { menuLabel: d.menuLabel } : {}),
       title: d.title,
       seo: { ...rest.seo, metaTitle: d.metaTitle, metaDescription: d.metaDescription, ogImage: d.ogImage },
@@ -618,6 +621,11 @@ function BuilderInner({ payload }: { payload: PagePayload }) {
             </div>
             <div className="mt-0.5 flex items-center gap-1.5">
               <StatusChip p={page} />
+              {doc.layout === 'landing' && (
+                <button type="button" onClick={() => setDialog('settings')} title="Landing layout: logo + WhatsApp header, no menu. Change it in Page settings." className="rounded bg-gold/15 px-1.5 py-px text-[10.5px] font-semibold text-[#7a5a14] hover:bg-gold/25">
+                  Landing
+                </button>
+              )}
             </div>
           </div>
           <div className="mx-auto flex items-center gap-2">

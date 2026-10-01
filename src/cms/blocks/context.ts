@@ -23,6 +23,21 @@ export interface BlockEnv {
   span: number;
   /** surrounding section is full width (image sizes) */
   full: boolean;
+  /** page chrome: 'landing' = minimal ad-landing layout (LP-SPEC §2) */
+  layout: 'site' | 'landing';
+  /**
+   * Id of the widget that carries the page's form anchor (`id="cms-form"`): the FIRST
+   * form or heroForm in document order whose form resolves. Null = the page has no
+   * form, so "Fill the form" buttons and the phone bar's form button are left out.
+   */
+  formAnchor: string | null;
+  /**
+   * Public landing page only: the hero/band that opens the page edge to edge, right
+   * under the fixed header (it pads itself to clear the header). Null otherwise.
+   */
+  leadId: string | null;
+  /** surrounding section is full width with no vertical padding: widgets draw edge to edge */
+  bleed: boolean;
 }
 
 export const BlockContext = createContext<BlockEnv>({
@@ -34,6 +49,10 @@ export const BlockContext = createContext<BlockEnv>({
   align: 'start',
   span: 12,
   full: false,
+  layout: 'site',
+  formAnchor: null,
+  leadId: null,
+  bleed: false,
 });
 
 export function useBlockEnv(): BlockEnv {

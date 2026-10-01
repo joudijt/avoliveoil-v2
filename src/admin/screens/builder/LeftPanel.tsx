@@ -1,12 +1,12 @@
 import { useState, type DragEvent } from 'react';
 import { LuChevronRight, LuColumns2, LuEyeOff, LuLayers, LuLayoutGrid, LuPanelsTopLeft, LuX } from 'react-icons/lu';
-import { WIDGET_TYPES, type DragPayload, type Section, type WidgetType } from '../../../cms/contracts';
+import type { DragPayload, Section, WidgetType } from '../../../cms/contracts';
 import { COLUMN_LAYOUTS } from '../../../cms/doc';
 import { cx } from '../../lib/cx';
 import { layoutTemplateId, SECTION_TEMPLATES } from '../../content/templates';
 import { useBuilder } from './context';
 import { ElementSettings } from './settings/ElementSettings';
-import { WIDGET_META, widgetLabel } from './widgetMeta';
+import { BASIC_WIDGETS, LANDING_WIDGETS, WIDGET_META, widgetLabel } from './widgetMeta';
 
 export type LeftTab = 'widgets' | 'sections' | 'navigator';
 
@@ -97,8 +97,24 @@ function WidgetsTab(p: Props) {
       ) : (
         <p className="mb-3 px-1 text-[12px] leading-snug text-muted">Drag a widget onto the page, or click to add it below the selected item.</p>
       )}
+      <WidgetGroup title="Basic" types={BASIC_WIDGETS} {...p} />
+      <WidgetGroup
+        title="Landing sections"
+        note="Full-width blocks for ad pages: put each one in its own section. Look best on a page with the Landing page layout (Page settings)."
+        types={LANDING_WIDGETS}
+        {...p}
+      />
+    </div>
+  );
+}
+
+function WidgetGroup({ title, note, types, ...p }: Props & { title: string; note?: string; types: WidgetType[] }) {
+  return (
+    <div className="mb-5 last:mb-0" role="group" aria-label={title}>
+      <h3 className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-faint">{title}</h3>
+      {note && <p className="mb-2 px-1 text-[11.5px] leading-snug text-muted">{note}</p>}
       <div className="grid grid-cols-2 gap-2">
-        {WIDGET_TYPES.map((t) => (
+        {types.map((t) => (
           <button
             key={t}
             type="button"
@@ -108,7 +124,7 @@ function WidgetsTab(p: Props) {
             className="group flex cursor-grab flex-col items-center gap-1.5 rounded-xl border border-line bg-white px-2 py-3.5 text-center transition-all hover:border-olive/50 hover:shadow-[var(--shadow-card)] active:cursor-grabbing"
           >
             <span className="text-[22px] text-olive transition-transform group-hover:scale-110">{WIDGET_META[t].icon}</span>
-            <span className="text-[12px] font-medium text-ink">{WIDGET_META[t].name}</span>
+            <span className="text-[12px] font-medium leading-tight text-ink">{WIDGET_META[t].name}</span>
           </button>
         ))}
       </div>
@@ -138,25 +154,32 @@ function SectionsTab(p: Props) {
           ))}
         </div>
       </div>
-      <div>
-        <h3 className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-faint">Ready-made sections</h3>
-        <div className="flex flex-col gap-2">
-          {SECTION_TEMPLATES.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              onClick={() => p.onAddSection(t.id)}
-              {...dragProps({ kind: 'new-section', templateId: t.id }, p.onDragStart, p.onDragEnd)}
-              className="flex cursor-grab items-center gap-3 rounded-xl border border-line bg-white p-2.5 text-left hover:border-olive/50 hover:shadow-[var(--shadow-card)]"
-            >
-              <SectionThumb id={t.id} />
-              <span className="min-w-0">
-                <span className="block text-[13px] font-medium text-ink">{t.name}</span>
-                <span className="block text-[11.5px] leading-snug text-muted">{t.description}</span>
-              </span>
-            </button>
-          ))}
-        </div>
+      <TemplateGroup title="Ready-made sections" templates={SECTION_TEMPLATES.filter((t) => t.group !== 'landing')} {...p} />
+      <TemplateGroup title="Landing sections" templates={SECTION_TEMPLATES.filter((t) => t.group === 'landing')} {...p} />
+    </div>
+  );
+}
+
+function TemplateGroup({ title, templates, ...p }: Props & { title: string; templates: typeof SECTION_TEMPLATES }) {
+  return (
+    <div role="group" aria-label={title}>
+      <h3 className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-faint">{title}</h3>
+      <div className="flex flex-col gap-2">
+        {templates.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            onClick={() => p.onAddSection(t.id)}
+            {...dragProps({ kind: 'new-section', templateId: t.id }, p.onDragStart, p.onDragEnd)}
+            className="flex cursor-grab items-center gap-3 rounded-xl border border-line bg-white p-2.5 text-left hover:border-olive/50 hover:shadow-[var(--shadow-card)]"
+          >
+            <SectionThumb id={t.id} />
+            <span className="min-w-0">
+              <span className="block text-[13px] font-medium text-ink">{t.name}</span>
+              <span className="block text-[11.5px] leading-snug text-muted">{t.description}</span>
+            </span>
+          </button>
+        ))}
       </div>
     </div>
   );
@@ -185,6 +208,20 @@ function SectionThumb({ id }: { id: string }) {
       return <span className={cx(box, 'grid grid-cols-3 gap-0.5 bg-[#e9e3d4]')}>{Array.from({ length: 6 }, (_, i) => <span key={i} className="rounded-[2px] bg-[#c9b98f]" />)}</span>;
     case 'products':
       return <span className={cx(box, 'flex-row items-end justify-center gap-1.5 bg-[#f3ead6]')}>{[0, 1, 2].map((i) => <span key={i} className="h-7 w-2.5 rounded-t-full rounded-b-sm bg-olive/70" />)}</span>;
+    case 'lp-hero-form':
+      return <span className={cx(box, 'flex-row items-center gap-1 bg-olive-dark')}><span className="flex flex-1 flex-col gap-1">{bar('90%', 'bg-cream/80')}{bar('60%', 'bg-gold')}<span className="mt-0.5 flex gap-0.5"><span className="h-1.5 w-3 rounded-sm bg-[#25d366]" /><span className="h-1.5 w-3 rounded-sm border border-cream/60" /></span></span><span className="flex h-full w-5 flex-col justify-center gap-0.5 rounded-sm bg-cream p-0.5">{bar('100%', 'bg-line')}{bar('100%', 'bg-line')}<span className="h-1 w-full rounded-sm bg-olive" /></span></span>;
+    case 'lp-cards':
+      return <span className={cx(box, 'grid grid-cols-3 gap-0.5 bg-[#f3ead6]')}>{[0, 1, 2].map((i) => <span key={i} className="flex flex-col items-center gap-0.5 rounded-sm bg-white/80 p-0.5"><span className="h-1.5 w-1.5 rounded-full bg-gold/70" />{bar('100%')}</span>)}</span>;
+    case 'lp-steps':
+      return <span className={cx(box, 'flex-row items-center justify-between bg-[#e9e3d4] px-2')}>{[1, 2, 3].map((i) => <span key={i} className="flex h-3 w-3 items-center justify-center rounded-full bg-gold text-[6px] font-bold leading-none text-white">{i}</span>)}</span>;
+    case 'lp-cta-band':
+      return <span className={cx(box, 'items-center bg-olive')}>{bar('70%', 'bg-cream/80')}<span className="mt-0.5 flex gap-0.5"><span className="h-1.5 w-4 rounded-sm bg-[#25d366]" /><span className="h-1.5 w-4 rounded-sm bg-gold" /></span></span>;
+    case 'lp-badges':
+      return <span className={cx(box, 'flex-row items-center justify-center gap-1 bg-[#f3ead6]')}>{[0, 1, 2, 3].map((i) => <span key={i} className="flex h-5 w-2.5 flex-col items-center justify-center gap-0.5 rounded-sm bg-white/80"><span className="h-1.5 w-1.5 rounded-full bg-olive/60" /></span>)}</span>;
+    case 'lp-reviews':
+      return <span className={cx(box, 'gap-0.5 bg-[#e9e3d4]')}><span className="flex justify-around"><span className="font-display text-[8px] font-bold leading-none text-olive">9</span><span className="font-display text-[8px] font-bold leading-none text-olive">5</span></span><span className="flex gap-0.5">{[0, 1].map((i) => <span key={i} className="flex flex-1 flex-col gap-0.5 rounded-sm bg-white/70 p-0.5"><span className="font-display text-[7px] leading-none text-gold">“</span>{bar('90%')}</span>)}</span></span>;
+    case 'lp-stores':
+      return <span className={cx(box, 'flex-row items-center gap-1 bg-[#f3ead6]')}>{['bg-olive', 'bg-[#ee4d2d]', 'bg-ink'].map((c) => <span key={c} className="flex flex-1 flex-col items-center gap-0.5 rounded-sm bg-white/80 p-0.5"><span className={cx('h-2 w-2 rounded-sm', c)} /><span className="h-1 w-full rounded-sm bg-olive/50" /></span>)}</span>;
     default:
       return <span className={cx(box, 'bg-sand')} />;
   }
@@ -219,7 +256,8 @@ function Navigator({ selectedId }: { selectedId: string | null }) {
     </div>
   );
   const sectionLabel = (s: Section, i: number) => {
-    const first = s.columns.flatMap((c) => c.widgets).find((w) => w.type === 'heading');
+    const ws = s.columns.flatMap((c) => c.widgets);
+    const first = ws.find((w) => w.type === 'heading') ?? ws.find((w) => LANDING_WIDGETS.includes(w.type));
     const t = first ? widgetLabel(first, lang) : '';
     return (
       <>

@@ -3,7 +3,7 @@ import { langSwitchPath } from '../utils/langSwitch';
 
 /** First path segments under /:lang that belong to built-in pages, never to a CMS page. */
 const BUILT_IN = new Set(['products', 'shop', 'why-us', 'contact', 'blog']);
-const CMS_SUBPATH = /^\/([a-z0-9]+(?:-[a-z0-9]+)*|__cms-template)\/?$/;
+const CMS_SUBPATH = /^\/([a-z0-9]+(?:-[a-z0-9]+)*|__cms-template(?:-landing)?)\/?$/;
 
 /** The CMS page slug when `subPath` (the path after /:lang) is a CMS page, else null. */
 export function cmsSlugOf(subPath: string): string | null {

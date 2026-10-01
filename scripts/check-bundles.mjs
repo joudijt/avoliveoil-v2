@@ -8,7 +8,7 @@
 //
 // Baseline: scripts/bundle-baseline.json (pre-CMS build). Needs a fresh `vite build`.
 //   node scripts/check-bundles.mjs
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, posix } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gzipSync } from 'node:zlib';
@@ -88,6 +88,27 @@ console.log(`all JS before first render: ${kb(total)} gzip (baseline ${kb(baseli
 
 if (core > coreBase + BUDGET) failures.push(`entry + react-vendor grew ${delta(core, coreBase)} (budget +${kb(BUDGET)})`);
 if (total > baseline.staticJsGzip + BUDGET) failures.push(`JS loaded before first render grew ${delta(total, baseline.staticJsGzip)} (budget +${kb(BUDGET)})`);
+
+// Informational: what a CMS page downloads on top (the lazy CmsPage chunk and its static
+// imports that the public entry does not already load). Recorded per round (LP-SPEC §8 M4).
+{
+  const assets = join(DIST, 'assets');
+  const cmsEntry = existsSync(assets) ? readdirSync(assets).find((f) => /^CmsPage-.*\.js$/.test(f)) : undefined;
+  if (cmsEntry) {
+    const seen = new Map();
+    const q = [`/assets/${cmsEntry}`];
+    while (q.length) {
+      const url = q.shift();
+      if (seen.has(url) || loaded.has(url) || !url.endsWith('.js')) continue;
+      const code = readFileSync(fileOf(url));
+      seen.set(url, gz(code));
+      q.push(...staticImports(code.toString('utf8'), url));
+    }
+    const sum = [...seen.values()].reduce((a, b) => a + b, 0);
+    const parts = [...seen].map(([u, n]) => `${posix.basename(u)} ${kb(n)}`).join(', ');
+    console.log(`CMS page chunk (lazy, on top of the above): ${kb(sum)} gzip — ${parts}`);
+  }
+}
 
 if (failures.length) {
   console.error(`\nFAIL check-bundles:\n  ${failures.join('\n  ')}`);

@@ -10,6 +10,7 @@ import { GalleryBlock } from './GalleryBlock';
 import { FaqBlock, IconListBlock, QuoteBlock } from './ListBlocks';
 import { ProductsBlock } from './ProductsBlock';
 import { FormBlock } from './FormBlock';
+import { BadgesBlock, CardsBlock, CtaBandBlock, HeroFormBlock, ReviewsBlock, StepsBlock, StoresBlock } from './LandingBlocks';
 import { WIDGET_LABELS } from './labels';
 
 function Body({ w }: { w: Widget }) {
@@ -42,8 +43,26 @@ function Body({ w }: { w: Widget }) {
       return <QuoteBlock w={w} />;
     case 'whatsapp':
       return <WhatsappBlock w={w} />;
-    default:
+    case 'heroForm':
+      return <HeroFormBlock w={w} />;
+    case 'cards':
+      return <CardsBlock w={w} />;
+    case 'steps':
+      return <StepsBlock w={w} />;
+    case 'ctaBand':
+      return <CtaBandBlock w={w} />;
+    case 'badges':
+      return <BadgesBlock w={w} />;
+    case 'reviews':
+      return <ReviewsBlock w={w} />;
+    case 'stores':
+      return <StoresBlock w={w} />;
+    default: {
+      // A widget type this renderer does not know (a newer panel): render nothing rather than guess.
+      const unknown: never = w;
+      void unknown;
       return null;
+    }
   }
 }
 

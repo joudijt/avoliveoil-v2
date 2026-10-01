@@ -33,6 +33,8 @@ export const PAGE = {
 
 export const SECTION = {
   base: 'relative px-6 md:px-16',
+  /** layout 'full' + padY 'none': edge to edge, no side padding (LP-SPEC §8 M2) */
+  baseBleed: 'relative',
   bg: {
     bg: 'bg-bg',
     cream: 'bg-cream',
@@ -165,7 +167,8 @@ export const TEXT = {
   size: { s: 'text-sm', m: 'text-base', l: 'text-base md:text-lg' },
   color: {
     light: {
-      default: 'text-brown/75',
+      // brown/85, not the 75 % the built pages use: 4.6:1 on the page background instead of 4.0:1
+      default: 'text-brown/85',
       olive: 'text-olive',
       'olive-dark': 'text-olive-dark',
       gold: 'text-gold',
@@ -205,6 +208,12 @@ export const IMAGE = {
 
 // ---------------------------------------------------------------- button / whatsapp
 
+/**
+ * WhatsApp green with DARK text: white on #25D366 is 1.98:1, this is 6.2:1 and still
+ * reads as WhatsApp at a glance (LP-SPEC §8 minors: ≥ 4.5:1 for small button text).
+ */
+const WA_STYLE = 'bg-[#25D366] text-[#073b1c] hover:bg-[#3ee07b]';
+
 export const BUTTON = {
   base:
     'inline-flex items-center justify-center gap-2 rounded-full text-center font-medium tracking-wide transition-colors duration-300 ' +
@@ -215,13 +224,13 @@ export const BUTTON = {
       primary: 'bg-olive-dark text-cream hover:bg-gold hover:text-olive-dark',
       gold: 'bg-gold text-olive-dark hover:bg-olive-dark hover:text-cream',
       outline: 'border border-olive-dark/25 text-olive-dark hover:border-gold hover:text-gold',
-      whatsapp: 'bg-[#25D366] text-white hover:bg-[#1da851]',
+      whatsapp: WA_STYLE,
     },
     dark: {
       primary: 'bg-gold text-olive-dark hover:bg-cream',
       gold: 'bg-gold text-olive-dark hover:bg-cream',
       outline: 'border border-cream/30 text-cream hover:border-gold hover:text-gold',
-      whatsapp: 'bg-[#25D366] text-white hover:bg-[#1da851]',
+      whatsapp: WA_STYLE,
     },
   } satisfies Record<Tone, Record<ButtonStyle, string>>,
   icon: 'h-5 w-5 shrink-0',
@@ -346,7 +355,8 @@ export const FORM = {
   error: 'pt-1.5 text-xs text-[#9b2c2c]',
   honeypot: 'absolute -left-[10000px] top-auto h-px w-px overflow-hidden',
   submit:
-    'w-full rounded-lg bg-gold py-4 text-sm font-semibold uppercase tracking-wider text-olive-dark transition-colors duration-300 ' +
+    // #1f2818 on gold is 4.9:1 (olive-dark on gold is 3.8:1 — too low for 14 px text)
+    'w-full rounded-lg bg-gold py-4 text-sm font-semibold uppercase tracking-wider text-[#1f2818] transition-colors duration-300 ' +
     'hover:bg-olive-dark hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive-dark ' +
     'disabled:cursor-wait disabled:opacity-60',
   submitWrap: 'mt-6',
@@ -388,6 +398,432 @@ export const PAGE_CHROME = {
     'mt-8 inline-block rounded-full bg-olive-dark px-7 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors duration-300 hover:bg-gold hover:text-olive-dark',
   previewBadge:
     'fixed bottom-6 left-6 z-[60] rounded-full bg-olive-dark px-4 py-2 text-xs font-medium tracking-wide text-cream shadow-[0_10px_30px_rgba(0,0,0,0.25)]',
+  /** landing pages: lift the badge above the phone bottom bar */
+  previewBadgeLanding: 'max-md:bottom-24',
+} as const;
+
+// ================================================================ landing (LP-SPEC §2, §3, §8)
+//
+// Visual language: the Aircon Hero landing page structure in the olive brand —
+// olive-dark depth with a warm gold glow instead of navy, Playfair headings, Inter
+// body. Two darker golds stand in for text: #8a6516 on light backgrounds (4.8:1 on
+// cream; the site gold is 2.8:1) and #e3b856 on dark ones. Dark text on gold
+// buttons is #1f2818 (4.9:1; olive-dark on gold is only 3.9:1).
+
+/** The anchor every "Fill the form" button and the phone bar scroll to (clears the fixed header). */
+export const FORM_ANCHOR_CLS = 'scroll-mt-28';
+
+/** Shared kicker / title / sub header of the landing sections. */
+export const LP_HEAD = {
+  wrap: {
+    start: 'mb-10 flex max-w-2xl flex-col items-start gap-3 text-start md:mb-14',
+    center: 'mx-auto mb-10 flex max-w-2xl flex-col items-center gap-3 text-center md:mb-14',
+    end: 'mb-10 ms-auto flex max-w-2xl flex-col items-end gap-3 text-end md:mb-14',
+  } satisfies Record<Align, string>,
+  kicker: {
+    light: 'inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#8a6516] before:h-px before:w-7 before:bg-gold',
+    dark: 'inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#e3b856] before:h-px before:w-7 before:bg-[#e3b856]',
+  },
+  title: {
+    light: 'min-w-0 break-words font-display text-3xl leading-[1.15] text-olive-dark md:text-[2.6rem]',
+    dark: 'min-w-0 break-words font-display text-3xl leading-[1.15] text-cream md:text-[2.6rem]',
+  },
+  sub: {
+    light: 'font-body text-base font-light leading-relaxed text-brown/85 md:text-lg',
+    dark: 'font-body text-base font-light leading-relaxed text-cream/80 md:text-lg',
+  },
+} as const;
+
+const SOFT_SHADOW = 'shadow-[0_1px_2px_rgba(46,58,36,0.05),0_12px_30px_-14px_rgba(46,58,36,0.22)]';
+const LIFT =
+  'transition-[translate,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_1px_2px_rgba(46,58,36,0.05),0_22px_44px_-16px_rgba(46,58,36,0.32)]';
+
+/** Call-to-action buttons of the landing widgets (hero and others), per section tone. */
+export const CTA = {
+  base:
+    'inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 py-3.5 text-center text-[0.95rem] font-semibold tracking-wide ' +
+    'transition-[translate,background-color,color,border-color] duration-200 hover:-translate-y-0.5 ' +
+    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
+  style: {
+    light: {
+      primary: 'bg-olive-dark text-cream shadow-[0_10px_24px_-10px_rgba(46,58,36,0.6)] hover:bg-[#3a4a2c]',
+      gold: 'bg-gold text-[#1f2818] shadow-[0_10px_24px_-10px_rgba(184,138,42,0.75)] hover:bg-[#c99a3a]',
+      outline: 'border-[1.5px] border-olive-dark/30 text-olive-dark hover:border-gold hover:text-[#8a6516]',
+      whatsapp: 'bg-[#25D366] text-[#073b1c] shadow-[0_10px_24px_-10px_rgba(37,211,102,0.8)] hover:bg-[#3ee07b]',
+    },
+    dark: {
+      primary: 'bg-gold text-[#1f2818] shadow-[0_10px_24px_-10px_rgba(184,138,42,0.75)] hover:bg-[#d4a548]',
+      gold: 'bg-gold text-[#1f2818] shadow-[0_10px_24px_-10px_rgba(184,138,42,0.75)] hover:bg-[#d4a548]',
+      outline: 'border-[1.5px] border-cream/40 text-cream hover:border-[#e3b856] hover:text-[#e3b856]',
+      whatsapp: 'bg-[#25D366] text-[#073b1c] shadow-[0_10px_24px_-10px_rgba(37,211,102,0.8)] hover:bg-[#3ee07b]',
+    },
+  } satisfies Record<Tone, Record<ButtonStyle, string>>,
+  icon: 'h-5 w-5 shrink-0',
+} as const;
+
+// ---------------------------------------------------------------- heroForm
+
+export const HERO = {
+  root: {
+    dark:
+      'relative isolate overflow-hidden bg-olive-dark text-cream ' +
+      'bg-[radial-gradient(900px_480px_at_10%_-10%,rgba(184,138,42,0.28),transparent_62%),radial-gradient(760px_460px_at_108%_18%,rgba(85,107,47,0.6),transparent_60%),linear-gradient(160deg,#36452a_0%,#2e3a24_52%,#1c2416_100%)]',
+    light: 'relative isolate overflow-hidden bg-cream bg-[radial-gradient(900px_480px_at_100%_0%,rgba(184,138,42,0.14),transparent_60%)] text-olive-dark',
+  },
+  /** bleed = edge-to-edge section; lead = also the first thing on a landing page (clears the fixed header) */
+  shape: {
+    bleed: 'px-6 pb-16 pt-16 md:px-16 md:pb-24 md:pt-24',
+    lead: 'px-6 pb-16 pt-28 md:px-16 md:pb-24 md:pt-36',
+    boxed: 'rounded-3xl px-6 py-10 sm:px-10 md:py-14 lg:px-14',
+  },
+  media: 'absolute inset-0 -z-10 h-full w-full object-cover',
+  /** photo overlay strength rounded to tens (0–80) */
+  overlay: {
+    0: '',
+    10: 'absolute inset-0 -z-10 bg-[#11160c]/10',
+    20: 'absolute inset-0 -z-10 bg-[#11160c]/20',
+    30: 'absolute inset-0 -z-10 bg-[#11160c]/30',
+    40: 'absolute inset-0 -z-10 bg-[#11160c]/40',
+    50: 'absolute inset-0 -z-10 bg-[#11160c]/50',
+    60: 'absolute inset-0 -z-10 bg-[#11160c]/60',
+    70: 'absolute inset-0 -z-10 bg-[#11160c]/70',
+    80: 'absolute inset-0 -z-10 bg-[#11160c]/80',
+  } as Record<number, string>,
+  /** extra shade behind the copy column over a photo */
+  shade: 'absolute inset-0 -z-10 bg-[linear-gradient(100deg,rgba(17,22,12,0.62)_0%,rgba(17,22,12,0.12)_75%)]',
+  leaves: {
+    dark: 'pointer-events-none absolute -right-28 -top-20 -z-10 h-[30rem] w-[30rem] text-cream/[0.07] md:h-[42rem] md:w-[42rem]',
+    light: 'pointer-events-none absolute -right-28 -top-20 -z-10 h-[30rem] w-[30rem] text-olive/[0.08] md:h-[42rem] md:w-[42rem]',
+  },
+  inner: 'relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14',
+  copy: {
+    card: 'flex min-w-0 flex-col items-start gap-5 text-start lg:col-span-7',
+    alone: 'flex min-w-0 max-w-3xl flex-col items-start gap-5 text-start lg:col-span-12',
+  },
+  kicker: {
+    dark: 'inline-flex items-center gap-2 rounded-full border border-[#e3b856]/40 bg-[#e3b856]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e3b856]',
+    light: 'inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#8a6516]',
+  },
+  title: {
+    dark: 'min-w-0 max-w-full break-words font-display text-[2.2rem] leading-[1.08] text-cream sm:text-5xl lg:text-[3.6rem]',
+    light: 'min-w-0 max-w-full break-words font-display text-[2.2rem] leading-[1.08] text-olive-dark sm:text-5xl lg:text-[3.6rem]',
+  },
+  gold: { dark: 'text-[#e3b856]', light: 'text-gold' },
+  sub: {
+    dark: 'max-w-xl font-body text-base font-light leading-relaxed text-cream/85 md:text-lg',
+    light: 'max-w-xl font-body text-base font-light leading-relaxed text-brown/85 md:text-lg',
+  },
+  buttons: 'flex flex-wrap items-center gap-3 pt-2',
+  chips: 'flex flex-wrap gap-2 pt-2',
+  chip: {
+    dark: 'inline-flex items-center gap-2 rounded-full border border-cream/15 bg-cream/[0.07] px-3.5 py-1.5 text-sm font-medium text-cream/90',
+    light: 'inline-flex items-center gap-2 rounded-full border border-olive-dark/10 bg-white/70 px-3.5 py-1.5 text-sm font-medium text-olive-dark',
+  },
+  chipIcon: { dark: 'h-3.5 w-3.5 shrink-0 text-[#e3b856]', light: 'h-3.5 w-3.5 shrink-0 text-[#8a6516]' },
+  cardCol: 'min-w-0 lg:col-span-5',
+  card: {
+    dark: 'mx-auto w-full max-w-xl rounded-3xl bg-cream p-6 text-start text-olive-dark shadow-[0_30px_60px_-20px_rgba(8,12,4,0.6)] ring-[6px] ring-cream/10 sm:p-8 lg:max-w-none',
+    light: 'mx-auto w-full max-w-xl rounded-3xl border border-olive-dark/10 bg-white p-6 text-start text-olive-dark shadow-[0_30px_60px_-24px_rgba(46,58,36,0.35)] sm:p-8 lg:max-w-none',
+  },
+  formTitle: 'font-display text-2xl leading-snug text-olive-dark',
+  formSub: 'pt-1.5 font-body text-sm font-light leading-relaxed text-brown/85',
+  formBody: 'pt-5',
+} as const;
+
+// ---------------------------------------------------------------- cards
+
+export const CARDS = {
+  grid: {
+    2: 'grid grid-cols-1 gap-5 sm:grid-cols-2',
+    3: 'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3',
+    4: 'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4',
+  } as Record<number, string>,
+  split: 'grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12 lg:gap-8',
+  mediaCol: { left: 'min-w-0 lg:col-span-5', right: 'min-w-0 lg:order-last lg:col-span-5' },
+  gridCol: 'min-w-0 lg:col-span-7',
+  gridBeside: 'grid grid-cols-1 gap-5 sm:grid-cols-2',
+  figure: `relative m-0 h-64 overflow-hidden rounded-3xl bg-olive-dark/5 sm:h-80 lg:h-full lg:min-h-[26rem] ${SOFT_SHADOW}`,
+  img: 'absolute inset-0 h-full w-full object-cover',
+  card: {
+    // phone: icon left of the text (half the height); from sm: icon on top
+    light: `grid h-full grid-cols-[3rem_1fr] items-start gap-x-4 rounded-2xl border border-olive-dark/10 bg-cream p-5 text-start sm:flex sm:flex-col sm:p-6 ${SOFT_SHADOW} ${LIFT}`,
+    dark: `grid h-full grid-cols-[3rem_1fr] items-start gap-x-4 rounded-2xl border border-cream/10 bg-cream/[0.06] p-5 text-start sm:flex sm:flex-col sm:p-6 ${LIFT}`,
+  },
+  iconWrap: {
+    light: 'row-span-2 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gold/15 text-[#8a6516] ring-1 ring-gold/25',
+    dark: 'row-span-2 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#e3b856]/15 text-[#e3b856] ring-1 ring-[#e3b856]/25',
+  },
+  icon: 'h-6 w-6',
+  title: {
+    light: 'min-w-0 max-w-full break-words pt-2.5 font-display text-xl leading-snug text-olive-dark sm:pt-5',
+    dark: 'min-w-0 max-w-full break-words pt-2.5 font-display text-xl leading-snug text-cream sm:pt-5',
+  },
+  text: {
+    light: 'pt-1 font-body text-sm font-light leading-relaxed text-brown/85 sm:pt-2',
+    dark: 'pt-1 font-body text-sm font-light leading-relaxed text-cream/75 sm:pt-2',
+  },
+} as const;
+
+// ---------------------------------------------------------------- steps
+
+export const STEPS = {
+  row: 'grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]',
+  item: {
+    light:
+      `relative grid grid-cols-[3rem_1fr] items-start gap-x-4 gap-y-1 rounded-2xl border border-olive-dark/10 bg-cream p-5 text-start md:flex md:flex-col md:gap-3 md:p-6 ${SOFT_SHADOW} ` +
+      'lg:after:absolute lg:after:left-[4.75rem] lg:after:right-[-1.3rem] lg:after:top-12 lg:after:h-px lg:after:bg-gold/50 lg:last:after:hidden',
+    dark:
+      'relative grid grid-cols-[3rem_1fr] items-start gap-x-4 gap-y-1 rounded-2xl border border-cream/10 bg-cream/[0.06] p-5 text-start md:flex md:flex-col md:gap-3 md:p-6 ' +
+      'lg:after:absolute lg:after:left-[4.75rem] lg:after:right-[-1.3rem] lg:after:top-12 lg:after:h-px lg:after:bg-[#e3b856]/40 lg:last:after:hidden',
+  },
+  /** row variant on phones: number left, title beside it */
+  rowNum: 'row-span-2',
+  rowTitle: 'pt-2.5 md:pt-0',
+  num: 'relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold font-display text-xl text-[#1f2818] shadow-[0_8px_20px_-8px_rgba(184,138,42,0.8)]',
+  /** photo beside: a vertical timeline */
+  split: 'grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-14',
+  mediaCol: 'min-w-0 lg:col-span-5',
+  listCol: 'min-w-0 lg:col-span-7',
+  figure: `relative m-0 h-64 overflow-hidden rounded-3xl bg-olive-dark/5 sm:h-80 lg:h-[30rem] ${SOFT_SHADOW}`,
+  img: 'absolute inset-0 h-full w-full object-cover',
+  column: 'flex flex-col gap-7',
+  columnItem: {
+    light: 'relative flex items-start gap-5 text-start before:absolute before:bottom-[-1.75rem] before:left-6 before:top-12 before:w-px before:bg-gold/40 last:before:hidden',
+    dark: 'relative flex items-start gap-5 text-start before:absolute before:bottom-[-1.75rem] before:left-6 before:top-12 before:w-px before:bg-[#e3b856]/40 last:before:hidden',
+  },
+  body: 'flex min-w-0 flex-col gap-1.5 pt-2.5',
+  title: {
+    light: 'min-w-0 max-w-full break-words font-display text-xl leading-snug text-olive-dark',
+    dark: 'min-w-0 max-w-full break-words font-display text-xl leading-snug text-cream',
+  },
+  text: {
+    light: 'font-body text-sm font-light leading-relaxed text-brown/85',
+    dark: 'font-body text-sm font-light leading-relaxed text-cream/75',
+  },
+} as const;
+
+// ---------------------------------------------------------------- ctaBand
+
+export type BandTone = 'olive' | 'dark' | 'gold' | 'cream';
+
+export const BAND = {
+  root: {
+    olive:
+      'relative isolate overflow-hidden bg-olive text-cream ' +
+      'bg-[radial-gradient(800px_400px_at_85%_-20%,rgba(184,138,42,0.3),transparent_60%),linear-gradient(160deg,#5f7735_0%,#556b2f_55%,#46592a_100%)]',
+    dark:
+      'relative isolate overflow-hidden bg-olive-dark text-cream ' +
+      'bg-[radial-gradient(800px_400px_at_85%_-20%,rgba(184,138,42,0.26),transparent_60%),linear-gradient(160deg,#36452a_0%,#2e3a24_55%,#1c2416_100%)]',
+    gold: 'relative isolate overflow-hidden bg-gold text-[#1f2818] bg-[linear-gradient(160deg,#cfa047_0%,#b88a2a_60%,#a77d24_100%)]',
+    cream: `relative isolate overflow-hidden border border-olive-dark/10 bg-cream text-olive-dark ${SOFT_SHADOW}`,
+  } satisfies Record<BandTone, string>,
+  shape: {
+    bleed: 'px-6 py-16 md:px-16 md:py-20',
+    lead: 'px-6 pb-16 pt-28 md:px-16 md:pb-20 md:pt-36',
+    boxed: 'rounded-3xl px-6 py-12 sm:px-10 md:py-14',
+  },
+  leaves: {
+    olive: 'pointer-events-none absolute -bottom-28 -left-28 -z-10 h-[26rem] w-[26rem] text-cream/[0.06]',
+    dark: 'pointer-events-none absolute -bottom-28 -left-28 -z-10 h-[26rem] w-[26rem] text-cream/[0.05]',
+    gold: 'pointer-events-none absolute -bottom-28 -left-28 -z-10 h-[26rem] w-[26rem] text-[#1f2818]/[0.06]',
+    cream: 'pointer-events-none absolute -bottom-28 -left-28 -z-10 h-[26rem] w-[26rem] text-olive/[0.05]',
+  } satisfies Record<BandTone, string>,
+  inner: 'relative mx-auto flex max-w-3xl flex-col items-center gap-4 text-center',
+  iconWrap: {
+    olive: 'mb-2 flex h-16 w-16 items-center justify-center rounded-2xl bg-gold text-[#1f2818] shadow-[0_16px_40px_-12px_rgba(184,138,42,0.75)]',
+    dark: 'mb-2 flex h-16 w-16 items-center justify-center rounded-2xl bg-gold text-[#1f2818] shadow-[0_16px_40px_-12px_rgba(184,138,42,0.75)]',
+    gold: 'mb-2 flex h-16 w-16 items-center justify-center rounded-2xl bg-olive-dark text-[#e3b856] shadow-[0_16px_40px_-12px_rgba(31,40,24,0.6)]',
+    cream: 'mb-2 flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/15 text-[#8a6516] ring-1 ring-gold/30',
+  } satisfies Record<BandTone, string>,
+  icon: 'h-8 w-8',
+  title: {
+    olive: 'min-w-0 max-w-full break-words font-display text-3xl leading-tight text-cream md:text-[2.6rem]',
+    dark: 'min-w-0 max-w-full break-words font-display text-3xl leading-tight text-cream md:text-[2.6rem]',
+    gold: 'min-w-0 max-w-full break-words font-display text-3xl leading-tight text-[#1f2818] md:text-[2.6rem]',
+    cream: 'min-w-0 max-w-full break-words font-display text-3xl leading-tight text-olive-dark md:text-[2.6rem]',
+  } satisfies Record<BandTone, string>,
+  sub: {
+    olive: 'max-w-xl font-body text-base font-light leading-relaxed text-cream/90 md:text-lg',
+    dark: 'max-w-xl font-body text-base font-light leading-relaxed text-cream/80 md:text-lg',
+    gold: 'max-w-xl font-body text-base leading-relaxed text-[#1f2818] md:text-lg',
+    cream: 'max-w-xl font-body text-base font-light leading-relaxed text-brown/85 md:text-lg',
+  } satisfies Record<BandTone, string>,
+  buttons: 'flex flex-wrap items-center justify-center gap-3 pt-4',
+  /** the band's own button colours per tone, every text/background pair ≥ 4.5:1 */
+  style: {
+    olive: {
+      primary: 'bg-cream text-olive-dark hover:bg-white',
+      gold: 'bg-gold text-[#1f2818] hover:bg-[#d4a548]',
+      outline: 'border-[1.5px] border-cream/70 text-cream hover:bg-cream/10',
+      whatsapp: 'bg-[#25D366] text-[#073b1c] hover:bg-[#3ee07b]',
+    },
+    dark: {
+      primary: 'bg-gold text-[#1f2818] hover:bg-[#d4a548]',
+      gold: 'bg-gold text-[#1f2818] hover:bg-[#d4a548]',
+      outline: 'border-[1.5px] border-cream/40 text-cream hover:border-[#e3b856] hover:text-[#e3b856]',
+      whatsapp: 'bg-[#25D366] text-[#073b1c] hover:bg-[#3ee07b]',
+    },
+    gold: {
+      primary: 'bg-olive-dark text-cream hover:bg-[#1f2818]',
+      gold: 'bg-cream text-olive-dark hover:bg-white',
+      outline: 'border-[1.5px] border-[#1f2818]/60 text-[#1f2818] hover:bg-[#1f2818]/10',
+      whatsapp: 'bg-[#25D366] text-[#073b1c] hover:bg-[#3ee07b]',
+    },
+    cream: {
+      primary: 'bg-olive-dark text-cream hover:bg-[#3a4a2c]',
+      gold: 'bg-gold text-[#1f2818] hover:bg-[#c99a3a]',
+      outline: 'border-[1.5px] border-olive-dark/30 text-olive-dark hover:border-gold hover:text-[#8a6516]',
+      whatsapp: 'bg-[#25D366] text-[#073b1c] hover:bg-[#3ee07b]',
+    },
+  } satisfies Record<BandTone, Record<ButtonStyle, string>>,
+} as const;
+
+// ---------------------------------------------------------------- badges
+
+export const BADGES = {
+  row: 'flex flex-wrap justify-center gap-3 sm:gap-4',
+  tile: {
+    light: `flex w-[calc(50%-0.375rem)] flex-col items-center gap-3 rounded-2xl border border-olive-dark/10 bg-cream px-4 py-6 text-center sm:w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] ${SOFT_SHADOW}`,
+    dark: 'flex w-[calc(50%-0.375rem)] flex-col items-center gap-3 rounded-2xl border border-cream/10 bg-cream/[0.06] px-4 py-6 text-center sm:w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)]',
+  },
+  iconWrap: {
+    light: 'flex h-14 w-14 items-center justify-center rounded-full bg-gold/15 text-[#8a6516] ring-1 ring-gold/25',
+    dark: 'flex h-14 w-14 items-center justify-center rounded-full bg-[#e3b856]/15 text-[#e3b856] ring-1 ring-[#e3b856]/25',
+  },
+  icon: 'h-7 w-7',
+  title: {
+    light: 'min-w-0 max-w-full break-words font-display text-base leading-snug text-olive-dark md:text-lg',
+    dark: 'min-w-0 max-w-full break-words font-display text-base leading-snug text-cream md:text-lg',
+  },
+  text: {
+    light: 'font-body text-xs font-light leading-relaxed text-brown/85 md:text-sm',
+    dark: 'font-body text-xs font-light leading-relaxed text-cream/75 md:text-sm',
+  },
+} as const;
+
+// ---------------------------------------------------------------- reviews
+
+export const REVIEWS = {
+  stats: 'mb-10 flex flex-wrap justify-center gap-x-14 gap-y-6 md:mb-14',
+  stat: 'flex flex-col items-center text-center',
+  statValue: {
+    light: 'font-display text-4xl leading-none text-olive-dark md:text-5xl',
+    dark: 'font-display text-4xl leading-none text-[#e3b856] md:text-5xl',
+  },
+  statLabel: { light: 'pt-2 font-body text-sm font-light text-brown/85', dark: 'pt-2 font-body text-sm font-light text-cream/75' },
+  grid: {
+    1: 'mx-auto grid max-w-2xl grid-cols-1 gap-5',
+    2: 'mx-auto grid max-w-4xl grid-cols-1 gap-5 md:grid-cols-2',
+    3: 'grid grid-cols-1 gap-5 md:grid-cols-3',
+  } as Record<number, string>,
+  card: {
+    light: `m-0 flex h-full flex-col rounded-2xl border border-olive-dark/10 bg-cream p-7 text-start ${SOFT_SHADOW}`,
+    dark: 'm-0 flex h-full flex-col rounded-2xl border border-cream/10 bg-cream/[0.06] p-7 text-start',
+  },
+  mark: { light: 'block h-8 font-display text-6xl leading-none text-gold', dark: 'block h-8 font-display text-6xl leading-none text-[#e3b856]' },
+  quote: 'm-0 flex-1 pt-3',
+  text: {
+    light: 'font-display text-lg italic leading-relaxed text-olive-dark',
+    dark: 'font-display text-lg italic leading-relaxed text-cream/90',
+  },
+  caption: { light: 'pt-6 font-body text-sm text-brown/85', dark: 'pt-6 font-body text-sm text-cream/70' },
+  name: { light: 'font-semibold text-[#8a6516]', dark: 'font-semibold text-[#e3b856]' },
+} as const;
+
+// ---------------------------------------------------------------- stores
+
+export const STORES = {
+  grid: {
+    1: 'mx-auto grid max-w-md grid-cols-1 gap-5',
+    2: 'mx-auto grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2',
+    3: 'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3',
+  } as Record<number, string>,
+  card: {
+    light: `flex h-full flex-col items-center rounded-2xl border bg-cream p-8 text-center ${SOFT_SHADOW} ${LIFT}`,
+    dark: `flex h-full flex-col items-center rounded-2xl border bg-cream/[0.06] p-8 text-center ${LIFT}`,
+  },
+  border: { featured: 'border-gold/50', plain: 'border-olive-dark/10' },
+  iconWrap: 'flex h-16 w-16 items-center justify-center rounded-full text-white shadow-[0_12px_28px_-12px_rgba(0,0,0,0.45)]',
+  iconBg: { madinah: 'bg-olive-dark', shopee: 'bg-[#EE4D2D]', tiktok: 'bg-black' },
+  icon: 'h-7 w-7',
+  title: {
+    light: 'min-w-0 max-w-full break-words pt-5 font-display text-xl text-olive-dark',
+    dark: 'min-w-0 max-w-full break-words pt-5 font-display text-xl text-cream',
+  },
+  text: {
+    light: 'pt-2 font-body text-sm font-light leading-relaxed text-brown/85',
+    dark: 'pt-2 font-body text-sm font-light leading-relaxed text-cream/75',
+  },
+  buttonWrap: 'mt-auto flex w-full pt-6',
+  button:
+    'flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold tracking-wide text-[#1f2818] transition-colors duration-300 ' +
+    'hover:bg-olive-dark hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive-dark',
+  buttonIcon: 'h-4 w-4 shrink-0',
+} as const;
+
+// ---------------------------------------------------------------- landing chrome
+
+/**
+ * The header goes transparent with light text ONLY while the page root starts with
+ * an edge-to-edge dark hero/band (marker `data-cms-dark-top`, emitted by the blocks)
+ * and the visitor has not scrolled (`data-scrolled`, set by React). Pure CSS, so the
+ * template header serve.php sends is already right before any JavaScript runs.
+ */
+export const LP_HEADER = {
+  root:
+    'fixed inset-x-0 top-0 z-50 bg-cream/95 px-4 py-3 shadow-[0_1px_0_rgba(46,58,36,0.08),0_10px_30px_-18px_rgba(46,58,36,0.45)] backdrop-blur-md ' +
+    'transition-[background-color,box-shadow] duration-300 sm:px-6 sm:py-4 md:px-16 ' +
+    '[body:has([data-cms-dark-top])_&:not([data-scrolled])]:bg-transparent [body:has([data-cms-dark-top])_&:not([data-scrolled])]:shadow-none ' +
+    '[body:has([data-cms-dark-top])_&:not([data-scrolled])]:backdrop-blur-none',
+  row: 'mx-auto flex max-w-6xl items-center justify-between gap-3',
+  logoLink: 'shrink-0 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold',
+  logo:
+    'h-8 w-auto sm:h-10 [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:brightness-0 ' +
+    '[body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:invert',
+  actions: 'flex items-center gap-2 sm:gap-3',
+  langs:
+    'flex items-center rounded-full border border-olive-dark/15 p-0.5 [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:border-cream/30',
+  lang:
+    'rounded-full px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors duration-200 sm:px-3 ' +
+    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
+  langOn:
+    'bg-olive-dark text-cream [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:bg-cream ' +
+    '[body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:text-olive-dark',
+  langOff: 'text-olive-dark/75 hover:text-[#8a6516] [body:has([data-cms-dark-top])_[data-cms-landing-header]:not([data-scrolled])_&]:text-cream/85',
+  wa:
+    'inline-flex min-h-10 items-center gap-2 rounded-full bg-[#25D366] px-3 py-2 text-sm font-semibold text-[#073b1c] shadow-[0_8px_20px_-10px_rgba(37,211,102,0.9)] ' +
+    'transition-colors duration-200 hover:bg-[#3ee07b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:px-5 sm:py-2.5',
+  waIcon: 'h-5 w-5 shrink-0',
+  waLabel: 'hidden sm:inline',
+  /** room for the fixed header when the page does not start with an edge-to-edge hero/band */
+  spacer: 'h-16 sm:h-[4.5rem]',
+} as const;
+
+export const LP_FOOTER = {
+  /** a shade darker than olive-dark, so a dark closing band and the footer stay two things */
+  root: 'border-t border-cream/10 bg-[#1f2818] px-6 pb-28 pt-12 text-center md:px-16 md:pb-12',
+  inner: 'mx-auto flex max-w-6xl flex-col items-center gap-5',
+  logo: 'h-9 w-auto brightness-0 invert',
+  line: 'max-w-xl font-body text-sm font-light leading-relaxed text-cream/80',
+  contacts: 'flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-body text-sm',
+  contact: 'inline-flex items-center gap-2 text-cream/85 transition-colors duration-200 hover:text-[#e3b856]',
+  contactIcon: 'h-4 w-4 shrink-0 text-[#e3b856]',
+  site:
+    'inline-flex items-center gap-2 rounded-full border border-cream/25 px-5 py-2.5 text-sm font-medium text-cream transition-colors duration-200 ' +
+    'hover:border-[#e3b856] hover:text-[#e3b856]',
+  siteIcon: 'h-4 w-4 shrink-0',
+  copy: 'w-full border-t border-cream/10 pt-6 font-body text-xs font-light text-cream/60',
+} as const;
+
+/** Phone bottom bar, rendered INSIDE the page root; hidden while a form field has focus (CSS :has, no JS). */
+export const LP_BAR = {
+  root:
+    'fixed inset-x-0 bottom-0 z-[55] flex gap-2.5 border-t border-cream/10 bg-olive-dark/95 px-3 pb-[calc(0.625rem+env(safe-area-inset-bottom))] pt-2.5 ' +
+    'shadow-[0_-10px_30px_-12px_rgba(0,0,0,0.35)] backdrop-blur-md md:hidden [body:has(form_:is(input,select,textarea):focus)_&]:hidden',
+  btn: 'flex min-h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full px-3 py-3 text-[0.95rem] font-semibold',
+  wa: 'bg-[#25D366] text-[#073b1c]',
+  form: 'bg-gold text-[#1f2818]',
+  icon: 'h-5 w-5 shrink-0',
 } as const;
 
 // ---------------------------------------------------------------- the list
@@ -402,7 +838,11 @@ function collect(value: unknown, out: Set<string>) {
   }
 }
 
-const ALL_MAPS = [PAGE, SECTION, ROW, COLUMN, HIDE, ALIGN_TEXT, ALIGN_FLEX, HEADING, TEXT, IMAGE, BUTTON, SPACER, DIVIDER, VIDEO, GALLERY, ICON_LIST, FAQ, PRODUCTS, FORM, QUOTE, PAGE_CHROME];
+const ALL_MAPS = [
+  PAGE, SECTION, ROW, COLUMN, HIDE, ALIGN_TEXT, ALIGN_FLEX, HEADING, TEXT, IMAGE, BUTTON, SPACER, DIVIDER, VIDEO, GALLERY, ICON_LIST, FAQ,
+  PRODUCTS, FORM, QUOTE, PAGE_CHROME,
+  FORM_ANCHOR_CLS, LP_HEAD, CTA, HERO, CARDS, STEPS, BAND, BADGES, REVIEWS, STORES, LP_HEADER, LP_FOOTER, LP_BAR,
+];
 
 /** Every class any widget / section variant can emit (checked against the built CSS). */
 export const CMS_CLASS_LIST: string[] = (() => {

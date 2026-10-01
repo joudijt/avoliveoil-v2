@@ -11,10 +11,13 @@ import { BlogPage } from './pages/BlogPage';
 import { ArticlePage } from './pages/ArticlePage';
 import { WhatsAppButton } from './components/ui/WhatsAppButton';
 import { CanvasRoute, CmsRoute } from './routes/cmsRoutes';
+import { useLandingChrome } from './cms/landingChrome';
 
 function App() {
   // The builder canvas is a bare surface inside the admin's iframe: no site chrome.
   const onCanvas = useLocation().pathname === '/cms-canvas';
+  // A landing page brings its own WhatsApp header button and phone bar (LP-SPEC §2).
+  const onLanding = useLandingChrome();
 
   return (
     <>
@@ -37,7 +40,7 @@ function App() {
         </Route>
         <Route path="*" element={<Navigate to="/en" replace />} />
       </Routes>
-      {!onCanvas && <WhatsAppButton />}
+      {!onCanvas && !onLanding && <WhatsAppButton />}
     </>
   );
 }

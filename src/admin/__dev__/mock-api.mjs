@@ -283,6 +283,127 @@ const docWholesale = {
     ]),
   ],
 };
+// A landing-layout draft with every landing widget filled in (LP-SPEC §3), so the builder's
+// landing settings can be driven without building the page by hand.
+const cb = (id, kind, le, lm, extra = {}) => ({ id, kind, label: L(le, lm), style: kind === 'whatsapp' ? 'whatsapp' : kind === 'form' ? 'outline' : kind === 'store' ? 'gold' : 'primary', ...extra });
+const lpSec = (id, bg, widget, padY = 'l') => ({ id, kind: 'section', settings: { layout: 'full', bg, padY, align: 'start', valign: 'start', gap: 'm' }, columns: [{ id: id + 'c', span: 12, widgets: [widget] }] });
+const docLanding = {
+  schema: 1,
+  layout: 'landing',
+  title: L('Palestinian Extra Virgin Olive Oil', 'Minyak Zaitun Extra Virgin Palestin'),
+  seo: { metaTitle: L('Palestinian Extra Virgin Olive Oil in Malaysia', 'Minyak Zaitun Extra Virgin Palestin di Malaysia'), metaDescription: L('[Describe the page for Google in 120–155 characters.]', '') },
+  sections: [
+    lpSec('l1', 'olive-dark', {
+      id: 'lw1',
+      type: 'heroForm',
+      settings: {
+        kicker: L('From the groves of Palestine', 'Dari ladang zaitun Palestin'),
+        title: L('Palestinian extra virgin olive oil, sold in Malaysia', 'Minyak zaitun extra virgin Palestin, dijual di Malaysia'),
+        highlight: L('extra virgin olive oil', 'Extra Virgin'),
+        sub: L('First cold pressed. Ask us on WhatsApp or leave your details below.', 'Perahan sejuk pertama. Tanya kami di WhatsApp atau tinggalkan butiran anda.'),
+        chips: [
+          { id: 'ch1', text: L('100% Palestinian', '100% Palestin') },
+          { id: 'ch2', text: L('First cold pressed', 'Perahan sejuk pertama') },
+          { id: 'ch3', text: L('Sold by Berkat Madinah Store', '') },
+        ],
+        buttons: [
+          cb('b1', 'whatsapp', 'WhatsApp us', 'WhatsApp kami', { message: L('Hello, I would like to ask about your olive oil.', 'Hai, saya ingin bertanya tentang minyak zaitun anda.') }),
+          cb('b2', 'form', 'Fill the form', 'Isi borang'),
+        ],
+        formId: 1,
+        formTitle: L('Ask about our olive oil', 'Tanya tentang minyak zaitun kami'),
+        formSub: L('Leave your details and we will get back to you.', 'Tinggalkan butiran anda dan kami akan menghubungi anda.'),
+        media: 103,
+        overlay: 55,
+        tone: 'dark',
+      },
+    }, 'none'),
+    lpSec('l2', 'cream', {
+      id: 'lw2',
+      type: 'cards',
+      settings: {
+        kicker: L('Why choose us', 'Mengapa pilih kami'),
+        title: L('Olive oil the traditional way', 'Minyak zaitun cara tradisional'),
+        sub: L('Grown in Palestine, bottled with care.', 'Ditanam di Palestin, dibotolkan dengan teliti.'),
+        columns: 2,
+        items: [
+          { id: 'ci1', icon: 'leaf', title: L('100% Palestinian', '100% Palestin'), text: L('From centuries-old groves — no blending.', 'Dari ladang berusia berabad-abad — tanpa campuran.') },
+          { id: 'ci2', icon: 'drop', title: L('First cold pressed', 'Perahan sejuk pertama'), text: L('Pressed without heat.', 'Diperah tanpa haba.') },
+          { id: 'ci3', icon: 'bottle', title: L('Two sizes', 'Dua saiz'), text: L('[250 ml and 500 ml — check with the store]', '') },
+          { id: 'ci4', icon: 'store', title: L('Easy to buy', 'Mudah dibeli'), text: L('At Berkat Madinah Store, Shopee and TikTok Shop.', 'Di Berkat Madinah Store, Shopee dan TikTok Shop.') },
+        ],
+        media: 104,
+        mediaAlt: L('Arabian Village olive oil among the trees', ''),
+        mediaSide: 'right',
+      },
+    }),
+    lpSec('l3', 'olive', {
+      id: 'lw3',
+      type: 'ctaBand',
+      settings: {
+        icon: 'whatsapp',
+        title: L('Questions before you order?', 'Ada soalan sebelum membuat pesanan?'),
+        sub: L('Message us on WhatsApp or fill in the form.', 'Hantar mesej kepada kami di WhatsApp atau isi borang.'),
+        buttons: [cb('b3', 'whatsapp', 'WhatsApp us', 'WhatsApp kami', { message: L('Hello!', 'Hai!') }), cb('b4', 'link', 'See all products', 'Lihat semua produk', { href: 'www.example.com' })],
+        tone: 'olive',
+      },
+    }, 'none'),
+    lpSec('l4', 'bg', {
+      id: 'lw4',
+      type: 'steps',
+      settings: {
+        kicker: L('How to order', 'Cara membuat pesanan'),
+        title: L('How it works', 'Bagaimana ia berfungsi'),
+        sub: L('', ''),
+        items: [
+          { id: 'si1', title: L('Contact us', 'Hubungi kami'), text: L('WhatsApp or the form above.', 'WhatsApp atau borang di atas.') },
+          { id: 'si2', title: L('Choose your oil', 'Pilih minyak anda'), text: L('Classic or one of the infused flavours.', 'Klasik atau salah satu perisa infused.') },
+          { id: 'si3', title: L('Buy at the store or online', 'Beli di kedai atau dalam talian'), text: L('Berkat Madinah Store, Shopee or TikTok Shop.', 'Berkat Madinah Store, Shopee atau TikTok Shop.') },
+        ],
+        media: 105,
+        mediaAlt: L('Pouring fresh olive oil', 'Menuang minyak zaitun segar'),
+      },
+    }),
+    lpSec('l5', 'cream', {
+      id: 'lw5',
+      type: 'stores',
+      settings: {
+        kicker: L('Where to buy', 'Di mana untuk membeli'),
+        title: L('Buy online or at the store', 'Beli dalam talian atau di kedai'),
+        sub: L('', ''),
+        items: [
+          { id: 'st1', store: 'madinah', title: L('Berkat Madinah Store', 'Berkat Madinah Store'), text: L('Two branches in Selangor.', 'Dua cawangan di Selangor.'), button: L('Visit the store', 'Lawati kedai') },
+          { id: 'st2', store: 'shopee', title: L('Shopee', 'Shopee'), text: L('', ''), button: L('Shop on Shopee', 'Beli di Shopee') },
+          { id: 'st3', store: 'tiktok', title: L('TikTok Shop', 'TikTok Shop'), text: L('', ''), button: L('Shop on TikTok', 'Beli di TikTok') },
+        ],
+      },
+    }),
+    lpSec('l6', 'cream', {
+      id: 'lw6',
+      type: 'badges',
+      settings: {
+        title: L('Why customers trust us', 'Mengapa pelanggan mempercayai kami'),
+        sub: L('', ''),
+        items: [
+          { id: 'bi1', icon: 'award', title: L('Est. 2010', 'Sejak 2010'), text: L('Berkat Madinah Store', 'Berkat Madinah Store') },
+          { id: 'bi2', icon: 'leaf', title: L('Cold pressed', 'Perahan sejuk') },
+          { id: 'bi3', icon: 'users', title: L('Family business', 'Perniagaan keluarga') },
+          { id: 'bi4', icon: 'globe', title: L('From Palestine', 'Dari Palestin') },
+        ],
+      },
+    }),
+    lpSec('l7', 'bg', {
+      id: 'lw7',
+      type: 'reviews',
+      settings: {
+        kicker: L('Loved Worldwide', 'Disukai di seluruh dunia'),
+        title: L('What People Say', 'Kata mereka'),
+        stats: [{ id: 'rs1', value: L('2010', '2010'), label: L('Berkat Madinah Store, est.', 'Berkat Madinah Store, sejak') }],
+        items: (en.testimonials?.items ?? []).map((t, i) => ({ id: 'rq' + i, quote: L(t.quote, ms.testimonials?.items?.[i]?.quote ?? ''), name: L(t.name, t.name), place: L(t.place, ms.testimonials?.items?.[i]?.place ?? t.place) })),
+      },
+    }),
+  ],
+};
 const page = (id, slug, status, draft, published, extra = {}) => ({
   id,
   slug,
@@ -306,7 +427,8 @@ db.pages.push(
   page(1, 'ramadan-gift-boxes', 'published', docRamadan, { ...docRamadan, sections: docRamadan.sections.slice(0, 1) }, { inHeader: true, updatedAt: ago(45), langs: ['en'] }),
   page(2, 'our-groves', 'published', docAbout, docAbout, { inFooter: true, updatedAt: ago(60 * 30) }),
   page(3, 'wholesale', 'draft', docWholesale, null, { updatedAt: ago(60 * 50), updatedBy: 'Aisha Rahman' }),
-  page(4, 'hari-raya-sale-2026', 'draft', docAbout, null, { deletedAt: ago(60 * 24 * 3) })
+  page(4, 'hari-raya-sale-2026', 'draft', docAbout, null, { deletedAt: ago(60 * 24 * 3) }),
+  page(5, 'palestinian-extra-virgin-olive-oil', 'draft', docLanding, null, { updatedAt: ago(20) })
 );
 db.revisions.set(1, [{ id: 501, createdAt: ago(2000), userName: 'Tarek Sammad', note: 'publish', langs: ['en'], doc: docRamadan }]);
 db.revisions.set(2, [
@@ -379,6 +501,7 @@ function mediaIds(doc) {
       for (const w of c.widgets) {
         if (w.type === 'image' && w.settings.media) ids.add(w.settings.media);
         if (w.type === 'gallery') w.settings.media.forEach((m) => ids.add(m));
+        if (['heroForm', 'cards', 'steps'].includes(w.type) && w.settings.media) ids.add(w.settings.media);
       }
   }
   return ids;
@@ -386,7 +509,7 @@ function mediaIds(doc) {
 function formIds(doc) {
   const ids = new Set();
   if (!doc) return ids;
-  for (const s of doc.sections) for (const c of s.columns) for (const w of c.widgets) if (w.type === 'form' && w.settings.formId) ids.add(w.settings.formId);
+  for (const s of doc.sections) for (const c of s.columns) for (const w of c.widgets) if ((w.type === 'form' || w.type === 'heroForm') && w.settings.formId) ids.add(w.settings.formId);
   return ids;
 }
 const ref = (m) => ({ id: m.id, width: m.width, height: m.height, variants: m.variants, alt: m.alt });

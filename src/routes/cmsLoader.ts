@@ -2,9 +2,9 @@ import type { ComponentType } from 'react';
 
 /** Built-in pages under /:lang — a CMS slug can never shadow them (RESERVED_SLUGS). */
 const BUILT_IN = new Set(['products', 'shop', 'why-us', 'contact', 'blog']);
-const CMS_PATH = /^\/(en|ms)\/([a-z0-9]+(?:-[a-z0-9]+)*|__cms-template)\/?$/;
+const CMS_PATH = /^\/(en|ms)\/([a-z0-9]+(?:-[a-z0-9]+)*|__cms-template(?:-landing)?)\/?$/;
 
-/** True for `/<lang>/<slug>` paths that render a CMS page (incl. the prerender template). */
+/** True for `/<lang>/<slug>` paths that render a CMS page (incl. the two prerender templates). */
 export function isCmsRoute(pathname: string): boolean {
   const m = CMS_PATH.exec(pathname);
   return !!m && !BUILT_IN.has(m[2]);

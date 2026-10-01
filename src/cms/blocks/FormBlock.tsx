@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import type { FormField, FormWidget, PublicForm } from '../contracts';
-import { FORM_HONEYPOT, FORM_REDIRECT_RE } from '../contracts';
-import { FORM, cx } from './classes';
+import { FORM_ANCHOR, FORM_HONEYPOT, FORM_REDIRECT_RE } from '../contracts';
+import { FORM, FORM_ANCHOR_CLS, cx } from './classes';
 import { fieldAttr, useBlockEnv, type BlockEnv } from './context';
 import { CanvasEmpty } from './CanvasEmpty';
 import { ui } from './strings';
@@ -42,19 +42,25 @@ export function FormBlock({ w }: { w: FormWidget }) {
   const card = s.style !== 'plain';
   // A card has its own light background, whatever the section behind it.
   const tone = card ? 'light' : env.tone;
+  const anchor = env.formAnchor === w.id;
   return (
-    <div className={card ? FORM.card : FORM.plain}>
+    <div id={anchor ? FORM_ANCHOR : undefined} className={cx(card ? FORM.card : FORM.plain, anchor && FORM_ANCHOR_CLS)}>
       {title.text ? (
         <h2 className={FORM.title[tone]} {...fieldAttr(env, 'title')} {...placeholderAttr(title)}>
           {title.text}
         </h2>
       ) : null}
-      <CmsForm form={form} widgetId={w.id} env={env} tone={tone} afterTitle={!!title.text} />
+      <FormBody form={form} widgetId={w.id} env={env} tone={tone} afterTitle={!!title.text} />
     </div>
   );
 }
 
-function CmsForm({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; widgetId: string; env: BlockEnv; tone: 'light' | 'dark'; afterTitle: boolean }) {
+/**
+ * The form itself (fields, states, no-JS fallback), shared by the form widget and the
+ * heroForm card. Every id is keyed by the WIDGET id, so the same form placed twice on
+ * one page never produces duplicate ids (LP-SPEC §8 M3).
+ */
+export function FormBody({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; widgetId: string; env: BlockEnv; tone: 'light' | 'dark'; afterTitle: boolean }) {
   const { lang } = env;
   const def = form.def;
   const [status, setStatus] = useState<Status>({ kind: 'idle' });
@@ -146,16 +152,18 @@ function CmsForm({ form, widgetId, env, tone, afterTitle }: { form: PublicForm; 
   const sending = status.kind === 'sending';
   return (
     <>
-      {/* Without JavaScript the server answers 303 back to #form-sent-<id> / #form-error-<id>: shown by :target. */}
-      <p id={`form-sent-${form.id}`} role="status" className={cx(FORM.noJsSent, afterTitle && FORM.formAfterTitle)}>
+      {/* Without JavaScript the server answers 303 back to #form-sent-<widget> / #form-error-<widget>
+          (it reads the hidden _widget field): shown by :target. */}
+      <p id={`form-sent-${widgetId}`} role="status" className={cx(FORM.noJsSent, afterTitle && FORM.formAfterTitle)}>
         {def.successMessage?.[lang] || def.successMessage?.en}
       </p>
-      <p id={`form-error-${form.id}`} role="alert" className={cx(FORM.noJsError, afterTitle && FORM.formAfterTitle)}>
+      <p id={`form-error-${widgetId}`} role="alert" className={cx(FORM.noJsError, afterTitle && FORM.formAfterTitle)}>
         {ui(lang, 'notSent')}
       </p>
       <form action={formAction(form.id)} method="post" noValidate={js} className={cx(FORM.form, afterTitle && FORM.formAfterTitle)} onSubmit={onSubmit}>
         <input type="hidden" name="_page" value={env.pageId !== undefined ? String(env.pageId) : ''} />
         <input type="hidden" name="_lang" value={lang} />
+        <input type="hidden" name="_widget" value={widgetId} />
         <div className={FORM.honeypot} aria-hidden="true">
           <label htmlFor={`cmsf-${widgetId}-${FORM_HONEYPOT}`}>{ui(lang, 'honeypot')}</label>
           <input id={`cmsf-${widgetId}-${FORM_HONEYPOT}`} type="text" name={FORM_HONEYPOT} tabIndex={-1} autoComplete="off" />
