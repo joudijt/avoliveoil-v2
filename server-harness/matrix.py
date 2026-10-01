@@ -1,6 +1,7 @@
 """Routing matrix against the Apache harness (docs/cms/CMS-SPEC.md §13.7). Local only."""
 import http.client, ssl, sys
-HOST, PORT = "localhost", int(sys.argv[1]) if len(sys.argv) > 1 else 8443
+HOST = sys.argv[2] if len(sys.argv) > 2 else "localhost"
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8443
 ctx = ssl._create_unverified_context()
 def req(method, path, headers=None):
     c = http.client.HTTPSConnection(HOST, PORT, context=ctx, timeout=30)

@@ -59,6 +59,10 @@ PROTECTED = {"/cgi-bin", "/.well-known", "/.ftpquota", "/uploads"}
 DRY_RUN = "--dry-run" in sys.argv
 CLEAN = "--clean" in sys.argv
 SKIP_STATIC = "--skip-static" in sys.argv
+# Re-run only the --clean pass (e.g. after it was interrupted). Implies --clean.
+CLEAN_ONLY = "--clean-only" in sys.argv
+if CLEAN_ONLY:
+    CLEAN = True
 NO_SELFTEST = "--no-selftest" in sys.argv
 
 # dist/ is 28 MB and 26 MB of it is dist/assets - hashed images, JS and CSS.
@@ -188,6 +192,8 @@ def upload(remote, local):
 
 # 1. everything except the routing
 for remote, local in sorted(local_files.items()):
+    if CLEAN_ONLY:
+        break
     if remote == "/.htaccess":
         continue
     upload(remote, local)
@@ -256,7 +262,7 @@ def selftest():
     return True
 
 
-if DRY_RUN:
+if DRY_RUN or CLEAN_ONLY:
     print("\n(dry run) would run the self-test, back up the remote /.htaccess, then upload it")
 elif NO_SELFTEST:
     print("\n!!! --no-selftest: skipping the self-test (emergency mode) !!!")
@@ -271,7 +277,9 @@ else:
         sys.exit(1)
 
 # ---------------------------------------------------------------- 3 + 4. routing
-if not DRY_RUN:
+if CLEAN_ONLY:
+    pass
+elif not DRY_RUN:
     stamp = time.strftime("%Y%m%d-%H%M%S")
     backup_path = os.path.join(REPO, ".htaccess.prev-%s" % stamp)
     buf = io.BytesIO()
@@ -291,10 +299,24 @@ else:
 
 
 # ---------------------------------------------------------------- 5. orphans
+def with_retry(op, *args):
+    """Run one FTP command; on a dropped connection reconnect once and retry.
+    The clean pass runs after a long upload + the HTTP self-test, and the host
+    drops idle control connections (WinError 10054) — 2026-10-01 every LIST/DELE of
+    the clean pass failed that way until this existed."""
+    try:
+        return op(*args)
+    except error_perm:
+        raise
+    except Exception:
+        reconnect()
+        return getattr(ftp, op.__name__)(*args)
+
+
 def list_dir(path):
     entries = []
     try:
-        ftp.retrlines("LIST " + path, entries.append)
+        with_retry(ftp.retrlines, "LIST " + path, entries.append)
     except Exception as e:
         print("  LIST failed for %s: %s" % (path, e))
         return None
@@ -330,6 +352,8 @@ def walk_remote(path="/", dirs=None):
 
 if CLEAN:
     print("\n=== orphans (on server, not in dist/) ===")
+    if not DRY_RUN:
+        reconnect()  # fresh control connection: the upload + self-test can outlast the idle timeout
     remote_dirs = []
     orphans = [r for r in walk_remote("/", remote_dirs) if r not in local_files]
     # Rendered pages first: a stale /_r page must never outlive the old asset bundle it
@@ -340,7 +364,7 @@ if CLEAN:
             print("  would DELE %s" % o)
         else:
             try:
-                ftp.delete(o)
+                with_retry(ftp.delete, o)
                 print("  DELE %s" % o)
             except Exception as e:
                 print("  DELE failed %s: %s" % (o, e))
@@ -358,7 +382,7 @@ if CLEAN:
             continue
         try:
             if list_dir(d) == []:
-                ftp.rmd(d)
+                with_retry(ftp.rmd, d)
                 pruned += 1
                 print("  RMD %s" % d)
         except Exception as e:
