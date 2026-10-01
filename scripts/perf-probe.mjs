@@ -4,7 +4,7 @@
 // LCP, when the loading animation lets go, and total bytes by type.
 //
 //   node scripts/perf-probe.mjs                       # live, desktop
-//   node scripts/perf-probe.mjs --phone --route /ar
+//   node scripts/perf-probe.mjs --phone --route /ms
 import puppeteer from 'puppeteer';
 
 const arg = (name, fallback) => {

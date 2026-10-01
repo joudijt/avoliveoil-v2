@@ -20,6 +20,6 @@ What an automated agent can do on this site, and where.
 ## Read the full machine-readable brief
 - URL: https://avoliveoil.com/llms.txt
 - Method: GET
-- Notes: English at /llms.txt, Bahasa Melayu at /llms-ms.txt, Arabic at /llms-ar.txt. Each is generated from src/data/storeFacts.json, so the figures in them match the pages by construction.
+- Notes: English at /llms.txt and Bahasa Melayu at /llms-ms.txt. Each is generated from src/data/storeFacts.json, so the figures in them match the pages by construction.
 
 Last updated: 2026-08-18

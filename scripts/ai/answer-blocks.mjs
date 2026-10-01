@@ -28,16 +28,13 @@ const LIST = argv.includes('--list');
 const ONLY = (() => { const i = argv.indexOf('--lang'); return i !== -1 ? argv[i + 1] : ''; })();
 
 /** Headings whose section is structural, not prose — a card list under them is correct. */
-// Arabic headings carry the definite article ("الأسئلة الشائعة"), so match the
-// stem rather than the exact phrase — a word-boundary anchor does not work on Arabic script.
-const STRUCTURAL = /frequently asked|related articles|faq|soalan lazim|artikel berkaitan|الأسئلة|أسئلة شائعة|مقالات ذات صلة/i;
+const STRUCTURAL = /frequently asked|related articles|faq|soalan lazim|artikel berkaitan/i;
 
 // This is a prerendered SPA: the HTML only exists after `npm run build:prerender`,
 // so the audit reads dist/, not the source tree.
 const LANGS = [
   { code: 'en', dirs: ['dist/en'] },
   { code: 'ms', dirs: ['dist/ms'] },
-  { code: 'ar', dirs: ['dist/ar'] },
 ];
 
 function htmlIn(dir) {

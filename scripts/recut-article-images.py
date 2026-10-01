@@ -33,7 +33,7 @@ OUT = SRC / "press"
 OG = ROOT / "public" / "og"
 ARTICLES = ROOT / "src" / "content" / "articles"
 
-# The three hand-written articles share ONE id (and so one image file) across en/ms/ar, unlike
+# The three hand-written articles share ONE id (and so one image file) across en/ms, unlike
 # the press articles, which have a slug-per-language id. Cut them once, from the English entry.
 LEGACY_IDS = {"olive-oil-popularity-malaysia", "evoo-health-benefits-families",
               "choose-authentic-evoo-malaysia"}
@@ -54,32 +54,25 @@ CARD = (1200, 630)
 FRAMES = {
     "OliveGroveSunsetHero.png": dict(hero=True, hero_cx=None, alt={
         "en": "An old olive tree above a hillside grove, with a village and the sea behind it at sunset",
-        "ms": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja",
-        "ar": "شجرة زيتون معمّرة فوق بستان على سفح تل، وقرية والبحر خلفها عند الغروب"}),
+        "ms": "Pokok zaitun tua di atas ladang di lereng bukit, dengan perkampungan dan laut di belakangnya ketika senja"}),
     "journey-01-grove.webp": dict(hero=True, hero_cx=None, alt={
         "en": "An olive grove seen from above, rows of trees running to the horizon",
-        "ms": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk",
-        "ar": "بستان زيتون من الأعلى، وصفوف الأشجار ممتدة نحو الأفق"}),
+        "ms": "Ladang zaitun dilihat dari atas, barisan pokok memanjang ke ufuk"}),
     "journey-03-picking.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Pickers working through the branches during the olive harvest",
-        "ms": "Pekerja menuai zaitun di celah dahan ketika musim tuai",
-        "ar": "قاطفون يعملون بين الأغصان في موسم قطاف الزيتون"}),
+        "ms": "Pekerja menuai zaitun di celah dahan ketika musim tuai"}),
     "journey-04-crates.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Stacked crates filled with freshly picked green and purple olives",
-        "ms": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai",
-        "ar": "صناديق مرصوفة مملوءة بزيتون أخضر وأرجواني حديث القطاف"}),
+        "ms": "Bekas bertindan penuh dengan buah zaitun hijau dan ungu yang baru dituai"}),
     "journey-02-sunset.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Rows of olive trees in the last light of the afternoon",
-        "ms": "Barisan pokok zaitun dalam cahaya terakhir petang",
-        "ar": "صفوف أشجار الزيتون في آخر ضوء العصر"}),
+        "ms": "Barisan pokok zaitun dalam cahaya terakhir petang"}),
     "journey-05-carrying.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Workers carrying the harvest along a track between the olive trees",
-        "ms": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun",
-        "ar": "عمال يحملون محصول اليوم على ممر بين أشجار الزيتون"}),
+        "ms": "Pekerja membawa hasil tuaian menyusuri laluan di celah pokok zaitun"}),
     "journey-06-press.webp": dict(hero=True, hero_cx=None, alt={
         "en": "Green and purple olives moving down a stainless chute towards the press",
-        "ms": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan",
-        "ar": "ثمار زيتون خضراء وأرجوانية تنزلق على مجرى فولاذي نحو المعصرة"}),
+        "ms": "Buah zaitun hijau dan ungu bergerak di atas pelongsor keluli menuju mesin perahan"}),
 }
 
 HERO_FRAMES = [f for f, m in FRAMES.items() if m["hero"]]
@@ -108,7 +101,7 @@ def crop_169(im, zoom, cx, cy):
 # Vite collapses byte-identical assets into one hashed file, so an English page ended up serving
 # a file named after a Malay article. Encoding each language a notch apart keeps every file
 # unique on disk without changing what the picture is.
-LANG_Q = {"en": 0, "ms": -2, "ar": -4}
+LANG_Q = {"en": 0, "ms": -2}
 
 
 _WRITTEN = {}
@@ -157,7 +150,7 @@ def box_for(src, zoom, cx, cy):
     return (x, y, x + w, y + h)
 
 
-MAX_ZOOM = {"OliveGroveSunsetHero-ar.png": 0.94}  # mirrored composite: the symmetry shows
+MAX_ZOOM = {}
 
 
 def variants(src, slot):

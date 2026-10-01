@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Picture } from '../ui/Picture';
@@ -22,8 +21,6 @@ const DROPS = [
  */
 export function BottleOpening() {
   const { t } = useTranslation();
-  const { lang } = useParams<{ lang: string }>();
-  const isAr = lang === 'ar';
   const sectionRef = useRef<HTMLDivElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
   const bottleRef = useRef<HTMLDivElement>(null);
@@ -58,8 +55,8 @@ export function BottleOpening() {
         },
       });
 
-      const tilt = isAr ? -7 : 7;
-      const shift = isAr ? -30 : 30;
+      const tilt = 7;
+      const shift = 30;
       tl.to(bottleRef.current, { rotate: tilt, x: shift, ease: 'power1.out' }, 0.05);
       tl.to(bottleRef.current, { rotate: tilt, x: shift }, 0.3);
 
@@ -76,7 +73,7 @@ export function BottleOpening() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [isAr]);
+  }, []);
 
   return (
     <section id="bottle-opening" ref={sectionRef} className="relative h-[170vh] w-full">

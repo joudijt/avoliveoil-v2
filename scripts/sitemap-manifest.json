@@ -1,52 +1,8 @@
 {
   "_comment": "Sitemap <lastmod> for pages with no content date. hash = sha1 of the prerendered <main> (scripts/lib/sitemap-shared.mjs mainHash). `node scripts/generate-sitemap.mjs --update-manifest` after `npm run build:prerender` bumps lastmod to today ONLY where the hash changed. Seeded 2026-09-26 by scripts/seed-sitemap-manifest.mjs from git history of each page's content files; excluded commits are listed there and in docs/sitemap-lastmod/REPORT.md.",
   "pages": {
-    "/ar": {
-      "hash": "6a2cb1d4721fe978062ba6bb7e5a2125682c21a5",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/contact": {
-      "hash": "b9591d7a524f2517fea2c6f4151b105a89650bc1",
-      "lastmod": "2026-07-31"
-    },
-    "/ar/products": {
-      "hash": "d3e9b007ef95fb5003abafa0d2bb483ecbe5819d",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/products/infused-extra-virgin-olive-oil-blackseed": {
-      "hash": "29c5d627111684cd527f61cf4182ec5f2a8b155f",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/products/infused-extra-virgin-olive-oil-fennel-anise": {
-      "hash": "0dbcb0b3b224d2c66262f0cacbb94824580dec1e",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/products/infused-extra-virgin-olive-oil-lavender-chamomile": {
-      "hash": "348c621173b6cc1c7a79d10d416aada75e056dba",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/products/infused-extra-virgin-olive-oil-rosemary-basil": {
-      "hash": "f8237fbf1ee77e614f7ce684a69c831cc9482d21",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/products/infused-extra-virgin-olive-oil-turmeric-black-pepper": {
-      "hash": "ee1f446636f91a31cecbe59752b65f85b6510f33",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/products/infused-extra-virgin-olive-oil-wild-thyme": {
-      "hash": "6b8a2fc728ce8ebca28447e6dbaa9de406ff40b3",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/shop": {
-      "hash": "db22a884b2fcd5a52058fd4ec45ddf7be5a72d22",
-      "lastmod": "2026-08-14"
-    },
-    "/ar/why-us": {
-      "hash": "a2b716b177c775e824652ed820fbc3fc6125f6e4",
-      "lastmod": "2026-07-31"
-    },
     "/en": {
-      "hash": "6f2e404f8cd498035c8e626d762fa311b3e65033",
+      "hash": "35406170d1a885e827c02fa8aae4e45363eba6eb",
       "lastmod": "2026-08-14"
     },
     "/en/contact": {
@@ -90,7 +46,7 @@
       "lastmod": "2026-07-31"
     },
     "/ms": {
-      "hash": "ec5f810040d0accbff74a6e34ff8ec803a71521f",
+      "hash": "30ab708471f095727677a5662ebb774193306c40",
       "lastmod": "2026-08-14"
     },
     "/ms/contact": {

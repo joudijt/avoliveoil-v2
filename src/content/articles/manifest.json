@@ -1,46 +1,6 @@
 [
   {
     "id": "choose-authentic-evoo-malaysia",
-    "lang": "ar",
-    "slug": "how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
-    "h1": "كيف تختار زيت زيتون بكر ممتاز أصلي في ماليزيا",
-    "excerpt": "كل ما على واجهة الزجاجة تسويق. وهذه طريقة قراءة ظهرها، وإجراء اختبار تذوّق من دقيقتين، وشراء زيت زيتون هو فعلًا ما يدّعي أنه.",
-    "focusKeyword": "زيت زيتون بكر ممتاز أصلي"
-  },
-  {
-    "id": "evoo-health-benefits-families",
-    "lang": "ar",
-    "slug": "extra-virgin-olive-oil-health-benefits-for-malaysian-families",
-    "h1": "فوائد زيت الزيتون البكر الممتاز للعائلة الماليزية",
-    "excerpt": "نظرة واقعية إلى ما يحتويه زيت الزيتون البكر الممتاز، وما تجرؤ الجهات الصحية على قوله عنه، وكيف تُدخله العائلات الماليزية عمليًا إلى وجباتها اليومية.",
-    "focusKeyword": "فوائد زيت الزيتون البكر الممتاز"
-  },
-  {
-    "id": "olive-oil-popularity-malaysia",
-    "lang": "ar",
-    "slug": "why-olive-oil-is-becoming-popular-in-malaysia",
-    "h1": "لماذا يزداد الإقبال على زيت الزيتون في ماليزيا؟",
-    "excerpt": "كان زيت الزيتون قبل سنوات هدية تُحفظ في علبتها. اليوم صار يقف بجانب الموقد، يُستخدم في القلي السريع والسلطات والعادة اليومية. هذا ما تغيّر، وما يعنيه ذلك عند اختيار زجاجة.",
-    "focusKeyword": "زيت الزيتون في ماليزيا"
-  },
-  {
-    "id": "zayt-zaytun-falastini",
-    "lang": "ar",
-    "slug": "zayt-zaytun-falastini-ma-yumayyizuh",
-    "h1": "زيت زيتون فلسطيني: ما الذي يميّزه، وأين تجده في ماليزيا",
-    "excerpt": "البساتين وموسم القطاف الخريفي والعصر على البارد وراء زيت الزيتون الفلسطيني — وما الذي يتيح لك «أحادي المصدر» التحقق منه ولا يتيحه الخليط.",
-    "focusKeyword": "زيت زيتون فلسطيني"
-  },
-  {
-    "id": "zayt-zaytun-lil-tabkh",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lil-tabkh",
-    "h1": "زيت الزيتون للطبخ: متى تستخدمه ومتى تتركه جانباً",
-    "excerpt": "دليل عملي لمن يطبخ في ماليزيا: أين يعمل زيت الزيتون البكر الممتاز في المطبخ، وأين لا يستحق أن تحرقه، وكيف تدبّر زجاجة واحدة طوال الشهر.",
-    "focusKeyword": "زيت الزيتون للطبخ"
-  },
-  {
-    "id": "choose-authentic-evoo-malaysia",
     "lang": "en",
     "slug": "how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia",
     "h1": "How to Choose Authentic Extra Virgin Olive Oil in Malaysia",
@@ -192,14 +152,6 @@
     "focusKeyword": "minyak zaitun Malaysia"
   },
   {
-    "id": "hifz-zayt-alzaytun",
-    "lang": "ar",
-    "slug": "hifz-zayt-alzaytun",
-    "h1": "حفظ زيت الزيتون في مطبخ ماليزي حار ورطب",
-    "excerpt": "الحرارة والضوء والهواء والوقت هي ما يتراجع بسببه زيت الزيتون في مطبخ ماليزي. دليل عملي لمكان الزجاجة، ومسألة الثلاجة، وعلامات أن الزيت تغيّر.",
-    "focusKeyword": "حفظ زيت الزيتون"
-  },
-  {
     "id": "minyak-zaitun-habbatus-sauda",
     "lang": "ms",
     "slug": "minyak-zaitun-habbatus-sauda-apa-yang-perlu-tahu",
@@ -240,36 +192,12 @@
     "focusKeyword": "olive oil vs pomace oil"
   },
   {
-    "id": "sier-zayt-alzaytun-malaysia",
-    "lang": "ar",
-    "slug": "sier-zayt-alzaytun-fi-malizya",
-    "h1": "سعر زيت الزيتون في ماليزيا: ما تدفعه ولماذا",
-    "excerpt": "الأرقام كما هي بالرينغيت، وطريقة حساب سعر اللتر، وما الذي يقف خلف سعر زجاجة مستوردة أحادية المصدر مقارنةً بخليط رفوف السوبرماركت.",
-    "focusKeyword": "سعر زيت الزيتون"
-  },
-  {
     "id": "zaitun-dalam-al-quran",
     "lang": "ms",
     "slug": "pokok-zaitun-dalam-al-quran-dan-warisan-palestin",
     "h1": "Zaitun dalam Al-Quran dan warisan ladang zaitun Palestin",
     "excerpt": "Ayat-ayat yang menyebut zaitun dalam Al-Quran beserta rujukan surah dan nombor ayat, dan kisah ladang keluarga di Palestin yang menjaga pokok itu turun-temurun.",
     "focusKeyword": "zaitun dalam al quran"
-  },
-  {
-    "id": "zayt-alzaytun-kuala-lumpur",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-fi-kuala-lumpur",
-    "h1": "زيت الزيتون في كوالالمبور: أين تشتريه، وبأي سعر",
-    "excerpt": "عنوانا الفرعين وساعات العمل ورقم واتساب والسعر بحسب الحجم، وما يستحق النظر إليه على الزجاجة قبل أن تدفع في وادي كلانغ.",
-    "focusKeyword": "زيت الزيتون في كوالالمبور"
-  },
-  {
-    "id": "alfarq-bayn-albikr-walmumtaz",
-    "lang": "ar",
-    "slug": "alfarq-bayn-zayt-alzaytun-albikr-walmumtaz",
-    "h1": "الفرق بين زيت الزيتون البكر والبكر الممتاز: حدّان يفصلان الدرجتين",
-    "excerpt": "درجتان تُنتَجان بالطريقة نفسها ويفصل بينهما رقم مخبري وحكم لجنة تذوّق. ما هو حد الحموضة الحرة، وما العيوب التي تُنزل الدرجة، وأين يُخسر الفارق داخل المعصرة.",
-    "focusKeyword": "الفرق بين زيت الزيتون البكر والبكر الممتاز"
   },
   {
     "id": "botol-minyak-zaitun",
@@ -302,14 +230,6 @@
     "h1": "Extra Virgin Olive Oil vs Pure Olive Oil: What Changes",
     "excerpt": "Extra virgin olive oil vs pure olive oil comes down to refining, and pure, classic, light and extra light all sit on the refined side of that line.",
     "focusKeyword": "extra virgin olive oil vs pure olive oil"
-  },
-  {
-    "id": "humudat-zayt-alzaytun",
-    "lang": "ar",
-    "slug": "darajat-humudat-zayt-alzaytun",
-    "h1": "درجة حموضة زيت الزيتون: ما الذي يقيسه هذا الرقم",
-    "excerpt": "الرقم المكتوب بجانب كلمة الحموضة ليس مقياس طعم. دليل لما يقيسه المختبر، وحدود كل درجة، وما الذي يرفع النسبة من الحقل إلى الرف.",
-    "focusKeyword": "درجة حموضة زيت الزيتون"
   },
   {
     "id": "minyak-zaitun-pomace",
@@ -376,47 +296,6 @@
     "focusKeyword": "resepi minyak zaitun"
   },
   {
-    "id": "taem-zayt-alzaytun",
-    "lang": "ar",
-    "slug": "taem-zayt-alzaytun-albikr-almumtaz",
-    "h1": "طعم زيت الزيتون البكر الممتاز: المرارة واللذعة وما تعنيان",
-    "excerpt": "المرارة على اللسان واللذعة في مؤخّرة الحلق صفتا طعم يسجّلهما المتذوّقون في الزيت البكر الممتاز. دليل عملي لتذوّق الزجاجة في بيتك ولقراءة ما تقوله.",
-    "focusKeyword": "طعم زيت الزيتون البكر الممتاز"
-  },
-  {
-    "id": "zayt-alzaytun-aludwi",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-aludwi",
-    "h1": "زيت الزيتون العضوي: ماذا تعني الشهادة على الملصق",
-    "excerpt": "كلمة «عضوي» على زجاجة الزيت تصف طريقة الزراعة والتوثيق، لا الدرجة ولا الطعم. من يمنح الشهادة، وما تغطيه وما تتركه، ولماذا يبقى بستان صغير خارجها.",
-    "focusKeyword": "زيت الزيتون العضوي"
-  },
-  {
-    "id": "zayt-alzaytun-lilqaly",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilqaly",
-    "h1": "زيت الزيتون للقلي: من المقلاة إلى القدر العميق",
-    "excerpt": "القلي وحده: كم زيتاً تحتاج للمقلاة وكم للقدر، أين تقف حدود الحرارة، كم مرة يُعاد استعمال الزيت، وماذا يعني لتر كامل بسعر الزيت البكر الممتاز.",
-    "focusKeyword": "زيت الزيتون للقلي"
-  },
-  {
-    "id": "zayt-alzaytun-lilsalata",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilsalata",
-    "h1": "زيت الزيتون للسلطة على مائدة عربية في ماليزيا",
-    "excerpt": "نسبة الزيت إلى الليمون، وترتيب الإضافة في الفتوش والتبولة والسلطة العربية، وكم ملعقة يحتاج الصحن الواحد على مائدة عربية في ماليزيا.",
-    "focusKeyword": "زيت الزيتون للسلطة"
-  },
-  {
-    "id": "afdal-zayt-zaytun",
-    "lang": "ar",
-    "slug": "kayf-tukhtar-afdal-zayt-zaytun",
-    "h1": "كيف تختار أفضل زيت زيتون لمطبخك: قائمة فحص عملية",
-    "excerpt": "«الأفضل» ليس صفة تسكن الزجاجة، بل توافقاً بينها وبين مطبخك. قائمة فحص تطبّقها بيدك على أي عبوة أمامك قبل أن تدفع ثمنها.",
-    "focusKeyword": "أفضل زيت زيتون",
-    "dateModified": "2026-08-25"
-  },
-  {
     "id": "beli-minyak-zaitun-online",
     "lang": "ms",
     "slug": "beli-minyak-zaitun-online-di-malaysia",
@@ -432,15 +311,6 @@
     "h1": "Garlic Infused Olive Oil, and How to Make It Safely",
     "excerpt": "Garlic infused olive oil is easy to make and easy to make badly, because garlic sealed under oil at room temperature is a recognised botulism risk. Here is the safe way, the fridge window, and what to do with the jar.",
     "focusKeyword": "garlic infused olive oil",
-    "dateModified": "2026-08-25"
-  },
-  {
-    "id": "mawsim-qitaf-alzaytun",
-    "lang": "ar",
-    "slug": "mawsim-qitaf-alzaytun",
-    "h1": "موسم قطاف الزيتون: من الشجرة إلى الزجاجة",
-    "excerpt": "أسابيع قليلة في الخريف تقرّر طعم كل زجاجة زيت ستفتحها بعد ذلك بشهور. دليل لنافذة القطاف، ولفرق الثمرة الخضراء عن السوداء، ولقراءة تاريخ القطاف على الملصق.",
-    "focusKeyword": "موسم قطاف الزيتون",
     "dateModified": "2026-08-25"
   },
   {
@@ -534,42 +404,6 @@
     "dateModified": "2026-08-25"
   },
   {
-    "id": "zayt-alzaytun-almukarrar",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-almukarrar",
-    "h1": "زيت الزيتون المكرر: كيف يُصنع ولماذا هو أرخص",
-    "excerpt": "زيت لم يجتز حدود الدرجة البكر فصحّحته معالجة صناعية أخذت معه اللون والرائحة والطعم. ما هو التكرير، وماذا تعني «زيت زيتون» وحدها على الملصق، وأين يصلح في المطبخ.",
-    "focusKeyword": "زيت الزيتون المكرر",
-    "dateModified": "2026-08-25"
-  },
-  {
-    "id": "zayt-alzaytun-balad-almansha",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-hasab-balad-almansha",
-    "h1": "أفضل زيت زيتون سوري ام ايطالي: ماذا يقول بلد المنشأ فعلاً",
-    "excerpt": "اسم البلد على الزجاجة يرتبط بأصناف الزيتون وعادات القطاف والعصر، ويصمت عن الدرجة والطزاجة والتخزين. دليل لقراءة المنشأ بإنصاف، بلا ترتيب للبلدان.",
-    "focusKeyword": "أفضل زيت زيتون سوري ام ايطالي",
-    "dateModified": "2026-08-25"
-  },
-  {
-    "id": "zayt-zaytun-baladi",
-    "lang": "ar",
-    "slug": "zayt-zaytun-baladi",
-    "h1": "زيت زيتون بلدي: ماذا تعني الكلمة على الملصق",
-    "excerpt": "«بلدي» كلمة يكتبها البائع ولا يدقّقها أحد. ما تعنيه عادةً على زجاجة زيت الزيتون، وكيف تختلف عن «عضوي» و«بكر ممتاز»، وما الذي يثبت أصل الزيت.",
-    "focusKeyword": "زيت زيتون بلدي",
-    "dateModified": "2026-08-25"
-  },
-  {
-    "id": "zujajat-zayt-alzaytun",
-    "lang": "ar",
-    "slug": "zujajat-zayt-alzaytun",
-    "h1": "زجاجة زيت الزيتون: ما تقوله العبوة عن البائع",
-    "excerpt": "العبوة أول إفصاح يقدّمه البائع: مادة الزجاجة والسدادة والأسطر المطبوعة على الظهر تقول ما التزم به وما تركه مفتوحاً. دليل لقراءة الزجاجة نفسها.",
-    "focusKeyword": "زجاجة زيت الزيتون",
-    "dateModified": "2026-08-25"
-  },
-  {
     "id": "aglio-e-olio",
     "lang": "en",
     "slug": "aglio-e-olio-recipe-with-extra-virgin-olive-oil",
@@ -577,15 +411,6 @@
     "excerpt": "The four-ingredient version by weight and volume, for two and for four, with the pasta-water step that turns oil into sauce and the point past which garlic ruins the plate.",
     "dateModified": "2026-08-26",
     "focusKeyword": "aglio olio recipe"
-  },
-  {
-    "id": "anwae-alzaytun",
-    "lang": "ar",
-    "slug": "anwae-alzaytun-lilzayt",
-    "h1": "أنواع الزيتون التي يُعصر منها الزيت: دليل المشتري",
-    "excerpt": "اسم صنف الزيتون على ظهر الزجاجة أقرب سطر إلى وصف ما ستذوقه. سبعة أصناف شائعة، وما يفعله كل واحد بالمرارة واللذعة، ومعنى أن يغيب الاسم أصلاً.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "أنواع الزيتون"
   },
   {
     "id": "cloudy-olive-oil",
@@ -685,51 +510,6 @@
     "excerpt": "Two premium bottles, two different jobs. A cook's comparison of olive oil and avocado oil on flavour, heat, texture and cost per litre in Malaysia.",
     "dateModified": "2026-08-26",
     "focusKeyword": "olive oil vs avocado oil"
-  },
-  {
-    "id": "tajmid-zayt-alzaytun",
-    "lang": "ar",
-    "slug": "tajmid-zayt-alzaytun",
-    "h1": "تجميد زيت الزيتون: هل التصلّب في البرد يعني أنه فسد؟",
-    "excerpt": "غيمة بيضاء أو كتلة شبه صلبة بعد ليلة في الثلاجة. ما الذي حدث فعلاً، ولماذا لا يقول لك هذا المشهد شيئاً عن جودة الزيت ولا عن صدق البائع.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "تجميد زيت الزيتون"
-  },
-  {
-    "id": "zayt-alzaytun-fi-ramadan",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-fi-ramadan",
-    "h1": "زيت الزيتون في رمضان: خطة مطبخ لثلاثين يوماً",
-    "excerpt": "خطة مطبخ لثلاثين يوماً: كم زجاجة يحتاج بيتك، وأي أطباق إفطار يدخلها الزيت بلا طبخ طويل، وكيف ترتّب الفتح حتى لا تُفتح زجاجتان معاً.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون في رمضان"
-  },
-  {
-    "id": "zayt-alzaytun-lilmuajanat",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilmuajanat",
-    "h1": "زيت الزيتون للمعجنات: العجين والنسب وحرارة الفرن",
-    "excerpt": "العجين لا يعرف اسم الدهن، بل كيف يتصرّف وهو سائل. النسب العملية للمناقيش والفطائر، وماذا يفعل الزيت باللبّ في اليوم التالي، ومتى تختار زيتاً قوياً.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون للمعجنات"
-  },
-  {
-    "id": "zayt-alzaytun-lilshawi",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilshawi",
-    "h1": "زيت الزيتون للشوي: أين يذهب الزيت على المشواة",
-    "excerpt": "الشوي وحده: لماذا يُدهن الطعام لا الشبك، أين يضيع زيت التتبيلة، ما الذي يشعل اللهب المفاجئ، ومتى تكون السكبة الأخيرة هي التي تستحقّ زيتاً بكراً ممتازاً.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون للشوي"
-  },
-  {
-    "id": "zayt-alzaytun-walzaatar",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-walzaatar",
-    "h1": "زيت الزيتون والزعتر: الخلطة والمناقيش وطبق الفطور",
-    "excerpt": "الزيت والزعتر طبق لا وصفة: نسبة الخلطة، وحجم حبة الزعتر بعد الطحن، ودهن المناقيش، وترتيب صحون الفطور، ومدة بقاء الخلطة بعد أن يلامسها الزيت.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون والزعتر"
   },
   {
     "id": "minyak-zaitun-murah",
@@ -840,78 +620,6 @@
     "focusKeyword": "olive oil vs butter"
   },
   {
-    "id": "zayt-alzaytun-al-rakhis",
-    "lang": "ar",
-    "slug": "hal-yumkin-an-yakun-zayt-alzaytun-rakhisan",
-    "h1": "زيت الزيتون الرخيص: صفقة أم علامة تحذير؟",
-    "excerpt": "زجاجة أرخص بكثير من جاراتها على الرفّ ليست دائماً هفوة سعيدة. هذا الدليل يشرح لماذا يظلّ زيت الزيتون غالياً أصلاً، ومتى يكون الرخص منطقياً ومتى هو تحذير يستحقّ أن تقرأه على الملصق.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون الرخيص"
-  },
-  {
-    "id": "zayt-alzaytun-lilbayd",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilbayd",
-    "h1": "بيض بزيت الزيتون على الطريقة الإسبانية",
-    "excerpt": "غمر خفيف من الزيت الساخن، سكبة متكررة فوق الصفار، وملح يأتي في النهاية: هكذا يصير البيض المقلي حافة مقرمشة وقلباً طرياً.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "بيض بزيت الزيتون"
-  },
-  {
-    "id": "zayt-alzaytun-lilfawshar",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilfawshar",
-    "h1": "زيت الزيتون للفوشار: فوشار الموقد خطوة بخطوة",
-    "excerpt": "فوشار الموقد بزيت الزيتون: كمية الزيت المناسبة، لماذا الغطاء والهزّ يمنعان الاحتراق، مستوى الحرارة، ووقت الملح الصحيح بعد رفع النار مباشرة.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون للفوشار"
-  },
-  {
-    "id": "zayt-alzaytun-lilkhudar-almashwi",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilkhudar-almashwi",
-    "h1": "زيت الزيتون للخضار المشوي: طبقة تُحمّر لا تُطهى بالبخار",
-    "excerpt": "لماذا يُغلَّف الخضار بالزيت قبل الفرن، كم منه يكفي، لماذا الصينية المزدحمة تُخرج خضاراً طرياً لا محمّراً، ومتى يستحقّ الطبق سكبة زيت باردة بعد الفرن مباشرة.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون للخضار المشوي"
-  },
-  {
-    "id": "zayt-alzaytun-lilsteak",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilsteak",
-    "h1": "زيت الزيتون للستيك: زيت السير وزيت التشطيب",
-    "excerpt": "قلي الستيك على الموقد وحده: لماذا لا يكفي زيت الزيتون البكر الممتاز للسير القوي، حيلة الزيتين، راحة اللحم، والسكبة الأخيرة بالفلفل الأسود.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون للستيك"
-  },
-  {
-    "id": "zayt-alzaytun-walzubda",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-walzubda",
-    "h1": "زيت الزيتون والزبدة: أين يعمل كل واحد في المطبخ",
-    "excerpt": "الطعم، الخبز الساخن مقابل خبز حرارة الغرفة، اسمرار الزبدة في المقلاة، طبق يناسب كل دهن بوضوح، وتكلفة كل استعمال — كدهنَي طبخ ودهن لا كسؤال صحي.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون والزبدة"
-  },
-  {
-    "id": "ays-krim-bizayt-alzaytun",
-    "lang": "ar",
-    "slug": "ays-krim-bizayt-alzaytun",
-    "h1": "آيس كريم بزيت الزيتون: طريقة مخفوقة بالمنزل",
-    "excerpt": "ليس بديلاً صحياً عن الآيس كريم العادي، بل حلوى متوسطية قائمة بذاتها: زيت بكر ممتاز يُستحلب مع القشدة أثناء الخفق فيعطي قواماً حريرياً ونوتة فاكهية تكسر حلاوة السكر.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "آيس كريم بزيت الزيتون"
-  },
-  {
-    "id": "kaykat-alburtuqal-bizayt-alzaytun",
-    "lang": "ar",
-    "slug": "kaykat-alburtuqal-bizayt-alzaytun",
-    "h1": "كيكة البرتقال بزيت الزيتون: وصفة رطبة تدوم أياماً",
-    "excerpt": "كعكة برتقال واحدة بمقاديرها الخاصة: كمية زيت الزيتون في الخليط، قشر وعصير البرتقال، لماذا يبقى القوام رطباً على منضدة المطبخ بلا ثلاجة، وتزجيج بسيط للإنهاء.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "كيكة البرتقال بزيت الزيتون"
-  },
-  {
     "id": "kopi-minyak-zaitun",
     "lang": "ms",
     "slug": "kopi-minyak-zaitun",
@@ -1018,42 +726,6 @@
     "excerpt": "Sunflower oil and olive oil sit at opposite ends of the same shelf: one is bred to disappear into a dish, the other is pressed to be tasted. This is a plain comparison for the pan, not a verdict on which is better.",
     "dateModified": "2026-08-26",
     "focusKeyword": "olive oil vs sunflower oil"
-  },
-  {
-    "id": "qahwat-bizayt-alzaytun",
-    "lang": "ar",
-    "slug": "qahwat-bizayt-alzaytun",
-    "h1": "قهوة بزيت الزيتون: الطعم والقوام لا الدواء",
-    "excerpt": "موضة \"الزيت في القهوة\" من زاوية الطعم والقوام فقط: الكمية المناسبة، طريقة الخلط الصحيحة، المذاق الفعلي، ودرجة الزيت الأنسب — ساخنة كانت القهوة أم مثلجة.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "قهوة بزيت الزيتون"
-  },
-  {
-    "id": "zayt-alzaytun-lilbatatis-almahrusa",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-lilbatatis-almahrusa",
-    "h1": "زيت الزيتون للبطاطس المهروسة: هريس بلا ألبان بالقوام والنكهة",
-    "excerpt": "كمية الزيت لكل كيلو بطاطس، متى يُطوى دافئاً لا بارداً، الفرق في القوام عن هريس الزبدة والقشدة، وتنويعة بالثوم وزيت زيتون عادي — كطبق جانبي لا كسؤال صحي.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون للبطاطس المهروسة"
-  },
-  {
-    "id": "zayt-alzaytun-walsimsim",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-walsimsim",
-    "h1": "زيت الزيتون والسمسم: أيهما تختار ومتى",
-    "excerpt": "الفرق في الطعم بين زيت الزيتون وزيت السمسم، الفاتح مقابل المحمّص، ولماذا يُسكب السمسم نيئاً على القلي — أداتان مختلفتان لا بديل واحد عن الآخر.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون والسمسم"
-  },
-  {
-    "id": "zayt-alzaytun-wazayt-abad-alshams",
-    "lang": "ar",
-    "slug": "zayt-alzaytun-wazayt-abad-alshams",
-    "h1": "زيت الزيتون وزيت عباد الشمس: أيهما تختار ولماذا يختلف السعر",
-    "excerpt": "الفرق في الطعم وسلوك الحرارة والسعر بين زيت الزيتون البكر الممتاز وزيت عباد الشمس المكرر، وأيّهما يناسب أي استعمال في المطبخ.",
-    "dateModified": "2026-08-26",
-    "focusKeyword": "زيت الزيتون وزيت عباد الشمس"
   },
   {
     "id": "advantages-of-extra-virgin-olive-oil",

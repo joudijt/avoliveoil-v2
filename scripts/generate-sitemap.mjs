@@ -4,7 +4,7 @@
 // asserts against at runtime and that prerender.mjs walks.
 //
 // <lastmod> rules (docs/sitemap-lastmod/SPEC.md — a wrong date is worse than none):
-//   - article      = that article's own `dateModified` from src/content/articles/{en,ar,ms}.ts,
+//   - article      = that article's own `dateModified` from src/content/articles/{en,ms}.ts,
 //                    the same value its BlogPosting JSON-LD and article:modified_time carry.
 //   - /:lang/blog  = the newest `dateModified` among that language's articles.
 //   - static + infused pages = scripts/sitemap-manifest.json { path: { hash, lastmod } }.
@@ -135,7 +135,7 @@ for (const page of PAGES) {
 }
 
 // An article exists only in the languages it was actually written in. Mapping
-// over every language regardless produced `/ar/blog/undefined` — thirty such
+// over every language regardless produced `/<lang>/blog/undefined` — thirty such
 // URLs the first time a single-language round was imported, every one of them a
 // 404 offered to a crawler. Build the language list from the entry itself, and
 // let the alternates cover only those languages too.

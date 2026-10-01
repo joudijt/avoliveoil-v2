@@ -3,6 +3,7 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 import { FaStore } from 'react-icons/fa';
 import logo from '../../assets/logo/logo_theme.svg';
 import { NAV_LINKS, LANGS } from '../../data/content';
+import { langSwitchPath } from '../../utils/langSwitch';
 import { MADINAH_NAME, MADINAH_URL } from '../../config/site';
 import { SOCIAL_LINKS } from '../../data/social';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
@@ -11,7 +12,6 @@ export function Footer() {
   const { t } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
   const location = useLocation();
-  const dir = lang === 'ar' ? 'rtl' : 'ltr';
   const subPath = lang ? location.pathname.replace(new RegExp(`^/${lang}`), '') : '';
 
   return (
@@ -19,15 +19,13 @@ export function Footer() {
 
       {/*
         dir="ltr" keeps the 3 columns (brand, navigate, newsletter) in a
-        fixed physical left-to-right order regardless of language — same
-        reasoning as Navbar's forced-ltr header (CSS Grid/Flex column order
-        is direction-relative otherwise). Each column re-applies the real
-        `dir` internally so its own text still aligns naturally per language.
+        fixed physical left-to-right order — same reasoning as Navbar's
+        forced-ltr header (CSS Grid/Flex column order is direction-relative).
       */}
       <div dir="ltr" className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1.2fr]">
         <div>
           <img src={logo} alt="Arabian Village" className="h-10 brightness-0 invert" />
-          <p dir={dir} className="mt-6 max-w-xs font-light leading-relaxed text-cream/60">
+          <p className="mt-6 max-w-xs font-light leading-relaxed text-cream/60">
             {t('footer.tagline')}
           </p>
           <div className="mt-6 flex gap-3">
@@ -48,7 +46,6 @@ export function Footer() {
             href={MADINAH_URL}
             target="_blank"
             rel="noopener noreferrer"
-            dir={dir}
             className="mt-5 inline-flex items-center gap-2 text-sm font-light text-cream/70 transition-colors duration-300 hover:text-gold"
           >
             <FaStore className="h-4 w-4 shrink-0" />
@@ -58,7 +55,7 @@ export function Footer() {
             {LANGS.map((l) => (
               <Link
                 key={l.code}
-                to={`/${l.code}${subPath}`}
+                to={langSwitchPath(lang, l.code, subPath)}
                 className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
                   l.code === lang ? 'text-gold' : 'text-cream/60 hover:text-gold'
                 }`}
@@ -71,7 +68,7 @@ export function Footer() {
 
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.navigate')}</p>
-          <ul dir={dir} className="mt-5 space-y-3">
+          <ul className="mt-5 space-y-3">
             {NAV_LINKS.map((link) => (
               <li key={link.key}>
                 <Link
@@ -94,7 +91,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div dir={dir}>
+        <div>
           <p className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.stayInTouch')}</p>
           <p className="mt-5 font-light text-cream/60">{t('footer.newsletterText')}</p>
           <form

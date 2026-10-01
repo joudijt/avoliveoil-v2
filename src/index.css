@@ -17,12 +17,7 @@
 
    NOTE FOR TAILWIND v4: `@import 'tailwindcss'` must stay the FIRST rule in
    this file. CSS requires every @import to precede any other rule, so these
-   @font-face blocks go after it, never before.
-
-   Arabic is NOT covered here and never was: neither Inter nor Playfair
-   Display ships Arabic glyphs, so /ar pages already fall back to the system
-   Arabic face via `system-ui`/`serif`. Self-hosting changes nothing for them.
-   Adding a real Arabic face is a separate, deliberate design decision. */
+   @font-face blocks go after it, never before. */
 
 @font-face {
   font-family: 'Inter';

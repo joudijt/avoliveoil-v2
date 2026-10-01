@@ -12,7 +12,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const SITE_URL = 'https://avoliveoil.com';
-export const LANGS = ['en', 'ar', 'ms'];
+export const LANGS = ['en', 'ms'];
 export const MANIFEST_PATH = join(ROOT, 'scripts', 'sitemap-manifest.json');
 
 /** Static page paths under /:lang ('' = language root). `blog` is NOT here: it is dated by its articles. */
@@ -77,7 +77,7 @@ export function hashDist() {
 /** Load the article modules (Node >= 22.18 strips TS types natively). */
 export async function loadArticles() {
   const out = {};
-  const names = { en: 'EN_ARTICLES', ar: 'AR_ARTICLES', ms: 'MS_ARTICLES' };
+  const names = { en: 'EN_ARTICLES', ms: 'MS_ARTICLES' };
   for (const lang of LANGS) {
     const mod = await import(pathToFileURL(join(ROOT, 'src/content/articles', `${lang}.ts`)).href);
     const list = mod[names[lang]];

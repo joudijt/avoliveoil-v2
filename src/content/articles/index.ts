@@ -5,12 +5,12 @@ import { ensureArticles, peekArticles } from './registry';
 export type { Article, ArticleSection, Block, FaqItem, RelatedLink } from './types';
 export { ensureArticles, peekArticles };
 
-export const ARTICLE_LANGS = ['en', 'ar', 'ms'] as const;
+export const ARTICLE_LANGS = ['en', 'ms'] as const;
 export type ArticleLang = (typeof ARTICLE_LANGS)[number];
 
 /**
  * This module is deliberately CHEAP: it pulls in `slugs.json` (10 KB) and
- * nothing else. It must never statically import `./en`, `./ar` or `./ms` —
+ * nothing else. It must never statically import `./en` or `./ms` —
  * doing so puts 1.9 MB of article prose into the entry chunk that every page
  * of the site downloads, homepage included. Bodies arrive through
  * `./registry` (dynamic `import()`, cached).
@@ -20,7 +20,7 @@ export type ArticleLang = (typeof ARTICLE_LANGS)[number];
  * `scripts/generate-sitemap.mjs` both read that file directly. The two copies
  * are checked against each other by `scripts/check-article-slugs.mjs` at build
  * time — it used to be a module-load loop here, but that loop could only run
- * by holding all three languages in memory, which is precisely what we removed.
+ * by holding every language in memory, which is precisely what we removed.
  * A divergence would otherwise show up as a prerendered route that 404s in the
  * SPA, or a sitemap URL nobody can reach.
  */
@@ -30,7 +30,7 @@ export type ArticleLang = (typeof ARTICLE_LANGS)[number];
 const SLUGS = slugTable as Record<string, Partial<Record<ArticleLang, string>>>;
 
 export function isArticleLang(lang: string | undefined): lang is ArticleLang {
-  return lang === 'en' || lang === 'ar' || lang === 'ms';
+  return lang === 'en' || lang === 'ms';
 }
 
 /**
@@ -56,7 +56,15 @@ export function slugFor(id: string, lang: ArticleLang): string | undefined {
   return SLUGS[id]?.[lang];
 }
 
-/** `{ en: 'blog/foo', ar: 'blog/foo', ms: 'blog/bar' }` — the shape <SEO pathByLang> wants. */
+/** The article id whose `lang` slug is `slug`, or undefined. */
+export function articleIdForSlug(lang: string, slug: string): string | undefined {
+  for (const [id, slugs] of Object.entries(SLUGS)) {
+    if (slugs[lang as ArticleLang] === slug) return id;
+  }
+  return undefined;
+}
+
+/** `{ en: 'blog/foo', ms: 'blog/bar' }` — the shape <SEO pathByLang> wants. */
 export function articlePathByLang(id: string): Record<string, string> {
   const paths: Record<string, string> = {};
   for (const lang of ARTICLE_LANGS) {

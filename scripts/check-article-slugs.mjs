@@ -1,4 +1,4 @@
-// Build-time gate: src/content/articles/{en,ar,ms}.ts must agree with
+// Build-time gate: src/content/articles/{en,ms}.ts must agree with
 // src/content/articles/slugs.json, in BOTH directions.
 //
 // Why this is a script and not a runtime check any more
@@ -42,7 +42,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ARTICLES_DIR = join(__dirname, '..', 'src', 'content', 'articles');
-const LANGS = ['en', 'ar', 'ms'];
+const LANGS = ['en', 'ms'];
 
 /** `id: 'x',` / `"id": "x",` on one line, `slug` on the very next. */
 const PAIR_RE =

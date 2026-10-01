@@ -4,8 +4,7 @@ import { WHATSAPP_NUMBER } from '../../utils/whatsapp';
 
 /**
  * Fixed bottom-right WhatsApp bubble, present on every page. Physically
- * bottom-right regardless of language, same reasoning as Navbar/Footer's
- * forced chrome positions — not mirrored for RTL.
+ * bottom-right, same reasoning as Navbar/Footer's forced chrome positions.
  *
  * It used to hide behind `useAppReady()` so it would not float over HomePage's
  * loading animation. That animation was deleted in PERF-1, and the gate then

@@ -29,7 +29,6 @@ BASE = "https://avoliveoil.com"
 ASSETS = [
     "/favicon-2026-09.svg",
     "/og-card-2026-09.jpg",
-    "/site-ar.webmanifest",
     "/site-ms.webmanifest",
     "/favicon.svg",
     "/favicon.ico",
@@ -47,7 +46,7 @@ ASSETS = [
 
 # Every tag the head must carry, checked on one route per language plus an
 # article and a product page — the prerenderer writes each of these separately.
-ROUTES = ["/en", "/ms", "/ar", "/en/products", "/en/blog"]
+ROUTES = ["/en", "/ms", "/en/products", "/en/blog"]
 
 HEAD_MUST_HAVE = [
     'rel="icon" type="image/svg+xml" href="/favicon-2026-09.svg"',

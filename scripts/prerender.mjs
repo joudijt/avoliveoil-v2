@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
-const LANGS = ['en', 'ar', 'ms'];
+const LANGS = ['en', 'ms'];
 const PAGES = ['', 'products', 'shop', 'why-us', 'contact', 'blog'];
 
 // Blog article slugs differ per language, so they come from the shared table
@@ -34,7 +34,7 @@ const INFUSED_SLUGS = JSON.parse(
 const ROUTES = [
   ...LANGS.flatMap((lang) => PAGES.map((page) => (page ? `/${lang}/${page}` : `/${lang}`))),
   // Only the languages an article was actually written in. Without the filter
-  // this emitted `/ar/blog/undefined` for every single-language article, and
+  // this emitted `/<lang>/blog/undefined` for every single-language article, and
   // puppeteer would dutifully snapshot the SPA's not-found fallback into a real
   // file that the deploy would then publish.
   ...LANGS.flatMap((lang) =>

@@ -29,7 +29,7 @@ const firstSlug = (lang) => {
 };
 
 const ROUTES = [];
-for (const lang of ['en', 'ar', 'ms']) {
+for (const lang of ['en', 'ms']) {
   ROUTES.push(`/${lang}`, `/${lang}/blog`, `/${lang}/products`, `/${lang}/why-us`);
   const slug = firstSlug(lang);
   if (slug) ROUTES.push(`/${lang}/blog/${slug}`);

@@ -4,6 +4,7 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
 import logo from '../../assets/logo/logo_theme.svg';
 import { NAV_LINKS, LANGS } from '../../data/content';
+import { langSwitchPath } from '../../utils/langSwitch';
 
 function linkPath(lang: string | undefined, path: string) {
   return `/${lang}${path ? `/${path}` : ''}`;
@@ -73,7 +74,6 @@ export function Navbar() {
           </Link>
 
           <nav
-            dir={lang === 'ar' ? 'rtl' : 'ltr'}
             className="hidden items-center gap-2 rounded-full bg-[#333D24]/85 px-3 py-2 backdrop-blur-sm md:flex"
           >
             {NAV_LINKS.map((link) => (
@@ -108,13 +108,12 @@ export function Navbar() {
               {langOpen && (
                 <ul
                   role="listbox"
-                  dir={lang === 'ar' ? 'rtl' : 'ltr'}
                   className="absolute right-0 top-full mt-3 min-w-[9rem] overflow-hidden rounded-2xl border border-olive-dark/10 bg-cream/95 py-2 shadow-lg backdrop-blur-md"
                 >
                   {LANGS.map((l) => (
                     <li key={l.code}>
                       <Link
-                        to={`/${l.code}${subPath}`}
+                        to={langSwitchPath(lang, l.code, subPath)}
                         onClick={() => setLangOpen(false)}
                         className={`block px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${
                           l.code === lang ? 'text-gold' : 'text-olive-dark/80 hover:text-gold'
@@ -171,7 +170,7 @@ export function Navbar() {
           {LANGS.map((l) => (
             <Link
               key={l.code}
-              to={`/${l.code}${subPath}`}
+              to={langSwitchPath(lang, l.code, subPath)}
               className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
                 l.code === lang ? 'text-gold' : 'text-cream/70 hover:text-gold'
               }`}

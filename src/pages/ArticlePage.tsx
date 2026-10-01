@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { FiArrowLeft, FiArrowRight, FiClock } from 'react-icons/fi';
+import { FiArrowLeft, FiClock } from 'react-icons/fi';
 import { SEO } from '../components/SEO';
 import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
@@ -14,7 +14,7 @@ import { articlePathByLang } from '../content/articles';
 import { ensureArticles, peekArticles } from '../content/articles/registry';
 import { MADINAH_NAME, MADINAH_URL } from '../config/site';
 
-const DATE_LOCALE: Record<string, string> = { en: 'en-MY', ar: 'ar-EG', ms: 'ms-MY' };
+const DATE_LOCALE: Record<string, string> = { en: 'en-MY', ms: 'ms-MY' };
 
 export function ArticlePage() {
   const { t } = useTranslation();
@@ -75,8 +75,7 @@ export function ArticlePage() {
   // empty shell that a crawler would happily index as a real page.
   if (!article) return <Navigate to={`/${lang}/blog`} replace />;
 
-  const isRtl = lang === 'ar';
-  const BackIcon = isRtl ? FiArrowRight : FiArrowLeft;
+  const BackIcon = FiArrowLeft;
   const published = new Intl.DateTimeFormat(DATE_LOCALE[lang] ?? 'en-MY', {
     year: 'numeric',
     month: 'long',

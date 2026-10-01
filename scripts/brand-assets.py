@@ -62,14 +62,13 @@ VERSION = "2026-09"
 # Every file this script owns. Referenced by --check and by the report.
 STORE_FACTS = ROOT / "src" / "data" / "storeFacts.json"
 
-# One manifest per language. The site is trilingual and the prerenderer
-# snapshots all three from the same shell, so a single English manifest gave an
-# Arabic visitor who installs the site an English name, LTR direction and the
-# English homepage. `dir`/`lang`/`start_url`/`name` all differ; the icons do not.
+# One manifest per language. The site is bilingual (EN / MS) and the prerenderer
+# snapshots both from the same shell, so a single English manifest gave a
+# Malay visitor who installs the site an English name and the English
+# homepage. `lang`/`start_url`/`name` differ; the icons do not.
 MANIFESTS = [
     ("site.webmanifest", "en", "ltr", "name"),
     ("site-ms.webmanifest", "ms", "ltr", "nameMs"),
-    ("site-ar.webmanifest", "ar", "rtl", "nameAr"),
 ]
 
 OUTPUTS = [
@@ -364,8 +363,8 @@ def build_og_card(logo: dict, out: Path) -> None:
 def build_manifests() -> None:
     """Write one web manifest per language, named from storeFacts.json.
 
-    The brand string is never retyped here: `site.nameAr` is the same value the
-    Arabic pages and AI-FACTS.yml use.
+    The brand string is never retyped here: `site.nameMs` is the same value the
+    Malay pages use.
     """
     facts = json.loads(STORE_FACTS.read_text(encoding="utf-8"))
     site = facts["site"]

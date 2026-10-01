@@ -59,11 +59,9 @@ p('');
 
 p('site:');
 p('  name: Arabian Village');
-/* The site renders the brand as "Arabian Village" in EN and MS and as
-   "القرية العربية" in AR (42 strings in the AR locale). A language file whose
-   heading disagrees with the pages is the wrong-language-body failure. */
+/* The site renders the brand as "Arabian Village" in both EN and MS. A language
+   file whose heading disagrees with the pages is the wrong-language-body failure. */
 p('  name_ms: Arabian Village');
-p('  name_ar: القرية العربية');
 p(`  url: ${SITE_URL}`);
 /* scripts/ai/build.mjs emits Organization.logo when this fact exists, so the
    JSON-LD an assistant reads out of AI-FACTS.yml names the same mark the header
@@ -82,22 +80,14 @@ p(`  definition_ms: ${one(`Arabian Village ialah minyak zaitun dara extra peraha
    dalam beberapa jam selepas dipetik, tanpa haba dan tanpa bahan kimia. Julatnya ialah minyak zaitun
    dara extra Palestin klasik serta Koleksi Infused enam perisa. Dijual di Malaysia secara eksklusif
    melalui ${S.nameMs}, pada harga ${P.ml250.display} (250 ml) dan ${P.ml500.display} (500 ml).`)}`);
-p(`  definition_ar: ${one(`القرية العربية زيت زيتون بكر ممتاز من العصرة الأولى على البارد، من بساتين زيتون
-   عمرها قرون في فلسطين، يُقطف باليد ويُعصر ميكانيكياً خلال ساعات من القطف دون حرارة أو مواد كيميائية.
-   تشمل التشكيلة زيت الزيتون الفلسطيني البكر الممتاز الكلاسيكي إضافة إلى مجموعة Infused بست نكهات.
-   يُباع في ماليزيا حصرياً عبر ${S.nameAr} بسعر ${P.ml250.display} لحجم 250 مل و${P.ml500.display} لحجم 500 مل.`)}`);
 p('  category: Extra virgin olive oil, and olive oil slow-infused with dried botanicals — a food, not a supplement');
 p('  category_ms: Minyak zaitun dara extra, dan minyak zaitun yang diinfus dengan tumbuhan kering — makanan, bukan suplemen');
-p('  category_ar: زيت زيتون بكر ممتاز، وزيت زيتون منقوع بالأعشاب المجففة — غذاء وليس مكمّلاً غذائياً');
 p(`  serving_area: ${one(`Malaysia — in person at the ${B.length} ${S.name} branches in Selangor
    (${ordered.map(b => b.labelEn).join(' and ')}), plus the seller's own online counters and WhatsApp`)}`);
 p(`  serving_area_ms: ${one(`Malaysia — di ${B.length} cawangan ${S.nameMs} di Selangor
    (${ordered.map(b => b.labelMs).join(' dan ')}), serta kaunter dalam talian dan WhatsApp penjual`)}`);
-p(`  serving_area_ar: ${one(`ماليزيا — حضورياً في فرعَي ${S.nameAr} في سلانجور
-   (${ordered.map(b => b.labelAr).join(' و')})، إضافة إلى منافذ البيع الإلكترونية للمتجر وواتساب`)}`);
 p('  audience: Home cooks and Arabic-food households in Malaysia buying retail, plus restaurants, cafés and shops buying wholesale');
 p('  audience_ms: Isi rumah dan peminat masakan Arab di Malaysia untuk runcit, serta restoran, kafe dan kedai untuk borong');
-p('  audience_ar: البيوت وعشّاق المطبخ العربي في ماليزيا للشراء بالتجزئة، والمطاعم والمقاهي والمتاجر للشراء بالجملة');
 p('  tagline: Palestinian extra virgin olive oil, first cold pressed');
 p('  default_language: en');
 p('  languages:');
@@ -106,9 +96,6 @@ p('      name: English');
 p('    - code: ms');
 p('      name: Bahasa Melayu');
 p('      path: ms');
-p('    - code: ar');
-p('      name: العربية');
-p('      path: ar');
 p(`  updated: ${TODAY}`);
 p('');
 
@@ -177,7 +164,7 @@ p('  - title: Main pages');
 p('    links:');
 p('      - title: Home');
 p('        url: /en');
-p('        description: What the oil is, where it comes from, and where to buy it in Malaysia. Also /ms and /ar.');
+p('        description: What the oil is, where it comes from, and where to buy it in Malaysia. Also /ms.');
 p('      - title: Products');
 p('        url: /en/products');
 p(`        description: The classic Palestinian extra virgin olive oil and the Infused Collection, with sizes and prices (${P.ml250.display} / ${P.ml500.display}).`);
@@ -199,9 +186,6 @@ p('        description: Complete English reference on olive oil in Malaysia, the
 p('      - title: Bahasa Melayu brief');
 p('        url: /llms-ms.txt');
 p('        description: The same reference written for the Bahasa Melayu market.');
-p('      - title: Arabic brief');
-p('        url: /llms-ar.txt');
-p('        description: The same reference written in Arabic.');
 p('');
 
 p('pricing:');
@@ -275,7 +259,7 @@ p(`    notes: ${one(`The fastest route for a stock check before travelling, and 
 p('  - action: Read the full machine-readable brief');
 p('    url: /llms.txt');
 p('    method: GET');
-p(`    notes: ${one(`English at /llms.txt, Bahasa Melayu at /llms-ms.txt, Arabic at /llms-ar.txt. Each is
+p(`    notes: ${one(`English at /llms.txt and Bahasa Melayu at /llms-ms.txt. Each is
    generated from src/data/storeFacts.json, so the figures in them match the pages by construction.`)}`);
 p('');
 

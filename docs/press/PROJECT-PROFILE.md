@@ -8,8 +8,8 @@ Every line cites what proved it. Hierarchy of truth: codebase → docs → chat.
 | Fact | Value | Source |
 |---|---|---|
 | Stack | React 19 + Vite 8 SPA, prerendered | `package.json` \| Code \| High |
-| Languages | `en`, `ar`, `ms` | `src/content/articles/index.ts` `ARTICLE_LANGS` \| Code \| High |
-| Article store | Typed TS modules, one per language | `src/content/articles/{en,ar,ms}.ts` \| Code \| High |
+| Languages | `en`, `ms` (Arabic removed 2026-10-01; every old `/ar` URL 301s via `scripts/gen-ar-redirects.mjs`) | `src/content/articles/index.ts` `ARTICLE_LANGS` \| Code \| High |
+| Article store | Typed TS modules, one per language | `src/content/articles/{en,ms}.ts` \| Code \| High |
 | Article schema | `Article` interface — 20 fields incl. `focusKeyword`, `keyTakeaway`, `faqs`, `related`, `ogImage` | `src/content/articles/types.ts` \| Code \| High |
 | Body markup | Blocks: `p`,`h3`,`h4`,`ul`,`ol`,`note`,`table`,`image`. Inline: **only** `**bold**` and `[label](href)` | `types.ts` \| Code \| High |
 | Slug registry | `src/content/articles/slugs.json`, **throws on drift** vs the content modules | `index.ts` lines 30–41 \| Code \| High |
@@ -18,7 +18,7 @@ Every line cites what proved it. Hierarchy of truth: codebase → docs → chat.
 | Build | `npm run build:prerender` (llms → surfaces → tsc → vite → puppeteer) | `package.json` \| Code \| High |
 | Sitemap | **⛔ `npm run sitemap` (`generate-sitemap.mjs`) is a SEPARATE script, not part of `build:prerender`.** Round 10 deployed a stale sitemap missing all 5 new articles because of this; caught by grepping the live sitemap post-deploy, not by any build-time check. Run it explicitly every round, copy the regenerated `public/sitemap.xml` into `dist/` before deploying (the sitemap generator writes to `public/`, not `dist/`) | `package.json` \| Code \| High, found round 10 |
 | Gates present | `check:llms`, `check:ai`, `ai:coverage`, `ai:gate`, `ai:answers` | `package.json` \| Code \| High |
-| AI surfaces | `llms.txt`, `llms-ms.txt`, `llms-ar.txt`, `llms-full.txt`, `about.md`, `pricing.md`, `faq.md`, `AGENTS.md`, `AI-FACTS.yml` | repo + live \| Code \| High |
+| AI surfaces | `llms.txt`, `llms-ms.txt`, `llms-full.txt`, `about.md`, `pricing.md`, `faq.md`, `AGENTS.md`, `AI-FACTS.yml` | repo + live \| Code \| High |
 | Facts source of truth | `src/data/storeFacts.json` — seller, hours, 2 branches, prices, compliance | file \| Code \| High |
 | `AI-FACTS.yml` | **Generated** by `scripts/ai/facts-sync.mjs`. Hand-editing is wrong here | `project_avoliveoil` memory + script \| Doc \| High |
 | Git | `main` = `3de50b1`, working tree clean | `git status` \| Code \| High |
@@ -29,7 +29,7 @@ Every line cites what proved it. Hierarchy of truth: codebase → docs → chat.
 preventing, alleviating, treating or curing any disease.
 
 The project already carries this in machine-readable form at `storeFacts.json` → `compliance`,
-in all three languages. **Every article in this round imports that ceiling rather than restating
+in each language. **Every article in this round imports that ceiling rather than restating
 it.** Benefit words belong in keyword lists as things people type, never as claims about the oil.
 
 ## Deploy
@@ -53,7 +53,8 @@ it.** Benefit words belong in keyword lists as things people type, never as clai
 
 ## Platform constraints that bind this round
 
-1. **⛔ Arabic slugs cannot be native script.** `public/.htaccess` L32–33 routes blog articles with
+1. **(Historical — Arabic was removed from the site on 2026-10-01; do not write Arabic articles.)**
+   **⛔ Arabic slugs cannot be native script.** `public/.htaccess` L32–33 routes blog articles with
    `RewriteRule ^(en|ar|ms)/blog/([a-z0-9-]+)/?$`. Arabic characters never match that class, so the
    prerendered `index.html` is skipped and the request falls through to the SPA shell — a crawler
    then sees no article meta and no JSON-LD. Percent-encoded paths would also have to survive the

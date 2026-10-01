@@ -32,7 +32,7 @@ def main():
     want = {(p["id"], p["slot"]): p["src"] for p in plan}   # id -> frame; alt is per language below
 
     changed = missing = 0
-    for lang in ("en", "ms", "ar"):
+    for lang in ("en", "ms"):
         path = ARTICLES / f"{lang}.ts"
         src = io.open(path, encoding="utf-8").read()
         marks = [(m.start(), m.group(1)) for m in ARTICLE_RE.finditer(src)]

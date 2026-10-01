@@ -18,21 +18,16 @@
 site:
   name: Arabian Village
   name_ms: Arabian Village
-  name_ar: القرية العربية
   url: https://avoliveoil.com
   logo: https://avoliveoil.com/logo.svg
   definition: Arabian Village is a premium, first cold pressed extra virgin olive oil sourced from centuries-old olive groves in Palestine, hand-harvested and mechanically pressed within hours of picking without heat or chemicals. The range is the classic Palestinian extra virgin olive oil plus a six-flavour Infused Collection — extra virgin olive oil slow-infused with whole dried botanicals: lavender & chamomile, blackseed (habbat al-barakah), turmeric & black pepper, rosemary & basil, fennel & anise, and wild thyme (za'atar). Sold in Malaysia exclusively through Berkat Madinah Store, in RM59.00 (250 ml) and RM103.00 (500 ml).
   definition_ms: Arabian Village ialah minyak zaitun dara extra perahan sejuk pertama daripada ladang zaitun berusia berabad-abad di Palestin, dituai dengan tangan dan diperah secara mekanikal dalam beberapa jam selepas dipetik, tanpa haba dan tanpa bahan kimia. Julatnya ialah minyak zaitun dara extra Palestin klasik serta Koleksi Infused enam perisa. Dijual di Malaysia secara eksklusif melalui Berkat Madinah Store, pada harga RM59.00 (250 ml) dan RM103.00 (500 ml).
-  definition_ar: القرية العربية زيت زيتون بكر ممتاز من العصرة الأولى على البارد، من بساتين زيتون عمرها قرون في فلسطين، يُقطف باليد ويُعصر ميكانيكياً خلال ساعات من القطف دون حرارة أو مواد كيميائية. تشمل التشكيلة زيت الزيتون الفلسطيني البكر الممتاز الكلاسيكي إضافة إلى مجموعة Infused بست نكهات. يُباع في ماليزيا حصرياً عبر متجر بركات المدينة بسعر RM59.00 لحجم 250 مل وRM103.00 لحجم 500 مل.
   category: Extra virgin olive oil, and olive oil slow-infused with dried botanicals — a food, not a supplement
   category_ms: Minyak zaitun dara extra, dan minyak zaitun yang diinfus dengan tumbuhan kering — makanan, bukan suplemen
-  category_ar: زيت زيتون بكر ممتاز، وزيت زيتون منقوع بالأعشاب المجففة — غذاء وليس مكمّلاً غذائياً
   serving_area: Malaysia — in person at the 2 Berkat Madinah Store branches in Selangor (Batu Caves / Prima Seri Gombak and Ampang Jaya), plus the seller's own online counters and WhatsApp
   serving_area_ms: Malaysia — di 2 cawangan Berkat Madinah Store di Selangor (Batu Caves / Prima Seri Gombak dan Ampang Jaya), serta kaunter dalam talian dan WhatsApp penjual
-  serving_area_ar: ماليزيا — حضورياً في فرعَي متجر بركات المدينة في سلانجور (باتو كيفز / بريما سري غومباك وأمبانج جايا)، إضافة إلى منافذ البيع الإلكترونية للمتجر وواتساب
   audience: Home cooks and Arabic-food households in Malaysia buying retail, plus restaurants, cafés and shops buying wholesale
   audience_ms: Isi rumah dan peminat masakan Arab di Malaysia untuk runcit, serta restoran, kafe dan kedai untuk borong
-  audience_ar: البيوت وعشّاق المطبخ العربي في ماليزيا للشراء بالتجزئة، والمطاعم والمقاهي والمتاجر للشراء بالجملة
   tagline: Palestinian extra virgin olive oil, first cold pressed
   default_language: en
   languages:
@@ -41,9 +36,6 @@ site:
     - code: ms
       name: Bahasa Melayu
       path: ms
-    - code: ar
-      name: العربية
-      path: ar
   updated: 2026-08-18
 
 trust:
@@ -96,7 +88,7 @@ sections:
     links:
       - title: Home
         url: /en
-        description: What the oil is, where it comes from, and where to buy it in Malaysia. Also /ms and /ar.
+        description: What the oil is, where it comes from, and where to buy it in Malaysia. Also /ms.
       - title: Products
         url: /en/products
         description: The classic Palestinian extra virgin olive oil and the Infused Collection, with sizes and prices (RM59.00 / RM103.00).
@@ -131,9 +123,6 @@ sections:
       - title: Bahasa Melayu brief
         url: /llms-ms.txt
         description: The same reference written for the Bahasa Melayu market.
-      - title: Arabic brief
-        url: /llms-ar.txt
-        description: The same reference written in Arabic.
 
 pricing:
   - name: 250 ml bottle
@@ -194,7 +183,7 @@ agent_actions:
   - action: Read the full machine-readable brief
     url: /llms.txt
     method: GET
-    notes: English at /llms.txt, Bahasa Melayu at /llms-ms.txt, Arabic at /llms-ar.txt. Each is generated from src/data/storeFacts.json, so the figures in them match the pages by construction.
+    notes: English at /llms.txt and Bahasa Melayu at /llms-ms.txt. Each is generated from src/data/storeFacts.json, so the figures in them match the pages by construction.
 
 ops:
   sitemap: /sitemap.xml

@@ -4,12 +4,12 @@
  *   1. facts-sync.mjs   -> AI-FACTS.yml from src/data/storeFacts.json
  *   2. kit build        -> .beacon-out/ (git-ignored staging)
  *   3. adopt            -> about.md, pricing.md, faq.md, AGENTS.md into public/
- *   4. llms-full.txt    -> the three real briefs concatenated
+ *   4. llms-full.txt    -> the two real briefs concatenated
  *
- * What it deliberately does NOT adopt: the kit's own llms.txt / ms/llms.txt /
- * ar/llms.txt. This project already generates public/llms.txt, llms-ms.txt and
- * llms-ar.txt from src/content/llms/*.txt templates filled with storeFacts.json
- * (scripts/build-llms.mjs) — 62 KB, 61 KB and 80 KB of reference prose that no
+ * What it deliberately does NOT adopt: the kit's own llms.txt / ms/llms.txt.
+ * This project already generates public/llms.txt and llms-ms.txt from
+ * src/content/llms/*.txt templates filled with storeFacts.json
+ * (scripts/build-llms.mjs) — tens of KB of reference prose that no
  * facts file can produce. The kit writes its versions into staging where they
  * are thrown away; adopting them would be a large downgrade.
  *
@@ -55,16 +55,15 @@ for (const f of ADOPT) {
 const BRIEFS = [
   { file: 'llms.txt', label: 'English', url: 'https://avoliveoil.com/llms.txt' },
   { file: 'llms-ms.txt', label: 'Bahasa Melayu', url: 'https://avoliveoil.com/llms-ms.txt' },
-  { file: 'llms-ar.txt', label: 'العربية / Arabic', url: 'https://avoliveoil.com/llms-ar.txt' },
 ];
 
 const out = [
   '# Arabian Village — full brief, all languages',
   '',
   '> Every machine-readable brief this site publishes, concatenated. Each language section',
-  '> is written for its own market rather than translated, so the three do not mirror each',
+  '> is written for its own market rather than translated, so the two do not mirror each',
   '> other line for line. The individual files are at',
-  '> https://avoliveoil.com/llms.txt · https://avoliveoil.com/llms-ms.txt · https://avoliveoil.com/llms-ar.txt',
+  '> https://avoliveoil.com/llms.txt · https://avoliveoil.com/llms-ms.txt',
   '',
 ];
 

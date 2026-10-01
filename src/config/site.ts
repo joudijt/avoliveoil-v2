@@ -33,21 +33,18 @@ export const LOGO_RASTER_HEIGHT = storeFacts.site.logoRasterHeight;
 export const ICON_PATH = storeFacts.site.icon;
 
 /**
- * The brand as each language writes it. The Arabic pages render القرية العربية
- * in 42 places, so an installed app called "Arabian Village" on an Arabic phone
- * would be the wrong-language-body failure in miniature.
+ * The brand as each language writes it, so an installed app's name matches the
+ * language of the pages it opens.
  */
 export const SITE_NAME_BY_LANG: Record<string, string> = {
   en: storeFacts.site.name,
   ms: storeFacts.site.nameMs,
-  ar: storeFacts.site.nameAr,
 };
 
 /** One web manifest per language: name, dir and start_url all differ. */
 export const MANIFEST_BY_LANG: Record<string, string> = {
   en: '/site.webmanifest',
   ms: '/site-ms.webmanifest',
-  ar: '/site-ar.webmanifest',
 };
 
 /**
@@ -61,7 +58,6 @@ export const OG_IMAGE_TYPE = 'image/jpeg';
 
 export const OG_LOCALES: Record<string, string> = {
   en: 'en_US',
-  ar: 'ar_SA',
   ms: 'ms_MY',
 };
 

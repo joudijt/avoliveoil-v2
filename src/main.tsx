@@ -7,10 +7,10 @@ import './index.css'
 import App from './App.tsx'
 import { ensureArticles } from './content/articles/registry'
 
-// `/en`, `/ar/why-us`, `/ms/blog/foo` — the first segment is the language.
-const LANG_RE = /^\/(en|ar|ms)(?:\/|$)/
+// `/en`, `/ms/why-us`, `/ms/blog/foo` — the first segment is the language.
+const LANG_RE = /^\/(en|ms)(?:\/|$)/
 // `/{lang}/blog` and `/{lang}/blog/{slug}`, and nothing else.
-const BLOG_RE = /^\/(en|ar|ms)\/blog(?:\/|$)/
+const BLOG_RE = /^\/(en|ms)\/blog(?:\/|$)/
 
 /**
  * Boot order exists for one reason: `hydrateRoot` demands that the FIRST
@@ -19,8 +19,8 @@ const BLOG_RE = /^\/(en|ar|ms)\/blog(?:\/|$)/
  * resolved before we call it:
  *
  *  1. i18next language. It initialises to `lng: 'en'`, and LangLayout only
- *     switches it in an effect — i.e. after the first render. On /ar/... that
- *     first render would emit English into Arabic HTML, React would treat the
+ *     switches it in an effect — i.e. after the first render. On /ms/... that
+ *     first render would emit English into Malay HTML, React would treat the
  *     whole root as a failed hydration and re-render it from scratch, and we
  *     would have paid for the prerender and thrown it away. Switch here.
  *  2. Article bodies, on a blog route only. They load through a dynamic

@@ -61,8 +61,7 @@ Sitemap: https://avoliveoil.com/sitemap.xml
 # unknown directive gets flagged in Search Console.
 # https://avoliveoil.com/llms.txt        (English)
 # https://avoliveoil.com/llms-ms.txt     (Bahasa Melayu)
-# https://avoliveoil.com/llms-ar.txt     (العربية)
-# https://avoliveoil.com/llms-full.txt   (all three, concatenated)
+# https://avoliveoil.com/llms-full.txt   (both, concatenated)
 # https://avoliveoil.com/about.md        (entity facts — brand, seller, branches)
 # https://avoliveoil.com/pricing.md      (sizes and prices, parseable without rendering the site)
 # https://avoliveoil.com/faq.md          (the Q&A on its own)

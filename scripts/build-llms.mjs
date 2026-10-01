@@ -1,9 +1,9 @@
 /**
- * Generates public/llms.txt, llms-ms.txt and llms-ar.txt from the templates in
+ * Generates public/llms.txt and llms-ms.txt from the templates in
  * src/content/llms/ by filling in the facts held in src/data/storeFacts.json.
  *
  * Why this exists: addresses, phone numbers and prices were previously typed into
- * three long text files by hand, alongside the same values in the pages and the
+ * long text files by hand, alongside the same values in the pages and the
  * JSON-LD. A model cross-checks llms.txt against the site, so a single stale
  * address is worse than none. Facts now live in exactly one place; the prose lives
  * in the templates and never repeats a fact literally.
@@ -28,7 +28,6 @@ const { seller: S, branches: B, prices: P, scale } = FACTS;
 const OUTPUTS = [
   { lang: 'en', template: 'src/content/llms/en.txt', out: 'public/llms.txt', sellerName: S.name },
   { lang: 'ms', template: 'src/content/llms/ms.txt', out: 'public/llms-ms.txt', sellerName: S.nameMs },
-  { lang: 'ar', template: 'src/content/llms/ar.txt', out: 'public/llms-ar.txt', sellerName: S.nameAr },
 ];
 
 const addr = (b) => `${b.street}, ${b.postalCode} ${b.locality}, ${b.region}`;
@@ -60,7 +59,7 @@ function articleIndexFor(lang) {
 }
 
 /**
- * The freshness line was a hardcoded date in all three templates, so it never moved: the
+ * The freshness line was a hardcoded date in every template, so it never moved: the
  * briefs claimed 2026-08-14 while indexing articles published 2026-08-25. A build clock
  * would churn the file on every build and break --check, so this derives the date from the
  * newest article the manifest carries — content-derived, deterministic, and it cannot go

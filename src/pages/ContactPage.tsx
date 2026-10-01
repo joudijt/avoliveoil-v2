@@ -105,8 +105,7 @@ export function ContactPage() {
           </div>
 
           {/* Embedded map. `loading="lazy"` keeps Google's iframe off the
-              critical path, and `dir="ltr"` stops the RTL locales from
-              mirroring the map's own chrome. */}
+              critical path. */}
           <div
             dir="ltr"
             className="mx-auto mt-8 max-w-6xl overflow-hidden rounded-2xl border border-olive-dark/10 shadow-[0_10px_30px_rgba(46,58,36,0.06)]"

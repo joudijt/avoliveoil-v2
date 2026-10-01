@@ -3,13 +3,13 @@
 PRESS Stage 5 — import validated article drafts into the typed content modules.
 
 Writers produce JSON, not TypeScript, because fifteen parallel agents editing
-three shared .ts modules is a merge conflict with extra steps. JSON is also
+shared .ts modules is a merge conflict with extra steps. JSON is also
 checkable before it can break a build: this script validates every draft against
 the `Article` contract in src/content/articles/types.ts and refuses to write
 anything if a single draft is bad.
 
 What it touches:
-    src/content/articles/{en,ms,ar}.ts   new Article objects appended
+    src/content/articles/{en,ms}.ts   new Article objects appended
     src/content/articles/slugs.json      id -> { lang: slug }
     src/content/articles/types.ts        ImageKey union extended
     src/content/articles/images.ts       imports + map entries
@@ -27,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "src" / "content" / "articles"
-LANGS = ("en", "ms", "ar")
+LANGS = ("en", "ms")
 BLOCK_TYPES = {"p", "h3", "h4", "ul", "ol", "note", "table", "image"}
 REQUIRED = (
     "id lang slug seoTitle metaTitle metaDescription focusKeyword relatedKeywords "

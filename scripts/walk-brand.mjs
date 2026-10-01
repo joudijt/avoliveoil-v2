@@ -1,7 +1,7 @@
 // Local walk over the BUILT site: proves the header logo still renders, that
 // every icon/manifest URL the head points at actually resolves, and that the
-// tab icon a browser would use is the brand one — on desktop and phone, in all
-// three languages.
+// tab icon a browser would use is the brand one — on desktop and phone, in both
+// languages.
 import { preview } from 'vite';
 import puppeteer from 'puppeteer';
 import { mkdirSync } from 'node:fs';
@@ -16,7 +16,7 @@ const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 900 },
   { name: 'phone', width: 390, height: 844 },
 ];
-const ROUTES = ['/en', '/ar', '/ms'];
+const ROUTES = ['/en', '/ms'];
 
 mkdirSync(OUT, { recursive: true });
 

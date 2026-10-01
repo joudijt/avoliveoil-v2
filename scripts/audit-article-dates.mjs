@@ -2,7 +2,7 @@
 //
 // The sitemap copies each article's `dateModified`, so comparing the sitemap to
 // `dateModified` proves nothing. This walks git history instead: it loads every
-// committed version of src/content/articles/{en,ar,ms}.ts, hashes each article
+// committed version of src/content/articles/{en,ms}.ts, hashes each article
 // (dates excluded) and reports, per article:
 //   - first commit that contains it       vs datePublished
 //   - last commit that changed its TEXT   vs dateModified   (text = everything but images and `related`)
@@ -22,7 +22,7 @@ import { ROOT, LANGS, loadArticles, parseFlags } from './lib/sitemap-shared.mjs'
 
 const flags = parseFlags(process.argv.slice(2), ['--verbose', '--help'], 'Usage: node scripts/audit-article-dates.mjs [--verbose]');
 const git = (...a) => execFileSync('git', a, { cwd: ROOT, encoding: 'utf-8', maxBuffer: 256 << 20 });
-const NAMES = { en: 'EN_ARTICLES', ar: 'AR_ARTICLES', ms: 'MS_ARTICLES' };
+const NAMES = { en: 'EN_ARTICLES', ms: 'MS_ARTICLES' };
 const IMAGE_KEYS = new Set(['hero', 'ogImage', 'src', 'alt', 'caption', 'width', 'height']);
 const DATE_KEYS = new Set(['datePublished', 'dateModified', 'readingTime']);
 

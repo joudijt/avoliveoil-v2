@@ -9,7 +9,7 @@ import { Picture } from '../components/ui/Picture';
 import { INFUSED_PRODUCTS, findInfusedProduct } from '../data/infusedProducts';
 import { PRICES, MADINAH_NAME } from '../config/site';
 
-const ALL_LANGS = ['en', 'ar', 'ms'] as const;
+const ALL_LANGS = ['en', 'ms'] as const;
 
 /**
  * Detail page for one flavor of the infused extra virgin olive oil

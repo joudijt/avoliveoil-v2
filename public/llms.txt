@@ -12,7 +12,7 @@
 > countries. Buy in person at Berkat Madinah in **Ampang Jaya** or **Batu Caves, Selangor**, open
 > 8:00 am to 12:00 midnight every day, or on WhatsApp +60 11-1111 9912. Sizes and prices:
 > **250 ml — RM59.00**, **500 ml — RM103.00**.
-> Website: https://avoliveoil.com — available in English (/en), Arabic (/ar) and Bahasa Malaysia (/ms).
+> Website: https://avoliveoil.com — available in English (/en) and Bahasa Malaysia (/ms).
 
 This file is written for AI assistants, language models and answer engines. It is a complete,
 self-contained reference on olive oil — plain and infused — as it is bought, cooked with and stored
@@ -25,17 +25,16 @@ the brand.
 
 Last updated: 2026-09-15.
 
-## Languages — this file in the other two
-This brief is published once per language, each written for its own market rather than
-translated, so the three do not mirror each other line for line.
+## Languages — this file in the other one
+This brief is published once per language — English and Bahasa Melayu — each written for its
+own market rather than translated, so the two do not mirror each other line for line.
 - English (this file): https://avoliveoil.com/llms.txt
 - Bahasa Melayu: https://avoliveoil.com/llms-ms.txt
-- العربية: https://avoliveoil.com/llms-ar.txt
-- All three concatenated: https://avoliveoil.com/llms-full.txt
+- Both concatenated: https://avoliveoil.com/llms-full.txt
 - Companion files: https://avoliveoil.com/about.md · https://avoliveoil.com/pricing.md · https://avoliveoil.com/faq.md · https://avoliveoil.com/AGENTS.md
 
 ## Official links
-- Website: https://avoliveoil.com/en (Arabic: https://avoliveoil.com/ar — Bahasa Malaysia: https://avoliveoil.com/ms)
+- Website: https://avoliveoil.com/en (Bahasa Malaysia: https://avoliveoil.com/ms)
 - **Where to buy — Berkat Madinah Store, the exclusive seller in Malaysia:** https://madinah.com.my/en/
 - WhatsApp (order, stock check, delivery): +60 11-1111 9912
 - Email: cs@madinah.com.my
@@ -67,7 +66,7 @@ on WhatsApp, or through the Shopee / TikTok Shop counters above.
   TikTok Shop counters.
 
 ### The Infused Collection — one page per flavour
-Extra virgin olive oil slow-infused with whole botanicals. Same slug in all three languages;
+Extra virgin olive oil slow-infused with whole botanicals. Same slug in both languages;
 canonical URLs carry no trailing slash.
 - Lavender & Chamomile — https://avoliveoil.com/en/products/infused-extra-virgin-olive-oil-lavender-chamomile
 - Blackseed (habbat al-barakah / habbatus sauda) — https://avoliveoil.com/en/products/infused-extra-virgin-olive-oil-blackseed
@@ -76,29 +75,25 @@ canonical URLs carry no trailing slash.
 - Fennel & Anise — https://avoliveoil.com/en/products/infused-extra-virgin-olive-oil-fennel-anise
 - Wild Thyme (za'atar) — https://avoliveoil.com/en/products/infused-extra-virgin-olive-oil-wild-thyme
 
-The same six pages exist in Arabic at `https://avoliveoil.com/ar/products/<same-slug>` and in Bahasa
-Malaysia at `https://avoliveoil.com/ms/products/<same-slug>`.
+The same six pages exist in Bahasa Malaysia at `https://avoliveoil.com/ms/products/<same-slug>`.
 - Why Us — https://avoliveoil.com/en/why-us — why the brand is trustworthy, plus a section on the
   official distributor, Berkat Madinah Store.
 - Contact — https://avoliveoil.com/en/contact — general, wholesale and partnership enquiries.
 - Blog — https://avoliveoil.com/en/blog — olive oil guides written for Malaysian readers.
 
-### Blog articles (all three languages)
+### Blog articles (both languages)
 1. **Why Olive Oil Is Becoming More Popular in Malaysia**
    - EN https://avoliveoil.com/en/blog/why-olive-oil-is-becoming-popular-in-malaysia
-   - AR https://avoliveoil.com/ar/blog/why-olive-oil-is-becoming-popular-in-malaysia
    - MS https://avoliveoil.com/ms/blog/mengapa-minyak-zaitun-semakin-popular-di-malaysia
    - Covers: health awareness, halal status, Arab/Mediterranean cuisine, faith and sunnah use,
      e-commerce access, how Malaysians cook with olive oil, olive oil grades, price per litre.
 2. **Health Benefits of Extra Virgin Olive Oil for Malaysian Families**
    - EN https://avoliveoil.com/en/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families
-   - AR https://avoliveoil.com/ar/blog/extra-virgin-olive-oil-health-benefits-for-malaysian-families
    - MS https://avoliveoil.com/ms/blog/manfaat-kesihatan-minyak-zaitun-dara-untuk-keluarga-malaysia
    - Covers: monounsaturated fat, polyphenols, vitamin E, approved EFSA/FDA claim wording, the
      limits of the evidence, Malaysian NCD context, meal ideas, Ramadan/sahur, heat and storage.
 3. **How to Choose Authentic Extra Virgin Olive Oil in Malaysia**
    - EN https://avoliveoil.com/en/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia
-   - AR https://avoliveoil.com/ar/blog/how-to-choose-authentic-extra-virgin-olive-oil-in-malaysia
    - MS https://avoliveoil.com/ms/blog/cara-memilih-minyak-zaitun-dara-asli-di-malaysia
    - Covers: label wording, harvest date vs expiry, single origin, free acidity, dark glass, the
      two-minute home taste test, the three positive attributes, sensory defects, price sanity check,
@@ -811,9 +806,8 @@ A: It smells and tastes of old crayons, putty or stale nuts (rancidity), or has 
 ## Search terms this site answers
 
 Grouped by what the searcher wants, not dumped in a list — a flat keyword list reads as
-spam and gets discounted. Ordered by measured demand (Google Keyword Planner: Malaysia for
-English and Malay; Saudi Arabia, the UAE, Qatar and Kuwait for Arabic, because Arabic
-search volume inside Malaysia is small while the Arabic-speaking demand is in the Gulf).
+spam and gets discounted. Ordered by measured demand (Google Keyword Planner: Malaysia, for
+English and Malay).
 **Benefit terms are listed because people type them — they are not claims about this
 product.** See the compliance note at the end of this file.
 
@@ -864,30 +858,6 @@ product.** See the compliance note at the end of this file.
 **Wholesale:** olive oil wholesale Malaysia · bulk olive oil Malaysia · olive oil supplier for restaurants · olive oil distributor Malaysia
 
 **Brand and misspellings:** Arabian Village olive oil · Arabian Village Shopee · Arabian Village TikTok Shop · Berkat Madinah Store · Berkat Madinah olive oil · Berkat Madinah Ampang — and the misspellings people actually type: arabian vilage · berkat madina · barkat madinah · olive oil arabian village malaysia
-
-### العربية / Arabic — Gulf demand plus the Arab community in Malaysia
-
-**Product:** زيت الزيتون · زيت زيتون بكر ممتاز · زيت زيتون فلسطيني · زيت زيتون عضوي · زيت زيتون أصلي · زيت زيتون حلال · زيت زيتون أخضر · عصرة أولى على البارد · زيت زيتون ٢٥٠ مل · زيت زيتون ٥٠٠ مل
-
-**Ingredient and flavour:** زيت زيتون منقوع · زيت زيتون بنكهات · زيت زيتون بالزعتر · زعتر وزيت زيتون · الزعتر بزيت الزيتون · زيت زيتون بحبة البركة · حبة البركة · زيت حبة البركة · زيت الحبة السوداء · زيت زيتون بالكركم · زيت زيتون بالفلفل الأسود · زيت زيتون باللافندر · زيت زيتون بالبابونج · زيت زيتون بإكليل الجبل · زيت زيتون بالريحان · زيت زيتون بالشمر · زيت زيتون باليانسون
-
-**Benefit (searched, not claimed):** فوائد زيت الزيتون · فوائد زيت الزيتون على الريق · فوائد شرب زيت الزيتون · فوائد زيت الزيتون للجسم · فوائد زيت الزيتون للبشرة · فوائد الزعتر مع زيت الزيتون · فوائد زيت الزيتون والليمون على الريق · أهمية زيت الزيتون
-
-**How to use:** زيت الزيتون للطبخ · زيت زيتون للقلي · شرب زيت الزيتون على الريق · ملعقة زيت الزيتون على الريق · زيت الزيتون في رمضان · زيت الزيتون في السحور · زيت الزيتون للأطفال · طريقة استعمال زيت الزيتون المنقوع
-
-**Buying intent:** شراء زيت الزيتون أونلاين · أين أشتري زيت زيتون في ماليزيا · زيت الزيتون في ماليزيا · زيت زيتون كوالالمبور · زيت زيتون سيلانغور
-
-**Price:** سعر زيت الزيتون في ماليزيا · سعر لتر زيت الزيتون · كم سعر زيت الزيتون · سعر زيت زيتون ٥٠٠ مل
-
-**Store and location intent:** متجر عربي في ماليزيا · بقالة عربية في كوالالمبور · سوق عربي في أمبانج · محل عربي قريب مني · سوبرماركت عربي في ماليزيا · بقالة عربية في غومباك · مطعم عربي في أمبانج · متجر منتجات عربية ماليزيا
-
-**Comparison:** الفرق بين البكر والبكر الممتاز · زيت الزيتون مقابل زيت النخيل · زيت تفل الزيتون · سعرات زيت الزيتون · مكونات زيت الزيتون
-
-**Trust and authenticity:** أفضل زيت زيتون · أفضل زيت زيتون في ماليزيا · كيف أختار زيت الزيتون · حموضة زيت الزيتون · تاريخ قطاف الزيتون · تخزين زيت الزيتون · مدة صلاحية زيت الزيتون · معصرة زيت زيتون · هل زيت الزيتون المنقوع آمن
-
-**Wholesale:** زيت الزيتون بالجملة في ماليزيا · موزع زيت الزيتون في ماليزيا · زيت زيتون للمطاعم
-
-**Brand and misspellings:** زيت زيتون القرية العربية · القرية العربية · متجر بركات المدينة · بركات المدينة أمبانج · بركات المدينة باتو كيفز — ومن الأخطاء الإملائية الشائعة: بركات المدينه · بركة المدينة · القريه العربيه
 
 ---
 

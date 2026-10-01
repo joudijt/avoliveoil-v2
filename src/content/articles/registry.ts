@@ -6,10 +6,10 @@ import type { ArticleLang } from './index';
 /**
  * Lazy, cached access to one language's article bodies.
  *
- * Why this exists: `index.ts` used to statically import en.ts (533 KB),
- * ms.ts (624 KB) and ar.ts (722 KB), so every page on the site — the homepage
- * included — shipped all three languages' article bodies inside one 1.9 MB
- * chunk. Loading a language on demand is what splits them into three chunks a
+ * Why this exists: `index.ts` used to statically import every language's
+ * article file, so every page on the site — the homepage included — shipped
+ * all of the article bodies inside one chunk. Loading a language on demand is
+ * what splits them into per-language chunks a
  * visitor never fetches unless they open the blog in that language.
  *
  * `peekArticles` is the synchronous half and exists for hydration: the first
@@ -17,14 +17,13 @@ import type { ArticleLang } from './index';
  * `ensureArticles` for a blog route BEFORE hydrating, and the components then
  * read the already-resolved value synchronously.
  *
- * These three `import()` calls are the ONLY references to en/ar/ms in the app.
+ * These `import()` calls are the ONLY references to en/ms in the app.
  * A static `import { EN_ARTICLES } from './en'` anywhere would silently pull
  * that language back into the entry chunk and undo the split.
  */
 
 const LOADERS: Record<ArticleLang, () => Promise<Article[]>> = {
   en: () => import('./en').then((m) => m.EN_ARTICLES),
-  ar: () => import('./ar').then((m) => m.AR_ARTICLES),
   ms: () => import('./ms').then((m) => m.MS_ARTICLES),
 };
 
@@ -36,7 +35,7 @@ const inflight = new Map<ArticleLang, Promise<Article[]>>();
  * synchronous `getArticles` used, so callers see no behaviour change.
  */
 function normalise(lang: string | undefined): ArticleLang {
-  return lang === 'ar' || lang === 'ms' ? lang : 'en';
+  return lang === 'ms' ? 'ms' : 'en';
 }
 
 /** Loads a language's articles once and caches them. Safe to call repeatedly. */

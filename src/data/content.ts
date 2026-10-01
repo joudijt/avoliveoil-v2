@@ -14,6 +14,5 @@ export const NAV_LINKS = [
 /** Shared by Navbar and Footer language switchers. */
 export const LANGS = [
   { code: 'en', label: 'English', short: 'EN' },
-  { code: 'ar', label: 'العربية', short: 'AR' },
   { code: 'ms', label: 'Bahasa Melayu', short: 'MS' },
 ] as const;

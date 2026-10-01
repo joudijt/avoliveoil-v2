@@ -102,14 +102,14 @@ export function OliveJourney() {
               aria-label="Previous"
               className="absolute start-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-cream/50 bg-cream/80 text-olive-dark backdrop-blur-sm transition-colors duration-300 hover:border-gold hover:text-gold"
             >
-              <FiChevronLeft className="h-5 w-5 rtl:rotate-180" />
+              <FiChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={() => go(1)}
               aria-label="Next"
               className="absolute end-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-cream/50 bg-cream/80 text-olive-dark backdrop-blur-sm transition-colors duration-300 hover:border-gold hover:text-gold"
             >
-              <FiChevronRight className="h-5 w-5 rtl:rotate-180" />
+              <FiChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>

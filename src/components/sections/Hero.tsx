@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scrollToHash } from '../../hooks/useLenis';
@@ -63,8 +62,6 @@ const LEAVES = Array.from({ length: 8 }).map((_, i) => ({
 
 export function Hero() {
   const { t } = useTranslation();
-  const { lang } = useParams<{ lang: string }>();
-  const heroBgName = lang === 'ar' ? 'OliveGroveSunsetHero-ar' : 'OliveGroveSunsetHero';
   const mouse = useRef({ x: 0, y: 0 });
   const rootRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -110,7 +107,6 @@ export function Hero() {
   }, []);
 
   const headlineWords = t('hero.headlineWords', { returnObjects: true }) as { text: string; gold: boolean }[];
-  const isAr = lang === 'ar';
 
   return (
     <section id="home" ref={rootRef} className="relative flex min-h-screen w-full items-center overflow-hidden bg-bg">
@@ -118,7 +114,7 @@ export function Hero() {
           object-cover + the same object-position paints identically and is the
           only form that can carry a srcset for the LCP element. */}
       <Picture
-        name={heroBgName}
+        name="OliveGroveSunsetHero"
         alt=""
         aria-hidden
         className="absolute inset-0 h-full w-full object-cover"
@@ -129,22 +125,20 @@ export function Hero() {
       <div
         className="pointer-events-none absolute inset-0"
         style={{
-          background: isAr
-            ? 'linear-gradient(270deg, rgba(247,244,237,0.72) 0%, rgba(247,244,237,0.6) 32%, rgba(247,244,237,0.32) 55%, rgba(46,58,36,0.12) 100%)'
-            : 'linear-gradient(90deg, rgba(247,244,237,0.72) 0%, rgba(247,244,237,0.6) 32%, rgba(247,244,237,0.32) 55%, rgba(46,58,36,0.12) 100%)',
+          background:
+            'linear-gradient(90deg, rgba(247,244,237,0.72) 0%, rgba(247,244,237,0.6) 32%, rgba(247,244,237,0.32) 55%, rgba(46,58,36,0.12) 100%)',
         }}
       />
       <div
         className="pointer-events-none absolute inset-0"
         style={{
-          background: isAr
-            ? 'radial-gradient(60% 60% at 88% 55%, rgba(184,138,42,0.08) 0%, rgba(247,244,237,0) 70%)'
-            : 'radial-gradient(60% 60% at 78% 55%, rgba(184,138,42,0.08) 0%, rgba(247,244,237,0) 70%)',
+          background:
+            'radial-gradient(60% 60% at 78% 55%, rgba(184,138,42,0.08) 0%, rgba(247,244,237,0) 70%)',
         }}
       />
 
       <div className="pointer-events-none absolute inset-0">
-        {!isAr && LEAVES.map((leaf) => (
+        {LEAVES.map((leaf) => (
           <span
             key={leaf.id}
             className="absolute rounded-[60%_40%_60%_40%] bg-olive/30"
@@ -202,7 +196,7 @@ export function Hero() {
         <div ref={bottleExitRef} className="relative z-30 h-[36vh] w-full sm:h-[46vh] md:h-[85vh]">
           <div
             ref={bottleWrapRef}
-            className="relative flex h-full items-end justify-center pb-[10%] md:pb-[14%] md:-translate-x-[48%] md:rtl:translate-x-[48%]"
+            className="relative flex h-full items-end justify-center pb-[10%] md:pb-[14%] md:-translate-x-[48%]"
             style={{ animation: 'bottle-bob 6s ease-in-out infinite' }}
           >
             <BottleParallax mouse={mouse} />

@@ -22,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "src" / "content" / "articles"
-LANGS = ("en", "ms", "ar")
+LANGS = ("en", "ms")
 
 # A single-quoted TS string, allowing escaped quotes inside it.
 QUOTED = r"'((?:[^'\\]|\\.)*)'"

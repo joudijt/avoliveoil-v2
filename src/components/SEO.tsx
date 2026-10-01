@@ -39,7 +39,7 @@ export interface BreadcrumbItem {
 
 export type Page = 'home' | 'products' | 'shop' | 'why-us' | 'contact' | 'blog' | 'article';
 
-const ALL_LANGS = ['en', 'ar', 'ms'] as const;
+const ALL_LANGS = ['en', 'ms'] as const;
 
 const PAGE_SLUG: Record<Page, string> = {
   home: '',
@@ -134,17 +134,17 @@ export function SEO({
    * Only languages this page actually exists in get an hreflang alternate.
    *
    * When `pathByLang` is supplied it is the authoritative list of translations,
-   * and it is not always all three: an article written for one market has no
-   * counterpart in the others. Mapping over ALL_LANGS regardless made `pathFor`
+   * and it is not always both: an article written for one market has no
+   * counterpart in the other. Mapping over ALL_LANGS regardless made `pathFor`
    * fall back to PAGE_SLUG, which pointed the missing languages at the *blog
-   * index* — every such article would declare /ms/blog and /ar/blog as its own
+   * index* — every such article would declare /ms/blog as its own
    * translations, and the index would be claimed as an alternate by all of them.
    * x-default follows the same list, preferring English when it is one of them.
    */
   const altLangs = pathByLang ? ALL_LANGS.filter((l) => pathByLang[l]) : ALL_LANGS;
   const defaultLang = altLangs.includes('en') ? 'en' : (altLangs[0] ?? lang);
   const ogImage = `${SITE_URL}${article?.imagePath ?? OG_IMAGE_PATH}`;
-  /** The brand as this language writes it — القرية العربية on /ar. */
+  /** The brand as this language writes it. */
   const brandName = SITE_NAME_BY_LANG[lang] ?? SITE_NAME;
 
   const organizationSchema = {
@@ -311,7 +311,7 @@ export function SEO({
       : null;
 
   return (
-    <Helmet htmlAttributes={{ lang, dir: lang === 'ar' ? 'rtl' : 'ltr' }}>
+    <Helmet htmlAttributes={{ lang, dir: 'ltr' }}>
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
