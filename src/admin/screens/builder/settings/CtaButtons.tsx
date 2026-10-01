@@ -2,7 +2,7 @@ import type { CtaButton, StoreKey } from '../../../../cms/contracts';
 import { createCtaButton, usedFormIds } from '../../../../cms/doc';
 import { Field, Select, Switch } from '../../../ui/ui';
 import { useBuilder } from '../context';
-import { ChoiceField, ItemList, LinkField, LocField } from './fields';
+import { ChoiceField, HideField, ItemList, LinkField, LocField } from './fields';
 import { BUTTON_STYLES, changeKind, changeStore, CTA_KIND, KIND_ORDER } from './ctaOps';
 import { shortUrl, STORE_KEYS, STORES } from './stores';
 
@@ -69,6 +69,9 @@ export function CtaButtonsField({ buttons, onChange, max = 3 }: { buttons: CtaBu
                 </p>
               ))}
             <ChoiceField label="Look" value={b.style} onChange={(style) => update({ style })} options={BUTTON_STYLES} />
+            <Field label="Show on devices" hint="Hide just this button on some screens. On phones a landing page already has a WhatsApp + form bar at the bottom.">
+              <HideField value={b.hide} onChange={(hide) => update({ hide })} />
+            </Field>
           </>
         )}
       />

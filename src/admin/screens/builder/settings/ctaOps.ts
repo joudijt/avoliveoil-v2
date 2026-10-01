@@ -30,6 +30,7 @@ export function changeKind(b: CtaButton, kind: CtaButton['kind']): CtaButton {
   const untouchedLabel = sameLoc(b.label, before.label) || (b.kind === 'store' && STORE_KEYS.some((k) => sameLoc(b.label, STORES[k].ctaLabel)));
   if (!untouchedLabel) next.label = b.label;
   if (b.style !== before.style) next.style = b.style;
+  if (b.hide) next.hide = b.hide; // where it shows is independent of what it does
   return next;
 }
 

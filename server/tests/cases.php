@@ -1302,6 +1302,8 @@ test('landing: validation rejects bad kind / store / icon / href / overlay / col
     $S = $GLOBALS['S'];
     $id = $S['lpId'];
     $good = landing_doc($S['lpForm'], $S['lpHero'], $S['lpCards'], $S['lpSteps']);
+    // a valid per-button device setting is part of the good doc (hide on phones)
+    $good = set_path($good, lp(0, 'buttons.0.hide'), ['mobile' => true]);
     $version = $admin->get("/api/pages/$id")->json()['page']['version'];
     $chips7 = array_map(fn ($i) => ['id' => "c$i", 'text' => L('x', 'x')], range(1, 7));
     $cards13 = array_map(fn ($i) => ['id' => "k$i", 'icon' => 'leaf', 'title' => L('x', 'x'), 'text' => L('x', 'x')], range(1, 13));
@@ -1317,6 +1319,9 @@ test('landing: validation rejects bad kind / store / icon / href / overlay / col
         [lp(0, 'buttons.2.href'), ['x'], lp(0, 'buttons.2.href')],
         [lp(0, 'buttons.0.style'), 'neon', lp(0, 'buttons.0.style')],
         [lp(0, 'buttons.0.newTab'), 'yes', lp(0, 'buttons.0.newTab')],
+        [lp(0, 'buttons.0.hide'), 'mobile', lp(0, 'buttons.0.hide')],
+        [lp(0, 'buttons.0.hide'), ['mobile' => 'yes'], lp(0, 'buttons.0.hide')],
+        [lp(0, 'buttons.0.hide'), ['watch' => true], lp(0, 'buttons.0.hide')],
         [lp(0, 'buttons'), [cta('form'), cta('form'), cta('form'), cta('form')], lp(0, 'buttons')],
         [lp(0, 'chips'), $chips7, lp(0, 'chips')],
         [lp(0, 'chips.0'), 'just text', lp(0, 'chips.0')],

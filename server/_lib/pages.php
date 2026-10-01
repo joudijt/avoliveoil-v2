@@ -210,6 +210,12 @@ function avo_validate_landing_widget(string $type, array $st, string $path, call
                 $bad('This button link is not allowed. Use a web address (https://…), a page path (/en/…), an email (mailto:) or a phone (tel:).', "$bp.href");
             }
             if (isset($b['newTab']) && !is_bool($b['newTab'])) $bad('The "open in a new tab" setting of this button is damaged.', "$bp.newTab");
+            if (isset($b['hide'])) {
+                $h = $b['hide'];
+                $okHide = is_array($h);
+                if ($okHide) foreach ($h as $dk => $dv) if (!in_array($dk, ['desktop', 'tablet', 'mobile'], true) || !is_bool($dv)) $okHide = false;
+                if (!$okHide) $bad('The "hide on device" setting of this button is damaged.', "$bp.hide");
+            }
         }
     };
     foreach (['kicker', 'title', 'sub'] as $k) $loc($st, $k, $path);

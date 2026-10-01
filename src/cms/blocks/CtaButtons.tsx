@@ -1,8 +1,9 @@
 import type { MouseEvent } from 'react';
-import type { ButtonStyle, CmsLang, CtaButton } from '../contracts';
+import type { ButtonStyle, CmsLang, CtaButton, HideOn } from '../contracts';
 import { FORM_ANCHOR } from '../contracts';
 import { isExternalHref, localizeHref, safeHref } from '../sanitize';
 import { CTA, cx } from './classes';
+import { hideAttr, hideClasses } from './hide';
 import { fieldAttr, useBlockEnv } from './context';
 import { STORE_ICONS, STORE_URLS, goToForm, isStoreKey, whatsappHref } from './cta';
 import { WhatsappIcon, type IconC } from './icons';
@@ -58,13 +59,21 @@ export function CtaButtons({ buttons, styles, className }: { buttons: CtaButton[
     return [{ b, i, label, r }];
   });
   if (items.length === 0) return null;
+  // When every shown button hides on a device, the row itself hides there too, so its
+  // margins don't leave an empty gap (e.g. hero buttons hidden on phones).
+  const allHide: HideOn = {
+    desktop: items.every(({ b }) => !!b.hide?.desktop),
+    tablet: items.every(({ b }) => !!b.hide?.tablet),
+    mobile: items.every(({ b }) => !!b.hide?.mobile),
+  };
   return (
-    <div className={className}>
+    <div className={cx(className, canvas ? '' : hideClasses(allHide))}>
       {items.map(({ b, i, label, r }) => (
         <a
           key={b.id}
           href={r.href}
-          className={cx(CTA.base, styles[b.style] ?? styles.primary)}
+          className={cx(CTA.base, styles[b.style] ?? styles.primary, canvas ? '' : hideClasses(b.hide))}
+          {...(canvas ? hideAttr(b.hide) : {})}
           {...(r.newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           {...(r.onClick && !canvas ? { onClick: r.onClick } : {})}
           {...(canvas && r.inert ? { 'data-cms-placeholder': '' } : {})}

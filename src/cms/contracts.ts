@@ -124,6 +124,8 @@ export interface CtaButton {
   message?: Localized;
   style: ButtonStyle;
   newTab?: boolean;
+  /** hide this one button on some devices (e.g. on phones, where the bottom bar already offers WhatsApp + form) */
+  hide?: HideOn;
 }
 
 /** The seller's three fixed shop fronts; URLs come from storeFacts.json, never from the doc. */
