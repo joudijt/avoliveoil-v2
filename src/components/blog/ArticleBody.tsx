@@ -3,7 +3,7 @@ import type { Block } from '../../content/articles';
 import { ARTICLE_IMAGES } from '../../content/articles/images';
 import { renderInline } from './inline';
 
-const P_CLASS = 'font-body text-base font-light leading-[1.85] text-brown/80 md:text-[1.0625rem]';
+const P_CLASS = 'font-body text-base leading-[1.85] text-brown-ink md:text-[1.0625rem]';
 
 function BlockView({ block }: { block: Block }) {
   const { lang = 'en' } = useParams<{ lang: string }>();
@@ -55,7 +55,7 @@ function BlockView({ block }: { block: Block }) {
     case 'note':
       return (
         <aside className="mt-10 rounded-2xl border-s-4 border-gold bg-gold/[0.07] p-6 md:p-7">
-          <p className="text-xs uppercase tracking-[0.2em] text-gold">{block.title}</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold-ink">{block.title}</p>
           <p className={`mt-3 ${P_CLASS}`}>{inline(block.text)}</p>
         </aside>
       );
@@ -81,7 +81,7 @@ function BlockView({ block }: { block: Block }) {
               {block.rows.map((row, i) => (
                 <tr key={i} className="border-b border-olive-dark/10 align-top">
                   {row.map((cell, j) => (
-                    <td key={j} className="py-4 pe-4 font-light leading-relaxed text-brown/80">
+                    <td key={j} className="py-4 pe-4 leading-relaxed text-brown-ink">
                       {inline(cell)}
                     </td>
                   ))}
@@ -103,7 +103,7 @@ function BlockView({ block }: { block: Block }) {
             className="w-full rounded-2xl object-cover shadow-[0_20px_45px_rgba(46,58,36,0.18)]"
           />
           {block.caption && (
-            <figcaption className="mt-3 text-center font-body text-sm font-light text-brown/60">
+            <figcaption className="mt-3 text-center font-body text-sm text-brown">
               {block.caption}
             </figcaption>
           )}

@@ -92,7 +92,7 @@ export function Ingredients() {
       />
 
       <div className="mx-auto max-w-6xl text-center">
-        <p {...cmsText('ingredients.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('ingredients.kicker')}</p>
+        <p {...cmsText('ingredients.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink-band">{t('ingredients.kicker')}</p>
         <h2 ref={headingRef} {...cmsText('ingredients.title')} className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">
           {t('ingredients.title')}
         </h2>
@@ -112,7 +112,7 @@ export function Ingredients() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 {...cmsText(`ingredients.items.${i}.title`)} className="mt-6 text-xl text-olive-dark">{item.title}</h3>
-                <p {...cmsText(`ingredients.items.${i}.desc`)} className="mt-2 text-sm font-light leading-relaxed text-brown/70">{item.desc}</p>
+                <p {...cmsText(`ingredients.items.${i}.desc`)} className="mt-2 text-sm leading-relaxed text-brown-ink">{item.desc}</p>
               </div>
             );
           })}

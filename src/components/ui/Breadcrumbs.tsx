@@ -22,10 +22,10 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
 
   return (
     <div className="px-6 pt-28 md:px-16 md:pt-32">
-      <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl text-sm text-brown/60">
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl text-sm text-brown">
         <ol className="flex flex-wrap items-center gap-2">
           <li>
-            <Link to={`/${lang}`} {...cmsText('nav.home')} className="transition-colors duration-300 hover:text-gold">
+            <Link to={`/${lang}`} {...cmsText('nav.home')} className="transition-colors duration-300 hover:text-gold-ink">
               {t('nav.home')}
             </Link>
           </li>
@@ -42,7 +42,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                 <Link
                   to={`/${lang}/${item.path}`}
                   {...(item.cmsKey ? cmsText(item.cmsKey) : {})}
-                  className="transition-colors duration-300 hover:text-gold"
+                  className="transition-colors duration-300 hover:text-gold-ink"
                 >
                   {item.name}
                 </Link>

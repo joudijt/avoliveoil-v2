@@ -6,6 +6,7 @@ import { Picture } from '../ui/Picture';
 import { isStaticRender } from '../../lib/prerender';
 import { isCmsStatic } from '../../cms/boot';
 import { cmsText } from '../../cms/editable';
+import manifest from '../../assets/opt/manifest.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,37 @@ const DROPS = [
   { delay: 0.75, x: -3, size: 12 },
   { delay: 0.82, x: 5, size: 8 },
 ];
+
+/**
+ * Pour geometry (FORGE PRODUCTS-R1 O-10). `product-extra-virgin-cutout` was
+ * measured, not guessed: the neck spans x 0.31–0.68 of the image width and the cap
+ * top sits at y 0.005 of its height (shoulders from y≈0.30). The aspect comes from
+ * the optimiser manifest, so a re-cut image keeps the maths right.
+ *
+ * The bottle box is sized by HEIGHT and rotates about its centre by TILT degrees;
+ * the stream, drops and pool live in the same (un-rotated) box and start at where
+ * the mouth lands after that rotation — so the oil visibly leaves the bottle mouth.
+ */
+const POUR_IMAGE = 'product-extra-virgin-cutout';
+const POUR_SIZE = (manifest as Record<string, { width: number; height: number }>)[POUR_IMAGE];
+const ASPECT = POUR_SIZE.width / POUR_SIZE.height; // w / h
+const NECK = { x0: 0.31, x1: 0.68 };
+const CAP_TOP_Y = 0.005;
+const TILT = 112; // degrees, clockwise: past horizontal so the mouth points down-right
+const MOUTH = (() => {
+  // Mouth relative to the box centre, in box-HEIGHT units (the box is ASPECT wide).
+  const dx = ((NECK.x0 + NECK.x1) / 2 - 0.5) * ASPECT;
+  const dy = CAP_TOP_Y - 0.5;
+  const r = (TILT * Math.PI) / 180;
+  const x = dx * Math.cos(r) - dy * Math.sin(r);
+  const y = dx * Math.sin(r) + dy * Math.cos(r);
+  // Back to % of the box: left in % of its width, top in % of its height.
+  return { left: 50 + (x / ASPECT) * 100, top: 50 + y * 100 };
+})();
+/** Neck width in % of the box width; the stream is a little narrower than the opening. */
+const STREAM_W = (NECK.x1 - NECK.x0) * 100 * 0.32;
+/** Where the stream lands, % of the box height. */
+const POOL_TOP = 104;
 
 /**
  * Section 4 — the bottle tilts open and pours: a golden stream grows from
@@ -47,6 +79,7 @@ export function BottleOpening() {
     // No gsap during the prerender snapshot or a CMS edit session — see src/lib/prerender.ts.
     if (isStaticRender()) return;
     const ctx = gsap.context(() => {
+      gsap.set(bottleRef.current, { rotate: 0 });
       gsap.set(streamRef.current, { scaleY: 0, transformOrigin: 'top center' });
       gsap.set(poolRef.current, { scaleX: 0, opacity: 0 });
       gsap.set(dropRefs.current, { y: -10, opacity: 0 });
@@ -61,16 +94,14 @@ export function BottleOpening() {
         },
       });
 
-      const tilt = 7;
-      const shift = 30;
-      tl.to(bottleRef.current, { rotate: tilt, x: shift, ease: 'power1.out' }, 0.05);
-      tl.to(bottleRef.current, { rotate: tilt, x: shift }, 0.3);
-
-      tl.to(streamRef.current, { scaleY: 1, ease: 'power1.inOut' }, 0.28);
-      tl.to(poolRef.current, { scaleX: 1, opacity: 1, ease: 'power1.out' }, 0.42);
+      // Tilt first (0.05–0.3), then the stream grows out of the mouth (0.3+) — the
+      // stream is positioned for the FINISHED tilt, so it must not start earlier.
+      tl.to(bottleRef.current, { rotate: TILT, duration: 0.25, ease: 'power2.inOut' }, 0.05);
+      tl.to(streamRef.current, { scaleY: 1, duration: 0.18, ease: 'power1.in' }, 0.3);
+      tl.to(poolRef.current, { scaleX: 1, opacity: 1, duration: 0.2, ease: 'power1.out' }, 0.44);
 
       DROPS.forEach((d, i) => {
-        tl.to(dropRefs.current[i], { y: 90, opacity: 1, ease: 'power1.in' }, d.delay);
+        tl.to(dropRefs.current[i], { y: 70, opacity: 1, ease: 'power1.in' }, d.delay);
         tl.to(dropRefs.current[i], { opacity: 0, ease: 'none' }, d.delay + 0.08);
       });
 
@@ -91,28 +122,19 @@ export function BottleOpening() {
 
         <div className="relative z-10 grid h-full w-full content-center grid-cols-1 items-center gap-6 px-6 sm:gap-8 md:px-16 lg:grid-cols-2">
           <div className="relative flex h-full items-center justify-center">
-            <div
-              ref={bottleRef}
-              className="relative w-[110px] sm:w-[min(28vh,220px)]"
-              style={{ aspectRatio: '343 / 1683' }}
-            >
-              <Picture
-                name="bottle-cutout"
-                alt={t('alt.bottlePour')}
-                cmsKey="home.bottle.pour"
-                cmsAltKey="alt.bottlePour"
-                className="relative z-10 h-full w-full object-contain"
-                style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.4))' }}
-                sizes="(min-width: 640px) 220px, 110px"
-              />
-
+            {/* Stage: un-rotated, sized by height with the cutout's own aspect. */}
+            <div className="relative h-[30vh] sm:h-[46vh] lg:h-[54vh]" style={{ aspectRatio: `${POUR_SIZE.width} / ${POUR_SIZE.height}` }}>
               <div
                 ref={streamRef}
-                className="absolute left-1/2 top-[1%] z-0 hidden w-[7%] -translate-x-1/2 rounded-b-full sm:block"
+                className="absolute z-0 -translate-x-1/2 rounded-b-full"
                 style={{
-                  height: '340%',
-                  background: 'linear-gradient(180deg, #e8c15a 0%, #b88a2a 55%, #8a6a1f 100%)',
-                  boxShadow: '0 0 18px rgba(184,138,42,0.6)',
+                  left: `${MOUTH.left}%`,
+                  top: `${MOUTH.top}%`,
+                  width: `${STREAM_W}%`,
+                  minWidth: 4,
+                  height: `${POOL_TOP - MOUTH.top}%`,
+                  background: 'linear-gradient(180deg, #f0cd6a 0%, #c99a30 45%, #a07a22 100%)',
+                  boxShadow: '0 0 16px rgba(232,193,90,0.55)',
                 }}
               />
 
@@ -122,10 +144,10 @@ export function BottleOpening() {
                   ref={(el) => {
                     dropRefs.current[i] = el;
                   }}
-                  className="absolute z-0 hidden rounded-full sm:block"
+                  className="absolute z-0 rounded-full"
                   style={{
-                    top: '30%',
-                    left: `calc(50% + ${d.x}px)`,
+                    top: `${MOUTH.top + 6}%`,
+                    left: `calc(${MOUTH.left}% + ${d.x}px)`,
                     width: d.size,
                     height: d.size * 1.3,
                     background: 'radial-gradient(circle at 35% 30%, #f2d488, #b88a2a)',
@@ -135,15 +157,30 @@ export function BottleOpening() {
 
               <div
                 ref={poolRef}
-                className="absolute left-1/2 z-0 hidden -translate-x-1/2 rounded-full sm:block"
+                className="absolute z-0 -translate-x-1/2 rounded-full"
                 style={{
-                  top: '132%',
-                  width: '260%',
-                  height: '5%',
-                  background: 'radial-gradient(ellipse, rgba(184,138,42,0.85) 0%, rgba(184,138,42,0.15) 70%, transparent 100%)',
+                  left: `${MOUTH.left}%`,
+                  top: `${POOL_TOP - 1.5}%`,
+                  width: '220%',
+                  height: '4%',
+                  background: 'radial-gradient(ellipse, rgba(232,193,90,0.9) 0%, rgba(184,138,42,0.2) 65%, transparent 100%)',
                   filter: 'blur(2px)',
                 }}
               />
+
+              {/* Rendered at the FINISHED tilt so the prerender snapshot and a CMS edit
+                  session (no gsap) show bottle + stream together; gsap resets it to 0. */}
+              <div ref={bottleRef} className="absolute inset-0 z-10" style={{ transform: `rotate(${TILT}deg)` }}>
+                <Picture
+                  name={POUR_IMAGE}
+                  alt={t('alt.bottlePour')}
+                  cmsKey="home.bottle.pour"
+                  cmsAltKey="alt.bottlePour"
+                  className="h-full w-full object-contain"
+                  style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.4))' }}
+                  sizes="(min-width: 1024px) 20vh, (min-width: 640px) 17vh, 12vh"
+                />
+              </div>
             </div>
           </div>
 
@@ -151,7 +188,7 @@ export function BottleOpening() {
             <p
               ref={kickerRef}
               {...cmsText('bottleOpening.kicker')}
-              className={`text-xs uppercase tracking-[0.35em] text-gold${editing ? '' : ' opacity-0'}`}
+              className={`font-body text-xs font-semibold uppercase tracking-[0.3em] text-gold-light${editing ? '' : ' opacity-0'}`}
               style={editing ? undefined : { transform: 'translateY(16px)' }}
             >
               {t('bottleOpening.kicker')}
@@ -160,7 +197,7 @@ export function BottleOpening() {
               <h2 {...cmsText('bottleOpening.title')} className="mt-3 max-w-lg text-4xl leading-[1.15] text-cream md:text-5xl">
                 {t('bottleOpening.title')}
               </h2>
-              <p {...cmsText('bottleOpening.body')} className="mt-6 max-w-md font-body text-base font-light leading-relaxed tracking-wide text-cream/75 md:text-lg">
+              <p {...cmsText('bottleOpening.body')} className="mt-6 max-w-md font-body text-base leading-relaxed tracking-wide text-cream/80 md:text-lg">
                 {t('bottleOpening.body')}
               </p>
             </div>

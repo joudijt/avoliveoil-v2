@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- The two faces that paint above the fold on every route: the hero
-         heading (Playfair Display, via the h1 rule in index.css) and the hero
-         paragraph / nav / buttons (Inter, the --font-body default on <body>).
-         Latin subset only, and only these two of the six self-hosted files —
-         latin-ext and the Playfair italic are used far below the fold or not
-         at all on most pages, and a preload that goes unused within a second
-         is a console warning and wasted bandwidth. Fonts are self-hosted
-         (public/fonts) so these are same-origin; crossorigin is still
-         required on a font preload or the browser fetches the file twice. -->
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2" />
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/playfair-display-latin.woff2" />
+         heading (Fraunces, via the h1 rule / font-display in index.css) and the
+         hero paragraph / nav / buttons (Manrope, the --font-body default on
+         <body>). Latin subset only — latin-ext is rarely needed above the
+         fold, and a preload that goes unused within a second is a console
+         warning and wasted bandwidth. Fonts are self-hosted (public/fonts) so
+         these are same-origin; crossorigin is still required on a font
+         preload or the browser fetches the file twice. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/fraunces-latin.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/manrope-latin.woff2" />
 
     <!-- Every icon below is derived from the one logo the header renders
          (src/assets/logo/logo_theme.svg) by scripts/brand-assets.py. The palm

@@ -4,6 +4,7 @@
  */
 import type { CmsPageDoc, CtaButton, HideOn, Localized, Section, SectionSettings, Widget, WidgetType } from '../../cms/contracts';
 import { createColumn, createCtaButton, createSection, createWidget, emptyDoc, newId } from '../../cms/doc';
+import storeFacts from '../../data/storeFacts.json';
 
 const L = (en: string, ms: string): Localized => ({ en, ms });
 
@@ -20,6 +21,21 @@ function sec(settings: Partial<SectionSettings>, ...cols: { span: number; widget
 }
 
 const col = (span: number, ...widgets: Widget[]) => ({ span, widgets });
+
+/* Branch count + hours from storeFacts.json (FORGE PRODUCTS-R1): hours are named ONLY for
+   the branches whose hours the owner gave; the rest say to ask on WhatsApp. */
+const BRANCHES = storeFacts.branches;
+const joinList = (items: string[], and: string) =>
+  items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} ${and} ${items[items.length - 1]}`;
+const WITH_HOURS = BRANCHES.filter((b) => b.hours);
+const HOURS_TEXT = L(
+  WITH_HOURS.length
+    ? `${joinList(WITH_HOURS.map((b) => b.labelEn), 'and')}: ${WITH_HOURS[0].hours!.displayEn}. Other branches: ask on WhatsApp.`
+    : 'Opening hours: ask on WhatsApp.',
+  WITH_HOURS.length
+    ? `${joinList(WITH_HOURS.map((b) => b.labelMs), 'dan')}: ${WITH_HOURS[0].hours!.displayMs}. Cawangan lain: tanya melalui WhatsApp.`
+    : 'Waktu operasi: tanya melalui WhatsApp.'
+);
 
 export interface TemplateCtx {
   /** a few catalogue product ids, so product widgets are not empty */
@@ -107,7 +123,7 @@ const faq = () =>
         items: [
           { id: newId('q'), q: L('Is your olive oil extra virgin?', 'Adakah minyak zaitun anda extra virgin?'), a: L('Yes. It is first cold pressed extra virgin olive oil — 100% Palestinian, no blending, no additives.', 'Ya. Ia minyak zaitun extra virgin perahan sejuk pertama — 100% Palestin, tanpa campuran, tanpa bahan tambahan.') },
           { id: newId('q'), q: L('How should I store it?', 'Bagaimana cara menyimpannya?'), a: L('Keep the bottle tightly closed, away from sunlight and heat.', 'Tutup botol dengan rapat, jauhkan daripada cahaya matahari dan haba.') },
-          { id: newId('q'), q: L('Do you deliver, or do I have to visit a branch?', 'Adakah anda menghantar, atau saya perlu ke cawangan?'), a: L('Both. The two branches are in Selangor, and the Shopee and TikTok Shop counters deliver nationwide.', 'Kedua-duanya. Dua cawangan berada di Selangor, dan kaunter Shopee serta TikTok Shop menghantar ke seluruh negara.') },
+          { id: newId('q'), q: L('Do you deliver, or do I have to visit a branch?', 'Adakah anda menghantar, atau saya perlu ke cawangan?'), a: L(`Both. All ${BRANCHES.length} branches are in Selangor (stock can vary by branch — WhatsApp first), and the Shopee and TikTok Shop counters deliver nationwide.`, `Boleh kedua-duanya. Kesemua ${BRANCHES.length} cawangan berada di Selangor (stok mungkin berbeza mengikut cawangan — WhatsApp dahulu), dan kaunter Shopee serta TikTok Shop menghantar ke seluruh negara.`) },
         ],
       })
     )
@@ -130,7 +146,7 @@ const contactForm = () =>
       w('text', { html: L('<p>Questions about our oils, wholesale or events? Leave your details and we will get back to you.</p>', '<p>Ada soalan tentang minyak kami, borong atau acara? Tinggalkan butiran anda dan kami akan menghubungi anda.</p>') }),
       w('iconList', {
         items: [
-          { id: newId('i'), icon: 'clock', text: L('8:00 am – 12:00 midnight, Monday through Sunday', '8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad') },
+          { id: newId('i'), icon: 'clock', text: HOURS_TEXT },
           { id: newId('i'), icon: 'pin', text: L('Berkat Madinah, Selangor', 'Berkat Madinah, Selangor') },
         ],
       })

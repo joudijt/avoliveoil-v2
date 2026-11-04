@@ -5,6 +5,8 @@ export interface InfusedProduct {
   id: string;
   /** Full URL segment under /:lang/products/ — same in every language. */
   slug: string;
+  /** White 1200x1200 square photo of THIS flavour's bottle (src/assets/images). */
+  image: string;
 }
 
 const SLUG_PREFIX = 'infused-extra-virgin-olive-oil-';
@@ -17,12 +19,12 @@ const SLUG_PREFIX = 'infused-extra-virgin-olive-oil-';
  * routes; the assertion below fails the build loudly if they drift.
  */
 export const INFUSED_PRODUCTS: InfusedProduct[] = [
-  { id: 'lavender-chamomile', slug: `${SLUG_PREFIX}lavender-chamomile` },
-  { id: 'blackseed', slug: `${SLUG_PREFIX}blackseed` },
-  { id: 'turmeric-black-pepper', slug: `${SLUG_PREFIX}turmeric-black-pepper` },
-  { id: 'rosemary-basil', slug: `${SLUG_PREFIX}rosemary-basil` },
-  { id: 'fennel-anise', slug: `${SLUG_PREFIX}fennel-anise` },
-  { id: 'wild-thyme', slug: `${SLUG_PREFIX}wild-thyme` },
+  { id: 'lavender-chamomile', slug: `${SLUG_PREFIX}lavender-chamomile`, image: 'product-infused-lavender-chamomile' },
+  { id: 'blackseed', slug: `${SLUG_PREFIX}blackseed`, image: 'product-infused-blackseed' },
+  { id: 'turmeric-black-pepper', slug: `${SLUG_PREFIX}turmeric-black-pepper`, image: 'product-infused-turmeric-black-pepper' },
+  { id: 'rosemary-basil', slug: `${SLUG_PREFIX}rosemary-basil`, image: 'product-infused-rosemary-basil' },
+  { id: 'fennel-anise', slug: `${SLUG_PREFIX}fennel-anise`, image: 'product-infused-fennel-anise' },
+  { id: 'wild-thyme', slug: `${SLUG_PREFIX}wild-thyme`, image: 'product-infused-wild-thyme' },
 ];
 
 for (const product of INFUSED_PRODUCTS) {

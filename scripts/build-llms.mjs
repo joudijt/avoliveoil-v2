@@ -18,6 +18,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { perLitre, rm } from './lib/price-math.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FACTS = JSON.parse(readFileSync(join(ROOT, 'src/data/storeFacts.json'), 'utf8'));
@@ -31,6 +32,66 @@ const OUTPUTS = [
 ];
 
 const addr = (b) => `${b.street}, ${b.postalCode} ${b.locality}, ${b.region}`;
+const CATALOGUE = JSON.parse(readFileSync(join(ROOT, 'src/data/catalogue.json'), 'utf8'));
+
+/** Display + per-litre display for one product/size, read from storeFacts — never typed. */
+function price(key, size) {
+  const p = P.products?.[key]?.[`ml${size}`];
+  if (!p) throw new Error(`build-llms: storeFacts.prices.products.${key}.ml${size} is not set`);
+  return { display: p.display, perL: rm(perLitre(p.amount, size)) };
+}
+
+/** "A, B, C and D" (en) / "A, B, C dan D" (ms). */
+function joinList(items, lang) {
+  const and = lang === 'ms' ? 'dan' : 'and';
+  return items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} ${and} ${items[items.length - 1]}`;
+}
+const label = (b, lang) => (lang === 'ms' ? b.labelMs : b.labelEn);
+
+/**
+ * One line per branch, in storeFacts order. Hours appear ONLY for a branch whose
+ * `hours` is set (O-33) — the others say to ask, never a guessed time.
+ */
+function branchList(lang) {
+  return B.map((b) => {
+    const hours = b.hours
+      ? lang === 'ms' ? `Waktu operasi: ${b.hours.displayMs}.` : `Opening hours: ${b.hours.displayEn}.`
+      : lang === 'ms' ? 'Waktu operasi: tanya melalui WhatsApp.' : 'Opening hours: ask on WhatsApp.';
+    const maps = lang === 'ms' ? 'Peta' : 'Map';
+    return `- **${label(b, lang)}** — ${addr(b)}, Malaysia. ${hours} ${maps}: ${b.mapsUrl}`;
+  }).join('\n');
+}
+
+/** The hours sentence: names only the branches with published hours, grouped by identical hours. */
+function branchHoursLine(lang) {
+  const withHours = B.filter((b) => b.hours);
+  const without = B.filter((b) => !b.hours);
+  const groups = new Map();
+  for (const b of withHours) {
+    const k = lang === 'ms' ? b.hours.displayMs : b.hours.displayEn;
+    groups.set(k, [...(groups.get(k) ?? []), label(b, lang)]);
+  }
+  const parts = [...groups].map(([display, names]) =>
+    `${joinList(names, lang)}: ${display}`,
+  );
+  const known = parts.join('; ');
+  const rest = joinList(without.map((b) => label(b, lang)), lang);
+  if (lang === 'ms') {
+    return `${known ? `Waktu operasi yang disiarkan — ${known}.` : ''}${rest ? ` Untuk ${rest}, tanya waktu operasi melalui WhatsApp ${S.whatsappDisplay}.` : ''}`.trim();
+  }
+  return `${known ? `Published opening hours — ${known}.` : ''}${rest ? ` For ${rest}, ask for opening hours on WhatsApp ${S.whatsappDisplay}.` : ''}`.trim();
+}
+
+/** Infused price: the owner has not set one yet, so the text says where to ask — never a number. */
+function infusedPriceNote(lang) {
+  const p = P.products?.infused?.ml250;
+  if (p) return lang === 'ms' ? `${p.display} untuk 250 ml` : `${p.display} for 250 ml`;
+  return lang === 'ms'
+    ? '250 ml sahaja — harga di kedai; tanya melalui WhatsApp'
+    : '250 ml only — price in store; ask on WhatsApp';
+}
+
+if (!CATALOGUE.products.some((p) => p.id === 'organic')) throw new Error('build-llms: catalogue has no organic product');
 
 /**
  * The article index each llms.txt carries, built from the registry rather than
@@ -65,8 +126,12 @@ function articleIndexFor(lang) {
  * newest article the manifest carries — content-derived, deterministic, and it cannot go
  * stale while the index below it grows.
  */
+// The last date a fact in storeFacts.json changed (FORGE PRODUCTS-R1: prices + 5 branches).
+// A facts change is content too, so the freshness line never claims a date older than it.
+const FACTS_REVISED = '2026-11-04';
+
 function lastUpdated() {
-  const dates = MANIFEST.map((a) => a.dateModified || a.datePublished).filter(Boolean).sort();
+  const dates = [FACTS_REVISED, ...MANIFEST.map((a) => a.dateModified || a.datePublished)].filter(Boolean).sort();
   return dates.length ? dates[dates.length - 1] : '';
 }
 
@@ -80,18 +145,43 @@ function tokensFor(sellerName, lang) {
     WHATSAPP: S.whatsappDisplay,
     SHOPEE: S.shopeeUrl,
     TIKTOK: S.tiktokShopUrl,
-    BRANCH1: addr(B[0]),
-    BRANCH2: addr(B[1]),
-    BRANCH1_FULL: `${addr(B[0])}, Malaysia`,
-    BRANCH2_FULL: `${addr(B[1])}, Malaysia`,
+    BRANCH_COUNT: String(B.length),
+    BRANCH_LIST: branchList(lang),
+    BRANCH_NAMES: joinList(B.map((b) => b.labelEn), 'en'),
+    BRANCH_NAMES_MS: joinList(B.map((b) => b.labelMs), 'ms'),
+    BRANCH_HOURS_LINE: branchHoursLine(lang),
     RESTAURANT: `${FACTS.restaurant.street}, ${FACTS.restaurant.postalCode} ${FACTS.restaurant.locality}, ${FACTS.restaurant.region}`,
-    P250: P.ml250.display,
-    P500: P.ml500.display,
-    P250_PER_L: P.ml250.perLitreDisplay,
-    P500_PER_L: P.ml500.perLitreDisplay,
+    EV250: price('extra-virgin', '250').display,
+    EV500: price('extra-virgin', '500').display,
+    OR250: price('organic', '250').display,
+    OR500: price('organic', '500').display,
+    EV250_PER_L: price('extra-virgin', '250').perL,
+    EV500_PER_L: price('extra-virgin', '500').perL,
+    OR250_PER_L: price('organic', '250').perL,
+    OR500_PER_L: price('organic', '500').perL,
+    INFUSED_PRICE_NOTE: infusedPriceNote(lang),
     CUSTOMERS: scale.customersServedDisplay,
     FOUNDED: String(S.foundedYear),
   };
+}
+
+/** Every fact a template must take from a token: contacts, every branch street and every price display. */
+function forbiddenLiterals() {
+  const prices = Object.values(P.products).flatMap((sizes) =>
+    Object.entries(sizes)
+      .filter(([, v]) => v)
+      .flatMap(([size, v]) => [v.display, rm(perLitre(v.amount, size.replace('ml', '')))]),
+  );
+  return [
+    S.email,
+    S.whatsappDisplay,
+    S.shopeeUrl,
+    S.tiktokShopUrl,
+    FACTS.restaurant.street,
+    ...B.map((b) => b.street),
+    ...B.map((b) => b.mapsUrl),
+    ...prices,
+  ];
 }
 
 let failed = false;
@@ -116,9 +206,12 @@ for (const target of OUTPUTS) {
   });
 
   // A template must never hardcode a fact — that is the whole point of this script.
-  const forbidden = [S.email, S.whatsappDisplay, S.shopeeUrl, P.ml250.display, P.ml500.display, B[0].street, B[1].street];
-  for (const value of forbidden) {
-    if (template.includes(value)) {
+  // Whitespace is normalised on both sides, so a value wrapped
+  // across two lines ("Jalan Prima" / "SG 2") is still caught.
+  const norm = (v) => String(v).replace(/\s+/g, ' ').trim();
+  const flatTemplate = norm(template);
+  for (const value of forbiddenLiterals()) {
+    if (flatTemplate.includes(norm(value))) {
       console.error(`✗ ${target.template} hardcodes "${value}" — use a token instead.`);
       failed = true;
     }

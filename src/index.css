@@ -4,24 +4,69 @@
    classes must not leak into the public CSS every visitor downloads. */
 @source not "./admin";
 
-/* Self-hosted fonts (PERF-1). This file used to open with an @import of
-   Google's hosted stylesheet, which is a render-blocking round trip to two
-   extra origins (one for the CSS, then another for the files) before a
-   single glyph can paint — and it has to finish before Tailwind's own CSS is
-   even parsed. The files below are the exact ones Google served for
-   `Playfair Display:ital,wght@0,400;0,500;0,600;0,700;1,500` and
-   `Inter:wght@300;400;500;600`, fetched with a modern browser UA so they are
-   woff2, latin + latin-ext subsets only.
+/* Self-hosted fonts (PERF-1, FORGE PRODUCTS-R1 O-20). Google's hosted
+   stylesheet was a render-blocking round trip to two extra origins, so the
+   files live in public/fonts (woff2, latin + latin-ext subsets, same
+   unicode-range split Google serves).
 
-   Both families are VARIABLE fonts: Google returned one file per subset for
-   every weight we ask for, and the axis range is pinned to what the request
-   asked for — hence `font-weight: 300 600` for Inter and `400 700` for
-   Playfair, and a single `500` for the Playfair italic (the only italic
-   weight the site ever uses, and the only one the old URL requested).
+   Public site: Fraunces (titles, --font-display) + Manrope (text,
+   --font-body), both VARIABLE. Fraunces carries an optical-size axis
+   (opsz 9-144) that the browser drives from the font size
+   (font-optical-sizing: auto), wght 400-700, upright only — there is no
+   Fraunces italic file, so italic text (CMS quotes) renders upright
+   (accepted, O-20). Manrope wght 400-700: font-light (300) resolves to 400.
+
+   Inter stays declared here (no preload, so it only downloads if used): the
+   CMS in-place edit chrome (src/cms/canvas/canvasCss.ts, src/cms/inlineEdit.ts)
+   draws its labels in Inter on top of the public page. Playfair Display is
+   no longer used by the public site; the admin panel declares its own copy
+   in admin.css.
 
    NOTE FOR TAILWIND v4: `@import 'tailwindcss'` must stay the FIRST rule in
    this file. CSS requires every @import to precede any other rule, so these
    @font-face blocks go after it, never before. */
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/fraunces-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/fraunces-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/manrope-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/manrope-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
 
 @font-face {
   font-family: 'Inter';
@@ -44,48 +89,6 @@
     U+2C60-2C7F, U+A720-A7FF;
 }
 
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('/fonts/playfair-display-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
-    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('/fonts/playfair-display-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
-    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
-    U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/playfair-display-italic-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
-    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/playfair-display-italic-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
-    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
-    U+2C60-2C7F, U+A720-A7FF;
-}
-
 @theme {
   --color-bg: #f7f4ed;
   --color-cream: #fffdf8;
@@ -94,8 +97,19 @@
   --color-gold: #b88a2a;
   --color-brown: #6b4f32;
 
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  /* Readable text inks (O-21). Decorative gold (borders, fills, icons, buttons)
+     stays --color-gold; gold TEXT uses these so it clears 4.5:1.
+     gold-ink: on bg / cream / white only — never on olive-dark.
+     gold-ink-band: on the #E8E2D7 band.
+     gold-light: gold text on olive-dark / dark sections.
+     brown-ink: body copy (replaces text-brown/60-75 and font-light). */
+  --color-gold-ink: #8a6516;
+  --color-gold-ink-band: #7d5b13;
+  --color-gold-light: #e3b856;
+  --color-brown-ink: #4f3b26;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
 }
 
 :root {
@@ -119,23 +133,30 @@ body,
   overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  margin-block: 0;
-}
+/* Element defaults live in @layer base (O-22) so Tailwind utilities win over
+   them: before this, these unlayered rules beat every utility, so mt-N / mb-N on
+   headings and paragraphs, tracking-* / font-weight / font-body on headings and
+   font-* on buttons were silently ignored. */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-block: 0;
+  }
 
-p {
-  margin-block: 0;
-}
+  p {
+    margin-block: 0;
+  }
 
-button {
-  font-family: var(--font-body);
-  cursor: pointer;
+  button {
+    font-family: var(--font-body);
+    cursor: pointer;
+  }
 }
 
 * {

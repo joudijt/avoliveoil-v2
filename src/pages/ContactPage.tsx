@@ -6,6 +6,7 @@ import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { FAQ } from '../components/sections/FAQ';
+import { BranchCards } from '../components/sections/BranchCards';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { buildWhatsAppUrl, WHATSAPP_NUMBER } from '../utils/whatsapp';
 import { SOCIAL_LINKS } from '../data/social';
@@ -14,6 +15,8 @@ import {
   MADINAH_NAME,
   MADINAH_URL,
   CONTACT_EMAIL,
+  CONTACT_ADDRESS,
+  BRANCH_COUNT,
   GOOGLE_MAPS_EMBED_URL,
   GOOGLE_MAPS_LINK_URL,
 } from '../config/site';
@@ -47,11 +50,11 @@ export function ContactPage() {
 
         <section className="px-6 pb-16 pt-10 text-center md:px-16 md:pb-20">
           <div className="mx-auto max-w-2xl">
-            <p {...cmsText('contactPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('contactPage.kicker')}</p>
+            <p {...cmsText('contactPage.kicker')} className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-gold-ink">{t('contactPage.kicker')}</p>
             <h1 {...cmsText('contactPage.title')} className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
               {t('contactPage.title')}
             </h1>
-            <p {...cmsText('contactPage.intro')} className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p {...cmsText('contactPage.intro')} className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-brown-ink md:text-lg">
               {t('contactPage.intro')}
             </p>
           </div>
@@ -67,7 +70,7 @@ export function ContactPage() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/15 text-gold">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h2 {...cmsText(`contactPage.info.${key}.label`)} className="mt-6 text-sm uppercase tracking-[0.2em] text-gold">
+                <h2 {...cmsText(`contactPage.info.${key}.label`)} className="mt-6 font-body text-sm font-semibold uppercase tracking-[0.2em] text-gold-ink">
                   {t(`contactPage.info.${key}.label`)}
                 </h2>
                 {/* Each card's value is actionable where it can be: WhatsApp
@@ -79,7 +82,7 @@ export function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     {...cmsText(`contactPage.info.${key}.value`)}
-                    className="mt-2 block text-base text-olive-dark/70 transition-colors duration-300 hover:text-gold"
+                    className="mt-2 block font-body text-base text-brown-ink transition-colors duration-300 hover:text-gold-ink"
                   >
                     {t(`contactPage.info.${key}.value`)}
                   </a>
@@ -88,20 +91,21 @@ export function ContactPage() {
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     {...cmsText(`contactPage.info.${key}.value`)}
-                    className="mt-2 block break-words text-base text-olive-dark/70 transition-colors duration-300 hover:text-gold"
+                    className="mt-2 block break-words font-body text-base text-brown-ink transition-colors duration-300 hover:text-gold-ink"
                   >
                     {t(`contactPage.info.${key}.value`)}
                   </a>
                 )}
+                {/* Address = the Ampang branch from storeFacts (CONTACT_ADDRESS), link =
+                    that branch's own Maps pin (O-37) — never a translated literal. */}
                 {key === 'address' && (
                   <a
                     href={GOOGLE_MAPS_LINK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    {...cmsText(`contactPage.info.${key}.value`)}
-                    className="mt-2 block text-base leading-relaxed text-olive-dark/70 transition-colors duration-300 hover:text-gold"
+                    className="mt-2 block font-body text-base leading-relaxed text-brown-ink transition-colors duration-300 hover:text-gold-ink"
                   >
-                    {t(`contactPage.info.${key}.value`)}
+                    {CONTACT_ADDRESS}
                   </a>
                 )}
               </div>
@@ -124,6 +128,26 @@ export function ContactPage() {
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
             />
+          </div>
+
+          {/* All branches (O-37), same cards as /products. Heading/note reuse the
+              where-to-buy strings so there is one wording to keep in sync. */}
+          <div className="mx-auto mt-14 max-w-6xl text-start">
+            <p
+              {...cmsText('productsPage.whereToBuy.kicker')}
+              className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-gold-ink"
+            >
+              {t('productsPage.whereToBuy.kicker')}
+            </p>
+            <h2 {...cmsText('productsPage.whereToBuy.title')} className="mt-3 text-2xl text-olive-dark md:text-3xl">
+              {t('productsPage.whereToBuy.title', { store: MADINAH_NAME, count: BRANCH_COUNT })}
+            </h2>
+            <div className="mt-6">
+              <BranchCards cardClassName="bg-cream" />
+            </div>
+            <p {...cmsText('productsPage.whereToBuy.stockNote')} className="mt-5 max-w-2xl font-body text-[15px] leading-relaxed text-brown-ink">
+              {t('productsPage.whereToBuy.stockNote', { store: MADINAH_NAME, count: BRANCH_COUNT })}
+            </p>
           </div>
 
           <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-center gap-3">

@@ -57,19 +57,19 @@ export function OliveJourney() {
     <section id="journey" className="relative w-full bg-[#E8E2D7] px-6 py-28 md:px-16 md:py-32">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
         <div className="order-2 flex flex-col items-start text-start md:order-1">
-          <p {...cmsText('oliveJourney.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('oliveJourney.kicker')}</p>
+          <p {...cmsText('oliveJourney.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink-band">{t('oliveJourney.kicker')}</p>
           <h2 {...cmsText('oliveJourney.title')} className="mt-3 text-4xl text-olive-dark md:text-5xl">{t('oliveJourney.title')}</h2>
 
-          <p ref={captionRef} className="mt-8 max-w-md text-xl font-light leading-relaxed text-olive-dark/80 md:text-2xl">
+          <p ref={captionRef} className="mt-8 max-w-md text-xl leading-relaxed text-olive-dark md:text-2xl">
             {/* The title and caption are separate keys; each sits in its own inline span
                 so the CMS can replace one without touching the colon or the other. */}
-            <span className="text-gold">
+            <span className="text-gold-ink-band">
               <span {...cmsText(`oliveJourney.scenes.${index}.title`)}>{scene.title}</span>:
             </span>{' '}
             <span {...cmsText(`oliveJourney.scenes.${index}.caption`)}>{scene.caption}</span>
           </p>
 
-          <p className="mt-8 text-sm tracking-[0.2em] text-olive-dark/40">
+          <p className="mt-8 text-sm tracking-[0.2em] text-olive-dark">
             {String(index + 1).padStart(2, '0')} / {String(journey.length).padStart(2, '0')}
           </p>
 

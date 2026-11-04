@@ -46,9 +46,9 @@ function Card({
       ref={cardRef}
       className={`w-full max-w-[300px] rounded-2xl border border-white/60 bg-white/40 p-6 ${hidden}shadow-[0_20px_45px_rgba(46,58,36,0.1)] backdrop-blur-md lg:p-7 ${className}`}
     >
-      <span {...cmsText(`${cmsKey}.order`)} className="text-[11px] tracking-[0.3em] text-gold">{order}</span>
+      <span {...cmsText(`${cmsKey}.order`)} className="text-[11px] tracking-[0.3em] text-gold-ink-band">{order}</span>
       <h3 {...cmsText(`${cmsKey}.title`)} className="mt-3 font-display text-xl tracking-wide text-olive-dark lg:text-2xl">{title}</h3>
-      <p {...cmsText(`${cmsKey}.text`)} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/75">{text}</p>
+      <p {...cmsText(`${cmsKey}.text`)} className="mt-3 font-body text-sm leading-relaxed text-brown-ink">{text}</p>
     </div>
   );
 }
@@ -129,7 +129,7 @@ export function ScrollStory() {
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[60vh] w-[60vh] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30" style={{ background: 'radial-gradient(circle, rgba(184,138,42,0.14) 0%, rgba(232,226,215,0) 70%)' }} />
 
       <div className="relative mx-auto max-w-7xl text-center">
-        <p {...cmsText('scrollStory.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('scrollStory.kicker')}</p>
+        <p {...cmsText('scrollStory.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink-band">{t('scrollStory.kicker')}</p>
         <h2 {...cmsText('scrollStory.title')} className="mx-auto mt-3 max-w-2xl font-display text-4xl text-olive-dark md:text-5xl">
           {t('scrollStory.title')}
         </h2>

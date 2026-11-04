@@ -34,7 +34,7 @@ export function FAQ({ kicker, title, items, keyPrefix = 'faq' }: FAQProps) {
     <section className="relative w-full bg-bg px-6 py-28 md:px-16 md:py-32">
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
-          <p {...cmsText(`${keyPrefix}.kicker`)} className="text-xs uppercase tracking-[0.35em] text-gold">{resolvedKicker}</p>
+          <p {...cmsText(`${keyPrefix}.kicker`)} className="text-xs uppercase tracking-[0.35em] text-gold-ink">{resolvedKicker}</p>
           <h2 {...cmsText(`${keyPrefix}.title`)} className="mx-auto mt-3 text-4xl text-olive-dark md:text-5xl">{resolvedTitle}</h2>
         </div>
 
@@ -57,7 +57,7 @@ export function FAQ({ kicker, title, items, keyPrefix = 'faq' }: FAQProps) {
                   style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
                 >
                   <div className="overflow-hidden">
-                    <p {...cmsText(`${keyPrefix}.items.${i}.a`)} className="pb-6 max-w-xl font-light leading-relaxed text-brown/75">{item.a}</p>
+                    <p {...cmsText(`${keyPrefix}.items.${i}.a`)} className="pb-6 max-w-xl leading-relaxed text-brown-ink">{item.a}</p>
                   </div>
                 </div>
               </div>

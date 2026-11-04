@@ -116,13 +116,13 @@ export function ArticlePage() {
           {/* ---------------------------------------------------------- header */}
           <header className="px-6 pb-10 pt-8 md:px-16">
             <div className="mx-auto max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.35em] text-gold">{article.category}</p>
+              <p className="text-xs uppercase tracking-[0.35em] text-gold-ink">{article.category}</p>
               <h1 className="mt-4 text-4xl leading-[1.15] text-olive-dark md:text-5xl">{article.h1}</h1>
-              <p className="mt-6 font-body text-lg font-light leading-relaxed text-brown/75">
+              <p className="mt-6 font-body text-lg leading-relaxed text-brown-ink">
                 {article.excerpt}
               </p>
 
-              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-body text-sm text-brown/60">
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-body text-sm text-brown">
                 <time dateTime={article.datePublished} suppressHydrationWarning>{published}</time>
                 <span className="flex items-center gap-2">
                   <FiClock aria-hidden="true" className="h-4 w-4 text-gold" />
@@ -148,24 +148,24 @@ export function ArticlePage() {
           <div className="px-6 md:px-16">
             <div className="mx-auto mt-12 max-w-3xl">
               <div className="rounded-2xl bg-olive-dark px-6 py-7 md:px-8">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold">
+                <p className="text-xs uppercase tracking-[0.25em] text-gold-light">
                   {t('articlePage.quickAnswer')}
                 </p>
-                <p className="mt-3 font-body text-base font-light leading-[1.8] text-cream/90 md:text-lg">
+                <p className="mt-3 font-body text-base leading-[1.8] text-cream/90 md:text-lg">
                   {article.keyTakeaway}
                 </p>
               </div>
 
               <nav aria-label={t('articlePage.contents')} className="mt-10 rounded-2xl border border-olive-dark/10 p-6">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold">{t('articlePage.contents')}</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gold-ink">{t('articlePage.contents')}</p>
                 <ol className="mt-4 space-y-2">
                   {article.sections.map((section, i) => (
-                    <li key={section.id} className="font-body text-sm font-light text-brown/75">
+                    <li key={section.id} className="font-body text-sm text-brown-ink">
                       <a
                         href={`#${section.id}`}
-                        className="transition-colors duration-300 hover:text-gold"
+                        className="transition-colors duration-300 hover:text-gold-ink"
                       >
-                        <span className="text-gold">{i + 1}.</span> {section.heading}
+                        <span className="text-gold-ink">{i + 1}.</span> {section.heading}
                       </a>
                     </li>
                   ))}
@@ -182,8 +182,8 @@ export function ArticlePage() {
                   key={i}
                   className={
                     i === 0
-                      ? 'mt-10 font-body text-lg font-light leading-[1.85] text-brown/85 md:text-xl'
-                      : 'mt-6 font-body text-base font-light leading-[1.85] text-brown/80 md:text-[1.0625rem]'
+                      ? 'mt-10 font-body text-lg leading-[1.85] text-brown-ink md:text-xl'
+                      : 'mt-6 font-body text-base leading-[1.85] text-brown-ink md:text-[1.0625rem]'
                   }
                 >
                   {renderInline(paragraph, lang)}
@@ -206,7 +206,7 @@ export function ArticlePage() {
 
               {/* tags */}
               <div className="mt-14 flex flex-wrap items-center gap-3 border-t border-olive-dark/10 pt-8">
-                <span className="font-body text-sm text-brown/60">{t('articlePage.tags')}</span>
+                <span className="font-body text-sm text-brown">{t('articlePage.tags')}</span>
                 {article.tags.map((tag) => (
                   <span
                     key={tag}
@@ -227,7 +227,7 @@ export function ArticlePage() {
         <section className="px-6 pb-24 md:px-16">
           <div className="mx-auto max-w-3xl rounded-2xl bg-[#D6D2C4] px-6 py-10 text-center shadow-[0_20px_45px_rgba(46,58,36,0.18)] md:px-12">
             <h2 className="text-2xl text-olive-dark md:text-3xl">{t('articlePage.cta.title')}</h2>
-            <p className="mx-auto mt-4 max-w-xl font-body text-base font-light leading-relaxed text-brown/75">
+            <p className="mx-auto mt-4 max-w-xl font-body text-base leading-relaxed text-brown-ink">
               {t('articlePage.cta.text', { store: MADINAH_NAME })}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -241,7 +241,7 @@ export function ArticlePage() {
                 href={MADINAH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-olive-dark/30 px-8 py-3 font-body text-sm font-medium uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:border-gold hover:text-gold"
+                className="rounded-full border border-olive-dark/30 px-8 py-3 font-body text-sm font-medium uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:border-gold hover:text-gold-ink"
               >
                 {MADINAH_NAME}
               </a>
@@ -260,10 +260,10 @@ export function ArticlePage() {
                   to={`/${lang}/${item.path}`}
                   className="group flex flex-col rounded-2xl border border-olive-dark/10 bg-cream p-6 transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]"
                 >
-                  <h3 className="text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold">
+                  <h3 className="text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold-ink">
                     {item.label}
                   </h3>
-                  <p className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
+                  <p className="mt-3 font-body text-sm leading-relaxed text-brown-ink">
                     {item.description}
                   </p>
                 </Link>
@@ -273,7 +273,7 @@ export function ArticlePage() {
             <div className="mt-12 text-center">
               <Link
                 to={`/${lang}/blog`}
-                className="inline-flex items-center gap-2 font-body text-sm uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:text-gold"
+                className="inline-flex items-center gap-2 font-body text-sm uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:text-gold-ink"
               >
                 <BackIcon aria-hidden="true" className="h-4 w-4" />
                 {t('articlePage.backToBlog')}

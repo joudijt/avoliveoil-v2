@@ -5,8 +5,8 @@
       "description": "Arabian Village offers pure Palestinian olive oil, cold-pressed and unprocessed using traditional methods passed through generations. Discover the daily ritual, quality standards, and retail and wholesale options."
     },
     "products": {
-      "title": "Our Products | Organic Palestinian Olive Oil 500ml — Arabian Village",
-      "description": "Arabian Village Organic Palestinian Olive Oil: first cold press, new harvest, acidity below 0.028%. Classic and six infused flavours, 250ml RM59 and 500ml RM103, at Berkat Madinah Store."
+      "title": "Our Products | Palestinian Extra Virgin & Organic Olive Oil — Arabian Village",
+      "description": "Extra Virgin and Organic Extra Virgin Palestinian olive oil, first cold pressed, 250 ml and 500 ml, plus six infused flavours in 250 ml — at Berkat Madinah Store."
     },
     "shop": {
       "title": "Where to Buy | Shopee, TikTok Shop & Berkat Madinah Store — Arabian Village",
@@ -133,29 +133,7 @@
   },
   "productShowcase": {
     "kicker": "Our Collection",
-    "title": "Every Harvest, Bottled",
-    "products": {
-      "reserve": {
-        "name": "Reserve Selection",
-        "description": "A limited harvest, bold and full-bodied for lovers of robust extra virgin olive oil."
-      },
-      "organic": {
-        "name": "Organic Grove",
-        "description": "Organic and sustainably farmed, pressed the pure, traditional way."
-      },
-      "classic": {
-        "name": "Arabian Village Classic",
-        "description": "Our signature first cold press — the everyday premium olive oil for your kitchen."
-      },
-      "family": {
-        "name": "Family Estate",
-        "description": "Three generations of the same Mediterranean groves, bottled with the same care."
-      },
-      "gold": {
-        "name": "Gold Harvest",
-        "description": "An early harvest with a bold, peppery finish loved by connoisseurs."
-      }
-    }
+    "title": "Every Harvest, Bottled"
   },
   "purchasePath": {
     "kicker": "Experience",
@@ -297,42 +275,78 @@
     ]
   },
   "productsPage": {
-    "kicker": "Our Product",
-    "title": "Organic Palestinian Olive Oil",
-    "intro": "One real harvest, done properly. Every bottle of Arabian Village olive oil is first cold pressed within hours of picking, from organic groves in Palestine — no heat, no chemicals, no shortcuts.",
-    "product": {
-      "name": "Organic Palestinian Olive Oil",
-      "tagline": "First Cold Press · New Harvest · Extra Virgin",
-      "description": "Our signature bottle: 100% Palestinian olives, hand-harvested and cold-pressed within hours to lock in aroma, polyphenols, and a naturally peppery, grassy finish. Organic and halal.",
-      "highlights": [
-        {
-          "label": "Acidity",
-          "value": "Below 0.028%"
-        },
-        {
-          "label": "Press",
-          "value": "First Cold Press"
-        },
-        {
-          "label": "Harvest",
-          "value": "New Harvest"
-        },
-        {
-          "label": "Origin",
-          "value": "100% Palestine"
-        },
-        {
-          "label": "Type",
-          "value": "Extra Virgin"
-        },
-        {
-          "label": "Size",
-          "value": "250ml & 500ml"
-        }
-      ],
-      "priceLabel": "Price",
-      "priceNote": "At {{store}} — the only place Arabian Village is sold in Malaysia."
+    "kicker": "Our Products",
+    "title": "Palestinian Extra Virgin Olive Oil",
+    "intro": "One real harvest, done properly. Every bottle of Arabian Village olive oil is first cold pressed from Palestinian olives — no heat, no chemicals, no shortcuts. Choose the Extra Virgin, the Organic Extra Virgin, or one of six infused flavours.",
+    "products": {
+      "extra-virgin": {
+        "name": "Extra Virgin Palestinian Olive Oil",
+        "tagline": "First Cold Press · New Harvest · Cold Extracted",
+        "description": "Extra virgin olive oil from Palestinian olives, cold extracted at the first cold press from the new harvest. The everyday bottle for salads, dipping bread, finishing dishes and cooking at moderate heat.",
+        "imageAlt": "Bottle of Arabian Village Extra Virgin Palestinian Olive Oil",
+        "highlights": [
+          {
+            "label": "Press",
+            "value": "First Cold Press"
+          },
+          {
+            "label": "Harvest",
+            "value": "New Harvest"
+          },
+          {
+            "label": "Origin",
+            "value": "Palestine"
+          },
+          {
+            "label": "Type",
+            "value": "Extra Virgin"
+          },
+          {
+            "label": "Sizes",
+            "value": "250 ml & 500 ml"
+          }
+        ]
+      },
+      "organic": {
+        "name": "Organic Extra Virgin Palestinian Olive Oil",
+        "tagline": "Organic · First Cold Press · New Harvest",
+        "description": "Our organic bottle: 100% Palestinian olives, hand-harvested and cold-pressed within hours to lock in aroma, polyphenols, and a naturally peppery, grassy finish. Organic and halal.",
+        "imageAlt": "Bottle of Arabian Village Organic Extra Virgin Palestinian Olive Oil",
+        "highlights": [
+          {
+            "label": "Acidity",
+            "value": "Below 0.028%"
+          },
+          {
+            "label": "Press",
+            "value": "First Cold Press"
+          },
+          {
+            "label": "Harvest",
+            "value": "New Harvest"
+          },
+          {
+            "label": "Origin",
+            "value": "100% Palestine"
+          },
+          {
+            "label": "Type",
+            "value": "Organic Extra Virgin"
+          },
+          {
+            "label": "Sizes",
+            "value": "250 ml & 500 ml"
+          }
+        ]
+      }
     },
+    "price": {
+      "label": "Price",
+      "size250": "250 ml",
+      "size500": "500 ml",
+      "inStore": "Price in store — ask us on WhatsApp"
+    },
+    "storeNote": "Sold at {{store}} — {{count}} branches in Selangor.",
     "benefitsKicker": "Why This Bottle",
     "links": {
       "shopTitle": "Ready to Order?",
@@ -358,7 +372,7 @@
         },
         {
           "q": "What does \"acidity below 0.028%\" mean?",
-          "a": "It's a lab-tested purity measure — the lower the acidity, the fresher and higher-grade the extra virgin olive oil. Ours is well below the extra virgin threshold."
+          "a": "It's the lab-tested acidity of our Organic Extra Virgin Palestinian Olive Oil — a purity measure where lower means fresher, higher-grade extra virgin oil. It is well below the extra virgin threshold."
         },
         {
           "q": "Can I use it for cooking, or only for dressing?",
@@ -366,15 +380,17 @@
         },
         {
           "q": "Will there be more flavors or sizes available?",
-          "a": "The range today is the classic oil plus six infused flavours, each in 250ml and 500ml. Nothing further is in preparation — if that changes, this page will say so."
+          "a": "The range today is two classic oils — Extra Virgin and Organic Extra Virgin, each in 250 ml and 500 ml — plus six infused flavours in 250 ml. Nothing further is in preparation — if that changes, this page will say so."
         }
       ]
     },
     "whereToBuy": {
       "kicker": "Where to Buy",
       "title": "Stocked at {{store}}",
-      "text": "{{store}} is the only seller of Arabian Village in Malaysia. Both branches carry the classic oil and all six infused flavours; the Shopee and TikTok Shop listings are the same shop's own online counters.",
-      "hours": "Open 8:00 am – 12:00 midnight, seven days a week",
+      "text": "{{store}} is the only seller of Arabian Village in Malaysia, with {{count}} branches in Selangor. The Shopee and TikTok Shop listings are the same shop's own online counters.",
+      "stockNote": "Stock can vary by branch — WhatsApp us before you travel.",
+      "noHours": "WhatsApp us for opening hours",
+      "mapsCta": "Open in Google Maps",
       "whatsappCta": "Order on WhatsApp"
     }
   },
@@ -405,7 +421,7 @@
       "items": [
         {
           "q": "Which platform should I order from?",
-          "a": "All of them lead to the same seller. {{store}} is the only seller of Arabian Village in Malaysia; its Shopee and TikTok Shop counters are that same shop online, at the same price. Choose whichever you already use, or visit the branch in Ampang Jaya or Batu Caves."
+          "a": "All of them lead to the same seller. {{store}} is the only seller of Arabian Village in Malaysia; its Shopee and TikTok Shop counters are that same shop online, at the same price. Choose whichever you already use, or visit one of its branches in Selangor — the Products page lists every address."
         },
         {
           "q": "Do you deliver across Malaysia?",
@@ -444,8 +460,8 @@
         "desc": "Pressed mechanically within hours of harvest, without heat or chemicals, to protect aroma and nutrients."
       },
       {
-        "title": "Organic & Halal by Nature",
-        "desc": "Grown and processed using organic farming methods, and halal by nature — plant-based with no animal-derived ingredients."
+        "title": "Halal by Nature",
+        "desc": "Plant-based with no animal-derived ingredients, so halal by nature. Our Organic Extra Virgin is grown and processed using organic farming methods."
       },
       {
         "title": "A Living Tradition",
@@ -479,9 +495,9 @@
     },
     "flavors": {
       "kicker": "Our Olive Oil",
-      "title": "Today's Harvest, Tomorrow's Flavors",
-      "desc": "Right now, we pour everything into one bottle done right: Organic Palestinian Olive Oil, 500ml, first cold pressed. New flavors and harvests are already in the works — see the full product story on our Products page.",
-      "cta": "Explore Our Product"
+      "title": "Two Classic Oils, Six Infusions",
+      "desc": "Extra Virgin and Organic Extra Virgin Palestinian Olive Oil, both first cold pressed, each in 250 ml and 500 ml — plus six infused flavours in 250 ml. See the full range on our Products page.",
+      "cta": "Explore Our Products"
     },
     "faq": {
       "kicker": "Trust & Sourcing",
@@ -489,7 +505,7 @@
       "items": [
         {
           "q": "Why buy Arabian Village instead of another olive oil brand?",
-          "a": "Traceable Palestinian origin, true first cold press within hours of harvest, and organic quality — sold through a distributor Malaysians already know and trust."
+          "a": "Traceable Palestinian origin, true first cold press within hours of harvest, and an organic option — sold through a distributor Malaysians already know and trust."
         },
         {
           "q": "Who is Berkat Madinah Store?",
@@ -497,7 +513,7 @@
         },
         {
           "q": "Is Arabian Village olive oil organic?",
-          "a": "Yes, our olives are grown and processed using organic farming methods."
+          "a": "Our Organic Extra Virgin Palestinian Olive Oil is grown and processed using organic farming methods. The Extra Virgin bottle makes no organic claim."
         },
         {
           "q": "Is Arabian Village olive oil halal?",
@@ -505,11 +521,11 @@
         },
         {
           "q": "Where can I find Arabian Village products in person?",
-          "a": "Through Berkat Madinah Store's retail branches across Malaysia, as well as online via Berkat Madinah Store, Shopee, and TikTok Shop."
+          "a": "Through Berkat Madinah Store's branches in Selangor, as well as online via Berkat Madinah Store, Shopee, and TikTok Shop."
         },
         {
           "q": "Will Arabian Village offer more products in the future?",
-          "a": "Yes — new flavors and harvests are in development. Visit our Products page for the latest."
+          "a": "The range today is two classic oils and six infused flavours. Visit our Products page for the current range."
         }
       ]
     }
@@ -528,8 +544,7 @@
         "value": "cs@madinah.com.my"
       },
       "address": {
-        "label": "Address",
-        "value": "Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman, 68000 Ampang Jaya, Selangor"
+        "label": "Address"
       }
     },
     "form": {
@@ -625,7 +640,7 @@
   "infusedPage": {
     "kicker": "Infused Collection",
     "collectionTitle": "Infused Extra Virgin Olive Oil",
-    "collectionIntro": "Six expressions of our first cold pressed Palestinian olive oil, slow-infused with whole herbs, flowers and spices. All six are on the shelf at {{store}} — explore each flavour below.",
+    "collectionIntro": "Six expressions of our first cold pressed Palestinian olive oil, slow-infused with whole herbs, flowers and spices, each in a 250 ml bottle. All six are sold at {{store}} — explore each flavour below.",
     "notesTitle": "Flavor & Aroma",
     "benefitsTitle": "Why You'll Love It",
     "usesTitle": "How to Use It",
@@ -633,13 +648,14 @@
     "backToProducts": "View All Products",
     "cta": {
       "title": "Where to Buy the Infused Collection",
-      "text": "Every flavour is stocked at {{store}} in Ampang Jaya and Batu Caves, open 8:00 am to midnight every day. Message the WhatsApp line to check a specific flavour before you travel.",
+      "text": "The infused collection is sold at {{store}}'s {{count}} branches in Selangor, in 250 ml bottles. Stock can vary by branch — message the WhatsApp line to check a flavour before you travel.",
       "shopCta": "Where to Buy",
       "contactCta": "Contact Us"
     },
     "products": {
       "lavender-chamomile": {
         "name": "Lavender & Chamomile Infused Extra Virgin Olive Oil",
+        "shortName": "Lavender & Chamomile",
         "tagline": "Calm, floral and golden",
         "seoTitle": "Lavender & Chamomile Infused Extra Virgin Olive Oil | Arabian Village",
         "seoDescription": "Cold-pressed Palestinian extra virgin olive oil slow-infused with lavender and chamomile blossoms. Soft floral aroma and a honeyed finish — beautiful over desserts, fruit and warm bread.",
@@ -664,6 +680,7 @@
       },
       "blackseed": {
         "name": "Blackseed Infused Extra Virgin Olive Oil",
+        "shortName": "Blackseed",
         "tagline": "The seed of blessing, in golden oil",
         "seoTitle": "Blackseed Infused Extra Virgin Olive Oil | Arabian Village",
         "seoDescription": "Palestinian extra virgin olive oil infused with blackseed (habbat al-barakah, Nigella sativa). Warm, peppery and earthy — a heritage pairing for breakfast tables and dips.",
@@ -688,6 +705,7 @@
       },
       "turmeric-black-pepper": {
         "name": "Turmeric & Black Pepper Infused Extra Virgin Olive Oil",
+        "shortName": "Turmeric & Black Pepper",
         "tagline": "Golden warmth with a peppery kick",
         "seoTitle": "Turmeric & Black Pepper Infused Extra Virgin Olive Oil | Arabian Village",
         "seoDescription": "Palestinian extra virgin olive oil infused with turmeric root and cracked black pepper. Deep golden color and earthy warmth — made for dressings, marinades and roasted vegetables.",
@@ -712,6 +730,7 @@
       },
       "rosemary-basil": {
         "name": "Rosemary & Basil Infused Extra Virgin Olive Oil",
+        "shortName": "Rosemary & Basil",
         "tagline": "The Mediterranean garden in a bottle",
         "seoTitle": "Rosemary & Basil Infused Extra Virgin Olive Oil | Arabian Village",
         "seoDescription": "Palestinian extra virgin olive oil infused with rosemary and sweet basil. Pine-fresh, green and bright — made for bread dipping, pasta and grilled dishes.",
@@ -736,6 +755,7 @@
       },
       "fennel-anise": {
         "name": "Fennel & Anise Infused Extra Virgin Olive Oil",
+        "shortName": "Fennel & Anise",
         "tagline": "Sweet, aromatic and gently spiced",
         "seoTitle": "Fennel & Anise Infused Extra Virgin Olive Oil | Arabian Village",
         "seoDescription": "Palestinian extra virgin olive oil infused with fennel and anise seeds. Sweet, aromatic, licorice-like notes — beautiful with seafood, citrus salads and baking.",
@@ -760,6 +780,7 @@
       },
       "wild-thyme": {
         "name": "Wild Thyme Infused Extra Virgin Olive Oil",
+        "shortName": "Wild Thyme",
         "tagline": "Za'atar heritage, straight from the hills",
         "seoTitle": "Wild Thyme Infused Extra Virgin Olive Oil | Arabian Village",
         "seoDescription": "Palestinian extra virgin olive oil infused with wild thyme (za'atar). Intense, savory and peppery — the classic companion for warm bread, labneh and manakish.",
@@ -783,14 +804,16 @@
         ]
       }
     },
-    "availableBadge": "Now at {{store}}"
+    "availableBadge": "Now at {{store}}",
+    "inStoreNote": "In store now",
+    "size250": "250 ml"
   },
   "alt": {
     "logo": "Arabian Village",
-    "heroBottle": "Arabian Village Palestinian Olive Oil bottle",
+    "heroBottle": "Arabian Village Extra Virgin Palestinian Olive Oil bottle",
     "bottlePour": "Arabian Village Palestinian Olive Oil bottle, open and pouring",
-    "storyWoman": "Woman holding a bottle of Arabian Village organic Palestinian olive oil",
-    "productsHero": "Arabian Village Organic Palestinian Olive Oil 500ml bottle, first cold pressed",
+    "storyWoman": "Woman holding a bottle of Arabian Village Palestinian olive oil",
+    "productsHero": "Bottle of Arabian Village Extra Virgin Palestinian Olive Oil, first cold pressed",
     "whyUsField": "Arabian Village olive oil bottle among Palestinian olive groves in the field"
   }
 }

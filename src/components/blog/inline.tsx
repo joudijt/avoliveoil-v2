@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 const INLINE = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
 
 const LINK_CLASS =
-  'text-olive underline decoration-gold/60 underline-offset-4 transition-colors duration-300 hover:text-gold';
+  'text-olive underline decoration-gold/60 underline-offset-4 transition-colors duration-300 hover:text-gold-ink';
 
 export function renderInline(text: string, lang: string): ReactNode[] {
   return text.split(INLINE).map((part, i) => {

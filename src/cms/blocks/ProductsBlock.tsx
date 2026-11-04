@@ -10,8 +10,9 @@ import { ui } from './strings';
 /**
  * Product cards in the style of the Products page collection grid. Names and
  * taglines are the site's own i18n strings (so an owner edit of a product name on
- * an existing page shows here too); the bottle comes from the stable /cms-assets/
- * copy, never a hashed build file.
+ * an existing page shows here too); the photo (each product's white square,
+ * FORGE PRODUCTS-R1 O-14) comes from the stable /cms-assets/ copy, never a hashed
+ * build file.
  */
 export function ProductsBlock({ w }: { w: ProductsWidget }) {
   const env = useBlockEnv();
@@ -22,7 +23,13 @@ export function ProductsBlock({ w }: { w: ProductsWidget }) {
     return env.mode === 'canvas' ? <CanvasEmpty label={`Products — pick from ${CATALOGUE.length} products in the settings panel`} /> : null;
   }
   const cols = s.cols === 2 || s.cols === 4 ? s.cols : 3;
-  const sizes = '(min-width: 768px) 48px, 46px';
+  // Rendered width of the square photo per column count (container max-w-6xl, card padding).
+  const sizes =
+    cols === 2
+      ? '(min-width: 640px) 520px, 90vw'
+      : cols === 4
+        ? '(min-width: 1024px) 250px, (min-width: 640px) 45vw, 42vw'
+        : '(min-width: 1024px) 340px, (min-width: 640px) 45vw, 42vw';
   return (
     <ul className={PRODUCTS.grid[cols]}>
       {items.map((p) => {

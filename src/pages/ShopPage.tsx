@@ -68,11 +68,11 @@ export function ShopPage() {
 
         <section className="px-6 pb-20 pt-10 text-center md:px-16 md:pb-28">
           <div className="mx-auto max-w-3xl">
-            <p {...cmsText('shopPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('shopPage.kicker')}</p>
+            <p {...cmsText('shopPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink">{t('shopPage.kicker')}</p>
             <h1 {...cmsText('shopPage.title')} className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
               {t('shopPage.title')}
             </h1>
-            <p {...cmsText('shopPage.subtitle')} className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p {...cmsText('shopPage.subtitle')} className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-brown-ink md:text-lg">
               {t('shopPage.subtitle', { store: MADINAH_NAME })}
             </p>
           </div>
@@ -89,7 +89,7 @@ export function ShopPage() {
                   <Icon className="h-7 w-7" />
                 </div>
                 <h2 {...cmsText(`shopPage.cards.${key}.title`)} className="mt-6 text-xl text-olive-dark">{t(`shopPage.cards.${key}.title`)}</h2>
-                <p {...cmsText(`shopPage.cards.${key}.desc`)} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
+                <p {...cmsText(`shopPage.cards.${key}.desc`)} className="mt-3 font-body text-sm leading-relaxed text-brown-ink">
                   {t(`shopPage.cards.${key}.desc`)}
                 </p>
                 <a
@@ -108,11 +108,11 @@ export function ShopPage() {
 
         <section className="bg-[#E8E2D7] px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-3xl rounded-2xl bg-[#D6D2C4] p-10 text-center shadow-[0_25px_50px_rgba(46,58,36,0.18)] sm:p-14">
-            <p {...cmsText('purchasePath.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('purchasePath.kicker')}</p>
+            <p {...cmsText('purchasePath.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink-band">{t('purchasePath.kicker')}</p>
             <h2 {...cmsText('purchasePath.partnerCard.title')} className="mx-auto mt-3 text-2xl text-olive-dark md:text-3xl">
               {t('purchasePath.partnerCard.title')}
             </h2>
-            <p {...cmsText('purchasePath.partnerCard.desc')} className="mx-auto mt-4 max-w-xl font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('purchasePath.partnerCard.desc')} className="mx-auto mt-4 max-w-xl font-body text-sm leading-relaxed text-brown-ink md:text-base">
               {t('purchasePath.partnerCard.desc')}
             </p>
             <button
@@ -133,7 +133,7 @@ export function ShopPage() {
           <h3 {...cmsText('purchasePath.partnerModal.title')} className="font-display text-3xl leading-tight text-olive-dark md:text-4xl">
             {t('purchasePath.partnerModal.title')}
           </h3>
-          <p {...cmsText('purchasePath.partnerModal.sub')} className="mt-3 font-body text-brown/70">{t('purchasePath.partnerModal.sub')}</p>
+          <p {...cmsText('purchasePath.partnerModal.sub')} className="mt-3 font-body text-brown-ink">{t('purchasePath.partnerModal.sub')}</p>
 
           <form
             className="mt-8 space-y-3 text-start"

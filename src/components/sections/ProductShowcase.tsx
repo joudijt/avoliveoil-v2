@@ -1,22 +1,29 @@
 import { useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { PRODUCTS } from '../../data/products';
+import { PRODUCTS, type Product } from '../../data/products';
 import { Picture } from '../ui/Picture';
 import { isStaticRender } from '../../lib/prerender';
 import { cmsText } from '../../cms/editable';
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface ProductText {
-  name: string;
-  description: string;
+/**
+ * The 8 real products (FORGE PRODUCTS-R1 O-13): Extra Virgin, Organic and the six
+ * infused flavours from src/data/catalogue.json, each as its white square photo.
+ * Classic cards link to their block on /products (#extra-virgin, #organic), infused
+ * cards to their own page. Infused cards show the flavour-only `shortName` so the
+ * grid stays readable; classic cards the full name.
+ */
+function productHref(p: Product, lang: string): string {
+  return p.kind === 'classic' ? `/${lang}/products#${p.id}` : `/${lang}/products/${p.slug}`;
 }
 
 export function ProductShowcase() {
   const { t } = useTranslation();
-  const productText = t('productShowcase.products', { returnObjects: true }) as Record<string, ProductText>;
+  const { lang = 'en' } = useParams<{ lang: string }>();
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -33,13 +40,13 @@ export function ProductShowcase() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRefs.current,
-        { opacity: 0, y: 60 },
+        { opacity: 0, y: 40 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.9,
+          duration: 0.8,
           ease: 'power3.out',
-          stagger: 0.12,
+          stagger: 0.08,
           scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
         },
       );
@@ -47,74 +54,59 @@ export function ProductShowcase() {
     return () => ctx.revert();
   }, []);
 
-  const center = Math.floor(PRODUCTS.length / 2);
+  const sizeLine = (p: Product) => p.sizes.map((s) => t(`productsPage.price.size${s}`)).join(' · ');
 
   return (
     <section id="shop" ref={sectionRef} className="relative w-full bg-bg px-6 pb-10 pt-28 md:px-16 md:pb-14 md:pt-36">
       <div className="mx-auto max-w-6xl text-center">
-        <p {...cmsText('productShowcase.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('productShowcase.kicker')}</p>
-        <h2 {...cmsText('productShowcase.title')} className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">{t('productShowcase.title')}</h2>
+        <p
+          {...cmsText('productShowcase.kicker')}
+          className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-gold-ink"
+        >
+          {t('productShowcase.kicker')}
+        </p>
+        <h2 {...cmsText('productShowcase.title')} className="mx-auto mt-3 max-w-2xl text-4xl text-olive-dark md:text-5xl">
+          {t('productShowcase.title')}
+        </h2>
 
-        {/* Mobile: fixed 2-up grid, top-aligned so the equal-height bottles line up regardless of
-            how many lines each description wraps to. Desktop keeps the bottom-aligned flex row,
-            where the taller centre bottle needs its base on the same line as the others. */}
-        <div className="mt-20 grid grid-cols-2 items-start justify-center gap-x-2 gap-y-10 md:flex md:flex-wrap md:items-end md:gap-2">
+        <div className="mt-14 grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 md:mt-16 lg:grid-cols-4">
           {PRODUCTS.map((product, i) => {
-            const isCenter = i === center;
-            const text = productText[product.id];
-            // Odd product count leaves the last card alone on its mobile row — let it span both
-            // columns so it stays centred instead of hugging the row start.
-            const isMobileOrphan = PRODUCTS.length % 2 === 1 && i === PRODUCTS.length - 1;
+            const nameKey = product.kind === 'classic' ? `${product.i18n}.name` : `${product.i18n}.shortName`;
             return (
               <div
                 key={product.id}
                 ref={(el) => {
                   cardRefs.current[i] = el;
                 }}
-                className={`group relative flex min-w-0 flex-col items-center px-1 md:px-3 ${
-                  isMobileOrphan ? 'col-span-2 md:col-span-1' : ''
-                }`}
-                style={{ animation: `product-bob ${5 + (i % 3)}s ease-in-out ${i * 0.4}s infinite` }}
+                className="min-w-0"
               >
-                <div
-                  className={`relative flex w-full items-end justify-center transition-transform duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 h-[26vh] md:h-[30vh] ${
-                    isCenter ? 'lg:h-[50vh]' : 'lg:h-[36vh]'
-                  }`}
+                <Link
+                  to={productHref(product, lang)}
+                  className="group flex h-full flex-col items-center text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
                 >
-                  <div className="pointer-events-none absolute inset-0 rounded-full bg-gold/0 blur-2xl transition-colors duration-500 group-hover:bg-gold/20" />
-                  {/* Every product ships in the same 343x1683 bottle, so the
-                      image is named here rather than carried per-product in
-                      data/products.ts. A product with its own bottle would need
-                      an `imageName` field there, not a bundled URL. */}
-                  <Picture
-                    name="bottle-cutout"
-                    alt={text.name}
-                    cmsKey={`home.showcase.${product.id}`}
-                    cmsAltKey={`productShowcase.products.${product.id}.name`}
-                    className="relative h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:rotate-3"
-                    style={{ filter: 'drop-shadow(0 20px 20px rgba(46,58,36,0.18))' }}
-                    sizes={isCenter ? '(min-width: 1024px) 11vh, 7vh' : '(min-width: 1024px) 8vh, 7vh'}
-                  />
-                </div>
-                <p
-                  {...cmsText(`productShowcase.products.${product.id}.name`)}
-                  className={`mt-4 text-sm text-olive-dark ${isCenter ? 'font-medium' : 'font-light text-olive-dark/70'}`}
-                >
-                  {text.name}
-                </p>
-                <p {...cmsText(`productShowcase.products.${product.id}.description`)} className="mt-1 max-w-full text-xs font-light text-brown/60 md:max-w-[160px]">{text.description}</p>
+                  <span className="block aspect-square w-full overflow-hidden rounded-2xl border border-olive-dark/10 bg-white shadow-[0_12px_30px_rgba(46,58,36,0.07)] transition-shadow duration-300 group-hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]">
+                    <Picture
+                      name={product.image}
+                      alt={t(`${product.i18n}.imageAlt`)}
+                      cmsKey={`home.showcase.${product.cmsId}`}
+                      cmsAltKey={`${product.i18n}.imageAlt`}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                      sizes="(min-width:1024px) 260px, 45vw"
+                    />
+                  </span>
+                  <span
+                    {...cmsText(nameKey)}
+                    className="mt-3 line-clamp-2 font-display text-[15px] leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold-ink sm:mt-4 sm:text-lg"
+                  >
+                    {t(nameKey)}
+                  </span>
+                  <span className="mt-1 font-body text-sm text-brown-ink">{sizeLine(product)}</span>
+                </Link>
               </div>
             );
           })}
         </div>
       </div>
-
-      <style>{`
-        @keyframes product-bob {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-      `}</style>
     </section>
   );
 }

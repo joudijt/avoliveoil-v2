@@ -21,10 +21,10 @@ export const PAGE = {
   crumbsWrap: 'px-6 pt-28 md:px-16 md:pt-32',
   /** canvas: no fixed navbar above the content, so no room is kept for it */
   crumbsWrapCanvas: 'px-6 pt-8 md:px-16 md:pt-10',
-  crumbsNav: 'mx-auto max-w-6xl text-sm text-brown/60',
+  crumbsNav: 'mx-auto max-w-6xl text-sm text-brown',
   crumbsList: 'flex flex-wrap items-center gap-2',
   crumbsItem: 'flex items-center gap-2',
-  crumbsLink: 'transition-colors duration-300 hover:text-gold',
+  crumbsLink: 'transition-colors duration-300 hover:text-gold-ink',
   crumbsSep: 'text-brown/30',
   crumbsCurrent: 'text-olive-dark',
 } as const;
@@ -130,7 +130,7 @@ export const HEADING = {
       default: 'text-olive-dark',
       olive: 'text-olive',
       'olive-dark': 'text-olive-dark',
-      gold: 'text-gold',
+      gold: 'text-gold-ink',
       brown: 'text-brown',
       white: 'text-cream',
     },
@@ -138,14 +138,14 @@ export const HEADING = {
       default: 'text-cream',
       olive: 'text-olive',
       'olive-dark': 'text-olive-dark',
-      gold: 'text-gold',
+      gold: 'text-gold-light',
       brown: 'text-brown',
       white: 'text-cream',
     },
   } satisfies Record<Tone, Record<TextColor, string>>,
   // #8a6516 on light (4.8:1); the site gold is 2.8:1 on cream — too low for 12 px text
   kicker: { light: 'text-xs uppercase tracking-[0.35em] text-[#8a6516]', dark: 'text-xs uppercase tracking-[0.35em] text-[#e3b856]' } satisfies Record<Tone, string>,
-  /** kicker + heading: spaced with gap, because index.css zeroes h1–h4 / p margins outside any layer */
+  /** kicker + heading: spaced with gap (blocks never rely on margins on h1–h4 / p) */
   withKicker: 'flex flex-col gap-3',
   wrap: 'min-w-0 break-words',
 } as const;
@@ -157,22 +157,22 @@ export const HEADING_TAGS: HeadingLevel[] = ['h1', 'h2', 'h3', 'h4'];
 export const TEXT = {
   base:
     // Blocks are spaced by the flex gap (+ padding above headings), never by margins:
-    // index.css sets `p, h1–h4 { margin-block: 0 }` outside any cascade layer, which
-    // beats every Tailwind margin utility on those elements.
-    'flex min-w-0 flex-col gap-4 break-words font-body font-light leading-relaxed ' +
+    // index.css zeroes `p, h1–h4` margins (now inside @layer base, O-22, so a margin
+    // utility would win — keep using the gap so rich text from the editor stays even).
+    'flex min-w-0 flex-col gap-4 break-words font-body leading-relaxed ' +
     '[&_ul]:list-disc [&_ol]:list-decimal [&_ul]:ps-6 [&_ol]:ps-6 [&_li+li]:mt-1.5 ' +
-    '[&_a]:underline [&_a]:decoration-gold/60 [&_a]:underline-offset-4 [&_a]:hover:text-gold ' +
+    '[&_a]:underline [&_a]:decoration-gold/60 [&_a]:underline-offset-4 [&_a]:hover:text-gold-ink ' +
     '[&_strong]:font-semibold [&_b]:font-semibold ' +
     '[&>h2]:pt-4 [&>h3]:pt-2 [&>h4]:pt-1 [&>:first-child]:pt-0 [&_h2]:text-2xl [&_h3]:text-xl [&_h4]:text-lg ' +
     '[&_blockquote]:border-s-2 [&_blockquote]:border-gold [&_blockquote]:ps-4 [&_blockquote]:italic',
   size: { s: 'text-sm', m: 'text-base', l: 'text-base md:text-lg' },
   color: {
     light: {
-      // brown/85, not the 75 % the built pages use: 4.6:1 on the page background instead of 4.0:1
-      default: 'text-brown/85',
+      // brown-ink (#4f3b26): 9.6:1 on the page background (O-21; brown/85 read faint)
+      default: 'text-brown-ink',
       olive: 'text-olive',
       'olive-dark': 'text-olive-dark',
-      gold: 'text-gold',
+      gold: 'text-gold-ink',
       brown: 'text-brown',
       white: 'text-cream',
     },
@@ -180,7 +180,7 @@ export const TEXT = {
       default: 'text-cream/75',
       olive: 'text-olive',
       'olive-dark': 'text-olive-dark',
-      gold: 'text-gold',
+      gold: 'text-gold-light',
       brown: 'text-brown',
       white: 'text-cream',
     },
@@ -204,7 +204,7 @@ export const IMAGE = {
   /** only when a max width is set */
   align: { start: 'me-auto', center: 'mx-auto', end: 'ms-auto' } satisfies Record<Align, string>,
   link: 'block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold',
-  caption: { light: 'mt-3 text-sm font-light text-brown/60', dark: 'mt-3 text-sm font-light text-cream/60' },
+  caption: { light: 'mt-3 text-sm text-brown', dark: 'mt-3 text-sm text-cream/60' },
 } as const;
 
 // ---------------------------------------------------------------- button / whatsapp
@@ -224,7 +224,7 @@ export const BUTTON = {
     light: {
       primary: 'bg-olive-dark text-cream hover:bg-gold hover:text-olive-dark',
       gold: 'bg-gold text-olive-dark hover:bg-olive-dark hover:text-cream',
-      outline: 'border border-olive-dark/25 text-olive-dark hover:border-gold hover:text-gold',
+      outline: 'border border-olive-dark/25 text-olive-dark hover:border-gold hover:text-gold-ink',
       whatsapp: WA_STYLE,
     },
     dark: {
@@ -293,7 +293,7 @@ export const ICON_LIST = {
   item: 'flex items-center gap-3',
   iconWrap: 'flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold',
   icon: 'h-4 w-4',
-  text: 'text-base font-light leading-snug',
+  text: 'text-base leading-snug',
   color: TEXT.color,
 } as const;
 
@@ -310,7 +310,7 @@ export const FAQ = {
     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
   q: { light: 'text-lg text-olive-dark md:text-xl', dark: 'text-lg text-cream md:text-xl' },
   icon: 'h-5 w-5 shrink-0 text-gold transition-transform duration-300 group-open:rotate-45',
-  a: { light: 'max-w-xl pb-6 font-light leading-relaxed text-brown/75', dark: 'max-w-xl pb-6 font-light leading-relaxed text-cream/70' },
+  a: { light: 'max-w-xl pb-6 leading-relaxed text-brown-ink', dark: 'max-w-xl pb-6 leading-relaxed text-cream/70' },
 } as const;
 
 // ---------------------------------------------------------------- products
@@ -325,10 +325,22 @@ export const PRODUCTS = {
   card:
     'group flex h-full flex-col rounded-2xl border border-olive-dark/10 bg-cream p-3 text-start sm:p-6 transition-shadow duration-300 ' +
     'hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
-  imgWrap: 'flex h-40 items-end justify-center rounded-xl bg-bg pt-4 sm:h-60 sm:pt-6',
-  img: 'h-full w-auto object-contain drop-shadow-[0_20px_20px_rgba(46,58,36,0.18)] transition-transform duration-500 group-hover:-translate-y-1',
-  name: 'min-w-0 break-words pt-3 text-base leading-snug sm:pt-5 sm:text-lg text-olive-dark transition-colors duration-300 group-hover:text-gold',
-  tagline: 'pt-1.5 font-body text-xs font-light sm:pt-2 sm:text-sm leading-relaxed text-brown/70',
+  // FORGE PRODUCTS-R1 O-14: every product photo is a white 1200x1200 square, shown whole.
+  imgWrap: 'block aspect-square overflow-hidden rounded-xl border border-olive-dark/5 bg-white',
+  img: 'h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]',
+  name: 'min-w-0 break-words pt-3 font-display text-base leading-snug sm:pt-5 sm:text-lg text-olive-dark transition-colors duration-300 group-hover:text-gold-ink',
+  tagline: 'pt-1.5 font-body text-xs sm:pt-2 sm:text-sm leading-relaxed text-brown-ink',
+  /**
+   * Classes of the previous tall-bottle card. Published pages are HTML stored in the
+   * database and keep emitting these until they are re-rendered, so they stay in
+   * CMS_CLASS_LIST (and therefore in the built CSS) — never read by a block.
+   */
+  legacy: [
+    'flex h-40 items-end justify-center rounded-xl bg-bg pt-4 sm:h-60 sm:pt-6',
+    'h-full w-auto object-contain drop-shadow-[0_20px_20px_rgba(46,58,36,0.18)] transition-transform duration-500 group-hover:-translate-y-1',
+    'min-w-0 break-words pt-3 text-base leading-snug sm:pt-5 sm:text-lg text-olive-dark transition-colors duration-300 group-hover:text-gold',
+    'pt-1.5 font-body text-xs font-light sm:pt-2 sm:text-sm leading-relaxed text-brown/70',
+  ],
   // #8a6516: 4.8:1 on cream (the site gold is 3.1:1)
   cta: 'mt-auto pt-3 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#8a6516] sm:pt-4 sm:text-xs sm:tracking-[0.2em]',
 } as const;
@@ -345,7 +357,7 @@ export const FORM = {
   width: { full: 'sm:col-span-2', half: '' },
   field: 'min-w-0',
   label: { light: 'mb-1.5 block text-sm font-medium text-olive-dark', dark: 'mb-1.5 block text-sm font-medium text-cream' },
-  required: 'text-gold',
+  required: 'text-gold-ink',
   input:
     'w-full rounded-lg border border-olive-dark/15 bg-white/70 px-4 py-3 text-sm text-olive-dark placeholder:text-brown/40 ' +
     'focus:border-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/40 aria-invalid:border-[#9b2c2c]',
@@ -364,9 +376,9 @@ export const FORM = {
     'disabled:cursor-wait disabled:opacity-60',
   submitWrap: 'mt-6',
   alert: 'pt-4 text-sm text-[#9b2c2c]',
-  success: 'rounded-xl border border-olive/20 bg-cream p-6 text-center text-base font-light leading-relaxed text-olive-dark',
+  success: 'rounded-xl border border-olive/20 bg-cream p-6 text-center text-base leading-relaxed text-olive-dark',
   /** no-JS result after the server's 303 back to #form-sent-<id> / #form-error-<id> (CSS :target) */
-  noJsSent: 'hidden target:block mb-6 scroll-mt-28 rounded-xl border border-olive/20 bg-cream p-6 text-center text-base font-light leading-relaxed text-olive-dark',
+  noJsSent: 'hidden target:block mb-6 scroll-mt-28 rounded-xl border border-olive/20 bg-cream p-6 text-center text-base leading-relaxed text-olive-dark',
   noJsError: 'hidden target:block mb-6 scroll-mt-28 text-sm text-[#9b2c2c]',
 } as const;
 
@@ -383,7 +395,7 @@ export const QUOTE = {
     light: 'font-display text-xl italic leading-relaxed text-olive-dark md:text-2xl',
     dark: 'font-display text-xl italic leading-relaxed text-cream/90 md:text-2xl',
   },
-  caption: { light: 'mt-6 text-sm text-brown/70', dark: 'mt-6 text-sm text-cream/60' },
+  caption: { light: 'mt-6 text-sm text-brown-ink', dark: 'mt-6 text-sm text-cream/60' },
   author: 'text-gold',
 } as const;
 
@@ -394,9 +406,9 @@ export const PAGE_CHROME = {
   loading: 'min-h-[60vh]',
   notFound: 'px-6 pb-24 pt-36 text-center md:px-16 md:pb-32 md:pt-44',
   notFoundInner: 'mx-auto max-w-xl',
-  notFoundKicker: 'text-xs uppercase tracking-[0.35em] text-gold',
+  notFoundKicker: 'text-xs uppercase tracking-[0.35em] text-gold-ink',
   notFoundTitle: 'pt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl',
-  notFoundText: 'mx-auto max-w-md pt-6 font-body text-base font-light leading-relaxed text-brown/75',
+  notFoundText: 'mx-auto max-w-md pt-6 font-body text-base leading-relaxed text-brown-ink',
   notFoundLink:
     'mt-8 inline-block rounded-full bg-olive-dark px-7 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors duration-300 hover:bg-gold hover:text-olive-dark',
   previewBadge:
@@ -432,8 +444,8 @@ export const LP_HEAD = {
     dark: 'min-w-0 break-words font-display text-3xl leading-[1.15] text-cream md:text-[2.6rem]',
   },
   sub: {
-    light: 'font-body text-base font-light leading-relaxed text-brown/85 md:text-lg',
-    dark: 'font-body text-base font-light leading-relaxed text-cream/80 md:text-lg',
+    light: 'font-body text-base leading-relaxed text-brown-ink md:text-lg',
+    dark: 'font-body text-base leading-relaxed text-cream/80 md:text-lg',
   },
 } as const;
 
@@ -512,10 +524,10 @@ export const HERO = {
     dark: 'min-w-0 max-w-full break-words font-display text-[2.2rem] leading-[1.08] text-cream sm:text-5xl lg:text-[3.6rem]',
     light: 'min-w-0 max-w-full break-words font-display text-[2.2rem] leading-[1.08] text-olive-dark sm:text-5xl lg:text-[3.6rem]',
   },
-  gold: { dark: 'text-[#e3b856]', light: 'text-gold' },
+  gold: { dark: 'text-[#e3b856]', light: 'text-gold-ink' },
   sub: {
-    dark: 'max-w-xl font-body text-base font-light leading-relaxed text-cream/85 md:text-lg',
-    light: 'max-w-xl font-body text-base font-light leading-relaxed text-brown/85 md:text-lg',
+    dark: 'max-w-xl font-body text-base leading-relaxed text-cream/85 md:text-lg',
+    light: 'max-w-xl font-body text-base leading-relaxed text-brown-ink md:text-lg',
   },
   buttons: 'flex flex-wrap items-center gap-3 pt-2',
   chips: 'flex flex-wrap gap-2 pt-2',
@@ -530,7 +542,7 @@ export const HERO = {
     light: 'mx-auto w-full max-w-xl rounded-3xl border border-olive-dark/10 bg-white p-6 text-start text-olive-dark shadow-[0_30px_60px_-24px_rgba(46,58,36,0.35)] sm:p-8 lg:max-w-none',
   },
   formTitle: 'font-display text-2xl leading-snug text-olive-dark',
-  formSub: 'pt-1.5 font-body text-sm font-light leading-relaxed text-brown/85',
+  formSub: 'pt-1.5 font-body text-sm leading-relaxed text-brown-ink',
   formBody: 'pt-5',
 } as const;
 
@@ -563,8 +575,8 @@ export const CARDS = {
     dark: 'min-w-0 max-w-full break-words pt-2.5 font-display text-xl leading-snug text-cream sm:pt-5',
   },
   text: {
-    light: 'pt-1 font-body text-sm font-light leading-relaxed text-brown/85 sm:pt-2',
-    dark: 'pt-1 font-body text-sm font-light leading-relaxed text-cream/75 sm:pt-2',
+    light: 'pt-1 font-body text-sm leading-relaxed text-brown-ink sm:pt-2',
+    dark: 'pt-1 font-body text-sm leading-relaxed text-cream/75 sm:pt-2',
   },
 } as const;
 
@@ -601,8 +613,8 @@ export const STEPS = {
     dark: 'min-w-0 max-w-full break-words font-display text-xl leading-snug text-cream',
   },
   text: {
-    light: 'font-body text-sm font-light leading-relaxed text-brown/85',
-    dark: 'font-body text-sm font-light leading-relaxed text-cream/75',
+    light: 'font-body text-sm leading-relaxed text-brown-ink',
+    dark: 'font-body text-sm leading-relaxed text-cream/75',
   },
 } as const;
 
@@ -647,10 +659,10 @@ export const BAND = {
     cream: 'min-w-0 max-w-full break-words font-display text-3xl leading-tight text-olive-dark md:text-[2.6rem]',
   } satisfies Record<BandTone, string>,
   sub: {
-    olive: 'max-w-xl font-body text-base font-light leading-relaxed text-cream/90 md:text-lg',
-    dark: 'max-w-xl font-body text-base font-light leading-relaxed text-cream/80 md:text-lg',
+    olive: 'max-w-xl font-body text-base leading-relaxed text-cream/90 md:text-lg',
+    dark: 'max-w-xl font-body text-base leading-relaxed text-cream/80 md:text-lg',
     gold: 'max-w-xl font-body text-base leading-relaxed text-[#1f2818] md:text-lg',
-    cream: 'max-w-xl font-body text-base font-light leading-relaxed text-brown/85 md:text-lg',
+    cream: 'max-w-xl font-body text-base leading-relaxed text-brown-ink md:text-lg',
   } satisfies Record<BandTone, string>,
   buttons: 'flex flex-wrap items-center justify-center gap-3 pt-4',
   /** the band's own button colours per tone, every text/background pair ≥ 4.5:1 */
@@ -701,8 +713,8 @@ export const BADGES = {
     dark: 'min-w-0 max-w-full break-words font-display text-base leading-snug lining-nums text-cream md:text-lg',
   },
   text: {
-    light: 'font-body text-xs font-light leading-relaxed text-brown/85 md:text-sm',
-    dark: 'font-body text-xs font-light leading-relaxed text-cream/75 md:text-sm',
+    light: 'font-body text-xs leading-relaxed text-brown-ink md:text-sm',
+    dark: 'font-body text-xs leading-relaxed text-cream/75 md:text-sm',
   },
 } as const;
 
@@ -715,7 +727,7 @@ export const REVIEWS = {
     light: 'font-display text-4xl leading-none lining-nums text-olive-dark md:text-5xl',
     dark: 'font-display text-4xl leading-none lining-nums text-[#e3b856] md:text-5xl',
   },
-  statLabel: { light: 'pt-2 font-body text-sm font-light text-brown/85', dark: 'pt-2 font-body text-sm font-light text-cream/75' },
+  statLabel: { light: 'pt-2 font-body text-sm text-brown-ink', dark: 'pt-2 font-body text-sm text-cream/75' },
   grid: {
     1: 'mx-auto grid max-w-2xl grid-cols-1 gap-5',
     2: 'mx-auto grid max-w-4xl grid-cols-1 gap-5 md:grid-cols-2',
@@ -731,7 +743,7 @@ export const REVIEWS = {
     light: 'font-display text-lg italic leading-relaxed text-olive-dark',
     dark: 'font-display text-lg italic leading-relaxed text-cream/90',
   },
-  caption: { light: 'pt-6 font-body text-sm text-brown/85', dark: 'pt-6 font-body text-sm text-cream/70' },
+  caption: { light: 'pt-6 font-body text-sm text-brown-ink', dark: 'pt-6 font-body text-sm text-cream/70' },
   name: { light: 'font-semibold text-[#8a6516]', dark: 'font-semibold text-[#e3b856]' },
 } as const;
 
@@ -759,8 +771,8 @@ export const STORES = {
     dark: 'min-w-0 max-w-full break-words pt-5 font-display text-xl text-cream',
   },
   text: {
-    light: 'pt-2 font-body text-sm font-light leading-relaxed text-brown/85',
-    dark: 'pt-2 font-body text-sm font-light leading-relaxed text-cream/75',
+    light: 'pt-2 font-body text-sm leading-relaxed text-brown-ink',
+    dark: 'pt-2 font-body text-sm leading-relaxed text-cream/75',
   },
   buttonWrap: 'mt-auto flex w-full pt-6',
   button:
@@ -816,7 +828,7 @@ export const LP_FOOTER = {
   root: 'border-t border-cream/10 bg-[#1f2818] px-6 pb-28 pt-12 text-center md:px-16 md:pb-12',
   inner: 'mx-auto flex max-w-6xl flex-col items-center gap-5',
   logo: 'h-9 w-auto brightness-0 invert',
-  line: 'max-w-xl font-body text-sm font-light leading-relaxed text-cream/80',
+  line: 'max-w-xl font-body text-sm leading-relaxed text-cream/80',
   contacts: 'flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-body text-sm',
   contact: 'inline-flex items-center gap-2 text-cream/85 transition-colors duration-200 hover:text-[#e3b856]',
   contactIcon: 'h-4 w-4 shrink-0 text-[#e3b856]',
@@ -824,7 +836,7 @@ export const LP_FOOTER = {
     'inline-flex items-center gap-2 rounded-full border border-cream/25 px-5 py-2.5 text-sm font-medium text-cream transition-colors duration-200 ' +
     'hover:border-[#e3b856] hover:text-[#e3b856]',
   siteIcon: 'h-4 w-4 shrink-0',
-  copy: 'w-full border-t border-cream/10 pt-6 font-body text-xs font-light text-cream/60',
+  copy: 'w-full border-t border-cream/10 pt-6 font-body text-xs text-cream/60',
 } as const;
 
 /** Phone bottom bar, rendered INSIDE the page root; hidden while a form field has focus (CSS :has, no JS). */

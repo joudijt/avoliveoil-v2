@@ -31,6 +31,7 @@ const locale = Object.fromEntries(LANGS.map((l) => [l, readJson(`src/i18n/locale
 const storeFacts = readJson('src/data/storeFacts.json');
 const manifest = readJson('src/assets/opt/manifest.json');
 const infusedSlugs = readJson('src/data/infusedSlugs.json');
+const CATALOGUE = readJson('src/data/catalogue.json').products;
 const STORE_NAME = storeFacts.seller.name;
 
 if (!existsSync(DIST)) {
@@ -48,8 +49,24 @@ for (const p of INFUSED) {
     process.exit(1);
   }
 }
-/** src/data/products.ts */
-const SHOWCASE = Object.keys(locale.en.productShowcase.products);
+/** src/data/catalogue.json (src/data/products.ts re-exports it): the 8 products on sale. */
+const at = (obj, path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
+for (const p of CATALOGUE) {
+  for (const l of LANGS) {
+    if (typeof at(locale[l], `${p.i18n}.name`) !== 'string') {
+      console.error(`cms-build-data: catalogue product ${p.id} has no ${p.i18n}.name in ${l}/common.json`);
+      process.exit(1);
+    }
+  }
+  if (p.kind === 'infused' && !INFUSED.some((i) => i.id === p.id && i.slug === p.slug)) {
+    console.error(`cms-build-data: catalogue product ${p.id} (${p.slug}) is not in infusedSlugs.json`);
+    process.exit(1);
+  }
+}
+const CLASSIC = CATALOGUE.filter((p) => p.kind === 'classic');
+/** Home showcase cards, one per catalogue product, keyed by cmsId (Extra Virgin = 'classic'). */
+const SHOWCASE = CATALOGUE.map((p) => p.cmsId);
+const nameOf = (p, l = 'en') => at(locale[l], `${p.i18n}.name`);
 /** src/components/sections/OliveJourney.tsx PHOTOS */
 const JOURNEY_PHOTOS = {
   grove: 'journey-01-grove',
@@ -146,12 +163,20 @@ const PAGES = {
     label: 'Products',
     groups: [
       group('Intro', either(exactly('productsPage.kicker', 'productsPage.title', 'productsPage.intro', 'alt.productsHero', 'breadcrumb.products'))),
-      group('Product', either(under('productsPage.product'), exactly('productsPage.benefitsKicker'))),
+      ...CLASSIC.map((p) => group(nameOf(p), under(p.i18n))),
+      group('Price', either(under('productsPage.price'), exactly('productsPage.storeNote', 'productsPage.benefitsKicker'))),
       group(
         'Infused collection',
         either(
-          exactly('infusedPage.kicker', 'infusedPage.collectionTitle', 'infusedPage.collectionIntro', 'infusedPage.availableBadge'),
-          (k) => /^infusedPage\.products\.[^.]+\.(name|tagline)$/.test(k),
+          exactly(
+            'infusedPage.kicker',
+            'infusedPage.collectionTitle',
+            'infusedPage.collectionIntro',
+            'infusedPage.availableBadge',
+            'infusedPage.inStoreNote',
+            'infusedPage.size250',
+          ),
+          (k) => /^infusedPage\.products\.[^.]+\.(name|shortName|tagline)$/.test(k),
         ),
       ),
       group('Where to buy', under('productsPage.whereToBuy')),
@@ -159,7 +184,7 @@ const PAGES = {
       group('FAQ', under('productsPage.faq')),
       group('Search result', under('seo.products')),
     ],
-    images: ['products.hero'],
+    images: ['products.hero', ...CLASSIC.map((p) => `products.${p.cmsId}.photo`)],
   },
   infused: {
     label: 'Infused products',
@@ -171,6 +196,11 @@ const PAGES = {
           exactly(
             'infusedPage.kicker',
             'infusedPage.availableBadge',
+            'infusedPage.inStoreNote',
+            'infusedPage.size250',
+            'productsPage.price.label',
+            'productsPage.price.size250',
+            'productsPage.price.inStore',
             'infusedPage.notesTitle',
             'infusedPage.benefitsTitle',
             'infusedPage.usesTitle',
@@ -382,18 +412,18 @@ mkdirSync(ASSETS_OUT, { recursive: true });
 const sceneTitle = Object.fromEntries(locale.en.oliveJourney.scenes.map((s) => [s.key, s.title]));
 const SPOTS = {
   'home.hero.bg': { label: 'Home › Hero background', needsAlpha: false, image: 'OliveGroveSunsetHero' },
-  'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, image: 'bottle-cutout' },
+  'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: false, image: 'product-extra-virgin' },
   'home.story.woman': { label: 'Home › Our story photo', needsAlpha: true, image: 'woman-holding-bottle-nobg' },
   'home.bottle.pour': {
     label: 'Home › Pouring bottle',
     needsAlpha: true,
-    image: 'bottle-cutout',
-    note: 'The pour animation is tuned to the tall 343×1683 bottle; another shape will not line up with the stream.',
+    image: 'product-extra-virgin-cutout',
+    note: 'The pour animation is tuned to the transparent 533×1429 Extra Virgin bottle (neck at 31–68% of the width, cap at the very top); another shape will not line up with the stream.',
   },
   ...Object.fromEntries(
-    SHOWCASE.map((id) => [
-      `home.showcase.${id}`,
-      { label: `Home › Products › ${locale.en.productShowcase.products[id].name}`, needsAlpha: true, image: 'bottle-cutout' },
+    CATALOGUE.map((p) => [
+      `home.showcase.${p.cmsId}`,
+      { label: `Home › Products › ${nameOf(p)}`, needsAlpha: false, image: p.image },
     ]),
   ),
   ...Object.fromEntries(
@@ -402,11 +432,18 @@ const SPOTS = {
       { label: `Home › Olive journey › ${sceneTitle[k] ?? k}`, needsAlpha: false, image },
     ]),
   ),
-  'products.hero': { label: 'Products › Bottle photo', needsAlpha: true, image: 'bottle-cutout' },
+  'products.hero': { label: 'Products › Bottle photo', needsAlpha: false, image: 'product-extra-virgin' },
+  ...Object.fromEntries(
+    CLASSIC.map((p) => [`products.${p.cmsId}.photo`, { label: `Products › ${nameOf(p)} › Bottle photo`, needsAlpha: false, image: p.image }]),
+  ),
   ...Object.fromEntries(
     INFUSED.map((p) => [
       `infused.${p.id}.hero`,
-      { label: `Infused › ${locale.en.infusedPage.products[p.id].name} › Bottle photo`, needsAlpha: true, image: 'bottle-cutout' },
+      {
+        label: `Infused › ${locale.en.infusedPage.products[p.id].name} › Bottle photo`,
+        needsAlpha: false,
+        image: CATALOGUE.find((c) => c.id === p.id)?.image ?? `product-infused-${p.id}`,
+      },
     ]),
   ),
   'whyus.field': { label: 'Why us › Field photo', needsAlpha: false, image: 'AVOliveOilInTheField' },
@@ -429,26 +466,24 @@ if (unlisted.length) {
 
 // ------------------------------------------------------------------ catalogue
 
-const bottle = stableImage('bottle-cutout');
+// The old tall bottle stays built (FORGE PRODUCTS-R1 O-11): HTML already stored in the
+// CMS database points at /cms-assets/bottle-cutout-343.webp until each page is re-rendered.
+stableImage('bottle-cutout');
 const both = (fn) => Object.fromEntries(LANGS.map((l) => [l, fn(l)]));
-const catalogue = [
-  {
-    id: 'classic',
-    kind: 'classic',
-    href: both((l) => `/${l}/products`),
-    name: both((l) => locale[l].productsPage.product.name),
-    tagline: both((l) => locale[l].productsPage.product.tagline),
-    image: bottle,
-  },
-  ...INFUSED.map((p) => ({
-    id: p.id,
-    kind: 'infused',
-    href: both((l) => `/${l}/products/${p.slug}`),
-    name: both((l) => locale[l].infusedPage.products[p.id].name),
-    tagline: both((l) => locale[l].infusedPage.products[p.id].tagline),
-    image: bottle,
-  })),
-];
+const catalogue = CATALOGUE.map((p) => ({
+  id: p.cmsId,
+  kind: p.kind,
+  href: both((l) => (p.kind === 'infused' ? `/${l}/products/${p.slug}` : `/${l}/products`)),
+  name: both((l) => at(locale[l], `${p.i18n}.name`)),
+  tagline: both((l) => at(locale[l], `${p.i18n}.tagline`) ?? ''),
+  image: stableImage(p.image),
+}));
+for (const must of ['bottle-cutout-343.webp', ...CATALOGUE.map((p) => `${p.image}-${manifest[p.image].widths.at(-1)}.webp`)]) {
+  if (!existsSync(join(ASSETS_OUT, must))) {
+    console.error(`cms-build-data: dist/cms-assets/${must} is missing after the copy`);
+    process.exit(1);
+  }
+}
 
 // ------------------------------------------------------------------ build id + self-test
 

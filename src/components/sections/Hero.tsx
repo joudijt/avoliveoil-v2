@@ -41,14 +41,17 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
   }, [mouse]);
 
   return (
+    // The Extra Virgin white square IS the tile (FORGE PRODUCTS-R1 O-10): rounded,
+    // white, shadowed — so the parallax transform tilts the whole card, not a photo
+    // sliding around inside a frame. Square, so `sizes` = its rendered height.
     <Picture
       ref={imgRef}
-      name="bottle-cutout"
+      name="product-extra-virgin"
       alt={t('alt.heroBottle')}
       cmsKey="home.hero.bottle"
       cmsAltKey="alt.heroBottle"
-      className="relative z-10 h-[40vh] w-auto object-contain sm:h-[52vh] md:h-[68vh]"
-      sizes="(min-width: 768px) 14vh, 11vh"
+      className="relative z-10 aspect-square h-[30vh] w-auto max-w-full rounded-[1.75rem] border border-olive-dark/10 bg-white object-contain shadow-[0_30px_60px_rgba(46,58,36,0.22)] sm:h-[40vh] md:h-[min(52vh,520px)]"
+      sizes="(min-width: 768px) min(52vh, 520px), (min-width: 640px) 40vh, 30vh"
       priority
     />
   );
@@ -165,12 +168,12 @@ export function Hero() {
           <h1 ref={headingRef} data-cms-words="hero.headlineWords" className="max-w-xl text-4xl leading-[1.1] text-olive-dark sm:text-5xl md:text-6xl lg:text-7xl">
             {headlineWords.map((w, i) => (
               <span key={i} className="me-3 inline-block overflow-hidden align-bottom last:me-0">
-                <span className={`word inline-block ${w.gold ? 'text-gold' : ''}`}>{w.text}</span>
+                <span className={`word inline-block ${w.gold ? 'text-gold-ink' : ''}`}>{w.text}</span>
               </span>
             ))}
           </h1>
 
-          <p ref={subRef} {...cmsText('hero.sub')} className="mt-4 max-w-md font-body text-base font-light tracking-wide text-brown/80 sm:mt-6 md:text-lg">
+          <p ref={subRef} {...cmsText('hero.sub')} className="mt-4 max-w-md font-body text-base tracking-wide text-brown-ink sm:mt-6 md:text-lg">
             {t('hero.sub')}
           </p>
 
@@ -193,7 +196,7 @@ export function Hero() {
                 scrollToHash('#journey');
               }}
               {...cmsText('hero.discoverStory')}
-              className="rounded-full border border-olive-dark/25 px-9 py-3.5 text-center text-sm font-medium tracking-wide text-olive-dark transition-all duration-300 hover:border-gold hover:text-gold"
+              className="rounded-full border border-olive-dark/25 px-9 py-3.5 text-center text-sm font-medium tracking-wide text-olive-dark transition-all duration-300 hover:border-gold hover:text-gold-ink"
             >
               {t('hero.discoverStory')}
             </a>
@@ -203,7 +206,7 @@ export function Hero() {
         <div ref={bottleExitRef} className="relative z-30 h-[36vh] w-full sm:h-[46vh] md:h-[85vh]">
           <div
             ref={bottleWrapRef}
-            className="relative flex h-full items-end justify-center pb-[10%] md:pb-[14%] md:-translate-x-[48%]"
+            className="relative flex h-full items-center justify-center md:justify-start md:ps-[6%]"
             style={{ animation: 'bottle-bob 6s ease-in-out infinite' }}
           >
             <BottleParallax mouse={mouse} />

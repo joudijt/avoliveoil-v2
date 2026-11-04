@@ -29,7 +29,7 @@ export function Modal({ open, onClose, children }: { open: boolean; onClose: () 
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute end-5 top-5 text-olive-dark/50 transition-colors hover:text-olive-dark"
+          className="absolute end-5 top-5 text-olive-dark/70 transition-colors hover:text-olive-dark"
         >
           <FiX className="h-5 w-5" />
         </button>

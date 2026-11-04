@@ -110,7 +110,7 @@ export function Statistics() {
               cmsKey={`statistics.items.${i}`}
               numberEditable={!s.fromFoundedYear}
             />
-            <p {...cmsText(`statistics.items.${i}.label`)} className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{s.label}</p>
+            <p {...cmsText(`statistics.items.${i}.label`)} className="mt-3 text-sm uppercase tracking-[0.25em] text-cream/60">{s.label}</p>
           </div>
         ))}
 
@@ -118,7 +118,7 @@ export function Statistics() {
           <div className="flex justify-center text-gold">
             <FaCrown className="h-10 w-10 md:h-12 md:w-12" />
           </div>
-          <p {...cmsText('statistics.premiumQuality')} className="mt-3 text-sm font-light uppercase tracking-[0.25em] text-cream/60">{t('statistics.premiumQuality')}</p>
+          <p {...cmsText('statistics.premiumQuality')} className="mt-3 text-sm uppercase tracking-[0.25em] text-cream/60">{t('statistics.premiumQuality')}</p>
         </div>
       </div>
     </section>

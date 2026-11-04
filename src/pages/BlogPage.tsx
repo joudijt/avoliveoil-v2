@@ -77,11 +77,11 @@ export function BlogPage() {
 
         <section className="px-6 pb-12 pt-10 text-center md:px-16">
           <div className="mx-auto max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">{t('blogPage.kicker')}</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-gold-ink">{t('blogPage.kicker')}</p>
             <h1 className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
               {t('blogPage.title')}
             </h1>
-            <p className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-brown-ink md:text-lg">
               {t('blogPage.intro')}
             </p>
 
@@ -118,29 +118,29 @@ export function BlogPage() {
                 </Link>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-gold">{article.category}</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-gold-ink">{article.category}</p>
 
                   <h2 className="mt-3 text-xl leading-snug text-olive-dark">
                     <Link
                       to={`/${lang}/blog/${article.slug}`}
-                      className="transition-colors duration-300 hover:text-gold"
+                      className="transition-colors duration-300 hover:text-gold-ink"
                     >
                       {article.h1}
                     </Link>
                   </h2>
 
-                  <p className="mt-4 font-body text-sm font-light leading-relaxed text-brown/70">
+                  <p className="mt-4 font-body text-sm leading-relaxed text-brown-ink">
                     {article.excerpt}
                   </p>
 
-                  <div className="mt-6 flex items-center gap-2 font-body text-xs text-brown/55">
+                  <div className="mt-6 flex items-center gap-2 font-body text-xs text-brown">
                     <FiClock aria-hidden="true" className="h-3.5 w-3.5 text-gold" />
                     {t('articlePage.readingTime', { count: article.readingTime })}
                   </div>
 
                   <Link
                     to={`/${lang}/blog/${article.slug}`}
-                    className="mt-auto inline-block pt-6 font-body text-sm font-medium uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:text-gold"
+                    className="mt-auto inline-block pt-6 font-body text-sm font-medium uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:text-gold-ink"
                   >
                     {t('blogPage.readMore')}
                   </Link>

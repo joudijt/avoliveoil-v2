@@ -8,10 +8,44 @@ import storeFacts from '../data/storeFacts.json';
  * Change a fact there, never here and never in content.
  */
 export const STORE = storeFacts;
-export const STORE_BRANCHES = storeFacts.branches;
-export const STORE_HOURS = storeFacts.hours;
+export interface BranchHours {
+  opens: string;
+  closes: string;
+  days: string[];
+  displayEn: string;
+  displayMs: string;
+}
+export interface Branch {
+  id: string;
+  labelEn: string;
+  labelMs: string;
+  street: string;
+  postalCode: string;
+  locality: string;
+  region: string;
+  country: string;
+  /** Owner-supplied Google Maps link (pins verified 2026-11-04). */
+  mapsUrl: string;
+  /** null = the owner has not given this branch's hours: never claim any. */
+  hours: BranchHours | null;
+}
+/** The 5 Berkat Madinah Store branches (owner list 2026-11-04). Order = owner's order, Ampang first. */
+export const STORE_BRANCHES: Branch[] = storeFacts.branches as Branch[];
+export const BRANCH_COUNT = STORE_BRANCHES.length;
+export const BRANCHES_WITH_HOURS = STORE_BRANCHES.filter((b) => b.hours !== null);
+export const BRANCH_COMPANY = storeFacts.branchesNote.company;
 export const STORE_SCALE = storeFacts.scale;
+/** Per-product prices; read through `priceOf()` in src/data/products.ts. */
 export const PRICES = storeFacts.prices;
+
+/** Branch label in the page language. */
+export function branchLabel(b: Branch, lang: string | undefined): string {
+  return lang === 'ms' ? b.labelMs : b.labelEn;
+}
+/** "17-L1, Jalan …, 68000 Ampang, Selangor" */
+export function branchAddress(b: Branch): string {
+  return `${b.street}, ${b.postalCode} ${b.locality}, ${b.region}`;
+}
 
 export const SITE_URL = 'https://avoliveoil.com';
 export const SITE_NAME = storeFacts.site.name;
@@ -86,7 +120,7 @@ export const MADINAH_URL = storeFacts.seller.url;
  */
 export const CONTACT_EMAIL = storeFacts.seller.email;
 /** Walk-in address = the Ampang branch, composed from storeFacts rather than retyped. */
-export const CONTACT_ADDRESS = `${storeFacts.branches[0].street}, ${storeFacts.branches[0].postalCode} ${storeFacts.branches[0].locality}, ${storeFacts.branches[0].region}`;
+export const CONTACT_ADDRESS = branchAddress(STORE_BRANCHES[0]);
 
 /**
  * `output=embed` is the keyless Google Maps embed. The documented
@@ -94,9 +128,7 @@ export const CONTACT_ADDRESS = `${storeFacts.branches[0].street}, ${storeFacts.b
  * site has no way to keep secret, so the query form is deliberate.
  */
 export const GOOGLE_MAPS_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(
-  CONTACT_ADDRESS
+  `Berkat Madinah ${STORE_BRANCHES[0].labelEn}, ${CONTACT_ADDRESS}`
 )}&output=embed`;
 /** Same place, opened in the real Maps app/site for directions. */
-export const GOOGLE_MAPS_LINK_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  CONTACT_ADDRESS
-)}`;
+export const GOOGLE_MAPS_LINK_URL = STORE_BRANCHES[0].mapsUrl;

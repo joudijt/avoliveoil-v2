@@ -185,8 +185,8 @@ async function main() {
             title: L('Palestinian Extra Virgin Olive Oil, First Cold Pressed', 'Minyak Zaitun Extra Virgin Palestin, Perahan Sejuk Pertama'),
             highlight: L('Palestinian Extra Virgin Olive Oil', 'Minyak Zaitun Extra Virgin Palestin'),
             sub: L(
-              'Hand-harvested from centuries-old olive groves in Palestine and pressed within hours of picking — no heat, no chemicals, no blending. The classic oil, plus six infused flavours.',
-              'Dituai dengan tangan dari ladang zaitun berusia berabad-abad di Palestin dan diperah dalam beberapa jam selepas dipetik — tanpa haba, tanpa bahan kimia, tanpa campuran. Minyak klasik, serta enam perisa infused.'
+              'Hand-harvested from centuries-old olive groves in Palestine and pressed within hours of picking — no heat, no chemicals, no blending. Extra Virgin and Organic Extra Virgin, plus six infused flavours.',
+              'Dituai dengan tangan dari ladang zaitun berusia berabad-abad di Palestin dan diperah dalam beberapa jam selepas dipetik — tanpa haba, tanpa bahan kimia, tanpa campuran. Extra Virgin dan Extra Virgin Organik, serta enam perisa infused.'
             ),
             chips: [
               { id: id('i'), text: L('First cold pressed', 'Perahan sejuk pertama') },
@@ -252,8 +252,8 @@ async function main() {
             type: 'text',
             settings: {
               html: L(
-                '<p>250 ml and 500 ml bottles. The classic oil and every infused flavour come in both sizes.</p>',
-                '<p>Botol 250 ml dan 500 ml. Minyak klasik dan setiap perisa infused tersedia dalam kedua-dua saiz.</p>'
+                '<p>Extra Virgin and Organic Extra Virgin come in 250 ml and 500 ml. Every infused flavour comes in 250 ml.</p>',
+                '<p>Extra Virgin dan Extra Virgin Organik dalam 250 ml dan 500 ml. Setiap perisa infused dalam 250 ml.</p>'
               ),
               align: 'center',
               color: 'default',
@@ -264,7 +264,7 @@ async function main() {
             id: id('w'),
             type: 'products',
             settings: {
-              ids: ['classic', 'lavender-chamomile', 'blackseed', 'turmeric-black-pepper', 'rosemary-basil', 'fennel-anise', 'wild-thyme'],
+              ids: ['classic', 'organic', 'lavender-chamomile', 'blackseed', 'turmeric-black-pepper', 'rosemary-basil', 'fennel-anise', 'wild-thyme'],
               cols: 4,
               showTagline: true,
             },
@@ -295,9 +295,9 @@ async function main() {
               title: L('How to Get Your Bottle', 'Cara Mendapatkan Botol Anda'),
               sub: L('', ''),
               items: [
-                { id: id('i'), title: L('Choose your oil', 'Pilih minyak anda'), text: L('The classic Palestinian extra virgin olive oil or one of six infused flavours, in 250 ml or 500 ml.', 'Minyak zaitun extra virgin Palestin klasik atau salah satu daripada enam perisa infused, dalam 250 ml atau 500 ml.') },
+                { id: id('i'), title: L('Choose your oil', 'Pilih minyak anda'), text: L('Extra Virgin or Organic Extra Virgin Palestinian olive oil (250 ml or 500 ml), or one of six infused flavours (250 ml).', 'Minyak zaitun Palestin Extra Virgin atau Extra Virgin Organik (250 ml atau 500 ml), atau salah satu daripada enam perisa infused (250 ml).') },
                 { id: id('i'), title: L('Ask or order', 'Tanya atau pesan'), text: L("Message us on WhatsApp, fill in the form, or order on the store's Shopee or TikTok Shop counters.", 'Hantar mesej di WhatsApp, isi borang, atau pesan di kaunter Shopee atau TikTok Shop kedai.') },
-                { id: id('i'), title: L('Collect or receive', 'Ambil atau terima'), text: L('Visit one of the two Berkat Madinah Store branches in Selangor, or get it delivered nationwide through Shopee or TikTok Shop.', 'Kunjungi salah satu daripada dua cawangan Berkat Madinah Store di Selangor, atau dapatkan penghantaran ke seluruh negara melalui Shopee atau TikTok Shop.') },
+                { id: id('i'), title: L('Collect or receive', 'Ambil atau terima'), text: L('Visit one of the 5 Berkat Madinah Store branches in Selangor (stock can vary by branch — WhatsApp first), or get it delivered nationwide through Shopee or TikTok Shop.', 'Kunjungi salah satu daripada 5 cawangan Berkat Madinah Store di Selangor (stok mungkin berbeza mengikut cawangan — WhatsApp dahulu), atau dapatkan penghantaran ke seluruh negara melalui Shopee atau TikTok Shop.') },
               ],
               media: pourImg,
               mediaAlt: L('Fresh olive oil being poured in the olive grove', 'Minyak zaitun segar dituang di ladang zaitun'),
@@ -324,8 +324,8 @@ async function main() {
                   store: 'madinah',
                   title: L('Berkat Madinah Store', 'Berkat Madinah Store'),
                   text: L(
-                    'Two branches in Selangor: Batu Caves / Prima Seri Gombak and Ampang Jaya. Open 8:00 am – 12:00 midnight, Monday through Sunday; festive days can differ.',
-                    'Dua cawangan di Selangor: Batu Caves / Prima Seri Gombak dan Ampang Jaya. Dibuka 8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad; hari perayaan mungkin berbeza.'
+                    '5 branches in Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) and Sri Gombak. Ampang and Sri Gombak open 8:00 am – 12:00 midnight, Monday through Sunday; for the others, and on festive days, ask on WhatsApp.',
+                    '5 cawangan di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Ampang dan Sri Gombak dibuka 8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad; untuk cawangan lain, dan pada hari perayaan, tanya di WhatsApp.'
                   ),
                   button: L('Visit Berkat Madinah Store', 'Lawati Berkat Madinah Store'),
                 },
@@ -362,7 +362,7 @@ async function main() {
                 { id: id('i'), icon: 'award', title: L('Established in 2010', 'Ditubuhkan pada 2010') },
                 { id: id('i'), icon: 'users', title: L('500,000+ customers served', '500,000+ pelanggan dilayan') },
                 { id: id('i'), icon: 'globe', title: L('6,000+ products from 15+ countries', '6,000+ produk dari 15+ negara') },
-                { id: id('i'), icon: 'pin', title: L('2 branches in Selangor', '2 cawangan di Selangor') },
+                { id: id('i'), icon: 'pin', title: L('5 branches in Selangor', '5 cawangan di Selangor') },
               ],
             },
           },
@@ -407,14 +407,14 @@ async function main() {
                   id: id('q'),
                   q: L('Where can I buy it in Malaysia?', 'Di mana saya boleh membelinya di Malaysia?'),
                   a: L(
-                    "Only through Berkat Madinah Store — at its Batu Caves / Prima Seri Gombak and Ampang Jaya branches in Selangor, on WhatsApp +60 11-1111 9912, or on the store's own Shopee and TikTok Shop counters.",
-                    'Hanya melalui Berkat Madinah Store — di cawangan Batu Caves / Prima Seri Gombak dan Ampang Jaya di Selangor, di WhatsApp +60 11-1111 9912, atau di kaunter Shopee dan TikTok Shop milik kedai itu sendiri.'
+                    "Only through Berkat Madinah Store — at any of its 5 branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) and Sri Gombak — stock can vary by branch), on WhatsApp +60 11-1111 9912, or on the store's own Shopee and TikTok Shop counters.",
+                    'Hanya melalui Berkat Madinah Store — di mana-mana 5 cawangannya di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak — stok mungkin berbeza mengikut cawangan), di WhatsApp +60 11-1111 9912, atau di kaunter Shopee dan TikTok Shop milik kedai itu sendiri.'
                   ),
                 },
                 {
                   id: id('q'),
                   q: L('What sizes does it come in?', 'Apakah saiz yang ada?'),
-                  a: L('250 ml and 500 ml, for the classic oil and for every infused flavour.', '250 ml dan 500 ml, untuk minyak klasik dan untuk setiap perisa infused.'),
+                  a: L('Extra Virgin and Organic Extra Virgin: 250 ml and 500 ml. Every infused flavour: 250 ml.', 'Extra Virgin dan Extra Virgin Organik: 250 ml dan 500 ml. Setiap perisa infused: 250 ml.'),
                 },
                 {
                   id: id('q'),
@@ -428,8 +428,8 @@ async function main() {
                   id: id('q'),
                   q: L('Do you deliver, or do I have to visit a branch?', 'Adakah anda menghantar, atau saya perlu ke cawangan?'),
                   a: L(
-                    "Both branches are in Selangor, and the store's Shopee and TikTok Shop counters deliver nationwide. Ask on WhatsApp +60 11-1111 9912 to check stock before travelling.",
-                    'Kedua-dua cawangan berada di Selangor, dan kaunter Shopee serta TikTok Shop kedai menghantar ke seluruh negara. Tanya di WhatsApp +60 11-1111 9912 untuk menyemak stok sebelum datang.'
+                    "All 5 branches are in Selangor, and the store's Shopee and TikTok Shop counters deliver nationwide. Ask on WhatsApp +60 11-1111 9912 to check stock before travelling.",
+                    'Kesemua 5 cawangan berada di Selangor, dan kaunter Shopee serta TikTok Shop kedai menghantar ke seluruh negara. Tanya di WhatsApp +60 11-1111 9912 untuk menyemak stok sebelum datang.'
                   ),
                 },
                 {

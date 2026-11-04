@@ -55,6 +55,8 @@ const MEDIA_SRC = [
   ['malaysian-woman-bottle-kampung', 'Customer holding a bottle at home', 'Pelanggan memegang botol di rumah'],
   ['woman-holding-bottle-nobg', '', ''],
   ['bottle-cutout', 'Olive oil bottle', 'Botol minyak zaitun'],
+  ['product-extra-virgin', 'Extra Virgin Palestinian Olive Oil bottle', 'Botol Minyak Zaitun Extra Virgin Palestin'],
+  ['product-extra-virgin-cutout', 'Extra Virgin bottle, transparent background', 'Botol Extra Virgin, latar telus'],
 ];
 const manifest = JSON.parse(readFileSync(join(OPT, 'manifest.json'), 'utf8'));
 for (const [name, en, ms] of MEDIA_SRC) {
@@ -75,29 +77,29 @@ for (const [name, en, ms] of MEDIA_SRC) {
 const uploads = new Map(); // file name -> {type, buf}
 
 const INFUSED = ['lavender-chamomile', 'blackseed', 'turmeric-black-pepper', 'rosemary-basil', 'fennel-anise', 'wild-thyme'];
-const CLASSIC = ['reserve', 'organic', 'classic', 'family', 'gold'];
+// The real catalogue (src/data/catalogue.json): Extra Virgin (cmsId 'classic'), Organic, six infused.
+const PRODUCTS = JSON.parse(readFileSync(join(ROOT, 'src/data/catalogue.json'), 'utf8')).products;
 const en = JSON.parse(readFileSync(join(ROOT, 'src/i18n/locales/en/common.json'), 'utf8'));
 const ms = JSON.parse(readFileSync(join(ROOT, 'src/i18n/locales/ms/common.json'), 'utf8'));
 const get = (o, path) => path.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
-const bottle = { name: 'bottle-cutout', width: 343, height: 1683, variants: [{ w: 343, url: '/cms-assets/bottle-cutout-343.webp' }] };
-const catalogue = [
-  ...INFUSED.map((id) => ({
-    id,
-    kind: 'infused',
-    href: { en: `/en/products/infused-extra-virgin-olive-oil-${id}`, ms: `/ms/products/infused-extra-virgin-olive-oil-${id}` },
-    name: { en: get(en, `infusedPage.products.${id}.name`) ?? id, ms: get(ms, `infusedPage.products.${id}.name`) ?? id },
-    tagline: { en: get(en, `infusedPage.products.${id}.tagline`) ?? '', ms: get(ms, `infusedPage.products.${id}.tagline`) ?? '' },
-    image: bottle,
-  })),
-  ...CLASSIC.map((id) => ({
-    id,
-    kind: 'classic',
-    href: { en: '/en/products', ms: '/ms/products' },
-    name: { en: get(en, `productShowcase.products.${id}.name`) ?? id, ms: get(ms, `productShowcase.products.${id}.name`) ?? id },
-    tagline: { en: get(en, `productShowcase.products.${id}.description`) ?? '', ms: get(ms, `productShowcase.products.${id}.description`) ?? '' },
-    image: bottle,
-  })),
-];
+/** Catalogue image in the shape the build writes (served from /cms-assets/). */
+const square = (name) => {
+  const m = manifest[name];
+  return { name, width: m.width, height: m.height, variants: m.widths.map((w) => ({ w, url: `/cms-assets/${name}-${w}.webp` })) };
+};
+/** Image-spot default in the mock's /uploads/cms shape (widest variant). */
+const spotDefault = (name) => {
+  const m = manifest[name];
+  return { name, width: m.width, height: m.height, url: `/uploads/cms/${name}-${m.widths.at(-1)}.webp` };
+};
+const catalogue = PRODUCTS.map((p) => ({
+  id: p.cmsId,
+  kind: p.kind,
+  href: p.kind === 'infused' ? { en: `/en/products/${p.slug}`, ms: `/ms/products/${p.slug}` } : { en: '/en/products', ms: '/ms/products' },
+  name: { en: get(en, `${p.i18n}.name`) ?? p.id, ms: get(ms, `${p.i18n}.name`) ?? p.id },
+  tagline: { en: get(en, `${p.i18n}.tagline`) ?? '', ms: get(ms, `${p.i18n}.tagline`) ?? '' },
+  image: square(p.image),
+}));
 
 // ---------------------------------------------------------------- site text structure (page-keys.json stand-in)
 
@@ -132,9 +134,14 @@ const structure = {
         ['Testimonials', 'testimonials'],
         ['FAQ', 'faq'],
       ]),
-      images: ['home.hero.bg', 'home.hero.bottle', 'home.story.woman', 'home.bottle.pour'],
+      images: ['home.hero.bg', 'home.hero.bottle', 'home.story.woman', 'home.bottle.pour', ...PRODUCTS.map((p) => `home.showcase.${p.cmsId}`)],
     },
-    products: { path: 'products', label: 'Products', groups: groupsOf([['Products page', 'productsPage']]), images: ['products.hero'] },
+    products: {
+      path: 'products',
+      label: 'Products',
+      groups: groupsOf([['Products page', 'productsPage']]),
+      images: ['products.hero', ...PRODUCTS.filter((p) => p.kind === 'classic').map((p) => `products.${p.cmsId}.photo`)],
+    },
     infused: {
       path: 'products/infused-extra-virgin-olive-oil-lavender-chamomile',
       paths: INFUSED.map((id) => `products/infused-extra-virgin-olive-oil-${id}`),
@@ -149,13 +156,19 @@ const structure = {
   },
   spots: {
     'home.hero.bg': { label: 'Home › Hero background', needsAlpha: false, default: { name: 'OliveGroveSunsetHero', width: 1672, height: 941, url: '/uploads/cms/OliveGroveSunsetHero-800.webp' } },
-    'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, default: { name: 'bottle-cutout', width: 343, height: 1683, url: '/uploads/cms/bottle-cutout-343.webp' } },
+    'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: false, default: spotDefault('product-extra-virgin') },
     'home.story.woman': { label: 'Home › Story photo', needsAlpha: true, default: { name: 'woman-holding-bottle-nobg', width: 895, height: 1277, url: '/uploads/cms/woman-holding-bottle-nobg-400.webp' } },
-    'home.bottle.pour': { label: 'Home › Pouring bottle', needsAlpha: true, default: { name: 'bottle-cutout', width: 343, height: 1683, url: '/uploads/cms/bottle-cutout-343.webp' } },
-    'products.hero': { label: 'Products › Hero bottle', needsAlpha: true, default: { name: 'bottle-cutout', width: 343, height: 1683, url: '/uploads/cms/bottle-cutout-343.webp' } },
+    'home.bottle.pour': { label: 'Home › Pouring bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-cutout') },
+    ...Object.fromEntries(
+      PRODUCTS.map((p) => [`home.showcase.${p.cmsId}`, { label: `Home › Products › ${get(en, `${p.i18n}.name`) ?? p.id}`, needsAlpha: false, default: spotDefault(p.image) }])
+    ),
+    'products.hero': { label: 'Products › Hero bottle', needsAlpha: false, default: spotDefault('product-extra-virgin') },
+    ...Object.fromEntries(
+      PRODUCTS.filter((p) => p.kind === 'classic').map((p) => [`products.${p.cmsId}.photo`, { label: `Products › ${get(en, `${p.i18n}.name`) ?? p.id} › Bottle photo`, needsAlpha: false, default: spotDefault(p.image) }])
+    ),
     'whyus.field': { label: 'Why us › Field photo', needsAlpha: false, default: { name: 'AVOliveOilInTheField', width: 750, height: 947, url: '/uploads/cms/AVOliveOilInTheField-400.webp' } },
     ...Object.fromEntries(
-      INFUSED.map((id) => [`infused.${id}.hero`, { label: `Infused › ${id} bottle`, needsAlpha: true, default: { name: 'bottle-cutout', width: 343, height: 1683, url: '/uploads/cms/bottle-cutout-343.webp' } }])
+      INFUSED.map((id) => [`infused.${id}.hero`, { label: `Infused › ${id} bottle`, needsAlpha: false, default: spotDefault(`product-infused-${id}`) }])
     ),
   },
 };
@@ -372,7 +385,7 @@ const docLanding = {
         title: L('Buy online or at the store', 'Beli dalam talian atau di kedai'),
         sub: L('', ''),
         items: [
-          { id: 'st1', store: 'madinah', title: L('Berkat Madinah Store', 'Berkat Madinah Store'), text: L('Two branches in Selangor.', 'Dua cawangan di Selangor.'), button: L('Visit the store', 'Lawati kedai') },
+          { id: 'st1', store: 'madinah', title: L('Berkat Madinah Store', 'Berkat Madinah Store'), text: L('Five branches in Selangor.', 'Lima cawangan di Selangor.'), button: L('Visit the store', 'Lawati kedai') },
           { id: 'st2', store: 'shopee', title: L('Shopee', 'Shopee'), text: L('', ''), button: L('Shop on Shopee', 'Beli di Shopee') },
           { id: 'st3', store: 'tiktok', title: L('TikTok Shop', 'TikTok Shop'), text: L('', ''), button: L('Shop on TikTok', 'Beli di TikTok') },
         ],

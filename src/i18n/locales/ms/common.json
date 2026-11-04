@@ -5,8 +5,8 @@
       "description": "Arabian Village menawarkan minyak zaitun Palestin tulen, diperah sejuk dan tidak diproses menggunakan kaedah tradisional turun-temurun. Ketahui ritual harian kami, standard kualiti, serta pilihan runcit dan borong."
     },
     "products": {
-      "title": "Produk Kami | Minyak Zaitun Palestin Organik 500ml — Arabian Village",
-      "description": "Minyak Zaitun Palestin Organik Arabian Village: perahan sejuk pertama, tuaian baharu, keasidan bawah 0.028%. Klasik dan enam rasa infusi, 250ml RM59 dan 500ml RM103, di Berkat Madinah Store."
+      "title": "Produk Kami | Minyak Zaitun Extra Virgin & Organik Palestin — Arabian Village",
+      "description": "Minyak zaitun Extra Virgin dan Extra Virgin Organik Palestin, perahan sejuk pertama, 250 ml dan 500 ml, serta enam rasa infusi 250 ml — di Berkat Madinah Store."
     },
     "shop": {
       "title": "Di Mana Untuk Beli | Shopee, TikTok Shop & Berkat Madinah Store — Arabian Village",
@@ -133,29 +133,7 @@
   },
   "productShowcase": {
     "kicker": "Koleksi Kami",
-    "title": "Setiap Hasil Tuaian, Dibotolkan",
-    "products": {
-      "reserve": {
-        "name": "Pilihan Simpanan",
-        "description": "Tuaian terhad dengan rasa berani dan kukuh, untuk peminat minyak zaitun extra virgin yang pekat."
-      },
-      "organic": {
-        "name": "Dusun Organik",
-        "description": "Organik, ditanam secara lestari dan diperah dengan cara tradisional yang tulen."
-      },
-      "classic": {
-        "name": "Arabian Village Klasik",
-        "description": "Perahan sejuk pertama tandatangan kami — minyak zaitun premium untuk dapur harian anda."
-      },
-      "family": {
-        "name": "Ladang Keluarga",
-        "description": "Tiga generasi daripada dusun yang sama, dibotolkan dengan penjagaan yang sama."
-      },
-      "gold": {
-        "name": "Tuaian Emas",
-        "description": "Tuaian awal dengan rasa lada yang berani, digemari peminat minyak zaitun sejati."
-      }
-    }
+    "title": "Setiap Hasil Tuaian, Dibotolkan"
   },
   "purchasePath": {
     "kicker": "Pengalaman",
@@ -298,41 +276,77 @@
   },
   "productsPage": {
     "kicker": "Produk Kami",
-    "title": "Minyak Zaitun Palestin Organik",
-    "intro": "Satu tuaian sebenar, dihasilkan dengan betul. Setiap botol Arabian Village diperah sejuk dalam beberapa jam selepas dipetik, daripada dusun organik di Palestin — tanpa haba, tanpa bahan kimia, tanpa jalan pintas.",
-    "product": {
-      "name": "Minyak Zaitun Palestin Organik",
-      "tagline": "Perahan Sejuk Pertama · Tuaian Baharu · Extra Virgin",
-      "description": "Botol tandatangan kami: 100% zaitun Palestin, dituai dengan tangan dan diperah sejuk dalam beberapa jam untuk mengekalkan aromanya, polifenolnya, dan rasa lada-rumput semula jadinya. Organik dan halal.",
-      "highlights": [
-        {
-          "label": "Keasidan",
-          "value": "Bawah 0.028%"
-        },
-        {
-          "label": "Perahan",
-          "value": "Perahan Sejuk Pertama"
-        },
-        {
-          "label": "Tuaian",
-          "value": "Tuaian Baharu"
-        },
-        {
-          "label": "Asal",
-          "value": "100% Palestin"
-        },
-        {
-          "label": "Jenis",
-          "value": "Extra Virgin"
-        },
-        {
-          "label": "Saiz",
-          "value": "250ml & 500ml"
-        }
-      ],
-      "priceLabel": "Harga",
-      "priceNote": "Di {{store}} — satu-satunya tempat Arabian Village dijual di Malaysia."
+    "title": "Minyak Zaitun Extra Virgin Palestin",
+    "intro": "Satu tuaian sebenar, dihasilkan dengan betul. Setiap botol Arabian Village diperah sejuk pertama daripada zaitun Palestin — tanpa haba, tanpa bahan kimia, tanpa jalan pintas. Pilih Extra Virgin, Extra Virgin Organik, atau salah satu daripada enam rasa infusi.",
+    "products": {
+      "extra-virgin": {
+        "name": "Minyak Zaitun Extra Virgin Palestin",
+        "tagline": "Perahan Sejuk Pertama · Tuaian Baharu · Ekstrak Sejuk",
+        "description": "Minyak zaitun extra virgin daripada zaitun Palestin, diekstrak secara sejuk pada perahan sejuk pertama daripada tuaian baharu. Botol harian untuk salad, cicah roti, hidangan akhir dan masakan pada suhu sederhana.",
+        "imageAlt": "Botol Minyak Zaitun Extra Virgin Palestin Arabian Village",
+        "highlights": [
+          {
+            "label": "Perahan",
+            "value": "Perahan Sejuk Pertama"
+          },
+          {
+            "label": "Tuaian",
+            "value": "Tuaian Baharu"
+          },
+          {
+            "label": "Asal",
+            "value": "Palestin"
+          },
+          {
+            "label": "Jenis",
+            "value": "Extra Virgin"
+          },
+          {
+            "label": "Saiz",
+            "value": "250 ml & 500 ml"
+          }
+        ]
+      },
+      "organic": {
+        "name": "Minyak Zaitun Extra Virgin Organik Palestin",
+        "tagline": "Organik · Perahan Sejuk Pertama · Tuaian Baharu",
+        "description": "Botol organik kami: 100% zaitun Palestin, dituai dengan tangan dan diperah sejuk dalam beberapa jam untuk mengekalkan aromanya, polifenolnya, dan rasa lada-rumput semula jadinya. Organik dan halal.",
+        "imageAlt": "Botol Minyak Zaitun Extra Virgin Organik Palestin Arabian Village",
+        "highlights": [
+          {
+            "label": "Keasidan",
+            "value": "Bawah 0.028%"
+          },
+          {
+            "label": "Perahan",
+            "value": "Perahan Sejuk Pertama"
+          },
+          {
+            "label": "Tuaian",
+            "value": "Tuaian Baharu"
+          },
+          {
+            "label": "Asal",
+            "value": "100% Palestin"
+          },
+          {
+            "label": "Jenis",
+            "value": "Extra Virgin Organik"
+          },
+          {
+            "label": "Saiz",
+            "value": "250 ml & 500 ml"
+          }
+        ]
+      }
     },
+    "price": {
+      "label": "Harga",
+      "size250": "250 ml",
+      "size500": "500 ml",
+      "inStore": "Harga di kedai — tanya kami di WhatsApp"
+    },
+    "storeNote": "Dijual di {{store}} — {{count}} cawangan di Selangor.",
     "benefitsKicker": "Kenapa Botol Ini",
     "links": {
       "shopTitle": "Bersedia Untuk Menempah?",
@@ -358,7 +372,7 @@
         },
         {
           "q": "Apakah maksud \"keasidan bawah 0.028%\"?",
-          "a": "Ia adalah ukuran ketulenan yang diuji makmal — semakin rendah keasidan, semakin segar dan berkualiti tinggi minyak zaitun extra virgin tersebut. Minyak kami jauh di bawah paras minimum extra virgin."
+          "a": "Ia ialah keasidan yang diuji makmal bagi Minyak Zaitun Extra Virgin Organik Palestin kami — ukuran ketulenan; semakin rendah, semakin segar dan berkualiti tinggi minyak extra virgin itu. Ia jauh di bawah paras minimum extra virgin."
         },
         {
           "q": "Boleh saya gunakan untuk memasak, atau hanya untuk perasa?",
@@ -366,15 +380,17 @@
         },
         {
           "q": "Adakah rasa atau saiz tambahan akan tersedia?",
-          "a": "Rangkaian hari ini ialah minyak klasik berserta enam rasa infusi, setiap satu dalam 250ml dan 500ml. Tiada apa-apa lagi sedang disediakan — jika berubah, halaman ini akan menyatakannya."
+          "a": "Rangkaian hari ini ialah dua minyak klasik — Extra Virgin dan Extra Virgin Organik, masing-masing dalam 250 ml dan 500 ml — serta enam rasa infusi dalam 250 ml. Tiada apa-apa lagi sedang disediakan — jika berubah, halaman ini akan menyatakannya."
         }
       ]
     },
     "whereToBuy": {
       "kicker": "Di Mana Nak Beli",
       "title": "Ada di {{store}}",
-      "text": "{{store}} ialah satu-satunya penjual Arabian Village di Malaysia. Kedua-dua cawangan menyimpan minyak klasik dan kesemua enam rasa infusi; penyenaraian Shopee dan TikTok Shop ialah kaunter dalam talian kedai yang sama.",
-      "hours": "Buka 8:00 pagi – 12:00 tengah malam, tujuh hari seminggu",
+      "text": "{{store}} ialah satu-satunya penjual Arabian Village di Malaysia, dengan {{count}} cawangan di Selangor. Penyenaraian Shopee dan TikTok Shop ialah kaunter dalam talian kedai yang sama.",
+      "stockNote": "Stok mungkin berbeza mengikut cawangan — WhatsApp kami dahulu sebelum datang.",
+      "noHours": "WhatsApp kami untuk waktu buka",
+      "mapsCta": "Buka di Google Maps",
       "whatsappCta": "Pesan melalui WhatsApp"
     }
   },
@@ -405,7 +421,7 @@
       "items": [
         {
           "q": "Platform mana yang perlu saya guna untuk menempah?",
-          "a": "Semuanya membawa kepada penjual yang sama. {{store}} ialah satu-satunya penjual Arabian Village di Malaysia; kaunter Shopee dan TikTok Shop ialah kedai yang sama dalam talian, pada harga yang sama. Pilih mana yang anda sudah guna, atau kunjungi cawangan di Ampang Jaya atau Batu Caves."
+          "a": "Semuanya membawa kepada penjual yang sama. {{store}} ialah satu-satunya penjual Arabian Village di Malaysia; kaunter Shopee dan TikTok Shop ialah kedai yang sama dalam talian, pada harga yang sama. Pilih mana yang anda sudah guna, atau kunjungi salah satu cawangannya di Selangor — halaman Produk menyenaraikan setiap alamat."
         },
         {
           "q": "Adakah anda menghantar ke seluruh Malaysia?",
@@ -444,8 +460,8 @@
         "desc": "Diperah secara mekanikal dalam beberapa jam selepas tuaian, tanpa haba atau bahan kimia, untuk melindungi aroma dan nutrien."
       },
       {
-        "title": "Organik & Halal Semula Jadi",
-        "desc": "Ditanam dan diproses menggunakan kaedah pertanian organik, dan halal secara semula jadi — berasaskan tumbuhan tanpa bahan daripada haiwan."
+        "title": "Halal Semula Jadi",
+        "desc": "Berasaskan tumbuhan tanpa bahan daripada haiwan, jadi halal secara semula jadi. Extra Virgin Organik kami ditanam dan diproses menggunakan kaedah pertanian organik."
       },
       {
         "title": "Tradisi Yang Masih Hidup",
@@ -479,8 +495,8 @@
     },
     "flavors": {
       "kicker": "Minyak Zaitun Kami",
-      "title": "Tuaian Hari Ini, Rasa Masa Depan",
-      "desc": "Buat masa ini, kami menumpukan segalanya kepada satu botol yang sempurna: Minyak Zaitun Palestin Organik, 500ml, perahan sejuk pertama. Rasa dan tuaian baharu sedang dalam persediaan — lihat kisah produk penuh di halaman Produk kami.",
+      "title": "Dua Minyak Klasik, Enam Rasa Infusi",
+      "desc": "Minyak Zaitun Extra Virgin Palestin dan Extra Virgin Organik Palestin, kedua-duanya perahan sejuk pertama, masing-masing dalam 250 ml dan 500 ml — serta enam rasa infusi dalam 250 ml. Lihat rangkaian penuh di halaman Produk kami.",
       "cta": "Terokai Produk Kami"
     },
     "faq": {
@@ -489,7 +505,7 @@
       "items": [
         {
           "q": "Kenapa beli Arabian Village berbanding jenama minyak zaitun lain?",
-          "a": "Asal Palestin yang boleh disahkan, perahan sejuk pertama sebenar dalam beberapa jam selepas tuaian, dan kualiti organik — dijual melalui pengedar yang telah dipercayai rakyat Malaysia."
+          "a": "Asal Palestin yang boleh disahkan, perahan sejuk pertama sebenar dalam beberapa jam selepas tuaian, dan pilihan organik — dijual melalui pengedar yang telah dipercayai rakyat Malaysia."
         },
         {
           "q": "Siapakah Berkat Madinah Store?",
@@ -497,7 +513,7 @@
         },
         {
           "q": "Adakah minyak zaitun Arabian Village organik?",
-          "a": "Ya, zaitun kami ditanam dan diproses menggunakan kaedah pertanian organik."
+          "a": "Minyak Zaitun Extra Virgin Organik Palestin kami ditanam dan diproses menggunakan kaedah pertanian organik. Botol Extra Virgin tidak membuat sebarang dakwaan organik."
         },
         {
           "q": "Adakah minyak zaitun Arabian Village halal?",
@@ -505,11 +521,11 @@
         },
         {
           "q": "Di mana saya boleh menjumpai produk Arabian Village secara fizikal?",
-          "a": "Melalui cawangan runcit Berkat Madinah Store di seluruh Malaysia, serta dalam talian melalui Berkat Madinah Store, Shopee, dan TikTok Shop."
+          "a": "Melalui cawangan Berkat Madinah Store di Selangor, serta dalam talian melalui Berkat Madinah Store, Shopee, dan TikTok Shop."
         },
         {
           "q": "Adakah Arabian Village akan menawarkan lebih banyak produk pada masa depan?",
-          "a": "Ya — rasa dan tuaian baharu sedang dibangunkan. Lawati halaman Produk kami untuk maklumat terkini."
+          "a": "Rangkaian hari ini ialah dua minyak klasik dan enam rasa infusi. Lawati halaman Produk kami untuk rangkaian terkini."
         }
       ]
     }
@@ -528,8 +544,7 @@
         "value": "cs@madinah.com.my"
       },
       "address": {
-        "label": "Alamat",
-        "value": "Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman, 68000 Ampang Jaya, Selangor"
+        "label": "Alamat"
       }
     },
     "form": {
@@ -625,7 +640,7 @@
   "infusedPage": {
     "kicker": "Koleksi Infusi",
     "collectionTitle": "Minyak Zaitun Dara Ekstra Infusi",
-    "collectionIntro": "Enam rasa daripada minyak zaitun Palestin perahan sejuk pertama kami, diinfusi perlahan dengan herba, bunga dan rempah asli. Kesemua enam ada di rak {{store}} — terokai setiap rasa di bawah.",
+    "collectionIntro": "Enam rasa daripada minyak zaitun Palestin perahan sejuk pertama kami, diinfusi perlahan dengan herba, bunga dan rempah asli, setiap satu dalam botol 250 ml. Kesemua enam dijual di {{store}} — terokai setiap rasa di bawah.",
     "notesTitle": "Rasa & Aroma",
     "benefitsTitle": "Kenapa Anda Akan Menyukainya",
     "usesTitle": "Cara Penggunaan",
@@ -633,13 +648,14 @@
     "backToProducts": "Lihat Semua Produk",
     "cta": {
       "title": "Di Mana Nak Beli Koleksi Infusi",
-      "text": "Setiap rasa ada di {{store}}, cawangan Ampang Jaya dan Batu Caves, buka 8:00 pagi hingga tengah malam setiap hari. WhatsApp dahulu untuk semak rasa tertentu sebelum anda bergerak.",
+      "text": "Koleksi infusi dijual di {{count}} cawangan {{store}} di Selangor, dalam botol 250 ml. Stok mungkin berbeza mengikut cawangan — WhatsApp dahulu untuk semak rasa tertentu sebelum anda datang.",
       "shopCta": "Di Mana Nak Beli",
       "contactCta": "Hubungi Kami"
     },
     "products": {
       "lavender-chamomile": {
         "name": "Minyak Zaitun Dara Ekstra Infusi Lavender & Kamomil",
+        "shortName": "Lavender & Kamomil",
         "tagline": "Tenang, berbunga dan keemasan",
         "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Lavender & Kamomil | Arabian Village",
         "seoDescription": "Minyak zaitun dara ekstra Palestin perahan sejuk, diinfusi perlahan dengan bunga lavender dan kamomil. Aroma bunga yang lembut dan akhiran semanis madu — sesuai untuk pencuci mulut, buah dan roti panas.",
@@ -664,6 +680,7 @@
       },
       "blackseed": {
         "name": "Minyak Zaitun Dara Ekstra Infusi Habbatus Sauda",
+        "shortName": "Habbatus Sauda",
         "tagline": "Biji yang berkat, dalam minyak keemasan",
         "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Habbatus Sauda | Arabian Village",
         "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan habbatus sauda (Nigella sativa). Hangat, berlada dan bersahaja — gandingan warisan untuk meja sarapan dan pencicah.",
@@ -688,6 +705,7 @@
       },
       "turmeric-black-pepper": {
         "name": "Minyak Zaitun Dara Ekstra Infusi Kunyit & Lada Hitam",
+        "shortName": "Kunyit & Lada Hitam",
         "tagline": "Kehangatan keemasan dengan sentakan lada",
         "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Kunyit & Lada Hitam | Arabian Village",
         "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan akar kunyit dan lada hitam tumbuk. Warna keemasan pekat dan kehangatan bersahaja — untuk dresing, perapan dan sayur panggang.",
@@ -712,6 +730,7 @@
       },
       "rosemary-basil": {
         "name": "Minyak Zaitun Dara Ekstra Infusi Rosemary & Selasih",
+        "shortName": "Rosemary & Selasih",
         "tagline": "Taman Mediterranean dalam sebotol",
         "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Rosemary & Selasih | Arabian Village",
         "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan rosemary dan selasih manis. Segar, hijau dan cerah — untuk mencicah roti, pasta dan hidangan panggang.",
@@ -736,6 +755,7 @@
       },
       "fennel-anise": {
         "name": "Minyak Zaitun Dara Ekstra Infusi Adas & Jintan Manis",
+        "shortName": "Adas & Jintan Manis",
         "tagline": "Manis, harum dan berempah lembut",
         "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Adas & Jintan Manis | Arabian Village",
         "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan biji adas dan jintan manis. Nota manis dan harum seakan likuoris — sesuai dengan makanan laut, salad sitrus dan pembakaran.",
@@ -760,6 +780,7 @@
       },
       "wild-thyme": {
         "name": "Minyak Zaitun Dara Ekstra Infusi Timi Liar (Za'atar)",
+        "shortName": "Timi Liar (Za'atar)",
         "tagline": "Warisan za'atar, terus dari perbukitan",
         "seoTitle": "Minyak Zaitun Dara Ekstra Infusi Timi Liar (Za'atar) | Arabian Village",
         "seoDescription": "Minyak zaitun dara ekstra Palestin diinfusi dengan timi liar (za'atar). Pekat, gurih dan berlada — teman klasik roti panas, labneh dan manakish.",
@@ -783,14 +804,16 @@
         ]
       }
     },
-    "availableBadge": "Kini di {{store}}"
+    "availableBadge": "Kini di {{store}}",
+    "inStoreNote": "Ada di kedai",
+    "size250": "250 ml"
   },
   "alt": {
     "logo": "Arabian Village",
-    "heroBottle": "Botol Minyak Zaitun Palestin Arabian Village",
+    "heroBottle": "Botol Minyak Zaitun Extra Virgin Palestin Arabian Village",
     "bottlePour": "Botol Minyak Zaitun Palestin Arabian Village, terbuka dan sedang dituang",
-    "storyWoman": "Wanita memegang sebotol minyak zaitun Palestin organik Arabian Village",
-    "productsHero": "Botol 500ml Minyak Zaitun Palestin Organik Arabian Village, perahan sejuk pertama",
+    "storyWoman": "Wanita memegang sebotol minyak zaitun Palestin Arabian Village",
+    "productsHero": "Botol Minyak Zaitun Extra Virgin Palestin Arabian Village, perahan sejuk pertama",
     "whyUsField": "Botol minyak zaitun Arabian Village di tengah kebun zaitun Palestin"
   }
 }

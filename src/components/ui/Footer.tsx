@@ -10,7 +10,7 @@ import { MADINAH_NAME, MADINAH_URL } from '../../config/site';
 import { SOCIAL_LINKS } from '../../data/social';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 
-const NAV_LINK = 'font-light text-cream/70 transition-colors duration-300 hover:text-gold';
+const NAV_LINK = 'text-cream/70 transition-colors duration-300 hover:text-gold-light';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -30,7 +30,7 @@ export function Footer() {
       <div dir="ltr" className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1.2fr]">
         <div>
           <img src={logo} alt={t('alt.logo')} {...cmsAttr({ alt: 'alt.logo' })} className="h-10 brightness-0 invert" />
-          <p {...cmsText('footer.tagline')} className="mt-6 max-w-xs font-light leading-relaxed text-cream/60">
+          <p {...cmsText('footer.tagline')} className="mt-6 max-w-xs leading-relaxed text-cream/60">
             {t('footer.tagline')}
           </p>
           <div className="mt-6 flex gap-3">
@@ -41,7 +41,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/70 transition-colors duration-300 hover:border-gold hover:text-gold"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/70 transition-colors duration-300 hover:border-gold hover:text-gold-light"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -51,7 +51,7 @@ export function Footer() {
             href={MADINAH_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-light text-cream/70 transition-colors duration-300 hover:text-gold"
+            className="mt-5 inline-flex items-center gap-2 text-sm text-cream/70 transition-colors duration-300 hover:text-gold-light"
           >
             <FaStore className="h-4 w-4 shrink-0" />
             {MADINAH_NAME}
@@ -63,7 +63,7 @@ export function Footer() {
                 {...langSwitchTarget(lang, l.code, subPath)}
                 data-cms-lang-link={l.code}
                 className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
-                  l.code === lang ? 'text-gold' : 'text-cream/60 hover:text-gold'
+                  l.code === lang ? 'text-gold-light' : 'text-cream/60 hover:text-gold-light'
                 }`}
               >
                 {l.short}
@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p {...cmsText('footer.navigate')} className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.navigate')}</p>
+          <p {...cmsText('footer.navigate')} className="text-xs uppercase tracking-[0.3em] text-gold-light">{t('footer.navigate')}</p>
           <ul data-cms-menu="footer" className="mt-5 space-y-3">
             {NAV_LINKS.map((link) => (
               <li key={link.key}>
@@ -100,8 +100,8 @@ export function Footer() {
         </div>
 
         <div>
-          <p {...cmsText('footer.stayInTouch')} className="text-xs uppercase tracking-[0.3em] text-gold">{t('footer.stayInTouch')}</p>
-          <p {...cmsText('footer.newsletterText')} className="mt-5 font-light text-cream/60">{t('footer.newsletterText')}</p>
+          <p {...cmsText('footer.stayInTouch')} className="text-xs uppercase tracking-[0.3em] text-gold-light">{t('footer.stayInTouch')}</p>
+          <p {...cmsText('footer.newsletterText')} className="mt-5 text-cream/60">{t('footer.newsletterText')}</p>
           <form
             className="mt-5 flex overflow-hidden rounded-full border border-cream/20 focus-within:border-gold"
             onSubmit={(e) => {
@@ -138,7 +138,7 @@ export function Footer() {
           every page of the site. */}
       <div
         suppressHydrationWarning
-        className="relative z-10 mx-auto mt-16 max-w-6xl border-t border-cream/10 pt-6 text-center text-xs font-light text-cream/40 md:text-start"
+        className="relative z-10 mx-auto mt-16 max-w-6xl border-t border-cream/10 pt-6 text-center text-xs text-cream/60 md:text-start"
       >
         © {new Date().getFullYear()} Arabian Village. <span {...cmsText('footer.rights')}>{t('footer.rights')}</span>
       </div>

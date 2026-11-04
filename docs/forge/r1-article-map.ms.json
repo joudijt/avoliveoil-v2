@@ -1,0 +1,800 @@
+[
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "keyTakeaway",
+    "old": "Arabian Village dijual melalui Berkat Madinah Store — cawangan Ampang Jaya dan Batu Caves, buka 8:00 pagi hingga 12:00 tengah malam setiap hari, serta kaunter Shopee dan TikTok Shop mereka sendiri.",
+    "new": "Arabian Village dijual melalui Berkat Madinah Store — lima cawangan di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak), serta kaunter Shopee dan TikTok Shop mereka sendiri. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "wholeField": false
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[4].blocks[0].text",
+    "old": "Ada dua cawangan, Ampang Jaya dan Batu Caves, dan Batu Caves ialah yang lebih besar. Waktu operasi kedua-duanya 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad.",
+    "new": "Kini ada lima cawangan di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad; untuk cawangan lain, WhatsApp dahulu untuk sahkan waktu buka. Stok boleh berbeza ikut cawangan.",
+    "wholeField": false
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[5].blocks[1].rows[0][0]",
+    "old": "Cawangan Ampang Jaya",
+    "new": "Cawangan Ampang dan Sri Gombak",
+    "wholeField": true
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[5].blocks[1].rows[0][1]",
+    "old": "KL timur",
+    "new": "KL timur dan utara",
+    "wholeField": true
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[5].blocks[1].rows[1][0]",
+    "old": "Cawangan Batu Caves",
+    "new": "Cawangan Kajang, Shah Alam dan Cash & Carry (Ampang)",
+    "wholeField": true
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[5].blocks[1].rows[1][1]",
+    "old": "Pilihan terluas",
+    "new": "Lebih banyak lokasi di Selangor",
+    "wholeField": true
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[5].blocks[1].rows[1][2]",
+    "old": "Cawangan lebih besar",
+    "new": "WhatsApp untuk sahkan waktu buka",
+    "wholeField": true
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "sections[6].blocks[0].text",
+    "old": "Botol 250 ml berharga RM59.00 dan botol 500 ml berharga RM103.00. Harga mengikut saiz itu sama untuk minyak klasik dan untuk setiap perisa Infused Collection.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik pula RM69.00 dan RM129.00. Setiap perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "faqs[0].a",
+    "old": "Untuk Arabian Village, dua kaunter fizikalnya ialah Berkat Madinah Store cawangan Ampang Jaya dan cawangan Batu Caves, dan Batu Caves ialah yang lebih besar. Kedua-duanya buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "new": "Untuk Arabian Village, kaunter fizikalnya ialah lima cawangan Berkat Madinah Store di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari; untuk cawangan lain, WhatsApp dahulu untuk sahkan waktu buka.",
+    "wholeField": false
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "faqs[1].a",
+    "old": "8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad, di kedua-dua cawangan.",
+    "new": "Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad. Untuk Kajang, Shah Alam dan Cash & Carry (Ampang), sahkan waktu buka melalui WhatsApp.",
+    "wholeField": false
+  },
+  {
+    "id": "beli-minyak-zaitun-kl",
+    "path": "faqs[3].a",
+    "old": "RM59.00 untuk botol 250 ml dan RM103.00 untuk botol 500 ml. Harga mengikut saiz itu sama untuk minyak klasik dan untuk setiap perisa dalam Infused Collection, jadi anda memilih perisa mengikut cara anda memasak, bukan mengikut bajet yang tinggal.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml. Versi Organik berharga RM69.00 (250 ml) dan RM129.00 (500 ml). Enam perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "metaDescription",
+    "old": "RM59.00 bagi 250 ml, RM103.00 bagi 500 ml.",
+    "new": "RM59.00 bagi 250 ml, RM109.00 bagi 500 ml.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "keyTakeaway",
+    "old": "Arabian Village berharga RM59.00 bagi botol 250 ml dan RM103.00 bagi botol 500 ml. Tukar kepada seliter dan angkanya jadi RM236.00 berbanding RM206.00 — botol 500 ml RM30.00 lebih murah bagi jumlah minyak yang sama.",
+    "new": "Minyak Zaitun Extra Virgin Palestin Arabian Village berharga RM59.00 bagi botol 250 ml dan RM109.00 bagi botol 500 ml. Tukar kepada seliter dan angkanya jadi RM236.00 berbanding RM218.00 — botol 500 ml RM18.00 lebih murah bagi setiap liter minyak yang sama.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "intro[0]",
+    "old": "RM59.00 dan RM103.00 tak boleh dibanding",
+    "new": "RM59.00 dan RM109.00 tak boleh dibanding",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[0].blocks[0].text",
+    "old": "Minyak zaitun dara extra virgin sejuk perah Arabian Village berharga **RM59.00** bagi botol 250 ml dan **RM103.00** bagi botol 500 ml di Malaysia. Harga itu sama untuk minyak klasik dan untuk setiap perisa dalam Infused Collection — memilih perisa tidak menaikkan harga botol anda.",
+    "new": "Minyak zaitun dara extra virgin sejuk perah Arabian Village berharga **RM59.00** bagi botol 250 ml dan **RM109.00** bagi botol 500 ml di Malaysia. Versi organiknya berharga **RM69.00** (250 ml) dan **RM129.00** (500 ml), iaitu RM276.00 dan RM258.00 seliter. Enam perisa Infused Collection pula hanya dijual dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[0].blocks[1].rows[1][1]",
+    "old": "RM103.00",
+    "new": "RM109.00",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[0].blocks[1].rows[1][2]",
+    "old": "RM206.00",
+    "new": "RM218.00",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[2].blocks[0].text",
+    "old": "Botol 500 ml pada RM103.00 menjadi RM206.00 seliter.",
+    "new": "Botol 500 ml pada RM109.00 menjadi RM218.00 seliter.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[2].blocks[1].items[0]",
+    "old": "Ambil harga botol: RM103.00.",
+    "new": "Ambil harga botol: RM109.00.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[2].blocks[1].items[1]",
+    "old": "Bahagi dengan mililiter: RM103.00 ÷ 500 = RM0.206.",
+    "new": "Bahagi dengan mililiter: RM109.00 ÷ 500 = RM0.218.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[2].blocks[1].items[2]",
+    "old": "Darab dengan 1,000: RM206.00 seliter.",
+    "new": "Darab dengan 1,000: RM218.00 seliter.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[3].blocks[0].text",
+    "old": "Botol 500 ml, dan bezanya bukan kecil. Seliter, ia RM206.00 berbanding RM236.00 — anda jimat RM30.00 bagi setiap liter minyak yang sama. Beli dua botol 250 ml pula memberi 500 ml pada RM118.00, iaitu RM15.00 lebih mahal daripada satu botol 500 ml yang berharga RM103.00.",
+    "new": "Botol 500 ml, walaupun bezanya sederhana. Seliter, ia RM218.00 berbanding RM236.00 — anda jimat RM18.00 bagi setiap liter minyak yang sama. Beli dua botol 250 ml pula memberi 500 ml pada RM118.00, iaitu RM9.00 lebih mahal daripada satu botol 500 ml yang berharga RM109.00.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "sections[5].blocks[0].text",
+    "old": "Beli di kaunter mereka di **Ampang Jaya** dan **Batu Caves** — Batu Caves lebih besar — atau melalui storefront Shopee dan TikTok Shop mereka sendiri. Waktu buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad.",
+    "new": "Beli di mana-mana daripada lima cawangan mereka di Selangor — **Ampang**, **Kajang**, **Shah Alam**, **Cash & Carry (Ampang)** dan **Sri Gombak** — atau melalui storefront Shopee dan TikTok Shop mereka sendiri. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad; stok boleh berbeza ikut cawangan, jadi WhatsApp dahulu.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "conclusion.blocks[0].text",
+    "old": "RM103.00 bagi 500 ml ialah RM206.00 seliter.",
+    "new": "RM109.00 bagi 500 ml ialah RM218.00 seliter.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "faqs[0].a",
+    "old": "Harga sama dikenakan untuk minyak klasik dan setiap perisa Infused Collection, jadi memilih perisa tidak mengubah apa yang anda bayar bagi saiz botol itu.",
+    "new": "Versi organik 250 ml pula berharga RM69.00, manakala perisa Infused Collection juga datang dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "faqs[1].a",
+    "old": "Botol 500 ml berharga RM103.00, iaitu RM206.00 seliter. Berbanding botol 250 ml yang menjadi RM236.00 seliter, anda jimat RM30.00 bagi setiap liter. Dua botol 250 ml memberi jumlah minyak yang sama tetapi berharga RM118.00, jadi satu botol 500 ml RM15.00 lebih murah.",
+    "new": "Botol 500 ml Extra Virgin berharga RM109.00, iaitu RM218.00 seliter. Berbanding botol 250 ml yang menjadi RM236.00 seliter, anda jimat RM18.00 bagi setiap liter. Dua botol 250 ml memberi jumlah minyak yang sama tetapi berharga RM118.00, jadi satu botol 500 ml RM9.00 lebih murah. Botol organik 500 ml berharga RM129.00.",
+    "wholeField": true
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "faqs[2].a",
+    "old": "botol 500 ml menjadi RM206.00 seliter.",
+    "new": "botol 500 ml menjadi RM218.00 seliter.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "faqs[4].a",
+    "old": "Tidak. Setiap perisa dalam Infused Collection — lavender-chamomile, blackseed, turmeric-black-pepper, rosemary-basil, fennel-anise dan wild-thyme — berharga sama dengan minyak klasik pada saiz yang sama: RM59.00 bagi 250 ml dan RM103.00 bagi 500 ml.",
+    "new": "Harganya belum disenaraikan dalam talian. Setiap perisa dalam Infused Collection — lavender-chamomile, blackseed, turmeric-black-pepper, rosemary-basil, fennel-anise dan wild-thyme — dijual dalam botol 250 ml sahaja, dan harganya boleh ditanya di kedai atau melalui WhatsApp.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "faqs[5].a",
+    "old": "Beli di kaunter cawangan Ampang Jaya atau Batu Caves, atau melalui storefront Shopee dan TikTok Shop mereka sendiri. Waktu buka 8:00 pagi hingga 12:00 tengah malam setiap hari; hari perayaan boleh berbeza.",
+    "new": "Beli di mana-mana daripada lima cawangannya di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak), atau melalui storefront Shopee dan TikTok Shop mereka sendiri. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari; hari perayaan boleh berbeza.",
+    "wholeField": false
+  },
+  {
+    "id": "harga-minyak-zaitun-malaysia",
+    "path": "related[1].description",
+    "old": "Kaunter Ampang Jaya dan Batu Caves, serta Shopee dan TikTok Shop Berkat Madinah.",
+    "new": "Lima cawangan di Selangor, serta Shopee dan TikTok Shop Berkat Madinah.",
+    "wholeField": true
+  },
+  {
+    "id": "jenama-minyak-zaitun-terbaik",
+    "path": "sections[5].blocks[1].rows[1][1]",
+    "old": "RM103.00",
+    "new": "RM109.00",
+    "wholeField": true
+  },
+  {
+    "id": "jenama-minyak-zaitun-terbaik",
+    "path": "sections[5].blocks[1].rows[1][2]",
+    "old": "RM206.00",
+    "new": "RM218.00",
+    "wholeField": true
+  },
+  {
+    "id": "jenama-minyak-zaitun-terbaik",
+    "path": "faqs[4].a",
+    "old": "Bagi Arabian Village, tidak. Harga ditetapkan mengikut saiz — RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml — dan harga itu sama untuk minyak klasik mahupun mana-mana perisa seperti [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme). Anda boleh menyemak dasar harga jenama lain dengan cara yang sama.",
+    "new": "Bagi Arabian Village, harga perisa seperti [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme) belum disenaraikan dalam talian — ia dijual dalam botol 250 ml sahaja, dengan harga di kedai. Minyak extra virgin klasik pula RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml. Untuk jenama lain, semak harga seliter dengan cara yang sama.",
+    "wholeField": true
+  },
+  {
+    "id": "jenama-minyak-zaitun-terbaik",
+    "path": "faqs[5].a",
+    "old": "Arabian Village diedar di Malaysia oleh Berkat Madinah Store, yang mempunyai dua cawangan: Ampang Jaya dan Batu Caves, dengan Batu Caves lebih besar. Waktu buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "new": "Arabian Village diedar di Malaysia oleh Berkat Madinah Store, yang mempunyai lima cawangan di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari, dan stok boleh berbeza ikut cawangan.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-extra-virgin-gred",
+    "path": "sections[4].blocks[1].text",
+    "old": "250 ml berharga **RM59.00** dan 500 ml **RM103.00** — botol besar lebih murah seliter. Harga sama mengikut saiz terpakai untuk setiap perisa Koleksi Infused.",
+    "new": "250 ml berharga **RM59.00** dan 500 ml **RM109.00** — botol besar lebih murah seliter. Perisa Koleksi Infused pula hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-extra-virgin-gred",
+    "path": "faqs[4].a",
+    "old": "Botol 250 ml berharga RM59.00 dan botol 500 ml berharga RM103.00. Harga itu sama mengikut saiz untuk minyak klasik dan untuk setiap perisa dalam Koleksi Infused.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml. Versi Organik berharga RM69.00 dan RM129.00, manakala perisa Koleksi Infused hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-extra-virgin-gred",
+    "path": "faqs[5].a",
+    "old": "mempunyai dua cawangan — Ampang Jaya dan Batu Caves, dengan Batu Caves yang lebih besar. Waktu buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad.",
+    "new": "mempunyai lima cawangan di Selangor — Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-halal",
+    "path": "sections[5].blocks[3].text",
+    "old": "dengan cawangan di Ampang Jaya dan Batu Caves — tanya",
+    "new": "dengan lima cawangan di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak) — tanya",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-halal",
+    "path": "faqs[5].a",
+    "old": "Berkat Madinah Store mempunyai dua cawangan, iaitu di Ampang Jaya dan di Batu Caves, dan cawangan Batu Caves adalah yang lebih besar. Kedua-duanya buka dari 8:00 pagi hingga 12:00 tengah malam setiap hari, kecuali hari perayaan yang mungkin berbeza.",
+    "new": "Berkat Madinah Store mempunyai lima cawangan di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka dari 8:00 pagi hingga 12:00 tengah malam setiap hari, kecuali hari perayaan yang mungkin berbeza; untuk cawangan lain, WhatsApp dahulu untuk sahkan waktu buka.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-halal",
+    "path": "related[0].description",
+    "old": "Minyak zaitun dara klasik dan siri Infused Collection, RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml.",
+    "new": "Minyak zaitun dara klasik pada RM59.00 (250 ml) dan RM109.00 (500 ml), serta siri Infused Collection dalam botol 250 ml.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-halal",
+    "path": "related[3].description",
+    "old": "WhatsApp, dua cawangan dan waktu buka Berkat Madinah Store untuk sebarang soalan bahan atau dokumen.",
+    "new": "WhatsApp, lima cawangan dan waktu buka Berkat Madinah Store untuk sebarang soalan bahan atau dokumen.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-organik",
+    "path": "sections[5].blocks[1].text",
+    "old": "botol 500 ml pada **RM103.00** bersamaan RM206 seliter.",
+    "new": "botol 500 ml pada **RM109.00** bersamaan RM218 seliter.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-organik",
+    "path": "faqs[5].a",
+    "old": "Anda juga boleh tanya di kaunter Ampang Jaya atau Batu Caves, yang dibuka 8:00 pagi hingga 12:00 tengah malam.",
+    "new": "Anda juga boleh tanya di lima cawangan Berkat Madinah Store di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak); cawangan Ampang dan Sri Gombak dibuka 8:00 pagi hingga 12:00 tengah malam.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-organik",
+    "path": "related[3].description",
+    "old": "Kaunter Berkat Madinah Store di Ampang Jaya dan Batu Caves, serta saluran dalam talian rasminya.",
+    "new": "Lima cawangan Berkat Madinah Store di Selangor, serta saluran dalam talian rasminya.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-palestin",
+    "path": "sections[5].blocks[0].text",
+    "old": "Ia dijual di dua cawangan kedai itu, di Ampang Jaya dan di Batu Caves, dan cawangan Batu Caves ialah yang lebih besar. Kedai dibuka dari 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad.",
+    "new": "Ia dijual di lima cawangan kedai itu di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak dibuka dari 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad, dan stok boleh berbeza ikut cawangan.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-palestin",
+    "path": "sections[5].blocks[1].text",
+    "old": "Harganya RM59.00 untuk botol 250 ml dan RM103.00 untuk 500 ml, sama harga mengikut saiz untuk minyak klasik mahupun mana-mana perisa dalam [koleksi infused](/products).",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk 500 ml, dan versi Organik RM69.00 dan RM129.00. Perisa dalam [koleksi infused](/products) hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-palestin",
+    "path": "faqs[4].a",
+    "old": "Botol 250 ml berharga RM59.00 dan botol 500 ml berharga RM103.00. Harga sama mengikut saiz untuk minyak klasik dan untuk setiap perisa dalam koleksi infused.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik RM69.00 dan RM129.00. Perisa dalam koleksi infused hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-palestin",
+    "path": "related[2].description",
+    "old": "Kaunter di Ampang Jaya dan Batu Caves, serta Shopee dan TikTok Shop milik Berkat Madinah.",
+    "new": "Lima cawangan di Selangor, serta Shopee dan TikTok Shop milik Berkat Madinah.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-masak",
+    "path": "sections[4].blocks[1].text",
+    "old": "pada RM59.00 (250 ml) dan RM103.00 (500 ml).",
+    "new": "pada RM59.00 (250 ml) dan RM109.00 (500 ml).",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-masak",
+    "path": "faqs[4].a",
+    "old": "RM59.00 untuk botol 250 ml dan RM103.00 untuk botol 500 ml. Harga sama mengikut saiz untuk minyak klasik dan untuk setiap perisa Infused Collection, jadi pilihan perisa tidak mengubah kos.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik RM69.00 dan RM129.00. Perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-masak",
+    "path": "faqs[5].a",
+    "old": "Di dua cawangan Berkat Madinah Store — Ampang Jaya dan Batu Caves, yang lebih besar — dari 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "new": "Di lima cawangan Berkat Madinah Store di Selangor — Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "metaDescription",
+    "old": "bacaan bahan, harga RM59 dan RM103.",
+    "new": "bacaan bahan, saiz 250 ml dan tempat membelinya.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "sections[5].blocks[0].text",
+    "old": "Harganya sama seperti setiap botol lain dalam Infused Collection: RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml. Ditukar kepada seliter, itu RM236 berbanding RM206. Botol besar lebih jimat setiap mililiter, dan perbandingan seliter itulah cara paling jujur menilai dua botol yang berlainan saiz.",
+    "new": "Seperti setiap perisa dalam Infused Collection, minyak ini dijual dalam botol 250 ml sahaja, dan harganya boleh ditanya terus di kedai atau melalui WhatsApp. Untuk membanding dengan botol lain, tukar harga kepada seliter: harga botol dibahagi 250, kemudian darab 1,000 — itulah cara paling jujur menilai dua botol yang berlainan saiz.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "sections[5].blocks[3].items[0]",
+    "old": "Berkat Madinah Store ialah pengedar rasmi dan satu-satunya di Malaysia, dengan dua cawangan yang menyimpan jenama ini.",
+    "new": "Berkat Madinah Store ialah pengedar rasmi dan satu-satunya di Malaysia, dengan lima cawangan di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Stok boleh berbeza ikut cawangan.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "sections[5].blocks[3].items[1]",
+    "old": "Ampang Jaya: Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman, 68000 Ampang Jaya, Selangor.",
+    "new": "Ampang: 17-L1, Jalan Ampang Putra 6, Taman Putra Sulaiman, 68000 Ampang, Selangor.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "sections[5].blocks[3].items[2]",
+    "old": "Batu Caves, cawangan lebih besar: 32, Jalan Prima SG 2, Prima Seri Gombak, 68100 Batu Caves, Selangor.",
+    "new": "Sri Gombak: 32, Jalan Prima SG 2, Prima Seri Gombak, 68100 Batu Caves, Selangor.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "sections[5].blocks[3].items[3]",
+    "old": "Buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "new": "Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari; alamat cawangan lain ada di [halaman tempat membeli](/shop).",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "faqs[4].a",
+    "old": "RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml. Kalau ini kali pertama anda mencuba minyak berperisa, mulakan dengan 250 ml sebelum ambil botol besar.",
+    "new": "Ia dijual dalam botol 250 ml sahaja, dan harganya ada di kedai — tanya di cawangan atau melalui WhatsApp di +60 11-1111 9912. Saiz 250 ml itu juga sesuai untuk kali pertama anda mencuba minyak berperisa.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "faqs[7].a",
+    "old": "Di dua cawangan Berkat Madinah Store, di Ampang Jaya dan Batu Caves, serta melalui Shopee dan TikTok Shop yang dikendalikan kedai yang sama.",
+    "new": "Di lima cawangan Berkat Madinah Store di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak), serta melalui Shopee dan TikTok Shop yang dikendalikan kedai yang sama. Stok boleh berbeza ikut cawangan, jadi WhatsApp dahulu.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "related[0].description",
+    "old": "Halaman produk penuh: senarai bahan, saiz 250 ml dan 500 ml, dan nota rasa.",
+    "new": "Halaman produk penuh: senarai bahan, saiz 250 ml, dan nota rasa.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-habbatus-sauda",
+    "path": "related[3].description",
+    "old": "RM59 dan RM103, perbandingan seliter, dan apa yang ada di sebalik harga itu.",
+    "new": "RM59 dan RM109 untuk minyak klasik, perbandingan seliter, dan apa yang ada di sebalik harga itu.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-salad",
+    "path": "sections[4].blocks[0].text",
+    "old": "Enam pilihan itu berharga sama seperti minyak klasik mengikut saiz botol.",
+    "new": "Enam pilihan itu dijual dalam botol 250 ml sahaja, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-salad",
+    "path": "sections[5].blocks[3].text",
+    "old": "Botol 500 ml pada RM103.00 turun kepada RM206 seliter",
+    "new": "Botol 500 ml pada RM109.00 turun kepada RM218 seliter",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-salad",
+    "path": "faqs[6].a",
+    "old": "RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml — harga yang sama mengikut saiz untuk minyak klasik dan setiap perisa Infused Collection.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml; versi Organik RM69.00 dan RM129.00. Setiap perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": true
+  },
+  {
+    "id": "zaitun-dalam-al-quran",
+    "path": "sections[5].blocks[0].text",
+    "old": "Botol 250 ml berharga RM59.00 dan botol 500 ml RM103.00, iaitu harga yang sama mengikut saiz untuk minyak klasik dan setiap rasa Koleksi Infusi.",
+    "new": "Botol 250 ml berharga RM59.00 dan botol 500 ml RM109.00; versi Organik RM69.00 dan RM129.00. Setiap rasa Koleksi Infusi hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "zaitun-dalam-al-quran",
+    "path": "sections[5].blocks[1].text",
+    "old": "Kedai itu ada dua cawangan, di Ampang Jaya dan di Batu Caves (Prima Seri Gombak), dan cawangan Batu Caves lebih besar. Waktu buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad. Hari perayaan seperti Hari Raya boleh berbeza, jadi sahkan dahulu melalui WhatsApp.",
+    "new": "Kedai itu ada lima cawangan di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak, dan stok boleh berbeza ikut cawangan. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam, Isnin hingga Ahad. Untuk cawangan lain dan hari perayaan seperti Hari Raya, sahkan waktu buka dahulu melalui WhatsApp.",
+    "wholeField": false
+  },
+  {
+    "id": "zaitun-dalam-al-quran",
+    "path": "faqs[6].a",
+    "old": "RM59.00 untuk 250 ml dan RM103.00 untuk 500 ml, melalui Berkat Madinah Store di Ampang Jaya dan Batu Caves, atau kaunter Shopee dan TikTok Shop mereka.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml, melalui lima cawangan Berkat Madinah Store di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak), atau kaunter Shopee dan TikTok Shop mereka.",
+    "wholeField": true
+  },
+  {
+    "id": "botol-minyak-zaitun",
+    "path": "sections[5].blocks[0].text",
+    "old": "Arabian Village dijual di dua cawangan Berkat Madinah Store di Selangor, iaitu di Ampang Jaya dan di Batu Caves.",
+    "new": "Arabian Village dijual di lima cawangan Berkat Madinah Store di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak.",
+    "wholeField": false
+  },
+  {
+    "id": "botol-minyak-zaitun",
+    "path": "faqs[6].a",
+    "old": "RM59.00 untuk botol 250 ml dan RM103.00 untuk botol 500 ml, iaitu RM236 dan RM206 seliter. Harga itu sama mengikut saiz untuk minyak klasik dan untuk setiap perisa Infused Collection.",
+    "new": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml, iaitu RM236 dan RM218 seliter. Versi Organik berharga RM69.00 dan RM129.00, manakala perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-goreng",
+    "path": "sections[3].blocks[1].rows[1][1]",
+    "old": "RM103.00",
+    "new": "RM109.00",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-goreng",
+    "path": "sections[3].blocks[1].rows[1][2]",
+    "old": "RM206",
+    "new": "RM218",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-masak",
+    "path": "sections[3].blocks[1].rows[1][1]",
+    "old": "RM103.00",
+    "new": "RM109.00",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-masak",
+    "path": "sections[3].blocks[1].rows[1][2]",
+    "old": "RM206",
+    "new": "RM218",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-goreng",
+    "path": "sections[3].blocks[3].text",
+    "old": "Pada RM206 seliter, dua liter dalam periuk bermakna lebih empat ratus ringgit minyak",
+    "new": "Pada RM218 seliter, dua liter dalam periuk bermakna lebih empat ratus ringgit minyak",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-masak",
+    "path": "faqs[2].a",
+    "old": "RM103.00 untuk 500 ml, iaitu RM236 dan RM206 seliter.",
+    "new": "RM109.00 untuk 500 ml, iaitu RM236 dan RM218 seliter.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-masak",
+    "path": "faqs[5].a",
+    "old": "botol 500 ml pada RM103.00 lebih murah setiap liter",
+    "new": "botol 500 ml pada RM109.00 lebih murah setiap liter",
+    "wholeField": false
+  },
+  {
+    "id": "beli-minyak-zaitun-online",
+    "path": "sections[4].blocks[1].text",
+    "old": "Arabian Village di Malaysia diedarkan oleh Berkat Madinah Store, dua cawangan di Selangor.",
+    "new": "Arabian Village di Malaysia diedarkan oleh Berkat Madinah Store, dengan lima cawangan di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak).",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-ikan-bakar",
+    "path": "faqs[6].a",
+    "old": "dengan dua cawangan di Selangor serta",
+    "new": "dengan lima cawangan di Selangor serta",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-pasta",
+    "path": "faqs[5].a",
+    "old": "dengan dua cawangan di Selangor serta",
+    "new": "dengan lima cawangan di Selangor serta",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-untuk-roti",
+    "path": "faqs[6].a",
+    "old": "Di Berkat Madinah Store sahaja, satu-satunya penjual sah di Malaysia: cawangan Ampang Jaya dan Batu Caves di Selangor, serta kaunter Shopee dan TikTok Shop milik mereka sendiri.",
+    "new": "Di Berkat Madinah Store sahaja, satu-satunya penjual sah di Malaysia: lima cawangan di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak), serta kaunter Shopee dan TikTok Shop milik mereka sendiri.",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-original-cara-pastikan",
+    "path": "sections[4].blocks[1].text",
+    "old": "dengan cawangan di Ampang Jaya dan Batu Caves serta kaunter",
+    "new": "dengan lima cawangan di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak) serta kaunter",
+    "wholeField": false
+  },
+  {
+    "id": "minyak-zaitun-original-cara-pastikan",
+    "path": "faqs[5].a",
+    "old": "Dua di Selangor, di Ampang Jaya dan Batu Caves, dengan Batu Caves yang lebih besar. Kedua-duanya buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
+    "new": "Lima, semuanya di Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) dan Sri Gombak. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari; untuk cawangan lain, WhatsApp untuk sahkan waktu buka.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-masak",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-salad",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "wholeField": true
+  },
+  {
+    "id": "zaitun-dalam-al-quran",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu buka, serta kaunter dalam talian rasmi.",
+    "new": "Lima cawangan di Selangor, waktu buka, serta kaunter dalam talian rasmi.",
+    "wholeField": true
+  },
+  {
+    "id": "botol-minyak-zaitun",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan kaunter dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "cara-simpan-minyak-zaitun",
+    "path": "related[4].description",
+    "old": "Cawangan Berkat Madinah di Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian.",
+    "new": "Lima cawangan Berkat Madinah di Selangor, waktu operasi, dan saluran dalam talian.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-pomace",
+    "path": "related[3].description",
+    "old": "Dua cawangan Berkat Madinah Store di Selangor, waktu operasi, dan saluran dalam talian rasmi.",
+    "new": "Lima cawangan Berkat Madinah Store di Selangor, waktu operasi, dan saluran dalam talian rasmi.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-goreng",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-masak",
+    "path": "related[3].description",
+    "old": "Kaunter Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "wholeField": true
+  },
+  {
+    "id": "resepi-minyak-zaitun",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah.",
+    "wholeField": true
+  },
+  {
+    "id": "beli-minyak-zaitun-online",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store, cawangan Ampang Jaya dan Batu Caves, serta kaunter dalam talian mereka sendiri.",
+    "new": "Berkat Madinah Store, lima cawangan di Selangor, serta kaunter dalam talian mereka sendiri.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-palsu",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian rasmi Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan kaunter dalam talian rasmi Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-tulen",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-kek",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-kelapa",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "rasa-minyak-zaitun",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan kaunter dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-keruh",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store di Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian mereka sendiri.",
+    "new": "Lima cawangan Berkat Madinah Store di Selangor, waktu operasi, dan kaunter dalam talian mereka sendiri.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-air-fryer",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store di Ampang Jaya dan Batu Caves, berserta kaunter Shopee dan TikTok Shop.",
+    "new": "Lima cawangan Berkat Madinah Store di Selangor, berserta kaunter Shopee dan TikTok Shop.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-ikan-bakar",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-pasta",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-roti",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan kaunter dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan kaunter dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-sawit",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-murah",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-sayur-panggang",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-steak",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-telur",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-mentega",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "kopi-minyak-zaitun",
+    "path": "related[2].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-ais-krim",
+    "path": "related[2].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-kek-oren",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, serta saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, serta saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-untuk-pizza",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store di Ampang Jaya dan Batu Caves, serta kaunter Shopee dan TikTok Shop penjual yang sama.",
+    "new": "Lima cawangan Berkat Madinah Store di Selangor, serta kaunter Shopee dan TikTok Shop penjual yang sama.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-bijan",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  },
+  {
+    "id": "minyak-zaitun-vs-minyak-bunga-matahari",
+    "path": "related[3].description",
+    "old": "Cawangan Ampang Jaya dan Batu Caves, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "new": "Lima cawangan di Selangor, waktu operasi, dan saluran dalam talian Berkat Madinah Store.",
+    "wholeField": true
+  }
+]

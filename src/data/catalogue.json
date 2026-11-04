@@ -1,0 +1,101 @@
+{
+  "_comment": "THE product list (FORGE PRODUCTS-R1 O-1). Plain JSON so .mjs build scripts can read it. Extra Virgin keeps cmsId 'classic' because live CMS pages reference that id. Prices are NOT here: storeFacts.json prices.products[priceKey]. Images are white 1200x1200 squares in src/assets/images/<image>.png.",
+  "products": [
+    {
+      "id": "extra-virgin",
+      "cmsId": "classic",
+      "kind": "classic",
+      "image": "product-extra-virgin",
+      "sizes": [
+        "250",
+        "500"
+      ],
+      "priceKey": "extra-virgin",
+      "i18n": "productsPage.products.extra-virgin"
+    },
+    {
+      "id": "organic",
+      "cmsId": "organic",
+      "kind": "classic",
+      "image": "product-organic",
+      "sizes": [
+        "250",
+        "500"
+      ],
+      "priceKey": "organic",
+      "i18n": "productsPage.products.organic"
+    },
+    {
+      "id": "lavender-chamomile",
+      "cmsId": "lavender-chamomile",
+      "kind": "infused",
+      "image": "product-infused-lavender-chamomile",
+      "sizes": [
+        "250"
+      ],
+      "priceKey": "infused",
+      "i18n": "infusedPage.products.lavender-chamomile",
+      "slug": "infused-extra-virgin-olive-oil-lavender-chamomile"
+    },
+    {
+      "id": "blackseed",
+      "cmsId": "blackseed",
+      "kind": "infused",
+      "image": "product-infused-blackseed",
+      "sizes": [
+        "250"
+      ],
+      "priceKey": "infused",
+      "i18n": "infusedPage.products.blackseed",
+      "slug": "infused-extra-virgin-olive-oil-blackseed"
+    },
+    {
+      "id": "turmeric-black-pepper",
+      "cmsId": "turmeric-black-pepper",
+      "kind": "infused",
+      "image": "product-infused-turmeric-black-pepper",
+      "sizes": [
+        "250"
+      ],
+      "priceKey": "infused",
+      "i18n": "infusedPage.products.turmeric-black-pepper",
+      "slug": "infused-extra-virgin-olive-oil-turmeric-black-pepper"
+    },
+    {
+      "id": "rosemary-basil",
+      "cmsId": "rosemary-basil",
+      "kind": "infused",
+      "image": "product-infused-rosemary-basil",
+      "sizes": [
+        "250"
+      ],
+      "priceKey": "infused",
+      "i18n": "infusedPage.products.rosemary-basil",
+      "slug": "infused-extra-virgin-olive-oil-rosemary-basil"
+    },
+    {
+      "id": "fennel-anise",
+      "cmsId": "fennel-anise",
+      "kind": "infused",
+      "image": "product-infused-fennel-anise",
+      "sizes": [
+        "250"
+      ],
+      "priceKey": "infused",
+      "i18n": "infusedPage.products.fennel-anise",
+      "slug": "infused-extra-virgin-olive-oil-fennel-anise"
+    },
+    {
+      "id": "wild-thyme",
+      "cmsId": "wild-thyme",
+      "kind": "infused",
+      "image": "product-infused-wild-thyme",
+      "sizes": [
+        "250"
+      ],
+      "priceKey": "infused",
+      "i18n": "infusedPage.products.wild-thyme",
+      "slug": "infused-extra-virgin-olive-oil-wild-thyme"
+    }
+  ]
+}

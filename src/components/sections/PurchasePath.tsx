@@ -20,7 +20,7 @@ export function PurchasePath() {
   return (
     <section className="relative w-full overflow-hidden bg-bg px-6 pb-28 pt-8 md:px-16 md:pb-36 md:pt-10">
       <div className="mx-auto max-w-6xl text-center">
-        <p {...cmsText('purchasePath.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('purchasePath.kicker')}</p>
+        <p {...cmsText('purchasePath.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink">{t('purchasePath.kicker')}</p>
         <h2 {...cmsText('purchasePath.title')} className="mx-auto mt-3 max-w-2xl font-display text-4xl text-olive-dark md:text-5xl">
           {t('purchasePath.title')}
         </h2>
@@ -28,7 +28,7 @@ export function PurchasePath() {
         <div className="relative mt-16 grid grid-cols-1 gap-6 text-start md:grid-cols-2">
           <div className="rounded-2xl bg-[#D6D2C4] p-10 shadow-[0_25px_50px_rgba(46,58,36,0.18)]">
             <h3 {...cmsText('purchasePath.individualCard.title')} className="font-display text-2xl text-olive-dark">{t('purchasePath.individualCard.title')}</h3>
-            <p {...cmsText('purchasePath.individualCard.desc')} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('purchasePath.individualCard.desc')} className="mt-3 font-body text-sm leading-relaxed text-brown-ink md:text-base">
               {t('purchasePath.individualCard.desc')}
             </p>
             <button
@@ -42,7 +42,7 @@ export function PurchasePath() {
 
           <div className="rounded-2xl bg-[#D6D2C4] p-10 shadow-[0_25px_50px_rgba(46,58,36,0.18)]">
             <h3 {...cmsText('purchasePath.partnerCard.title')} className="font-display text-2xl text-olive-dark">{t('purchasePath.partnerCard.title')}</h3>
-            <p {...cmsText('purchasePath.partnerCard.desc')} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('purchasePath.partnerCard.desc')} className="mt-3 font-body text-sm leading-relaxed text-brown-ink md:text-base">
               {t('purchasePath.partnerCard.desc')}
             </p>
             <button
@@ -59,7 +59,7 @@ export function PurchasePath() {
       <Modal open={activeModal === 'individual'} onClose={() => setActiveModal(null)}>
         <div className="text-center">
           <h3 {...cmsText('purchasePath.individualModal.title')} className="font-display text-3xl text-olive-dark md:text-4xl">{t('purchasePath.individualModal.title')}</h3>
-          <p {...cmsText('purchasePath.individualModal.sub')} className="mt-3 font-body text-brown/70">{t('purchasePath.individualModal.sub')}</p>
+          <p {...cmsText('purchasePath.individualModal.sub')} className="mt-3 font-body text-brown-ink">{t('purchasePath.individualModal.sub')}</p>
 
           <div className="mt-8 flex flex-col gap-4">
             <a
@@ -98,7 +98,7 @@ export function PurchasePath() {
           <h3 {...cmsText('purchasePath.partnerModal.title')} className="font-display text-3xl leading-tight text-olive-dark md:text-4xl">
             {t('purchasePath.partnerModal.title')}
           </h3>
-          <p {...cmsText('purchasePath.partnerModal.sub')} className="mt-3 font-body text-brown/70">{t('purchasePath.partnerModal.sub')}</p>
+          <p {...cmsText('purchasePath.partnerModal.sub')} className="mt-3 font-body text-brown-ink">{t('purchasePath.partnerModal.sub')}</p>
 
           <form
             className="mt-8 space-y-3 text-start"

@@ -47,7 +47,7 @@ export function Testimonials() {
       />
 
       <div className="relative z-10 mx-auto max-w-2xl text-center">
-        <p {...cmsText('testimonials.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('testimonials.kicker')}</p>
+        <p {...cmsText('testimonials.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-light">{t('testimonials.kicker')}</p>
         <h2 {...cmsText('testimonials.title')} className="mx-auto mt-3 text-4xl text-cream md:text-5xl">{t('testimonials.title')}</h2>
       </div>
 
@@ -62,9 +62,9 @@ export function Testimonials() {
             style={{ animation: `testimonial-float ${7 + i}s ease-in-out ${i * 0.5}s infinite` }}
           >
             <span className="font-display text-4xl text-gold">“</span>
-            <p {...cmsText(`testimonials.items.${i}.quote`)} className="mt-2 font-light leading-relaxed text-cream/85">{item.quote}</p>
+            <p {...cmsText(`testimonials.items.${i}.quote`)} className="mt-2 leading-relaxed text-cream/85">{item.quote}</p>
             <p className="mt-6 text-sm text-cream/60">
-              <span {...cmsText(`testimonials.items.${i}.name`)} className="text-gold">{item.name}</span> ·{' '}
+              <span {...cmsText(`testimonials.items.${i}.name`)} className="text-gold-light">{item.name}</span> ·{' '}
               <span {...cmsText(`testimonials.items.${i}.place`)}>{item.place}</span>
             </p>
           </div>

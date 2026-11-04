@@ -1,18 +1,20 @@
 /**
  * Products the `products` widget can show (spec §4, §14.1 catalogue.json).
  *
- * The classic olive oil (Products page) plus the six infused flavours
- * (INFUSED_PRODUCTS). Names and taglines stay in i18n so the owner's text edits
- * of existing pages flow into CMS pages too. Ids — `classic`, `blackseed` … —
- * must stay identical to `catalogue.json` (scripts/cms-build-data.mjs), which
- * the admin uses to offer the choices.
+ * The real catalogue (src/data/catalogue.json, FORGE PRODUCTS-R1 O-1): Extra
+ * Virgin, Organic Extra Virgin and the six infused flavours. Names and taglines
+ * stay in i18n (each product's `i18n` prefix) so the owner's text edits of
+ * existing pages flow into CMS pages too. Ids are the catalogue `cmsId`s —
+ * Extra Virgin keeps `classic` because stored pages reference it — and must stay
+ * identical to the build's catalogue.json (scripts/cms-build-data.mjs reads the
+ * same source), which the admin uses to offer the choices.
  *
  * Images use STABLE unhashed paths `/cms-assets/<name>-<w>.webp` (copied from
  * src/assets/opt at build): published page HTML lives in the database for months
  * and must not point at a hashed /assets/ file that the next deploy deletes.
  */
 import manifest from '../assets/opt/manifest.json';
-import { INFUSED_PRODUCTS } from '../data/infusedProducts';
+import { PRODUCTS } from '../data/products';
 import type { CmsLang, MediaVariant } from './contracts';
 
 export interface CatalogueImage {
@@ -52,32 +54,27 @@ export function cmsAsset(name: string): CatalogueImage {
   };
 }
 
-/** Every product ships in the same 343×1683 bottle (see ProductShowcase). */
-const BOTTLE = 'bottle-cutout';
+/**
+ * The old tall 343×1683 bottle. No product shows it any more, but page HTML
+ * published before FORGE PRODUCTS-R1 still points at /cms-assets/bottle-cutout-343.webp
+ * until each page is re-rendered, so it stays in the asset list (and in the build).
+ */
+const LEGACY_BOTTLE = 'bottle-cutout';
 
-export const CATALOGUE: CatalogueItem[] = [
-  // The one classic product the site sells (two sizes), as the Products page shows it.
-  {
-    id: 'classic',
-    kind: 'classic',
-    nameKey: 'productsPage.product.name',
-    taglineKey: 'productsPage.product.tagline',
-    image: cmsAsset(BOTTLE),
-  },
-  ...INFUSED_PRODUCTS.map(
-    (p): CatalogueItem => ({
-      id: p.id,
-      kind: 'infused',
-      slug: p.slug,
-      nameKey: `infusedPage.products.${p.id}.name`,
-      taglineKey: `infusedPage.products.${p.id}.tagline`,
-      image: cmsAsset(BOTTLE),
-    })
-  ),
-];
+export const CATALOGUE: CatalogueItem[] = PRODUCTS.map(
+  (p): CatalogueItem => ({
+    id: p.cmsId,
+    kind: p.kind,
+    ...(p.kind === 'infused' && p.slug ? { slug: p.slug } : {}),
+    nameKey: `${p.i18n}.name`,
+    taglineKey: `${p.i18n}.tagline`,
+    // Each product's own white 1200×1200 square.
+    image: cmsAsset(p.image),
+  })
+);
 
 /** Image names any block can show — scripts/cms-build-data.mjs copies these to /cms-assets/. */
-export const CMS_ASSET_NAMES: string[] = [BOTTLE];
+export const CMS_ASSET_NAMES: string[] = [...PRODUCTS.map((p) => p.image), LEGACY_BOTTLE];
 
 export function findCatalogueItem(id: string): CatalogueItem | undefined {
   return CATALOGUE.find((p) => p.id === id);

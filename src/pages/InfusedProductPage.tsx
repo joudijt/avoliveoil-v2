@@ -7,7 +7,8 @@ import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { Picture } from '../components/ui/Picture';
 import { INFUSED_PRODUCTS, findInfusedProduct } from '../data/infusedProducts';
-import { PRICES, MADINAH_NAME } from '../config/site';
+import { InfusedCard, InStoreNote } from '../components/sections/InfusedCard';
+import { STORE, BRANCH_COUNT, MADINAH_NAME } from '../config/site';
 import { cmsText } from '../cms/editable';
 
 const ALL_LANGS = ['en', 'ms'] as const;
@@ -58,38 +59,54 @@ export function InfusedProductPage() {
         <section className="px-6 pb-20 pt-10 md:px-16 md:pb-28">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
             <div className="text-start">
-              <p {...cmsText('infusedPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">
+              <p
+                {...cmsText('infusedPage.kicker')}
+                className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-gold-ink"
+              >
                 {t('infusedPage.kicker')}
               </p>
               <h1 {...cmsText(`${key}.name`)} className="mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl">{name}</h1>
-              <p {...cmsText(`${key}.tagline`)} className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-gold">
+              <p
+                {...cmsText(`${key}.tagline`)}
+                className="mt-3 font-body text-[13px] font-semibold uppercase tracking-[0.16em] text-gold-ink"
+              >
                 {t(`${key}.tagline`)}
               </p>
-              <p {...cmsText(`${key}.description`)} className="mt-6 max-w-md font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+              <p {...cmsText(`${key}.description`)} className="mt-6 max-w-md font-body text-[17px] leading-[1.75] text-brown-ink">
                 {t(`${key}.description`)}
               </p>
-              <span {...cmsText('infusedPage.availableBadge')} className="mt-6 inline-block rounded-full bg-gold/15 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
-                {t('infusedPage.availableBadge', { store: MADINAH_NAME })}
-              </span>
-              {/* Prices from storeFacts.json — same numbers as the JSON-LD offer and llms.txt. */}
-              <p className="mt-4 text-lg font-medium text-olive-dark">
-                250ml — {PRICES.ml250.display} · 500ml — {PRICES.ml500.display}
+              {/* Infused: 250 ml only and no price set by the owner (storeFacts
+                  prices.products.infused.ml250 = null) — so the line names the size and
+                  sends the visitor to WhatsApp for the in-store price, never a guess. */}
+              <p className="mt-6 font-body text-lg text-olive-dark">
+                <span {...cmsText('infusedPage.size250')} className="font-bold">
+                  {t('infusedPage.size250')}
+                </span>
+                {' — '}
+                <a
+                  href={`https://wa.me/${STORE.seller.whatsappDigits}?text=${encodeURIComponent(name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  {...cmsText('productsPage.price.inStore')}
+                  className="font-semibold text-gold-ink underline decoration-gold/40 underline-offset-4 transition-colors duration-300 hover:text-olive-dark"
+                >
+                  {t('productsPage.price.inStore')}
+                </a>
               </p>
+              <InStoreNote className="mt-3" />
             </div>
             <div className="flex items-center justify-center">
-              {/* Every infused variant ships in the same bottle, so the image
-                  is named here rather than carried per-variant in
-                  data/infusedProducts.ts. */}
-              <Picture
-                name="bottle-cutout"
-                alt={t(`${key}.imageAlt`)}
-                cmsKey={`infused.${product.id}.hero`}
-                cmsAltKey={`${key}.imageAlt`}
-                className="h-[46vh] w-auto object-contain md:h-[56vh]"
-                style={{ filter: 'drop-shadow(0 25px 35px rgba(46,58,36,0.25))' }}
-                sizes="(min-width: 768px) 12vh, 10vh"
-                priority
-              />
+              <div className="w-full max-w-[460px] overflow-hidden rounded-[2rem] border border-olive-dark/10 bg-white shadow-[0_30px_60px_rgba(46,58,36,0.12)]">
+                <Picture
+                  name={product.image}
+                  alt={t(`${key}.imageAlt`)}
+                  cmsKey={`infused.${product.id}.hero`}
+                  cmsAltKey={`${key}.imageAlt`}
+                  className="block aspect-square h-auto w-full object-contain"
+                  sizes="(min-width: 768px) 460px, 88vw"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -104,7 +121,7 @@ export function InfusedProductPage() {
                   key={note}
                   className="rounded-2xl border border-olive-dark/10 bg-bg p-6 text-start shadow-[0_10px_30px_rgba(46,58,36,0.05)]"
                 >
-                  <p {...cmsText(`${key}.notes.${i}`)} className="text-sm font-medium text-olive-dark">{note}</p>
+                  <p {...cmsText(`${key}.notes.${i}`)} className="font-body text-base font-semibold text-olive-dark">{note}</p>
                 </div>
               ))}
             </div>
@@ -118,7 +135,7 @@ export function InfusedProductPage() {
                   key={benefit}
                   className="rounded-2xl border border-olive-dark/10 bg-bg p-5 text-start"
                 >
-                  <p {...cmsText(`${key}.benefits.${i}`)} className="text-sm font-medium text-olive-dark">{benefit}</p>
+                  <p {...cmsText(`${key}.benefits.${i}`)} className="font-body text-[15px] font-medium leading-relaxed text-olive-dark">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -133,9 +150,9 @@ export function InfusedProductPage() {
               {uses.map((use, i) => (
                 <li
                   key={use}
-                  className="flex items-start gap-4 rounded-2xl bg-bg/60 p-6 font-body text-base font-light leading-relaxed text-brown/80"
+                  className="flex items-start gap-4 rounded-2xl bg-bg/60 p-6 font-body text-base leading-relaxed text-brown-ink"
                 >
-                  <span className="text-lg text-gold">{i + 1}.</span>
+                  <span className="font-display text-lg text-gold-ink-band">{i + 1}.</span>
                   {/* Its own span so the CMS can replace the text without the number. */}
                   <span {...cmsText(`${key}.uses.${i}`)}>{use}</span>
                 </li>
@@ -150,8 +167,8 @@ export function InfusedProductPage() {
             <h2 {...cmsText('infusedPage.cta.title')} className="text-3xl text-cream md:text-4xl">
               {t('infusedPage.cta.title', { store: MADINAH_NAME })}
             </h2>
-            <p {...cmsText('infusedPage.cta.text')} className="mt-4 font-body text-base font-light leading-relaxed text-cream/70">
-              {t('infusedPage.cta.text', { store: MADINAH_NAME })}
+            <p {...cmsText('infusedPage.cta.text')} className="mt-4 font-body text-base leading-relaxed text-cream/80">
+              {t('infusedPage.cta.text', { store: MADINAH_NAME, count: BRANCH_COUNT })}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
@@ -164,7 +181,7 @@ export function InfusedProductPage() {
               <Link
                 to={`/${lang}/contact`}
                 {...cmsText('infusedPage.cta.contactCta')}
-                className="rounded-full border border-cream/30 px-7 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors duration-300 hover:border-gold hover:text-gold"
+                className="rounded-full border border-cream/30 px-7 py-3.5 text-sm font-medium tracking-wide text-cream transition-colors duration-300 hover:border-gold hover:text-gold-light"
               >
                 {t('infusedPage.cta.contactCta')}
               </Link>
@@ -178,30 +195,16 @@ export function InfusedProductPage() {
             <h2 {...cmsText('infusedPage.otherTitle')} className="text-center text-3xl text-olive-dark md:text-4xl">
               {t('infusedPage.otherTitle')}
             </h2>
-            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
               {others.map((other) => (
-                <Link
-                  key={other.id}
-                  to={`/${lang}/products/${other.slug}`}
-                  className="group rounded-2xl border border-olive-dark/10 bg-cream p-6 text-start transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]"
-                >
-                  <h3
-                    {...cmsText(`infusedPage.products.${other.id}.name`)}
-                    className="text-lg leading-snug text-olive-dark transition-colors duration-300 group-hover:text-gold"
-                  >
-                    {t(`infusedPage.products.${other.id}.name`)}
-                  </h3>
-                  <p {...cmsText(`infusedPage.products.${other.id}.tagline`)} className="mt-3 font-body text-sm font-light leading-relaxed text-brown/70">
-                    {t(`infusedPage.products.${other.id}.tagline`)}
-                  </p>
-                </Link>
+                <InfusedCard key={other.id} product={other} lang={lang} />
               ))}
             </div>
             <div className="mt-12 text-center">
               <Link
                 to={`/${lang}/products`}
                 {...cmsText('infusedPage.backToProducts')}
-                className="font-body text-sm uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:text-gold"
+                className="font-body text-sm font-semibold uppercase tracking-[0.15em] text-olive-dark transition-colors duration-300 hover:text-gold-ink"
               >
                 {t('infusedPage.backToProducts')}
               </Link>

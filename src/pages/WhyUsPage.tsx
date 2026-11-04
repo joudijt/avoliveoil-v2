@@ -43,11 +43,11 @@ export function WhyUsPage() {
 
         <section className="px-6 pb-16 pt-10 md:px-16 md:pb-20">
           <div className="mx-auto max-w-3xl text-center">
-            <p {...cmsText('whyUsPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('whyUsPage.kicker')}</p>
+            <p {...cmsText('whyUsPage.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink">{t('whyUsPage.kicker')}</p>
             <h1 {...cmsText('whyUsPage.title')} className="mx-auto mt-3 text-4xl leading-[1.1] text-olive-dark md:text-5xl lg:text-6xl">
               {t('whyUsPage.title')}
             </h1>
-            <p {...cmsText('whyUsPage.intro')} className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/75 md:text-lg">
+            <p {...cmsText('whyUsPage.intro')} className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-brown-ink md:text-lg">
               {t('whyUsPage.intro')}
             </p>
           </div>
@@ -74,7 +74,7 @@ export function WhyUsPage() {
                 >
                   <FiCheckCircle className="h-6 w-6 text-gold" />
                   <h2 {...cmsText(`whyUsPage.reasons.${i}.title`)} className="mt-4 text-lg text-olive-dark">{reason.title}</h2>
-                  <p {...cmsText(`whyUsPage.reasons.${i}.desc`)} className="mt-2 text-sm font-light leading-relaxed text-brown/70">{reason.desc}</p>
+                  <p {...cmsText(`whyUsPage.reasons.${i}.desc`)} className="mt-2 text-sm leading-relaxed text-brown-ink">{reason.desc}</p>
                 </div>
               ))}
             </div>
@@ -83,24 +83,24 @@ export function WhyUsPage() {
 
         <section className="bg-olive-dark px-6 py-20 md:px-16 md:py-28">
           <div className="mx-auto max-w-5xl text-center">
-            <p {...cmsText('whyUsPage.partner.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('whyUsPage.partner.kicker')}</p>
+            <p {...cmsText('whyUsPage.partner.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-light">{t('whyUsPage.partner.kicker')}</p>
             <h2 {...cmsText('whyUsPage.partner.title')} className="mx-auto mt-3 max-w-2xl text-3xl text-cream md:text-4xl">
               {t('whyUsPage.partner.title')}
             </h2>
-            <p {...cmsText('whyUsPage.partner.desc')} className="mx-auto mt-6 max-w-2xl font-body text-sm font-light leading-relaxed text-cream/70 md:text-base">
+            <p {...cmsText('whyUsPage.partner.desc')} className="mx-auto mt-6 max-w-2xl font-body text-sm leading-relaxed text-cream/70 md:text-base">
               {t('whyUsPage.partner.desc')}
             </p>
 
             <div className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-8 sm:grid-cols-4">
               {stats.map((s, i) => (
                 <div key={s.label}>
-                  <p {...cmsText(`whyUsPage.partner.stats.${i}.value`)} className="text-3xl text-gold md:text-4xl">{s.value}</p>
-                  <p {...cmsText(`whyUsPage.partner.stats.${i}.label`)} className="mt-2 text-xs font-light uppercase tracking-[0.2em] text-cream/60">{s.label}</p>
+                  <p {...cmsText(`whyUsPage.partner.stats.${i}.value`)} className="text-3xl text-gold-light md:text-4xl">{s.value}</p>
+                  <p {...cmsText(`whyUsPage.partner.stats.${i}.label`)} className="mt-2 text-xs uppercase tracking-[0.2em] text-cream/60">{s.label}</p>
                 </div>
               ))}
             </div>
 
-            <p {...cmsText('whyUsPage.partner.text')} className="mx-auto mt-10 max-w-2xl font-body text-sm font-light leading-relaxed text-cream/60">
+            <p {...cmsText('whyUsPage.partner.text')} className="mx-auto mt-10 max-w-2xl font-body text-sm leading-relaxed text-cream/60">
               {t('whyUsPage.partner.text')}
             </p>
 
@@ -118,9 +118,9 @@ export function WhyUsPage() {
 
         <section className="bg-[#E8E2D7] px-6 py-20 text-center md:px-16 md:py-28">
           <div className="mx-auto max-w-2xl">
-            <p {...cmsText('whyUsPage.flavors.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold">{t('whyUsPage.flavors.kicker')}</p>
+            <p {...cmsText('whyUsPage.flavors.kicker')} className="text-xs uppercase tracking-[0.35em] text-gold-ink-band">{t('whyUsPage.flavors.kicker')}</p>
             <h2 {...cmsText('whyUsPage.flavors.title')} className="mx-auto mt-3 text-3xl text-olive-dark md:text-4xl">{t('whyUsPage.flavors.title')}</h2>
-            <p {...cmsText('whyUsPage.flavors.desc')} className="mt-4 font-body text-sm font-light leading-relaxed text-brown/70 md:text-base">
+            <p {...cmsText('whyUsPage.flavors.desc')} className="mt-4 font-body text-sm leading-relaxed text-brown-ink md:text-base">
               {t('whyUsPage.flavors.desc')}
             </p>
             <Link

@@ -1,0 +1,602 @@
+[
+  {
+    "id": "cold-pressed-olive-oil-explained",
+    "path": "sections[5].blocks[3].text",
+    "old": "On our own bottles, RM59.00 for 250 ml is RM236 a litre; RM103.00 for 500 ml is RM206. The [full range](/shop) prices the same by size across the classic oil and every Infused Collection flavour, and",
+    "new": "On our own extra virgin bottles, RM59.00 for 250 ml is RM236 a litre; RM109.00 for 500 ml is RM218. The [full range](/shop) also lists the organic oil and the 250 ml Infused Collection flavours, and"
+  },
+  {
+    "id": "cold-pressed-olive-oil-explained",
+    "path": "faqs[5].a",
+    "old": "Both branches, Ampang Jaya and the larger Batu Caves store, open 8:00 am to 12:00 midnight daily, though festive days such as Hari Raya can differ. [Message the store](/contact) on WhatsApp at +60 11-1111 9912.",
+    "new": "It has five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak). Ampang and Sri Gombak open 8:00 am to 12:00 midnight daily, though festive days such as Hari Raya can differ. [Message the store](/contact) on WhatsApp at +60 11-1111 9912 to confirm hours at the other branches."
+  },
+  {
+    "id": "cold-pressed-olive-oil-explained",
+    "path": "related[2].description",
+    "old": "Branch counters, opening hours, and the price of every size and flavour.",
+    "new": "All five branch counters, opening hours and current prices by size."
+  },
+  {
+    "id": "compare-olive-oil-brands-malaysia",
+    "path": "sections[3].blocks[1].rows[1][1]",
+    "old": "RM103.00",
+    "new": "RM109.00"
+  },
+  {
+    "id": "compare-olive-oil-brands-malaysia",
+    "path": "sections[3].blocks[1].rows[1][2]",
+    "old": "RM206 per litre",
+    "new": "RM218 per litre"
+  },
+  {
+    "id": "compare-olive-oil-brands-malaysia",
+    "path": "sections[3].blocks[3].text",
+    "old": "Those [Arabian Village prices](/shop) hold by size for the classic oil and every [infused flavour](/products/infused-extra-virgin-olive-oil-wild-thyme).",
+    "new": "Those [Arabian Village prices](/shop) are for the extra virgin oil; the organic oil costs more, and the 250 ml [infused flavours](/products/infused-extra-virgin-olive-oil-wild-thyme) are priced in store."
+  },
+  {
+    "id": "compare-olive-oil-brands-malaysia",
+    "path": "conclusion.blocks[1].text",
+    "old": "or [visit a branch](/contact) in Ampang Jaya or Batu Caves.",
+    "new": "or [visit one of its five branches](/contact) in Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) and Sri Gombak."
+  },
+  {
+    "id": "compare-olive-oil-brands-malaysia",
+    "path": "faqs[2].a",
+    "old": "Arabian Village sells 250 ml at RM59.00 and 500 ml at RM103.00, which works out to RM236 and RM206 per litre. The larger bottle costs less per litre. The smaller one makes sense when you are trying a flavour for the first time.",
+    "new": "Arabian Village Extra Virgin is RM59.00 for 250 ml and RM109.00 for 500 ml, which works out to RM236 and RM218 per litre. The larger bottle costs less per litre. The smaller one makes sense when you are trying the oil for the first time, and the infused flavours come in 250 ml only."
+  },
+  {
+    "id": "halal-olive-oil-malaysia",
+    "path": "sections[5].blocks[0].text",
+    "old": "You can also read the back label yourself at either branch.",
+    "new": "You can also read the back label yourself at any of its five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak)."
+  },
+  {
+    "id": "halal-olive-oil-malaysia",
+    "path": "sections[5].blocks[1].rows[3][1]",
+    "old": "RM59.00 for 250 ml, RM103.00 for 500 ml",
+    "new": "RM59.00 for 250 ml, RM109.00 for 500 ml (Extra Virgin)"
+  },
+  {
+    "id": "halal-olive-oil-malaysia",
+    "path": "sections[5].blocks[3].text",
+    "old": "Two branches: Ampang Jaya and Batu Caves, the larger. Both open 8:00 am to 12:00 midnight daily, though festive days differ.",
+    "new": "Five branches in Selangor: Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) and Sri Gombak. Ampang and Sri Gombak open 8:00 am to 12:00 midnight daily, though festive days differ; WhatsApp to confirm hours at the others."
+  },
+  {
+    "id": "halal-olive-oil-malaysia",
+    "path": "related[1].description",
+    "old": "Both Berkat Madinah branches, opening hours",
+    "new": "All five Berkat Madinah branches, opening hours"
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "metaDescription",
+    "old": "RM103.00 for 500 ml, and how",
+    "new": "RM109.00 for 500 ml, and how"
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "keyTakeaway",
+    "old": "Arabian Village is RM59.00 for 250 ml and RM103.00 for 500 ml, which works out at RM236.00 and RM206.00 per litre,",
+    "new": "Arabian Village Extra Virgin is RM59.00 for 250 ml and RM109.00 for 500 ml, which works out at RM236.00 and RM218.00 per litre,"
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "sections[0].blocks[0].text",
+    "old": "**RM103.00 for 500 ml**. The same price holds for the classic oil and for every [infused flavour](/products/infused-extra-virgin-olive-oil-wild-thyme).",
+    "new": "**RM109.00 for 500 ml**. The organic version is RM69.00 and RM129.00, and every [infused flavour](/products/infused-extra-virgin-olive-oil-wild-thyme) comes in 250 ml only, priced in store."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "sections[0].blocks[1].rows[1][1]",
+    "old": "RM103.00",
+    "new": "RM109.00"
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "sections[0].blocks[1].rows[1][2]",
+    "old": "RM206.00 per litre",
+    "new": "RM218.00 per litre"
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "sections[2].blocks[0].text",
+    "old": "A 500 ml bottle at RM103.00 is RM206.00 per litre.",
+    "new": "A 500 ml bottle at RM109.00 is RM218.00 per litre."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "sections[2].blocks[1].text",
+    "old": "The 500 ml wins: RM206.00 a litre against RM236.00, a gap of RM30.00. Two 250 ml bottles cost RM118.00; one 500 ml holds the same oil for RM103.00. Buy small to try a flavour, larger for daily cooking.",
+    "new": "The 500 ml wins: RM218.00 a litre against RM236.00, a gap of RM18.00. Two 250 ml bottles cost RM118.00; one 500 ml holds the same oil for RM109.00, a saving of RM9.00. Buy small to try the oil, larger for daily cooking."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "sections[5].blocks[0].text",
+    "old": "It sells the oil at two branches, Ampang Jaya and Batu Caves, the larger of the pair, and through its own Shopee storefront and TikTok Shop. Both branches open 8:00 am to 12:00 midnight, Monday through Sunday.",
+    "new": "It sells the oil at five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak) and through its own Shopee storefront and TikTok Shop. The Ampang and Sri Gombak branches open 8:00 am to 12:00 midnight, Monday through Sunday; WhatsApp to confirm hours at the other three. Stock can vary by branch."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "conclusion.blocks[0].text",
+    "old": "Here that is RM236.00 a litre for the 250 ml and RM206.00 for the 500 ml, so the bigger bottle wins by RM30.00.",
+    "new": "Here that is RM236.00 a litre for the 250 ml and RM218.00 for the 500 ml, so the bigger bottle wins by RM18.00."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "faqs[0].a",
+    "old": "RM59.00 for 250 ml and RM103.00 for 500 ml, and that price holds for the classic oil and for each infused flavour.",
+    "new": "RM59.00 for 250 ml and RM109.00 for 500 ml; the organic oil is RM69.00 and RM129.00, and the infused flavours come in 250 ml, priced in store."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "faqs[1].a",
+    "old": "extra virgin olive oil is RM103.00. In a comparable unit that is RM206.00 per litre,",
+    "new": "extra virgin olive oil is RM109.00. In a comparable unit that is RM218.00 per litre,"
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "faqs[2].a",
+    "old": "It works out at RM206.00 per litre against RM236.00 for the 250 ml, a difference of RM30.00 a litre. Two 250 ml bottles cost RM118.00 for the same volume one 500 ml bottle delivers at RM103.00.",
+    "new": "It works out at RM218.00 per litre against RM236.00 for the 250 ml, a difference of RM18.00 a litre. Two 250 ml bottles cost RM118.00 for the same volume one 500 ml bottle delivers at RM109.00, a saving of RM9.00."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "faqs[4].a",
+    "old": "No. Price follows bottle size only, so a 250 ml bottle of blackseed, turmeric-black-pepper, rosemary-basil, lavender-chamomile, fennel-anise or wild-thyme infused oil is RM59.00, exactly like the classic. The 500 ml is RM103.00 across the whole range. Choose by what you cook.",
+    "new": "There is no published price for them yet. The blackseed, turmeric-black-pepper, rosemary-basil, lavender-chamomile, fennel-anise and wild-thyme infused oils come in 250 ml only and are priced in store, so ask at the branch or on WhatsApp. The plain extra virgin 250 ml is RM59.00. Choose by what you cook."
+  },
+  {
+    "id": "olive-oil-price-malaysia",
+    "path": "related[0].description",
+    "old": "Every size and infused flavour, with current prices.",
+    "new": "Every classic size with its current price, plus the six infused flavours."
+  },
+  {
+    "id": "palestinian-olive-oil-origin",
+    "path": "sections[5].blocks[0].text",
+    "old": "The oil is sold at its two branches, Ampang Jaya and Batu Caves, the larger, and through",
+    "new": "The oil is sold at its five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak) and through"
+  },
+  {
+    "id": "palestinian-olive-oil-origin",
+    "path": "sections[5].blocks[1].text",
+    "old": "Prices are RM59.00 for 250 ml and RM103.00 for 500 ml, and a size costs the same whether you take the classic oil or a flavour from the [infused collection](/products) such as [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme).",
+    "new": "Extra Virgin is RM59.00 for 250 ml and RM109.00 for 500 ml, and Organic RM69.00 and RM129.00. Flavours from the [infused collection](/products) such as [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme) come in 250 ml only, priced in store."
+  },
+  {
+    "id": "palestinian-olive-oil-origin",
+    "path": "sections[5].blocks[3].text",
+    "old": "Branches open 8:00 am to 12:00 midnight, Monday through Sunday.",
+    "new": "The Ampang and Sri Gombak branches open 8:00 am to 12:00 midnight, Monday through Sunday; check hours at the other three first."
+  },
+  {
+    "id": "palestinian-olive-oil-origin",
+    "path": "faqs[4].a",
+    "old": "Buy it at the Ampang Jaya and Batu Caves branches, Batu Caves being the larger, or online",
+    "new": "Buy it at any of its five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak), or online"
+  },
+  {
+    "id": "palestinian-olive-oil-origin",
+    "path": "faqs[5].a",
+    "old": "RM59.00 for the 250 ml bottle and RM103.00 for the 500 ml. Price follows the size and not the flavour, so a bottle from the infused range costs the same as the classic oil at the same volume.",
+    "new": "RM59.00 for the 250 ml bottle and RM109.00 for the 500 ml of Extra Virgin; the organic oil is RM69.00 and RM129.00. The infused range comes in 250 ml only and is priced in store."
+  },
+  {
+    "id": "palestinian-olive-oil-origin",
+    "path": "related[2].description",
+    "old": "Branch counters in Ampang Jaya and Batu Caves,",
+    "new": "Five branch counters in Selangor,"
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[3].blocks[0].text",
+    "old": "Arabian Village is **RM59.00 for 250 ml** and **RM103.00 for 500 ml**, which is RM236 and RM206 a litre. Divide by a thousand and a millilitre costs about 24 sen from the small bottle, 21 sen from the large.",
+    "new": "Arabian Village Extra Virgin is **RM59.00 for 250 ml** and **RM109.00 for 500 ml**, which is RM236 and RM218 a litre. Divide by a thousand and a millilitre costs about 24 sen from the small bottle, about 22 sen from the large."
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[3].blocks[1].rows[0][3]",
+    "old": "RM1.03",
+    "new": "RM1.09"
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[3].blocks[1].rows[1][3]",
+    "old": "RM3.09",
+    "new": "RM3.27"
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[3].blocks[1].rows[2][3]",
+    "old": "RM6.18",
+    "new": "RM6.54"
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[3].blocks[1].rows[3][3]",
+    "old": "RM12.36",
+    "new": "RM13.08"
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[4].blocks[0].text",
+    "old": "is six botanicals in the same cold-pressed base, priced the same by size.",
+    "new": "is six botanicals in the same cold-pressed base, in 250 ml bottles priced in store."
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "sections[5].blocks[3].text",
+    "old": "at Ampang Jaya and the larger Batu Caves branch in Prima Seri Gombak. Both open 8:00 am to midnight daily.",
+    "new": "at five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak). Ampang and Sri Gombak open 8:00 am to midnight daily."
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "faqs[2].a",
+    "old": "and about RM3.09 from the 500 ml bottle.",
+    "new": "and about RM3.27 from the 500 ml bottle."
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "faqs[5].a",
+    "old": "its Ampang Jaya branch or the larger Batu Caves outlet in Prima Seri Gombak, plus",
+    "new": "any of its five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak), plus"
+  },
+  {
+    "id": "olive-oil-for-cooking",
+    "path": "related[0].description",
+    "old": "The classic oil and all six infused flavours, with current prices.",
+    "new": "The classic oil with current prices, and all six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-smoke-point",
+    "path": "related[0].description",
+    "old": "and RM103.00 for 500 ml.",
+    "new": "and RM109.00 for 500 ml."
+  },
+  {
+    "id": "olive-oil-smoke-point",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-vs-pomace-oil",
+    "path": "sections[4].blocks[1].text",
+    "old": "RM59.00 for 250 ml and RM103.00 for 500 ml, or RM236 and RM206 a litre.",
+    "new": "RM59.00 for 250 ml and RM109.00 for 500 ml, or RM236 and RM218 a litre."
+  },
+  {
+    "id": "olive-oil-vs-pomace-oil",
+    "path": "faqs[5].a",
+    "old": "and RM103.00 for 500 ml through",
+    "new": "and RM109.00 for 500 ml through"
+  },
+  {
+    "id": "olive-oil-vs-coconut-oil",
+    "path": "sections[4].blocks[0].text",
+    "old": "and RM206 in the 500 ml,",
+    "new": "and RM218 in the 500 ml,"
+  },
+  {
+    "id": "best-extra-virgin-olive-oil-in-malaysia",
+    "path": "sections[4].blocks[1].text",
+    "old": "with branches at Ampang Jaya and Batu Caves and a WhatsApp",
+    "new": "with five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak) and a WhatsApp"
+  },
+  {
+    "id": "extra-virgin-olive-oil-in-malaysia",
+    "path": "sections[3].blocks[1].text",
+    "old": "with two physical branches in Selangor rather than",
+    "new": "with five physical branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak) rather than"
+  },
+  {
+    "id": "extra-virgin-olive-oil-in-malaysia",
+    "path": "sections[5].blocks[1].text",
+    "old": "at its Ampang Jaya and Batu Caves branches, the latter being the larger of the two, alongside",
+    "new": "at any of its five branches, alongside"
+  },
+  {
+    "id": "extra-virgin-olive-oil-in-malaysia",
+    "path": "faqs[5].a",
+    "old": "The same seller runs the two physical branches in Selangor.",
+    "new": "The same seller runs the five physical branches in Selangor."
+  },
+  {
+    "id": "olive-oil-is-it-healthy",
+    "path": "sections[5].blocks[1].text",
+    "old": "one named distributor with two branches you can walk into",
+    "new": "one named distributor with five branches you can walk into"
+  },
+  {
+    "id": "olive-oil-vs-sesame-oil",
+    "path": "sections[5].blocks[1].text",
+    "old": "— two branches in Selangor, plus",
+    "new": "— five branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry in Ampang and Sri Gombak), plus"
+  },
+  {
+    "id": "olive-oil-vs-sesame-oil",
+    "path": "faqs[5].a",
+    "old": "Through Berkat Madinah Store's two branches in Selangor,",
+    "new": "Through Berkat Madinah Store's five branches in Selangor,"
+  },
+  {
+    "id": "olive-oil-vs-sunflower-oil",
+    "path": "sections[5].blocks[1].text",
+    "old": "[Berkat Madinah Store's two branches, its Shopee counter",
+    "new": "[Berkat Madinah Store's five branches, its Shopee counter"
+  },
+  {
+    "id": "olive-oil-vs-sunflower-oil",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store's two branches in Selangor,",
+    "new": "Berkat Madinah Store's five branches in Selangor,"
+  },
+  {
+    "id": "evoo-salad-dressing",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "evoo-vs-pure-olive-oil",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-air-fryer",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-for-bread",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-marinade",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-shelf-life",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "garlic-infused-olive-oil",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-bitter-taste",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-bottle-size",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-for-baking",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-substitute",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-vs-coconut-oil",
+    "path": "related[4].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "aglio-e-olio",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "cloudy-olive-oil",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-and-balsamic",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-for-grilling",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-for-hummus",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-vs-avocado-oil",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-focaccia",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-fried-egg",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-popcorn",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-roasted-vegetables",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-vs-butter",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-coffee",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-ice-cream",
+    "path": "related[2].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-mashed-potatoes",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-orange-cake",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-vs-sesame-oil",
+    "path": "related[3].description",
+    "old": "Berkat Madinah Store in Ampang Jaya and Batu Caves",
+    "new": "Berkat Madinah Store's five branches in Selangor"
+  },
+  {
+    "id": "olive-oil-and-balsamic",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-focaccia",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-fried-egg",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-popcorn",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-vs-butter",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-mashed-potatoes",
+    "path": "related[2].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-vs-sesame-oil",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-vs-sunflower-oil",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours and the price for each size.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-for-grilling",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused oils, with prices.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml with prices, plus the six infused oils in 250 ml."
+  },
+  {
+    "id": "olive-oil-for-hummus",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused oils.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused oils in 250 ml."
+  },
+  {
+    "id": "olive-oil-roasted-vegetables",
+    "path": "related[0].description",
+    "old": "plus the six infused flavours for a finishing drizzle.",
+    "new": "plus the six 250 ml infused flavours for a finishing drizzle."
+  },
+  {
+    "id": "aglio-e-olio",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, the classic bottle plus six infused flavours.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus six infused flavours in 250 ml."
+  },
+  {
+    "id": "cloudy-olive-oil",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in 250 ml and 500 ml, classic and the six infused flavours.",
+    "new": "Palestinian cold-pressed oil in 250 ml and 500 ml, plus the six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-substitute",
+    "path": "related[0].description",
+    "old": "The classic Palestinian cold-pressed oil and the six infused oils, in 250 ml and 500 ml bottles.",
+    "new": "The classic Palestinian cold-pressed oil in 250 ml and 500 ml bottles, and the six infused oils in 250 ml."
+  },
+  {
+    "id": "extra-virgin-olive-oil-uses",
+    "path": "related[0].description",
+    "old": "The classic oil and six infused flavours, in 250 ml and 500 ml.",
+    "new": "The classic oil in 250 ml and 500 ml, and six infused flavours in 250 ml."
+  },
+  {
+    "id": "olive-oil-for-baking",
+    "path": "related[0].description",
+    "old": "Palestinian cold-pressed oil in two bottle sizes, plus the six infused oils, with current prices.",
+    "new": "Palestinian cold-pressed oil in two bottle sizes with current prices, plus the six infused oils in 250 ml."
+  }
+]

@@ -178,6 +178,86 @@
       610
     ]
   },
+  "product-extra-virgin": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-extra-virgin-cutout": {
+    "height": 1429,
+    "width": 533,
+    "widths": [
+      400,
+      533
+    ]
+  },
+  "product-infused-blackseed": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-infused-fennel-anise": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-infused-lavender-chamomile": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-infused-rosemary-basil": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-infused-turmeric-black-pepper": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-infused-wild-thyme": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
+  "product-organic": {
+    "height": 1200,
+    "width": 1200,
+    "widths": [
+      400,
+      800,
+      1200
+    ]
+  },
   "woman-holding-bottle-nobg": {
     "height": 1277,
     "width": 895,

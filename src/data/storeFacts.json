@@ -33,46 +33,94 @@
     "sourceCountries": "15+",
     "customerRating": 5
   },
-  "hours": {
-    "opens": "08:00",
-    "closes": "24:00",
-    "days": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "displayEn": "8:00 am – 12:00 midnight, Monday through Sunday",
-    "displayMs": "8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad",
-    "note": "Festive days such as Hari Raya can differ — confirm on WhatsApp."
-  },
   "branches": [
     {
       "id": "ampang",
-      "labelEn": "Ampang Jaya",
-      "labelMs": "Ampang Jaya",
-      "street": "Putra Sulaiman, 17-L1, Persiaran Putra Sulaiman, Taman Putra Sulaiman",
+      "labelEn": "Ampang",
+      "labelMs": "Ampang",
+      "street": "17-L1, Jalan Ampang Putra 6, Taman Putra Sulaiman",
       "postalCode": "68000",
-      "locality": "Ampang Jaya",
+      "locality": "Ampang",
       "region": "Selangor",
       "country": "MY",
-      "stocksBrand": true,
-      "isLarger": false
+      "mapsUrl": "https://maps.app.goo.gl/hBfeLGKFc3ff64KU8",
+      "hours": {
+        "opens": "08:00",
+        "closes": "24:00",
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "displayEn": "8:00 am – 12:00 midnight, Monday through Sunday",
+        "displayMs": "8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad"
+      }
     },
     {
-      "id": "batu-caves",
-      "labelEn": "Batu Caves / Prima Seri Gombak",
-      "labelMs": "Batu Caves / Prima Seri Gombak",
+      "id": "kajang",
+      "labelEn": "Kajang",
+      "labelMs": "Kajang",
+      "street": "Ground Floor, Unit No. PA-S-17, Pearl Avenue Shop, Jalan Pasir Emas",
+      "postalCode": "43000",
+      "locality": "Kajang",
+      "region": "Selangor",
+      "country": "MY",
+      "mapsUrl": "https://maps.app.goo.gl/8a3UmG5mvJfZPQETA",
+      "hours": null
+    },
+    {
+      "id": "shah-alam",
+      "labelEn": "Shah Alam",
+      "labelMs": "Shah Alam",
+      "street": "No. 46, Jalan Pegaga C U12/C, Desa Alam, Seksyen U12",
+      "postalCode": "40170",
+      "locality": "Shah Alam",
+      "region": "Selangor",
+      "country": "MY",
+      "mapsUrl": "https://maps.app.goo.gl/hEH4rHeX2VKCupfo6",
+      "hours": null
+    },
+    {
+      "id": "cash-and-carry",
+      "labelEn": "Cash & Carry (Ampang)",
+      "labelMs": "Cash & Carry (Ampang)",
+      "street": "14-L1, Ampang Putra Residency, Jalan Ampang Putra",
+      "postalCode": "68000",
+      "locality": "Ampang",
+      "region": "Selangor",
+      "country": "MY",
+      "mapsUrl": "https://maps.app.goo.gl/G7b9FoJrVpNmf7pm8",
+      "hours": null
+    },
+    {
+      "id": "sri-gombak",
+      "labelEn": "Sri Gombak",
+      "labelMs": "Sri Gombak",
       "street": "32, Jalan Prima SG 2, Prima Seri Gombak",
       "postalCode": "68100",
       "locality": "Batu Caves",
       "region": "Selangor",
       "country": "MY",
-      "stocksBrand": true,
-      "isLarger": true
+      "mapsUrl": "https://maps.app.goo.gl/Gyix1QN7D4pqfd7r9",
+      "hours": {
+        "opens": "08:00",
+        "closes": "24:00",
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "displayEn": "8:00 am – 12:00 midnight, Monday through Sunday",
+        "displayMs": "8:00 pagi – 12:00 tengah malam, Isnin hingga Ahad"
+      }
     }
   ],
   "restaurant": {
@@ -85,21 +133,41 @@
   },
   "prices": {
     "currency": "MYR",
-    "ml250": {
-      "amount": "59.00",
-      "display": "RM59.00",
-      "perLitreDisplay": "RM236"
+    "products": {
+      "extra-virgin": {
+        "ml250": {
+          "amount": "59.00",
+          "display": "RM59"
+        },
+        "ml500": {
+          "amount": "109.00",
+          "display": "RM109"
+        }
+      },
+      "organic": {
+        "ml250": {
+          "amount": "69.00",
+          "display": "RM69"
+        },
+        "ml500": {
+          "amount": "129.00",
+          "display": "RM129"
+        }
+      },
+      "infused": {
+        "ml250": null
+      }
     },
-    "ml500": {
-      "amount": "103.00",
-      "display": "RM103.00",
-      "perLitreDisplay": "RM206"
-    },
-    "appliesTo": "Same price by size for the classic oil and for every flavour of the Infused Collection (owner answer Q12, read as price-by-size — see docs/llms-rebuild-spec.md)."
+    "note": "Owner prices 2026-11-04. Infused = 250 ml only, price not set yet: show none, never guess. Per-litre/per-ml values are computed by scripts/lib/price-math.mjs, never stored or typed."
   },
   "compliance": {
     "market": "Malaysia",
     "ruleEn": "Malaysian Food Regulations 1985, Regulation 18(6): food may not be labelled or advertised as preventing, alleviating, treating or curing any disease. Benefit words appear in the keyword lists as terms people search for — never as a claim about this product.",
     "ruleMs": "Peraturan-Peraturan Makanan 1985, Peraturan 18(6): makanan tidak boleh dilabel atau diiklankan sebagai mencegah, melegakan, merawat atau menyembuhkan sebarang penyakit. Perkataan khasiat muncul dalam senarai kata kunci sebagai apa yang orang cari — bukan sebagai dakwaan tentang produk ini."
+  },
+  "branchesNote": {
+    "company": "Berkat Madinah Sdn. Bhd.",
+    "source": "Owner list 2026-11-04 (5 branches, Maps pins verified). Hours are known only where a branch carries `hours`; never claim hours for the others.",
+    "hoursNote": "Festive days such as Hari Raya can differ — confirm on WhatsApp."
   }
 }

@@ -20,11 +20,12 @@ import {
   TIKTOK_SHOP_URL,
   STORE,
   STORE_BRANCHES,
-  STORE_HOURS,
   PRICES,
   MADINAH_NAME,
   MADINAH_URL,
 } from '../config/site';
+import { CLASSIC_PRODUCTS, PRODUCTS, priceOf, type Product } from '../data/products';
+import type { SizePrice } from '../lib/priceMath';
 import type { ResolvedSeo } from '../cms/contracts';
 
 interface FaqItem {
@@ -85,13 +86,19 @@ interface SEOProps {
   breadcrumbs?: BreadcrumbItem[];
   /** When provided, emits FAQPage JSON-LD built from these items. */
   faqs?: FaqItem[];
-  /** Emits Product JSON-LD (home + products page). */
+  /**
+   * Emits Product JSON-LD. On `page="products"`: one Product per classic product
+   * (Extra Virgin + Organic). Anywhere else (home): the Extra Virgin bottle only.
+   */
   includeProductSchema?: boolean;
   /**
-   * Per-product name/description for the Product JSON-LD. Implies
-   * includeProductSchema; used by the infused product detail pages.
+   * Per-product name/description for the Product JSON-LD of one catalogue product
+   * (the infused detail pages). `productId` = catalogue id; without it the product is
+   * looked up by nothing and no Product is emitted. A product with no price set in
+   * storeFacts.json emits NO Product: a Product without offers is an invalid rich
+   * result (FORGE PRODUCTS-R1 O-35) — today that is every infused flavour.
    */
-  productMeta?: { name: string; description: string };
+  productMeta?: { name: string; description: string; productId?: string };
   /**
    * Per-language path under /:lang, for pages whose URL segment is translated.
    * Drives canonical, hreflang and og:url. Falls back to PAGE_SLUG when omitted.
@@ -216,10 +223,11 @@ export function SEO({
     email: STORE.seller.email,
     telephone: STORE.seller.whatsappE164,
     foundingDate: String(STORE.seller.foundedYear),
-    priceRange: `${PRICES.ml250.display}–${PRICES.ml500.display}`,
+    priceRange: PRICE_RANGE,
     sameAs: [SHOPEE_URL, TIKTOK_SHOP_URL, INSTAGRAM_URL, FACEBOOK_URL],
     location: STORE_BRANCHES.map((b) => ({
       '@type': 'GroceryStore',
+      '@id': `${SITE_URL}/#branch-${b.id}`,
       name: `${MADINAH_NAME} — ${b.labelEn}`,
       address: {
         '@type': 'PostalAddress',
@@ -230,40 +238,52 @@ export function SEO({
         addressCountry: b.country,
       },
       telephone: STORE.seller.whatsappE164,
-      openingHoursSpecification: {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: STORE_HOURS.days,
-        opens: STORE_HOURS.opens,
-        closes: STORE_HOURS.closes,
-      },
+      hasMap: b.mapsUrl,
+      // Only branches whose hours the owner gave (O-33/O-35). The others carry no
+      // openingHoursSpecification at all — absent is true, a guessed time is not.
+      ...(b.hours
+        ? {
+            openingHoursSpecification: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: b.hours.days,
+              opens: b.hours.opens,
+              closes: b.hours.closes,
+            },
+          }
+        : {}),
     })),
   };
 
   /**
-   * Offers carry the real price and name the seller, so the JSON-LD, the page copy
-   * and llms.txt all state the same number. `offerCount` covers the two sizes.
+   * Offers carry the real price per product and name the seller, so the JSON-LD, the
+   * page copy and llms.txt all state the same numbers (all from storeFacts.json).
+   * /products emits both classic products; home emits the Extra Virgin bottle; an
+   * infused page emits nothing while its price is unset (see `productMeta`).
    */
-  const productSchema =
-    includeProductSchema || productMeta
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'Product',
-          name: productMeta?.name ?? `${SITE_NAME} — First Cold Pressed Palestinian Olive Oil`,
-          description: productMeta?.description ?? t('seo.products.description'),
-          brand: { '@type': 'Brand', name: SITE_NAME },
-          image: ogImage,
-          offers: {
-            '@type': 'AggregateOffer',
-            priceCurrency: PRICES.currency,
-            lowPrice: PRICES.ml250.amount,
-            highPrice: PRICES.ml500.amount,
-            offerCount: 2,
-            availability: 'https://schema.org/InStock',
-            seller: { '@id': `${SITE_URL}/#seller` },
-            areaServed: 'MY',
-          },
-        }
-      : null;
+  const productNode = (p: Product, name: string, description: string) => {
+    const offers = productOffers(p);
+    if (!offers) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      '@id': `${SITE_URL}/#product-${p.id}`,
+      name,
+      description,
+      brand: { '@type': 'Brand', name: SITE_NAME },
+      image: productImageUrl(p),
+      url: p.slug ? `${SITE_URL}/${lang}/products/${p.slug}` : `${SITE_URL}/${lang}/products#${p.id}`,
+      offers,
+    };
+  };
+  const productSchemas = (() => {
+    if (productMeta) {
+      const p = productMeta.productId ? PRODUCTS.find((x) => x.id === productMeta.productId) : undefined;
+      return p ? [productNode(p, productMeta.name, productMeta.description)] : [];
+    }
+    if (!includeProductSchema) return [];
+    const list = page === 'products' ? CLASSIC_PRODUCTS : CLASSIC_PRODUCTS.filter((p) => p.id === 'extra-virgin');
+    return list.map((p) => productNode(p, t(`${p.i18n}.name`), t(`${p.i18n}.description`)));
+  })().filter((n) => n !== null);
 
   const faqSchema =
     faqs && faqs.length > 0
@@ -382,12 +402,52 @@ export function SEO({
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(sellerSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
-      {productSchema && <script type="application/ld+json">{JSON.stringify(productSchema)}</script>}
+      {productSchemas.map((schema) => (
+        <script key={schema['@id']} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
       {articleSchema && <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>}
       {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
     </Helmet>
   );
+}
+
+/** Price range across every product with a price set: "RM59–RM129". */
+const PRICED = PRODUCTS.flatMap((p) => p.sizes.map((size) => priceOf(p, size))).filter(
+  (v): v is SizePrice => v !== null,
+);
+const LOWEST = PRICED.reduce((a, b) => (Number(b.amount) < Number(a.amount) ? b : a));
+const HIGHEST = PRICED.reduce((a, b) => (Number(b.amount) > Number(a.amount) ? b : a));
+const PRICE_RANGE = `${LOWEST.display}–${HIGHEST.display}`;
+
+/**
+ * The product's square photo as a fixed-path JPEG (1200x1200, written into public/ by
+ * scripts/product-photos.py). Not the Vite-hashed webp: a Product image should be a
+ * stable absolute URL any crawler can fetch.
+ */
+function productImageUrl(p: Product): string {
+  return `${SITE_URL}/product-photos/${p.id}.jpg`;
+}
+
+/** AggregateOffer over the sizes that have a price; null when none has (never a guessed price). */
+function productOffers(p: Product) {
+  const prices = p.sizes.map((size) => priceOf(p, size)).filter((v): v is SizePrice => v !== null);
+  if (prices.length === 0) return null;
+  const amounts = prices.map((v) => Number(v.amount));
+  const low = prices[amounts.indexOf(Math.min(...amounts))];
+  const high = prices[amounts.indexOf(Math.max(...amounts))];
+  return {
+    '@type': 'AggregateOffer',
+    priceCurrency: PRICES.currency,
+    lowPrice: low.amount,
+    highPrice: high.amount,
+    offerCount: prices.length,
+    availability: 'https://schema.org/InStock',
+    seller: { '@id': `${SITE_URL}/#seller` },
+    areaServed: 'MY',
+  };
 }
 
 /** Media type of an og:image, from its extension — uploads are webp, the site card is jpeg. */

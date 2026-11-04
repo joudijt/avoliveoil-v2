@@ -148,7 +148,7 @@ export function Navbar() {
                 aria-expanded={langOpen}
                 aria-haspopup="listbox"
                 className={`flex items-center gap-1 text-xs font-medium tracking-wide transition-colors duration-300 hover:text-gold sm:gap-1.5 sm:text-sm ${
-                  darkControls ? 'text-gold' : 'text-white'
+                  darkControls ? 'text-gold-ink' : 'text-white'
                 }`}
               >
                 <span className="sm:hidden">{currentLang.short}</span>
@@ -170,7 +170,7 @@ export function Navbar() {
                         data-cms-lang-link={l.code}
                         onClick={() => setLangOpen(false)}
                         className={`block px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${
-                          l.code === lang ? 'text-gold' : 'text-olive-dark/80 hover:text-gold'
+                          l.code === lang ? 'text-gold-ink' : 'text-olive-dark hover:text-gold-ink'
                         }`}
                       >
                         {l.label}
@@ -232,7 +232,7 @@ export function Navbar() {
               {...langSwitchTarget(lang, l.code, subPath)}
               data-cms-lang-link={l.code}
               className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
-                l.code === lang ? 'text-gold' : 'text-cream/70 hover:text-gold'
+                l.code === lang ? 'text-gold-light' : 'text-cream/70 hover:text-gold-light'
               }`}
             >
               {l.short}
