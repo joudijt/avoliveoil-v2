@@ -155,10 +155,13 @@
         }
       },
       "infused": {
-        "ml250": null
+        "ml250": {
+          "amount": "75.00",
+          "display": "RM75"
+        }
       }
     },
-    "note": "Owner prices 2026-11-04. Infused = 250 ml only, price not set yet: show none, never guess. Per-litre/per-ml values are computed by scripts/lib/price-math.mjs, never stored or typed."
+    "note": "Owner prices: EV + Organic 2026-11-04, infused 250 ml RM75 2026-11-05 (infused = 250 ml only). Per-litre/per-ml values are computed by scripts/lib/price-math.mjs, never stored or typed."
   },
   "compliance": {
     "market": "Malaysia",

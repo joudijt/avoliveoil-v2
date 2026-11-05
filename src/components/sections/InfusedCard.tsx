@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Picture } from '../ui/Picture';
 import { cmsText } from '../../cms/editable';
+import { priceOf } from '../../data/products';
 
 /** What a card needs from either INFUSED_PRODUCTS or the catalogue. */
 export interface InfusedCardProduct {
@@ -12,14 +13,15 @@ export interface InfusedCardProduct {
 
 /**
  * One infused flavour as a card (FORGE PRODUCTS-R1 §3): white square photo on top,
- * full name, tagline, then a footer row with the only size (250 ml) and a small
- * "in store now" note. No price: the owner has not set one for the infused range,
- * and `priceOf` returns null — never show a guess. Used by the /products grid and
+ * full name, tagline, then a footer row with the only size (250 ml), its price from
+ * storeFacts (owner 2026-11-05: RM75; hidden if ever unset — never a guess) and a small
+ * "in store now" note. Used by the /products grid and
  * by the "other flavours" grid on each infused page, so both stay identical.
  */
 export function InfusedCard({ product, lang }: { product: InfusedCardProduct; lang: string }) {
   const { t } = useTranslation();
   const key = `infusedPage.products.${product.id}`;
+  const infusedPrice = priceOf({ priceKey: 'infused' }, '250');
   return (
     <Link
       to={`/${lang}/products/${product.slug}`}
@@ -47,6 +49,7 @@ export function InfusedCard({ product, lang }: { product: InfusedCardProduct; la
         <span className="mt-auto flex flex-wrap items-center justify-between gap-x-3 gap-y-1 pt-4">
           <span {...cmsText('infusedPage.size250')} className="font-body text-sm font-bold text-olive-dark">
             {t('infusedPage.size250')}
+            {infusedPrice ? <span className="font-display font-normal"> · {infusedPrice.display}</span> : null}
           </span>
           <InStoreNote />
         </span>

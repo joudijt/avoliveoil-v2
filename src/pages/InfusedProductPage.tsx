@@ -10,6 +10,7 @@ import { INFUSED_PRODUCTS, findInfusedProduct } from '../data/infusedProducts';
 import { InfusedCard, InStoreNote } from '../components/sections/InfusedCard';
 import { STORE, BRANCH_COUNT, MADINAH_NAME } from '../config/site';
 import { cmsText } from '../cms/editable';
+import { priceOf } from '../data/products';
 
 const ALL_LANGS = ['en', 'ms'] as const;
 
@@ -31,6 +32,7 @@ export function InfusedProductPage() {
 
   const key = `infusedPage.products.${product.id}`;
   const name = t(`${key}.name`);
+  const infusedPrice = priceOf({ priceKey: 'infused' }, '250');
   const notes = t(`${key}.notes`, { returnObjects: true }) as string[];
   const benefits = t(`${key}.benefits`, { returnObjects: true }) as string[];
   const uses = t(`${key}.uses`, { returnObjects: true }) as string[];
@@ -49,7 +51,7 @@ export function InfusedProductPage() {
         titleOverride={t(`${key}.seoTitle`)}
         descriptionOverride={t(`${key}.seoDescription`)}
         breadcrumbs={crumbs}
-        productMeta={{ name, description: t(`${key}.seoDescription`) }}
+        productMeta={{ name, description: t(`${key}.seoDescription`), productId: product.id }}
       />
       <Navbar />
       <main className="bg-bg">
@@ -75,23 +77,26 @@ export function InfusedProductPage() {
               <p {...cmsText(`${key}.description`)} className="mt-6 max-w-md font-body text-[17px] leading-[1.75] text-brown-ink">
                 {t(`${key}.description`)}
               </p>
-              {/* Infused: 250 ml only and no price set by the owner (storeFacts
-                  prices.products.infused.ml250 = null) — so the line names the size and
-                  sends the visitor to WhatsApp for the in-store price, never a guess. */}
+              {/* Infused: 250 ml only. Price from storeFacts (owner 2026-11-05: RM75) via
+                  priceOf; if it is ever unset again the line falls back to the WhatsApp ask. */}
               <p className="mt-6 font-body text-lg text-olive-dark">
                 <span {...cmsText('infusedPage.size250')} className="font-bold">
                   {t('infusedPage.size250')}
                 </span>
                 {' — '}
-                <a
-                  href={`https://wa.me/${STORE.seller.whatsappDigits}?text=${encodeURIComponent(name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  {...cmsText('productsPage.price.inStore')}
-                  className="font-semibold text-gold-ink underline decoration-gold/40 underline-offset-4 transition-colors duration-300 hover:text-olive-dark"
-                >
-                  {t('productsPage.price.inStore')}
-                </a>
+                {infusedPrice ? (
+                  <span className="font-display text-2xl text-olive-dark">{infusedPrice.display}</span>
+                ) : (
+                  <a
+                    href={`https://wa.me/${STORE.seller.whatsappDigits}?text=${encodeURIComponent(name)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    {...cmsText('productsPage.price.inStore')}
+                    className="font-semibold text-gold-ink underline decoration-gold/40 underline-offset-4 transition-colors duration-300 hover:text-olive-dark"
+                  >
+                    {t('productsPage.price.inStore')}
+                  </a>
+                )}
               </p>
               <InStoreNote className="mt-3" />
             </div>

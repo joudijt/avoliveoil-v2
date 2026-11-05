@@ -143,6 +143,26 @@ function runDist() {
     const products = (html.match(/"@type":"Product"/g) ?? []).length;
     if (products !== 2) fails.push(`${route}: expected 2 Product JSON-LD nodes, found ${products}`);
   }
+  // Infused price (owner 2026-11-05): when set, it must be on every infused page and
+  // that page must carry exactly one Product JSON-LD node.
+  const inf = P.infused?.ml250;
+  if (inf) {
+    mustPrices.push(inf.display);
+    for (const lang of ['en', 'ms']) {
+      for (const slug of JSON.parse(readFileSync(join(ROOT, 'src/data/infusedSlugs.json'), 'utf8'))) {
+        const route = `${lang}/products/${slug}`;
+        const html = page(route);
+        if (!html) continue;
+        if (!new RegExp(`${inf.display}(?!\d)`).test(html)) fails.push(`${route}: infused price ${inf.display} not on the page`);
+        const n = (html.match(/"@type":"Product"/g) ?? []).length;
+        if (n !== 1) fails.push(`${route}: expected 1 Product JSON-LD node, found ${n}`);
+      }
+    }
+    for (const route of ['en/products', 'ms/products']) {
+      const html = page(route);
+      if (html && !new RegExp(`${inf.display}(?!\d)`).test(html)) fails.push(`${route}: infused price ${inf.display} not on the cards`);
+    }
+  }
   const en = page('en/products');
   if (en) {
     for (const b of facts.branches) if (!en.includes(b.labelEn)) fails.push(`en/products: branch "${b.labelEn}" not on the page`);
@@ -152,7 +172,7 @@ function runDist() {
     console.error(`\ncheck-facts --dist: ${fails.length} failure(s)`);
     process.exit(1);
   }
-  console.log(`✓ check-facts --dist: ${mustPrices.join(', ')} on /en + /ms products, ${facts.branches.length} branches on /en/products`);
+  console.log(`✓ check-facts --dist: ${mustPrices.join(', ')} on /en + /ms products${inf ? ' + 12 infused pages' : ''}, ${facts.branches.length} branches on /en/products`);
 }
 
 if (DIST) runDist();

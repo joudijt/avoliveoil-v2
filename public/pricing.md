@@ -17,8 +17,8 @@
 - Notes: About RM258 per litre. Sold at Berkat Madinah Store.
 
 ## Infused Extra Virgin Olive Oil (six flavours) — 250 ml
-- Price: Price in store — ask on WhatsApp
-- Notes: 250 ml only, in every flavour. The price is given in store or on WhatsApp +60 11-1111 9912. Sold at Berkat Madinah Store.
+- Price: RM75
+- Notes: 250 ml only, in every flavour. Sold at Berkat Madinah Store.
 
 Prices are in MYR and are the retail prices at Berkat Madinah Store, the only seller of this brand in Malaysia. Stock can vary by branch. Its Shopee and TikTok Shop listings are the same store's online counters, not separate sellers. Wholesale terms for shops, restaurants and cafés are quoted on request — ask on WhatsApp +60 11-1111 9912.
 

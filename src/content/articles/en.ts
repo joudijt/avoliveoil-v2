@@ -987,7 +987,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Cold pressed describes how the oil left the olive — mechanically, under a temperature ceiling, with no solvents — and this guide shows what that does and does not tell you about the bottle in your hand.",
     "keyTakeaway": "Cold pressed olive oil is oil separated from the fruit by mechanical means alone, with the olive paste kept below a set temperature and no chemical solvent used at any point. It describes the extraction method only. It is not a quality grade, and it says nothing about how fresh the oil is.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressColdPressedOliveOilExplainedHero",
@@ -1251,7 +1251,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A six-point shelf checklist covering grade, harvest date, packaging, origin, price per litre and importer, ready to use on any bottle of olive oil sold in Malaysia.",
     "keyTakeaway": "There is no single best olive oil in Malaysia. There is the bottle that answers six questions honestly: does it say extra virgin, does it carry a harvest date, is the glass dark, does it name one origin, what is the price per litre, and who imports it.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressCompareOliveOilBrandsMalaysiaHero",
@@ -1357,7 +1357,7 @@ export const EN_ARTICLES: Article[] = [
           },
           {
             "type": "p",
-            "text": "Those [Arabian Village prices](/shop) are for the extra virgin oil; the organic oil costs more, and the 250 ml [infused flavours](/products/infused-extra-virgin-olive-oil-wild-thyme) are priced in store. Run the same arithmetic on anything else."
+            "text": "Those [Arabian Village prices](/shop) are for the extra virgin oil; the organic oil costs more, and the 250 ml [infused flavours](/products/infused-extra-virgin-olive-oil-wild-thyme) are RM75.00 each. Run the same arithmetic on anything else."
           }
         ]
       },
@@ -1510,7 +1510,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Pure olive oil is a single plant ingredient, so the honest answer is simple — but blends, flavourings and imported halal logos are worth reading properly.",
     "keyTakeaway": "Pure olive oil is pressed olives and nothing else, so a single-ingredient bottle raises no issue. What a careful shopper checks is the ingredient list on blends and flavoured oils, what an infusion is actually made from, and which body issued any halal mark on an imported bottle.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressHalalOliveOilMalaysiaHero",
@@ -1753,7 +1753,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A plain breakdown of what moves the olive oil price in Malaysia, with the per-litre sum that makes any two bottles comparable.",
     "keyTakeaway": "Olive oil in Malaysia is entirely imported, so freight, duty, grade and harvest year all sit inside the shelf price. Arabian Village Extra Virgin is RM59.00 for 250 ml and RM109.00 for 500 ml, which works out at RM236.00 and RM218.00 per litre, so the larger bottle is the better value.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilPriceMalaysiaHero",
@@ -1771,7 +1771,7 @@ export const EN_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Prices are quoted by bottle, not by litre, which is what makes a shelf hard to read. Arabian Village Palestinian cold-pressed extra virgin olive oil is **RM59.00 for 250 ml** and **RM109.00 for 500 ml**. The organic version is RM69.00 and RM129.00, and every [infused flavour](/products/infused-extra-virgin-olive-oil-wild-thyme) comes in 250 ml only, priced in store."
+            "text": "Prices are quoted by bottle, not by litre, which is what makes a shelf hard to read. Arabian Village Palestinian cold-pressed extra virgin olive oil is **RM59.00 for 250 ml** and **RM109.00 for 500 ml**. The organic version is RM69.00 and RM129.00, and every [infused flavour](/products/infused-extra-virgin-olive-oil-wild-thyme) comes in 250 ml only, at RM75.00."
           },
           {
             "type": "table",
@@ -1909,7 +1909,7 @@ export const EN_ARTICLES: Article[] = [
     "faqs": [
       {
         "q": "How much does a bottle of olive oil cost in Malaysia?",
-        "a": "Every bottle in the country is imported, so grade and size set the price. Arabian Village cold-pressed extra virgin olive oil is RM59.00 for 250 ml and RM109.00 for 500 ml; the organic oil is RM69.00 and RM129.00, and the infused flavours come in 250 ml, priced in store."
+        "a": "Every bottle in the country is imported, so grade and size set the price. Arabian Village cold-pressed extra virgin olive oil is RM59.00 for 250 ml and RM109.00 for 500 ml; the organic oil is RM69.00 and RM129.00, and the infused flavours come in 250 ml at RM75.00."
       },
       {
         "q": "What is the price of a 500 ml bottle of olive oil?",
@@ -1925,7 +1925,7 @@ export const EN_ARTICLES: Article[] = [
       },
       {
         "q": "Do infused olive oils cost more than the plain one?",
-        "a": "There is no published price for them yet. The blackseed, turmeric-black-pepper, rosemary-basil, lavender-chamomile, fennel-anise and wild-thyme infused oils come in 250 ml only and are priced in store, so ask at the branch or on WhatsApp. The plain extra virgin 250 ml is RM59.00. Choose by what you cook."
+        "a": "Yes, a little. The blackseed, turmeric-black-pepper, rosemary-basil, lavender-chamomile, fennel-anise and wild-thyme infused oils come in 250 ml only, at RM75.00 each, against RM59.00 for the plain extra virgin 250 ml. Choose by what you cook."
       },
       {
         "q": "Is cheap olive oil worth buying?",
@@ -1992,7 +1992,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "The groves, the Nabali olive and the autumn harvest behind Palestinian olive oil — and what single origin lets you verify that a multi-country blend does not.",
     "keyTakeaway": "Palestinian olive oil comes from rain-fed groves on terraced hill country, planted mostly with the Nabali olive and picked by hand in autumn. Its real advantage over a multi-country blend is not a decree of quality but verifiability: one region, one harvest window, one importer you can question.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressPalestinianOliveOilOriginHero",
@@ -2140,7 +2140,7 @@ export const EN_ARTICLES: Article[] = [
           },
           {
             "type": "p",
-            "text": "Extra Virgin is RM59.00 for 250 ml and RM109.00 for 500 ml, and Organic RM69.00 and RM129.00. Flavours from the [infused collection](/products) such as [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme) come in 250 ml only, priced in store."
+            "text": "Extra Virgin is RM59.00 for 250 ml and RM109.00 for 500 ml, and Organic RM69.00 and RM129.00. Flavours from the [infused collection](/products) such as [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme) come in 250 ml only, at RM75.00."
           },
           {
             "type": "image",
@@ -2187,7 +2187,7 @@ export const EN_ARTICLES: Article[] = [
       },
       {
         "q": "How much does Palestinian olive oil cost in Malaysia?",
-        "a": "RM59.00 for the 250 ml bottle and RM109.00 for the 500 ml of Extra Virgin; the organic oil is RM69.00 and RM129.00. The infused range comes in 250 ml only and is priced in store. Sizes are listed on the [shop page](/shop)."
+        "a": "RM59.00 for the 250 ml bottle and RM109.00 for the 500 ml of Extra Virgin; the organic oil is RM69.00 and RM129.00. The infused range comes in 250 ml only, at RM75.00. Sizes are listed on the [shop page](/shop)."
       }
     ],
     "related": [
@@ -2256,7 +2256,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A practical guide to olive oil for cooking in a Malaysian kitchen, from tumis and roasting to what a tablespoon actually costs.",
     "keyTakeaway": "Olive oil for cooking suits most of a Malaysian kitchen: tumis, roasting, marinades, rice and anything served cold. Use about half what you would pour of a neutral oil. At RM236 a litre a tablespoon costs roughly RM3.54, so the price lands per dish, not per bottle.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilForCookingHero",
@@ -2417,7 +2417,7 @@ export const EN_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Reach for the classic when the oil should not decide the dish: roasting, tumis, rice, a dressing you are seasoning yourself. Reach for an infusion when you want one clear flavour to arrive without chopping anything. The [Infused Collection](/products) is six botanicals in the same cold-pressed base, in 250 ml bottles priced in store."
+            "text": "Reach for the classic when the oil should not decide the dish: roasting, tumis, rice, a dressing you are seasoning yourself. Reach for an infusion when you want one clear flavour to arrive without chopping anything. The [Infused Collection](/products) is six botanicals in the same cold-pressed base, in 250 ml bottles at RM75.00."
           },
           {
             "type": "ul",
@@ -2587,7 +2587,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "The olive oil smoke point is a range rather than a fixed number, and freshness moves it more than the grade on the label does.",
     "keyTakeaway": "The olive oil smoke point is a range, not a number: roughly 190 to 210°C for extra virgin, higher for refined grades. Freshness and free fatty acid content move it more than the label does. Tumis, roasting and shallow-frying stay under it; a long deep-fry and a hard wok flame do not.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilSmokePointHero",
@@ -2898,7 +2898,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Pomace oil, refined olive oil and extra virgin all start as the same fruit but leave the mill by very different routes, and this guide shows what changes at each step and how to read it off a Malaysian label.",
     "keyTakeaway": "Pomace oil is not a lower grade of olive oil. It is pulled with solvent from the paste left over after pressing, then refined until it is neutral. Extra virgin comes from the fruit itself, mechanically, and keeps its taste. Pure, light and extra light are refined oils with a little virgin oil blended back.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressOliveOilVsPomaceOilHero",
@@ -3178,7 +3178,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "An extra virgin olive oil salad dressing is three parts oil to one part acid, an emulsifier, and a slow pour. Everything else is a variation on that.",
     "keyTakeaway": "An extra virgin olive oil salad dressing is three parts oil to one part acid by volume, held together by mustard, honey or crushed garlic and a slow whisked pour. Dissolve the salt in the acid first. Keep the rest in a capped glass jar in the fridge and shake it back together.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressEvooSaladDressingHero",
@@ -3471,7 +3471,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Extra virgin olive oil vs pure olive oil comes down to refining, and pure, classic, light and extra light all sit on the refined side of that line.",
     "keyTakeaway": "Extra virgin olive oil vs pure olive oil is a question of refining. Pure, classic, light and extra light are four shelf names for the same thing: refined olive oil with a little virgin blended back in. Extra virgin is pressed and bottled untreated, and it is the only one of them that still tastes of the fruit.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressEvooVsPureOliveOilHero",
@@ -3735,7 +3735,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "An air fryer needs a teaspoon of oil on the food, not a pour in the basket, and how you put it on matters more than which grade you reach for.",
     "keyTakeaway": "Olive oil belongs in an air fryer on the food, never in the basket. Brush or toss roughly a teaspoon over a full basket, keep aerosol cans away from the coating, and set the dial at 180 to 200°C for most things. Coat anything dry and starchy; leave wet batter to a pan.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilAirFryerHero",
@@ -3996,7 +3996,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A saucer of unheated oil and a torn piece of bread is the plainest test an olive oil ever gets, and the easiest one to set badly.",
     "keyTakeaway": "Olive oil for bread is the use where least hides the oil: no heat, no acid, no garlic. Serve it at room temperature in a shallow saucer, pour a tablespoon at a time and refill, tear an open-crumbed bread rather than cutting it, and keep za'atar and dukkah in separate bowls.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForBreadHero",
@@ -4279,7 +4279,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "In a marinade the oil is a carrier, not a tenderiser. Here is the ratio against acid, the time each ingredient wants, and which bottle to use.",
     "keyTakeaway": "In an olive oil marinade the oil dissolves the fat-soluble aromatics and holds them against the surface of the food. It does not tenderise: salt, the cut and the cooking do that. Three parts oil to one part acid suits meat, more oil for fish, and the clock matters more than the recipe.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilMarinadeHero",
@@ -4561,7 +4561,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Olive oil shelf life is decided by air, light and heat rather than by the date printed on the bottle, and a Malaysian kitchen runs harder on a bottle than a Mediterranean pantry does.",
     "keyTakeaway": "Olive oil shelf life runs up to about eighteen months from harvest while the bottle is sealed, and about two months of real character once the cap comes off. Air, light and heat set that pace, not the printed date. Read the harvest date, store the bottle dark and away from the stove, and buy the size your kitchen finishes.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilShelfLifeHero",
@@ -4818,7 +4818,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Garlic infused olive oil is easy to make and easy to make badly, because garlic sealed under oil at room temperature is a recognised botulism risk. Here is the safe way, the fridge window, and what to do with the jar.",
     "keyTakeaway": "Garlic infused olive oil must be refrigerated the moment it is made, strained clear of every clove, and used within three or four days. Fresh garlic is a low-acid vegetable, and sealed under oil at room temperature it grows the toxin behind botulism. Never leave the jar on the counter.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressGarlicInfusedOliveOilHero",
@@ -5071,7 +5071,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A young extra virgin olive oil bites the tongue and catches the back of the throat, and a first spoonful can make you cough. That is the oil behaving normally, not a bottle that has turned.",
     "keyTakeaway": "Bitterness on the tongue and the peppery catch at the back of the throat are flavour attributes of a young extra virgin olive oil, not signs of spoilage. Both fade as a bottle ages, so an oil that tastes of almost nothing is often an old one. Spoiled oil tastes entirely different: crayons, stale nuts or damp cardboard.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilBitterTasteHero",
@@ -5362,7 +5362,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Choosing between 250 ml, 500 ml and a tin is arithmetic, not taste: how fast your kitchen empties a bottle, held against the roughly two months an opened bottle stays at its best.",
     "keyTakeaway": "Buy the size your kitchen finishes inside roughly two months of opening, because that is how long an opened bottle holds its character. Count the pours in a normal week, multiply by fifteen millilitres, and let the answer pick the bottle. A large tin is only cheaper per litre if the last pour is still good.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilBottleSizeHero",
@@ -5632,7 +5632,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Olive oil bakes a different cake from butter rather than a worse one, and the conversion between them is a ratio a home baker can carry in their head.",
     "keyTakeaway": "Olive oil replaces butter in a cake at roughly three-quarters the volume, so 100 g of butter becomes about 75 ml of oil. The crumb comes out looser and stays soft for longer. A fruity extra virgin belongs with citrus, chocolate and spice; delicate sponges want a gentler oil.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForBakingHero",
@@ -5903,7 +5903,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "The right olive oil substitute depends on what the oil was doing in the dish, so a dressing, a hot pan, a roasting tray and a cake batter each call for a different fat and sometimes a different quantity.",
     "keyTakeaway": "There is no single olive oil substitute, because a dressing, a pan, a roasting tray and a cake batter ask the oil for different things. Rice bran and canola cover the hot jobs one for one. Melted butter covers a cake at about a third more volume. A dressing is the one swap that always tastes different.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilSubstituteHero",
@@ -6184,7 +6184,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Olive oil and coconut oil are two different cooking fats with two different jobs, and in a kitchen that runs at 30°C one stays liquid while the other firms up the moment the air-conditioning does.",
     "keyTakeaway": "Coconut oil belongs where a coconut note belongs, which in Malaysia is a great many dishes. Olive oil belongs where nothing should taste of coconut, and above all where the oil is served unheated. Coconut oil sets solid in an air-conditioned room; olive oil stays liquid. Cost by the litre decides the rest.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsCoconutOilHero",
@@ -6460,7 +6460,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "The four-ingredient version by weight and volume, for two and for four, with the pasta-water step that turns oil into sauce and the point past which garlic ruins the plate.",
     "keyTakeaway": "Aglio e olio is spaghetti, garlic, chilli and extra virgin olive oil bound with starchy pasta water. Weigh the pasta, take the garlic only as far as blond, keep a mugful of the cooking water back, and stir the last third of the oil in raw off the heat.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressAglioEOlioHero",
@@ -6730,7 +6730,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A haze in the bottle and a layer at the bottom are three different things wearing one face: cold, olive solids, or an oil that is genuinely finished. Only one of them means throw it out.",
     "keyTakeaway": "Cloudiness is almost never a verdict. Cold haze reverses in about an hour on the counter, and sediment in an unfiltered oil is fine olive solids rather than damage, though they shorten the bottle's life. Only the smell decides whether an oil is finished, and a rancid oil can be perfectly clear.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressCloudyOliveOilHero",
@@ -6981,7 +6981,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Balsamic and olive oil are poured together by eye in most kitchens. They are a fat and a sweet acid, and the amount of each decides whether the plate tastes of one, the other, or neither.",
     "keyTakeaway": "Start at four parts extra virgin olive oil to one part balsamic by volume, which is what this blog already publishes for a balsamic dressing, then move it: more oil when the vinegar is thin and sharp, far less when it is aged and syrupy. Whisk it for a salad, pour it unmixed for bread, and keep the rest capped and cold.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilAndBalsamicHero",
@@ -7244,7 +7244,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Grilling is the one method where most of the oil never reaches the plate. Oil the food rather than the bars, drain before the fire, and keep the good bottle for after.",
     "keyTakeaway": "Brush the oil onto the food, never onto the grate, and drain the marinade before anything meets the fire, because the oil that drips is the oil that burns. Use a plain oil in the bowl and save the extra virgin for the pour that lands after the food comes off.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForGrillingHero",
@@ -7510,7 +7510,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A bowl of hummus takes oil twice, and the two pours do different work. Which oil belongs in the blend, which belongs on the surface, how much of each, and how to serve it so the oil sits in a pool instead of vanishing.",
     "keyTakeaway": "Hummus takes oil twice. About thirty millilitres goes into the blend, where tahini and lemon mask most of its character, so the everyday bottle is enough there. The pour on top is tasted almost neat, a tablespoon a portion, and that is where the better extra virgin belongs.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilForHummusHero",
@@ -7811,7 +7811,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Two premium bottles, two different jobs. A cook's comparison of olive oil and avocado oil on flavour, heat, texture and cost per litre in Malaysia.",
     "keyTakeaway": "Compare these two as cooking fats, not as health products. Refined avocado oil is near-neutral and its smoke point is the higher of the two, above the 190 to 210 °C published for extra virgin olive oil. Buy avocado where the oil should vanish, olive where the oil is the flavour.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsAvocadoOilHero",
@@ -8067,7 +8067,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Focaccia is not bread you dip afterwards. The oil is folded into the dough itself, pooled again by dimpling, and poured a third time the moment it leaves the oven.",
     "keyTakeaway": "Fold oil into a wet dough, let it rise, then press deep dimples across the surface once it is in the tray. Top with rosemary, flaky salt and olives pressed into those dimples, bake hot at 220-230°C, and finish with a last pour straight from the oven.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilFocacciaHero",
@@ -8565,7 +8565,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A Spanish-style fried egg wants a pool of hot olive oil, not a film, and a spoon working the yolk while the white blisters at the edge. The method is short, but the oil quantity is where most home cooks fall short.",
     "keyTakeaway": "Use two to three tablespoons of oil for one egg, hot enough to bubble the instant the egg lands, and spoon it over the yolk instead of flipping. Salt the white once it firms, not the yolk. Extra virgin adds its own pepper and grass; a milder oil stays out of the way.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilFriedEggHero",
@@ -8793,7 +8793,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A microwave bag steams half its kernels and scorches the rest. A pot, a lid and a few tablespoons of olive oil pop it more evenly and taste of something before the salt goes anywhere near it.",
     "keyTakeaway": "Three tablespoons of oil for half a cup of kernels in a wide, lidded pot on medium heat, shaken every ten to fifteen seconds, off the heat and salted the moment popping slows. Extra virgin over a neutral oil is a flavour choice, not a health one, and holds up through the heat popcorn needs.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilPopcornHero",
@@ -9033,7 +9033,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Most roasted vegetables come out of the oven soft and grey instead of browned at the edges. The fix is rarely the oven. It is how much oil goes on, how the tray is loaded, and when the salt lands.",
     "keyTakeaway": "Coat vegetables in a thin film of oil, about a tablespoon per tray, not a pool. Spread them in one uncrowded layer so steam escapes, roast hot for watery vegetables and lower for dense ones, salt dense vegetables before and watery ones after, then finish with a raw drizzle once out.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilRoastedVegetablesHero",
@@ -9300,7 +9300,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Olive oil and butter are both reached for on instinct, and the right one depends on the job: a slice of toast, a hot pan, a finished plate. This is about spreading and cooking, not baking.",
     "keyTakeaway": "Neither fat replaces the other across the board. Butter suits hot toast, a browned crust and a pan sauce finished glossy; olive oil suits room-temperature bread, a raw drizzle and a pan that should not brown. For the baking conversion ratio, see the substitute guide rather than guessing it here.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsButterHero",
@@ -9568,7 +9568,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A spoon of olive oil in a cup of coffee is a texture and flavour trend, not a health drink. Here is how much to use, how to mix it in so it doesn't separate, and what it actually tastes like.",
     "keyTakeaway": "Olive oil coffee is a mouthfeel trend: about half a teaspoon of a mild extra virgin oil, blended or stirred hard into hot or iced coffee, gives a fuller texture and a faint note that softens bitterness. It has nothing to do with metabolism or energy claims — those belong to a dietitian, not this article.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilCoffeeHero",
@@ -9810,7 +9810,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Extra virgin olive oil churned into an ice cream base gives a silkier texture and a fruity, faintly peppery counter-note to the sweetness. This is a technique borrowed from Mediterranean kitchens, not a diet swap.",
     "keyTakeaway": "Olive oil ice cream is a churning technique, not a lighter dessert: extra virgin oil joins or replaces the cream, emulsifies in as the base churns, and its fruit and pepper cut through the sweetness. Finish with flaky salt or citrus zest, or skip the machine with a folded no-churn version.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilIceCreamHero",
@@ -10071,7 +10071,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A mash made with extra virgin olive oil instead of butter and cream is looser, glossier and carries its own flavour rather than fading into the background. This is a technique for the stovetop, not a health claim.",
     "keyTakeaway": "Olive oil mash is dairy-free by ingredient, not by promised benefit: warm oil folded into just-mashed potato, roughly 60–80 ml per kilo, gives a looser, creamier result than butter and cream. A fresh-garlic variation needs plain oil, not the infused range.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilMashedPotatoesHero",
@@ -10325,7 +10325,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "One specific cake, not the general butter-to-oil conversion: how much extra virgin olive oil goes into the batter, how the zest and juice carry the orange flavour, and why the crumb stays moist for days without the fridge.",
     "keyTakeaway": "This is one cake, not the general baking substitution: 180 ml extra virgin olive oil, orange zest rubbed into the sugar, juice in the batter, baked plain and finished with a citrus glaze or a dusting of icing sugar. The oil is what keeps the crumb moist at room temperature for days.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilOrangeCakeHero",
@@ -10548,7 +10548,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Olive oil and sesame oil are both strong-flavoured, both used raw and both used to cook, and a lot of Malaysian kitchens already keep both. This is where each one wins, not which one replaces the other.",
     "keyTakeaway": "Olive oil and sesame oil are both strong, distinct-flavoured oils used raw and in cooking, but they rarely do the same job. Toasted sesame oil finishes a stir-fry or noodle dish off the heat; olive oil suits a raw drizzle or a moderate sauté. Most kitchens keep both rather than choosing one.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsSesameOilHero",
@@ -10799,7 +10799,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "Sunflower oil and olive oil sit at opposite ends of the same shelf: one is bred to disappear into a dish, the other is pressed to be tasted. This is a plain comparison for the pan, not a verdict on which is better.",
     "keyTakeaway": "Sunflower oil is neutral and takes more heat before it smokes, which suits a hard fry. Extra virgin olive oil carries its own fruity or peppery flavour and suits a raw drizzle or a moderate sauté rather than a long deep-fry. The price gap tracks how each is made, not a quality claim either way.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilVsSunflowerOilHero",
@@ -11283,7 +11283,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "No page can honestly rank this market, because nobody has tasted every bottle in it. What can be answered is what best means against a specific use, and which four things actually differ between bottles.",
     "keyTakeaway": "There is no single best extra virgin olive oil in Malaysia, and any page claiming to have ranked the market has told you something about itself. Best is only definable against a use: a dressing, a hot pan and a tight budget point at three different bottles. Taste is the only test a buyer can run.",
     "datePublished": "2026-09-10",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressBestExtraVirginOliveOilInMalaysiaHero",
@@ -11743,7 +11743,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A survey of where the grade turns up in Malaysia, what each place does well and badly, and the one thing worth checking before you pay in each of them.",
     "keyTakeaway": "Extra virgin olive oil reaches Malaysian buyers through three quite different channels: supermarket shelves, Arab and Middle Eastern grocers, and online marketplace listings. Each shows you different information and hides different things. All of it is imported, which makes the harvest date the single most useful line on any label.",
     "datePublished": "2026-09-10",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressExtraVirginOliveOilInMalaysiaHero",
@@ -11980,7 +11980,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A map rather than a method. Four families of use, what grade and freshness each one demands, and a link to the article that covers each in full.",
     "keyTakeaway": "Extra virgin olive oil has four families of use: raw and finishing, dressings and emulsions, moderate-heat cooking, and baking and desserts. Each demands something different from the bottle. The raw uses need the freshest, most peppery oil you own; baking is the one place a quieter oil is fine.",
     "datePublished": "2026-09-10",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressExtraVirginOliveOilUsesHero",
@@ -12497,7 +12497,7 @@ export const EN_ARTICLES: Article[] = [
     "excerpt": "A blunt health question answered the only honest way a Malaysian seller can answer it: by explaining what a label may legally say, what it verifiably carries, and where the information stops.",
     "keyTakeaway": "A Malaysian seller cannot legally tell you olive oil is healthy — Regulation 18(6) forbids it. What a label can honestly carry is the grade, the harvest date, a single named origin, the 0.8% category acidity ceiling and dark glass. Everything past that belongs to your doctor.",
     "datePublished": "2026-09-10",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressOliveOilIsItHealthyHero",

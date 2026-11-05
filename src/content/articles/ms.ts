@@ -963,7 +963,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Panduan ringkas untuk membeli minyak zaitun di Lembah Klang — kenapa kedai runcit Arab biasanya menang, apa yang perlu dilihat pada botol, dan di mana Arabian Village dijual.",
     "keyTakeaway": "Di Lembah Klang, kedai runcit Arab biasanya memberi pilihan minyak zaitun yang lebih baik daripada rak pasar raya kerana ia barang teras di situ. Arabian Village dijual melalui Berkat Madinah Store — lima cawangan di Selangor (Ampang, Kajang, Shah Alam, Cash & Carry di Ampang dan Sri Gombak), serta kaunter Shopee dan TikTok Shop mereka sendiri. Cawangan Ampang dan Sri Gombak buka 8:00 pagi hingga 12:00 tengah malam setiap hari.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressBeliMinyakZaitunKlHero",
@@ -1138,7 +1138,7 @@ export const MS_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik pula RM69.00 dan RM129.00. Setiap perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai. Kalau ini kali pertama, ambil 250 ml untuk merasa dahulu; kalau anda memasak setiap hari, 500 ml lebih berbaloi."
+            "text": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik pula RM69.00 dan RM129.00. Setiap perisa Infused Collection hanya dalam botol 250 ml, pada harga RM75.00. Kalau ini kali pertama, ambil 250 ml untuk merasa dahulu; kalau anda memasak setiap hari, 500 ml lebih berbaloi."
           },
           {
             "type": "p",
@@ -1180,7 +1180,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Berapa harga minyak zaitun Arabian Village?",
-        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml. Versi Organik berharga RM69.00 (250 ml) dan RM129.00 (500 ml). Enam perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai."
+        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml. Versi Organik berharga RM69.00 (250 ml) dan RM129.00 (500 ml). Enam perisa Infused Collection hanya dalam botol 250 ml, pada harga RM75.00."
       },
       {
         "q": "Apa beza extra virgin dengan minyak zaitun biasa?",
@@ -1245,7 +1245,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Harga sebenar mengikut saiz botol, sebab minyak zaitun mahal di Malaysia, dan cara kira harga seliter supaya perbandingan anda adil.",
     "keyTakeaway": "Minyak Zaitun Extra Virgin Palestin Arabian Village berharga RM59.00 bagi botol 250 ml dan RM109.00 bagi botol 500 ml. Tukar kepada seliter dan angkanya jadi RM236.00 berbanding RM218.00 — botol 500 ml RM18.00 lebih murah bagi setiap liter minyak yang sama. Bandingkan seliter, bukan harga rak.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressHargaMinyakZaitunMalaysiaHero",
@@ -1264,7 +1264,7 @@ export const MS_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Minyak zaitun dara extra virgin sejuk perah Arabian Village berharga **RM59.00** bagi botol 250 ml dan **RM109.00** bagi botol 500 ml di Malaysia. Versi organiknya berharga **RM69.00** (250 ml) dan **RM129.00** (500 ml), iaitu RM276.00 dan RM258.00 seliter. Enam perisa Infused Collection pula hanya dijual dalam botol 250 ml, dengan harga di kedai."
+            "text": "Minyak zaitun dara extra virgin sejuk perah Arabian Village berharga **RM59.00** bagi botol 250 ml dan **RM109.00** bagi botol 500 ml di Malaysia. Versi organiknya berharga **RM69.00** (250 ml) dan **RM129.00** (500 ml), iaitu RM276.00 dan RM258.00 seliter. Enam perisa Infused Collection pula hanya dijual dalam botol 250 ml, pada harga RM75.00."
           },
           {
             "type": "table",
@@ -1432,7 +1432,7 @@ export const MS_ARTICLES: Article[] = [
     "faqs": [
       {
         "q": "Berapa harga minyak zaitun 250ml?",
-        "a": "Botol 250 ml minyak zaitun dara extra virgin Arabian Village berharga RM59.00. Ditukar kepada seliter, itu bersamaan RM236.00. Versi organik 250 ml pula berharga RM69.00, manakala perisa Infused Collection juga datang dalam botol 250 ml, dengan harga di kedai."
+        "a": "Botol 250 ml minyak zaitun dara extra virgin Arabian Village berharga RM59.00. Ditukar kepada seliter, itu bersamaan RM236.00. Versi organik 250 ml pula berharga RM69.00, manakala perisa Infused Collection juga datang dalam botol 250 ml, pada harga RM75.00."
       },
       {
         "q": "Berapa harga minyak zaitun 500ml?",
@@ -1448,7 +1448,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Adakah minyak zaitun berperisa lebih mahal daripada yang klasik?",
-        "a": "Harganya belum disenaraikan dalam talian. Setiap perisa dalam Infused Collection — lavender-chamomile, blackseed, turmeric-black-pepper, rosemary-basil, fennel-anise dan wild-thyme — dijual dalam botol 250 ml sahaja, dan harganya boleh ditanya di kedai atau melalui WhatsApp. Semuanya infusi masakan, dibuat untuk kegunaan dapur harian."
+        "a": "Ya, sedikit. Setiap perisa dalam Infused Collection — lavender-chamomile, blackseed, turmeric-black-pepper, rosemary-basil, fennel-anise dan wild-thyme — dijual dalam botol 250 ml sahaja pada harga RM75.00, berbanding RM59.00 untuk extra virgin biasa 250 ml. Semuanya infusi masakan, dibuat untuk kegunaan dapur harian."
       },
       {
         "q": "Di mana saya boleh beli minyak zaitun Arabian Village di Malaysia?",
@@ -1515,7 +1515,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Daripada menghafal senarai nama, gunakan lima kriteria — gred, tarikh, bekas, asal-usul dan harga seliter — untuk menilai mana-mana botol minyak zaitun di rak.",
     "keyTakeaway": "Tiada satu jenama minyak zaitun terbaik untuk semua orang. Yang ada ialah botol yang lulus lima pemeriksaan: gred yang dinyatakan jelas, tarikh yang boleh dibaca, bekas yang menghalang cahaya, asal-usul sampai ke negara ladangnya, dan harga yang anda banding seliter dan bukan sebotol.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressJenamaMinyakZaitunTerbaikHero",
@@ -1745,7 +1745,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Adakah minyak zaitun berperisa lebih mahal daripada yang klasik?",
-        "a": "Bagi Arabian Village, harga perisa seperti [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme) belum disenaraikan dalam talian — ia dijual dalam botol 250 ml sahaja, dengan harga di kedai. Minyak extra virgin klasik pula RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml. Untuk jenama lain, semak harga seliter dengan cara yang sama."
+        "a": "Bagi Arabian Village, harga perisa seperti [wild thyme](/products/infused-extra-virgin-olive-oil-wild-thyme) ialah RM75.00 — ia dijual dalam botol 250 ml sahaja. Minyak extra virgin klasik pula RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml. Untuk jenama lain, semak harga seliter dengan cara yang sama."
       },
       {
         "q": "Di mana saya boleh melihat botolnya sendiri sebelum membeli?",
@@ -1806,7 +1806,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Panduan ringkas kepada gred minyak zaitun — extra virgin, virgin, ditapis dan pomace — dan apa yang berubah pada rasa serta harga.",
     "keyTakeaway": "Gred minyak zaitun menerangkan cara minyak itu dikeluarkan daripada buah. Extra virgin dan virgin diperah secara mekanikal sahaja; minyak ditapis dan pomace melalui proses penapisan. Extra virgin ialah gred yang paling ketat had keasidannya, paling kuat rasanya, dan paling tinggi harganya seliter.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunExtraVirginGredHero",
@@ -1940,7 +1940,7 @@ export const MS_ARTICLES: Article[] = [
           },
           {
             "type": "p",
-            "text": "Bandingkan harga seliter, bukan harga sebotol. Di [kedai dalam talian](/shop), 250 ml berharga **RM59.00** dan 500 ml **RM109.00** — botol besar lebih murah seliter. Perisa Koleksi Infused pula hanya dalam botol 250 ml, dengan harga di kedai."
+            "text": "Bandingkan harga seliter, bukan harga sebotol. Di [kedai dalam talian](/shop), 250 ml berharga **RM59.00** dan 500 ml **RM109.00** — botol besar lebih murah seliter. Perisa Koleksi Infused pula hanya dalam botol 250 ml, pada harga RM75.00."
           },
           {
             "type": "image",
@@ -2002,7 +2002,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Berapa harga minyak zaitun extra virgin Arabian Village?",
-        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml. Versi Organik berharga RM69.00 dan RM129.00, manakala perisa Koleksi Infused hanya dalam botol 250 ml, dengan harga di kedai. Ia diedarkan di Malaysia oleh Berkat Madinah Store, dan boleh ditempah melalui WhatsApp di +60 11-1111 9912."
+        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml. Versi Organik berharga RM69.00 dan RM129.00, manakala perisa Koleksi Infused hanya dalam botol 250 ml, pada harga RM75.00. Ia diedarkan di Malaysia oleh Berkat Madinah Store, dan boleh ditempah melalui WhatsApp di +60 11-1111 9912."
       },
       {
         "q": "Di mana saya boleh lihat botol itu sendiri?",
@@ -2079,7 +2079,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Minyak zaitun tulen ialah satu bahan daripada tumbuhan, jadi jawapannya mudah — tetapi senarai bahan, minyak berperisa dan logo import masih berbaloi disemak.",
     "keyTakeaway": "Minyak zaitun dara tulen ialah satu bahan tunggal daripada tumbuhan: jus buah zaitun yang diperah secara mekanikal, tanpa pelarut dan tanpa bahan haiwan. Keraguan halal hampir selalu datang daripada apa yang ditambah selepas itu — minyak campuran, pembawa perisa, atau talian pengeluaran yang dikongsi.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressMinyakZaitunHalalHero",
@@ -2341,7 +2341,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Perkataan organik pada botol minyak zaitun merujuk kepada cara pokok itu diusahakan di ladang, bukan kepada gred, rasa atau kesegaran minyak di dalamnya.",
     "keyTakeaway": "Organik ialah label tentang cara bertani: racun perosak, baja dan pengurusan tanah di ladang. Ia bukan gred, bukan penanda rasa dan bukan penanda kesegaran. Extra virgin pula ialah gred minyak. Satu botol boleh memegang satu label, kedua-duanya, atau tiada satu pun daripadanya.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunOrganikHero",
@@ -2622,7 +2622,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Bagaimana buah zaitun di ladang Palestin bertukar menjadi minyak dalam botol di dapur anda, dan apa yang boleh anda semak sendiri pada label.",
     "keyTakeaway": "Minyak zaitun Palestin ialah minyak yang dituai dan diperah di Palestin, biasanya pada musim luruh, lalu dibotolkan sebagai minyak zaitun dara extra perahan sejuk. Kerana ia satu sumber, pembeli boleh menjejak asalnya kepada satu kawasan dan satu musim tuaian, bukan campuran beberapa buah negara.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressMinyakZaitunPalestinHero",
@@ -2783,7 +2783,7 @@ export const MS_ARTICLES: Article[] = [
           },
           {
             "type": "p",
-            "text": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk 500 ml, dan versi Organik RM69.00 dan RM129.00. Perisa dalam [koleksi infused](/products) hanya dalam botol 250 ml, dengan harga di kedai. Storefront Shopee dan TikTok Shop ialah saluran milik Berkat Madinah sendiri, bukan penjual lain."
+            "text": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk 500 ml, dan versi Organik RM69.00 dan RM129.00. Perisa dalam [koleksi infused](/products) hanya dalam botol 250 ml, pada harga RM75.00. Storefront Shopee dan TikTok Shop ialah saluran milik Berkat Madinah sendiri, bukan penjual lain."
           },
           {
             "type": "image",
@@ -2826,7 +2826,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Berapa harga minyak zaitun Palestin ini di Malaysia?",
-        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik RM69.00 dan RM129.00. Perisa dalam koleksi infused hanya dalam botol 250 ml, dengan harga di kedai. Untuk membanding dengan botol lain secara adil, bahagikan harga dengan isi padu botol supaya anda membanding harga seliter."
+        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik RM69.00 dan RM129.00. Perisa dalam koleksi infused hanya dalam botol 250 ml, pada harga RM75.00. Untuk membanding dengan botol lain secara adil, bahagikan harga dengan isi padu botol supaya anda membanding harga seliter."
       },
       {
         "q": "Bagaimana cara simpan minyak zaitun di iklim Malaysia?",
@@ -2889,7 +2889,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Bila minyak zaitun menjadi di dalam kuali, bila ia membazir, dan bagaimana takat asap menentukan hidangan Malaysia mana yang sesuai dengannya.",
     "keyTakeaway": "Minyak zaitun untuk masak paling menjadi pada api kecil hingga sederhana — tumis, panggang, goreng cetek — dan sebagai minyak mentah untuk salad dan mencicah. Untuk goreng rendam api besar, minyak yang lebih neutral dan lebih tinggi takat asapnya masih pilihan yang lebih praktikal.",
     "datePublished": "2026-08-20",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukMasakHero",
@@ -3091,7 +3091,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Berapa harga minyak zaitun Arabian Village di Malaysia?",
-        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik RM69.00 dan RM129.00. Perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai. Ia diedarkan di Malaysia oleh Berkat Madinah Store, yang beroperasi sejak tahun 2010."
+        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml; versi Organik RM69.00 dan RM129.00. Perisa Infused Collection hanya dalam botol 250 ml, pada harga RM75.00. Ia diedarkan di Malaysia oleh Berkat Madinah Store, yang beroperasi sejak tahun 2010."
       },
       {
         "q": "Di mana boleh beli dan rasa minyak zaitun ini?",
@@ -3195,7 +3195,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Apa itu minyak zaitun yang diinfusi habbatus sauda, bagaimana ia dibuat, rasanya, dan di mana ia sesuai dalam dapur Malaysia.",
     "keyTakeaway": "Minyak zaitun habbatus sauda ialah minyak zaitun dara ekstra perahan sejuk yang diinfusi dengan biji Nigella sativa. Ia satu minyak, bukan campuran dua botol, dan bukan kapsul. Rasanya hangat dan berlada, paling menjadi sebagai minyak akhir untuk pencicah, perapan, nasi dan sayur panggang.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunHabbatusSaudaHero",
@@ -3345,7 +3345,7 @@ export const MS_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Seperti setiap perisa dalam Infused Collection, minyak ini dijual dalam botol 250 ml sahaja, dan harganya boleh ditanya terus di kedai atau melalui WhatsApp. Untuk membanding dengan botol lain, tukar harga kepada seliter: harga botol dibahagi 250, kemudian darab 1,000 — itulah cara paling jujur menilai dua botol yang berlainan saiz."
+            "text": "Seperti setiap perisa dalam Infused Collection, minyak ini dijual dalam botol 250 ml sahaja pada harga RM75.00, iaitu RM300 seliter. Untuk membanding dengan botol lain, tukar harga kepada seliter: harga botol dibahagi 250, kemudian darab 1,000 — itulah cara paling jujur menilai dua botol yang berlainan saiz."
           },
           {
             "type": "p",
@@ -3478,7 +3478,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Nisbah sos yang mudah diingat, tiga campuran daripada bahan yang dapur kita sudah ada, dan berapa sebenarnya kos satu hidangan.",
     "keyTakeaway": "Minyak zaitun untuk salad digunakan mentah, jadi rasanya kekal seperti dalam botol. Mulakan dengan tiga bahagian minyak kepada satu bahagian masam — jus limau kasturi atau cuka — kemudian garam dan sedikit madu. Nisbah itu cukup untuk salad, kerabu, ulam dan perapan sejuk.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukSaladHero",
@@ -3591,7 +3591,7 @@ export const MS_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Infused Collection ialah minyak zaitun sejuk-tekan yang sama, diserapkan dengan botani untuk memasak. Dalam hidangan sejuk perisanya lebih ketara sebab tiada haba yang melembutkannya. Guna sedikit dahulu, kacau, kemudian tambah kalau perlu. Enam pilihan itu dijual dalam botol 250 ml sahaja, dengan harga di kedai."
+            "text": "Infused Collection ialah minyak zaitun sejuk-tekan yang sama, diserapkan dengan botani untuk memasak. Dalam hidangan sejuk perisanya lebih ketara sebab tiada haba yang melembutkannya. Guna sedikit dahulu, kacau, kemudian tambah kalau perlu. Enam pilihan itu dijual dalam botol 250 ml sahaja pada harga RM75.00."
           },
           {
             "type": "table",
@@ -3746,7 +3746,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Berapa harga minyak zaitun Arabian Village?",
-        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml; versi Organik RM69.00 dan RM129.00. Setiap perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai."
+        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk 250 ml dan RM109.00 untuk 500 ml; versi Organik RM69.00 dan RM129.00. Setiap perisa Infused Collection hanya dalam botol 250 ml, pada harga RM75.00."
       }
     ],
     "related": [
@@ -3815,7 +3815,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Ayat-ayat yang menyebut zaitun dalam Al-Quran beserta rujukan surah dan nombor ayat, dan kisah ladang keluarga di Palestin yang menjaga pokok itu turun-temurun.",
     "keyTakeaway": "Zaitun disebut namanya dalam beberapa tempat di dalam Al-Quran, antaranya Surah At-Tin 95:1, Surah An-Nur 24:35, Surah Al-An'am 6:99 dan 6:141, serta Surah An-Nahl 16:11. Di Palestin pula, pokok yang sama menjadi tanaman keluarga yang dituai setiap musim luruh dan diwarisi turun-temurun.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 4,
     "hero": {
       "src": "pressZaitunDalamAlQuranHero",
@@ -3977,7 +3977,7 @@ export const MS_ARTICLES: Article[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "Minyak zaitun Arabian Village ialah minyak zaitun dara extra perahan sejuk satu sumber dari Palestin. Di Malaysia ia diedarkan oleh Berkat Madinah Store, pengedar rasmi dan satu-satunya. Botol 250 ml berharga RM59.00 dan botol 500 ml RM109.00; versi Organik RM69.00 dan RM129.00. Setiap rasa Koleksi Infusi hanya dalam botol 250 ml, dengan harga di kedai."
+            "text": "Minyak zaitun Arabian Village ialah minyak zaitun dara extra perahan sejuk satu sumber dari Palestin. Di Malaysia ia diedarkan oleh Berkat Madinah Store, pengedar rasmi dan satu-satunya. Botol 250 ml berharga RM59.00 dan botol 500 ml RM109.00; versi Organik RM69.00 dan RM129.00. Setiap rasa Koleksi Infusi hanya dalam botol 250 ml, pada harga RM75.00."
           },
           {
             "type": "p",
@@ -4093,7 +4093,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Bahan botol, saiz yang padan dengan kadar guna dapur anda, tutup yang rapat, dan apa nak buat dengan botol yang sudah kosong.",
     "keyTakeaway": "Botol minyak zaitun yang baik ialah kaca berwarna gelap dengan tutup skru yang menutup rapat. Kaca tidak menyerap bau dan warna gelap menapis sebahagian cahaya. Pilih saiz mengikut kadar guna dapur anda: botol yang habis dalam sebulan atau dua selepas dibuka kekal lebih tajam rasanya daripada botol besar yang bertahan setahun.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressBotolMinyakZaitunHero",
@@ -4326,7 +4326,7 @@ export const MS_ARTICLES: Article[] = [
       },
       {
         "q": "Berapa harga botol minyak zaitun Arabian Village?",
-        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml, iaitu RM236 dan RM218 seliter. Versi Organik berharga RM69.00 dan RM129.00, manakala perisa Infused Collection hanya dalam botol 250 ml, dengan harga di kedai. Kedua-dua saiz boleh dilihat di halaman produk."
+        "a": "Minyak Zaitun Extra Virgin Palestin berharga RM59.00 untuk botol 250 ml dan RM109.00 untuk botol 500 ml, iaitu RM236 dan RM218 seliter. Versi Organik berharga RM69.00 dan RM129.00, manakala perisa Infused Collection hanya dalam botol 250 ml, pada harga RM75.00. Kedua-dua saiz boleh dilihat di halaman produk."
       }
     ],
     "related": [
@@ -4382,7 +4382,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Rak mana yang membunuh rasa, kenapa peti sejuk bukan tempatnya, dan berapa lama sebotol bertahan selepas tutupnya dibuka.",
     "keyTakeaway": "Cara simpan minyak zaitun di rumah Malaysia bergantung pada satu keputusan: satu tempat gelap, tertutup dan jauh dari dapur masak, dengan tutup yang dirapatkan semula setiap kali. Peti sejuk bukan tempatnya, dan botol yang sudah dibuka elok dihabiskan dalam kira-kira dua bulan.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressCaraSimpanMinyakZaitunHero",
@@ -4659,7 +4659,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Apa itu hampas zaitun, bagaimana minyak dikeluarkan daripadanya, dan kenapa botol pomace berharga jauh lebih rendah di rak yang sama.",
     "keyTakeaway": "Minyak zaitun pomace ialah minyak yang diekstrak dengan pelarut daripada hampas zaitun — kulit, isi dan serpihan biji yang tinggal selepas perahan pertama — kemudian ditapis sehingga hampir neutral. Ia sah dijual sebagai minyak zaitun, tetapi gred, rasa dan harganya berbeza daripada minyak dara yang diperah terus daripada buah.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunPomaceHero",
@@ -4938,7 +4938,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Empat kaedah goreng, empat suhu, dan hanya sebahagian daripadanya sesuai dengan minyak zaitun dara. Termasuk kos seperiuk untuk goreng rendam.",
     "keyTakeaway": "Minyak zaitun untuk goreng paling menjadi pada goreng cetek dan tumis, di mana suhu kuali duduk sekitar 140 hingga 180 darjah. Untuk periuk goreng rendam halangannya kos, bukan haba. Untuk kerja wok api besar pula minyak sudah mula berasap sebelum kuali sempat panas cukup.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukGorengHero",
@@ -5233,7 +5233,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Minyak sawit, kelapa dara, bijan, kacang tanah dan zaitun dibandingkan pada rasa, takat asap dan kerja dapur — dan kenapa harganya meletakkannya dalam kelas lain.",
     "keyTakeaway": "Minyak zaitun vs minyak masak bukan soal mana satu menang, tetapi kerja mana untuk minyak mana. Minyak sawit dan minyak kacang tanah untuk goreng rendam dan wok api besar. Minyak zaitun dara untuk tumis, panggang, sos salad dan cicah, kerana rasanya sampai ke pinggan. Harga seliternya pula meletakkannya dalam kelas lain.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakMasakHero",
@@ -5544,7 +5544,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Empat resepi dengan sukatan penuh, bahan yang dapur kita memang sudah ada, dan berapa minyak yang setiap satu telan.",
     "keyTakeaway": "Resepi minyak zaitun yang paling menjadi di dapur Malaysia ialah yang ringkas: cicahan roti bawang putih, perap ayam limau nipis, sayur panggang dan pasta bawang putih cili. Semuanya menggunakan sukatan sudu besar, bahan yang sudah ada di rumah, dan siap dalam tiga puluh minit atau kurang.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressResepiMinyakZaitunHero",
@@ -5832,7 +5832,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Penyenaraian dalam talian tidak boleh dipegang dan tidak boleh dirasa. Empat perkara yang mesti ada padanya, kotak dalam cuaca panas kita, dan senarai semak sebelum tekan butang bayar.",
     "keyTakeaway": "Beli minyak zaitun online dengan selamat bermula pada penyenaraian: negara asal yang dinamakan, gred yang ditulis, saiz botol, dan satu tarikh. Selepas itu barulah soal penghantaran — kotak berlapis, botol kaca gelap, dan penjual yang ada kedai fizikal serta nombor yang menjawab kalau botol sampai pecah atau salah.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressBeliMinyakZaitunOnlineHero",
@@ -6101,7 +6101,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Minyak dicampur, minyak ditapis dijual sebagai dara, label yang pandai berdiam. Dan tiga ujian dapur yang viral tetapi tidak membuktikan satu apa pun.",
     "keyTakeaway": "Minyak zaitun palsu lebih kerap bermaksud penggantian gred daripada racun: minyak murah dicampur masuk, minyak ditapis dijual pada harga dara, tuaian lama dilabel semula. Ujian peti sejuk, ujian pelita dan ujian warna tidak memisahkan yang tulen daripada yang tidak. Yang boleh disemak ialah tarikh tuaian, asal usul, botol, harga seliter dan penjual.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunPalsuHero",
@@ -6382,7 +6382,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Perkataan tulen tiada takrif undang-undang, dan \"pure olive oil\" di pasaran antarabangsa bermaksud campuran ditapis. Jadual istilah pemasaran lawan istilah gred.",
     "keyTakeaway": "Minyak zaitun tulen ialah perkataan pemasaran, bukan gred. Gred yang lazim di rak runcit ada empat: extra virgin, virgin, minyak zaitun ditapis, dan pomace. Lebih mengelirukan lagi, \"pure olive oil\" di pasaran antarabangsa bermaksud campuran minyak ditapis dengan sedikit minyak dara, jadi botol bertanda pure sebenarnya kurang dara, bukan lebih.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunTulenHero",
@@ -6680,7 +6680,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Nisbah tiga suku isi padu, jadual penukaran mentega kepada minyak, kek yang menerima rasa minyak dara, dan satu nisbah kek oren yang sudah dikira.",
     "keyTakeaway": "Minyak zaitun untuk kek menggantikan mentega pada kira-kira tiga suku isi padu, jadi 100 gram mentega menjadi lebih kurang 75 mililiter minyak. Kek yang terhasil kekal lembap lebih lama kerana minyak tidak memejal apabila sejuk. Kek coklat, lemon dan oren menerima minyak dara yang kuat rasanya, manakala kek span dan kek pandan lebih baik dengan minyak yang lembut.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukKekHero",
@@ -6962,7 +6962,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Satu mengeras putih dalam dapur berhawa dingin, satu lagi kekal cair sepanjang tahun. Banding rasa, tekstur, kesan pada rendang, kek dan salad, serta kos seliter.",
     "keyTakeaway": "Minyak zaitun vs minyak kelapa bukan soal yang mana lebih hebat, tetapi kerja yang mana. Minyak kelapa mengeras menjadi putih pejal dalam bilik berhawa dingin dan membawa bau kelapa yang jelas. Minyak zaitun dara kekal cair, membawa rasa hijau dan pedas, dan paling menjadi pada hidangan sejuk serta kerja bersukat sudu.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakKelapaHero",
@@ -7234,7 +7234,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Pahit di lidah, pedas di pangkal tekak, dan tangan terus capai botol untuk baca tarikh. Itu rasa minyak muda, bukan minyak rosak.",
     "keyTakeaway": "Rasa pahit di lidah dan pedas di pangkal tekak ialah rasa asli minyak zaitun dara, bukan tanda ia rosak. Kedua-duanya paling kuat pada minyak muda dan pudar mengikut umur, jadi minyak yang langsung tawar selalunya minyak lama. Minyak yang benar-benar rosak berbau berlilin, masam atau seperti kacang basi.",
     "datePublished": "2026-08-25",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressRasaMinyakZaitunHero",
@@ -7511,7 +7511,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Tiga keadaan berbeza duduk di sebalik satu botol yang keruh, dan cuma satu daripadanya bermasalah. Cara membezakannya dalam dua minit di dapur.",
     "keyTakeaway": "Minyak zaitun keruh hampir selalunya bukan minyak rosak. Keruh sejuk hilang sendiri dalam kira-kira sejam pada suhu bilik. Mendapan halus pula normal dalam minyak yang tidak ditapis, cuma ia memendekkan hayat botol, jadi habiskan awal. Hanya bau yang memberitahu sama ada minyak itu benar-benar sudah rosak.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunKeruhHero",
@@ -7790,7 +7790,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Air fryer perlukan satu sudu kecil minyak pada makanan, bukan tuangan ke dalam bakul. Cara ia disapu lebih menentukan hasil daripada gred yang anda capai.",
     "keyTakeaway": "Minyak zaitun untuk air fryer duduk pada makanan, bukan di dalam bakul. Gaul atau sapu lebih kurang satu sudu kecil untuk sebakul penuh, jauhkan tin sembur daripada salutan, dan set dail pada 180 hingga 200 darjah untuk kebanyakan hidangan. Salut benda yang kering dan berkanji.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukAirFryerHero",
@@ -8069,7 +8069,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Kebanyakan minyak yang masuk ke dalam perapan berakhir di dalam bara, bukan di atas ikan. Panduan tempat minyak patut disapu, bila ia patut dituang, dan apa yang daun pisang ubah.",
     "keyTakeaway": "Minyak zaitun untuk ikan bakar bekerja di dua tempat sahaja: sapuan nipis pada ikan sebelum ia naik ke jaring, dan tuangan selepas ikan diangkat. Minyak yang dicurah ke dalam perapan cair akan menitis ke bara dan hilang sebelum isi ikan sempat masak.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukIkanBakarHero",
@@ -8338,7 +8338,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Sos aglio olio hanyalah minyak, air rebusan dan gaulan yang laju. Kaedah bernombor untuk dua orang, plus pusingan cili padi, ikan bilis dan daun kari.",
     "keyTakeaway": "Minyak zaitun untuk pasta menjadi apabila tiga perkara betul: bawang putih dimasak dalam minyak sejuk pada api sederhana rendah sehingga warna gandum sahaja, air rebusan pasta yang berkanji disimpan sebagai pengikat, dan minyak mentah dimasukkan sekali lagi selepas api dimatikan. Cili padi, ikan bilis atau daun kari membawanya pulang ke dapur kita.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukPastaHero",
@@ -8614,7 +8614,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Sepinggan minyak yang tidak dipanaskan dan sekeping roti yang dicarik ialah ujian paling jujur yang pernah dihadapi sebotol minyak zaitun.",
     "keyTakeaway": "Minyak zaitun untuk roti ialah cara guna yang paling sedikit menyembunyikan minyak: tiada haba, tiada asid, tiada bawang putih. Hidangkan pada suhu bilik dalam pinggan yang cetek, tuang satu sudu besar pada satu masa dan isi semula, carik roti yang berongga dan jangan memotongnya, kacau za'atar terus ke dalam minyak dan biarkan dukkah kering di mangkuk asing.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukRotiHero",
@@ -8904,7 +8904,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Satu ditapis untuk api besar, satu lagi diperah sejuk untuk rasanya. Banding takat berasap, rasa, kos seliter dan kerja dapur mana untuk minyak mana.",
     "keyTakeaway": "Minyak zaitun vs minyak sawit bukan soal mana lebih hebat, tetapi kerja mana untuk minyak mana. Minyak sawit ditapis untuk tahan haba tinggi dan kuantiti besar, dan takat berasapnya memang lebih tinggi. Minyak zaitun dara perahan sejuk dibeli kerana rasanya, dan paling berbaloi pada hidangan yang tidak dipanaskan lama.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakSawitHero",
@@ -9167,7 +9167,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Minyak zaitun murah bukan tawaran bertuah — ia hampir selalu bermakna sesuatu. Kos sebenar sebotol, sebab harga sangat rendah patut buat anda tertanya, dan bila harga rendah memang munasabah.",
     "keyTakeaway": "Minyak zaitun dara tidak pernah murah kerana pokoknya lambat berhasil, tuaian dilakukan dengan tangan, perahan mesti berlaku segera, dan setiap botol diimport ke Malaysia. Harga yang jauh lebih rendah daripada purata pasaran biasanya bermakna gred lebih rendah, campuran atau stok lama, bukan penjimatan sebenar. Banding harga seliter, bukan harga label.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunMurahHero",
@@ -9642,7 +9642,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Kenapa sayur dalam ketuhar sering keluar lembik walaupun sudah disapu minyak zaitun, dan cara betulkan: kuantiti minyak, ruang dalam dulang, suhu, dan waktu garam.",
     "keyTakeaway": "Minyak zaitun untuk sayur panggang berfungsi sebagai lapisan nipis, bukan rendaman, dan hanya menggaring kalau dulang tidak sesak. Suhu ketuhar 200 hingga 220 darjah, sayur nipis perlukan panas tinggi masa singkat, sayur padat perlukan suhu lebih rendah lebih lama, dan renjisan mentah selepas keluar ketuhar mengembalikan rasa yang hilang semasa panggang.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukSayurPanggangHero",
@@ -9918,7 +9918,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Goreng Kilas keras perlukan minyak yang tahan haba lebih tinggi daripada extra virgin. Guna teknik dua minyak: neutral untuk kerak, extra virgin untuk rasa akhir selepas daging berehat.",
     "keyTakeaway": "Goreng kilas steak yang garing perlukan haba lebih tinggi daripada apa yang extra virgin selesa tahan, jadi guna teknik dua minyak: minyak neutral untuk membentuk kerak, extra virgin dituang atau disental selepas daging diangkat dan berehat. Extra virgin sampai ke pinggan sebagai rasa akhir, bukan sebagai minyak goreng kilas.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukSteakHero",
@@ -10165,7 +10165,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Bukan telur mata biasa. Liputi kuantiti minyak yang betul, haba kuali, cara menyiram minyak panas ke atas kuning, dan waktu garam.",
     "keyTakeaway": "Minyak zaitun untuk telur bermakna guna lebih minyak daripada kebiasaan — lopak cetek, bukan lapisan nipis — pada haba sederhana-tinggi, lalu menyiram minyak panas ke atas kuning dengan sudu sehingga tepi garing dan kuning kekal lembut. Garam masuk selepas telur diangkat, bukan semasa memasak.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukTelurHero",
@@ -10422,7 +10422,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Mentega cair dan boleh hangus, minyak zaitun kekal cecair dan tak berkelakuan sama. Banding rasa, roti panas, kuali panas, hidangan mana sesuai dengan mana, dan kos setiap kali guna.",
     "keyTakeaway": "Minyak zaitun vs mentega bukan soal mana lebih hebat, tetapi kerja mana untuk lemak mana. Mentega bawa rasa krim tenusu dan boleh perang atau hangus dalam kuali panas; minyak zaitun dara kekal cecair dan bawa rasa buah yang menonjol di atas hidangan. Guna jadual dalam artikel ini untuk pilih ikut kerja dapur, bukan ikut sangkaan.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMentegaHero",
@@ -10674,7 +10674,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Sesudu kecil minyak zaitun dara dikacau masuk kopi mengubah tekstur dan rasa, bukan khasiatnya. Kuantiti bermula, kenapa ia perlu dikacau kuat, gred minyak sesuai, dan sejuk lawan panas.",
     "keyTakeaway": "Kopi minyak zaitun ialah soal tekstur dan rasa, bukan khasiat: mulakan separuh sudu teh, kacau kuat atau blend kerana minyak dan kopi terpisah, pilih extra virgin lembut bukan yang pedas, dan sesuai untuk sejuk atau panas. Soalan tentang kesihatan sebaiknya dibawa kepada doktor atau pakar pemakanan.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressKopiMinyakZaitunHero",
@@ -10924,7 +10924,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Minyak zaitun dara diemulsikan ke dalam ais krim semasa dikacau untuk tekstur lebih licin dan rasa buah yang menonjol — teknik pencuci mulut Mediterranean, bukan pertukaran kesihatan.",
     "keyTakeaway": "Ais krim minyak zaitun ialah teknik Mediterranean: minyak zaitun dara diemulsikan ke dalam krim semasa dikacau untuk tekstur licin dan rasa buah pedas yang melawan manis, bukan versi 'lebih sihat'. Guna minyak dara sederhana, tambah hampir akhir churn, dan tutup dengan garam flaky atau kulit sitrus.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunAisKrimHero",
@@ -11184,7 +11184,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Satu resepi kek oren yang guna minyak zaitun dara, bukan mentega — kuantiti dalam adunan, kulit dan jus oren, kenapa ia kekal lembap beberapa hari di suhu bilik, dan glais mudah untuk melengkapkan.",
     "keyTakeaway": "Kek oren minyak zaitun guna kira-kira 180 ml minyak zaitun dara untuk satu loyang, kulit dan jus dua biji oren, dan tiada mentega langsung. Minyak kekal cecair selepas kek sejuk, jadi remahnya terus lembap beberapa hari di suhu bilik, siap dengan glais oren atau taburan gula ais ringkas.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunKekOrenHero",
@@ -11440,7 +11440,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Minyak zaitun bekerja pada pizza di tiga peringkat berbeza — dilipat ke dalam adunan, disapu pada kerak sebelum bakar, dan dititik ringan selepas keluar ketuhar. Ini bukan tentang lopak untuk mencelup roti.",
     "keyTakeaway": "Minyak zaitun ada tiga tugas berasingan pada pizza: melembutkan dan meregangkan adunan, menyapu kerak untuk warna dan rangup sebelum bakar, dan tuangan akhir selepas ketuhar untuk rasa buah serta pedas yang tidak terdedah kepada haba penuh. Ketiga-tiganya berbeza daripada lopak untuk mencelup roti.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunUntukPizzaHero",
@@ -11686,7 +11686,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Dua minyak berperisa kuat, dua watak yang tak sama langsung. Banding rasa berumput lawan panggang, bijan panggang lawan lembut, cara masing-masing digunakan mentah dan dimasak, dan di mana minyak zaitun sesuai dalam dapur yang sudah ada bijan.",
     "keyTakeaway": "Minyak zaitun vs minyak bijan bukan pertandingan mencari satu pemenang, kerana kedua-duanya berperisa terlalu kuat untuk saling menggantikan senyap-senyap. Minyak bijan panggang bawa rasa gorengan yang tebal dan biasanya dituang di hujung masakan; minyak zaitun dara bawa rasa buah dan pedas ringan yang sesuai mentah atau tumisan sederhana. Simpan kedua-duanya sebagai dua alat berasingan, bukan satu ganti satu.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakBijanHero",
@@ -11944,7 +11944,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Satu neutral dan tahan haba tinggi, satu lagi bawa rasa buah yang menonjol. Banding rasa, sifat takat berasap, kegunaan dapur dan kos setiap kali guna antara minyak zaitun dara dan minyak bunga matahari tapis.",
     "keyTakeaway": "Minyak zaitun vs minyak bunga matahari bukan soal mana lebih hebat, tetapi kerja dapur mana untuk minyak mana. Bunga matahari tapis tahan haba tinggi dan murah seliter untuk goreng rendam; minyak zaitun dara bawa rasa buah yang menonjol untuk renjisan dan tumisan sederhana. Guna jadual dalam artikel ini untuk pilih ikut kerja dapur, bukan sangkaan.",
     "datePublished": "2026-08-26",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunVsMinyakBungaMatahariHero",
@@ -13240,7 +13240,7 @@ export const MS_ARTICLES: Article[] = [
     "excerpt": "Original ialah perkataan penyenaraian, bukan gred dan bukan piawai. Ini tentang apa yang boleh disahkan sebelum bayar, dan apa yang tidak boleh disahkan daripada sekeping gambar.",
     "keyTakeaway": "Dalam penyenaraian marketplace, original biasanya bermaksud bukan tiruan penjual semula. Ia bukan gred, bukan piawai kualiti, dan bukan jaminan kesegaran. Yang boleh disahkan ialah siapa penjual rasmi, ada atau tiada kedai fizikal, meterai botol, tarikh tuai dan negara asal yang dinamakan.",
     "datePublished": "2026-09-10",
-    "dateModified": "2026-11-04",
+    "dateModified": "2026-11-05",
     "readingTime": 5,
     "hero": {
       "src": "pressMinyakZaitunOriginalCaraPastikanHero",

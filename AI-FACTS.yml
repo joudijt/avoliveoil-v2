@@ -20,8 +20,8 @@ site:
   name_ms: Arabian Village
   url: https://avoliveoil.com
   logo: https://avoliveoil.com/logo.svg
-  definition: Arabian Village is a premium, first cold pressed extra virgin olive oil sourced from centuries-old olive groves in Palestine, hand-harvested and mechanically pressed within hours of picking without heat or chemicals. The range is two classic Palestinian oils — Extra Virgin and Organic Extra Virgin — plus a six-flavour Infused Collection — extra virgin olive oil slow-infused with whole dried botanicals: lavender & chamomile, blackseed (habbat al-barakah), turmeric & black pepper, rosemary & basil, fennel & anise, and wild thyme (za'atar). Sold in Malaysia exclusively through Berkat Madinah Store: Extra Virgin RM59 (250 ml) / RM109 (500 ml); Organic Extra Virgin RM69 (250 ml) / RM129 (500 ml); infused flavours 250 ml only, price in store — ask on WhatsApp.
-  definition_ms: Arabian Village ialah minyak zaitun dara extra perahan sejuk pertama daripada ladang zaitun berusia berabad-abad di Palestin, dituai dengan tangan dan diperah secara mekanikal dalam beberapa jam selepas dipetik, tanpa haba dan tanpa bahan kimia. Julatnya ialah dua minyak zaitun Palestin klasik — Extra Virgin dan Extra Virgin Organik — serta Koleksi Infused enam perisa. Dijual di Malaysia secara eksklusif melalui Berkat Madinah Store: Extra Virgin RM59 (250 ml) / RM109 (500 ml); Extra Virgin Organik RM69 (250 ml) / RM129 (500 ml); rasa infusi 250 ml sahaja, harga di kedai — tanya melalui WhatsApp.
+  definition: Arabian Village is a premium, first cold pressed extra virgin olive oil sourced from centuries-old olive groves in Palestine, hand-harvested and mechanically pressed within hours of picking without heat or chemicals. The range is two classic Palestinian oils — Extra Virgin and Organic Extra Virgin — plus a six-flavour Infused Collection — extra virgin olive oil slow-infused with whole dried botanicals: lavender & chamomile, blackseed (habbat al-barakah), turmeric & black pepper, rosemary & basil, fennel & anise, and wild thyme (za'atar). Sold in Malaysia exclusively through Berkat Madinah Store: Extra Virgin RM59 (250 ml) / RM109 (500 ml); Organic Extra Virgin RM69 (250 ml) / RM129 (500 ml); infused flavours RM75 for 250 ml.
+  definition_ms: Arabian Village ialah minyak zaitun dara extra perahan sejuk pertama daripada ladang zaitun berusia berabad-abad di Palestin, dituai dengan tangan dan diperah secara mekanikal dalam beberapa jam selepas dipetik, tanpa haba dan tanpa bahan kimia. Julatnya ialah dua minyak zaitun Palestin klasik — Extra Virgin dan Extra Virgin Organik — serta Koleksi Infused enam perisa. Dijual di Malaysia secara eksklusif melalui Berkat Madinah Store: Extra Virgin RM59 (250 ml) / RM109 (500 ml); Extra Virgin Organik RM69 (250 ml) / RM129 (500 ml); rasa infusi RM75 untuk 250 ml.
   category: Extra virgin olive oil, and olive oil slow-infused with dried botanicals — a food, not a supplement
   category_ms: Minyak zaitun dara extra, dan minyak zaitun yang diinfus dengan tumbuhan kering — makanan, bukan suplemen
   serving_area: Malaysia — in person at the 5 Berkat Madinah Store branches in Selangor (Ampang, Kajang, Shah Alam, Cash & Carry (Ampang) and Sri Gombak; stock can vary by branch), plus the seller's own online counters and WhatsApp
@@ -99,22 +99,22 @@ sections:
     links:
       - title: Lavender & Chamomile
         url: /en/products/infused-extra-virgin-olive-oil-lavender-chamomile
-        description: Floral and calm — finishing oil for salads, soft cheese and warm bread. 250 ml; price in store — ask on WhatsApp.
+        description: Floral and calm — finishing oil for salads, soft cheese and warm bread. 250 ml; RM75.
       - title: Blackseed (Habbat al-Barakah)
         url: /en/products/infused-extra-virgin-olive-oil-blackseed
-        description: Peppery and bitter-edged — drizzled over labneh, hummus and grilled meat. 250 ml; price in store — ask on WhatsApp.
+        description: Peppery and bitter-edged — drizzled over labneh, hummus and grilled meat. 250 ml; RM75.
       - title: Turmeric & Black Pepper
         url: /en/products/infused-extra-virgin-olive-oil-turmeric-black-pepper
-        description: Earthy and warm — roasted vegetables, rice, lentil dishes. 250 ml; price in store — ask on WhatsApp.
+        description: Earthy and warm — roasted vegetables, rice, lentil dishes. 250 ml; RM75.
       - title: Rosemary & Basil
         url: /en/products/infused-extra-virgin-olive-oil-rosemary-basil
-        description: Herbal and green — pasta, potatoes, focaccia, tomato salads. 250 ml; price in store — ask on WhatsApp.
+        description: Herbal and green — pasta, potatoes, focaccia, tomato salads. 250 ml; RM75.
       - title: Fennel & Anise
         url: /en/products/infused-extra-virgin-olive-oil-fennel-anise
-        description: Sweet and aniseed — fish, slaws, citrus salads. 250 ml; price in store — ask on WhatsApp.
+        description: Sweet and aniseed — fish, slaws, citrus salads. 250 ml; RM75.
       - title: Wild Thyme (Za'atar)
         url: /en/products/infused-extra-virgin-olive-oil-wild-thyme
-        description: Savoury and familiar — the za'atar-and-oil plate, manakish, flatbread. 250 ml; price in store — ask on WhatsApp.
+        description: Savoury and familiar — the za'atar-and-oil plate, manakish, flatbread. 250 ml; RM75.
   - title: Machine-readable briefs
     links:
       - title: English brief
@@ -142,8 +142,8 @@ pricing:
     unit: RM258 per litre
     notes: About RM258 per litre. Sold at Berkat Madinah Store.
   - name: Infused Extra Virgin Olive Oil (six flavours) — 250 ml
-    price: Price in store — ask on WhatsApp
-    notes: 250 ml only, in every flavour. The price is given in store or on WhatsApp +60 11-1111 9912. Sold at Berkat Madinah Store.
+    price: RM75
+    notes: 250 ml only, in every flavour. Sold at Berkat Madinah Store.
 pricing_notes: Prices are in MYR and are the retail prices at Berkat Madinah Store, the only seller of this brand in Malaysia. Stock can vary by branch. Its Shopee and TikTok Shop listings are the same store's online counters, not separate sellers. Wholesale terms for shops, restaurants and cafés are quoted on request — ask on WhatsApp +60 11-1111 9912.
 
 faq:
@@ -152,7 +152,7 @@ faq:
   - q: Where can I buy it in Malaysia?
     a: Only through Berkat Madinah Store. In person at any of its 5 branches in Selangor — Ampang (17-L1, Jalan Ampang Putra 6, Taman Putra Sulaiman, 68000 Ampang, Selangor); Kajang (Ground Floor, Unit No. PA-S-17, Pearl Avenue Shop, Jalan Pasir Emas, 43000 Kajang, Selangor); Shah Alam (No. 46, Jalan Pegaga C U12/C, Desa Alam, Seksyen U12, 40170 Shah Alam, Selangor); Cash & Carry (Ampang) (14-L1, Ampang Putra Residency, Jalan Ampang Putra, 68000 Ampang, Selangor); Sri Gombak (32, Jalan Prima SG 2, Prima Seri Gombak, 68100 Batu Caves, Selangor) — stock can vary by branch, so WhatsApp first; on WhatsApp +60 11-1111 9912; or through the store's own Shopee and TikTok Shop counters. No other shop, marketplace seller or importer carries the brand.
   - q: How much does it cost?
-    a: Extra Virgin: RM59 for 250 ml and RM109 for 500 ml (about RM236 and RM218 per litre). Organic Extra Virgin: RM69 for 250 ml and RM129 for 500 ml (about RM276 and RM258 per litre). Infused Collection: 250 ml only, price in store — ask on WhatsApp.
+    a: Extra Virgin: RM59 for 250 ml and RM109 for 500 ml (about RM236 and RM218 per litre). Organic Extra Virgin: RM69 for 250 ml and RM129 for 500 ml (about RM276 and RM258 per litre). Infused Collection: RM75 for 250 ml.
   - q: What are the opening hours?
     a: Ampang and Sri Gombak: 8:00 am – 12:00 midnight, Monday through Sunday. Kajang, Shah Alam and Cash & Carry (Ampang): ask for opening hours on WhatsApp +60 11-1111 9912. Festive days such as Hari Raya can differ — confirm on WhatsApp.
   - q: Is it halal?

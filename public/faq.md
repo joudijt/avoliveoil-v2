@@ -10,7 +10,7 @@ Only through Berkat Madinah Store. In person at any of its 5 branches in Selango
 
 ## How much does it cost?
 
-Extra Virgin: RM59 for 250 ml and RM109 for 500 ml (about RM236 and RM218 per litre). Organic Extra Virgin: RM69 for 250 ml and RM129 for 500 ml (about RM276 and RM258 per litre). Infused Collection: 250 ml only, price in store — ask on WhatsApp.
+Extra Virgin: RM59 for 250 ml and RM109 for 500 ml (about RM236 and RM218 per litre). Organic Extra Virgin: RM69 for 250 ml and RM129 for 500 ml (about RM276 and RM258 per litre). Infused Collection: RM75 for 250 ml.
 
 ## What are the opening hours?
 
