@@ -412,7 +412,7 @@ mkdirSync(ASSETS_OUT, { recursive: true });
 const sceneTitle = Object.fromEntries(locale.en.oliveJourney.scenes.map((s) => [s.key, s.title]));
 const SPOTS = {
   'home.hero.bg': { label: 'Home › Hero background', needsAlpha: false, image: 'OliveGroveSunsetHero' },
-  'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: false, image: 'product-extra-virgin' },
+  'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, image: 'product-extra-virgin-cutout' },
   'home.story.woman': { label: 'Home › Our story photo', needsAlpha: true, image: 'woman-holding-bottle-nobg' },
   'home.bottle.pour': {
     label: 'Home › Pouring bottle',

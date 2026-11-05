@@ -41,17 +41,17 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
   }, [mouse]);
 
   return (
-    // The Extra Virgin white square IS the tile (FORGE PRODUCTS-R1 O-10): rounded,
-    // white, shadowed — so the parallax transform tilts the whole card, not a photo
-    // sliding around inside a frame. Square, so `sizes` = its rendered height.
+    // Owner 2026-11-05: the header bottle sits on the scene with NO white tile —
+    // the transparent Extra Virgin cut-out (533x1429), sized by height.
     <Picture
       ref={imgRef}
-      name="product-extra-virgin"
+      name="product-extra-virgin-cutout"
       alt={t('alt.heroBottle')}
       cmsKey="home.hero.bottle"
       cmsAltKey="alt.heroBottle"
-      className="relative z-10 aspect-square h-[30vh] w-auto max-w-full rounded-[1.75rem] border border-olive-dark/10 bg-white object-contain shadow-[0_30px_60px_rgba(46,58,36,0.22)] sm:h-[40vh] md:h-[min(52vh,520px)]"
-      sizes="(min-width: 768px) min(52vh, 520px), (min-width: 640px) 40vh, 30vh"
+      className="relative z-10 h-[34vh] w-auto max-w-full object-contain sm:h-[44vh] md:h-[min(62vh,620px)]"
+      style={{ filter: 'drop-shadow(0 28px 30px rgba(46,58,36,0.30))' }}
+      sizes="(min-width: 768px) min(23vh, 232px), (min-width: 640px) 17vh, 13vh"
       priority
     />
   );

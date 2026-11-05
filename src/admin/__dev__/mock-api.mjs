@@ -156,7 +156,7 @@ const structure = {
   },
   spots: {
     'home.hero.bg': { label: 'Home › Hero background', needsAlpha: false, default: { name: 'OliveGroveSunsetHero', width: 1672, height: 941, url: '/uploads/cms/OliveGroveSunsetHero-800.webp' } },
-    'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: false, default: spotDefault('product-extra-virgin') },
+    'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-cutout') },
     'home.story.woman': { label: 'Home › Story photo', needsAlpha: true, default: { name: 'woman-holding-bottle-nobg', width: 895, height: 1277, url: '/uploads/cms/woman-holding-bottle-nobg-400.webp' } },
     'home.bottle.pour': { label: 'Home › Pouring bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-cutout') },
     ...Object.fromEntries(
