@@ -22,4 +22,4 @@ What an automated agent can do on this site, and where.
 - Method: GET
 - Notes: English at /llms.txt and Bahasa Melayu at /llms-ms.txt. Each is generated from src/data/storeFacts.json, so the figures in them match the pages by construction.
 
-Last updated: 2026-11-05
+Last updated: 2026-11-06

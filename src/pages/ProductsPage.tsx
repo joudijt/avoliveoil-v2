@@ -165,7 +165,7 @@ export function ProductsPage() {
             <div className="flex items-center justify-center">
               <div className="w-full max-w-[460px] overflow-hidden rounded-[2rem] border border-olive-dark/10 bg-white shadow-[0_30px_60px_rgba(46,58,36,0.12)]">
                 <Picture
-                  name="product-extra-virgin"
+                  name="product-extra-virgin-3"
                   alt={t('alt.productsHero')}
                   cmsKey="products.hero"
                   cmsAltKey="alt.productsHero"

@@ -55,8 +55,8 @@ const MEDIA_SRC = [
   ['malaysian-woman-bottle-kampung', 'Customer holding a bottle at home', 'Pelanggan memegang botol di rumah'],
   ['woman-holding-bottle-nobg', '', ''],
   ['bottle-cutout', 'Olive oil bottle', 'Botol minyak zaitun'],
-  ['product-extra-virgin', 'Extra Virgin Palestinian Olive Oil bottle', 'Botol Minyak Zaitun Extra Virgin Palestin'],
-  ['product-extra-virgin-cutout', 'Extra Virgin bottle, transparent background', 'Botol Extra Virgin, latar telus'],
+  ['product-extra-virgin-3', 'Extra Virgin Palestinian Olive Oil bottle', 'Botol Minyak Zaitun Extra Virgin Palestin'],
+  ['product-extra-virgin-3-cutout', 'Extra Virgin bottle, transparent background', 'Botol Extra Virgin, latar telus'],
 ];
 const manifest = JSON.parse(readFileSync(join(OPT, 'manifest.json'), 'utf8'));
 for (const [name, en, ms] of MEDIA_SRC) {
@@ -156,13 +156,13 @@ const structure = {
   },
   spots: {
     'home.hero.bg': { label: 'Home › Hero background', needsAlpha: false, default: { name: 'OliveGroveSunsetHero', width: 1672, height: 941, url: '/uploads/cms/OliveGroveSunsetHero-800.webp' } },
-    'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-cutout') },
+    'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-3-cutout') },
     'home.story.woman': { label: 'Home › Story photo', needsAlpha: true, default: { name: 'woman-holding-bottle-nobg', width: 895, height: 1277, url: '/uploads/cms/woman-holding-bottle-nobg-400.webp' } },
-    'home.bottle.pour': { label: 'Home › Pouring bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-cutout') },
+    'home.bottle.pour': { label: 'Home › Pouring bottle', needsAlpha: true, default: spotDefault('product-extra-virgin-3-cutout') },
     ...Object.fromEntries(
       PRODUCTS.map((p) => [`home.showcase.${p.cmsId}`, { label: `Home › Products › ${get(en, `${p.i18n}.name`) ?? p.id}`, needsAlpha: false, default: spotDefault(p.image) }])
     ),
-    'products.hero': { label: 'Products › Hero bottle', needsAlpha: false, default: spotDefault('product-extra-virgin') },
+    'products.hero': { label: 'Products › Hero bottle', needsAlpha: false, default: spotDefault('product-extra-virgin-3') },
     ...Object.fromEntries(
       PRODUCTS.filter((p) => p.kind === 'classic').map((p) => [`products.${p.cmsId}.photo`, { label: `Products › ${get(en, `${p.i18n}.name`) ?? p.id} › Bottle photo`, needsAlpha: false, default: spotDefault(p.image) }])
     ),

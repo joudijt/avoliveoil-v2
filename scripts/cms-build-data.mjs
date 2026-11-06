@@ -412,12 +412,12 @@ mkdirSync(ASSETS_OUT, { recursive: true });
 const sceneTitle = Object.fromEntries(locale.en.oliveJourney.scenes.map((s) => [s.key, s.title]));
 const SPOTS = {
   'home.hero.bg': { label: 'Home › Hero background', needsAlpha: false, image: 'OliveGroveSunsetHero' },
-  'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, image: 'product-extra-virgin-cutout' },
+  'home.hero.bottle': { label: 'Home › Hero bottle', needsAlpha: true, image: 'product-extra-virgin-3-cutout' },
   'home.story.woman': { label: 'Home › Our story photo', needsAlpha: true, image: 'woman-holding-bottle-nobg' },
   'home.bottle.pour': {
     label: 'Home › Pouring bottle',
     needsAlpha: true,
-    image: 'product-extra-virgin-cutout',
+    image: 'product-extra-virgin-3-cutout',
     note: 'The pour animation is tuned to the transparent 533×1429 Extra Virgin bottle (neck at 31–68% of the width, cap at the very top); another shape will not line up with the stream.',
   },
   ...Object.fromEntries(
@@ -432,7 +432,7 @@ const SPOTS = {
       { label: `Home › Olive journey › ${sceneTitle[k] ?? k}`, needsAlpha: false, image },
     ]),
   ),
-  'products.hero': { label: 'Products › Bottle photo', needsAlpha: false, image: 'product-extra-virgin' },
+  'products.hero': { label: 'Products › Bottle photo', needsAlpha: false, image: 'product-extra-virgin-3' },
   ...Object.fromEntries(
     CLASSIC.map((p) => [`products.${p.cmsId}.photo`, { label: `Products › ${nameOf(p)} › Bottle photo`, needsAlpha: false, image: p.image }]),
   ),

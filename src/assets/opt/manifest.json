@@ -178,7 +178,7 @@
       610
     ]
   },
-  "product-extra-virgin": {
+  "product-extra-virgin-3": {
     "height": 1200,
     "width": 1200,
     "widths": [
@@ -187,12 +187,11 @@
       1200
     ]
   },
-  "product-extra-virgin-cutout": {
-    "height": 1429,
-    "width": 533,
+  "product-extra-virgin-3-cutout": {
+    "height": 1061,
+    "width": 397,
     "widths": [
-      400,
-      533
+      397
     ]
   },
   "product-infused-blackseed": {
@@ -249,7 +248,7 @@
       1200
     ]
   },
-  "product-organic-2": {
+  "product-organic-3": {
     "height": 1200,
     "width": 1200,
     "widths": [
@@ -258,12 +257,12 @@
       1200
     ]
   },
-  "product-organic-cutout-clean": {
-    "height": 2063,
-    "width": 793,
+  "product-organic-3-cutout": {
+    "height": 1090,
+    "width": 412,
     "widths": [
       400,
-      793
+      412
     ]
   },
   "woman-holding-bottle-nobg": {

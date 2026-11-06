@@ -5,7 +5,7 @@
       "id": "extra-virgin",
       "cmsId": "classic",
       "kind": "classic",
-      "image": "product-extra-virgin",
+      "image": "product-extra-virgin-3",
       "sizes": [
         "250",
         "500"
@@ -17,7 +17,7 @@
       "id": "organic",
       "cmsId": "organic",
       "kind": "classic",
-      "image": "product-organic-2",
+      "image": "product-organic-3",
       "sizes": [
         "250",
         "500"

@@ -18,7 +18,7 @@ const DROPS = [
 ];
 
 /**
- * Pour geometry (FORGE PRODUCTS-R1 O-10). `product-extra-virgin-cutout` was
+ * Pour geometry (FORGE PRODUCTS-R1 O-10). `product-extra-virgin-3-cutout` was
  * measured, not guessed: the neck spans x 0.31–0.68 of the image width and the cap
  * top sits at y 0.005 of its height (shoulders from y≈0.30). The aspect comes from
  * the optimiser manifest, so a re-cut image keeps the maths right.
@@ -27,7 +27,7 @@ const DROPS = [
  * the stream, drops and pool live in the same (un-rotated) box and start at where
  * the mouth lands after that rotation — so the oil visibly leaves the bottle mouth.
  */
-const POUR_IMAGE = 'product-extra-virgin-cutout';
+const POUR_IMAGE = 'product-extra-virgin-3-cutout';
 const POUR_SIZE = (manifest as Record<string, { width: number; height: number }>)[POUR_IMAGE];
 const ASPECT = POUR_SIZE.width / POUR_SIZE.height; // w / h
 const NECK = { x0: 0.31, x1: 0.68 };

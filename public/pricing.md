@@ -22,4 +22,4 @@
 
 Prices are in MYR and are the retail prices at Berkat Madinah Store, the only seller of this brand in Malaysia. Stock can vary by branch. Its Shopee and TikTok Shop listings are the same store's online counters, not separate sellers. Wholesale terms for shops, restaurants and cafés are quoted on request — ask on WhatsApp +60 11-1111 9912.
 
-Last updated: 2026-11-05
+Last updated: 2026-11-06

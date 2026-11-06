@@ -45,7 +45,7 @@ function BottleParallax({ mouse }: { mouse: React.MutableRefObject<{ x: number; 
     // the transparent Extra Virgin cut-out (533x1429), sized by height.
     <Picture
       ref={imgRef}
-      name="product-extra-virgin-cutout"
+      name="product-extra-virgin-3-cutout"
       alt={t('alt.heroBottle')}
       cmsKey="home.hero.bottle"
       cmsAltKey="alt.heroBottle"

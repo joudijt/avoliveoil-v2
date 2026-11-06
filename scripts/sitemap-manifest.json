@@ -2,16 +2,16 @@
   "_comment": "Sitemap <lastmod> for pages with no content date. hash = sha1 of the prerendered <main> (scripts/lib/sitemap-shared.mjs mainHash). `node scripts/generate-sitemap.mjs --update-manifest` after `npm run build:prerender` bumps lastmod to today ONLY where the hash changed. Seeded 2026-09-26 by scripts/seed-sitemap-manifest.mjs from git history of each page's content files; excluded commits are listed there and in docs/sitemap-lastmod/REPORT.md.",
   "pages": {
     "/en": {
-      "hash": "be367f0216009cf4d9bff05052e2a076635daef9",
-      "lastmod": "2026-11-05"
+      "hash": "cde38591bc8e0df5813950fd85746a2b99a3083e",
+      "lastmod": "2026-11-06"
     },
     "/en/contact": {
       "hash": "50b5ffa66865a7d81828912bb29b68872f9dc462",
       "lastmod": "2026-11-05"
     },
     "/en/products": {
-      "hash": "212b592b09de515a7a5392b53f0d9d7eb9352f41",
-      "lastmod": "2026-11-05"
+      "hash": "e392dde9a0f975af0851862f935051f270ab62c9",
+      "lastmod": "2026-11-06"
     },
     "/en/products/infused-extra-virgin-olive-oil-blackseed": {
       "hash": "e4ce4d4b3cadaf8b690b6c621f358744cec89d75",
@@ -46,16 +46,16 @@
       "lastmod": "2026-11-05"
     },
     "/ms": {
-      "hash": "36039345966cf1f54b9d30b331124c02a9b9edae",
-      "lastmod": "2026-11-05"
+      "hash": "9cbc5d954756e350cae30a38789afc8ba4af849f",
+      "lastmod": "2026-11-06"
     },
     "/ms/contact": {
       "hash": "34c4a71f6db27bdef693a8774c39698b2bcb9c96",
       "lastmod": "2026-11-05"
     },
     "/ms/products": {
-      "hash": "91490abecf58a20124ace6da00acce4924cce31f",
-      "lastmod": "2026-11-05"
+      "hash": "acc68c526f0c38f19e1f5bb50a56224d04f2ce60",
+      "lastmod": "2026-11-06"
     },
     "/ms/products/infused-extra-virgin-olive-oil-blackseed": {
       "hash": "e59536fc41b4237d64205a9317c16557b1dadd46",
