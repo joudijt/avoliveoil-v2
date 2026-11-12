@@ -425,19 +425,19 @@
         },
         {
           "q": "Do you deliver across Malaysia?",
-          "a": "Yes, Berkat Madinah Store and our marketplace listings deliver nationwide across Malaysia."
+          "a": "Yes. You can order on this site: the order is sent to the shop by WhatsApp, for delivery within Malaysia. You can also buy from Berkat Madinah Store, Shopee or TikTok Shop, which deliver across Malaysia."
         },
         {
           "q": "Do you ship internationally?",
-          "a": "Arabian Village ships worldwide from our main site; delivery times and rates vary by destination and are shown at checkout."
+          "a": "Orders on this site are delivered within Malaysia only. If you are outside Malaysia, please ask us on WhatsApp before you order."
         },
         {
           "q": "What payment methods are accepted?",
-          "a": "Each platform (Shopee, TikTok Shop, Berkat Madinah Store) supports its own standard local payment methods, including cards and e-wallets."
+          "a": "On this site, payment is confirmed with you in the WhatsApp chat after you send your order. On Shopee, TikTok Shop and Berkat Madinah Store, you pay with the methods each platform offers."
         },
         {
           "q": "How long does delivery take?",
-          "a": "Delivery times depend on the platform and your location — typically a few business days within Malaysia."
+          "a": "For an order placed on this site, delivery is within Malaysia, and the delivery fee and payment are confirmed with you in the WhatsApp chat. On Shopee, TikTok Shop and Berkat Madinah Store, delivery time depends on the platform and your location."
         },
         {
           "q": "Can I buy in bulk or for my business?",
@@ -807,6 +807,16 @@
     "availableBadge": "Now at {{store}}",
     "inStoreNote": "In store now",
     "size250": "250 ml"
+  },
+  "order": {
+    "add": "Add to cart",
+    "added": "Added",
+    "chooseSize": "Choose a size",
+    "cartLabel": "Cart",
+    "cartCount": "{{count}} in cart",
+    "orderHere": "Order here",
+    "orderHereSub": "Order on this site. We confirm delivery and payment with you on WhatsApp.",
+    "cartFull": "Maximum reached for this item"
   },
   "alt": {
     "logo": "Arabian Village",

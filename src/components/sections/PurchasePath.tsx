@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Modal } from '../ui/Modal';
 import { SHOPEE_URL, TIKTOK_SHOP_URL, MADINAH_URL } from '../../config/site';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 import { cmsAttr, cmsText } from '../../cms/editable';
+import { openCart, useCartCount, useOrderUi } from '../../order/bridge';
 
 const inputClass =
   'w-full rounded-lg border border-olive-dark/15 bg-white/70 px-4 py-3 text-sm text-olive-dark placeholder:text-brown/40 focus:border-gold focus:outline-none';
@@ -15,7 +17,21 @@ const SHOW_PARTNER_MODAL = true;
 
 export function PurchasePath() {
   const { t } = useTranslation();
+  const { lang = 'en' } = useParams<{ lang: string }>();
+  const navigate = useNavigate();
+  const cartCount = useCartCount();
+  const { hasOrder } = useOrderUi();
   const [activeModal, setActiveModal] = useState<'individual' | 'partner' | null>(null);
+
+  // FORGE ORDER-R1 O-18: close this modal FIRST, then open the cart when it has items
+  // or a saved order waits there (O-7 banner); otherwise go to the products page.
+  // The timeout lets the modal unmount and
+  // release its scroll lock before the cart dialog opens.
+  const orderHere = () => {
+    setActiveModal(null);
+    if (cartCount > 0 || hasOrder) setTimeout(openCart, 0);
+    else navigate(`/${lang}/products`);
+  };
 
   return (
     <section className="relative w-full overflow-hidden bg-bg px-6 pb-28 pt-8 md:px-16 md:pb-36 md:pt-10">
@@ -62,6 +78,15 @@ export function PurchasePath() {
           <p {...cmsText('purchasePath.individualModal.sub')} className="mt-3 font-body text-brown-ink">{t('purchasePath.individualModal.sub')}</p>
 
           <div className="mt-8 flex flex-col gap-4">
+            <button
+              type="button"
+              data-testid="order-here"
+              onClick={orderHere}
+              className="rounded-lg bg-olive-dark py-4 text-center text-sm font-semibold uppercase tracking-wider text-cream transition-colors duration-300 hover:bg-gold hover:text-olive-dark"
+              {...cmsText('order.orderHere')}
+            >
+              {t('order.orderHere')}
+            </button>
             <a
               href={MADINAH_URL}
               target="_blank"

@@ -425,19 +425,19 @@
         },
         {
           "q": "Adakah anda menghantar ke seluruh Malaysia?",
-          "a": "Ya, Berkat Madinah Store dan penyenaraian platform kami menghantar ke seluruh Malaysia."
+          "a": "Ya. Anda boleh membuat pesanan di laman ini: pesanan dihantar kepada kedai melalui WhatsApp, untuk penghantaran dalam Malaysia. Anda juga boleh membeli di Berkat Madinah Store, Shopee atau TikTok Shop yang menghantar ke seluruh Malaysia."
         },
         {
           "q": "Adakah anda menghantar ke luar negara?",
-          "a": "Arabian Village menghantar ke seluruh dunia melalui laman utama kami; masa dan kadar penghantaran berbeza mengikut destinasi dan dipaparkan semasa checkout."
+          "a": "Pesanan di laman ini hanya dihantar dalam Malaysia. Jika anda berada di luar Malaysia, sila tanya kami di WhatsApp sebelum membuat pesanan."
         },
         {
           "q": "Apakah kaedah pembayaran yang diterima?",
-          "a": "Setiap platform (Shopee, TikTok Shop, Berkat Madinah Store) menyokong kaedah pembayaran tempatan standard, termasuk kad dan e-dompet."
+          "a": "Di laman ini, bayaran disahkan dengan anda dalam sembang WhatsApp selepas anda menghantar pesanan. Di Shopee, TikTok Shop dan Berkat Madinah Store, anda membayar dengan kaedah yang ditawarkan oleh setiap platform."
         },
         {
           "q": "Berapa lama masa penghantaran?",
-          "a": "Masa penghantaran bergantung kepada platform dan lokasi anda — biasanya beberapa hari bekerja dalam Malaysia."
+          "a": "Untuk pesanan di laman ini, penghantaran adalah dalam Malaysia, dan caj penghantaran serta bayaran disahkan dengan anda dalam sembang WhatsApp. Di Shopee, TikTok Shop dan Berkat Madinah Store, masa penghantaran bergantung kepada platform dan lokasi anda."
         },
         {
           "q": "Bolehkah saya membeli secara pukal untuk perniagaan saya?",
@@ -807,6 +807,16 @@
     "availableBadge": "Kini di {{store}}",
     "inStoreNote": "Ada di kedai",
     "size250": "250 ml"
+  },
+  "order": {
+    "add": "Tambah ke troli",
+    "added": "Ditambah",
+    "chooseSize": "Pilih saiz",
+    "cartLabel": "Troli",
+    "cartCount": "{{count}} dalam troli",
+    "orderHere": "Tempah di sini",
+    "orderHereSub": "Tempah di laman ini. Kami sahkan penghantaran dan bayaran dengan anda melalui WhatsApp.",
+    "cartFull": "Had maksimum untuk item ini"
   },
   "alt": {
     "logo": "Arabian Village",

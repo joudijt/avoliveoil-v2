@@ -322,9 +322,35 @@ export const PRODUCTS = {
     3: 'grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3',
     4: 'grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4',
   } as Record<number, string>,
+  /**
+   * The whole-card anchor used before FORGE ORDER-R1. Stored page HTML keeps emitting it
+   * until each page is re-rendered, so it stays in the list — no block reads it now.
+   */
   card:
     'group flex h-full flex-col rounded-2xl border border-olive-dark/10 bg-cream p-3 text-start sm:p-6 transition-shadow duration-300 ' +
     'hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
+  /** FORGE ORDER-R1 O-15: the card box is the <li>; link and order button are siblings inside it. */
+  box:
+    'group flex h-full flex-col rounded-2xl border border-olive-dark/10 bg-cream p-3 text-start sm:p-6 transition-shadow duration-300 ' +
+    'hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]',
+  link: 'flex flex-1 flex-col rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
+  /**
+   * Classes of the order button (src/order/AddToCart.tsx, which ships in the entry bundle
+   * and so cannot import this file). `wrap` is read by ProductsBlock; the rest mirror the
+   * literals in AddToCart.tsx — change both together.
+   */
+  order: {
+    wrap: 'pt-3 sm:pt-4',
+    button:
+      'flex w-full items-center justify-center gap-1.5 rounded-full text-center font-body font-semibold transition-colors duration-300 ' +
+      'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
+    size: { card: 'min-h-11 px-2 py-2 text-[13px] tracking-normal sm:text-sm', page: 'min-h-12 px-7 py-3 text-base tracking-wide' },
+    light: 'bg-olive-dark text-cream hover:bg-gold hover:text-[#1f2818]',
+    dark: 'bg-gold text-[#1f2818] hover:bg-cream',
+    stack: 'flex flex-col gap-2',
+    note: { light: 'pt-1.5 text-center font-body text-xs leading-snug text-brown-ink', dark: 'pt-1.5 text-center font-body text-xs leading-snug text-cream/80' },
+    status: 'sr-only',
+  },
   // FORGE PRODUCTS-R1 O-14: every product photo is a white 1200x1200 square, shown whole.
   imgWrap: 'block aspect-square overflow-hidden rounded-xl border border-olive-dark/5 bg-white',
   img: 'h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]',
@@ -819,6 +845,8 @@ export const LP_HEADER = {
     'transition-colors duration-200 hover:bg-[#3ee07b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:px-5 sm:py-2.5',
   waIcon: 'h-5 w-5 shrink-0',
   waLabel: 'hidden sm:inline',
+  /** Cart button (FORGE ORDER-R1 O-20): dark icon by default, cream while the header is see-through. */
+  cart: '[body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:text-cream',
   /** room for the fixed header when the page does not start with an edge-to-edge hero/band */
   spacer: 'h-16 sm:h-[4.5rem]',
 } as const;

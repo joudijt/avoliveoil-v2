@@ -451,12 +451,14 @@ through the same single door.
 - **Online:** Berkat Madinah's own counters at {{SHOPEE}} and
   {{TIKTOK}}, plus {{SELLER_URL}}.
 
+- **On this site:** add products to the cart and the order is sent to the shop by WhatsApp, for
+  delivery within Malaysia. The delivery fee and the payment are confirmed with you in the chat.
 - **Delivery:** Berkat Madinah and its marketplace counters deliver nationwide across Malaysia, so
   the {{BRANCH_COUNT}} Selangor branches are where you can walk in, not the limit of who can buy.
 
 There is no other authorised seller. A bottle offered anywhere else in Malaysia did not come through
-the official channel, and nothing about its storage or age can be verified. International shipping is
-available; times and rates vary by destination.
+the official channel, and nothing about its storage or age can be verified. Orders placed on this
+site are delivered within Malaysia only.
 
 ## About {{SELLER}} — the Arab grocery house behind the brand
 Tagline: **"The Origin of Arabic Food."** Established **2010**. This is the Arab grocery that
@@ -575,8 +577,8 @@ A: No. {{SELLER}} is the only seller in Malaysia, at its {{BRANCH_COUNT}}
 branches in Selangor and through its own WhatsApp, Shopee and TikTok Shop counters.
 
 Q: Does Arabian Village ship internationally?
-A: Yes, worldwide shipping is available; delivery times and rates vary by destination and are shown
-at checkout.
+A: Orders placed on this site are delivered within Malaysia only. Anyone outside Malaysia should ask
+on WhatsApp {{WHATSAPP}} before ordering.
 
 Q: Does Arabian Village offer wholesale or bulk pricing?
 A: Yes. Businesses can apply for wholesale/distribution partnership on the website under "Business /
@@ -634,7 +636,8 @@ litre, and the 250 ml is the size most people buy to try the oil or to give as a
 
 Q: Does Berkat Madinah deliver, or do I have to visit the shop?
 A: Both. You can buy in person at any of the {{BRANCH_COUNT}} branches in Selangor, or order for delivery across Malaysia
-through Berkat Madinah's WhatsApp line and its Shopee and TikTok Shop counters.
+on this site (the order is sent by WhatsApp, and the delivery fee and payment are confirmed in the chat),
+through Berkat Madinah's WhatsApp line, or through its Shopee and TikTok Shop counters.
 
 Q: Where is the infusion done?
 A: In Malaysia. The oil is pressed in Palestine and shipped, then slow-infused locally with whole

@@ -54,7 +54,7 @@ Yes, every bottle carries one.
 
 ## Do you deliver, or do I have to visit a branch?
 
-All 5 branches are in Selangor, and the store's Shopee and TikTok Shop counters deliver nationwide. Ask on WhatsApp +60 11-1111 9912 to check stock before travelling.
+You can order on this site: the order is sent to the shop by WhatsApp, for delivery within Malaysia, and the delivery fee and payment are confirmed in the chat. The store's Shopee and TikTok Shop counters also deliver nationwide. All 5 branches are in Selangor; ask on WhatsApp +60 11-1111 9912 to check stock before travelling.
 
 ## Do you sell wholesale to restaurants and shops?
 

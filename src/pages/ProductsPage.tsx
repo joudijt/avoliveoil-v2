@@ -13,6 +13,7 @@ import { Picture } from '../components/ui/Picture';
 import { CLASSIC_PRODUCTS, PRODUCTS, priceOf, type Product } from '../data/products';
 import { STORE, BRANCH_COUNT, MADINAH_NAME } from '../config/site';
 import { cmsText } from '../cms/editable';
+import { AddToCart } from '../order/AddToCart';
 
 interface Highlight {
   label: string;
@@ -93,6 +94,8 @@ function ClassicProductBlock({ product }: { product: Product }) {
             ))}
           </dl>
         </div>
+        {/* FORGE ORDER-R1: tapping it reveals one button per size, priced from the catalogue. */}
+        <AddToCart productId={product.id} variant="page" className="mt-4 max-w-sm" />
         <p {...cmsText('productsPage.storeNote')} className="mt-4 max-w-xl font-body text-[15px] leading-relaxed text-brown-ink">
           {t('productsPage.storeNote', { store: MADINAH_NAME, count: BRANCH_COUNT })}
         </p>

@@ -7,6 +7,7 @@ import { PRODUCTS, type Product } from '../../data/products';
 import { Picture } from '../ui/Picture';
 import { isStaticRender } from '../../lib/prerender';
 import { cmsText } from '../../cms/editable';
+import { AddToCart } from '../../order/AddToCart';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,11 +79,12 @@ export function ProductShowcase() {
                 ref={(el) => {
                   cardRefs.current[i] = el;
                 }}
-                className="min-w-0"
+                className="flex min-w-0 flex-col"
               >
+                {/* The link covers photo + text only; the order button is its sibling (O-15). */}
                 <Link
                   to={productHref(product, lang)}
-                  className="group flex h-full flex-col items-center text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+                  className="group flex flex-col items-center text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
                 >
                   <span className="block aspect-square w-full overflow-hidden rounded-2xl border border-olive-dark/10 bg-white shadow-[0_12px_30px_rgba(46,58,36,0.07)] transition-shadow duration-300 group-hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]">
                     <Picture
@@ -102,6 +104,8 @@ export function ProductShowcase() {
                   </span>
                   <span className="mt-1 font-body text-sm text-brown-ink">{sizeLine(product)}</span>
                 </Link>
+                {/* mt-auto: buttons of one row line up whatever the name length. */}
+                <AddToCart productId={product.id} className="mt-auto w-full pt-3 sm:pt-4" />
               </div>
             );
           })}

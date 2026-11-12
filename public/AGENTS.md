@@ -5,7 +5,12 @@ What an automated agent can do on this site, and where.
 ## Buy retail online
 - URL: https://shopee.com.my/arabianvillagemalaysia
 - Method: External marketplace listing
-- Notes: Shopee and TikTok Shop (https://vt.tiktok.com/ZSX2MbR9G/?page=TikTokShop) are Berkat Madinah Store's own counters, not separate sellers. Checkout, payment and tracking happen inside those platforms — this site has no cart.
+- Notes: Shopee and TikTok Shop (https://vt.tiktok.com/ZSX2MbR9G/?page=TikTokShop) are Berkat Madinah Store's own counters, not separate sellers. Checkout, payment and tracking on those listings happen inside the platforms.
+
+## Order on this site
+- URL: https://avoliveoil.com/en/products
+- Method: Add products to the cart, then send the order by WhatsApp
+- Notes: Orders placed on this site are sent to the shop by WhatsApp, for delivery within Malaysia. The delivery fee and the payment are confirmed with the customer in the WhatsApp chat.
 
 ## Buy in person
 - URL: https://avoliveoil.com/en/products

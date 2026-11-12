@@ -174,7 +174,7 @@ faq:
   - q: Does it have a harvest date?
     a: Yes, every bottle carries one.
   - q: Do you deliver, or do I have to visit a branch?
-    a: All 5 branches are in Selangor, and the store's Shopee and TikTok Shop counters deliver nationwide. Ask on WhatsApp +60 11-1111 9912 to check stock before travelling.
+    a: You can order on this site: the order is sent to the shop by WhatsApp, for delivery within Malaysia, and the delivery fee and payment are confirmed in the chat. The store's Shopee and TikTok Shop counters also deliver nationwide. All 5 branches are in Selangor; ask on WhatsApp +60 11-1111 9912 to check stock before travelling.
   - q: Do you sell wholesale to restaurants and shops?
     a: Yes — Berkat Madinah Store supplies restaurants, cafés and shops. Terms are quoted on request, on WhatsApp +60 11-1111 9912 or by email at cs@madinah.com.my.
 
@@ -182,7 +182,11 @@ agent_actions:
   - action: Buy retail online
     url: https://shopee.com.my/arabianvillagemalaysia
     method: External marketplace listing
-    notes: Shopee and TikTok Shop (https://vt.tiktok.com/ZSX2MbR9G/?page=TikTokShop) are Berkat Madinah Store's own counters, not separate sellers. Checkout, payment and tracking happen inside those platforms — this site has no cart.
+    notes: Shopee and TikTok Shop (https://vt.tiktok.com/ZSX2MbR9G/?page=TikTokShop) are Berkat Madinah Store's own counters, not separate sellers. Checkout, payment and tracking on those listings happen inside the platforms.
+  - action: Order on this site
+    url: https://avoliveoil.com/en/products
+    method: Add products to the cart, then send the order by WhatsApp
+    notes: Orders placed on this site are sent to the shop by WhatsApp, for delivery within Malaysia. The delivery fee and the payment are confirmed with the customer in the WhatsApp chat.
   - action: Buy in person
     url: https://avoliveoil.com/en/products
     method: Visit a branch

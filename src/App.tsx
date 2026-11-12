@@ -12,6 +12,7 @@ import { ArticlePage } from './pages/ArticlePage';
 import { WhatsAppButton } from './components/ui/WhatsAppButton';
 import { CanvasRoute, CmsRoute } from './routes/cmsRoutes';
 import { useLandingChrome } from './cms/landingChrome';
+import { OrderRoot } from './order/OrderRoot';
 
 function App() {
   // The builder canvas is a bare surface inside the admin's iframe: no site chrome.
@@ -41,6 +42,8 @@ function App() {
         <Route path="*" element={<Navigate to="/en" replace />} />
       </Routes>
       {!onCanvas && !onLanding && <WhatsAppButton />}
+      {/* Cart drawer + checkout. Also on landing pages (their chrome has a cart button), never on the canvas. */}
+      {!onCanvas && <OrderRoot />}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaStore, FaTiktok } from 'react-icons/fa';
-import { FiShoppingBag } from 'react-icons/fi';
+import { FiShoppingBag, FiShoppingCart } from 'react-icons/fi';
 import { SEO } from '../components/SEO';
 import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
@@ -12,6 +12,9 @@ import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { SHOPEE_URL, TIKTOK_SHOP_URL, MADINAH_NAME } from '../config/site';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 import { cmsAttr, cmsText } from '../cms/editable';
+import { Picture } from '../components/ui/Picture';
+import { PRODUCTS } from '../data/products';
+import { AddToCart } from '../order/AddToCart';
 
 interface FaqItem {
   q: string;
@@ -77,7 +80,53 @@ export function ShopPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* FORGE ORDER-R1: ordering on this site comes first (owner answer 5a). The card
+              holds the order list itself: all 8 products, each with its own button.
+              No link wraps a product here, so no button sits inside an anchor (O-15). */}
+          <div
+            id="order-list"
+            data-testid="order-list"
+            className="mx-auto mt-16 max-w-6xl scroll-mt-28 rounded-2xl border border-gold/40 bg-cream p-4 text-center shadow-[0_10px_30px_rgba(46,58,36,0.06)] sm:p-10"
+          >
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold text-olive-dark">
+              <FiShoppingCart className="h-7 w-7" />
+            </div>
+            <h2 {...cmsText('order.orderHere')} className="mt-6 text-2xl text-olive-dark md:text-3xl">
+              {t('order.orderHere')}
+            </h2>
+            <p {...cmsText('order.orderHereSub')} className="mx-auto mt-3 max-w-xl font-body text-sm leading-relaxed text-brown-ink md:text-base">
+              {t('order.orderHereSub')}
+            </p>
+
+            <ul className="mt-10 grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-4">
+              {PRODUCTS.map((product) => {
+                const nameKey = product.kind === 'classic' ? `${product.i18n}.name` : `${product.i18n}.shortName`;
+                return (
+                  <li key={product.id} className="flex min-w-0 flex-col items-center text-center">
+                    <span className="block aspect-square w-full overflow-hidden rounded-2xl border border-olive-dark/10 bg-white">
+                      <Picture
+                        name={product.image}
+                        alt={t(`${product.i18n}.imageAlt`)}
+                        cmsAltKey={`${product.i18n}.imageAlt`}
+                        className="h-full w-full object-contain"
+                        sizes="(min-width:1024px) 240px, 42vw"
+                      />
+                    </span>
+                    <h3 {...cmsText(nameKey)} className="mt-3 min-w-0 max-w-full break-words font-display text-[15px] leading-snug text-olive-dark sm:text-lg">
+                      {t(nameKey)}
+                    </h3>
+                    <p className="mt-1 font-body text-sm text-brown-ink">
+                      {product.sizes.map((s) => t(`productsPage.price.size${s}`)).join(' · ')}
+                    </p>
+                    {/* Names wrap in full (never clamped); mt-auto keeps the buttons of a row level. */}
+                    <AddToCart productId={product.id} className="mt-auto w-full pt-3" />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <div className="mx-auto mt-6 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {STORES.map(({ key, href, Icon, iconBg, featured }) => (
               <div
                 key={key}

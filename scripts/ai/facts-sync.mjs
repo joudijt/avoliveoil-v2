@@ -282,7 +282,7 @@ const FAQ = [
    `Cool, dark and closed. Heat, light and air are what age an olive oil; a cupboard away from the hob is better than a shelf beside it.`],
   ['Does it have a harvest date?', `Yes, every bottle carries one.`],
   ['Do you deliver, or do I have to visit a branch?',
-   `All ${B.length} branches are in Selangor, and the store's Shopee and TikTok Shop counters deliver nationwide. Ask on WhatsApp ${S.whatsappDisplay} to check stock before travelling.`],
+   `You can order on this site: the order is sent to the shop by WhatsApp, for delivery within Malaysia, and the delivery fee and payment are confirmed in the chat. The store's Shopee and TikTok Shop counters also deliver nationwide. All ${B.length} branches are in Selangor; ask on WhatsApp ${S.whatsappDisplay} to check stock before travelling.`],
   ['Do you sell wholesale to restaurants and shops?',
    `Yes — ${S.name} supplies restaurants, cafés and shops. Terms are quoted on request, on WhatsApp ${S.whatsappDisplay} or by email at ${S.email}.`],
 ];
@@ -298,7 +298,11 @@ p('  - action: Buy retail online');
 p(`    url: ${S.shopeeUrl}`);
 p('    method: External marketplace listing');
 p(`    notes: ${one(`Shopee and TikTok Shop (${S.tiktokShopUrl}) are ${S.name}'s own counters, not separate
-   sellers. Checkout, payment and tracking happen inside those platforms — this site has no cart.`)}`);
+   sellers. Checkout, payment and tracking on those listings happen inside the platforms.`)}`);
+p('  - action: Order on this site');
+p(`    url: ${SITE_URL}/en/products`);
+p('    method: Add products to the cart, then send the order by WhatsApp');
+p(`    notes: ${one(`Orders placed on this site are sent to the shop by WhatsApp, for delivery within Malaysia. The delivery fee and the payment are confirmed with the customer in the WhatsApp chat.`)}`);
 p('  - action: Buy in person');
 p(`    url: ${SITE_URL}/en/products`);
 p('    method: Visit a branch');

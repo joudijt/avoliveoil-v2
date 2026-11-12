@@ -258,6 +258,7 @@ const PAGES = {
     label: 'Header & footer',
     groups: [
       group('Header', either(under('nav'), exactly('alt.logo', 'whatsapp.label'))),
+      group('Order buttons', under('order')),
       group('Footer', under('footer')),
       group('WhatsApp messages', either(under('whatsapp.fields'), exactly('whatsapp.formIntro', 'whatsapp.wholesaleIntro', 'whatsapp.newsletterIntro'))),
       group('Blog labels', either(under('blogPage', 'articlePage', 'seo.blog'), exactly('breadcrumb.blog'))),

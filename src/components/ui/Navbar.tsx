@@ -7,9 +7,13 @@ import { NAV_LINKS, LANGS } from '../../data/content';
 import { langSwitchTarget } from '../../lib/cmsLangSwitch';
 import { useCmsMenu } from '../../cms/boot';
 import { cmsAttr, cmsText } from '../../cms/editable';
+import { CartButton } from '../../order/CartButton';
 
+// Labels never wrap: a wrapped label made the pill two lines tall between 768 and ~1000 px
+// (Malay worst). Tighter below xl; when the pill still cannot fit, usePillOverflow switches
+// the header to the menu button.
 const DESKTOP_LINK =
-  'rounded-full px-4 py-1.5 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold';
+  'whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold lg:px-3 lg:text-sm xl:px-4';
 const MOBILE_LINK =
   'w-full rounded-xl px-4 py-4 text-xl font-medium tracking-wide text-white transition-colors duration-300 hover:text-gold';
 
@@ -18,11 +22,12 @@ function linkPath(lang: string | undefined, path: string) {
 }
 
 /**
- * Owner-added header links (control panel, up to 3) can make the desktop pill wider
- * than the row — Malay labels, a long page name. When the pill's natural width does
+ * The desktop pill can be wider than the row: Malay labels on a tablet, the cart
+ * button beside the language switch (FORGE ORDER-R1), owner-added header links
+ * (control panel, up to 3), a long page name. When the pill's natural width does
  * not fit between the logo and the language switcher, the header switches to the
  * menu button at that width (index.css, `data-cms-menu-compact`) instead of letting
- * links collide. Never runs without CMS items, so the built-in header is untouched.
+ * links collide or wrap. Runs for every header since FORGE ORDER-R1.
  */
 function usePillOverflow(enabled: boolean) {
   const rowRef = useRef<HTMLDivElement>(null);
@@ -60,7 +65,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const langMenuRef = useRef<HTMLDivElement>(null);
   const cmsMenu = useCmsMenu(lang);
-  const compact = usePillOverflow(cmsMenu.header.length > 0);
+  const compact = usePillOverflow(true);
 
   // Path after the /:lang segment, e.g. "/en/products" -> "/products", "/en" -> "".
   // Used so the language switcher stays on the current page instead of
@@ -124,7 +129,7 @@ export function Navbar() {
           <nav
             ref={compact.navRef}
             data-cms-menu="header"
-            className="hidden items-center gap-2 rounded-full bg-[#333D24]/85 px-3 py-2 backdrop-blur-sm md:flex"
+            className="hidden shrink-0 items-center gap-1 rounded-full bg-[#333D24]/85 px-2 py-2 backdrop-blur-sm md:flex lg:gap-2 lg:px-3"
           >
             {NAV_LINKS.map((link) => (
               <Link key={link.key} to={linkPath(lang, link.path)} {...cmsText(`nav.${link.key}`)} className={DESKTOP_LINK}>
@@ -140,19 +145,21 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-4">
             <div className="relative" ref={langMenuRef}>
               <button
                 type="button"
                 onClick={() => setLangOpen((o) => !o)}
                 aria-expanded={langOpen}
                 aria-haspopup="listbox"
+                aria-label={currentLang.label}
                 className={`flex items-center gap-1 text-xs font-medium tracking-wide transition-colors duration-300 hover:text-gold sm:gap-1.5 sm:text-sm ${
                   darkControls ? 'text-gold-ink' : 'text-white'
                 }`}
               >
-                <span className="sm:hidden">{currentLang.short}</span>
-                <span className="hidden sm:inline">{currentLang.label}</span>
+                {/* Short code below lg (the full name pushed the tablet header to two lines). */}
+                <span className="lg:hidden">{currentLang.short}</span>
+                <span className="hidden whitespace-nowrap lg:inline">{currentLang.label}</span>
                 <FiChevronDown
                   className={`h-3.5 w-3.5 shrink-0 transition-transform duration-300 sm:h-4 sm:w-4 ${langOpen ? 'rotate-180' : ''}`}
                 />
@@ -180,6 +187,9 @@ export function Navbar() {
                 </ul>
               )}
             </div>
+
+            {/* Cart (FORGE ORDER-R1): one button for desktop and phone, same colour rule as the other controls (O-20). */}
+            <CartButton dark={darkControls} />
 
             <button
               type="button"

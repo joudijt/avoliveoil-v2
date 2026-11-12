@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next';
 import type { ProductsWidget } from '../contracts';
 import { CATALOGUE, catalogueHref, findCatalogueItem, type CatalogueItem } from '../catalogue';
 import { srcSetOf, widestUrl } from '../media';
+import { PRODUCTS as CATALOGUE_PRODUCTS } from '../../data/products';
+import { AddToCart } from '../../order/AddToCart';
 import { PRODUCTS } from './classes';
 import { useBlockEnv } from './context';
 import { CanvasEmpty } from './CanvasEmpty';
@@ -13,6 +15,11 @@ import { ui } from './strings';
  * an existing page shows here too); the photo (each product's white square,
  * FORGE PRODUCTS-R1 O-14) comes from the stable /cms-assets/ copy, never a hashed
  * build file.
+ *
+ * FORGE ORDER-R1 O-15: the card box is the <li>; the link covers photo + text and the
+ * order button is its sibling, never inside the anchor. In the canvas the button is
+ * inert (O-13). AddToCart reads no `window` while rendering, so the admin's
+ * renderToStaticMarkup and the public React render give the same markup.
  */
 export function ProductsBlock({ w }: { w: ProductsWidget }) {
   const env = useBlockEnv();
@@ -35,8 +42,8 @@ export function ProductsBlock({ w }: { w: ProductsWidget }) {
       {items.map((p) => {
         const name = t(p.nameKey);
         return (
-          <li key={p.id}>
-            <a href={catalogueHref(p, env.lang)} className={PRODUCTS.card}>
+          <li key={p.id} className={PRODUCTS.box}>
+            <a href={catalogueHref(p, env.lang)} className={PRODUCTS.link}>
               <span className={PRODUCTS.imgWrap}>
                 <img
                   src={widestUrl(p.image.variants)}
@@ -56,6 +63,11 @@ export function ProductsBlock({ w }: { w: ProductsWidget }) {
                 {`${ui(env.lang, 'viewProduct')} →`}
               </span>
             </a>
+            <AddToCart
+              productId={CATALOGUE_PRODUCTS.find((d) => d.cmsId === p.id)?.id ?? p.id}
+              inert={env.mode === 'canvas'}
+              className={PRODUCTS.order.wrap}
+            />
           </li>
         );
       })}
