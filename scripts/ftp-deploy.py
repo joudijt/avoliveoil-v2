@@ -54,7 +54,8 @@ SELFTEST_FILE = os.path.join(REPO, ".cms-selftest")
 
 # Server-owned; deleting any of these breaks the account, the TLS renewal or the
 # owner's uploaded photos.
-PROTECTED = {"/cgi-bin", "/.well-known", "/.ftpquota", "/uploads"}
+# /noor-fes = a separate site (repo E:\noorfes-lp) living in this docroot since 2026-11-10.
+PROTECTED = {"/cgi-bin", "/.well-known", "/.ftpquota", "/uploads", "/noor-fes"}
 
 DRY_RUN = "--dry-run" in sys.argv
 CLEAN = "--clean" in sys.argv

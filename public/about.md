@@ -22,4 +22,4 @@ Arabian Village is a premium, first cold pressed extra virgin olive oil sourced 
 - Instagram: https://www.instagram.com/berkatmadinah
 - Facebook: https://www.facebook.com/share/1DMS971Fwk/
 
-Last updated: 2026-11-06
+Last updated: 2026-11-12

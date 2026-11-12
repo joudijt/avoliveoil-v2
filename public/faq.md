@@ -60,4 +60,4 @@ All 5 branches are in Selangor, and the store's Shopee and TikTok Shop counters 
 
 Yes — Berkat Madinah Store supplies restaurants, cafés and shops. Terms are quoted on request, on WhatsApp +60 11-1111 9912 or by email at cs@madinah.com.my.
 
-Last updated: 2026-11-06
+Last updated: 2026-11-12
