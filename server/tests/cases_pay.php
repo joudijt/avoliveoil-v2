@@ -102,7 +102,8 @@ test('pay: admin Payments section stores key + salt encrypted, never returns the
     $r = $payAdmin->post('/api/admin/payments', ['apiKey' => PAY_KEY, 'salt' => PAY_SALT, 'notifyEmail' => 'orders@avoliveoil.com', 'deliveryRM' => ['av' => '8.00', 'nf' => '0']]);
     status($r, 200, 'save');
     $g = $r->json();
-    eq([$g['apiKeySet'], $g['saltSet'], $g['apiKeyEnd'], $g['deliveryRM'], $g['ready']], [true, true, 'real', ['av' => '8.00', 'nf' => '0.00'], ['av' => true, 'nf' => true]], 'stored');
+    eq([$g['apiKeySet'], $g['saltSet'], $g['deliveryRM'], $g['ready']], [true, true, ['av' => '8.00', 'nf' => '0.00'], ['av' => true, 'nf' => true]], 'stored');
+    ok(!array_key_exists('apiKeyEnd', $g), 'no part of the key is ever returned (review 7)');
     lacks($r->body, PAY_KEY, 'key never in the answer');
     lacks($r->body, PAY_SALT, 'salt never in the answer');
     $rows = tdb()->query("SELECT key, value FROM settings WHERE key LIKE 'hitpay.%'")->fetchAll(PDO::FETCH_KEY_PAIR);
@@ -396,7 +397,7 @@ test('pay: admin orders list + recheck; unsent order email retried from the list
     eq($l->json()['doublePaid'], 1, 'double payment badge');
     // an unsent email (mail cap hit) is sent on the next list view
     $ref = $paid[0]['ref'];
-    tdb()->exec("UPDATE orders SET notified_at = NULL WHERE ref = '$ref'");
+    tdb()->exec("UPDATE orders SET notified_at = NULL, last_notify_at = NULL WHERE ref = '$ref'");
     $before = count(mails());
     eq($payAdmin->get('/api/admin/orders')->json()['unnotified'], 0, 'retried and sent');
     eq(count(mails()), $before + 1, 'email sent from the list view');
@@ -417,7 +418,7 @@ test('pay: order emails have their own hourly cap (a flooded form never holds a 
     $st = tdb()->prepare('INSERT INTO mail_log(at, purpose, ok) VALUES(?, ?, 1)');
     for ($i = 0; $i < 45; $i++) $st->execute([$now, 'form']);
     // a paid order now still emails
-    tdb()->exec("UPDATE orders SET notified_at = NULL WHERE status = 'paid' AND ref = (SELECT ref FROM orders WHERE status = 'paid' ORDER BY id DESC LIMIT 1)");
+    tdb()->exec("UPDATE orders SET notified_at = NULL, last_notify_at = NULL WHERE status = 'paid' AND ref = (SELECT ref FROM orders WHERE status = 'paid' ORDER BY id DESC LIMIT 1)");
     $before = count(mails());
     $p = $GLOBALS['S']['pay1'];
     status((new Client())->get('/api/pay/status?ref=' . $p['ref'] . '&t=' . $p['token']), 200, 'status poll'); // a status poll retries unsent order emails
@@ -437,4 +438,82 @@ test('pay: delivery fee cleared in the panel closes online payment again', funct
 
 test('pay: reserved slug "order" (paid page /<lang>/order/paid) cannot become a CMS page', function () use ($payAdmin) {
     status($payAdmin->post('/api/pages', ['slug' => 'order', 'title' => L('T')]), 400, 'reserved slug order');
+});
+
+/* ---------------------------------------------------------------- review fixes (5800d08 review) */
+
+test('pay review 1: limiter keys IPv6 on its /64; IPv4 as is', function () {
+    if (!defined('AVO_CMS')) define('AVO_CMS', true);
+    require_once dirname(__DIR__) . '/_lib/pay.php';
+    eq(avo_pay_ip_key('2001:db8:aaaa:bbbb:1:2:3:4'), avo_pay_ip_key('2001:db8:aaaa:bbbb:ffff::9'), 'same /64 = same key');
+    ok(avo_pay_ip_key('2001:db8:aaaa:bbbb::1') !== avo_pay_ip_key('2001:db8:aaaa:bbbc::1'), 'other /64 = other key');
+    eq(avo_pay_ip_key('203.0.113.7'), '203.0.113.7', 'IPv4 unchanged');
+});
+
+test('pay review 2+3: owner email claimed once (no duplicate), retries throttled to >= 60 s, cap 200', function () use ($payAnon) {
+    reset_rates();
+    $p = $GLOBALS['S']['pay1'];
+    tdb()->exec("UPDATE orders SET notified_at = NULL, last_notify_at = NULL, notify_attempts = 7 WHERE ref = '{$p['ref']}'");
+    $before = count(mails());
+    $q = '/api/pay/status?ref=' . $p['ref'] . '&t=' . $p['token'];
+    $payAnon->get($q);
+    $payAnon->get($q);
+    eq(count(mails()), $before + 1, 'two polls, one email');
+    eq((int) tdb()->query("SELECT notify_attempts FROM orders WHERE ref = '{$p['ref']}'")->fetchColumn(), 8, 'one claim');
+    tdb()->exec("UPDATE orders SET notified_at = NULL, last_notify_at = " . time() . " WHERE ref = '{$p['ref']}'");
+    $payAnon->get($q);
+    eq(count(mails()), $before + 1, 'throttled: no retry within 60 s');
+    tdb()->exec("UPDATE orders SET last_notify_at = " . (time() - 61) . " WHERE ref = '{$p['ref']}'");
+    $payAnon->get($q);
+    eq(count(mails()), $before + 2, 'retried after 60 s');
+    tdb()->exec("UPDATE orders SET notified_at = NULL, last_notify_at = NULL, notify_attempts = 200 WHERE ref = '{$p['ref']}'");
+    $payAnon->get($q);
+    eq(count(mails()), $before + 2, 'cap 200 tries');
+    tdb()->exec("UPDATE orders SET notified_at = " . time() . " WHERE ref = '{$p['ref']}'");
+});
+
+test('pay review 4: a click that finds another click creating the request hands out ITS url (one HitPay request)', function () use ($payAnon) {
+    reset_rates();
+    $body = pay_body(['lines' => [['sku' => 'organic:500', 'qty' => 2]]]);
+    $j = $payAnon->post('/api/pay/create', $body)->json();
+    $ref = $j['ref'];
+    $creates = fn () => count(array_filter(stub()['calls'], fn ($c) => $c['method'] === 'POST'));
+    tdb()->exec("UPDATE pay_requests SET created_at = created_at - 1300 WHERE order_ref = '$ref'");
+    tdb()->exec("UPDATE orders SET creating_at = " . time() . " WHERE ref = '$ref'");
+    $url = 'https://checkout.hit-pay.com/payment-request/@berkat-madinah/parallel-req-0001/checkout';
+    tdb()->exec("INSERT INTO pay_requests(order_ref, request_id, url, amount_sen, status, created_at) VALUES('$ref', 'parallel-req-0001', '$url', " . (int) $j['total_sen'] . ", 'pending', " . time() . ")");
+    $n = $creates();
+    $r = $payAnon->post('/api/pay/create', $body);
+    status($r, 200, 'second click');
+    eq($r->json()['url'], $url, 'same url as the click that created it');
+    eq($creates(), $n, 'no second HitPay request');
+    tdb()->exec("UPDATE orders SET creating_at = NULL WHERE ref = '$ref'");
+    tdb()->exec("UPDATE pay_requests SET created_at = created_at - 1300 WHERE order_ref = '$ref'");
+    $payAnon->post('/api/pay/create', $body);
+    eq($creates(), $n + 1, 'a new request when nothing is open');
+    eq(tdb()->query("SELECT creating_at FROM orders WHERE ref = '$ref'")->fetchColumn(), null, 'claim released');
+});
+
+test('pay review 5: a bad-hmac webhook stores nothing, logs at most once a minute with the raw-+ diagnostic', function () use ($payAnon) {
+    $n = (int) tdb()->query('SELECT COUNT(*) FROM pay_events')->fetchColumn();
+    @unlink(C('data') . '/logs/.hitpay-bad-hmac');
+    $logBefore = substr_count((string) @file_get_contents(C('data') . '/logs/cms.log'), 'hitpay webhook: bad hmac');
+    for ($i = 0; $i < 3; $i++) {
+        status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => 'payment_request_id=x&amount=1+2&hmac=deadbeef']), 401, 'bad hmac');
+    }
+    eq((int) tdb()->query('SELECT COUNT(*) FROM pay_events')->fetchColumn(), $n, 'nothing stored');
+    $log = (string) file_get_contents(C('data') . '/logs/cms.log');
+    eq(substr_count($log, 'hitpay webhook: bad hmac') - $logBefore, 1, 'one log line for three calls');
+    contains($log, '"rawPlus":true', 'diagnostic: raw body had an unencoded +');
+});
+
+test('pay review 6: a real customer may poll beyond the guessing limit; guesses still 429', function () use ($payAnon) {
+    reset_rates();
+    $p = $GLOBALS['S']['pay1'];
+    for ($i = 0; $i < 70; $i++) $r = $payAnon->get('/api/pay/status?ref=' . $p['ref'] . '&t=' . $p['token']);
+    status($r, 200, '70th valid poll');
+    for ($i = 0; $i < 60; $i++) $payAnon->get('/api/pay/status?ref=AV-000000-AAAA&t=x');
+    status($payAnon->get('/api/pay/status?ref=AV-000000-AAAA&t=x'), 429, '61st bad poll');
+    status($payAnon->get('/api/pay/status?ref=' . $p['ref'] . '&t=' . $p['token']), 200, 'the real customer is not blocked by guesses');
+    reset_rates();
 });

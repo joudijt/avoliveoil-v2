@@ -413,7 +413,6 @@ export interface AdminOrderList {
 }
 export interface PaymentSettings {
   apiKeySet: boolean;
-  apiKeyEnd: string | null;
   saltSet: boolean;
   notifyEmail: string;
   notifyEmailDefault: string;

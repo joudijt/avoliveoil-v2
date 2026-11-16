@@ -8,8 +8,7 @@ import { Button, Card, ErrorBlock, Field, Input, LoadingBlock, PageHeader } from
 
 /*
  * Payments (HitPay) section (FORGE HITPAY RULINGS R3). The API key and salt are write-only:
- * the server stores them encrypted and only ever says whether they are set (and the last 4
- * characters of the key). The delivery fee per site is the fee customers pay; while a site has
+ * the server stores them encrypted and only ever says whether they are set. The delivery fee per site is the fee customers pay; while a site has
  * no fee, online payment on that site stays closed.
  */
 
@@ -101,7 +100,7 @@ export function PaymentsScreen() {
               <Field
                 label="HitPay API key"
                 error={fields.apiKey}
-                hint={d.apiKeySet ? `Saved (ends in …${d.apiKeyEnd}). Leave empty to keep it.` : 'From the HitPay dashboard: Settings → Payment gateway → API keys.'}
+                hint={d.apiKeySet ? 'Saved. Leave empty to keep it.' : 'From the HitPay dashboard: Settings → Payment gateway → API keys.'}
               >
                 <Input type="password" autoComplete="off" value={apiKey} onChange={(e) => setApiKey(e.target.value)} invalid={!!fields.apiKey} placeholder={d.apiKeySet ? '••••••••' : ''} />
               </Field>

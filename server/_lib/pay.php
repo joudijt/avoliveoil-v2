@@ -30,6 +30,14 @@ const AVO_PAY_EXPIRES_AFTER = '60 mins';
 /** The status poll asks HitPay at most this often per order (§5.3). */
 const AVO_PAY_FETCH_EVERY = 10;
 const AVO_PAY_CHECKOUT_HOST = 'checkout.hit-pay.com';
+/** Paid-order email retries at most this often per order, up to AVO_PAY_NOTIFY_MAX tries (review 3). */
+const AVO_PAY_NOTIFY_EVERY = 60;
+const AVO_PAY_NOTIFY_MAX = 200;
+/** A click that claimed an order may hold the claim this long while it talks to HitPay (review 4). */
+const AVO_PAY_CLAIM_SECONDS = 30;
+/** Status polls: a valid ref+token gets the high limit; anything else the low one (review 6). */
+const AVO_PAY_STATUS_LIMIT_OK = 240;
+const AVO_PAY_STATUS_LIMIT_BAD = 60;
 
 /* ---------------------------------------------------------------- settings + secrets */
 
@@ -162,22 +170,39 @@ function avo_amount_to_sen(mixed $v): ?int
     return (int) $m[1] * 100 + (int) str_pad($m[2] ?? '', 2, '0');
 }
 
-function avo_pay_ip_hash(): string
+/**
+ * The client as the limiter sees it: an IPv4 address, or the /64 prefix of an IPv6 address
+ * (one customer line gets a whole /64; keying on the full address lets one client rotate freely).
+ */
+function avo_pay_ip_key(string $ip): string
 {
-    return hash_hmac('sha256', avo_ip(), avo_secret());
+    if (str_contains($ip, ':')) {
+        $bin = @inet_pton($ip);
+        if ($bin !== false && strlen($bin) === 16) return 'v6:' . bin2hex(substr($bin, 0, 8));
+    }
+    return $ip;
 }
 
-/** SQLite limiter (R16): $limit hits per $window seconds per IP and bucket; 429 when over. */
+function avo_pay_ip_hash(): string
+{
+    return hash_hmac('sha256', avo_pay_ip_key(avo_ip()), avo_secret());
+}
+
+/** SQLite limiter (R16): $limit hits per $window seconds per IP (/64) and bucket; 429 when over. Count + insert in one transaction. */
 function avo_rate_hit(string $bucket, int $limit, int $window): void
 {
     $ip = avo_pay_ip_hash();
     $now = avo_now();
-    $n = (int) db_val('SELECT COUNT(*) FROM rate_hits WHERE bucket = ? AND ip_hash = ? AND ts > ?', [$bucket, $ip, $now - $window]);
-    if ($n >= $limit) {
+    $over = db_tx(function () use ($bucket, $ip, $now, $limit, $window) {
+        $n = (int) db_val('SELECT COUNT(*) FROM rate_hits WHERE bucket = ? AND ip_hash = ? AND ts > ?', [$bucket, $ip, $now - $window]);
+        if ($n >= $limit) return true;
+        db_exec('INSERT INTO rate_hits(bucket, ip_hash, ts) VALUES(?, ?, ?)', [$bucket, $ip, $now]);
+        db_exec('DELETE FROM rate_hits WHERE ts < ?', [$now - 86400]);
+        return false;
+    });
+    if ($over) {
         avo_fail(429, 'rate_limited', 'Too many tries from your connection. Please wait a few minutes and try again.', null, ['Retry-After' => (string) $window]);
     }
-    db_exec('INSERT INTO rate_hits(bucket, ip_hash, ts) VALUES(?, ?, ?)', [$bucket, $ip, $now]);
-    db_exec('DELETE FROM rate_hits WHERE ts < ?', [$now - 86400]);
 }
 
 /** Mirror of core.ts cleanText for one line: controls + bidi out, white space collapsed, trimmed. */
@@ -500,9 +525,15 @@ function avo_pay_notify_paid(int $max = 3): void
 {
     $to = avo_pay_notify_email();
     if (!avo_valid_email($to)) return;
-    $rows = db_all("SELECT * FROM orders WHERE status = 'paid' AND notified_at IS NULL AND notify_attempts < 30 ORDER BY paid_at LIMIT " . (int) $max);
+    $now = avo_now();
+    $rows = db_all("SELECT * FROM orders WHERE status = 'paid' AND notified_at IS NULL AND notify_attempts < ? AND (last_notify_at IS NULL OR last_notify_at <= ?)
+        ORDER BY paid_at LIMIT " . (int) $max, [AVO_PAY_NOTIFY_MAX, $now - AVO_PAY_NOTIFY_EVERY]);
     foreach ($rows as $o) {
-        db_exec('UPDATE orders SET notify_attempts = notify_attempts + 1 WHERE ref = ?', [$o['ref']]);
+        // Claim the row (compare-and-set on notify_attempts): two parallel polls never both send.
+        $claimed = db_exec('UPDATE orders SET notify_attempts = notify_attempts + 1, last_notify_at = ?
+            WHERE ref = ? AND notified_at IS NULL AND notify_attempts = ? AND (last_notify_at IS NULL OR last_notify_at <= ?)',
+            [$now, $o['ref'], (int) $o['notify_attempts'], $now - AVO_PAY_NOTIFY_EVERY]);
+        if ($claimed !== 1) continue;
         $subject = 'Paid order ' . $o['ref'] . ' RM ' . avo_sen_str((int) $o['total_sen']) . ' (' . avo_pay_site_name((string) $o['site']) . ')';
         $text = 'A customer paid online for this order. Payment checked with HitPay.' . "\n\n" . avo_pay_order_text($o) . "\n";
         $html = '<pre style="font:14px/1.5 sans-serif;white-space:pre-wrap">' . htmlspecialchars($text, ENT_QUOTES, 'UTF-8') . '</pre>';
@@ -622,6 +653,33 @@ function avo_pay_create_route(): array
 
     $ref = (string) $order['ref'];
     $token = (string) $order['status_token'];
+    $reuseNow = function () use ($ref, $order): ?array {
+        $r = db_one("SELECT url FROM pay_requests WHERE order_ref = ? AND status = 'pending' AND amount_sen = ? AND created_at > ? ORDER BY id DESC LIMIT 1",
+            [$ref, (int) $order['total_sen'], avo_now() - AVO_PAY_REUSE_SECONDS]);
+        return $r ? ['ref' => $ref, 'token' => (string) $order['status_token'], 'url' => $r['url'], 'status' => 'pending', 'total_sen' => (int) $order['total_sen']] : null;
+    };
+    // Review 4: only ONE click (or tab) creates the HitPay request of an order. The others wait for
+    // it and hand out the same url; a stale claim (crashed request) expires after 30 s.
+    $claim = function () use ($ref): bool {
+        $now = avo_now();
+        return db_exec('UPDATE orders SET creating_at = ? WHERE ref = ? AND (creating_at IS NULL OR creating_at < ?)', [$now, $ref, $now - AVO_PAY_CLAIM_SECONDS]) === 1;
+    };
+    if (!$claim()) {
+        $until = microtime(true) + AVO_PAY_CLAIM_SECONDS + 2;
+        $got = false;
+        while (!$got && microtime(true) < $until) {
+            if ($hit = $reuseNow()) return $hit;
+            $got = $claim();
+            if (!$got) usleep(300000);
+        }
+        if (!$got) avo_fail(409, 'busy', 'This order is already being sent to the payment page. Please wait a moment and try again.');
+    }
+    // Claimed. A parallel click may have finished just before: use its request.
+    if ($hit = $reuseNow()) {
+        db_exec('UPDATE orders SET creating_at = NULL WHERE ref = ?', [$ref]);
+        return $hit;
+    }
+    $release = fn () => db_exec('UPDATE orders SET creating_at = NULL WHERE ref = ?', [$ref]);
     $phone = '+' . $order['phone'];
     $form = [
         'amount' => avo_sen_str((int) $order['total_sen']),
@@ -641,6 +699,7 @@ function avo_pay_create_route(): array
     try {
         $res = avo_hitpay_call('POST', '/payment-requests', $form, 20);
     } catch (AvoPayError $e) {
+        $release();
         db_exec("UPDATE orders SET status = 'failed' WHERE ref = ? AND status = 'pending' AND NOT EXISTS (SELECT 1 FROM pay_requests WHERE order_ref = ? AND status = 'pending')", [$ref, $ref]);
         avo_fail(502, 'pay_unavailable', 'Online payment is not available right now. Please try again in a minute, or message us on WhatsApp.');
     }
@@ -649,11 +708,13 @@ function avo_pay_create_route(): array
     $u = parse_url($url);
     if ($rid === '' || !preg_match('/^[A-Za-z0-9-]{8,80}$/', $rid) || ($u['scheme'] ?? '') !== 'https' || strtolower((string) ($u['host'] ?? '')) !== AVO_PAY_CHECKOUT_HOST) {
         avo_log('error', 'hitpay create: unexpected answer', ['ref' => $ref, 'host' => $u['host'] ?? null]);
+        $release();
         avo_fail(502, 'pay_unavailable', 'Online payment is not available right now. Please try again in a minute, or message us on WhatsApp.');
     }
     db_exec('INSERT INTO pay_requests(order_ref, request_id, url, amount_sen, status, created_at) VALUES(?, ?, ?, ?, \'pending\', ?)',
         [$ref, $rid, $url, (int) $order['total_sen'], avo_now()]);
     db_exec("UPDATE orders SET status = 'pending' WHERE ref = ? AND status = 'failed'", [$ref]);
+    $release();
     return ['ref' => $ref, 'token' => $token, 'url' => $url, 'status' => 'pending', 'total_sen' => (int) $order['total_sen']];
 }
 
@@ -666,14 +727,17 @@ function avo_pay_webhook_route(): ?array
     $raw = avo_body_raw(20000);
     $fields = [];
     parse_str($raw, $fields);
+    db_exec('DELETE FROM pay_events WHERE at < ?', [avo_now() - 90 * 86400]); // prune on every path
     $salt = avo_hitpay_keys()['salt'];
     $sent = is_string($fields['hmac'] ?? null) ? $fields['hmac'] : '';
     if ($salt === null || $sent === '' || !hash_equals(avo_hitpay_signature($fields, $salt), $sent)) {
-        avo_log('warn', 'hitpay webhook: bad hmac', ['ip' => avo_ip()]);
-        db_exec('INSERT INTO pay_events(at, request_id, payment_id, status, amount, ok) VALUES(?, ?, ?, ?, ?, 0)', [
-            avo_now(), mb_substr((string) ($fields['payment_request_id'] ?? ''), 0, 80), mb_substr((string) ($fields['payment_id'] ?? ''), 0, 80),
-            mb_substr((string) ($fields['status'] ?? ''), 0, 20), mb_substr((string) ($fields['amount'] ?? ''), 0, 20),
-        ]);
+        // Review 5: nothing stored for an unsigned call; at most one log line a minute. The '+' flag is a
+        // diagnostic only (a raw '+' decodes to a space): the check itself is never relaxed.
+        $stamp = avo_data_dir() . '/logs/.hitpay-bad-hmac';
+        if (!is_file($stamp) || (int) @filemtime($stamp) < avo_now() - 60) {
+            @touch($stamp);
+            avo_log('warn', 'hitpay webhook: bad hmac', ['ip' => avo_ip(), 'rawPlus' => str_contains($raw, '+'), 'saltSet' => $salt !== null, 'hmacSent' => $sent !== '']);
+        }
         avo_fail(401, 'bad_signature', 'Signature check failed.');
     }
     $rid = (string) ($fields['payment_request_id'] ?? '');
@@ -682,7 +746,6 @@ function avo_pay_webhook_route(): ?array
     db_exec('INSERT INTO pay_events(at, request_id, payment_id, status, amount, ok) VALUES(?, ?, ?, ?, ?, 1)', [
         avo_now(), mb_substr($rid, 0, 80), mb_substr((string) ($fields['payment_id'] ?? ''), 0, 80), mb_substr($said, 0, 20), mb_substr((string) ($fields['amount'] ?? ''), 0, 20),
     ]);
-    db_exec('DELETE FROM pay_events WHERE at < ?', [avo_now() - 90 * 86400]);
     // One HitPay account serves several shops: a request we never issued is not ours (200, ignored).
     if ($rid === '' || !db_one('SELECT 1 FROM pay_requests WHERE request_id = ?', [$rid])) return ['ok' => true, 'ignored' => true];
     try {
@@ -706,13 +769,16 @@ function avo_pay_public_status(array $o): string
 /** GET /api/pay/status?ref=&t= — the customer's own order, by its secret token. */
 function avo_pay_status_route(): array
 {
-    avo_rate_hit('pay.status', 60, 600);
     $ref = (string) ($_GET['ref'] ?? '');
     $t = (string) ($_GET['t'] ?? '');
     // tolerant of a "?" HitPay may append to our query (review 18): first 32 hex characters of t
     $t = preg_match('/^[0-9a-f]{32}/', $t, $m) ? $m[0] : '';
     $o = preg_match('/^(AV|NF)-\d{6}-[A-Z2-9]{4}$/', $ref) ? db_one('SELECT * FROM orders WHERE ref = ?', [$ref]) : null;
-    if (!$o || $t === '' || !hash_equals((string) $o['status_token'], $t)) avo_fail(403, 'forbidden', 'This order link is not valid.');
+    if (!$o || $t === '' || !hash_equals((string) $o['status_token'], $t)) {
+        avo_rate_hit('pay.status.bad', AVO_PAY_STATUS_LIMIT_BAD, 600); // guessing refs/tokens: low limit
+        avo_fail(403, 'forbidden', 'This order link is not valid.');
+    }
+    avo_rate_hit('pay.status', AVO_PAY_STATUS_LIMIT_OK, 600); // a real customer polling every 3 s: high limit
     if ($o['status'] !== 'paid' && $o['review_at'] === null && ((int) ($o['last_fetch_at'] ?? 0)) < avo_now() - AVO_PAY_FETCH_EVERY) {
         avo_pay_refresh_order($ref, 2, 8);
         $o = db_one('SELECT * FROM orders WHERE ref = ?', [$ref]);
@@ -803,7 +869,6 @@ function avo_admin_payments_get(): array
     $fee = fn (string $site) => ($v = avo_pay_delivery_sen($site)) === null ? null : avo_sen_str($v);
     return [
         'apiKeySet' => $k['api_key'] !== null,
-        'apiKeyEnd' => $k['api_key'] !== null ? substr($k['api_key'], -4) : null,
         'saltSet' => $k['salt'] !== null,
         'notifyEmail' => (string) avo_setting('hitpay.notify_email', ''),
         'notifyEmailDefault' => avo_pay_notify_default(),

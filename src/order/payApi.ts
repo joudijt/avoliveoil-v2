@@ -114,8 +114,11 @@ export async function createPayment(input: {
   }
 }
 
-/** null = the server did not answer (keep polling); 'forbidden' = this link is not an order of ours. */
-export async function fetchPayStatus(ref: string, token: string): Promise<StatusAnswer | 'forbidden' | null> {
+/**
+ * null = the server did not answer (keep polling); 'forbidden' = this link is not an order of ours;
+ * 'slow' = rate limited (429): poll less often.
+ */
+export async function fetchPayStatus(ref: string, token: string): Promise<StatusAnswer | 'forbidden' | 'slow' | null> {
   try {
     const { status, data } = await getJson(
       `/api/pay/status?ref=${encodeURIComponent(ref)}&t=${encodeURIComponent(token)}`,
@@ -123,6 +126,7 @@ export async function fetchPayStatus(ref: string, token: string): Promise<Status
       15000
     );
     if (status === 403) return 'forbidden';
+    if (status === 429) return 'slow';
     const j = data as Record<string, unknown> | null;
     if (status !== 200 || !j || typeof j.status !== 'string') return null;
     const lines = Array.isArray(j.lines) ? j.lines : [];

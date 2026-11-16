@@ -111,3 +111,19 @@ Tests/dev: `server/tests/cases_pay.php`, `hitpay_stub.php`, `run.php`; `scripts/
 - **§5.1 delivery.json:** superseded by R3 (panel setting); no `delivery.json`, `prices.json` has no `delivery_sen`.
 - **SPEC 5.6 copy contains em dashes** ("… — via HitPay", "Online payment opens soon — message us on WhatsApp", "Payment received — thank you!"): kept verbatim although ORDER-R1 strings avoided dashes.
 - WhatsApp "chat" ordering is kept ONLY while online payment is closed for the site (SPEC 5.1); the TnG/DuitNow transfer path is deleted.
+
+## Review fixes (independent review of 5800d08) — supersedes the matching lines above
+
+1. **Limiter** keys IPv6 clients on their /64 prefix (IPv4 as is); count + insert run in one `db_tx`. `orders.ip_hash` uses the same key.
+2. **Owner email** is claimed per order with a compare-and-set `UPDATE … WHERE notified_at IS NULL AND notify_attempts = <read value> AND last_notify_at` window; mail is sent only when that claimed exactly 1 row (two parallel polls never both send).
+3. **Retries** at most once per 60 s per order (`orders.last_notify_at`); hard cap raised from 30 to 200 tries.
+4. **Parallel create** of the same order: a click must claim `orders.creating_at` (conditional UPDATE, stale after 30 s) before calling HitPay; a click that loses the claim waits and hands out the winner's pending url. Only one HitPay request is created. New answer: **409 `busy`** if the other click neither finished nor released within ~32 s.
+5. **Bad-hmac webhook** stores nothing in `pay_events`; it logs at most one line a minute (stamp file `logs/.hitpay-bad-hmac`) with a diagnostic `rawPlus` (raw body had an unencoded `+`); the check is unchanged. `pay_events` is pruned on every webhook path.
+6. **Status limits:** a valid ref+token = 240 / 10 min / IP (bucket `pay.status`); a wrong ref/token = 60 / 10 min (bucket `pay.status.bad`), so guessing cannot block a real customer. The AV paid page backs off 30 s on a 429 and still ends in the "not confirmed yet" view after 2 min (never an endless "checking").
+7. **`apiKeyEnd` removed** from `GET /api/admin/payments`: only `apiKeySet` / `saltSet`.
+
+Migration **#4**: `orders.last_notify_at`, `orders.creating_at`.
+Contract for the NF lane: `create` may now answer **409 `busy`**; status polls get 240 / 10 min per IP; treat 429 on status as "poll slower".
+
+Re-run after the fixes: `php server/tests/run.php` **83/83** (5 new review cases); `node --test scripts/order.test.mjs` **74/74**; `npm run build:prerender` green; `npm run check:cms` OK (first-render JS unchanged, 212.4 KB / +14.7 KB of +15.0 KB); `pay-harness --walk` (real PHP + stub) **180 pass / 0 fail**.
+Not testable here: true concurrency (`php -S` on Windows serves one request at a time), so fix 4 is tested by planting the other click's claim + request; fix 1 IPv6 by a unit test of the key function.

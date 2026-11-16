@@ -206,6 +206,9 @@ function db_migrations(): array
         CREATE TABLE pay_events (id INTEGER PRIMARY KEY, at INTEGER NOT NULL, request_id TEXT, payment_id TEXT, status TEXT, amount TEXT, ok INTEGER NOT NULL);
         CREATE INDEX pay_events_at ON pay_events(at);
         SQL,
+        // 4 — HITPAY review fixes: owner-email retry throttle (last_notify_at) and the per-order
+        //     claim that lets only one click create a HitPay request at a time (creating_at).
+        'ALTER TABLE orders ADD COLUMN last_notify_at INTEGER; ALTER TABLE orders ADD COLUMN creating_at INTEGER',
     ];
 }
 

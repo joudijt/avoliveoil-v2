@@ -62,6 +62,8 @@ const METHOD_NAMES: Record<string, string> = {
   wechat_pay: 'WeChat Pay',
 };
 const POLL_MS = 3000;
+/** After a 429 the page waits this long before the next poll (and still stops after POLL_FOR_MS). */
+const SLOW_MS = 30000;
 const POLL_FOR_MS = 2 * 60 * 1000;
 
 type View =
@@ -197,6 +199,11 @@ export default function PaidPage() {
       const a = await fetchPayStatus(t.ref, t.token);
       if (id !== run.current) return;
       if (a === 'forbidden') return setView({ kind: 'missing' });
+      if (a === 'slow') {
+        if (Date.now() - started >= POLL_FOR_MS) return setView({ kind: 'wait', ref: t.ref });
+        window.setTimeout(() => void tick(), SLOW_MS);
+        return;
+      }
       if (a && a.status === 'paid') {
         const message = paidMessage(t, a, lang);
         settlePaidOnDevice(t, a, message);
