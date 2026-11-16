@@ -1,5 +1,5 @@
 /**
- * Strings of the WhatsApp order message (FORGE ORDER-R1, O-2 / O-4). Lazy chunk, NOT owner-editable:
+ * Strings of the WhatsApp messages (FORGE ORDER-R1 O-2/O-4, BUY-NOW: paid message + closed-state enquiry). Lazy chunk, NOT owner-editable:
  * the seller reads these, so they stay fixed and short whatever the i18n product names become.
  * Erasable types only: the node test imports this file directly.
  * No em dashes, no health claims, no typed prices in any string.
@@ -8,34 +8,28 @@ import type { Lang, MessageLabels } from './core.ts';
 
 export const MESSAGE_LABELS: Record<Lang, MessageLabels> = {
   en: {
-    newOrder: 'New order',
-    subtotal: 'Subtotal',
     delivery: 'Delivery',
-    deliveryTbc: 'to be confirmed',
+    deliveryFree: 'Free',
     total: 'Total',
     payment: 'Payment',
-    paymentChat: 'to be arranged on WhatsApp',
     paymentPaid: 'PAID via HitPay',
     name: 'Name',
     phone: 'Phone',
     address: 'Address',
-    note: 'Note',
     paidOrder: 'Paid order',
+    wantToOrder: 'Hi, I would like to order',
   },
   ms: {
-    newOrder: 'Pesanan baharu',
-    subtotal: 'Jumlah kecil',
     delivery: 'Penghantaran',
-    deliveryTbc: 'akan disahkan',
+    deliveryFree: 'Percuma',
     total: 'Jumlah',
     payment: 'Bayaran',
-    paymentChat: 'akan diatur melalui WhatsApp',
     paymentPaid: 'DIBAYAR melalui HitPay',
     name: 'Nama',
     phone: 'Telefon',
     address: 'Alamat',
-    note: 'Nota',
     paidOrder: 'Pesanan dibayar',
+    wantToOrder: 'Hai, saya ingin memesan',
   },
 };
 

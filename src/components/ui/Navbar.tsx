@@ -7,7 +7,6 @@ import { NAV_LINKS, LANGS } from '../../data/content';
 import { langSwitchTarget } from '../../lib/cmsLangSwitch';
 import { useCmsMenu } from '../../cms/boot';
 import { cmsAttr, cmsText } from '../../cms/editable';
-import { CartButton } from '../../order/CartButton';
 
 // Labels never wrap: a wrapped label made the pill two lines tall between 768 and ~1000 px
 // (Malay worst). Tighter below xl; when the pill still cannot fit, usePillOverflow switches
@@ -187,9 +186,6 @@ export function Navbar() {
                 </ul>
               )}
             </div>
-
-            {/* Cart (FORGE ORDER-R1): one button for desktop and phone, same colour rule as the other controls (O-20). */}
-            <CartButton dark={darkControls} />
 
             <button
               type="button"

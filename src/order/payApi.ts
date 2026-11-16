@@ -2,7 +2,7 @@
  * Calls to the pay server (FORGE HITPAY §5.3). Lazy code only: imported by the checkout chunk and
  * the paid page, never by the entry. The contract is written down in docs/forge/HITPAY-AV-HANDOFF.md.
  */
-import type { Details, Lang, OrderLine } from './core';
+import type { Details, Lang } from './core';
 
 export interface PayConfig {
   ready: boolean;
@@ -18,7 +18,8 @@ export interface StatusAnswer {
   subtotalSen: number;
   deliverySen: number;
   totalSen: number;
-  lines: { sku: string; qty: number; unitSen: number }[];
+  /** BUY-NOW B3: `label` (order language) and `bottles` from the server; a package has qty 1. */
+  lines: { sku: string; qty: number; unitSen: number; label: string; bottles: number }[];
   paymentType: string | null;
 }
 
@@ -27,7 +28,6 @@ export type CreateAnswer =
   | { ok: false; code: string; message: string; fields?: Record<string, string> };
 
 const CLOSED: PayConfig = { ready: false, deliverySen: null };
-let configPromise: Promise<PayConfig> | null = null;
 
 async function getJson(url: string, init: RequestInit, timeoutMs: number): Promise<{ status: number; data: unknown }> {
   const ctl = typeof AbortController === 'function' ? new AbortController() : null;
@@ -47,12 +47,13 @@ async function getJson(url: string, init: RequestInit, timeoutMs: number): Promi
 }
 
 /**
- * Is online payment open for this site, and at which delivery fee. Asked once per page view;
- * any failure (offline, old server) = closed, so the customer gets the WhatsApp path, never a
+ * Is online payment open for this site, and at which delivery fee. BUY-NOW: asked again every
+ * time the sheet opens (no cache across opens: a fee set in the panel shows on the next open).
+ * Any failure (offline, old server) = closed, so the customer gets the WhatsApp path, never a
  * pay button that cannot work.
  */
-export function loadPayConfig(site: 'av' | 'nf'): Promise<PayConfig> {
-  configPromise ??= getJson(`/api/pay/config?site=${site}`, { method: 'GET' }, 8000).then(
+export function fetchPayConfig(site: 'av' | 'nf'): Promise<PayConfig> {
+  return getJson(`/api/pay/config?site=${site}`, { method: 'GET', cache: 'no-store' }, 8000).then(
     ({ status, data }) => {
       const d = data as { ready?: unknown; delivery_sen?: unknown } | null;
       if (status !== 200 || !d || d.ready !== true) return CLOSED;
@@ -61,19 +62,15 @@ export function loadPayConfig(site: 'av' | 'nf'): Promise<PayConfig> {
     },
     () => CLOSED
   );
-  return configPromise;
-}
-
-/** Forget the cached answer (after a 503 pay_not_ready the next look asks again). */
-export function forgetPayConfig(): void {
-  configPromise = null;
 }
 
 export async function createPayment(input: {
   site: 'av' | 'nf';
   lang: Lang;
   idem: string;
-  lines: readonly OrderLine[];
+  /** BUY-NOW: exactly one line (one product + size; a Noor Fès package has qty 1). */
+  sku: string;
+  qty: number;
   details: Details;
 }): Promise<CreateAnswer> {
   const d = input.details;
@@ -81,9 +78,9 @@ export async function createPayment(input: {
     site: input.site,
     lang: input.lang,
     idem: input.idem,
-    // Only SKU + quantity: the server prices every line itself.
-    lines: input.lines.map((l) => ({ sku: l.sku, qty: l.qty })),
-    details: { name: d.name, phone: d.phone, address: d.address, postcode: d.postcode, city: d.city, state: d.state, note: d.note },
+    // Only SKU + quantity: the server prices the line itself.
+    lines: [{ sku: input.sku, qty: input.qty }],
+    details: { name: d.name, phone: d.phone, address: d.address, postcode: d.postcode, state: d.state },
   };
   try {
     const { status, data } = await getJson(
@@ -137,9 +134,9 @@ export async function fetchPayStatus(ref: string, token: string): Promise<Status
       deliverySen: Number(j.delivery_sen) || 0,
       totalSen: Number(j.total_sen) || 0,
       lines: lines.flatMap((l) => {
-        const x = l as { sku?: unknown; qty?: unknown; unit_sen?: unknown };
+        const x = l as { sku?: unknown; qty?: unknown; unit_sen?: unknown; label?: unknown; bottles?: unknown };
         return typeof x.sku === 'string' && typeof x.qty === 'number' && typeof x.unit_sen === 'number'
-          ? [{ sku: x.sku, qty: x.qty, unitSen: x.unit_sen }]
+          ? [{ sku: x.sku, qty: x.qty, unitSen: x.unit_sen, label: typeof x.label === 'string' ? x.label : '', bottles: typeof x.bottles === 'number' ? x.bottles : x.qty }]
           : [];
       }),
       paymentType: typeof j.payment_type === 'string' ? j.payment_type : null,

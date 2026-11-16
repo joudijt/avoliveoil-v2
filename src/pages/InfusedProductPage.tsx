@@ -11,9 +11,9 @@ import { InfusedCard, InStoreNote } from '../components/sections/InfusedCard';
 import { STORE, BRANCH_COUNT, MADINAH_NAME } from '../config/site';
 import { cmsText } from '../cms/editable';
 import { priceOf } from '../data/products';
-import { AddToCart, markCartOpened } from '../order/AddToCart';
-import { itemsForProduct } from '../order/catalog';
-import { loadStore, orderEnabled, setLoadFailed } from '../order/bridge';
+import { BuyNowButton } from '../order/BuyNowButton';
+import { defaultItem } from '../order/catalog';
+import { openBuyNow, preloadBuyNow } from '../order/bridge';
 
 const ALL_LANGS = ['en', 'ms'] as const;
 
@@ -41,23 +41,9 @@ export function InfusedProductPage() {
   const uses = t(`${key}.uses`, { returnObjects: true }) as string[];
   const others = INFUSED_PRODUCTS.filter((p) => p.id !== product.id);
 
-  // FORGE ORDER-R1: "Order here" in the closing section puts this flavour in the cart
-  // (once: a second press only opens the cart) and opens the cart. The cart is read at
-  // click time, so this page does not re-render on every cart change. Opening it here
-  // counts as the session's first open: the next add only updates the badge.
-  const orderSku = itemsForProduct(product.id)[0]?.sku;
-  const orderHere = () => {
-    if (!orderSku || !orderEnabled()) return;
-    // The store loads on demand (it is not in the first-render bundle).
-    loadStore().then(
-      (m) => {
-        if (!m.currentCart().lines.some((l) => l.sku === orderSku)) m.orderActions.add(orderSku, 1);
-        markCartOpened();
-        m.orderActions.openCart();
-      },
-      () => setLoadFailed(true)
-    );
-  };
+  // FORGE BUY-NOW: "Order here" in the closing section opens the Buy-now sheet for this flavour.
+  const orderSku = defaultItem(product.id)?.sku;
+  const orderHere = () => openBuyNow(product.id);
 
   const crumbs = [
     { name: t('breadcrumb.products'), path: 'products', cmsKey: 'breadcrumb.products' },
@@ -120,7 +106,7 @@ export function InfusedProductPage() {
                 )}
               </p>
               <InStoreNote className="mt-3" />
-              <AddToCart productId={product.id} variant="page" className="mt-6 max-w-xs" />
+              <BuyNowButton productId={product.id} variant="page" className="mt-6 max-w-xs" />
             </div>
             <div className="flex items-center justify-center">
               <div className="w-full max-w-[460px] overflow-hidden rounded-[2rem] border border-olive-dark/10 bg-white shadow-[0_30px_60px_rgba(46,58,36,0.12)]">
@@ -204,6 +190,9 @@ export function InfusedProductPage() {
                   data-testid="order-here"
                   data-sku={orderSku}
                   onClick={orderHere}
+                  onPointerEnter={preloadBuyNow}
+                  onTouchStart={preloadBuyNow}
+                  onFocus={preloadBuyNow}
                   {...cmsText('order.orderHere')}
                   className="rounded-full bg-gold px-7 py-3.5 text-sm font-medium tracking-wide text-olive-dark transition-colors duration-300 hover:bg-cream"
                 >

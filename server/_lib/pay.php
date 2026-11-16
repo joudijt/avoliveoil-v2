@@ -21,7 +21,9 @@ const AVO_HITPAY_BASE_DEFAULT = 'https://api.hit-pay.com/v1';
 const AVO_PAY_SITES = ['av', 'nf'];
 const AVO_PAY_PREFIX = ['av' => 'AV', 'nf' => 'NF'];
 const AVO_PAY_MAX_QTY = 24;
-const AVO_PAY_MAX_LINES = 16;
+const AVO_PAY_MAX_LINES = 1; // BUY-NOW: one product per order
+/** create calls per IP (/64) per site per 10 min (BUY-NOW rulings). */
+const AVO_PAY_CREATE_LIMIT = 20;
 const AVO_PAY_MIN_SEN = 30;
 const AVO_PAY_REF_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 /** A pending request younger than this with the same amount is handed out again (R17). */
@@ -242,8 +244,8 @@ function avo_pay_phone(string $raw): ?string
 }
 
 /**
- * Same rules as core.ts validateDetails (name 60, address 160, city 40, note 200, MY mobile,
- * 5-digit postcode, one of the 16 states). Address and note may hold line breaks (Noor Fès).
+ * Same rules as core.ts validateDetails (name 60, address 10..300 in ONE field, note 200, MY mobile,
+ * 5-digit postcode, one of the 16 states). Address and note may hold line breaks.
  * @return array{0: array, 1: array<string,string>} [details, errors]
  */
 function avo_pay_validate_details(mixed $raw): array
@@ -265,18 +267,34 @@ function avo_pay_validate_details(mixed $raw): array
     $phone = avo_pay_phone(is_string($raw['phone'] ?? null) ? $raw['phone'] : $phoneTyped);
     if (avo_pay_blank($phoneTyped)) $e['phone'] = 'required';
     elseif ($phone === null) $e['phone'] = 'phone';
-    $address = $text('address', 160, true, true);
+    // BUY-NOW B4: the address is ONE field (10..300). For 30 days (until 2026-12-16) a stale client
+    // may still send the old shape (address lines + city): its lines and city are joined into the
+    // address before the length check, so nothing is silently dropped.
+    $rawAddress = avo_pay_clean($raw['address'] ?? '', true);
+    $oldCity = avo_pay_clean($raw['city'] ?? '');
+    if (!avo_pay_blank($oldCity)) {
+        $parts = array_values(array_filter(array_map('trim', preg_split('/\n+/', $rawAddress) ?: []), fn ($x) => $x !== ''));
+        $parts[] = $oldCity;
+        $rawAddress = implode(', ', $parts);
+    }
+    $address = '';
+    if (avo_pay_blank($rawAddress)) $e['address'] = 'required';
+    else {
+        $address = $rawAddress;
+        $n = mb_strlen($address);
+        if ($n > 300) $e['address'] = 'tooLong';
+        elseif ($n < 10) $e['address'] = 'tooShort';
+    }
     $postcode = avo_pay_ascii_digits(avo_pay_clean($raw['postcode'] ?? ''));
     if (avo_pay_blank($postcode)) $e['postcode'] = 'required';
     elseif (!preg_match('/^\d{5}$/', $postcode)) $e['postcode'] = 'postcode';
-    $city = $text('city', 40, true);
     $state = avo_pay_clean($raw['state'] ?? '');
     if (avo_pay_blank($state)) $e['state'] = 'required';
     elseif (!in_array($state, $states, true)) $e['state'] = 'state';
     $note = $text('note', 200, false, true);
     $email = strtolower(avo_pay_clean($raw['email'] ?? ''));
     if ($email !== '' && !avo_valid_email($email)) $e['email'] = 'email';
-    return [compact('name', 'phone', 'address', 'postcode', 'city', 'state', 'note', 'email'), $e];
+    return [compact('name', 'phone', 'address', 'postcode', 'state', 'note', 'email'), $e];
 }
 
 /** 'AV-261116-7KQ4' — the day in Malaysia (minor 27), crypto-random tail. */
@@ -490,17 +508,20 @@ function avo_pay_order_text(array $o): string
     $addr = json_decode((string) $o['address_json'], true) ?: [];
     $out = [];
     foreach ($lines as $i => $l) {
-        $out[] = ($i + 1) . '. ' . ($l['name'] ?? $l['sku']) . ' x ' . $l['qty'] . ' = RM ' . avo_sen_str((int) $l['unit_sen'] * (int) $l['qty']);
+        // BUY-NOW B3: a package line reads "Noor Fès, 2 bottles (500 ml each)", never "x 1"
+        $what = !empty($l['pack']) ? ($l['name'] ?? $l['sku']) : ($l['name'] ?? $l['sku']) . ' x ' . $l['qty'];
+        $out[] = ($i + 1) . '. ' . $what . ' = RM ' . avo_sen_str((int) $l['unit_sen'] * (int) $l['qty']);
     }
     $out[] = 'Subtotal: RM ' . avo_sen_str((int) $o['subtotal_sen']);
-    $out[] = 'Delivery: RM ' . avo_sen_str((int) $o['delivery_sen']);
+    $out[] = 'Delivery: ' . ((int) $o['delivery_sen'] === 0 ? 'Free' : 'RM ' . avo_sen_str((int) $o['delivery_sen']));
     $out[] = 'Total: RM ' . avo_sen_str((int) $o['total_sen']);
     $out[] = 'Paid with: ' . ($o['payment_type'] ? $o['payment_type'] . ' (HitPay)' : 'HitPay');
     $out[] = '';
     $out[] = 'Name: ' . $o['name'];
     $out[] = 'Phone: +' . $o['phone'];
     if (!empty($o['email'])) $out[] = 'Email: ' . $o['email'];
-    $out[] = 'Address: ' . str_replace("\n", ', ', (string) ($addr['address'] ?? '')) . ', ' . ($addr['postcode'] ?? '') . ' ' . ($addr['city'] ?? '') . ', ' . ($addr['state'] ?? '');
+    // city only exists on orders placed before BUY-NOW (now part of the address)
+    $out[] = 'Address: ' . str_replace("\n", ', ', (string) ($addr['address'] ?? '')) . ', ' . trim(($addr['postcode'] ?? '') . ' ' . ($addr['city'] ?? '')) . ', ' . ($addr['state'] ?? '');
     if (!empty($addr['note'])) $out[] = 'Note: ' . str_replace("\n", ' / ', (string) $addr['note']);
     $out[] = 'Language: ' . $o['lang'];
     $out[] = 'Order placed: ' . avo_pay_myt((int) $o['created_at']) . ' (Malaysia time)';
@@ -515,6 +536,15 @@ function avo_pay_myt(int $ts): string
 function avo_pay_site_name(string $site): string
 {
     return $site === 'nf' ? 'Noor Fès' : 'Arabian Village';
+}
+
+/** What the buyer sees on the HitPay page (review m2): "Noor Fès order NF-… (2 bottles)". */
+function avo_pay_purpose(string $site, string $ref, array $lines): string
+{
+    $l = $lines[0] ?? null;
+    $what = '';
+    if (is_array($l)) $what = $site === 'nf' ? ((int) ($l['bottles'] ?? 1)) . ' bottle' . (((int) ($l['bottles'] ?? 1)) === 1 ? '' : 's') : ((string) ($l['name'] ?? '')) . ' x ' . (int) $l['qty'];
+    return avo_pay_site_name($site) . ' order ' . $ref . ($what !== '' ? ' (' . $what . ')' : '');
 }
 
 /**
@@ -573,38 +603,50 @@ function avo_pay_config_route(): array
 function avo_pay_create_route(): array
 {
     $body = avo_json_body();
-    avo_rate_hit('pay.create', 10, 600);
     $site = (string) ($body['site'] ?? '');
-    $lang = (string) ($body['lang'] ?? '');
     if (!in_array($site, AVO_PAY_SITES, true)) avo_fail(422, 'invalid', 'Unknown site.', ['site' => 'invalid']);
+    // BUY-NOW: one bucket per site (an AV ad burst must not lock NF buyers out), 20 per 10 min per IP (/64)
+    avo_rate_hit('pay.create.' . $site, AVO_PAY_CREATE_LIMIT, 600);
+    $lang = (string) ($body['lang'] ?? '');
     if (!in_array($lang, AVO_LANGS, true)) avo_fail(422, 'invalid', 'Unknown language.', ['lang' => 'invalid']);
     if (isset($body['hp']) && $body['hp'] !== '') avo_fail(422, 'invalid', 'The order could not be sent.');
     $idem = (string) ($body['idem'] ?? '');
     if (!preg_match('/^[A-Za-z0-9-]{8,64}$/', $idem)) avo_fail(422, 'invalid', 'Reload the page and try again.', ['idem' => 'invalid']);
 
-    // lines: prices come from the server table only; any price the client sends is ignored
+    // lines: prices come from the server table only; any price the client sends is ignored.
+    // BUY-NOW: ONE product (AV: one product+size, qty 1..24; NF: one package, qty 1) per order.
     $rawLines = $body['lines'] ?? null;
-    if (!is_array($rawLines) || !array_is_list($rawLines) || count($rawLines) < 1 || count($rawLines) > AVO_PAY_MAX_LINES) {
-        avo_fail(422, 'invalid', 'Your cart is empty or too large.', ['lines' => 'invalid']);
+    if (!is_array($rawLines) || !array_is_list($rawLines) || count($rawLines) !== 1) {
+        avo_fail(422, 'invalid', 'Reload the page and try again.', ['lines' => 'invalid']);
     }
-    $names = avo_pay_prices()['names'] ?? [];
-    $merged = [];
-    foreach ($rawLines as $l) {
-        $sku = is_array($l) && is_string($l['sku'] ?? null) ? $l['sku'] : '';
-        $qty = is_array($l) ? ($l['qty'] ?? null) : null;
-        if (!is_int($qty) || $qty < 1 || $qty > AVO_PAY_MAX_QTY) avo_fail(422, 'invalid', 'A quantity is not valid.', ['lines' => 'qty']);
-        $p = avo_pay_price($site, $sku);
-        if ($p === null) avo_fail(422, 'unknown_sku', 'One of the products is no longer available. Reload the page and check your cart.', ['lines' => 'unknown_sku']);
-        $merged[$p['sku']] = ($merged[$p['sku']] ?? 0) + $qty;
-        if ($merged[$p['sku']] > AVO_PAY_MAX_QTY) avo_fail(422, 'invalid', 'A quantity is not valid.', ['lines' => 'qty']);
+    $prices = avo_pay_prices();
+    $names = $prices['names'] ?? [];
+    $packs = $prices['packs'][$site] ?? [];
+    $l = $rawLines[0];
+    $sentSku = is_array($l) && is_string($l['sku'] ?? null) ? $l['sku'] : '';
+    $qty = is_array($l) ? ($l['qty'] ?? null) : null;
+    if (!is_int($qty) || $qty < 1 || $qty > AVO_PAY_MAX_QTY) avo_fail(422, 'invalid', 'A quantity is not valid.', ['lines' => 'qty']);
+    $p = avo_pay_price($site, $sentSku);
+    if ($p === null) avo_fail(422, 'unknown_sku', 'This product is no longer available. Reload the page and try again.', ['lines' => 'unknown_sku']);
+    $sku = $p['sku'];
+    $isPack = isset($packs[$sku]);
+    if ($site === 'nf' && !$isPack) avo_fail(422, 'unknown_sku', 'This product is no longer available. Reload the page and try again.', ['lines' => 'unknown_sku']);
+    if ($isPack && $qty !== 1) {
+        // an old tab (single bottle sku with a quantity) gets a distinct code: the client says "reload"
+        $stale = $sku !== $sentSku;
+        avo_fail(422, $stale ? 'stale_client' : 'invalid', $stale ? 'This page is out of date. Reload the page and try again.' : 'A package is always quantity 1.', ['lines' => 'pack']);
     }
-    $lines = [];
-    $subtotal = 0;
-    foreach ($merged as $sku => $qty) {
-        $unit = (int) avo_pay_price($site, $sku)['sen'];
-        $lines[] = ['sku' => $sku, 'qty' => $qty, 'unit_sen' => $unit, 'name' => (string) ($names[$sku]['en'] ?? $sku)];
-        $subtotal += $unit * $qty;
-    }
+    $unit = (int) $p['sen'];
+    $nameEn = (string) ($names[$sku]['en'] ?? $sku);
+    $line = [
+        'sku' => $sku, 'qty' => $qty, 'unit_sen' => $unit, 'name' => $nameEn,
+        // BUY-NOW B3: the label in the order's language + the bottle count go to status / email / admin
+        'label' => (string) ($names[$sku][$lang] ?? $nameEn),
+        'bottles' => $isPack ? (int) $packs[$sku] : $qty,
+    ];
+    if ($isPack) $line['pack'] = true;
+    $lines = [$line];
+    $subtotal = $unit * $qty;
     [$d, $errors] = avo_pay_validate_details($body['details'] ?? null);
     if ($errors) avo_fail(422, 'invalid', 'Some details are missing or not valid.', $errors);
 
@@ -620,7 +662,7 @@ function avo_pay_create_route(): array
         avo_log('warn', 'pay sweep: ' . $e->getMessage());
     }
 
-    $address = ['address' => $d['address'], 'postcode' => $d['postcode'], 'city' => $d['city'], 'state' => $d['state'], 'note' => $d['note']];
+    $address = ['address' => $d['address'], 'postcode' => $d['postcode'], 'state' => $d['state'], 'note' => $d['note']];
     $contentHash = hash('sha256', json_encode([$site, $lines, $d, $delivery], JSON_UNESCAPED_UNICODE));
     $order = db_one('SELECT * FROM orders WHERE site = ? AND idem = ? AND content_hash = ?', [$site, $idem, $contentHash]);
     if ($order) {
@@ -685,7 +727,7 @@ function avo_pay_create_route(): array
         'amount' => avo_sen_str((int) $order['total_sen']),
         'currency' => 'MYR',
         'reference_number' => $ref,
-        'purpose' => avo_pay_site_name($site) . ' order ' . $ref,
+        'purpose' => avo_pay_purpose($site, $ref, json_decode((string) $order['lines_json'], true) ?: []),
         'name' => mb_substr((string) $order['name'], 0, 60),
         'phone' => $phone,
         'redirect_url' => avo_pay_redirect_url($site, (string) $order['lang'], $ref, $token),
@@ -788,7 +830,8 @@ function avo_pay_status_route(): array
     } catch (Throwable $e) {
         avo_log('warn', 'pay notify: ' . $e->getMessage());
     }
-    $lines = array_map(fn ($l) => ['sku' => (string) $l['sku'], 'qty' => (int) $l['qty'], 'unit_sen' => (int) $l['unit_sen']], json_decode((string) $o['lines_json'], true) ?: []);
+    $lines = array_map(fn ($l) => ['sku' => (string) $l['sku'], 'qty' => (int) $l['qty'], 'unit_sen' => (int) $l['unit_sen'],
+        'label' => (string) ($l['label'] ?? $l['name'] ?? $l['sku']), 'bottles' => (int) ($l['bottles'] ?? $l['qty'])], json_decode((string) $o['lines_json'], true) ?: []);
     return [
         'ref' => $o['ref'], 'site' => $o['site'], 'lang' => $o['lang'], 'status' => avo_pay_public_status($o),
         'subtotal_sen' => (int) $o['subtotal_sen'], 'delivery_sen' => (int) $o['delivery_sen'], 'total_sen' => (int) $o['total_sen'],

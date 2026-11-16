@@ -48,14 +48,14 @@ function reset_rates(): void
 
 function pay_details(array $over = []): array
 {
-    return $over + ['name' => 'Aisyah Rahman', 'phone' => '012-345 6789', 'address' => '12 Jalan Mawar', 'postcode' => '43000', 'city' => 'Kajang', 'state' => 'Selangor', 'note' => ''];
+    return $over + ['name' => 'Aisyah Rahman', 'phone' => '012-345 6789', 'address' => '12 Jalan Mawar, Kajang', 'postcode' => '43000', 'state' => 'Selangor'];
 }
 
 function pay_body(array $over = []): array
 {
     return $over + [
         'site' => 'av', 'lang' => 'en', 'idem' => 'idem-' . bin2hex(random_bytes(8)),
-        'lines' => [['sku' => 'extra-virgin:500', 'qty' => 2], ['sku' => 'blackseed:250', 'qty' => 1]],
+        'lines' => [['sku' => 'extra-virgin:500', 'qty' => 2]],
         'details' => pay_details(),
     ];
 }
@@ -134,13 +134,13 @@ test('pay: create validates like core.ts (phone, postcode, state, lengths, qty, 
         eq($r->json()['error']['code'], $code, "$msg: code");
         if ($fields !== null) eq($r->json()['error']['fields'], $fields, "$msg: fields");
     };
-    $bad(pay_body(['details' => pay_details(['phone' => '03-1234 5678', 'postcode' => '4300', 'state' => 'Bali', 'name' => str_repeat('a', 61), 'city' => ''])]),
-        'invalid', ['name' => 'tooLong', 'phone' => 'phone', 'postcode' => 'postcode', 'city' => 'required', 'state' => 'state'], 'details');
+    $bad(pay_body(['details' => pay_details(['phone' => '03-1234 5678', 'postcode' => '4300', 'state' => 'Bali', 'name' => str_repeat('a', 61), 'address' => 'short'])]),
+        'invalid', ['name' => 'tooLong', 'phone' => 'phone', 'address' => 'tooShort', 'postcode' => 'postcode', 'state' => 'state'], 'details');
     $bad(pay_body(['lines' => [['sku' => 'gold:500', 'qty' => 1]]]), 'unknown_sku', null, 'unknown sku');
     $bad(pay_body(['lines' => [['sku' => 'noor-fes:500', 'qty' => 1]]]), 'unknown_sku', null, 'NF sku on the AV site');
     $bad(pay_body(['lines' => [['sku' => 'extra-virgin:500', 'qty' => 25]]]), 'invalid', ['lines' => 'qty'], 'qty 25');
     $bad(pay_body(['lines' => [['sku' => 'extra-virgin:500', 'qty' => '2']]]), 'invalid', ['lines' => 'qty'], 'qty as text');
-    $bad(pay_body(['lines' => [['sku' => 'extra-virgin:500', 'qty' => 20], ['sku' => 'extra-virgin:500', 'qty' => 5]]]), 'invalid', ['lines' => 'qty'], 'merged over 24');
+    $bad(pay_body(['lines' => [['sku' => 'extra-virgin:500', 'qty' => 1], ['sku' => 'organic:250', 'qty' => 1]]]), 'invalid', ['lines' => 'invalid'], 'two lines (one product per order)');
     $bad(pay_body(['lines' => []]), 'invalid', ['lines' => 'invalid'], 'empty cart');
     $bad(pay_body(['site' => 'zz']), 'invalid', ['site' => 'invalid'], 'site');
     $bad(pay_body(['idem' => 'x']), 'invalid', ['idem' => 'invalid'], 'idem');
@@ -151,7 +151,7 @@ test('pay: create validates like core.ts (phone, postcode, state, lengths, qty, 
 
 test('pay: create prices from the server table (client prices ignored), stores pending, sends the right HitPay request', function () use ($payAnon) {
     reset_rates();
-    $body = pay_body(['lines' => [['sku' => 'extra-virgin:500', 'qty' => 2, 'unitSen' => 1, 'price' => '0.01'], ['sku' => 'blackseed:250', 'qty' => 1, 'unit_sen' => 1]], 'total_sen' => 100]);
+    $body = pay_body(['lines' => [['sku' => 'extra-virgin:500', 'qty' => 2, 'unitSen' => 1, 'price' => '0.01', 'unit_sen' => 1]], 'total_sen' => 100]);
     $r = $payAnon->post('/api/pay/create', $body);
     status($r, 200, 'created');
     $j = $r->json();
@@ -160,15 +160,15 @@ test('pay: create prices from the server table (client prices ignored), stores p
     eq(substr($j['ref'], 3, 6), $myt, 'ref date is the day in Malaysia');
     ok(preg_match('/^[0-9a-f]{32}$/', $j['token']) === 1, 'status token');
     eq($j['status'], 'pending', 'pending');
-    eq($j['total_sen'], 2 * 10900 + 7500 + 800, 'total = server prices + panel fee');
+    eq($j['total_sen'], 2 * 10900 + 800, 'total = server prices + panel fee');
     ok(str_starts_with($j['url'], 'https://checkout.hit-pay.com/payment-request/@berkat-madinah/'), 'HitPay url');
     $o = tdb()->query("SELECT * FROM orders WHERE ref = '{$j['ref']}'")->fetch();
-    eq([$o['status'], (int) $o['subtotal_sen'], (int) $o['delivery_sen'], (int) $o['total_sen'], $o['phone'], $o['site']], ['pending', 29300, 800, 30100, '60123456789', 'av'], 'stored order');
+    eq([$o['status'], (int) $o['subtotal_sen'], (int) $o['delivery_sen'], (int) $o['total_sen'], $o['phone'], $o['site']], ['pending', 21800, 800, 22600, '60123456789', 'av'], 'stored order');
     $pr = tdb()->query("SELECT * FROM pay_requests WHERE order_ref = '{$j['ref']}'")->fetchAll();
     eq(count($pr), 1, 'one request row');
     $f = stub()['requests'][$pr[0]['request_id']]['_form'];
     eq([$f['amount'], $f['currency'], $f['reference_number'], $f['phone'], $f['send_email'], $f['send_sms'], $f['allow_repeated_payments'], $f['expires_after']],
-        ['301.00', 'MYR', $j['ref'], '+60123456789', 'false', 'false', 'false', '60 mins'], 'HitPay form');
+        ['226.00', 'MYR', $j['ref'], '+60123456789', 'false', 'false', 'false', '60 mins'], 'HitPay form');
     eq($f['redirect_url'], 'https://avoliveoil.com/en/order/paid?ref=' . $j['ref'] . '&t=' . $j['token'], 'redirect url');
     eq($f['webhook'], 'https://avoliveoil.com/api/pay/webhook', 'webhook url');
     ok(!isset($f['email']) && !isset($f['payment_methods']), 'no email (AV has no field), no method list (all enabled methods show)');
@@ -207,7 +207,7 @@ test('pay: status needs the token (403), and asks HitPay at most every 10 s', fu
     $r = $payAnon->get('/api/pay/status?ref=' . $p['ref'] . '&t=' . $p['token'] . '?reference=x&status=completed');
     status($r, 200, 'status with a "?" HitPay may append to t');
     $j = $r->json();
-    eq([$j['status'], $j['total_sen'], $j['delivery_sen'], count($j['lines'])], ['pending', 30100, 800, 2], 'pending');
+    eq([$j['status'], $j['total_sen'], $j['delivery_sen'], count($j['lines'])], ['pending', 22600, 800, 1], 'pending');
     ok(!isset($j['name']) && !isset($j['phone']), 'no personal data');
     eq(stub_fetches($p['request2']), $before + 1, 'fetched once');
     $payAnon->get('/api/pay/status?ref=' . $p['ref'] . '&t=' . $p['token']);
@@ -231,7 +231,7 @@ test('pay: webhook hmac: known vector, bad hmac 401 without fetching, unknown re
 
     $p = $GLOBALS['S']['pay1'];
     $before = stub_fetches($p['request2']);
-    $raw = webhook_body(['payment_id' => 'x', 'payment_request_id' => $p['request2'], 'amount' => '301.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']], 'wrong salt');
+    $raw = webhook_body(['payment_id' => 'x', 'payment_request_id' => $p['request2'], 'amount' => '226.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']], 'wrong salt');
     status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]), 401, 'bad hmac');
     status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => 'status=completed']), 401, 'no hmac');
     eq(stub_fetches($p['request2']), $before, 'no fetch on a bad hmac');
@@ -245,7 +245,7 @@ test('pay: webhook hmac: known vector, bad hmac 401 without fetching, unknown re
 
 test('pay: a hand-made webhook saying completed does NOT pay while HitPay says pending (500 = retry, R7)', function () use ($payAnon) {
     $p = $GLOBALS['S']['pay1'];
-    $raw = webhook_body(['payment_id' => 'x', 'payment_request_id' => $p['request2'], 'amount' => '301.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']]);
+    $raw = webhook_body(['payment_id' => 'x', 'payment_request_id' => $p['request2'], 'amount' => '226.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']]);
     status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]), 500, 'not yet completed at HitPay');
     eq((string) tdb()->query("SELECT status FROM orders WHERE ref = '{$p['ref']}'")->fetchColumn(), 'pending', 'still pending');
 });
@@ -254,7 +254,7 @@ test('pay: good webhook -> fetch -> paid once, one owner email; replay is a no-o
     $p = $GLOBALS['S']['pay1'];
     $mailsBefore = count(mails());
     stub_pay($p['request2']);
-    $raw = webhook_body(['payment_id' => 'x', 'payment_request_id' => $p['request2'], 'amount' => '301.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']]);
+    $raw = webhook_body(['payment_id' => 'x', 'payment_request_id' => $p['request2'], 'amount' => '226.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']]);
     $r = $payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]);
     status($r, 200, 'webhook');
     eq($r->json()['status'], 'completed', 'settled');
@@ -265,8 +265,8 @@ test('pay: good webhook -> fetch -> paid once, one owner email; replay is a no-o
     eq(count($new), 1, 'one email');
     $m = parse_eml($new[0]);
     eq($m['headers']['to'][0], 'orders@avoliveoil.com', 'to the notify address');
-    contains(mb_decode_mimeheader($m['headers']['subject'][0]), 'Paid order ' . $p['ref'] . ' RM 301.00 (Arabian Village)', 'subject');
-    foreach (['1. Extra Virgin 500 ml x 2 = RM 218.00', 'Delivery: RM 8.00', 'Total: RM 301.00', 'touch_n_go', 'Phone: +60123456789', '43000 Kajang, Selangor'] as $line) {
+    contains(mb_decode_mimeheader($m['headers']['subject'][0]), 'Paid order ' . $p['ref'] . ' RM 226.00 (Arabian Village)', 'subject');
+    foreach (['1. Extra Virgin 500 ml x 2 = RM 218.00', 'Delivery: RM 8.00', 'Total: RM 226.00', 'touch_n_go', 'Phone: +60123456789', 'Address: 12 Jalan Mawar, Kajang, 43000, Selangor'] as $line) {
         contains($m['text'], $line, 'email body');
     }
     status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]), 200, 'replay');
@@ -283,7 +283,7 @@ test('pay: the OLD request paid after a newer one is still recognised (R1); a se
     $p = $GLOBALS['S']['pay1'];
     $mailsBefore = count(mails());
     stub_pay($p['request']); // the first request (still open at HitPay) is paid too
-    $raw = webhook_body(['payment_id' => 'y', 'payment_request_id' => $p['request'], 'amount' => '301.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']]);
+    $raw = webhook_body(['payment_id' => 'y', 'payment_request_id' => $p['request'], 'amount' => '226.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p['ref']]);
     status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]), 200, 'webhook');
     eq((string) tdb()->query("SELECT status FROM pay_requests WHERE request_id = '{$p['request']}'")->fetchColumn(), 'double_paid', 'flagged');
     eq((string) tdb()->query("SELECT paid_request_id FROM orders WHERE ref = '{$p['ref']}'")->fetchColumn(), $p['request2'], 'order unchanged');
@@ -355,28 +355,102 @@ test('pay: HitPay down -> 502 pay_unavailable, order failed', function () use ($
     eq((string) tdb()->query("SELECT status FROM orders ORDER BY id DESC LIMIT 1")->fetchColumn(), 'failed', 'order failed');
 });
 
-test('pay: Noor Fès order (site nf): alias sku, NF ref, NF return path, free delivery', function () use ($payAnon) {
+test('pay: Noor Fès packs (site nf): RM 10 delivery totals 159/259/359, alias = pack1 qty 1, labels + bottles, NF return path', function () use ($payAdmin, $payAnon) {
     reset_rates();
-    $r = $payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lang' => 'ms', 'lines' => [['sku' => 'NOORFES-500', 'qty' => 2]],
-        'details' => pay_details(['address' => "No 3, Jalan Bunga\nTaman Melati", 'email' => 'buyer@example.com'])]));
-    status($r, 200, 'nf created');
-    $j = $r->json();
-    ok(str_starts_with($j['ref'], 'NF-'), 'NF ref');
-    eq($j['total_sen'], 29800, '2 x 149.00, free delivery');
-    $rid = (string) tdb()->query("SELECT request_id FROM pay_requests WHERE order_ref = '{$j['ref']}'")->fetchColumn();
-    $f = stub()['requests'][$rid]['_form'];
-    eq($f['redirect_url'], 'https://avoliveoil.com/noor-fes/ms/paid/?ref=' . $j['ref'] . '&t=' . $j['token'], 'NF Malay paid page');
-    eq([$f['email'], $f['purpose']], ['buyer@example.com', 'Noor Fès order ' . $j['ref']], 'email sent when given; purpose');
-    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'extra-virgin:500', 'qty' => 1]]])), 422, 'AV sku on the NF site');
-    $lines = json_decode((string) tdb()->query("SELECT lines_json FROM orders WHERE ref = '{$j['ref']}'")->fetchColumn(), true);
-    eq($lines[0]['sku'], 'noor-fes:500', 'alias stored as the canonical sku');
+    $payAdmin->post('/api/admin/payments', ['deliveryRM' => ['nf' => '10.00']]);
+    eq($payAnon->get('/api/pay/config?site=nf')->json()['delivery_sen'], 1000, 'nf fee RM 10');
+    $refs = [];
+    foreach ([['noor-fes:pack1', 15900, 1], ['noor-fes:pack2', 25900, 2], ['noor-fes:pack3', 35900, 3]] as [$sku, $total, $bottles]) {
+        $r = $payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lang' => 'ms', 'lines' => [['sku' => $sku, 'qty' => 1]],
+            'details' => pay_details(['address' => "No 3, Jalan Bunga\nTaman Melati, Kajang", 'email' => 'buyer@example.com'])]));
+        status($r, 200, "$sku created");
+        $j = $r->json();
+        ok(str_starts_with($j['ref'], 'NF-'), 'NF ref');
+        eq($j['total_sen'], $total, "$sku total incl. RM 10 delivery");
+        $st = $payAnon->get('/api/pay/status?ref=' . $j['ref'] . '&t=' . $j['token'])->json();
+        eq([$st['lines'][0]['qty'], $st['lines'][0]['bottles']], [1, $bottles], "$sku status: qty 1, $bottles bottles");
+        contains($st['lines'][0]['label'], $bottles . ' botol', "$sku status label in Malay");
+        $rid = (string) tdb()->query("SELECT request_id FROM pay_requests WHERE order_ref = '{$j['ref']}'")->fetchColumn();
+        $f = stub()['requests'][$rid]['_form'];
+        eq($f['purpose'], 'Noor Fès order ' . $j['ref'] . ' (' . $bottles . ' bottle' . ($bottles === 1 ? '' : 's') . ')', "$sku purpose names the package");
+        $refs[$sku] = $j + ['request' => $rid, 'form' => $f];
+    }
+    $p2 = $refs['noor-fes:pack2'];
+    eq($p2['form']['redirect_url'], 'https://avoliveoil.com/noor-fes/ms/paid/?ref=' . $p2['ref'] . '&t=' . $p2['token'], 'NF Malay paid page');
+    eq($p2['form']['email'], 'buyer@example.com', 'email sent when given');
+    // paid: the owner email names the package, no "x 1"
+    $mailsBefore = count(mails());
+    stub_pay($p2['request']);
+    $raw = webhook_body(['payment_id' => 'n2', 'payment_request_id' => $p2['request'], 'amount' => '259.00', 'currency' => 'MYR', 'status' => 'completed', 'reference_number' => $p2['ref']]);
+    status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]), 200, 'nf webhook');
+    $new = array_slice(mails(), $mailsBefore);
+    eq(count($new), 1, 'one NF email');
+    $m = parse_eml($new[0]);
+    foreach (['1. Noor Fès, 2 bottles (500 ml each) = RM 249.00', 'Delivery: RM 10.00', 'Total: RM 259.00', 'No 3, Jalan Bunga, Taman Melati, Kajang, 43000, Selangor'] as $line) {
+        contains($m['text'], $line, 'NF email body');
+    }
+    lacks($m['text'], ' x 1', 'no "x 1" for a package');
+    // aliases (stale tabs, 30 days): the old single-bottle sku = pack1, qty 1 only
+    foreach (['NOORFES-500', 'noor-fes:500', 'noor-fes:NOORFES-500'] as $alias) {
+        $j = $payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => $alias, 'qty' => 1]]]))->json();
+        eq($j['total_sen'] ?? null, 15900, "$alias = pack1");
+        $lines = json_decode((string) tdb()->query("SELECT lines_json FROM orders WHERE ref = '{$j['ref']}'")->fetchColumn(), true);
+        eq([$lines[0]['sku'], $lines[0]['bottles']], ['noor-fes:pack1', 1], "$alias stored as noor-fes:pack1");
+    }
+    $bad = function (array $over, string $code, string $msg) use ($payAnon) {
+        $r = $payAnon->post('/api/pay/create', pay_body(['site' => 'nf'] + $over));
+        status($r, 422, $msg);
+        eq($r->json()['error']['code'], $code, "$msg: code");
+    };
+    $bad(['lines' => [['sku' => 'NOORFES-500', 'qty' => 2]]], 'stale_client', 'old sku with qty 2 = stale client');
+    $bad(['lines' => [['sku' => 'noor-fes:pack2', 'qty' => 2]]], 'invalid', 'pack qty 2');
+    $bad(['lines' => [['sku' => 'noor-fes:pack1', 'qty' => 1], ['sku' => 'noor-fes:pack2', 'qty' => 1]]], 'invalid', 'two packs');
+    $bad(['lines' => [['sku' => 'noor-fes:500', 'qty' => 1], ['sku' => 'noor-fes:pack1', 'qty' => 1]]], 'invalid', 'alias + pack (would merge to 2)');
+    $bad(['lines' => [['sku' => 'noor-fes:pack4', 'qty' => 1]]], 'unknown_sku', 'no pack4');
+    $bad(['lines' => [['sku' => 'extra-virgin:500', 'qty' => 1]]], 'unknown_sku', 'AV sku on the NF site');
+    $payAdmin->post('/api/admin/payments', ['deliveryRM' => ['nf' => '0']]);
+    reset_rates();
 });
 
-test('pay: rate limits: create 10 / 10 min, status 60 / 10 min per IP', function () use ($payAnon) {
+test('pay: address is one field 10..300; the old shape (lines + city) is joined, never dropped (B4)', function () use ($payAnon) {
     reset_rates();
-    for ($i = 0; $i < 10; $i++) $payAnon->post('/api/pay/create', pay_body(['lines' => []]));
+    $one = fn (array $d) => $payAnon->post('/api/pay/create', pay_body(['lines' => [['sku' => 'organic:250', 'qty' => 1]], 'details' => $d]));
+    $new = ['name' => 'Aisyah Rahman', 'phone' => '012-345 6789', 'address' => '12 Jalan Mawar, Taman Sri, Kajang', 'postcode' => '43000', 'state' => 'Selangor'];
+    $r = $one($new);
+    status($r, 200, 'new shape without city, note, email');
+    $addr = json_decode((string) tdb()->query("SELECT address_json FROM orders WHERE ref = '{$r->json()['ref']}'")->fetchColumn(), true);
+    eq($addr['address'], '12 Jalan Mawar, Taman Sri, Kajang', 'address kept');
+    ok(!array_key_exists('city', $addr), 'no city key any more');
+    $r = $one(['address' => "12 Jalan Mawar\nTaman Sri", 'city' => 'Kajang'] + $new);
+    status($r, 200, 'old shape accepted');
+    $addr = json_decode((string) tdb()->query("SELECT address_json FROM orders WHERE ref = '{$r->json()['ref']}'")->fetchColumn(), true);
+    eq($addr['address'], '12 Jalan Mawar, Taman Sri, Kajang', 'old lines + city joined into the address');
+    $err = fn ($r) => $r->json()['error']['fields']['address'] ?? null;
+    eq($err($one(['address' => '123456789'] + $new)), 'tooShort', '9 characters rejected');
+    eq($err($one(['address' => str_repeat('a', 300)] + $new)), null, '300 characters ok');
+    eq($err($one(['address' => str_repeat('a', 301)] + $new)), 'tooLong', '301 rejected');
+    eq($err($one(['address' => str_repeat('a', 295), 'city' => 'Kajang'] + $new)), 'tooLong', 'old shape: length checked after the join');
+    eq($err($one(['address' => ''] + $new)), 'required', 'empty address');
+    reset_rates();
+});
+
+test('pay: AV is one product + size per order, qty 1..24', function () use ($payAnon) {
+    reset_rates();
+    $code = fn (array $lines) => $payAnon->post('/api/pay/create', pay_body(['lines' => $lines]));
+    status($code([['sku' => 'organic:250', 'qty' => 24]]), 200, 'qty 24 ok');
+    eq($code([['sku' => 'organic:250', 'qty' => 0]])->json()['error']['fields'], ['lines' => 'qty'], 'qty 0');
+    eq($code([['sku' => 'organic:250', 'qty' => 25]])->json()['error']['fields'], ['lines' => 'qty'], 'qty 25');
+    eq($code([['sku' => 'organic:250', 'qty' => 1], ['sku' => 'organic:500', 'qty' => 1]])->json()['error']['fields'], ['lines' => 'invalid'], 'two lines');
+    eq($code([['sku' => 'noor-fes:pack1', 'qty' => 1]])->json()['error']['code'], 'unknown_sku', 'NF pack on the AV site');
+    reset_rates();
+});
+
+test('pay: rate limits: create 20 / 10 min per site, status 60 / 10 min per IP', function () use ($payAnon) {
+    reset_rates();
+    for ($i = 0; $i < 20; $i++) $payAnon->post('/api/pay/create', pay_body(['lines' => []]));
     $r = $payAnon->post('/api/pay/create', pay_body());
-    status($r, 429, '11th create');
+    status($r, 429, '21st create');
+    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => []])), 422, 'the NF bucket is separate');
     eq($r->header('Retry-After'), '600', 'retry after');
     reset_rates();
     for ($i = 0; $i < 60; $i++) $payAnon->get('/api/pay/status?ref=AV-000000-AAAA&t=x');
@@ -431,7 +505,7 @@ test('pay: delivery fee cleared in the panel closes online payment again', funct
     $g = $payAdmin->post('/api/admin/payments', ['deliveryRM' => ['nf' => null]])->json();
     eq($g['ready'], ['av' => true, 'nf' => false], 'nf closed');
     eq($payAnon->get('/api/pay/config?site=nf')->json()['ready'], false, 'config says closed');
-    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'noor-fes:500', 'qty' => 1]]])), 503, 'create refused');
+    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'noor-fes:pack1', 'qty' => 1]]])), 503, 'create refused');
     $payAdmin->post('/api/admin/payments', ['deliveryRM' => ['nf' => '0']]);
     reset_rates();
 });

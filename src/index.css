@@ -216,3 +216,14 @@ nav[data-cms-menu='header']:has(> [data-cms-menu-item]) > a {
     display: block;
   }
 }
+
+/* FORGE BUY-NOW: the Buy-now sheet slides up on phones and fades in as a centred dialog from
+   768 px. Opening only (closing is instant, so a close never waits for a transition). No motion
+   for prefers-reduced-motion. */
+@keyframes avo-sheet-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog[data-buynow][open] { animation: avo-sheet-up 0.22s ease-out; }
+}

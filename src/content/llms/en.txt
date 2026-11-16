@@ -451,8 +451,9 @@ through the same single door.
 - **Online:** Berkat Madinah's own counters at {{SHOPEE}} and
   {{TIKTOK}}, plus {{SELLER_URL}}.
 
-- **On this site:** add products to the cart and the order is sent to the shop by WhatsApp, for
-  delivery within Malaysia. The delivery fee and the payment are confirmed with you in the chat.
+- **On this site:** tap Buy now on a product, choose the size and quantity, fill in your delivery
+  details and pay online through HitPay (FPX, Touch 'n Go, GrabPay, ShopeePay, DuitNow, cards).
+  Delivery is within Malaysia for a flat RM 10, shown in the total before you pay.
 - **Delivery:** Berkat Madinah and its marketplace counters deliver nationwide across Malaysia, so
   the {{BRANCH_COUNT}} Selangor branches are where you can walk in, not the limit of who can buy.
 
@@ -636,7 +637,7 @@ litre, and the 250 ml is the size most people buy to try the oil or to give as a
 
 Q: Does Berkat Madinah deliver, or do I have to visit the shop?
 A: Both. You can buy in person at any of the {{BRANCH_COUNT}} branches in Selangor, or order for delivery across Malaysia
-on this site (the order is sent by WhatsApp, and the delivery fee and payment are confirmed in the chat),
+on this site (tap Buy now, pay online through HitPay, flat RM 10 delivery within Malaysia),
 through Berkat Madinah's WhatsApp line, or through its Shopee and TikTok Shop counters.
 
 Q: Where is the infusion done?

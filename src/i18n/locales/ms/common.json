@@ -425,7 +425,7 @@
         },
         {
           "q": "Adakah anda menghantar ke seluruh Malaysia?",
-          "a": "Ya. Anda boleh membuat pesanan di laman ini: pesanan dihantar kepada kedai melalui WhatsApp, untuk penghantaran dalam Malaysia. Anda juga boleh membeli di Berkat Madinah Store, Shopee atau TikTok Shop yang menghantar ke seluruh Malaysia."
+          "a": "Ya. Di laman ini, tekan Beli sekarang pada produk, isi maklumat penghantaran dan bayar dalam talian. Kami menghantar ke seluruh Malaysia dengan caj tetap RM 10, ditunjukkan dalam jumlah anda sebelum anda membayar. Anda juga boleh membeli di Berkat Madinah Store, Shopee atau TikTok Shop yang menghantar ke seluruh Malaysia."
         },
         {
           "q": "Adakah anda menghantar ke luar negara?",
@@ -433,11 +433,11 @@
         },
         {
           "q": "Apakah kaedah pembayaran yang diterima?",
-          "a": "Di laman ini, bayaran disahkan dengan anda dalam sembang WhatsApp selepas anda menghantar pesanan. Di Shopee, TikTok Shop dan Berkat Madinah Store, anda membayar dengan kaedah yang ditawarkan oleh setiap platform."
+          "a": "Di laman ini anda membayar dalam talian di halaman bayaran HitPay yang selamat: perbankan dalam talian FPX, Touch 'n Go, GrabPay, ShopeePay, DuitNow, WeChat Pay atau kad. Di Shopee, TikTok Shop dan Berkat Madinah Store, anda membayar dengan kaedah yang ditawarkan oleh setiap platform."
         },
         {
           "q": "Berapa lama masa penghantaran?",
-          "a": "Untuk pesanan di laman ini, penghantaran adalah dalam Malaysia, dan caj penghantaran serta bayaran disahkan dengan anda dalam sembang WhatsApp. Di Shopee, TikTok Shop dan Berkat Madinah Store, masa penghantaran bergantung kepada platform dan lokasi anda."
+          "a": "Pesanan di laman ini dihantar dalam Malaysia dengan caj tetap RM 10, dan kami menghubungi anda tentang penghantaran sebaik sahaja bayaran anda diterima. Di Shopee, TikTok Shop dan Berkat Madinah Store, masa penghantaran bergantung kepada platform dan lokasi anda."
         },
         {
           "q": "Bolehkah saya membeli secara pukal untuk perniagaan saya?",
@@ -809,15 +809,11 @@
     "size250": "250 ml"
   },
   "order": {
-    "add": "Tambah ke troli",
-    "added": "Ditambah",
-    "chooseSize": "Pilih saiz",
-    "cartLabel": "Troli",
-    "cartCount": "{{count}} dalam troli",
+    "buyNow": "Beli sekarang",
     "orderHere": "Tempah di sini",
-    "orderHereSub": "Tempah di laman ini. Kami sahkan penghantaran dan bayaran dengan anda melalui WhatsApp.",
-    "cartFull": "Had maksimum untuk item ini"
+    "orderHereSub": "Tekan Beli sekarang pada mana-mana produk, isi maklumat penghantaran dan bayar dengan selamat dalam talian. Penghantaran ke seluruh Malaysia."
   },
+
   "alt": {
     "logo": "Arabian Village",
     "heroBottle": "Botol Minyak Zaitun Extra Virgin Palestin Arabian Village",

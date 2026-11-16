@@ -14,7 +14,7 @@ import { buildWhatsAppUrl } from '../utils/whatsapp';
 import { cmsAttr, cmsText } from '../cms/editable';
 import { Picture } from '../components/ui/Picture';
 import { PRODUCTS } from '../data/products';
-import { AddToCart } from '../order/AddToCart';
+import { BuyNowButton } from '../order/BuyNowButton';
 
 interface FaqItem {
   q: string;
@@ -119,7 +119,7 @@ export function ShopPage() {
                       {product.sizes.map((s) => t(`productsPage.price.size${s}`)).join(' · ')}
                     </p>
                     {/* Names wrap in full (never clamped); mt-auto keeps the buttons of a row level. */}
-                    <AddToCart productId={product.id} className="mt-auto w-full pt-3" />
+                    <BuyNowButton productId={product.id} className="mt-auto w-full pt-3" />
                   </li>
                 );
               })}

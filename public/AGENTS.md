@@ -9,8 +9,8 @@ What an automated agent can do on this site, and where.
 
 ## Order on this site
 - URL: https://avoliveoil.com/en/products
-- Method: Add products to the cart, then send the order by WhatsApp
-- Notes: Orders placed on this site are sent to the shop by WhatsApp, for delivery within Malaysia. The delivery fee and the payment are confirmed with the customer in the WhatsApp chat.
+- Method: Tap Buy now on a product, choose size and quantity, fill in the delivery details, pay online through HitPay
+- Notes: One product per order (size and quantity 1 to 24). Payment is online through HitPay (FPX, Touch 'n Go, GrabPay, ShopeePay, DuitNow, WeChat Pay, cards). Delivery is within Malaysia only, for a flat RM 10 shown in the total before payment. The order is confirmed when HitPay confirms the payment.
 
 ## Buy in person
 - URL: https://avoliveoil.com/en/products
@@ -27,4 +27,4 @@ What an automated agent can do on this site, and where.
 - Method: GET
 - Notes: English at /llms.txt and Bahasa Melayu at /llms-ms.txt. Each is generated from src/data/storeFacts.json, so the figures in them match the pages by construction.
 
-Last updated: 2026-11-12
+Last updated: 2026-11-16

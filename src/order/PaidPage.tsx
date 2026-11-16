@@ -4,9 +4,9 @@
  * sitemap/llms/hreflang gates. The page never trusts HitPay's `status` query: it polls OUR server
  * (/api/pay/status), which asks HitPay itself (verify by fetch, §2).
  *
- * ref + token: from this device's saved order first, then the query (R18). Paid: summary,
- * optional "Send order details on WhatsApp" (ref + PAID via HitPay), the ordered lines leave the
- * cart. Failed: "Try again" opens the cart (the cart is kept until a payment is confirmed).
+ * ref + token: from this device's buy-now draft first, then the query (R18). Paid: summary,
+ * optional "Send order details on WhatsApp" (ref + PAID via HitPay), the draft is cleared.
+ * Failed: "Try again" reopens the Buy-now sheet for the same product, size and quantity (BUY-NOW).
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -17,38 +17,31 @@ import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
 import { useMarkAppReady } from '../hooks/useMarkAppReady';
 import { isPrerender } from '../lib/prerender';
-import { openCart } from './bridge';
+import { openBuyNow } from './bridge';
 import { ORDER_CONFIG } from './config';
 import {
-  buildPaidShortMessage,
+  buildPaidMessage,
   buildWhatsAppUrl,
-  fitOrderMessage,
+  draftKey,
   formatRM,
   isRef,
   isToken,
-  lineTotalSen,
-  parseOrder,
   plainChatUrl,
   readPaidQuery,
-  type CoreConfig,
+  validateDetails,
+  type Details,
+  type Draft,
   type Lang,
-  type Order,
-  type OrderLine,
+  type MessageLine,
 } from './core';
 import { MESSAGE_LABELS, ORDER_NAMES, STATES_MY, sizeLabel } from './messageStrings';
+import { readDetails, readDraft } from './drafts';
+import { orderStorage } from './storage';
 import { fetchPayStatus, type StatusAnswer } from './payApi';
 import { BTN_GOLD, BTN_LINE, BTN_WA, CARD, LABEL, LINK, SMALL } from './scrollLock';
 import { PAID_STRINGS } from './paidStrings';
 
 const KEYS = ORDER_CONFIG.keys;
-const CORE_CFG: CoreConfig = {
-  whatsapp: ORDER_CONFIG.whatsapp,
-  maxQty: ORDER_CONFIG.maxQty,
-  deliverySen: null,
-  refPrefix: ORDER_CONFIG.refPrefix,
-  urlCap: ORDER_CONFIG.urlCap,
-  orderTtlMs: ORDER_CONFIG.orderTtlMs,
-};
 /** HitPay payment_type -> the name customers know. Unknown types are shown as sent, underscores as spaces. */
 const METHOD_NAMES: Record<string, string> = {
   card: 'Card',
@@ -77,8 +70,8 @@ type View =
 interface Target {
   ref: string;
   token: string;
-  /** The saved order of this device (details for the WhatsApp message), when it is this order. */
-  order: Order | null;
+  /** This device's draft of this order (language, and the key that says whether the details still match). */
+  draft: Draft | null;
 }
 
 function store(): Storage | null {
@@ -113,61 +106,60 @@ interface PaidMemo {
 function readPaidMemo(): PaidMemo | null {
   try {
     const m = JSON.parse(getKey(KEYS.paid) ?? 'null') as PaidMemo | null;
-    if (m && isRef(m.ref, ORDER_CONFIG.refPrefix) && isToken(m.token) && typeof m.message === 'string' && Date.now() - m.createdAt < ORDER_CONFIG.orderTtlMs) return m;
+    if (m && isRef(m.ref, ORDER_CONFIG.refPrefix) && isToken(m.token) && typeof m.message === 'string' && Date.now() - m.createdAt < ORDER_CONFIG.draftTtlMs) return m;
   } catch {
     /* ignored */
   }
   return null;
 }
 
-/** R18: this device's saved order (or paid memo) first; the query second. */
+/** R18: this device's draft (or paid memo) first; the query second. */
 function findTarget(): Target | null {
   const q = readPaidQuery(window.location.search, ORDER_CONFIG.refPrefix);
-  const saved = parseOrder(getKey(KEYS.order), Date.now(), CORE_CFG, STATES_MY);
-  if (saved && saved.payMode === 'online' && saved.token && (!q || q.ref === saved.ref)) {
-    return { ref: saved.ref, token: saved.token, order: saved };
-  }
+  const draft = readDraft();
+  if (draft && draft.ref && draft.token && (!q || q.ref === draft.ref)) return { ref: draft.ref, token: draft.token, draft };
   const memo = readPaidMemo();
-  if (memo && (!q || q.ref === memo.ref)) return { ref: memo.ref, token: memo.token, order: null };
-  return q ? { ref: q.ref, token: q.token, order: saved && saved.ref === q.ref ? saved : null } : null;
+  if (memo && (!q || q.ref === memo.ref)) return { ref: memo.ref, token: memo.token, draft: null };
+  return q ? { ref: q.ref, token: q.token, draft: draft && draft.ref === q.ref ? draft : null } : null;
 }
 
-function namedLines(answer: StatusAnswer, lang: Lang): OrderLine[] {
-  return answer.lines.map((l) => {
-    const [productId = l.sku, size = ''] = l.sku.split(':');
-    return { sku: l.sku, name: ORDER_NAMES[lang][productId] ?? productId, sizeLabel: sizeLabel(size), qty: l.qty, unitSen: l.unitSen };
-  });
+/** The server line as the page and the message print it (B3: a package by its label, never "x 1"). */
+function paidLine(answer: StatusAnswer, lang: Lang): MessageLine & { sku: string } {
+  const l = answer.lines[0] ?? { sku: '', qty: 1, unitSen: answer.subtotalSen, label: '', bottles: 1 };
+  const [productId = l.sku, size = ''] = l.sku.split(':');
+  const label = l.label || `${ORDER_NAMES[lang][productId] ?? productId} ${sizeLabel(size)}`;
+  return { sku: l.sku, label, qty: l.qty, unitSen: l.unitSen, pack: l.sku.includes(':pack') };
 }
 
-/** The WhatsApp text of a paid order: full details when this device has them, else ref + lines. */
+/** This device's details, only when they are still the ones this order was placed with. */
+function matchingDetails(t: Target): Details | null {
+  const d = t.draft;
+  const v = readDetails();
+  if (!d || !v) return null;
+  const r = validateDetails(v, STATES_MY);
+  return r.ok && draftKey(d.site, d.lang, d.sku, d.qty, r.details) === d.key ? r.details : null;
+}
+
+/** The WhatsApp text of a paid order: with the details when this device still has them, else ref + line. */
 function paidMessage(t: Target, answer: StatusAnswer, lang: Lang): string {
   const memo = readPaidMemo();
   if (memo && memo.ref === t.ref) return memo.message;
-  const labels = MESSAGE_LABELS[t.order?.lang ?? lang];
-  if (t.order) {
-    // Server lines + fee: what was really paid.
-    const order: Order = { ...t.order, payMode: 'online', lines: namedLines(answer, t.order.lang), deliverySen: answer.deliverySen };
-    const fit = fitOrderMessage(order, labels, { ...CORE_CFG, deliverySen: answer.deliverySen });
-    if (fit.fits) return fit.message;
-  }
-  return buildPaidShortMessage({ ref: t.ref, lines: namedLines(answer, t.order?.lang ?? lang), deliverySen: answer.deliverySen }, labels);
+  const msgLang = t.draft?.lang ?? lang;
+  return buildPaidMessage({ ref: t.ref, line: paidLine(answer, msgLang), deliverySen: answer.deliverySen, details: matchingDetails(t) }, MESSAGE_LABELS[msgLang]);
 }
 
-/** Once per order: the paid lines leave the cart, the saved order goes, the message is kept for a reload. */
-function settlePaidOnDevice(t: Target, answer: StatusAnswer, message: string): void {
+/** Once per order: the draft goes, the message is kept for a reload. */
+function settlePaidOnDevice(t: Target, message: string): void {
   if (readPaidMemo()?.ref === t.ref) return;
   setKey(KEYS.paid, JSON.stringify({ ref: t.ref, token: t.token, message, createdAt: Date.now() } satisfies PaidMemo));
-  void import('./store').then((m) => {
-    for (const line of answer.lines) {
-      const inCart = m.currentCart().lines.find((l) => l.sku === line.sku)?.qty ?? 0;
-      if (inCart > 0) m.orderActions.setQty(line.sku, Math.max(0, inCart - line.qty));
-    }
-    const saved = parseOrder(m.orderStorage.get(KEYS.order), Date.now(), CORE_CFG, STATES_MY);
-    if (saved && saved.ref === t.ref) {
-      m.orderStorage.del(KEYS.order);
-      m.orderActions.refreshOrder();
-    }
-  });
+  if (readDraft()?.ref === t.ref) orderStorage.del(KEYS.draft);
+}
+
+/** "Try again": the Buy-now sheet for the same product, size and quantity. */
+function retry(answer: StatusAnswer | null): void {
+  const l = answer?.lines[0];
+  const [productId, size] = (l?.sku ?? '').split(':');
+  if (productId && size) openBuyNow(productId, size, l?.qty);
 }
 
 function isDesktop(): boolean {
@@ -185,6 +177,8 @@ export default function PaidPage() {
   useMarkAppReady();
 
   const [view, setView] = useState<View>({ kind: 'checking' });
+  /** The last status answer (the "wait" view has none of its own): what "Try again" reopens. */
+  const lastAnswer = useRef<StatusAnswer | null>(null);
   const target = useRef<Target | null>(null);
   const run = useRef(0);
 
@@ -198,6 +192,7 @@ export default function PaidPage() {
       if (id !== run.current) return;
       const a = await fetchPayStatus(t.ref, t.token);
       if (id !== run.current) return;
+      if (a && typeof a === 'object') lastAnswer.current = a;
       if (a === 'forbidden') return setView({ kind: 'missing' });
       if (a === 'slow') {
         if (Date.now() - started >= POLL_FOR_MS) return setView({ kind: 'wait', ref: t.ref });
@@ -206,7 +201,7 @@ export default function PaidPage() {
       }
       if (a && a.status === 'paid') {
         const message = paidMessage(t, a, lang);
-        settlePaidOnDevice(t, a, message);
+        settlePaidOnDevice(t, message);
         return setView({ kind: 'paid', answer: a, message });
       }
       if (a && a.status === 'failed') return setView({ kind: 'failed', answer: a });
@@ -293,7 +288,7 @@ export default function PaidPage() {
           {view.kind === 'failed' && (
             <>
               <p className="text-lg">{s.failedBody}</p>
-              <button type="button" data-testid="paid-retry" onClick={openCart} className={BTN_GOLD}>
+              <button type="button" data-testid="paid-retry" onClick={() => retry(view.answer)} className={BTN_GOLD}>
                 {s.tryAgain}
               </button>
             </>
@@ -305,7 +300,7 @@ export default function PaidPage() {
               <button type="button" data-testid="paid-check-again" onClick={poll} className={BTN_GOLD}>
                 {s.checkAgain}
               </button>
-              <button type="button" data-testid="paid-retry" onClick={openCart} className={BTN_LINE}>
+              <button type="button" data-testid="paid-retry" onClick={() => retry(lastAnswer.current)} className={BTN_LINE}>
                 {s.tryAgain}
               </button>
             </>
@@ -331,27 +326,18 @@ export default function PaidPage() {
 
 function Summary({ answer, lang }: { answer: StatusAnswer; lang: Lang }) {
   const s = PAID_STRINGS[lang];
-  const lines = namedLines(answer, lang);
+  const l = paidLine(answer, lang);
   const row = 'flex items-baseline justify-between gap-4';
   return (
     <div data-testid="paid-summary" className={`${CARD} grid gap-2`}>
       <p className={LABEL}>{s.summaryTitle}</p>
-      <ul className="grid gap-1.5">
-        {lines.map((l) => (
-          <li key={l.sku} className={row}>
-            <span className="min-w-0">
-              {l.name} {l.sizeLabel} {'x '}
-              {l.qty}
-            </span>
-            <span className="shrink-0 font-semibold tabular-nums">{formatRM(lineTotalSen(l))}</span>
-          </li>
-        ))}
-      </ul>
+      <div className={row}>
+        <span data-testid="paid-line" className="min-w-0">
+          {l.pack ? l.label : `${l.label} x ${l.qty}`}
+        </span>
+        <span className="shrink-0 font-semibold tabular-nums">{formatRM(l.unitSen * l.qty)}</span>
+      </div>
       <dl className="mt-1 grid gap-1 border-t border-olive-dark/15 pt-2">
-        <div className={row}>
-          <dt className="text-olive-dark/75">{s.subtotal}</dt>
-          <dd className="font-semibold tabular-nums">{formatRM(answer.subtotalSen)}</dd>
-        </div>
         <div className={row}>
           <dt className="text-olive-dark/75">{s.delivery}</dt>
           <dd className="font-semibold tabular-nums">{answer.deliverySen === 0 ? s.free : formatRM(answer.deliverySen)}</dd>

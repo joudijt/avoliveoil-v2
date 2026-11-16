@@ -54,10 +54,10 @@ Yes, every bottle carries one.
 
 ## Do you deliver, or do I have to visit a branch?
 
-You can order on this site: the order is sent to the shop by WhatsApp, for delivery within Malaysia, and the delivery fee and payment are confirmed in the chat. The store's Shopee and TikTok Shop counters also deliver nationwide. All 5 branches are in Selangor; ask on WhatsApp +60 11-1111 9912 to check stock before travelling.
+You can order on this site: tap Buy now on a product, fill in your delivery details and pay online through HitPay, with delivery anywhere in Malaysia for a flat RM 10. The store's Shopee and TikTok Shop counters also deliver nationwide. All 5 branches are in Selangor; ask on WhatsApp +60 11-1111 9912 to check stock before travelling.
 
 ## Do you sell wholesale to restaurants and shops?
 
 Yes — Berkat Madinah Store supplies restaurants, cafés and shops. Terms are quoted on request, on WhatsApp +60 11-1111 9912 or by email at cs@madinah.com.my.
 
-Last updated: 2026-11-12
+Last updated: 2026-11-16

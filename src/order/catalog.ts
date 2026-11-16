@@ -1,6 +1,8 @@
 import { PRODUCTS, priceOf } from '../data/products';
 import type { Size } from '../lib/priceMath';
-import type { Sku } from './cartLite';
+
+/** `${productId}:${size}`, e.g. 'extra-virgin:500' (the pay server's AV sku). */
+export type Sku = string;
 
 /** One orderable product + size. A size with no price set is not orderable. */
 export interface OrderItem {
@@ -27,8 +29,7 @@ export const ORDER_ITEMS: OrderItem[] = PRODUCTS.flatMap((p) =>
     const price = priceOf(p, size);
     const priceSen = price ? amountToSen(price.amount) : null;
     if (!price || priceSen === null || priceSen <= 0) return [];
-    return [{ sku: `${p.id}:${size}`, // same shape as cartLite.makeSku, inlined so the entry does not load cartLite
-       productId: p.id, size, priceSen, display: price.display, i18n: p.i18n }];
+    return [{ sku: `${p.id}:${size}`, productId: p.id, size, priceSen, display: price.display, i18n: p.i18n }];
   })
 );
 
@@ -40,4 +41,13 @@ export function itemsForProduct(productId: string): OrderItem[] {
 
 export function findItem(sku: Sku): OrderItem | undefined {
   return ORDER_ITEMS.find((i) => i.sku === sku);
+}
+
+/**
+ * The size a Buy-now button preselects (BUY-NOW 4a): 500 ml where the product has it, else its
+ * first orderable size. A product page can pass another size.
+ */
+export function defaultItem(productId: string): OrderItem | undefined {
+  const items = itemsForProduct(productId);
+  return items.find((i) => i.size === '500') ?? items[0];
 }

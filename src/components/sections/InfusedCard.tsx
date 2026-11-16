@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Picture } from '../ui/Picture';
 import { cmsText } from '../../cms/editable';
 import { priceOf } from '../../data/products';
-import { AddToCart } from '../../order/AddToCart';
+import { BuyNowButton } from '../../order/BuyNowButton';
 
 /** What a card needs from either INFUSED_PRODUCTS or the catalogue. */
 export interface InfusedCardProduct {
@@ -59,7 +59,7 @@ export function InfusedCard({ product, lang }: { product: InfusedCardProduct; la
           </span>
         </span>
       </Link>
-      <AddToCart productId={product.id} className="px-4 pb-4 sm:px-6 sm:pb-6" />
+      <BuyNowButton productId={product.id} className="px-4 pb-4 sm:px-6 sm:pb-6" />
     </div>
   );
 }

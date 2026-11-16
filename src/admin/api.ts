@@ -398,7 +398,8 @@ export interface AdminOrder {
   email: string | null;
   address: { address?: string; postcode?: string; city?: string; state?: string; note?: string };
   lang: CmsLang;
-  lines: { sku: string; qty: number; unit_sen: number; name: string }[];
+  /** BUY-NOW B3: `pack` lines (Noor Fès packages) have qty 1 and a bottle count; `bottles`/`pack` are absent on older orders. */
+  lines: { sku: string; qty: number; unit_sen: number; name: string; bottles?: number; pack?: boolean }[];
   subtotalSen: number;
   deliverySen: number;
   totalSen: number;

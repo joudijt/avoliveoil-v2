@@ -13,7 +13,7 @@ import { ArticlePage } from './pages/ArticlePage';
 import { WhatsAppButton } from './components/ui/WhatsAppButton';
 import { CanvasRoute, CmsRoute } from './routes/cmsRoutes';
 import { useLandingChrome } from './cms/landingChrome';
-import { OrderRoot } from './order/OrderRoot';
+import { BuyNowRoot } from './order/BuyNowRoot';
 
 // The HitPay return page: its own lazy chunk, nothing of it in the first-render bundle (R13).
 const PaidPage = lazy(() => import('./order/PaidPage'));
@@ -48,7 +48,7 @@ function App() {
       </Routes>
       {!onCanvas && !onLanding && <WhatsAppButton />}
       {/* Cart drawer + checkout. Also on landing pages (their chrome has a cart button), never on the canvas. */}
-      {!onCanvas && <OrderRoot />}
+      {!onCanvas && <BuyNowRoot />}
     </>
   );
 }

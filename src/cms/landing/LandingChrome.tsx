@@ -19,7 +19,6 @@ import { whatsappHref } from '../blocks/cta';
 import { ArrowRightIcon, CMS_ICON_COMPONENTS, WhatsappIcon } from '../blocks/icons';
 import { ui } from '../blocks/strings';
 import { cmsAttr, cmsText } from '../editable';
-import { CartButton } from '../../order/CartButton';
 
 const LANG_LINKS: { code: CmsLang; short: string }[] = [
   { code: 'en', short: 'EN' },
@@ -61,7 +60,6 @@ export function LandingHeader({ lang, slug }: { lang: CmsLang; slug: string }) {
               </a>
             ))}
           </nav>
-          <CartButton dark className={LP_HEADER.cart} />
           <a href={whatsappHref(undefined, lang)} target="_blank" rel="noopener noreferrer" aria-label={label} className={LP_HEADER.wa}>
             <WhatsappIcon className={LP_HEADER.waIcon} />
             <span className={LP_HEADER.waLabel}>{label}</span>

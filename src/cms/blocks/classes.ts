@@ -335,9 +335,11 @@ export const PRODUCTS = {
     'hover:shadow-[0_18px_40px_rgba(46,58,36,0.14)]',
   link: 'flex flex-1 flex-col rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
   /**
-   * Classes of the order button (src/order/AddToCart.tsx, which ships in the entry bundle
-   * and so cannot import this file). `wrap` is read by ProductsBlock; the rest mirror the
-   * literals in AddToCart.tsx — change both together.
+   * Classes of the Buy-now button (src/order/BuyNowButton.tsx, FORGE BUY-NOW; it ships in the entry
+   * bundle and so cannot import this file). `wrap` is read by ProductsBlock; button/size/light/dark
+   * mirror the literals in BuyNowButton.tsx — change both together. `stack`, `note`, `status` are the
+   * ORDER-R1 "Add to cart" extras: kept until every published page has been re-rendered (stored HTML
+   * still carries them), then they can go.
    */
   order: {
     wrap: 'pt-3 sm:pt-4',
@@ -845,7 +847,7 @@ export const LP_HEADER = {
     'transition-colors duration-200 hover:bg-[#3ee07b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:px-5 sm:py-2.5',
   waIcon: 'h-5 w-5 shrink-0',
   waLabel: 'hidden sm:inline',
-  /** Cart button (FORGE ORDER-R1 O-20): dark icon by default, cream while the header is see-through. */
+  /** ORDER-R1 cart button (removed by FORGE BUY-NOW): kept until every published landing page is re-rendered. */
   cart: '[body:has([data-cms-dark-top]):not(:has(:target))_[data-cms-landing-header]:not([data-scrolled])_&]:text-cream',
   /** room for the fixed header when the page does not start with an edge-to-edge hero/band */
   spacer: 'h-16 sm:h-[4.5rem]',

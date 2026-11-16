@@ -5,7 +5,6 @@ import { Modal } from '../ui/Modal';
 import { SHOPEE_URL, TIKTOK_SHOP_URL, MADINAH_URL } from '../../config/site';
 import { buildWhatsAppUrl } from '../../utils/whatsapp';
 import { cmsAttr, cmsText } from '../../cms/editable';
-import { openCart, useCartCount, useOrderUi } from '../../order/bridge';
 
 const inputClass =
   'w-full rounded-lg border border-olive-dark/15 bg-white/70 px-4 py-3 text-sm text-olive-dark placeholder:text-brown/40 focus:border-gold focus:outline-none';
@@ -19,18 +18,13 @@ export function PurchasePath() {
   const { t } = useTranslation();
   const { lang = 'en' } = useParams<{ lang: string }>();
   const navigate = useNavigate();
-  const cartCount = useCartCount();
-  const { hasOrder } = useOrderUi();
   const [activeModal, setActiveModal] = useState<'individual' | 'partner' | null>(null);
 
-  // FORGE ORDER-R1 O-18: close this modal FIRST, then open the cart when it has items
-  // or a saved order waits there (O-7 banner); otherwise go to the products page.
-  // The timeout lets the modal unmount and
-  // release its scroll lock before the cart dialog opens.
+  // FORGE BUY-NOW: there is no cart any more. "Order here" closes this modal and goes to the
+  // products page, where every product has its own Buy now button.
   const orderHere = () => {
     setActiveModal(null);
-    if (cartCount > 0 || hasOrder) setTimeout(openCart, 0);
-    else navigate(`/${lang}/products`);
+    navigate(`/${lang}/products`);
   };
 
   return (

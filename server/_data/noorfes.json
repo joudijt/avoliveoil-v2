@@ -1,10 +1,16 @@
 {
-  "_comment": "Noor Fès (avoliveoil.com/noor-fes, repo E:\noorfes-lp) as the PAY SERVER sees it (FORGE HITPAY §5.1). priceSen must equal SITE.priceRM x 100 in noorfes-lp/src/data/site.ts: scripts/build-prices.mjs fails the build on a mismatch when that repo sits next to this one. The NF page sends sku 'noor-fes:500'; 'NOORFES-500' (site.ts SITE.sku) is accepted as an alias.",
-  "sku": "noor-fes:500",
-  "aliases": ["NOORFES-500", "noor-fes:NOORFES-500"],
-  "priceSen": 14900,
-  "name": {
-    "en": "Noor Fès Organic Premium Extra Virgin 500 ml",
-    "ms": "Noor Fès Extra Virgin Organik Premium 500 ml"
+  "_comment": "Noor Fès (avoliveoil.com/noor-fes, repo E:\noorfes-lp) as the PAY SERVER sees it (FORGE BUY-NOW). Three packages, qty always 1. priceSen of each pack must equal the matching `packages` entry (priceRM x 100) in noorfes-lp/src/data/site.ts: scripts/build-prices.mjs fails the build on any mismatch when that repo sits next to this one. Aliases = the old single-bottle SKUs (kept 30 days from 2026-11-16 for stale tabs; remove after 2026-12-16): they mean pack1, qty 1.",
+  "packs": [
+    { "id": "pack1", "sku": "noor-fes:pack1", "bottles": 1, "priceSen": 14900,
+      "name": { "en": "Noor Fès, 1 bottle (500 ml)", "ms": "Noor Fès, 1 botol (500 ml)" } },
+    { "id": "pack2", "sku": "noor-fes:pack2", "bottles": 2, "priceSen": 24900,
+      "name": { "en": "Noor Fès, 2 bottles (500 ml each)", "ms": "Noor Fès, 2 botol (500 ml setiap satu)" } },
+    { "id": "pack3", "sku": "noor-fes:pack3", "bottles": 3, "priceSen": 34900,
+      "name": { "en": "Noor Fès, 3 bottles (500 ml each)", "ms": "Noor Fès, 3 botol (500 ml setiap satu)" } }
+  ],
+  "aliases": {
+    "noor-fes:500": "noor-fes:pack1",
+    "NOORFES-500": "noor-fes:pack1",
+    "noor-fes:NOORFES-500": "noor-fes:pack1"
   }
 }

@@ -7,7 +7,7 @@ import { PRODUCTS, type Product } from '../../data/products';
 import { Picture } from '../ui/Picture';
 import { isStaticRender } from '../../lib/prerender';
 import { cmsText } from '../../cms/editable';
-import { AddToCart } from '../../order/AddToCart';
+import { BuyNowButton } from '../../order/BuyNowButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,7 +105,7 @@ export function ProductShowcase() {
                   <span className="mt-1 font-body text-sm text-brown-ink">{sizeLine(product)}</span>
                 </Link>
                 {/* mt-auto: buttons of one row line up whatever the name length. */}
-                <AddToCart productId={product.id} className="mt-auto w-full pt-3 sm:pt-4" />
+                <BuyNowButton productId={product.id} className="mt-auto w-full pt-3 sm:pt-4" />
               </div>
             );
           })}

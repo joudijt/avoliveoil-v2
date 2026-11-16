@@ -1,13 +1,14 @@
 // DEV-ONLY: the built site + the real PHP pay server + a LOCAL HitPay stub, for the order walk in
-// --pay=server mode (FORGE HITPAY). Never contacts HitPay; never touches the live site.
+// --pay=server mode (FORGE HITPAY; FORGE BUY-NOW: scripts/dev/buynow-walk.mjs). Never contacts HitPay; never touches the live site.
 //
 //   npm run build:prerender            (dist/ must exist, with dist/api)
 //   node scripts/dev/pay-harness.mjs [--walk] [--port=8093]
 //
 // Starts: the HitPay stub (server/tests/hitpay_stub.php on 127.0.0.1:8092) and `php -S` on dist/
 // with server/tests/router.php (the .htaccess rules emulated), a throw-away CMS data dir, fake
-// HitPay key + salt and a RM 8.00 delivery fee for site "av". With --walk it runs
-// `order-walk.mjs <base> --pay=server --only=hitpay --stub-state=<state>` and stops everything after;
+// HitPay key + salt and the RM 10.00 delivery fee (owner 2026-11-16) for sites "av" and "nf". With --walk it runs
+// `buynow-walk.mjs <base> --pay=server --only=surfaces,sheet,history,form,returning,paid,storage --stub-state=<state>`
+// and stops everything after;
 // without it, it prints the base URL and keeps running until Ctrl+C.
 import { spawn, spawnSync } from 'node:child_process';
 import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
@@ -48,7 +49,8 @@ const seed = spawnSync(
     `define('AVO_CMS', true); require ${JSON.stringify(join(DIST, 'api', '_lib', 'bootstrap.php').replace(/\\/g, '/'))};
      avo_setting_set('hitpay.api_key', avo_pay_encrypt('test-key-not-real'));
      avo_setting_set('hitpay.salt', avo_pay_encrypt('test-salt-not-real-0123456789'));
-     avo_setting_set('hitpay.delivery_sen.av', '800');
+     avo_setting_set('hitpay.delivery_sen.av', '1000');
+     avo_setting_set('hitpay.delivery_sen.nf', '1000');
      avo_setting_set('hitpay.notify_email', 'orders@example.com');
      echo avo_pay_ready('av') ? "ready\\n" : "NOT ready\\n";`,
   ],
@@ -109,11 +111,11 @@ if (WALK) {
   const langs = argv.find((a) => a.startsWith('--lang='))?.slice(7).split(',') ?? ['en', 'ms'];
   let status = 0;
   for (const lang of langs) {
-    // The real limiter allows 10 creates / 10 min per IP; one language run makes 6. Start each language clean.
+    // The real limiter allows 20 creates / 10 min per IP per site; one language run makes 15. Start each language clean.
     spawnSync('php', ['-r', `define('AVO_CMS', true); require ${JSON.stringify(join(DIST, 'api', '_lib', 'bootstrap.php').replace(/\\/g, '/'))}; db_exec('DELETE FROM rate_hits');`], { env });
     const walk = spawnSync(
       process.execPath,
-      [join(ROOT, 'scripts', 'dev', 'order-walk.mjs'), base, '--pay=server', '--only=hitpay', `--lang=${lang}`, `--stub-state=${stubState}`, ...(outArg ? [outArg] : []), ...vpArg],
+      [join(ROOT, 'scripts', 'dev', 'buynow-walk.mjs'), base, '--pay=server', '--only=surfaces,sheet,history,form,returning,paid,storage', `--lang=${lang}`, `--stub-state=${stubState}`, ...(outArg ? [outArg] : []), ...vpArg],
       { stdio: 'inherit', env: process.env }
     );
     status ||= walk.status ?? 1;

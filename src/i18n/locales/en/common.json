@@ -425,7 +425,7 @@
         },
         {
           "q": "Do you deliver across Malaysia?",
-          "a": "Yes. You can order on this site: the order is sent to the shop by WhatsApp, for delivery within Malaysia. You can also buy from Berkat Madinah Store, Shopee or TikTok Shop, which deliver across Malaysia."
+          "a": "Yes. On this site, tap Buy now on a product, fill in your delivery details and pay online. We deliver anywhere in Malaysia for a flat RM 10, shown in your total before you pay. You can also buy from Berkat Madinah Store, Shopee or TikTok Shop, which deliver across Malaysia."
         },
         {
           "q": "Do you ship internationally?",
@@ -433,11 +433,11 @@
         },
         {
           "q": "What payment methods are accepted?",
-          "a": "On this site, payment is confirmed with you in the WhatsApp chat after you send your order. On Shopee, TikTok Shop and Berkat Madinah Store, you pay with the methods each platform offers."
+          "a": "On this site you pay online on the secure HitPay payment page: FPX online banking, Touch 'n Go, GrabPay, ShopeePay, DuitNow, WeChat Pay or a card. On Shopee, TikTok Shop and Berkat Madinah Store, you pay with the methods each platform offers."
         },
         {
           "q": "How long does delivery take?",
-          "a": "For an order placed on this site, delivery is within Malaysia, and the delivery fee and payment are confirmed with you in the WhatsApp chat. On Shopee, TikTok Shop and Berkat Madinah Store, delivery time depends on the platform and your location."
+          "a": "An order placed on this site is delivered within Malaysia for a flat RM 10, and we contact you about delivery once your payment is received. On Shopee, TikTok Shop and Berkat Madinah Store, delivery time depends on the platform and your location."
         },
         {
           "q": "Can I buy in bulk or for my business?",
@@ -809,15 +809,11 @@
     "size250": "250 ml"
   },
   "order": {
-    "add": "Add to cart",
-    "added": "Added",
-    "chooseSize": "Choose a size",
-    "cartLabel": "Cart",
-    "cartCount": "{{count}} in cart",
+    "buyNow": "Buy now",
     "orderHere": "Order here",
-    "orderHereSub": "Order on this site. We confirm delivery and payment with you on WhatsApp.",
-    "cartFull": "Maximum reached for this item"
+    "orderHereSub": "Tap Buy now on any product, fill in your delivery details and pay securely online. Delivery anywhere in Malaysia."
   },
+
   "alt": {
     "logo": "Arabian Village",
     "heroBottle": "Arabian Village Extra Virgin Palestinian Olive Oil bottle",

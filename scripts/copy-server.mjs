@@ -57,7 +57,7 @@ writeFileSync(
 {
   const { table, nfCheck } = await buildPrices();
   writeFileSync(join(dest, '_data', 'prices.json'), JSON.stringify(table, null, 2) + '\n');
-  console.log(`copy-server: _data/prices.json (${Object.keys(table.av).length} AV SKUs, NF ${Object.values(table.nf)[0]} sen; NF price check ${nfCheck})`);
+  console.log(`copy-server: _data/prices.json (${Object.keys(table.av).length} AV SKUs, NF packs ${Object.values(table.nf).join('/')} sen; NF price check ${nfCheck})`);
 }
 
 // Say so when a setup/reset file is going out, so the deploy log shows it.

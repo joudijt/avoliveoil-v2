@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
 import { WHATSAPP_NUMBER } from '../../utils/whatsapp';
 import { cmsAttr } from '../../cms/editable';
-import { useOrderUi } from '../../order/bridge';
+import { useBuyNowOpen } from '../../order/bridge';
 
 /**
  * Fixed bottom-right WhatsApp bubble, present on every page. Physically
@@ -18,10 +18,10 @@ import { useOrderUi } from '../../order/bridge';
  */
 export function WhatsAppButton() {
   const { t } = useTranslation();
-  // Hidden while the cart or the checkout is open (ORDER-R1). The server and first-render
-  // snapshot is "closed", so prerendered HTML and hydration still match.
-  const ui = useOrderUi();
-  if (ui.cartOpen || ui.checkoutOpen) return null;
+  // Hidden while the Buy-now sheet is open (BUY-NOW; it would sit over the Pay button). The server
+  // and first-render snapshot is "closed", so prerendered HTML and hydration still match.
+  const sheetOpen = useBuyNowOpen();
+  if (sheetOpen) return null;
 
   return (
     <a

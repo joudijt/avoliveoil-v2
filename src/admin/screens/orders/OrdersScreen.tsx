@@ -54,11 +54,12 @@ function OrderRow({ o, onChange }: { o: AdminOrder; onChange: (o: AdminOrder) =>
         <ul className="grid gap-0.5">
           {o.lines.map((l) => (
             <li key={l.sku}>
-              {l.name} × {l.qty}
+              {/* a package reads "Noor Fès, 2 bottles (500 ml each)", never "× 1" (BUY-NOW B3) */}
+              {l.pack ? l.name : `${l.name} × ${l.qty}`}
             </li>
           ))}
         </ul>
-        <div className="mt-1 text-xs text-muted">Delivery {rm(o.deliverySen)}</div>
+        <div className="mt-1 text-xs text-muted">Delivery {o.deliverySen === 0 ? 'free' : rm(o.deliverySen)}</div>
       </td>
       <td className="px-4 py-3 text-right text-sm font-semibold whitespace-nowrap text-ink">{rm(o.totalSen)}</td>
       <td className="px-4 py-3 text-sm">

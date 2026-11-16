@@ -3,7 +3,7 @@ import type { ProductsWidget } from '../contracts';
 import { CATALOGUE, catalogueHref, findCatalogueItem, type CatalogueItem } from '../catalogue';
 import { srcSetOf, widestUrl } from '../media';
 import { PRODUCTS as CATALOGUE_PRODUCTS } from '../../data/products';
-import { AddToCart } from '../../order/AddToCart';
+import { BuyNowButton } from '../../order/BuyNowButton';
 import { PRODUCTS } from './classes';
 import { useBlockEnv } from './context';
 import { CanvasEmpty } from './CanvasEmpty';
@@ -18,7 +18,7 @@ import { ui } from './strings';
  *
  * FORGE ORDER-R1 O-15: the card box is the <li>; the link covers photo + text and the
  * order button is its sibling, never inside the anchor. In the canvas the button is
- * inert (O-13). AddToCart reads no `window` while rendering, so the admin's
+ * inert (O-13). BuyNowButton (FORGE BUY-NOW) reads no `window` while rendering, so the admin's
  * renderToStaticMarkup and the public React render give the same markup.
  */
 export function ProductsBlock({ w }: { w: ProductsWidget }) {
@@ -63,7 +63,7 @@ export function ProductsBlock({ w }: { w: ProductsWidget }) {
                 {`${ui(env.lang, 'viewProduct')} →`}
               </span>
             </a>
-            <AddToCart
+            <BuyNowButton
               productId={CATALOGUE_PRODUCTS.find((d) => d.cmsId === p.id)?.id ?? p.id}
               inert={env.mode === 'canvas'}
               className={PRODUCTS.order.wrap}

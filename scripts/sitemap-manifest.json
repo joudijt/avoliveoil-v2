@@ -2,88 +2,88 @@
   "_comment": "Sitemap <lastmod> for pages with no content date. hash = sha1 of the prerendered <main> (scripts/lib/sitemap-shared.mjs mainHash). `node scripts/generate-sitemap.mjs --update-manifest` after `npm run build:prerender` bumps lastmod to today ONLY where the hash changed. Seeded 2026-09-26 by scripts/seed-sitemap-manifest.mjs from git history of each page's content files; excluded commits are listed there and in docs/sitemap-lastmod/REPORT.md.",
   "pages": {
     "/en": {
-      "hash": "b654bd458224a87d1d3009cebba3a594191be53e",
-      "lastmod": "2026-11-12"
+      "hash": "bbaeab4a6ae2518fa0d89933620649711cd52ec3",
+      "lastmod": "2026-11-16"
     },
     "/en/contact": {
       "hash": "50b5ffa66865a7d81828912bb29b68872f9dc462",
       "lastmod": "2026-11-05"
     },
     "/en/products": {
-      "hash": "30417b8e27e13b80f06f7444820e5b7a34b5dcb3",
-      "lastmod": "2026-11-12"
+      "hash": "5848b4b85eddc2be639a0af7dd3e04ae47e662f5",
+      "lastmod": "2026-11-16"
     },
     "/en/products/infused-extra-virgin-olive-oil-blackseed": {
-      "hash": "d524090966e46a62b6e23e3194f3a458db2a76b3",
-      "lastmod": "2026-11-12"
+      "hash": "6fbee9dfdc97ce3a8a3a1f2dbead8fdbcef6b99a",
+      "lastmod": "2026-11-16"
     },
     "/en/products/infused-extra-virgin-olive-oil-fennel-anise": {
-      "hash": "da5fcbe49c1df16b93b3eb84b9f76c897e415b85",
-      "lastmod": "2026-11-12"
+      "hash": "7bdcc8d058269d02f067fcb9c72c2712beb3d0ed",
+      "lastmod": "2026-11-16"
     },
     "/en/products/infused-extra-virgin-olive-oil-lavender-chamomile": {
-      "hash": "978483e65f7e223c82d863e9f30f9ea35e25c692",
-      "lastmod": "2026-11-12"
+      "hash": "4df460f9dcab3cbc77f55f452741484edbf89e44",
+      "lastmod": "2026-11-16"
     },
     "/en/products/infused-extra-virgin-olive-oil-rosemary-basil": {
-      "hash": "8a69d9f75a5d65c15acf3396feb553e24d4c2836",
-      "lastmod": "2026-11-12"
+      "hash": "bdaccbb067a3e78e971107b9cebd8bd72ab65721",
+      "lastmod": "2026-11-16"
     },
     "/en/products/infused-extra-virgin-olive-oil-turmeric-black-pepper": {
-      "hash": "8fe75f45c4fbc64c1485a7b15fa376553b00e6be",
-      "lastmod": "2026-11-12"
+      "hash": "4bc33de2606bd0b80f10ca819e5d37d2eb75f774",
+      "lastmod": "2026-11-16"
     },
     "/en/products/infused-extra-virgin-olive-oil-wild-thyme": {
-      "hash": "599a06db9238f399c9ce24aed8cc91ed8a7a866a",
-      "lastmod": "2026-11-12"
+      "hash": "6b2f0866ed07f340b106c9e28094d02d4289497c",
+      "lastmod": "2026-11-16"
     },
     "/en/shop": {
-      "hash": "fabc7c1ed78fb2482d23af55051e3cd33f4a0fc1",
-      "lastmod": "2026-11-12"
+      "hash": "a0fe8f8dc9aa2543221bf7c50a4a05e7dd46850d",
+      "lastmod": "2026-11-16"
     },
     "/en/why-us": {
       "hash": "0a7d57122997613b10aaf253e00b0550c0a8e78d",
       "lastmod": "2026-11-05"
     },
     "/ms": {
-      "hash": "bcaf44f6b9953e90fb5f57cd1a6bf8e95657c55c",
-      "lastmod": "2026-11-12"
+      "hash": "fa4cf5ea8fd354288edff258aec5f6855e3ccf48",
+      "lastmod": "2026-11-16"
     },
     "/ms/contact": {
       "hash": "34c4a71f6db27bdef693a8774c39698b2bcb9c96",
       "lastmod": "2026-11-05"
     },
     "/ms/products": {
-      "hash": "da147673888c7803299a754ac487d3be6a091ceb",
-      "lastmod": "2026-11-12"
+      "hash": "ed1621a1f0ceeda8150570433f7f473eac40d5d9",
+      "lastmod": "2026-11-16"
     },
     "/ms/products/infused-extra-virgin-olive-oil-blackseed": {
-      "hash": "6dce6dc6147cd085cdd05cd74e4239e46c350389",
-      "lastmod": "2026-11-12"
+      "hash": "bee18bcaeca554156cd7f43ba537cb11e353362a",
+      "lastmod": "2026-11-16"
     },
     "/ms/products/infused-extra-virgin-olive-oil-fennel-anise": {
-      "hash": "f9996455d9c2d3fc5781594b52084bb7d157aab2",
-      "lastmod": "2026-11-12"
+      "hash": "f5c4ac809e76e8a370becc64ca401863e350102c",
+      "lastmod": "2026-11-16"
     },
     "/ms/products/infused-extra-virgin-olive-oil-lavender-chamomile": {
-      "hash": "339b2bb5b96ab929eee5c20309b4298ca58b3cd3",
-      "lastmod": "2026-11-12"
+      "hash": "cba56a73d63eeea94cadfe5467999b8e9b3ab440",
+      "lastmod": "2026-11-16"
     },
     "/ms/products/infused-extra-virgin-olive-oil-rosemary-basil": {
-      "hash": "78d6b6c9622807a0fe88d179e6b611ce93678166",
-      "lastmod": "2026-11-12"
+      "hash": "f02f9119a0c0061f37814785826e89788bd80559",
+      "lastmod": "2026-11-16"
     },
     "/ms/products/infused-extra-virgin-olive-oil-turmeric-black-pepper": {
-      "hash": "7ca133fe59bfc8fce757b96f8a7588991cb9dbf8",
-      "lastmod": "2026-11-12"
+      "hash": "272c01edd3ba2e44ac78477c0cb2590b1f6c284f",
+      "lastmod": "2026-11-16"
     },
     "/ms/products/infused-extra-virgin-olive-oil-wild-thyme": {
-      "hash": "466f944f14838dd4ed46326244a737146930180a",
-      "lastmod": "2026-11-12"
+      "hash": "fd4ca07ee0f147e9b8817b39614b92fe0fb70ef6",
+      "lastmod": "2026-11-16"
     },
     "/ms/shop": {
-      "hash": "ff12c8a34bec19afbe90c832da7dcc6695fe80a6",
-      "lastmod": "2026-11-12"
+      "hash": "e57a5ac06aa7435cc2464deadce9d3d47386362b",
+      "lastmod": "2026-11-16"
     },
     "/ms/why-us": {
       "hash": "3dab528e9512102aea0acf421dbd8ce2d0beadb4",

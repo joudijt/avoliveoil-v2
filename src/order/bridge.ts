@@ -1,16 +1,13 @@
 /**
- * The ONLY order state module the entry bundle imports statically (FORGE ORDER-R1, O-1).
- * The real store (store.ts + cartLite.ts + config.ts) loads right after first render through
- * `loadStore()`; until then, and on the server, this mirror says: count 0, everything closed,
- * no saved order (O-12, O-14). Types from the store are imported as types only.
+ * The ONLY ordering state the entry bundle holds (FORGE BUY-NOW; was the ORDER-R1 cart mirror).
+ * Which product the Buy-now sheet shows, whether it is open, and the loader of the sheet chunk.
+ * The sheet itself (BuyNowSheet.tsx: form, pay server calls, strings) is a lazy chunk: it is
+ * fetched on the first pointerenter / touchstart / focus of any Buy-now button (preloadBuyNow)
+ * and at the latest on the tap. Nothing here reads storage while rendering.
  */
 import { useSyncExternalStore } from 'react';
 import { isCmsStatic } from '../cms/boot';
 import { isPrerender } from '../lib/prerender';
-import type { AddResult, Sku } from './cartLite';
-import type { OrderUi } from './store';
-
-type Store = typeof import('./store');
 
 /** False in prerender, on /cms-canvas, in CMS edit mode and without `window` (O-13). */
 export function orderEnabled(): boolean {
@@ -19,11 +16,20 @@ export function orderEnabled(): boolean {
   );
 }
 
-const CLOSED: OrderUi = { cartOpen: false, checkoutOpen: false, hasOrder: false };
-let count = 0;
-let ui: OrderUi = CLOSED;
-/** The store or the dialog chunk could not be loaded: OrderRoot shows the notice. */
+export interface BuyNowTarget {
+  productId: string;
+  /** Preselected size ('250' | '500'); undefined = the product's default. */
+  size?: string;
+  /** Preselected quantity (the paid page's "Try again"); default 1. */
+  qty?: number;
+  /** Bumped on every open: the sheet starts fresh (new config fetch) each time. */
+  openId: number;
+}
+
+let target: BuyNowTarget | null = null;
+/** The sheet chunk could not be loaded: BuyNowRoot shows the notice. */
 let loadFailed = false;
+let openSeq = 0;
 const listeners = new Set<() => void>();
 const emit = (): void => listeners.forEach((l) => l());
 
@@ -34,21 +40,18 @@ function subscribe(listener: () => void): () => void {
   };
 }
 
-/** Total quantity in the cart; 0 on the server and until the store has loaded (O-14). */
-export function useCartCount(): number {
+/** The open sheet's target, or null. Always null on the server and on first render. */
+export function useBuyNow(): BuyNowTarget | null {
   return useSyncExternalStore(
     subscribe,
-    () => count,
-    () => 0
+    () => target,
+    () => null
   );
 }
 
-export function useOrderUi(): OrderUi {
-  return useSyncExternalStore(
-    subscribe,
-    () => ui,
-    () => CLOSED
-  );
+/** True while the sheet is open (the WhatsApp bubble hides). */
+export function useBuyNowOpen(): boolean {
+  return useBuyNow() !== null;
 }
 
 export function useLoadFailed(): boolean {
@@ -65,51 +68,56 @@ export function setLoadFailed(failed: boolean): void {
   emit();
 }
 
-let pending: Promise<Store> | null = null;
+type SheetModule = typeof import('./BuyNowSheet');
+let sheet: Promise<SheetModule> | null = null;
 
-/**
- * Loads the real store once and mirrors its count and ui here. A failed load is forgotten,
- * so a later call tries again; the promise of the failed call still rejects.
- */
-export function loadStore(): Promise<Store> {
-  if (pending) return pending;
-  const p = import('./store').then((m) => {
-    const sync = (): void => {
-      const nextCount = m.getCount();
-      const nextUi = m.getUi();
-      if (nextCount === count && nextUi === ui) return;
-      count = nextCount;
-      ui = nextUi;
-      emit();
-    };
-    m.subscribe(sync);
-    sync();
-    return m;
-  });
-  pending = p;
+/** Fetches the sheet chunk once. A failed load is forgotten, so the next call tries again. */
+export function loadSheet(): Promise<SheetModule> {
+  if (sheet) return sheet;
+  const p = import('./BuyNowSheet');
+  sheet = p;
   p.catch(() => {
-    if (pending === p) pending = null;
+    if (sheet === p) sheet = null;
   });
   return p;
 }
 
-/** Opens the cart drawer. A store that cannot be loaded shows the load-error notice. */
-export function openCart(): void {
-  if (!orderEnabled()) return;
-  loadStore().then(
-    (m) => m.orderActions.openCart(),
-    () => setLoadFailed(true)
-  );
+/** pointerenter / touchstart / focus of a Buy-now button: start the chunk download (M7). */
+export function preloadBuyNow(): void {
+  if (orderEnabled()) loadSheet().catch(() => {});
 }
 
-/** Adds to the cart. 'invalid' when ordering is off or the store could not be loaded (notice shown). */
-export function addToCart(sku: Sku, qty = 1): Promise<AddResult> {
-  if (!orderEnabled()) return Promise.resolve('invalid');
-  return loadStore().then(
-    (m) => m.orderActions.add(sku, qty),
-    (): AddResult => {
-      setLoadFailed(true);
-      return 'invalid';
+/** Opens the Buy-now sheet for one product (and optional size / quantity). */
+export function openBuyNow(productId: string, size?: string, qty?: number): void {
+  if (!orderEnabled()) return;
+  setLoadFailed(false);
+  openSeq += 1;
+  target = { productId, size, qty, openId: openSeq };
+  emit();
+}
+
+export function closeBuyNow(): void {
+  if (!target) return;
+  target = null;
+  emit();
+}
+
+/**
+ * BUY-NOW B5: the cart is gone. Its key, the ORDER-R1 order snapshot (name, phone and address in
+ * plain text) and the v1 details (old address shape, not migrated) are deleted once per page load.
+ * Inlined key names: the entry bundle must not import config.ts.
+ */
+export function deleteOldOrderKeys(): void {
+  for (const k of ['avo.cart.v1', 'avo.order.v1', 'avo.details.v1']) {
+    try {
+      window.localStorage.removeItem(k);
+    } catch {
+      /* storage blocked: nothing stored either */
     }
-  );
+  }
+  try {
+    window.sessionStorage.removeItem('avo.cartOpened');
+  } catch {
+    /* ignored */
+  }
 }
