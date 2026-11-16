@@ -63,3 +63,19 @@ Front (cart removed, every consumer from ruling B1):
 - East Malaysia (Sabah, Sarawak, Labuan) pays the same RM 10 (owner: "all Malaysia"), no code change.
 - `public/about.md`, `public/pricing.md` change only by the generator's date line.
 - Mobile Safari / real phones not walked (puppeteer only). The live HitPay page itself is untested (stub only).
+
+## Review fixes (review of 639a248) — supersedes the matching lines above
+
+1. **30-day window enforced:** aliases (`noor-fes:500`, `NOORFES-500`, `noor-fes:NOORFES-500`) and the old address shape (lines + `city`) are honoured only while `now < 2026-12-17 00:00 Asia/Kuala_Lumpur` (`AVO_PAY_LEGACY_UNTIL`). After it: an alias = 422 `unknown_sku`; a body with `city` = 422 `invalid`, `fields.city = "stale"` (never silently dropped). Setting `hitpay.legacy_until` (unix seconds) overrides the date (end early / tests).
+2. **Rate limit counts NEW orders only** (idem reuse and refused bodies are free): per IP (/64) 20 / 10 min per site (`pay.create.av|nf`) AND 30 / 10 min across both sites (`pay.create`). Checked right before the order INSERT.
+3. **Supersede:** a NEW order looks for older `pending` orders (no review flag) of the same site + phone younger than 60 min. Each of their pending requests is GET-verified first (`avo_pay_settle`): completed = settled as paid and kept; still pending (or 404 at HitPay) = `DELETE /payment-requests/{id}` (404 ignored), request `canceled` note `superseded by <ref>`, order `failed` with `orders.note = "superseded by <ref>"` (migration **#5** `orders.note`, shown in the admin list). A DELETE HitPay refuses (5xx/network) leaves that order pending (settled normally later). HitPay is never called inside `db_tx`. Stub: `DELETE` route + `failNextDelete`.
+4. Sheet pushes its history entry only for a sellable product; `BuyNowRoot` strips a `buyNow` flag on any popstate that lands on it without an open sheet (Forward).
+5. Config fetch failure (network / non-200) is its own state (`data-state="error"`): "Can't load payment right now…" + **Try again** (refetch) + the WhatsApp link with product + size + qty. Only a server answer `ready:false` is "closed".
+6. Sheet dismissed while `create` runs: the draft still gets ref/token, but no redirect and no state updates.
+7. Total mismatch also refetches `/api/pay/config`; the server-total override is dropped once the fresh fee explains it.
+8. Backdrop closes only when the press starts AND ends on the backdrop (no close on a text-selection drag out of a field).
+9. Address lines join with ONE space (a line break = 1 character, as the textarea counts), so the 300 cap is the same in the field, `core.ts` and the server.
+
+NF contract additions: `fields.city = "stale"` after 2026-12-17; aliases stop then; NEW-order limits 20/site + 30 total; an older pending NF order of the same phone (< 60 min) is cancelled at HitPay when the buyer submits a changed order.
+
+Re-run: `php server/tests/run.php` **87/87** (+ window, supersede: verify-then-delete / paid kept / delete refused / 404 gone / other buyer untouched; rate test rewritten to NEW orders + global cap; default test phones unique per order). `node --test scripts/order.test.mjs` **35/35**. `npm run build:prerender` green, `tsc` clean, `check:cms` OK (first-render JS 211.6 KB, unchanged), `check:hydration` clean, `check:sitemap` green. `buynow-walk` (mock, en+ms × 3 viewports, new `review` section: config error + Retry, backdrop drag, Forward, close during create, mismatch refetch) **490 pass / 0 fail / 4 not measured** (backdrop drag has no backdrop on full-screen phones). `pay-harness --walk` (real PHP + stub) **354 pass / 0 fail**. Screenshot checked: config-error state (MS, 390).

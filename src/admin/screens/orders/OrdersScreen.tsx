@@ -49,6 +49,7 @@ function OrderRow({ o, onChange }: { o: AdminOrder; onChange: (o: AdminOrder) =>
           {[o.address.address, `${o.address.postcode ?? ''} ${o.address.city ?? ''}`.trim(), o.address.state].filter(Boolean).join('\n')}
         </div>
         {o.address.note && <div className="mt-1 max-w-[260px] text-xs text-muted italic">Note: {o.address.note}</div>}
+        {o.note && <div className="mt-1 max-w-[260px] text-xs text-muted">{o.note}</div>}
       </td>
       <td className="px-4 py-3 text-sm">
         <ul className="grid gap-0.5">

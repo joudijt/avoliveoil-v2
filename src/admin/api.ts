@@ -405,6 +405,8 @@ export interface AdminOrder {
   totalSen: number;
   paymentType: string | null;
   notified: boolean;
+  /** Why the server closed the order, e.g. "superseded by AV-…" (BUY-NOW review 3). */
+  note?: string | null;
   requests: AdminPayRequest[];
 }
 export interface AdminOrderList {

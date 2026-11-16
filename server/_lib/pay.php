@@ -22,8 +22,14 @@ const AVO_PAY_SITES = ['av', 'nf'];
 const AVO_PAY_PREFIX = ['av' => 'AV', 'nf' => 'NF'];
 const AVO_PAY_MAX_QTY = 24;
 const AVO_PAY_MAX_LINES = 1; // BUY-NOW: one product per order
-/** create calls per IP (/64) per site per 10 min (BUY-NOW rulings). */
+/** NEW orders per IP (/64) per site per 10 min (BUY-NOW rulings); idem reuse does not count. */
 const AVO_PAY_CREATE_LIMIT = 20;
+/** NEW orders per IP (/64) across both sites per 10 min (BUY-NOW review 2). */
+const AVO_PAY_CREATE_LIMIT_ALL = 30;
+/** Old Noor Fès SKUs and the old address shape are accepted until this moment (BUY-NOW B4, 30 days). */
+const AVO_PAY_LEGACY_UNTIL = '2026-12-17 00:00 Asia/Kuala_Lumpur';
+/** An older pending order of the same buyer (site + phone) younger than this is superseded by a new one. */
+const AVO_PAY_SUPERSEDE_SECONDS = 60 * 60;
 const AVO_PAY_MIN_SEN = 30;
 const AVO_PAY_REF_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 /** A pending request younger than this with the same amount is handed out again (R17). */
@@ -126,9 +132,20 @@ function avo_pay_prices(): array
 function avo_pay_price(string $site, string $sku): ?array
 {
     $p = avo_pay_prices();
-    $sku = (string) ($p['aliases'][$site][$sku] ?? $sku);
+    if (avo_pay_legacy_open()) $sku = (string) ($p['aliases'][$site][$sku] ?? $sku);
     $sen = $p[$site][$sku] ?? null;
     return is_int($sen) && $sen > 0 ? ['sku' => $sku, 'sen' => $sen] : null;
+}
+
+/**
+ * True while the 30-day legacy window is open (old NF SKUs, old address shape). The setting
+ * `hitpay.legacy_until` (unix seconds) overrides the date: the integrator can end it early, tests use it.
+ */
+function avo_pay_legacy_open(): bool
+{
+    $set = avo_setting('hitpay.legacy_until');
+    $until = ($set !== null && preg_match('/^\d{1,12}$/', $set)) ? (int) $set : (int) strtotime(AVO_PAY_LEGACY_UNTIL);
+    return avo_now() < $until;
 }
 
 function avo_pay_ready(string $site): bool
@@ -272,7 +289,9 @@ function avo_pay_validate_details(mixed $raw): array
     // address before the length check, so nothing is silently dropped.
     $rawAddress = avo_pay_clean($raw['address'] ?? '', true);
     $oldCity = avo_pay_clean($raw['city'] ?? '');
-    if (!avo_pay_blank($oldCity)) {
+    if (!avo_pay_blank($oldCity) && !avo_pay_legacy_open()) {
+        $e['city'] = 'stale'; // the window is over: an old page must be reloaded, never a silent drop
+    } elseif (!avo_pay_blank($oldCity)) {
         $parts = array_values(array_filter(array_map('trim', preg_split('/\n+/', $rawAddress) ?: []), fn ($x) => $x !== ''));
         $parts[] = $oldCity;
         $rawAddress = implode(', ', $parts);
@@ -315,6 +334,7 @@ function avo_pay_redirect_url(string $site, string $lang, string $ref, string $t
 
 /* ---------------------------------------------------------------- HitPay HTTP */
 
+/** getCode() = the HTTP status HitPay answered (0 = not reached). */
 final class AvoPayError extends RuntimeException
 {
 }
@@ -366,7 +386,7 @@ function avo_hitpay_call(string $method, string $path, array $form = [], int $ti
     $data = json_decode($text, true);
     if ($status < 200 || $status >= 300 || !is_array($data)) {
         avo_log('error', 'hitpay ' . $method . ' ' . preg_replace('~/[0-9a-f-]{20,}~i', '/{id}', $path) . ' -> ' . $status, ['body' => mb_substr($text, 0, 300)]);
-        throw new AvoPayError('HitPay answered ' . $status);
+        throw new AvoPayError('HitPay answered ' . $status, $status);
     }
     return $data;
 }
@@ -599,14 +619,63 @@ function avo_pay_config_route(): array
     return ['site' => $site, 'ready' => $ready, 'delivery_sen' => $ready ? avo_pay_delivery_sen($site) : null, 'currency' => 'MYR'];
 }
 
+/**
+ * Review 3: the buyer changed the order (size, qty, details) after an earlier one was sent to HitPay.
+ * Older PENDING orders of the same site + phone, younger than 60 min, are checked with HitPay first:
+ * a completed one is settled as paid (and kept); otherwise each of its pending HitPay requests is
+ * DELETEd (404 = already gone) and the order is marked failed, note "superseded by <ref>", so the old
+ * payment page cannot be paid any more. HitPay is never called inside db_tx. Errors never block the
+ * new order: a request HitPay could not delete stays pending (and is settled normally if paid).
+ */
+function avo_pay_supersede(array $new): void
+{
+    $old = db_all("SELECT ref FROM orders WHERE site = ? AND phone = ? AND status = 'pending' AND review_at IS NULL AND ref <> ? AND created_at > ?
+        ORDER BY id LIMIT 5", [$new['site'], $new['phone'], $new['ref'], avo_now() - AVO_PAY_SUPERSEDE_SECONDS]);
+    foreach ($old as $o) {
+        $ref = (string) $o['ref'];
+        $reqs = db_all("SELECT request_id FROM pay_requests WHERE order_ref = ? AND status = 'pending' ORDER BY id", [$ref]);
+        $closedAll = true;
+        foreach ($reqs as $r) {
+            $rid = (string) $r['request_id'];
+            try {
+                $st = avo_pay_settle($rid, 8); // GET-verify first: a paid request is settled, never cancelled
+            } catch (AvoPayError $e) {
+                if ($e->getCode() !== 404) {
+                    $closedAll = false;
+                    continue;
+                }
+                $st = 'pending'; // HitPay no longer knows it: nothing can be paid there, close it below
+            }
+            if ($st !== 'pending') {
+                if (in_array($st, ['completed', 'needs_review', 'double_paid'], true)) $closedAll = false;
+                continue;
+            }
+            try {
+                avo_hitpay_call('DELETE', '/payment-requests/' . rawurlencode($rid), [], 8);
+            } catch (AvoPayError $e) {
+                if ($e->getCode() !== 404) {
+                    $closedAll = false;
+                    avo_log('warn', 'hitpay delete failed', ['ref' => $ref, 'status' => $e->getCode()]);
+                    continue;
+                }
+            }
+            db_exec("UPDATE pay_requests SET status = 'canceled', note = ? WHERE request_id = ? AND status = 'pending'", ['superseded by ' . $new['ref'], $rid]);
+        }
+        $fresh = db_one('SELECT status, review_at FROM orders WHERE ref = ?', [$ref]);
+        if ($closedAll && $fresh && $fresh['status'] === 'pending' && $fresh['review_at'] === null
+            && (int) db_val("SELECT COUNT(*) FROM pay_requests WHERE order_ref = ? AND status = 'pending'", [$ref]) === 0) {
+            db_exec("UPDATE orders SET status = 'failed', note = ? WHERE ref = ? AND status = 'pending'", ['superseded by ' . $new['ref'], $ref]);
+            avo_log('info', 'order superseded', ['ref' => $ref, 'by' => $new['ref']]);
+        }
+    }
+}
+
 /** POST /api/pay/create (JSON) — see docs/forge/HITPAY-AV-HANDOFF.md for the exact contract. */
 function avo_pay_create_route(): array
 {
     $body = avo_json_body();
     $site = (string) ($body['site'] ?? '');
     if (!in_array($site, AVO_PAY_SITES, true)) avo_fail(422, 'invalid', 'Unknown site.', ['site' => 'invalid']);
-    // BUY-NOW: one bucket per site (an AV ad burst must not lock NF buyers out), 20 per 10 min per IP (/64)
-    avo_rate_hit('pay.create.' . $site, AVO_PAY_CREATE_LIMIT, 600);
     $lang = (string) ($body['lang'] ?? '');
     if (!in_array($lang, AVO_LANGS, true)) avo_fail(422, 'invalid', 'Unknown language.', ['lang' => 'invalid']);
     if (isset($body['hp']) && $body['hp'] !== '') avo_fail(422, 'invalid', 'The order could not be sent.');
@@ -672,6 +741,10 @@ function avo_pay_create_route(): array
             [$order['ref'], (int) $order['total_sen'], avo_now() - AVO_PAY_REUSE_SECONDS]);
         if ($reuse) return ['ref' => $order['ref'], 'token' => $order['status_token'], 'url' => $reuse['url'], 'status' => 'pending', 'total_sen' => (int) $order['total_sen']];
     } else {
+        // Review 2: only a NEW order counts against the limits (a double tap or a Back from HitPay
+        // reuses its order above). Per site 20 / 10 min, both sites together 30 / 10 min, per IP (/64).
+        avo_rate_hit('pay.create.' . $site, AVO_PAY_CREATE_LIMIT, 600);
+        avo_rate_hit('pay.create', AVO_PAY_CREATE_LIMIT_ALL, 600);
         $token = avo_hex_token(16);
         $order = null;
         for ($try = 0; $try < 6 && !$order; $try++) {
@@ -691,6 +764,7 @@ function avo_pay_create_route(): array
             }
         }
         if (!$order) avo_fail(500, 'server_error', 'The order could not be saved. Please try again.');
+        avo_pay_supersede($order);
     }
 
     $ref = (string) $order['ref'];
@@ -856,7 +930,7 @@ function avo_admin_order_out(array $o): array
         'name' => $o['name'], 'phone' => '+' . $o['phone'], 'email' => $o['email'], 'address' => $addr, 'lang' => $o['lang'],
         'lines' => json_decode((string) $o['lines_json'], true) ?: [], 'subtotalSen' => (int) $o['subtotal_sen'],
         'deliverySen' => (int) $o['delivery_sen'], 'totalSen' => (int) $o['total_sen'], 'paymentType' => $o['payment_type'],
-        'notified' => $o['notified_at'] !== null,
+        'notified' => $o['notified_at'] !== null, 'note' => $o['note'] ?? null,
         'requests' => array_map(fn ($r) => [
             'id' => $r['request_id'], 'amountSen' => (int) $r['amount_sen'], 'status' => $r['status'], 'paymentType' => $r['payment_type'],
             'createdAt' => avo_iso((int) $r['created_at']), 'checkedAt' => $r['checked_at'] !== null ? avo_iso((int) $r['checked_at']) : null, 'note' => $r['note'],

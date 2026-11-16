@@ -52,4 +52,13 @@ if ($method === 'GET' && preg_match('~^/v1/payment-requests/([0-9a-f-]+)$~', $pa
     if (!$req) return $out(404, ['message' => 'Not found']);
     return $out(200, array_diff_key($req, ['_form' => 1]));
 }
+if ($method === 'DELETE' && preg_match('~^/v1/payment-requests/([0-9a-f-]+)$~', $path, $m)) {
+    if (!empty($state['failNextDelete'])) {
+        $state['failNextDelete'] = false;
+        return $out(500, ['message' => 'stub delete failure']);
+    }
+    if (!isset($state['requests'][$m[1]])) return $out(404, ['message' => 'Not found']);
+    $state['requests'][$m[1]]['status'] = 'deleted';
+    return $out(200, ['message' => 'deleted']);
+}
 return $out(404, ['message' => 'stub: no route']);

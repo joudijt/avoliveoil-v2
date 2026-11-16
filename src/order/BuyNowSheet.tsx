@@ -172,6 +172,11 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
   /** A total the server answered for this sku+qty that differs from the computed one (M1). */
   const [confirmed, setConfirmed] = useState<{ k: string; total: number } | null>(null);
   const remember = useRef(true);
+  /** The sheet was dismissed (unmounted) while `create` ran: no redirect, no state updates (review 6). */
+  const dismissed = useRef(false);
+  /** The press STARTED on the backdrop: a text selection dragged out of the sheet must not close it (review 8). */
+  const downOnBackdrop = useRef(false);
+  const sellable = !!product && !!item;
 
   /* ----- closing + history (M6) ----- */
 
@@ -182,7 +187,12 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
   }, []);
   const { fallback } = useModalDialog(ref, requestClose);
 
+  useEffect(() => () => {
+    dismissed.current = true;
+  }, []);
+
   useEffect(() => {
+    if (!sellable) return; // review 4: no history entry for a sheet that closes at once
     const st = (window.history.state ?? {}) as Record<string, unknown>;
     if (!st.buyNow) window.history.pushState({ ...st, buyNow: true }, '');
     const onPop = (): void => {
@@ -191,13 +201,15 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, []);
+  }, [sellable]);
 
   /* ----- pay config, fresh on every open (M1/M2) ----- */
 
   const loadCfg = useCallback((): void => {
     setCfg('loading');
-    void fetchPayConfig(ORDER_CONFIG.paySite).then(setCfg);
+    void fetchPayConfig(ORDER_CONFIG.paySite).then((c) => {
+      if (!dismissed.current) setCfg(c);
+    });
   }, []);
   useEffect(() => {
     let live = true;
@@ -227,10 +239,18 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
   /* ----- derived ----- */
 
   const open = cfg !== 'loading' && cfg.ready;
-  const closed = cfg !== 'loading' && !cfg.ready;
+  /** Review 5: the config could not be loaded (network / server error) is NOT "payment closed". */
+  const failed = cfg !== 'loading' && !cfg.ready && cfg.failed === true;
+  const closed = cfg !== 'loading' && !cfg.ready && !failed;
   const priceKey = `${sku}:${qty}`;
   const totals = useMemo(() => (item && open ? computeTotals(item.priceSen, qty, cfg.deliverySen) : null), [item, open, qty, cfg]);
   const shownTotal = totals ? (confirmed && confirmed.k === priceKey ? confirmed.total : totals.totalSen) : null;
+  // Review 7: after a fresh config, a server total that the new fee now explains is no longer an override.
+  useEffect(() => {
+    if (cfg === 'loading' || !cfg.ready || !item) return;
+    setConfirmed((c) => (c && c.total === item.priceSen * Number(c.k.split(':').pop()) + (cfg.deliverySen ?? 0) ? null : c));
+  }, [cfg, item]);
+
   const enquiryHref = useMemo(() => {
     if (!item) return plainChatUrl(ORDER_CONFIG.whatsapp, false);
     const msg = buildEnquiryMessage({ label: lineLabel(lang, item), qty }, MESSAGE_LABELS[lang]);
@@ -298,8 +318,10 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
     setPaying(true);
     setPayError('');
     const res = await createPayment({ site: ORDER_CONFIG.paySite, lang, idem: draft.idem, sku: item.sku, qty, details: result.details });
+    if (res.ok && isRef(res.ref, ORDER_CONFIG.refPrefix)) saveDraft({ ...draft, ref: res.ref, token: res.token });
+    // Review 6: closed while waiting: the buyer left the sheet, never send them off to pay.
+    if (dismissed.current) return;
     if (res.ok && isRef(res.ref, ORDER_CONFIG.refPrefix)) {
-      saveDraft({ ...draft, ref: res.ref, token: res.token });
       if (res.status === 'paid') {
         window.location.assign(`/${lang}/order/paid?ref=${encodeURIComponent(res.ref)}&t=${res.token}`);
         return;
@@ -309,6 +331,7 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
         setConfirmed({ k: priceKey, total: res.totalSen });
         setPayError(fill(s.online.priceChanged, { total: formatRM(res.totalSen) }));
         setPaying(false);
+        loadCfg(); // review 7: the fee may have changed in the panel
         return;
       }
       // R10: the customer only ever leaves for exactly https://checkout.hit-pay.com.
@@ -363,7 +386,7 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
       data-buynow=""
       data-order-dialog=""
       data-lenis-prevent=""
-      data-state={cfg === 'loading' ? 'loading' : cfg.ready ? 'open' : 'closed'}
+      data-state={cfg === 'loading' ? 'loading' : cfg.ready ? 'open' : failed ? 'error' : 'closed'}
       data-product={item.productId}
       aria-label={s.sheet.title}
       onCancel={(e) => {
@@ -374,8 +397,13 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
       onClose={() => {
         if (!ref.current?.open) closeBuyNow();
       }}
+      onPointerDown={(e) => {
+        downOnBackdrop.current = e.target === ref.current;
+      }}
       onClick={(e) => {
-        if (e.target === ref.current) requestClose(); // a tap on the backdrop
+        // a tap on the backdrop: the press must start AND end there (review 8)
+        if (downOnBackdrop.current && e.target === ref.current) requestClose();
+        downOnBackdrop.current = false;
       }}
       className={`fixed inset-0 m-auto h-dvh max-h-none w-full max-w-none flex-col overflow-hidden bg-bg p-0 text-base text-olive-dark shadow-2xl backdrop:bg-olive-dark/60 open:flex md:h-[min(820px,calc(100dvh-48px))] md:w-[min(560px,calc(100vw-48px))] md:rounded-2xl ${
         fallback ? 'z-[70]' : ''
@@ -470,7 +498,17 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
             </div>
           </div>
 
-          {closed ? (
+          {failed ? (
+            <div data-testid="pay-config-error" role="alert" className="grid gap-3 rounded-2xl border border-red-700/40 bg-cream p-4">
+              <p className="font-semibold">{s.online.loadFailed}</p>
+              <button type="button" data-testid="pay-config-retry" onClick={loadCfg} className={BTN_GOLD}>
+                {s.online.retry}
+              </button>
+              <a data-testid="closed-whatsapp" href={enquiryHref} target="_blank" rel="noopener" className={`${LINK} justify-self-center`}>
+                {s.online.notReadyAction}
+              </a>
+            </div>
+          ) : closed ? (
             <div data-testid="pay-closed" className="grid gap-3 rounded-2xl border border-gold-ink/50 bg-cream p-4">
               <p className="font-semibold">{s.online.notReady}</p>
               <a data-testid="closed-whatsapp" href={enquiryHref} target="_blank" rel="noopener" className={BTN_WA}>
@@ -616,7 +654,7 @@ export default function BuyNowSheet({ target }: { target: BuyNowTarget }) {
         </div>
       </div>
 
-      {!closed && (
+      {!closed && !failed && (
         <div className={foot}>
           <p
             ref={summaryRef}

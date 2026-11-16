@@ -96,6 +96,11 @@ export function openBuyNow(productId: string, size?: string, qty?: number): void
   emit();
 }
 
+/** Outside React: is a sheet open right now. */
+export function isBuyNowOpen(): boolean {
+  return target !== null;
+}
+
 export function closeBuyNow(): void {
   if (!target) return;
   target = null;

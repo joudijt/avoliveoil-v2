@@ -8,7 +8,7 @@
  */
 import { useEffect, useState, type ComponentType } from 'react';
 import { useTranslation } from 'react-i18next';
-import { closeBuyNow, deleteOldOrderKeys, loadSheet, orderEnabled, setLoadFailed, useBuyNow, useLoadFailed, type BuyNowTarget } from './bridge';
+import { closeBuyNow, deleteOldOrderKeys, isBuyNowOpen, loadSheet, orderEnabled, setLoadFailed, useBuyNow, useLoadFailed, type BuyNowTarget } from './bridge';
 
 // The only strings of the buying flow that ship in the entry bundle (the rest is in the chunk).
 const TEXT = {
@@ -30,11 +30,17 @@ export function BuyNowRoot() {
     if (!orderEnabled()) return;
     deleteOldOrderKeys();
     // M6: a reload (or a return without bfcache) on the sheet's history entry must not reopen it.
-    const st = window.history.state as Record<string, unknown> | null;
-    if (st && st.buyNow) {
-      const { buyNow: _flag, ...rest } = st;
-      window.history.replaceState(rest, '');
-    }
+    const strip = (): void => {
+      const st = window.history.state as Record<string, unknown> | null;
+      if (st && st.buyNow && !isBuyNowOpen()) {
+        const { buyNow: _flag, ...rest } = st;
+        window.history.replaceState(rest, '');
+      }
+    };
+    strip();
+    // Review 4: Forward onto the sheet's (closed) entry must not leave a flagged entry with no sheet.
+    window.addEventListener('popstate', strip);
+    return () => window.removeEventListener('popstate', strip);
   }, []);
 
   useEffect(() => {

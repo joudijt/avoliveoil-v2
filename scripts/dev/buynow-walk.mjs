@@ -10,7 +10,7 @@
 //   HitPay is NEVER contacted: any request to *.hit-pay.com is answered here with a stub page and recorded
 //   (the walk "stops at the HitPay redirect"). WhatsApp is never opened (requests aborted, clicks prevented).
 //
-//   --only     surfaces,sheet,history,form,returning,fees,mismatch,paid,storage
+//   --only     surfaces,sheet,history,form,returning,fees,mismatch,review,paid,storage
 //
 // Each check prints PASS / FAIL / NOT MEASURED. Exit code 1 on any FAIL. Last line: `walk: N pass, M fail, K not measured`.
 // Elements are selected by data-testid only. Only obviously fake test data is typed (never sent anywhere real).
@@ -42,7 +42,7 @@ mkdirSync(OUT, { recursive: true });
 const ORIGIN = new URL(BASE).origin;
 const PAY = flag('pay') ?? 'mock';
 const STUB_STATE = flag('stub-state') ? resolve(flag('stub-state')) : null;
-const SECTION_NAMES = ['surfaces', 'sheet', 'history', 'form', 'returning', 'fees', 'mismatch', 'paid', 'storage'];
+const SECTION_NAMES = ['surfaces', 'sheet', 'history', 'form', 'returning', 'fees', 'mismatch', 'review', 'paid', 'storage'];
 const onlySet = new Set((flag('only') ?? '').split(',').map((s) => s.trim()).filter(Boolean));
 for (const s of onlySet) if (!SECTION_NAMES.includes(s)) (console.error(`unknown section ${s}`), process.exit(2));
 const LANGS = ['en', 'ms'].filter((l) => !flag('lang') || flag('lang') === l);
@@ -112,10 +112,12 @@ async function payMock(c, req, u) {
   const P = c.pay;
   if (u.pathname === '/api/pay/config') {
     P.configCalls += 1;
+    if (P.configFail) return json(req, 500, { error: { code: 'server_error', message: 'mock' } });
     const open = P.fee !== null;
     return json(req, 200, { site: 'av', ready: open, delivery_sen: open ? P.fee : null, currency: 'MYR' });
   }
   if (u.pathname === '/api/pay/create' && req.method() === 'POST') {
+    if (P.createDelay) await sleep(P.createDelay);
     let body = null;
     try {
       body = JSON.parse(req.postData() ?? 'null');
@@ -168,7 +170,7 @@ async function makeCtx(browser, section, lang, vp) {
     section, lang, vp, page, context, errors: [],
     check: (cond, name, detail) => record(cond ? 'PASS' : 'FAIL', `${prefix} ${name}`, cond ? '' : detail),
     nm: (name, why) => record('NOT MEASURED', `${prefix} ${name}`, why),
-    pay: { fee: FEE, serverFee: null, status: 'pending', creates: [], hitpay: [], configCalls: 0, lastRef: null, lastToken: null, last: null },
+    pay: { fee: FEE, configFail: false, createDelay: 0, serverFee: null, status: 'pending', creates: [], hitpay: [], configCalls: 0, lastRef: null, lastToken: null, last: null },
     wa: [],
   };
   await page.setRequestInterception(true);
@@ -214,7 +216,9 @@ async function makeCtx(browser, section, lang, vp) {
 
 async function go(c, path) {
   try {
-    const res = await c.page.goto(BASE + path, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    // one retry: a redirect to the HitPay stub still in flight can abort the first navigation
+    const nav = () => c.page.goto(BASE + path, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    const res = await nav().catch(async (e) => (/ERR_ABORTED/.test(String(e?.message)) ? (await sleep(500), nav()) : Promise.reject(e)));
     if (res && res.status() >= 400) return c.check(false, `load ${path}`, `HTTP ${res.status()}`), false;
   } catch (e) {
     return c.check(false, `load ${path}`, e.message), false;
@@ -506,6 +510,65 @@ const SECTIONS = {
       await sleep(450);
       await p.screenshot({ path: join(OUT, `paid-server-${c.lang}-${c.vp.short}.png`) });
     }
+  },
+
+  async review(c) {
+    if (PAY !== 'mock') return c.nm('review fixes', 'needs --pay=mock');
+    const p = c.page;
+    // 5. config failure is not "closed": message + Retry (+ WhatsApp), Retry recovers
+    c.pay.configFail = true;
+    if (!(await go(c, `/${c.lang}/products`))) return;
+    if (!(await openSheet(c))) return;
+    c.check((await sheetState(p)) === 'error', 'config 500: error state, not closed', await sheetState(p));
+    c.check((await vis(p, tid('pay-config-retry'))) && (await vis(p, tid('closed-whatsapp'))), 'Retry button + WhatsApp link shown');
+    c.check(!(await vis(p, tid('pay-hitpay'))), 'no Pay button while the config is unknown');
+    await sleep(450);
+    await p.screenshot({ path: join(OUT, `config-error-${c.lang}-${c.vp.short}.png`) });
+    c.pay.configFail = false;
+    c.errors.length = 0; // the 500 above was forced on purpose
+    await (await p.$(tid('pay-config-retry'))).click();
+    c.check(!!(await until(async () => (await sheetState(p)) === 'open', 6000)), 'Retry loads the config: open');
+    // 8. a press that starts inside the sheet and ends on the backdrop does not close it
+    if (!c.vp.mobile) {
+      const box = await p.$eval(tid('field-name'), (e) => { const r = e.getBoundingClientRect(); return { x: r.x + 20, y: r.y + r.height / 2 }; });
+      await p.mouse.move(box.x, box.y);
+      await p.mouse.down();
+      await p.mouse.move(20, 20, { steps: 4 });
+      await p.mouse.up();
+      await sleep(200);
+      c.check(await sheetOpen(p), 'drag from a field onto the backdrop: still open');
+      await p.mouse.click(20, 20);
+      c.check(!!(await until(async () => !(await sheetOpen(p)), 3000)), 'a real tap on the backdrop closes');
+    } else c.nm('backdrop drag', 'no backdrop on a full-screen phone sheet');
+    // 4. Forward onto the sheet's entry: no flagged entry without a sheet
+    if (!(await go(c, `/${c.lang}/products`))) return;
+    if (!(await openSheet(c))) return;
+    await p.goBack();
+    await until(async () => !(await sheetOpen(p)), 3000);
+    await p.goForward();
+    await sleep(400);
+    c.check(!(await sheetOpen(p)) && !(await p.evaluate(() => !!history.state?.buyNow)), 'Forward: sheet stays closed, flag stripped');
+    // 6. dismissed while create runs: no redirect
+    await p.evaluate((d) => localStorage.setItem('avo.details.v2', JSON.stringify({ savedAt: Date.now(), values: d })), DETAILS);
+    if (!(await go(c, `/${c.lang}/products`))) return;
+    if (!(await openSheet(c))) return;
+    c.pay.createDelay = 1500;
+    await tapPay(c);
+    await sleep(200);
+    await (await p.$(tid('buy-now-close'))).click();
+    await sleep(2500);
+    c.check(c.pay.creates.length === 1 && c.pay.hitpay.length === 0, 'closed during create: no redirect to HitPay', `creates ${c.pay.creates.length}, hitpay ${c.pay.hitpay.length}`);
+    c.check(!(await sheetOpen(p)), 'sheet stays closed');
+    c.pay.createDelay = 0;
+    // 7. total mismatch asks the config again
+    const before = c.pay.configCalls;
+    c.pay.serverFee = 1500;
+    if (!(await openSheet(c))) return;
+    await tapPay(c);
+    await until(() => c.pay.configCalls >= before + 2, 6000);
+    c.check(c.pay.configCalls >= before + 2, 'mismatch: config fetched again', `${before} -> ${c.pay.configCalls}`);
+    c.pay.serverFee = null;
+    c.check(c.errors.length === 0, 'no page errors', c.errors.slice(0, 3).join(' | '));
   },
 
   async storage(c) {

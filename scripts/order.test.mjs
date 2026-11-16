@@ -265,9 +265,14 @@ test('validateDetails: address is ONE field of 10..300 (B4 mirror of the server)
   assert.deepEqual(validateDetails(details({ name: 'a'.repeat(61) }), STATES_MY), { ok: false, errors: { name: 'tooLong' } });
 });
 
-test('cleanAddress: typed lines are cleaned and joined with ", "; empty lines dropped', () => {
-  assert.equal(cleanAddress('No 3, Jalan Bunga\nTaman Melati\r\n\n  Kajang  '), 'No 3, Jalan Bunga, Taman Melati, Kajang');
-  assert.equal(cleanAddress('‮Lot 5‬\rJalan 3'), 'Lot 5, Jalan 3');
+test('cleanAddress: typed lines are cleaned and joined with ONE space (review 9); empty lines dropped', () => {
+  assert.equal(cleanAddress('No 3, Jalan Bunga\nTaman Melati\r\n\n  Kajang  '), 'No 3, Jalan Bunga Taman Melati Kajang');
+  assert.equal(cleanAddress('‮Lot 5‬\rJalan 3'), 'Lot 5 Jalan 3');
+  // what the 300-character textarea allows (a line break counts 1) never becomes tooLong
+  const typed = ('a'.repeat(49) + '\n').repeat(6).slice(0, 300);
+  assert.equal(typed.length, 300);
+  assert.ok(cleanAddress(typed).length <= 300);
+  assert.equal(valid({ address: typed }).address, cleanAddress(typed));
   assert.equal(cleanAddress('  \n ​ \n'), '');
   for (const v of [null, undefined, 5, {}]) assert.equal(cleanAddress(v), '');
   // a line break never forges a new message line

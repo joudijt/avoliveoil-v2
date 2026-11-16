@@ -209,6 +209,8 @@ function db_migrations(): array
         // 4 — HITPAY review fixes: owner-email retry throttle (last_notify_at) and the per-order
         //     claim that lets only one click create a HitPay request at a time (creating_at).
         'ALTER TABLE orders ADD COLUMN last_notify_at INTEGER; ALTER TABLE orders ADD COLUMN creating_at INTEGER',
+        // 5 — BUY-NOW review 3: why an order was closed by the server ("superseded by AV-…").
+        'ALTER TABLE orders ADD COLUMN note TEXT',
     ];
 }
 

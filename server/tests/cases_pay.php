@@ -46,9 +46,22 @@ function reset_rates(): void
     tdb()->exec('DELETE FROM rate_hits');
 }
 
+/** A different (fake) mobile per call: orders of the same phone supersede each other (review 3). */
+function pay_phone(): string
+{
+    static $n = 0;
+    return '012-' . (3456789 + $n++);
+}
+
 function pay_details(array $over = []): array
 {
-    return $over + ['name' => 'Aisyah Rahman', 'phone' => '012-345 6789', 'address' => '12 Jalan Mawar, Kajang', 'postcode' => '43000', 'state' => 'Selangor'];
+    return $over + ['name' => 'Aisyah Rahman', 'phone' => pay_phone(), 'address' => '12 Jalan Mawar, Kajang', 'postcode' => '43000', 'state' => 'Selangor'];
+}
+
+/** '012-3456789' -> '60123456789' (what the server stores). */
+function pay_intl(array $body): string
+{
+    return '60' . substr((string) preg_replace('/\D/', '', $body['details']['phone']), 1);
 }
 
 function pay_body(array $over = []): array
@@ -163,12 +176,12 @@ test('pay: create prices from the server table (client prices ignored), stores p
     eq($j['total_sen'], 2 * 10900 + 800, 'total = server prices + panel fee');
     ok(str_starts_with($j['url'], 'https://checkout.hit-pay.com/payment-request/@berkat-madinah/'), 'HitPay url');
     $o = tdb()->query("SELECT * FROM orders WHERE ref = '{$j['ref']}'")->fetch();
-    eq([$o['status'], (int) $o['subtotal_sen'], (int) $o['delivery_sen'], (int) $o['total_sen'], $o['phone'], $o['site']], ['pending', 21800, 800, 22600, '60123456789', 'av'], 'stored order');
+    eq([$o['status'], (int) $o['subtotal_sen'], (int) $o['delivery_sen'], (int) $o['total_sen'], $o['phone'], $o['site']], ['pending', 21800, 800, 22600, pay_intl($body), 'av'], 'stored order');
     $pr = tdb()->query("SELECT * FROM pay_requests WHERE order_ref = '{$j['ref']}'")->fetchAll();
     eq(count($pr), 1, 'one request row');
     $f = stub()['requests'][$pr[0]['request_id']]['_form'];
     eq([$f['amount'], $f['currency'], $f['reference_number'], $f['phone'], $f['send_email'], $f['send_sms'], $f['allow_repeated_payments'], $f['expires_after']],
-        ['226.00', 'MYR', $j['ref'], '+60123456789', 'false', 'false', 'false', '60 mins'], 'HitPay form');
+        ['226.00', 'MYR', $j['ref'], '+' . pay_intl($body), 'false', 'false', 'false', '60 mins'], 'HitPay form');
     eq($f['redirect_url'], 'https://avoliveoil.com/en/order/paid?ref=' . $j['ref'] . '&t=' . $j['token'], 'redirect url');
     eq($f['webhook'], 'https://avoliveoil.com/api/pay/webhook', 'webhook url');
     ok(!isset($f['email']) && !isset($f['payment_methods']), 'no email (AV has no field), no method list (all enabled methods show)');
@@ -192,6 +205,7 @@ test('pay: same idem + same cart reuses the open request (R17); changed cart = n
     $GLOBALS['S']['pay1']['request2'] = (string) tdb()->query("SELECT request_id FROM pay_requests WHERE order_ref = '{$p['ref']}' ORDER BY id DESC LIMIT 1")->fetchColumn();
     $changed = $p['body'];
     $changed['lines'][0]['qty'] = 3;
+    $changed['details'] = pay_details(); // another buyer: the same buyer's change would supersede pay1 (review 3)
     $r = $payAnon->post('/api/pay/create', $changed);
     ok($r->json()['ref'] !== $p['ref'], 'changed cart with the same idem = another order');
 });
@@ -266,7 +280,7 @@ test('pay: good webhook -> fetch -> paid once, one owner email; replay is a no-o
     $m = parse_eml($new[0]);
     eq($m['headers']['to'][0], 'orders@avoliveoil.com', 'to the notify address');
     contains(mb_decode_mimeheader($m['headers']['subject'][0]), 'Paid order ' . $p['ref'] . ' RM 226.00 (Arabian Village)', 'subject');
-    foreach (['1. Extra Virgin 500 ml x 2 = RM 218.00', 'Delivery: RM 8.00', 'Total: RM 226.00', 'touch_n_go', 'Phone: +60123456789', 'Address: 12 Jalan Mawar, Kajang, 43000, Selangor'] as $line) {
+    foreach (['1. Extra Virgin 500 ml x 2 = RM 218.00', 'Delivery: RM 8.00', 'Total: RM 226.00', 'touch_n_go', 'Phone: +' . pay_intl($p['body']), 'Address: 12 Jalan Mawar, Kajang, 43000, Selangor'] as $line) {
         contains($m['text'], $line, 'email body');
     }
     status($payAnon->req('POST', '/api/pay/webhook', ['raw' => true, 'body' => $raw]), 200, 'replay');
@@ -445,16 +459,87 @@ test('pay: AV is one product + size per order, qty 1..24', function () use ($pay
     reset_rates();
 });
 
-test('pay: rate limits: create 20 / 10 min per site, status 60 / 10 min per IP', function () use ($payAnon) {
+test('pay: rate limits: NEW orders 20 / 10 min per site and 30 across sites (idem reuse free), status 60 / 10 min', function () use ($payAnon) {
     reset_rates();
-    for ($i = 0; $i < 20; $i++) $payAnon->post('/api/pay/create', pay_body(['lines' => []]));
+    for ($i = 0; $i < 10; $i++) $payAnon->post('/api/pay/create', pay_body(['lines' => []])); // refused bodies never count
+    $first = pay_body();
+    status($payAnon->post('/api/pay/create', $first), 200, 'first new order');
+    for ($i = 0; $i < 19; $i++) status($payAnon->post('/api/pay/create', pay_body()), 200, 'new order ' . ($i + 2));
     $r = $payAnon->post('/api/pay/create', pay_body());
-    status($r, 429, '21st create');
-    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => []])), 422, 'the NF bucket is separate');
+    status($r, 429, '21st NEW AV order');
     eq($r->header('Retry-After'), '600', 'retry after');
+    status($payAnon->post('/api/pay/create', $first), 200, 'the same order again (idem reuse) is not limited');
+    for ($i = 0; $i < 10; $i++) status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'noor-fes:pack1', 'qty' => 1]]])), 200, 'NF bucket is separate ' . ($i + 1));
+    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'noor-fes:pack1', 'qty' => 1]]])), 429, 'global cap 30 across both sites');
     reset_rates();
     for ($i = 0; $i < 60; $i++) $payAnon->get('/api/pay/status?ref=AV-000000-AAAA&t=x');
     status($payAnon->get('/api/pay/status?ref=AV-000000-AAAA&t=x'), 429, '61st status');
+    reset_rates();
+});
+
+test('pay: the 30-day window: old NF skus and the old address shape stop after it (review 1)', function () use ($payAnon) {
+    reset_rates();
+    $alias = fn () => $payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'NOORFES-500', 'qty' => 1]]]));
+    $old = fn () => $payAnon->post('/api/pay/create', pay_body(['details' => pay_details(['address' => "12 Jalan Mawar\nTaman Sri", 'city' => 'Kajang'])]));
+    status($alias(), 200, 'inside the window: alias ok');
+    status($old(), 200, 'inside the window: old shape ok');
+    tdb()->exec("INSERT OR REPLACE INTO settings(key, value) VALUES('hitpay.legacy_until', '" . (time() - 1) . "')");
+    $r = $alias();
+    status($r, 422, 'after the window: alias refused');
+    eq($r->json()['error']['code'], 'unknown_sku', 'alias = unknown sku');
+    $r = $old();
+    status($r, 422, 'after the window: old shape refused');
+    eq($r->json()['error']['fields'], ['city' => 'stale'], 'city = stale, never silently dropped');
+    status($payAnon->post('/api/pay/create', pay_body(['site' => 'nf', 'lines' => [['sku' => 'noor-fes:pack1', 'qty' => 1]]])), 200, 'new sku still fine');
+    tdb()->exec("DELETE FROM settings WHERE key = 'hitpay.legacy_until'");
+    reset_rates();
+});
+
+test('pay: a changed order supersedes the same buyer\'s pending one: verified first, then DELETEd + failed (review 3)', function () use ($payAnon) {
+    reset_rates();
+    $buyer = pay_details(); // one phone
+    $mk = fn (int $qty) => $payAnon->post('/api/pay/create', pay_body(['lines' => [['sku' => 'organic:500', 'qty' => $qty]], 'details' => $buyer]))->json();
+    $rid = fn (string $ref) => (string) tdb()->query("SELECT request_id FROM pay_requests WHERE order_ref = '$ref' ORDER BY id LIMIT 1")->fetchColumn();
+    $row = fn (string $ref) => tdb()->query("SELECT status, note FROM orders WHERE ref = '$ref'")->fetch(PDO::FETCH_ASSOC);
+
+    // 1. not paid: the old request is DELETEd at HitPay, the old order fails "superseded by <new>"
+    $a = $mk(1);
+    $b = $mk(2);
+    ok($a['ref'] !== $b['ref'], 'two orders');
+    eq($row($a['ref']), ['status' => 'failed', 'note' => 'superseded by ' . $b['ref']], 'old order superseded');
+    eq((string) tdb()->query("SELECT status FROM pay_requests WHERE request_id = '{$rid($a['ref'])}'")->fetchColumn(), 'canceled', 'old request closed');
+    $calls = stub()['calls'];
+    $get = array_search('/v1/payment-requests/' . $rid($a['ref']), array_map(fn ($c) => $c['method'] . $c['path'], $calls), true);
+    $del = array_search('DELETE/v1/payment-requests/' . $rid($a['ref']), array_map(fn ($c) => $c['method'] . $c['path'], $calls), true);
+    ok($del !== false, 'DELETE sent to HitPay');
+    $getIdx = array_search('GET/v1/payment-requests/' . $rid($a['ref']), array_map(fn ($c) => $c['method'] . $c['path'], $calls), true);
+    ok($getIdx !== false && $getIdx < $del, 'GET-verified before the DELETE');
+    eq($row($b['ref'])['status'], 'pending', 'new order pending');
+
+    // 2. the old one was paid meanwhile: settled as paid, NOT superseded, no DELETE
+    $c = $mk(3);
+    stub_pay($rid($c['ref']));
+    $d = $mk(4);
+    eq($row($c['ref'])['status'], 'paid', 'paid old order settled, kept');
+    ok(!in_array('DELETE/v1/payment-requests/' . $rid($c['ref']), array_map(fn ($x) => $x['method'] . $x['path'], stub()['calls']), true), 'a paid request is never deleted');
+
+    // 3. HitPay refuses the DELETE (500): the old order stays pending (settled normally later)
+    $s = stub();
+    $s['failNextDelete'] = true;
+    stub_put($s);
+    $e = $mk(5);
+    eq($row($d['ref'])['status'], 'pending', 'delete failed: old order left pending');
+    eq((string) tdb()->query("SELECT status FROM pay_requests WHERE request_id = '{$rid($d['ref'])}'")->fetchColumn(), 'pending', 'its request still pending');
+
+    // 4. already gone at HitPay (404) counts as deleted; another phone or site is never touched
+    $s = stub();
+    unset($s['requests'][$rid($e['ref'])]);
+    stub_put($s);
+    $other = $payAnon->post('/api/pay/create', pay_body(['lines' => [['sku' => 'organic:500', 'qty' => 6]]]))->json();
+    eq($row($e['ref'])['status'], 'pending', 'another buyer does not supersede');
+    $f = $mk(6);
+    eq($row($e['ref']), ['status' => 'failed', 'note' => 'superseded by ' . $f['ref']], '404 = gone = superseded');
+    eq($row($other['ref'])['status'], 'pending', 'other buyer untouched');
     reset_rates();
 });
 

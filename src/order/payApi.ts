@@ -8,6 +8,8 @@ export interface PayConfig {
   ready: boolean;
   /** Delivery fee the server charges, in sen; null while online payment is closed. */
   deliverySen: number | null;
+  /** BUY-NOW review 5: the server could not be asked (network, 5xx): NOT the same as closed. */
+  failed?: boolean;
 }
 
 export type PayStatus = 'pending' | 'paid' | 'failed' | 'needs_review';
@@ -28,6 +30,7 @@ export type CreateAnswer =
   | { ok: false; code: string; message: string; fields?: Record<string, string> };
 
 const CLOSED: PayConfig = { ready: false, deliverySen: null };
+const FAILED: PayConfig = { ready: false, deliverySen: null, failed: true };
 
 async function getJson(url: string, init: RequestInit, timeoutMs: number): Promise<{ status: number; data: unknown }> {
   const ctl = typeof AbortController === 'function' ? new AbortController() : null;
@@ -56,11 +59,12 @@ export function fetchPayConfig(site: 'av' | 'nf'): Promise<PayConfig> {
   return getJson(`/api/pay/config?site=${site}`, { method: 'GET', cache: 'no-store' }, 8000).then(
     ({ status, data }) => {
       const d = data as { ready?: unknown; delivery_sen?: unknown } | null;
-      if (status !== 200 || !d || d.ready !== true) return CLOSED;
+      if (status !== 200 || !d) return FAILED;
+      if (d.ready !== true) return CLOSED; // the server says: online payment is closed
       const fee = d.delivery_sen;
-      return typeof fee === 'number' && Number.isSafeInteger(fee) && fee >= 0 ? { ready: true, deliverySen: fee } : CLOSED;
+      return typeof fee === 'number' && Number.isSafeInteger(fee) && fee >= 0 ? { ready: true, deliverySen: fee } : FAILED;
     },
-    () => CLOSED
+    () => FAILED
   );
 }
 

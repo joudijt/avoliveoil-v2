@@ -162,14 +162,18 @@ export function normalisePhone(raw: string): string | null {
 /** Longer than any field: text is cleaned whole first so 'tooLong' can be reported instead of a silent cut. */
 const CLEAN_ALL = 100_000;
 
-/** The address textarea: each typed line cleaned, empty lines dropped, joined with ", " (one line for the courier). */
+/**
+ * The address textarea: each typed line cleaned, empty lines dropped, joined with ONE space, so a line
+ * break costs one character as the textarea's maxlength counts it and the 300 cap means the same in
+ * the field, here and on the server (BUY-NOW review 9).
+ */
 export function cleanAddress(value: unknown): string {
   const text = typeof value === 'string' ? value : '';
   return text
     .split(/\r\n|\r|\n/)
     .map((line) => cleanText(line, CLEAN_ALL))
     .filter((line) => !isBlank(line))
-    .join(', ');
+    .join(' ');
 }
 
 export function validateDetails(

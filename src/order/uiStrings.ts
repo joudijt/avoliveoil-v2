@@ -68,6 +68,8 @@ const en = {
     busy: 'Your payment page is being prepared. Please wait a moment and tap Pay again.',
     priceChanged: 'The total is now {total}. Please check it and tap Pay again.',
     whatsappHelp: 'Message us on WhatsApp',
+    loadFailed: "Can't load payment right now. Please check your connection and try again.",
+    retry: 'Try again',
   },
 };
 
@@ -135,6 +137,8 @@ const ms: UiStrings = {
     busy: 'Halaman bayaran anda sedang disediakan. Sila tunggu sebentar dan tekan Bayar sekali lagi.',
     priceChanged: 'Jumlah kini {total}. Sila semak dan tekan Bayar sekali lagi.',
     whatsappHelp: 'Hubungi kami melalui WhatsApp',
+    loadFailed: 'Bayaran tidak dapat dimuatkan sekarang. Sila semak sambungan anda dan cuba lagi.',
+    retry: 'Cuba lagi',
   },
 };
 
