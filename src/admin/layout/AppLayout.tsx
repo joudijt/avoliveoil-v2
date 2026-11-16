@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import {
   LuChevronDown,
+  LuCreditCard,
   LuExternalLink,
   LuFileText,
   LuImage,
@@ -10,6 +11,7 @@ import {
   LuLogOut,
   LuMenu,
   LuPanelsTopLeft,
+  LuReceipt,
   LuServer,
   LuSquarePen,
   LuUserRound,
@@ -36,8 +38,10 @@ function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
     { to: '/forms', label: 'Forms', icon: <LuSquarePen /> },
     { to: '/inbox', label: 'Inbox', icon: <LuInbox />, badge: unread },
     { to: '/media', label: 'Media', icon: <LuImage /> },
+    { to: '/orders', label: 'Orders', icon: <LuReceipt /> },
   ];
   const admin: NavItem[] = [
+    { to: '/payments', label: 'Payments', icon: <LuCreditCard /> },
     { to: '/users', label: 'Users', icon: <LuUsers /> },
     { to: '/system', label: 'System', icon: <LuServer /> },
     { to: '/account', label: 'My account', icon: <LuUserRound /> },

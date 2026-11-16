@@ -7,6 +7,7 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildPrices } from './build-prices.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const src = join(root, 'server');
@@ -51,6 +52,13 @@ writeFileSync(
     2
   ) + '\n'
 );
+
+// FORGE HITPAY §5.1: the price table the pay server charges from (never the client's prices).
+{
+  const { table, nfCheck } = await buildPrices();
+  writeFileSync(join(dest, '_data', 'prices.json'), JSON.stringify(table, null, 2) + '\n');
+  console.log(`copy-server: _data/prices.json (${Object.keys(table.av).length} AV SKUs, NF ${Object.values(table.nf)[0]} sen; NF price check ${nfCheck})`);
+}
 
 // Say so when a setup/reset file is going out, so the deploy log shows it.
 const setupDir = join(dest, '_setup');

@@ -19,6 +19,8 @@ import { UsersScreen } from './screens/users/UsersScreen';
 import { AccountScreen } from './screens/users/AccountScreen';
 import { SystemScreen } from './screens/system/SystemScreen';
 import { SitePagesList } from './screens/site/SitePagesList';
+import { OrdersScreen } from './screens/orders/OrdersScreen';
+import { PaymentsScreen } from './screens/payments/PaymentsScreen';
 
 // The two full-screen editors are the heaviest code (builder pulls react-dom/server through
 // the publish renderer), so they load on demand.
@@ -190,6 +192,8 @@ function AdminRoutes() {
           <Route path="/forms/:id" element={<FormEditor />} />
           <Route path="/inbox" element={<InboxScreen />} />
           <Route path="/media" element={<MediaScreen />} />
+          <Route path="/orders" element={<OrdersScreen />} />
+          <Route path="/payments" element={<PaymentsScreen />} />
           <Route path="/users" element={<UsersScreen />} />
           <Route path="/account" element={<AccountScreen />} />
           <Route path="/system" element={<SystemScreen />} />

@@ -16,6 +16,7 @@ import { sizeLabel } from './messageStrings';
 import { BAND, BTN_GOLD, BTN_LINE, FOCUS_RING, ICON_BTN, LINK, SMALL, useModalDialog } from './scrollLock';
 import { clearDropped, droppedCount, orderActions, useCart, useOrderUi } from './store';
 import { UI_STRINGS, fill } from './uiStrings';
+import { loadPayConfig } from './payApi';
 
 const STEP_BTN = `grid h-12 w-12 cursor-pointer place-items-center rounded-full text-olive-dark transition-colors hover:bg-olive-dark/10 disabled:cursor-default disabled:opacity-35 disabled:hover:bg-transparent ${FOCUS_RING}`;
 const ROW = 'flex items-baseline justify-between gap-4';
@@ -34,13 +35,26 @@ function CartDrawer() {
   const [dropped] = useState(droppedCount);
   useEffect(() => clearDropped, []);
 
+  // FORGE HITPAY: the delivery fee the pay server will charge (panel setting); until it answers,
+  // or while online payment is closed, "confirmed on WhatsApp".
+  const [deliverySen, setDeliverySen] = useState<number | null>(ORDER_CONFIG.deliverySen);
+  useEffect(() => {
+    let live = true;
+    void loadPayConfig(ORDER_CONFIG.paySite).then((c) => {
+      if (live && c.ready) setDeliverySen(c.deliverySen);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
+
   const lines = cart.lines.flatMap((l) => {
     const item = findItem(l.sku);
     return item ? [{ ...l, item }] : [];
   });
   const totals = computeTotals(
     lines.map((l) => ({ qty: l.qty, unitSen: l.item.priceSen })),
-    ORDER_CONFIG.deliverySen
+    deliverySen
   );
 
   // A click on the backdrop closes the drawer (press and release both outside the panel).

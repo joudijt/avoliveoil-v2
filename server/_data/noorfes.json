@@ -1,0 +1,10 @@
+{
+  "_comment": "Noor Fès (avoliveoil.com/noor-fes, repo E:\noorfes-lp) as the PAY SERVER sees it (FORGE HITPAY §5.1). priceSen must equal SITE.priceRM x 100 in noorfes-lp/src/data/site.ts: scripts/build-prices.mjs fails the build on a mismatch when that repo sits next to this one. The NF page sends sku 'noor-fes:500'; 'NOORFES-500' (site.ts SITE.sku) is accepted as an alias.",
+  "sku": "noor-fes:500",
+  "aliases": ["NOORFES-500", "noor-fes:NOORFES-500"],
+  "priceSen": 14900,
+  "name": {
+    "en": "Noor Fès Organic Premium Extra Virgin 500 ml",
+    "ms": "Noor Fès Extra Virgin Organik Premium 500 ml"
+  }
+}

@@ -9,7 +9,11 @@
  */
 
 export type Lang = 'en' | 'ms';
-export type PayMode = 'chat' | 'transfer';
+/**
+ * 'online' = HitPay (FORGE HITPAY, owner answer 6b: online payment only).
+ * 'chat' = only while online payment is not open yet: the order goes to WhatsApp.
+ */
+export type PayMode = 'chat' | 'online';
 
 export interface CoreConfig {
   /** Digits only, e.g. '601111119912'. */
@@ -58,6 +62,10 @@ export interface Order {
   payMode: PayMode;
   /** ms since epoch. */
   createdAt: number;
+  /** Extra (HITPAY R17). Online mode: idempotency key sent with every pay click of THIS frozen order. */
+  idem?: string;
+  /** Extra (HITPAY). Status token the server returned with the order's server-made ref. */
+  token?: string;
 }
 
 export interface Totals {
@@ -75,13 +83,14 @@ export interface MessageLabels {
   total: string;
   payment: string;
   paymentChat: string;
-  paymentTransfer: string;
+  /** Online mode, after HitPay confirmed the payment. */
+  paymentPaid: string;
   name: string;
   phone: string;
   address: string;
   note: string;
-  /** Last line in transfer mode only. */
-  paid: string;
+  /** First words of the message in online mode (instead of `newOrder`). */
+  paidOrder: string;
 }
 
 export const FIELD_MAX: Record<DetailField, number> = {
@@ -296,6 +305,8 @@ export function createOrder(input: {
   now: Date;
   /** Keep the ref when the customer goes back to step 1 and forward again. */
   keepRef?: string;
+  /** Extra (HITPAY R17): idempotency key of this frozen order (online mode). */
+  idem?: string;
 }): Order {
   const { cfg, now, keepRef } = input;
   return {
@@ -307,6 +318,7 @@ export function createOrder(input: {
     lang: input.lang,
     payMode: input.payMode,
     createdAt: now.getTime(),
+    ...(input.idem && isIdem(input.idem) ? { idem: input.idem } : {}),
   };
 }
 
@@ -314,13 +326,14 @@ export function createOrder(input: {
 
 /**
  * The order as plain text, one fact per line (spec 3.3 + O-4). Built from the order alone (O-6).
- * The Note line is left out when the note is empty; the paid line is printed in transfer mode only.
+ * The Note line is left out when the note is empty. Online mode (after HitPay confirmed the payment) opens with "Paid order" and says PAID via HitPay.
  */
 export function buildMessage(order: Order, labels: MessageLabels): string {
   const L = labels;
   const d = order.details;
   const t = computeTotals(order.lines, order.deliverySen);
-  const out = [`${L.newOrder} ${order.ref}`];
+  const online = order.payMode === 'online';
+  const out = [`${online ? L.paidOrder : L.newOrder} ${order.ref}`];
   order.lines.forEach((l, i) => {
     out.push(`${i + 1}. ${l.name} ${l.sizeLabel} x ${l.qty} = ${formatRM(lineTotalSen(l))}`);
   });
@@ -328,14 +341,89 @@ export function buildMessage(order: Order, labels: MessageLabels): string {
     `${L.subtotal}: ${formatRM(t.subtotalSen)}`,
     `${L.delivery}: ${t.deliverySen === null ? L.deliveryTbc : formatRM(t.deliverySen)}`,
     `${L.total}: ${formatRM(t.totalSen)}`,
-    `${L.payment}: ${order.payMode === 'transfer' ? L.paymentTransfer : L.paymentChat}`,
+    `${L.payment}: ${online ? L.paymentPaid : L.paymentChat}`,
     `${L.name}: ${d.name}`,
     `${L.phone}: +${d.phone}`,
     `${L.address}: ${d.address}, ${d.postcode} ${d.city}, ${d.state}`
   );
   if (d.note) out.push(`${L.note}: ${d.note}`);
-  if (order.payMode === 'transfer') out.push(L.paid);
   return wellFormed(out.join('\n'));
+}
+
+/**
+ * Extra (HITPAY). The paid message when this device no longer holds the customer's details
+ * (paid page opened on another device): ref, lines and totals from the server, no personal data.
+ */
+export function buildPaidShortMessage(
+  input: { ref: string; lines: readonly OrderLine[]; deliverySen: number | null },
+  labels: MessageLabels
+): string {
+  const L = labels;
+  const t = computeTotals(input.lines, input.deliverySen);
+  const out = [`${L.paidOrder} ${input.ref}`];
+  input.lines.forEach((l, i) => out.push(`${i + 1}. ${l.name} ${l.sizeLabel} x ${l.qty} = ${formatRM(lineTotalSen(l))}`));
+  out.push(
+    `${L.subtotal}: ${formatRM(t.subtotalSen)}`,
+    `${L.delivery}: ${t.deliverySen === null ? L.deliveryTbc : formatRM(t.deliverySen)}`,
+    `${L.total}: ${formatRM(t.totalSen)}`,
+    `${L.payment}: ${L.paymentPaid}`
+  );
+  return wellFormed(out.join('\n'));
+}
+
+/* ---------- online payment helpers (HITPAY) ---------- */
+
+/** Extra. 32 lowercase hex characters (the server's status token). */
+export function isToken(value: unknown): value is string {
+  return typeof value === 'string' && /^[0-9a-f]{32}$/.test(value);
+}
+
+/** Extra. Idempotency key: 8-64 of [A-Za-z0-9-]. */
+export function isIdem(value: unknown): value is string {
+  return typeof value === 'string' && /^[A-Za-z0-9-]{8,64}$/.test(value);
+}
+
+/** Extra. A fresh idempotency key, 32 hex characters. `randomBytes` is injectable for tests. */
+export function makeIdem(randomBytes?: (n: number) => Uint8Array): string {
+  const bytes = (randomBytes ?? defaultRandomBytes)(16);
+  let out = '';
+  for (let i = 0; i < 16; i++) out += ((bytes[i] ?? 0) + 256).toString(16).slice(1);
+  return out;
+}
+
+/**
+ * Extra. ref + token from the return URL query. Tolerant (review 18): HitPay may append its own
+ * `?reference=...&status=...` with a second "?", so only the leading valid part of each value counts.
+ */
+export function readPaidQuery(search: string, prefix: string): { ref: string; token: string } | null {
+  let params: URLSearchParams;
+  try {
+    params = new URLSearchParams(search);
+  } catch {
+    return null;
+  }
+  const ref = /^[A-Z]{2}-\d{6}-[A-Z2-9]{4}/.exec(params.get('ref') ?? '')?.[0] ?? '';
+  const token = /^[0-9a-f]{32}/.exec(params.get('t') ?? '')?.[0] ?? '';
+  return isRef(ref, prefix) && isToken(token) ? { ref, token } : null;
+}
+
+/** Extra. Only an https URL on exactly checkout.hit-pay.com may receive the customer (R10). */
+export function isHitpayCheckoutUrl(url: unknown): url is string {
+  if (typeof url !== 'string') return false;
+  try {
+    const u = new URL(url);
+    return u.protocol === 'https:' && u.hostname === 'checkout.hit-pay.com' && u.username === '' && u.password === '' && u.port === '';
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Extra. What the server prices and stores for an order: language, lines, details. Two frozen
+ * orders with the same key share one idempotency key (R17); any change gets a new one.
+ */
+export function orderContentKey(order: Pick<Order, 'lines' | 'details' | 'lang'>): string {
+  return JSON.stringify([order.lang, order.lines.map((l) => [l.sku, l.qty]), order.details]);
 }
 
 /**
@@ -399,6 +487,8 @@ export function serializeOrder(order: Order): string {
     lang: order.lang,
     payMode: order.payMode,
     createdAt: order.createdAt,
+    ...(order.idem ? { idem: order.idem } : {}),
+    ...(order.token ? { token: order.token } : {}),
   });
 }
 
@@ -430,7 +520,9 @@ export function parseOrder(raw: string | null | undefined, now: number, cfg: Cor
   if (!isRef(o.ref, cfg.refPrefix)) return null;
   if (o.step !== 1 && o.step !== 2 && o.step !== 3) return null;
   if (o.lang !== 'en' && o.lang !== 'ms') return null;
-  if (o.payMode !== 'chat' && o.payMode !== 'transfer') return null;
+  if (o.payMode !== 'chat' && o.payMode !== 'online') return null;
+  if (o.idem !== undefined && !isIdem(o.idem)) return null;
+  if (o.token !== undefined && !isToken(o.token)) return null;
   const delivery = o.deliverySen;
   if (delivery !== null && (typeof delivery !== 'number' || !Number.isSafeInteger(delivery) || delivery < 0)) return null;
 
@@ -463,5 +555,7 @@ export function parseOrder(raw: string | null | undefined, now: number, cfg: Cor
     lang: o.lang,
     payMode: o.payMode,
     createdAt: o.createdAt,
+    ...(isIdem(o.idem) ? { idem: o.idem } : {}),
+    ...(isToken(o.token) ? { token: o.token } : {}),
   };
 }

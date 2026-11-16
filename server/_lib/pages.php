@@ -6,7 +6,7 @@ defined('AVO_CMS') || exit;
 /** Identical to SLUG_RE / RESERVED_SLUGS in src/cms/contracts.ts. */
 const AVO_SLUG_RE = '/^[a-z0-9]+(?:-[a-z0-9]+)*$/';
 const AVO_RESERVED_SLUGS = ['products', 'shop', 'why-us', 'contact', 'blog', 'admin', 'api', 'assets', 'uploads', 'fonts',
-    'icons', 'og', 'ar', 'en', 'ms', '__cms-template', '__cms-template-landing', 'sitemap', 'robots', 'index', 'cms-template'];
+    'icons', 'og', 'ar', 'en', 'ms', '__cms-template', '__cms-template-landing', 'sitemap', 'robots', 'index', 'cms-template', 'order'];
 /** Identical to WIDGET_TYPES in contracts.ts (a test compares the two lists). */
 const AVO_WIDGET_TYPES = ['heading', 'text', 'image', 'button', 'spacer', 'divider', 'video', 'gallery', 'iconList', 'faq',
     'products', 'form', 'quote', 'whatsapp', 'heroForm', 'cards', 'steps', 'ctaBand', 'badges', 'reviews', 'stores'];

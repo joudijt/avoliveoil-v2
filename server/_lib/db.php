@@ -155,6 +155,57 @@ function db_migrations(): array
         SQL,
         // 2 — JPEG copy for share images (og:image): {"w":…,"h":…}; file <file_base>-og.jpg
         'ALTER TABLE media ADD COLUMN og_json TEXT',
+        // 3 — FORGE HITPAY: online orders, one row per HitPay payment request (R1), rate limiter (R16),
+        //     webhook log (ids/status/amount only). Settings (encrypted keys, fees) live in `settings`.
+        <<<'SQL'
+        CREATE TABLE orders (
+          id INTEGER PRIMARY KEY,
+          ref TEXT NOT NULL UNIQUE,
+          site TEXT NOT NULL,
+          status TEXT NOT NULL DEFAULT 'pending',
+          idem TEXT NOT NULL,
+          content_hash TEXT NOT NULL,
+          lines_json TEXT NOT NULL,
+          subtotal_sen INTEGER NOT NULL,
+          delivery_sen INTEGER NOT NULL,
+          total_sen INTEGER NOT NULL,
+          name TEXT NOT NULL,
+          phone TEXT NOT NULL,
+          email TEXT,
+          address_json TEXT NOT NULL,
+          lang TEXT NOT NULL,
+          status_token TEXT NOT NULL,
+          ip_hash TEXT,
+          payment_type TEXT,
+          paid_request_id TEXT,
+          review_at INTEGER,
+          created_at INTEGER NOT NULL,
+          paid_at INTEGER,
+          notified_at INTEGER,
+          notify_attempts INTEGER NOT NULL DEFAULT 0,
+          last_fetch_at INTEGER
+        );
+        CREATE UNIQUE INDEX orders_idem ON orders(site, idem, content_hash);
+        CREATE INDEX orders_status ON orders(status, created_at);
+        CREATE TABLE pay_requests (
+          id INTEGER PRIMARY KEY,
+          order_ref TEXT NOT NULL REFERENCES orders(ref) ON DELETE CASCADE,
+          request_id TEXT NOT NULL UNIQUE,
+          url TEXT NOT NULL,
+          amount_sen INTEGER NOT NULL,
+          status TEXT NOT NULL DEFAULT 'pending',
+          payment_type TEXT,
+          note TEXT,
+          created_at INTEGER NOT NULL,
+          checked_at INTEGER
+        );
+        CREATE INDEX pay_requests_order ON pay_requests(order_ref, status);
+        CREATE TABLE rate_hits (id INTEGER PRIMARY KEY, bucket TEXT NOT NULL, ip_hash TEXT NOT NULL, ts INTEGER NOT NULL);
+        CREATE INDEX rate_hits_bucket ON rate_hits(bucket, ip_hash, ts);
+        CREATE INDEX rate_hits_ts ON rate_hits(ts);
+        CREATE TABLE pay_events (id INTEGER PRIMARY KEY, at INTEGER NOT NULL, request_id TEXT, payment_id TEXT, status TEXT, amount TEXT, ok INTEGER NOT NULL);
+        CREATE INDEX pay_events_at ON pay_events(at);
+        SQL,
     ];
 }
 

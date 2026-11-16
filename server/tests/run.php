@@ -15,6 +15,7 @@ declare(strict_types=1);
 require __DIR__ . '/lib.php';
 
 const PORT = 8091;
+const STUB_PORT = 8092;
 $server = dirname(__DIR__);
 
 function copy_tree(string $from, string $to, ?callable $filter = null): void
@@ -46,6 +47,18 @@ $data = "$tmp/data";
 copy_tree(__DIR__ . '/fixtures/docroot', $docroot);
 copy_tree($server, "$docroot/api", fn ($p) => !str_ends_with(str_replace('\\', '/', $p), '/tests'));
 copy_tree(__DIR__ . '/fixtures/data', "$docroot/api/_data");
+// FORGE HITPAY: the real price table (same generator as the build) + a local HitPay stub.
+$pricesOut = "$docroot/api/_data/prices.json";
+exec(escapeshellarg('node') . ' ' . escapeshellarg(dirname($server) . '/scripts/build-prices.mjs') . ' ' . escapeshellarg($pricesOut) . ' 2>&1', $pricesLog, $pricesRc);
+if ($pricesRc !== 0 || !is_file($pricesOut)) {
+    fwrite(STDERR, "could not build prices.json (node scripts/build-prices.mjs):
+" . implode("
+", $pricesLog) . "
+");
+    exit(1);
+}
+$stubState = "$tmp/hitpay-stub.json";
+file_put_contents($stubState, '{}');
 $selftest = bin2hex(random_bytes(16));
 $build = '20261001120000-test1234';
 file_put_contents("$docroot/api/_data/build.json", json_encode(['build' => $build, 'selftestSha256' => hash('sha256', $selftest)]));
@@ -55,6 +68,7 @@ file_put_contents("$docroot/api/_setup/$setupToken.token", '');
 
 $GLOBALS['CTX'] = [
     'docroot' => $docroot, 'data' => $data, 'setupToken' => $setupToken, 'selftest' => $selftest, 'build' => $build,
+    'stubState' => $stubState,
 ];
 
 $env = getenv();
@@ -62,6 +76,8 @@ $env['AVO_CMS_DATA'] = $data;
 $env['AVO_CMS_MAIL'] = 'file';
 $env['AVO_CMS_OFFLINE'] = '1';
 $env['AVO_CMS_TEST_HOOKS'] = '1';
+$env['AVO_HITPAY_BASE'] = 'http://127.0.0.1:' . STUB_PORT . '/v1';
+$env['HITPAY_STUB_STATE'] = $stubState;
 $log = "$tmp/server.log";
 $proc = proc_open(
     [PHP_BINARY, '-d', 'upload_max_filesize=20M', '-d', 'post_max_size=24M', '-d', 'display_errors=0', '-d', 'log_errors=1',
@@ -73,6 +89,30 @@ $proc = proc_open(
 );
 if (!is_resource($proc)) {
     fwrite(STDERR, "could not start php -S\n");
+    exit(1);
+}
+$stub = proc_open(
+    [PHP_BINARY, '-d', 'display_errors=0', '-S', '127.0.0.1:' . STUB_PORT, __DIR__ . '/hitpay_stub.php'],
+    [0 => ['pipe', 'r'], 1 => ['file', $log, 'a'], 2 => ['file', $log, 'a']],
+    $stubPipes,
+    $tmp,
+    $env,
+);
+$up = false;
+for ($i = 0; $i < 100; $i++) {
+    $s = @fsockopen('127.0.0.1', STUB_PORT, $errno, $errstr, 0.2);
+    if ($s) {
+        fclose($s);
+        $up = true;
+        break;
+    }
+    usleep(100000);
+}
+if (!$up) {
+    proc_terminate($proc);
+    if (is_resource($stub)) proc_terminate($stub);
+    fwrite(STDERR, "HitPay stub did not come up on port " . STUB_PORT . "
+");
     exit(1);
 }
 $up = false;
@@ -93,6 +133,7 @@ if (!$up) {
 Client::$base = 'http://127.0.0.1:' . PORT;
 
 require __DIR__ . '/cases.php';
+require __DIR__ . '/cases_pay.php';
 
 $pass = 0;
 $fail = [];
@@ -112,6 +153,9 @@ foreach ($GLOBALS['TESTS'] as [$name, $fn]) {
 proc_terminate($proc);
 foreach ($pipes as $p) @fclose($p);
 proc_close($proc);
+proc_terminate($stub);
+foreach ($stubPipes as $p) @fclose($p);
+proc_close($stub);
 
 $total = $pass + count($fail);
 printf("\n%d tests, %d passed, %d failed (%.1f s)\n", $total, $pass, count($fail), microtime(true) - $t0);

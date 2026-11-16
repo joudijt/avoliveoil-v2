@@ -26,6 +26,13 @@ import {
   serializeOrder,
   toSen,
   validateDetails,
+  buildPaidShortMessage,
+  isHitpayCheckoutUrl,
+  isIdem,
+  isToken,
+  makeIdem,
+  orderContentKey,
+  readPaidQuery,
 } from '../src/order/core.ts';
 import {
   EMPTY_CART,
@@ -483,23 +490,22 @@ test('message EN, chat mode: exact text, no note, no paid line', () => {
   );
 });
 
-test('message EN, transfer mode: exact text, with a note and a delivery fee, ends with the paid line', () => {
-  const o = order({ payMode: 'transfer', deliverySen: 800, details: details({ note: 'Leave with the guard' }) });
+test('message EN, online mode (HITPAY paid message): exact text, with a note and a delivery fee', () => {
+  const o = order({ payMode: 'online', deliverySen: 800, details: details({ note: 'Leave with the guard' }) });
   assert.equal(
     buildMessage(o, MESSAGE_LABELS.en),
     [
-      'New order AV-261112-7KQ4',
+      'Paid order AV-261112-7KQ4',
       '1. Extra Virgin 500 ml x 2 = RM 218.00',
       '2. Infused: Blackseed 250 ml x 1 = RM 75.00',
       'Subtotal: RM 293.00',
       'Delivery: RM 8.00',
       'Total: RM 301.00',
-      "Payment: Touch 'n Go / DuitNow",
+      'Payment: PAID via HitPay',
       'Name: Aisyah Rahman',
       'Phone: +60182059925',
       'Address: 12, Jalan Bukit 3, Taman Mewah, 43000 Kajang, Selangor',
       'Note: Leave with the guard',
-      'I have paid, receipt follows.',
     ].join('\n')
   );
 });
@@ -527,21 +533,20 @@ test('message MS, chat mode: exact text, with a note, no paid line', () => {
   );
 });
 
-test('message MS, transfer mode: exact text, no note, delivery 0, ends with the paid line', () => {
+test('message MS, online mode (HITPAY paid message): exact text, no note, delivery 0', () => {
   assert.equal(
-    buildMessage(msOrder({ payMode: 'transfer', deliverySen: 0 }), MESSAGE_LABELS.ms),
+    buildMessage(msOrder({ payMode: 'online', deliverySen: 0 }), MESSAGE_LABELS.ms),
     [
-      'Pesanan baharu AV-261112-7KQ4',
+      'Pesanan dibayar AV-261112-7KQ4',
       '1. Extra Virgin 500 ml x 2 = RM 218.00',
       '2. Infusi: Habbatus Sauda 250 ml x 1 = RM 75.00',
       'Jumlah kecil: RM 293.00',
       'Penghantaran: RM 0.00',
       'Jumlah: RM 293.00',
-      "Bayaran: Touch 'n Go / DuitNow",
+      'Bayaran: DIBAYAR melalui HitPay',
       'Nama: Aisyah Rahman',
       'Telefon: +60182059925',
       'Alamat: 12, Jalan Bukit 3, Taman Mewah, 43000 Kajang, Selangor',
-      'Saya sudah bayar, resit akan dihantar.',
     ].join('\n')
   );
 });
@@ -587,7 +592,7 @@ test("WhatsApp URL: the message survives the round trip with & # ' emoji", () =>
     city: "Mak Cik's Town",
     note: "Call first 📞 & ring bell #2, it's = ok?",
   });
-  for (const payMode of ['chat', 'transfer']) {
+  for (const payMode of ['chat', 'online']) {
     const msg = buildMessage(order({ details: d, payMode, lines: allLines(1) }), MESSAGE_LABELS.en);
     assert.ok(msg.includes('Address: Lot 5 & 6, #12-03 Menara A+B, Jalan P. Ramlee 100% 😀🫒 ?x=1&y=2 %20 "quoted", 43000 Mak Cik\'s Town, Selangor'));
     for (const desktop of [false, true]) {
@@ -629,7 +634,7 @@ test('URL cap: an ordinary order is not shortened', () => {
 
 test('URL cap: all 10 SKUs at 24 with a usual address and note fit whole in both languages and pay modes', () => {
   for (const lang of ['en', 'ms']) {
-    for (const payMode of ['chat', 'transfer']) {
+    for (const payMode of ['chat', 'online']) {
       const d = valid({ address: 'No. 12-3A, Jalan Bukit Bintang 3/4, Taman Mewah Jaya', city: 'Petaling Jaya', note: 'Sila hubungi sebelum hantar' });
       const o = order({ lang, payMode, lines: allLines(MAX, lang), details: d });
       const r = fitOrderMessage(o, MESSAGE_LABELS[lang], CFG);
@@ -663,7 +668,7 @@ for (const [script, ch, note] of [['Chinese', '路', NOTE_ZH], ['Tamil', 'த', 
 
   test(`URL cap: ${script} address, all 10 SKUs at 24: only the note is shortened, name, address and city never`, () => {
     for (const lang of ['en', 'ms']) {
-      for (const payMode of ['chat', 'transfer']) {
+      for (const payMode of ['chat', 'online']) {
         const d = valid({ name: ch.repeat(4), address: ch.repeat(20), city: ch.repeat(3), note });
         const o = order({ lang, payMode, lines: allLines(MAX, lang), details: d });
         const L = MESSAGE_LABELS[lang];
@@ -688,7 +693,7 @@ for (const [script, ch, note] of [['Chinese', '路', NOTE_ZH], ['Tamil', 'த', 
         });
         assert.ok(r.message.includes(`${L.name}: ${ch.repeat(4)}\n`));
         assert.ok(r.message.includes(`${L.address}: ${ch.repeat(20)}, 43000 ${ch.repeat(3)}, Selangor`));
-        assert.equal(rows.at(-1), payMode === 'transfer' ? L.paid : noteRow, 'last line kept');
+        assert.equal(rows.at(-1), noteRow, 'last line kept');
         // The longest note that fits was chosen: one more character would pass the cap.
         const longer = buildMessage({ ...o, details: { ...d, note: `${note.slice(0, kept.length + 1)}...` } }, L);
         assert.ok(urlLen(longer) > CFG.urlCap, 'no room was wasted');
@@ -756,12 +761,12 @@ test('URL cap: the cap comes from config', () => {
 test('createOrder: exactly the agreed shape, step 2, values copied', () => {
   const lines = [line('extra-virgin:500', 2), line('blackseed:250', 1)];
   const d = details();
-  const o = createOrder({ lines, details: d, lang: 'ms', payMode: 'transfer', cfg: { ...CFG, deliverySen: 800 }, now: T0 });
+  const o = createOrder({ lines, details: d, lang: 'ms', payMode: 'online', cfg: { ...CFG, deliverySen: 800 }, now: T0 });
   assert.deepEqual(Object.keys(o).sort(), ['createdAt', 'deliverySen', 'details', 'lang', 'lines', 'payMode', 'ref', 'step']);
   assert.match(o.ref, /^AV-261112-[ABCDEFGHJKLMNPQRSTUVWXYZ2-9]{4}$/);
   assert.equal(o.step, 2);
   assert.equal(o.lang, 'ms');
-  assert.equal(o.payMode, 'transfer');
+  assert.equal(o.payMode, 'online');
   assert.equal(o.deliverySen, 800);
   assert.equal(o.createdAt, T0.getTime());
   assert.deepEqual(o.lines, lines);
@@ -791,7 +796,7 @@ test('order snapshot: restore gives back the same order at every step, language 
   const now = T0.getTime() + 3 * 60 * 60 * 1000;
   for (const step of [1, 2, 3]) {
     for (const lang of ['en', 'ms']) {
-      for (const payMode of ['chat', 'transfer']) {
+      for (const payMode of ['chat', 'online']) {
         const o = order({ step, lang, payMode, lines: allLines(MAX, lang), deliverySen: payMode === 'chat' ? null : 800, details: valid({ note: 'Ring twice 😀', address: '路 12, தெரு 3' }) });
         assert.deepEqual(parseOrder(serializeOrder(o), now, CFG, STATES_MY), o);
       }
@@ -1082,10 +1087,10 @@ test('review 7: without Intl.Segmenter the cut falls back to whole code points',
   assert.equal(cleanText(`ab${FAMILY}`, 9), 'ab', 'restored');
 });
 
-test('review 8: the Malay paid line', () => {
-  assert.equal(MESSAGE_LABELS.ms.paid, 'Saya sudah bayar, resit akan dihantar.');
-  assert.equal(buildMessage(msOrder({ payMode: 'transfer' }), MESSAGE_LABELS.ms).split('\n').at(-1), 'Saya sudah bayar, resit akan dihantar.');
-  assert.doesNotMatch(buildMessage(msOrder({ payMode: 'chat' }), MESSAGE_LABELS.ms), /resit/, 'control: chat mode has no paid line');
+test('review 8 (HITPAY): the Malay paid message says DIBAYAR melalui HitPay; chat mode never does', () => {
+  assert.equal(MESSAGE_LABELS.ms.paymentPaid, 'DIBAYAR melalui HitPay');
+  assert.match(buildMessage(msOrder({ payMode: 'online' }), MESSAGE_LABELS.ms), /^Pesanan dibayar AV-/);
+  assert.doesNotMatch(buildMessage(msOrder({ payMode: 'chat' }), MESSAGE_LABELS.ms), /HitPay|dibayar/i, 'control: chat mode is not a paid message');
 });
 
 test('review 9: a real "__proto__" key in stored JSON changes nothing and pollutes nothing', () => {
@@ -1210,4 +1215,103 @@ test('review 13: clampQty reads a string only when it is plain digits', () => {
   assert.equal(clampQty(2.5, MAX), 2);
   assert.equal(addLine(EMPTY_CART, 'blackseed:250', '1e1', SKUS, MAX).result, 'invalid');
   assert.equal(addLine(EMPTY_CART, 'blackseed:250', '10', SKUS, MAX).result, 'added', 'control');
+});
+
+/* ---------- FORGE HITPAY ---------- */
+
+test('hitpay: snapshot keeps idem + token; a bad idem or token is a tampered snapshot', () => {
+  const now = T0.getTime() + 60_000;
+  const o = order({ payMode: 'online', deliverySen: 800, idem: 'a'.repeat(32), token: '0123456789abcdef0123456789abcdef' });
+  assert.deepEqual(parseOrder(serializeOrder(o), now, CFG, STATES_MY), o);
+  const raw = JSON.parse(serializeOrder(o));
+  for (const bad of [{ idem: 'x' }, { idem: 'a b c d e f g h' }, { token: 'ABCDEF0123456789ABCDEF0123456789' }, { token: 123 }, { payMode: 'transfer' }]) {
+    assert.equal(parseOrder(JSON.stringify({ ...raw, ...bad }), now, CFG, STATES_MY), null, JSON.stringify(bad));
+  }
+  const chat = order();
+  assert.equal('idem' in JSON.parse(serializeOrder(chat)), false, 'chat orders carry no idem');
+});
+
+test('hitpay: makeIdem / isIdem / isToken', () => {
+  const a = makeIdem();
+  assert.match(a, /^[0-9a-f]{32}$/);
+  assert.notEqual(makeIdem(), a);
+  assert.equal(makeIdem(() => new Uint8Array(16).fill(255)), 'f'.repeat(32));
+  assert.equal(isIdem(a), true);
+  for (const bad of ['', 'short', 'x'.repeat(65), 'has space ok', null, 5]) assert.equal(isIdem(bad), false, String(bad));
+  assert.equal(isToken('0123456789abcdef0123456789abcdef'), true);
+  for (const bad of ['0123456789ABCDEF0123456789ABCDEF', '0123', null]) assert.equal(isToken(bad), false, String(bad));
+});
+
+test('hitpay: createOrder copies a valid idem only', () => {
+  const mk = (idem) => createOrder({ lines: [line('blackseed:250', 1)], details: details(), lang: 'en', payMode: 'online', cfg: CFG, now: T0, idem });
+  assert.equal(mk('abcdefgh12345678').idem, 'abcdefgh12345678');
+  assert.equal('idem' in mk('bad idem'), false);
+  assert.equal('idem' in mk(undefined), false);
+});
+
+test('hitpay: orderContentKey changes with lines, details or language, not with ref/time', () => {
+  const a = order({ payMode: 'online' });
+  assert.equal(orderContentKey(a), orderContentKey({ ...a, ref: 'AV-261113-ABCD', createdAt: 1 }));
+  assert.notEqual(orderContentKey(a), orderContentKey({ ...a, lines: [line('extra-virgin:500', 3)] }));
+  assert.notEqual(orderContentKey(a), orderContentKey({ ...a, details: { ...a.details, city: 'Bangi' } }));
+  assert.notEqual(orderContentKey(a), orderContentKey({ ...a, lang: 'ms' }));
+});
+
+test('hitpay: readPaidQuery is tolerant of a "?" HitPay may append, strict on the values', () => {
+  const t = '0123456789abcdef0123456789abcdef';
+  assert.deepEqual(readPaidQuery(`?ref=AV-261116-7KQ4&t=${t}`, 'AV'), { ref: 'AV-261116-7KQ4', token: t });
+  assert.deepEqual(readPaidQuery(`?ref=AV-261116-7KQ4&t=${t}?reference=abc&status=completed`, 'AV'), { ref: 'AV-261116-7KQ4', token: t });
+  assert.deepEqual(readPaidQuery(`?ref=AV-261116-7KQ4&t=${t}&reference=abc&status=completed`, 'AV'), { ref: 'AV-261116-7KQ4', token: t });
+  assert.equal(readPaidQuery(`?ref=NF-261116-7KQ4&t=${t}`, 'AV'), null, 'other site prefix');
+  assert.equal(readPaidQuery('?ref=AV-261116-7KQ4&t=abc', 'AV'), null, 'short token');
+  assert.equal(readPaidQuery(`?t=${t}`, 'AV'), null, 'no ref');
+  assert.equal(readPaidQuery('', 'AV'), null);
+});
+
+test('hitpay: only https://checkout.hit-pay.com may receive the customer', () => {
+  assert.equal(isHitpayCheckoutUrl('https://checkout.hit-pay.com/payment-request/@berkat-madinah/9a1b/checkout'), true);
+  for (const bad of [
+    'http://checkout.hit-pay.com/x',
+    'https://securecheckout.hit-pay.com/x',
+    'https://checkout.hit-pay.com.evil.example/x',
+    'https://evil.example/?https://checkout.hit-pay.com',
+    'https://user:pw@checkout.hit-pay.com/x',
+    'https://checkout.hit-pay.com:8443/x',
+    'javascript:alert(1)',
+    '',
+    null,
+  ]) {
+    assert.equal(isHitpayCheckoutUrl(bad), false, String(bad));
+  }
+});
+
+test('hitpay: short paid message (no details on this device): ref, lines, totals, PAID via HitPay, nothing personal', () => {
+  const lines = [line('extra-virgin:500', 2), line('blackseed:250', 1)];
+  assert.equal(
+    buildPaidShortMessage({ ref: 'AV-261116-7KQ4', lines, deliverySen: 800 }, MESSAGE_LABELS.en),
+    [
+      'Paid order AV-261116-7KQ4',
+      '1. Extra Virgin 500 ml x 2 = RM 218.00',
+      '2. Infused: Blackseed 250 ml x 1 = RM 75.00',
+      'Subtotal: RM 293.00',
+      'Delivery: RM 8.00',
+      'Total: RM 301.00',
+      'Payment: PAID via HitPay',
+    ].join('\n')
+  );
+  assert.match(buildPaidShortMessage({ ref: 'AV-261116-7KQ4', lines, deliverySen: 0 }, MESSAGE_LABELS.ms), /Bayaran: DIBAYAR melalui HitPay$/);
+});
+
+test('hitpay: the server price table is built from the same sources as the cart (ids, not cmsIds) and mirrors core.ts states', async () => {
+  const { buildPrices } = await import('./build-prices.mjs');
+  const { table } = await buildPrices();
+  assert.deepEqual(Object.keys(table.av).sort(), [...SKUS].sort(), 'same 10 SKUs as the cart');
+  assert.equal(table.av['extra-virgin:500'], 10900);
+  assert.equal(table.av['organic:250'], 6900);
+  assert.equal(table.av['wild-thyme:250'], 7500);
+  assert.equal('classic:500' in table.av, false, 'never the cmsId');
+  assert.deepEqual(table.nf, { 'noor-fes:500': 14900 });
+  assert.equal(table.aliases.nf['NOORFES-500'], 'noor-fes:500');
+  assert.deepEqual(table.states, [...STATES_MY]);
+  assert.equal(table.names['blackseed:250'].en, 'Infused: Blackseed 250 ml');
 });

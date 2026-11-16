@@ -51,6 +51,9 @@ const ROUTES = [
   // serve.php fills with a published page according to its layout. Never public URLs
   // (.htaccess 404s them), never in the sitemap, llms files or the per-page gates.
   ...LANGS.flatMap((lang) => CMS_TEMPLATES.map((name) => `/${lang}/${name}`)),
+  // FORGE HITPAY R14: the HitPay return page shell (noindex; not in the sitemap, llms files or
+  // hreflang gates: those list their pages explicitly). Prerendered in its neutral "checking" state.
+  ...LANGS.map((lang) => `/${lang}/order/paid`),
 ];
 const PORT = 4173;
 

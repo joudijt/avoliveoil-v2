@@ -503,6 +503,8 @@ export const RESERVED_SLUGS = [
   'robots',
   'index',
   'cms-template',
+  // /<lang>/order/paid = the HitPay return page (FORGE HITPAY R14)
+  'order',
 ] as const;
 
 export function slugProblem(slug: string): string | null {

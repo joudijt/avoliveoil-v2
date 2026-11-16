@@ -374,6 +374,62 @@ export interface Settings {
   mailCapPerHour: number;
 }
 
+// FORGE HITPAY: Orders page + Payments (HitPay) section
+export type PaySite = 'av' | 'nf';
+export type AdminOrderStatus = 'pending' | 'paid' | 'failed' | 'needs_review';
+export interface AdminPayRequest {
+  id: string;
+  amountSen: number;
+  status: 'pending' | 'completed' | 'needs_review' | 'double_paid' | 'expired' | 'canceled';
+  paymentType: string | null;
+  createdAt: string;
+  checkedAt: string | null;
+  note: string | null;
+}
+export interface AdminOrder {
+  ref: string;
+  site: PaySite;
+  status: AdminOrderStatus;
+  createdAt: string;
+  createdMyt: string;
+  paidAt: string | null;
+  name: string;
+  phone: string;
+  email: string | null;
+  address: { address?: string; postcode?: string; city?: string; state?: string; note?: string };
+  lang: CmsLang;
+  lines: { sku: string; qty: number; unit_sen: number; name: string }[];
+  subtotalSen: number;
+  deliverySen: number;
+  totalSen: number;
+  paymentType: string | null;
+  notified: boolean;
+  requests: AdminPayRequest[];
+}
+export interface AdminOrderList {
+  orders: AdminOrder[];
+  unnotified: number;
+  doublePaid: number;
+}
+export interface PaymentSettings {
+  apiKeySet: boolean;
+  apiKeyEnd: string | null;
+  saltSet: boolean;
+  notifyEmail: string;
+  notifyEmailDefault: string;
+  deliveryRM: Record<PaySite, string | null>;
+  ready: Record<PaySite, boolean>;
+  webhookUrl: string;
+  liveApi: boolean;
+}
+export interface PaymentSettingsInput {
+  apiKey?: string;
+  salt?: string;
+  clearKeys?: boolean;
+  notifyEmail?: string;
+  deliveryRM?: Partial<Record<PaySite, string | null>>;
+}
+
 export interface CatalogueProduct {
   id: string;
   kind: 'infused' | 'classic';
@@ -483,6 +539,13 @@ export const api = {
   backupUrl: '/api/system/backup',
   settings: () => get<Settings>('/api/settings'),
   saveSettings: (s: Settings) => post<Settings>('/api/settings', s),
+
+  // orders + payments (FORGE HITPAY)
+  orders: (status?: AdminOrderStatus | '') => get<AdminOrderList>('/api/admin/orders' + qs({ status })),
+  recheckOrder: (ref: string) => post<AdminOrder>(`/api/admin/orders/${encodeURIComponent(ref)}/recheck`, {}),
+  payments: () => get<PaymentSettings>('/api/admin/payments'),
+  savePayments: (b: PaymentSettingsInput) => post<PaymentSettings>('/api/admin/payments', b),
+  testPayments: () => post<{ ok: boolean; message: string }>('/api/admin/payments/test', {}),
 };
 
 function b64Map(html: Partial<Record<CmsLang, string>>): Partial<Record<CmsLang, string>> {

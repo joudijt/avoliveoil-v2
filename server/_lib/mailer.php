@@ -28,9 +28,14 @@ function avo_mail_cap(): int
     return max(1, (int) avo_setting('mailCapPerHour', '40'));
 }
 
-function avo_mail_capped(): bool
+/**
+ * Paid-order emails (purpose 'order') have their own hourly budget, so a flooded contact form
+ * can never hold back the email of a paid order, and orders never eat the form budget (review 15).
+ */
+function avo_mail_capped(string $purpose = ''): bool
 {
-    return (int) db_val('SELECT COUNT(*) FROM mail_log WHERE at > ? AND ok = 1', [avo_now() - 3600]) >= avo_mail_cap();
+    $which = $purpose === 'order' ? "purpose = 'order'" : "COALESCE(purpose, '') <> 'order'";
+    return (int) db_val("SELECT COUNT(*) FROM mail_log WHERE at > ? AND ok = 1 AND $which", [avo_now() - 3600]) >= avo_mail_cap();
 }
 
 /**
@@ -41,7 +46,7 @@ function avo_mail_send(array $to, string $subject, string $text, string $html, ?
 {
     $to = array_values(array_filter(array_map(fn ($e) => avo_header_value((string) $e), $to), 'avo_valid_email'));
     if (!$to) return ['status' => 'failed', 'error' => 'no valid recipient'];
-    if (avo_mail_capped()) {
+    if (avo_mail_capped($purpose)) {
         avo_log('warn', 'mail held: hourly cap reached', ['purpose' => $purpose]);
         return ['status' => 'held', 'error' => 'Hourly email limit reached'];
     }

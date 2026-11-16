@@ -1,11 +1,20 @@
-// DEV-ONLY browser walk for the on-site ordering flow (FORGE ORDER-R1). Not part of the build.
+// DEV-ONLY browser walk for the on-site ordering flow (FORGE ORDER-R1 + FORGE HITPAY). Not part of the build.
 //
 //   node scripts/dev/order-walk.mjs <baseUrl> [--out=<dir>] [--only=<section[,section]>] [--lang=en|ms] [--vp=d1366|p390|p360]
+//                                   [--pay=mock|server] [--stub-state=<hitpay-stub.json>]
+//
+//   --pay      mock (default): /api/pay/* is answered by this script (a static preview has no PHP).
+//              Every section except `hitpay` sees online payment CLOSED, so they walk the chat
+//              (WhatsApp) fallback; `hitpay` sees it OPEN (delivery RM 8.00).
+//              server: /api/pay/* goes to the real PHP server at <baseUrl> (scripts/dev/pay-harness.mjs:
+//              dist + php -S + the local HitPay stub); --stub-state lets the walk mark the stub request paid.
+//   HitPay itself is NEVER contacted: any request to checkout.hit-pay.com is answered here with a stub
+//   page and recorded (the walk "stops at the HitPay redirect").
 //
 //   <baseUrl>  http://localhost:4173 (vite preview / static server of dist) or https://avoliveoil.com
 //   --out      screenshot directory (default ./.order-walk)
-//   --only     header,surfaces,drawer,checkout,chat,reload,sent,details,nostorage,lang,console,shots
-//              (or the numbers 1..12). Sections are independent (a fresh browser context each, own
+//   --only     header,surfaces,drawer,checkout,chat,reload,sent,details,nostorage,lang,console,shots,hitpay
+//              (or the numbers 1..13). Sections are independent (a fresh browser context each, own
 //              storage), so several processes with different --only values can run in parallel.
 //
 // Written from the contract only (docs/forge/FORGE-ORDER-R1-OVERRIDES.md "Test hooks" + SPEC 2/3/4/7):
@@ -18,7 +27,7 @@
 // stubbed, and clicks on WhatsApp anchors are default-prevented at window level (after the app's own
 // handlers ran, so the app still changes state).
 import puppeteer, { ElementHandle } from 'puppeteer';
-import { mkdirSync, readFileSync, existsSync } from 'node:fs';
+import { mkdirSync, readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -48,7 +57,13 @@ const OUT = resolve(flag('out') ?? '.order-walk');
 mkdirSync(OUT, { recursive: true });
 const ORIGIN = new URL(BASE).origin;
 
-const SECTION_NAMES = ['header', 'surfaces', 'drawer', 'checkout', 'chat', 'reload', 'sent', 'details', 'nostorage', 'lang', 'console', 'shots'];
+const SECTION_NAMES = ['header', 'surfaces', 'drawer', 'checkout', 'chat', 'reload', 'sent', 'details', 'nostorage', 'lang', 'console', 'shots', 'hitpay'];
+const PAY = flag('pay') ?? 'mock';
+if (!['mock', 'server'].includes(PAY)) {
+  console.error('--pay must be mock or server');
+  process.exit(2);
+}
+const STUB_STATE = flag('stub-state') ? resolve(flag('stub-state')) : null;
 const onlyRaw = (flag('only') ?? '').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean);
 const onlySet = new Set(onlyRaw.map((s) => (/^\d+$/.test(s) ? SECTION_NAMES[Number(s) - 1] : s)));
 for (const s of onlySet) {
@@ -240,10 +255,11 @@ const STR = {
   stayOnDevice: { re: /stay on this device/i, en: 'Your details stay on this device to save you typing next time.' },
 };
 
-// Pay mode: chat while any pay value in config.ts is null. Delivery: null = confirmed on WhatsApp.
-const configText = existsSync(join(ROOT, 'src/order/config.ts')) ? readFileSync(join(ROOT, 'src/order/config.ts'), 'utf-8') : '';
-const CHAT_MODE = !configText || /tngQrImage:\s*null/.test(configText) || /duitnowNumber:\s*null/.test(configText) || /accountName:\s*null/.test(configText);
-const DELIVERY_NULL = !configText || /deliverySen:\s*null/.test(configText);
+// FORGE HITPAY: the ORDER-R1 sections walk the chat (WhatsApp) fallback = online payment CLOSED
+// (mocked /api/pay/config), delivery "confirmed on WhatsApp". The `hitpay` section walks the online path.
+const CHAT_MODE = true;
+const DELIVERY_NULL = true;
+const PAY_DELIVERY_SEN = 800;
 
 // ------------------------------------------------------------------ page helpers (live DOM, data-testid only)
 const tid = (name, extra = '') => `[data-testid="${name}"]${extra}`;
@@ -337,6 +353,69 @@ async function newContext(browser) {
   return typeof browser.createBrowserContext === 'function' ? browser.createBrowserContext() : browser.createIncognitoBrowserContext();
 }
 
+/** Today in Malaysia as YYMMDD (the ref date rule of the server). */
+function mytDay() {
+  const d = new Date(Date.now() + 8 * 3600 * 1000);
+  return `${String(d.getUTCFullYear() % 100).padStart(2, '0')}${String(d.getUTCMonth() + 1).padStart(2, '0')}${String(d.getUTCDate()).padStart(2, '0')}`;
+}
+const json = (req, status, data) => req.respond({ status, contentType: 'application/json', body: JSON.stringify(data) });
+
+/** The pay server, mocked to its contract (docs/forge/HITPAY-AV-HANDOFF.md). */
+async function payMock(c, req, u) {
+  const P = c.pay;
+  if (u.pathname === '/api/pay/config') {
+    return json(req, 200, { site: 'av', ready: P.open, delivery_sen: P.open ? PAY_DELIVERY_SEN : null, currency: 'MYR' });
+  }
+  if (u.pathname === '/api/pay/create' && req.method() === 'POST') {
+    let body = null;
+    try {
+      body = JSON.parse(req.postData() ?? 'null');
+    } catch {
+      /* recorded as null */
+    }
+    P.creates.push(body);
+    if (!P.open) return json(req, 503, { error: { code: 'pay_not_ready', message: 'closed' } });
+    const lines = Array.isArray(body?.lines) ? body.lines : [];
+    const sub = lines.reduce((n, l) => n + (ITEM[l.sku]?.sen ?? 0) * (l.qty ?? 0), 0);
+    P.lastLines = lines;
+    P.lastRef ??= `AV-${mytDay()}-WALK`;
+    P.lastToken ??= '0123456789abcdef0123456789abcdef';
+    if (!P.firstIdem) P.firstIdem = body?.idem;
+    return json(req, 200, {
+      ref: P.lastRef,
+      token: P.lastToken,
+      url: 'https://checkout.hit-pay.com/payment-request/@berkat-madinah/9a1b2c3d-walk/checkout',
+      status: 'pending',
+      total_sen: sub + PAY_DELIVERY_SEN,
+    });
+  }
+  if (u.pathname === '/api/pay/status') {
+    P.statusCalls += 1;
+    if (u.searchParams.get('ref') !== P.lastRef || u.searchParams.get('t') !== P.lastToken) return json(req, 403, { error: { code: 'forbidden', message: 'no' } });
+    const lines = (P.lastLines ?? []).map((l) => ({ sku: l.sku, qty: l.qty, unit_sen: ITEM[l.sku]?.sen ?? 0 }));
+    const sub = lines.reduce((n, l) => n + l.unit_sen * l.qty, 0);
+    return json(req, 200, {
+      ref: P.lastRef, site: 'av', lang: c.lang, status: P.status, subtotal_sen: sub, delivery_sen: PAY_DELIVERY_SEN,
+      total_sen: sub + PAY_DELIVERY_SEN, lines, payment_type: P.status === 'paid' ? 'touch_n_go' : null, paid_at: null,
+    });
+  }
+  return json(req, 404, { error: { code: 'not_found', message: 'mock' } });
+}
+
+/** --pay=server: mark the newest stub request paid (the local HitPay stub of scripts/dev/pay-harness.mjs). */
+function stubPayNewest() {
+  if (!STUB_STATE || !existsSync(STUB_STATE)) return false;
+  const st = JSON.parse(readFileSync(STUB_STATE, 'utf-8'));
+  const ids = Object.keys(st.requests ?? {});
+  const id = ids.at(-1);
+  if (!id) return false;
+  const r = st.requests[id];
+  r.status = 'completed';
+  r.payments = [{ id: 'walk-pay', status: 'succeeded', amount: r.amount, currency: 'MYR', payment_type: 'touch_n_go' }];
+  writeFileSync(STUB_STATE, JSON.stringify(st, null, 2));
+  return true;
+}
+
 async function makeCtx(browser, section, lang, vp, { blockStorage = false } = {}) {
   const context = await newContext(browser);
   try {
@@ -356,17 +435,34 @@ async function makeCtx(browser, section, lang, vp, { blockStorage = false } = {}
     nm: (name, why) => record('NOT MEASURED', `${prefix} ${name}`, why),
   };
 
+  // FORGE HITPAY: `c.pay` drives the mocked pay server (PAY=mock) and records what the page sent.
+  c.pay = { open: section === 'hitpay', status: 'pending', creates: [], hitpay: [], statusCalls: 0, lastRef: null, lastToken: null };
   await page.setRequestInterception(true);
   page.on('request', (req) => {
-    let host = '';
+    let u = null;
     try {
-      host = new URL(req.url()).hostname;
+      u = new URL(req.url());
     } catch {
       /* ignore */
     }
+    const host = u?.hostname ?? '';
     if (/(^|\.)(wa\.me|whatsapp\.com)$/i.test(host)) {
       diag.waRequests.push(req.url());
       req.abort('blockedbyclient').catch(() => {});
+    } else if (/(^|\.)hit-pay\.com$/i.test(host)) {
+      // Never the real HitPay: the redirect target is recorded and answered with a stub page.
+      c.pay.hitpay.push(req.url());
+      req.respond({ status: 200, contentType: 'text/html', body: '<!doctype html><title>HitPay stub</title><h1 data-hitpay-stub>HitPay stub</h1>' }).catch(() => {});
+    } else if (PAY === 'mock' && u && u.origin === ORIGIN && u.pathname.startsWith('/api/pay/')) {
+      payMock(c, req, u).catch(() => req.continue().catch(() => {}));
+    } else if (u && u.origin === ORIGIN && u.pathname === '/api/pay/create' && req.method() === 'POST') {
+      // --pay=server: record what the page sent, then let the real server answer
+      try {
+        c.pay.creates.push(JSON.parse(req.postData() ?? 'null'));
+      } catch {
+        c.pay.creates.push(null);
+      }
+      req.continue().catch(() => {});
     } else req.continue().catch(() => {});
   });
   page.on('response', (res) => {
@@ -1489,6 +1585,154 @@ const SECTIONS = {
   },
 };
 
+// ------------------------------------------------------------------ FORGE HITPAY section
+SECTIONS.hitpay = async (c) => {
+  const { page } = c;
+  const P = c.pay;
+  const shot = async (name) => {
+    const f = join(OUT, `hitpay-${c.lang}-${c.vp.short}-${name}.png`);
+    try {
+      await page.screenshot({ path: f });
+      c.check(existsSync(f), `screenshot hitpay-${c.lang}-${c.vp.short}-${name}.png`, f);
+    } catch (e) {
+      c.fail(`screenshot ${name}`, e.message);
+    }
+  };
+  const lsGet = (k) => page.evaluate((key) => localStorage.getItem(key), k);
+  const subtotal = CART_A.reduce((n, l) => n + ITEM[l.sku].sen * l.qty, 0);
+  const total = subtotal + PAY_DELIVERY_SEN;
+
+  // 1. step 2 online: Pay RM X securely, the total includes the panel delivery fee
+  if (!(await toCheckout(c, CART_A))) return;
+  if (!(await fillDetails(c))) return;
+  await submitDetails(c);
+  const payBtn = await until(async () => (await vis(page, tid('pay-hitpay')))[0], 8000);
+  if (!payBtn) return c.fail('online step 2: pay-hitpay visible', await textOf(page, tid('checkout')));
+  const label = await payBtn.evaluate((e) => e.textContent.trim());
+  const want = c.lang === 'ms' ? `Bayar RM ${fmt(total)} dengan selamat` : `Pay RM ${fmt(total)} securely`;
+  c.check(label === want, 'pay button copy + total (subtotal + delivery fee from /api/pay/config)', `${label} != ${want}`);
+  c.check(normMoney(await textOf(page, tid('order-total'))) === normMoney(rm(total)), 'order-total = subtotal + RM 8.00', await textOf(page, tid('order-total')));
+  const methods = await textOf(page, tid('pay-methods'));
+  c.check(/Touch 'n Go/.test(methods ?? '') && /HitPay/.test(methods ?? ''), 'methods line names the methods + HitPay', methods);
+  c.check(!(await count(page, tid('send-whatsapp'))), 'no WhatsApp ordering in online mode (6b)');
+  c.check(!(await count(page, tid('pay-not-ready'))), 'no "opens soon" notice when online payment is open');
+  await sleep(300);
+  await shot('step2-online');
+
+  // 2. click: create -> redirect to exactly https://checkout.hit-pay.com (intercepted)
+  await payBtn.click();
+  const went = await until(() => P.hitpay.length > 0, 10000);
+  if (!went) return c.fail('redirect to HitPay', `creates=${P.creates.length} error=${await textOf(page, tid('pay-error'))}`);
+  const dest = new URL(P.hitpay[0]);
+  c.check(dest.protocol === 'https:' && dest.hostname === 'checkout.hit-pay.com', 'redirect host is exactly checkout.hit-pay.com (https)', P.hitpay[0]);
+  const body = P.creates[0];
+  c.check(body && body.site === 'av' && body.lang === c.lang && /^[A-Za-z0-9-]{8,64}$/.test(body.idem ?? ''), 'create body: site av, page language, idem', body);
+  c.check(
+    Array.isArray(body?.lines) && body.lines.every((l) => Object.keys(l).sort().join() === 'qty,sku'),
+    'create sends only sku + qty per line (server prices)',
+    body?.lines
+  );
+  c.check(body?.details?.phone === '60121234567' && body?.details?.postcode === DETAILS.postcode, 'create sends the validated details', body?.details);
+
+  // 3. back on our site: the saved order carries the server ref + token; banner continues it with the SAME idem (R17)
+  if (!(await go(c, `/${c.lang}/products`))) return;
+  const snap = JSON.parse((await lsGet(KEY.order)) ?? 'null');
+  c.check(snap && snap.payMode === 'online' && /^[0-9a-f]{32}$/.test(snap.token ?? '') && REF_RE.test(snap.ref ?? ''), 'snapshot: online, ref + token from the server', snap && { ref: snap.ref, token: snap.token, payMode: snap.payMode });
+  if (!(await openDrawer(c))) return;
+  const banner = await until(async () => (await vis(page, tid('cart-banner')))[0], 5000);
+  c.check(Boolean(banner), 'drawer banner: order waiting for payment (O-7)');
+  if (banner) {
+    const btn = await banner.$('button');
+    await btn?.click();
+    const again = await until(async () => (await vis(page, tid('pay-hitpay')))[0], 6000);
+    c.check(Boolean(again), 'banner reopens step 2 with the pay button');
+    c.check((await textOf(page, tid('order-ref')))?.includes(snap?.ref ?? '#'), 'step 2 shows the server ref once a payment was started');
+    if (again) {
+      await again.click();
+      await until(() => P.creates.length > 1, 8000);
+      c.check(P.creates[1]?.idem === P.creates[0]?.idem, 'second pay click of the same order sends the same idem (R17)', [P.creates[0]?.idem, P.creates[1]?.idem]);
+    }
+  }
+  const ref = snap?.ref ?? P.lastRef;
+  const token = snap?.token ?? P.lastToken;
+  const paidPath = `/${c.lang}/order/paid?ref=${ref}&t=${token}`;
+
+  // 4. paid page, payment not completed: "Try again" keeps the cart
+  if (PAY === 'mock') {
+    P.status = 'failed';
+    if (!(await go(c, paidPath))) return;
+    const failed = await until(() => page.$eval(tid('paid-page'), (e) => e.dataset.status === 'failed').catch(() => false), 8000);
+    c.check(Boolean(failed), 'paid page: failed state', await page.$eval(tid('paid-page'), (e) => e.dataset.status).catch(() => 'no paid-page'));
+    c.check(JSON.parse((await lsGet(KEY.cart)) ?? '{"lines":[]}').lines.length === CART_A.length, 'cart kept while not paid');
+    await shot('paid-failed');
+    const retry = (await vis(page, tid('paid-retry')))[0];
+    if (retry) {
+      await retry.click();
+      c.check(Boolean(await until(() => count(page, tid('cart-drawer')), 6000)), '"Try again" opens the cart');
+      await closeDialogs(c, true);
+    } else c.fail('paid-retry visible', 'none');
+  }
+
+  // 5. paid page, pending -> paid (polls our status endpoint, never trusts the query)
+  if (PAY === 'mock') P.status = 'pending';
+  if (!(await go(c, `${paidPath}&status=completed&reference=fake`))) return;
+  c.check(
+    await page.$eval(tid('paid-page'), (e) => e.dataset.status === 'checking').catch(() => false),
+    'a "status=completed" in the query alone does NOT show paid'
+  );
+  if (PAY === 'mock') P.status = 'paid';
+  else c.check(stubPayNewest(), 'harness: the stub request is marked paid', STUB_STATE ?? 'no --stub-state');
+  const paid = await until(() => page.$eval(tid('paid-page'), (e) => e.dataset.status === 'paid').catch(() => false), 20000);
+  c.check(Boolean(paid), 'paid page: paid after the next status poll', await page.$eval(tid('paid-page'), (e) => e.dataset.status).catch(() => 'no paid-page'));
+  if (!paid) return;
+  const h1 = await textOf(page, 'h1');
+  c.check(h1 === (c.lang === 'ms' ? 'Bayaran diterima — terima kasih!' : 'Payment received — thank you!'), 'thank-you copy (SPEC 5.6)', h1);
+  c.check(normMoney(await textOf(page, tid('paid-total'))) === normMoney(rm(total)), 'paid summary total', await textOf(page, tid('paid-total')));
+  const wa = await page.$eval(tid('paid-whatsapp'), (a) => a.href).catch(() => null);
+  let text = '';
+  try {
+    text = new URL(wa).searchParams.get('text') ?? '';
+  } catch {
+    /* fails below */
+  }
+  c.check(wa && new URL(wa).pathname.includes(WA) || (wa ?? '').includes(`phone=${WA}`), 'WhatsApp button goes to 601111119912', wa);
+  c.check(text.includes(ref) && (c.lang === 'ms' ? /DIBAYAR melalui HitPay/ : /PAID via HitPay/).test(text), 'message carries the ref + PAID via HitPay', text);
+  c.check(text.includes(DETAILS.city), 'message carries the details saved on this device', text);
+  await until(async () => JSON.parse((await lsGet(KEY.cart)) ?? '{"lines":[]}').lines.length === 0, 4000);
+  c.check(JSON.parse((await lsGet(KEY.cart)) ?? '{"lines":[]}').lines.length === 0, 'paid lines left the cart');
+  c.check((await lsGet(KEY.order)) === null, 'saved order removed once paid');
+  const robots = await page.$eval('meta[name="robots"]', (m) => m.content).catch(() => null);
+  c.check(robots === 'noindex, nofollow', 'paid page is noindex', robots);
+  c.check(!(await page.$('link[rel="alternate"][hreflang]')), 'paid page has no hreflang alternates');
+  await sleep(300);
+  await shot('paid');
+  // reload: still paid, message kept without the saved order
+  if (await go(c, paidPath, true)) {
+    const again = await until(() => page.$eval(tid('paid-page'), (e) => e.dataset.status === 'paid').catch(() => false), 10000);
+    c.check(Boolean(again), 'reload of the paid page: still paid');
+  }
+
+  // 6. a paid page link of another order (no storage, bad token) = not found
+  await page.evaluate(() => localStorage.clear());
+  if (await go(c, `/${c.lang}/order/paid?ref=${ref}&t=${'f'.repeat(32)}`)) {
+    const miss = await until(() => page.$eval(tid('paid-page'), (e) => e.dataset.status === 'missing').catch(() => false), 10000);
+    c.check(Boolean(miss), 'wrong token: "We could not find this order"');
+  }
+
+  // 7. online payment closed: the "opens soon" notice + the WhatsApp fallback
+  if (PAY === 'mock') {
+    P.open = false;
+    const c2 = c;
+    await c2.page.evaluate(() => localStorage.clear());
+    if (!(await toStep2(c2, CART_A))) return;
+    const notice = await textOf(page, tid('pay-not-ready'));
+    const wantNotice = c.lang === 'ms' ? 'Bayaran dalam talian akan dibuka tidak lama lagi — hubungi kami melalui WhatsApp' : 'Online payment opens soon — message us on WhatsApp';
+    c.check(notice === wantNotice, 'closed: "Online payment opens soon — message us on WhatsApp"', notice);
+    c.check(Boolean(await count(page, tid('send-whatsapp'))), 'closed: WhatsApp send link is the way to order');
+    c.check(!(await count(page, tid('pay-hitpay'))), 'closed: no pay button');
+  }
+};
+
 // ------------------------------------------------------------------ run
 const startedAt = Date.now();
 const browser = await puppeteer.launch({ headless: 'shell', args: ['--no-sandbox'] });
@@ -1499,7 +1743,7 @@ await spare?.close().catch(() => {});
 process.on('unhandledRejection', (e) => record('FAIL', '[walk] unhandled rejection', String(e?.message ?? e)));
 
 console.log(`order-walk: ${BASE}  langs=${LANGS.join(',')}  viewports=${VIEWPORTS.map((v) => v.short).join(',')}  sections=${[...(onlySet.size ? onlySet : SECTION_NAMES)].join(',')}  out=${OUT}`);
-console.log(`mode: pay=${CHAT_MODE ? 'chat' : 'transfer'} delivery=${DELIVERY_NULL ? 'to be confirmed' : 'fixed fee'} messageStrings=${MSG ? 'imported' : 'not available'} uiStrings=${UI ? 'imported' : 'not available'}`);
+console.log(`mode: pay server=${PAY} (ORDER-R1 sections: online payment closed -> chat; hitpay section: open, delivery RM ${fmt(PAY_DELIVERY_SEN)}) messageStrings=${MSG ? 'imported' : 'not available'} uiStrings=${UI ? 'imported' : 'not available'}`);
 
 // The header is also checked at the awkward in-between widths (md breakpoint = 768).
 const HEADER_EXTRA = [768, 820, 900].map((w) => ({ short: `d${w}`, name: `desktop ${w}x800`, width: w, height: 800, mobile: false })).filter((v) => !flag('vp') || flag('vp') === v.short);

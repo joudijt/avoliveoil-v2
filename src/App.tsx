@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { LangLayout } from './routes/LangLayout';
 import { ScrollToTop } from './routes/ScrollToTop';
@@ -13,6 +14,9 @@ import { WhatsAppButton } from './components/ui/WhatsAppButton';
 import { CanvasRoute, CmsRoute } from './routes/cmsRoutes';
 import { useLandingChrome } from './cms/landingChrome';
 import { OrderRoot } from './order/OrderRoot';
+
+// The HitPay return page: its own lazy chunk, nothing of it in the first-render bundle (R13).
+const PaidPage = lazy(() => import('./order/PaidPage'));
 
 function App() {
   // The builder canvas is a bare surface inside the admin's iframe: no site chrome.
@@ -35,6 +39,7 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:slug" element={<ArticlePage />} />
+          <Route path="order/paid" element={<Suspense fallback={null}><PaidPage /></Suspense>} />
           {/* Pages built in the control panel. Static segments above always win, so a
               CMS slug can never shadow a built-in page (and RESERVED_SLUGS forbids it). */}
           <Route path=":slug" element={<CmsRoute />} />

@@ -116,6 +116,8 @@ interface SEOProps {
    * (Organization, seller, WebSite) are added, as on every other page.
    */
   resolved?: ResolvedSeo;
+  /** A private page (the HitPay return page): robots noindex, no hreflang alternates. */
+  noindex?: boolean;
 }
 
 /**
@@ -135,6 +137,7 @@ export function SEO({
   descriptionOverride,
   article,
   resolved,
+  noindex,
 }: SEOProps) {
   const { t } = useTranslation();
   const { lang = 'en' } = useParams<{ lang: string }>();
@@ -358,12 +361,10 @@ export function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
 
-      {altLangs.map((l) => (
-        <link key={l} rel="alternate" hrefLang={l} href={pathFor(l)} />
-      ))}
-      <link rel="alternate" hrefLang="x-default" href={pathFor(defaultLang)} />
+      {!noindex && altLangs.map((l) => <link key={l} rel="alternate" hrefLang={l} href={pathFor(l)} />)}
+      {!noindex && <link rel="alternate" hrefLang="x-default" href={pathFor(defaultLang)} />}
 
       <link rel="manifest" href={MANIFEST_BY_LANG[lang] ?? MANIFEST_BY_LANG.en} />
       <meta name="application-name" content={brandName} />

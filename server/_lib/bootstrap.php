@@ -131,6 +131,6 @@ function avo_content_version(): int
 }
 
 foreach (['db', 'http', 'auth', 'users', 'audit', 'settings', 'sanitize', 'data', 'seo', 'publish', 'pages',
-    'overrides', 'forms', 'mailer', 'submissions', 'media', 'system', 'render'] as $lib) {
+    'overrides', 'forms', 'mailer', 'submissions', 'media', 'system', 'render', 'pay'] as $lib) {
     require_once __DIR__ . '/' . $lib . '.php';
 }

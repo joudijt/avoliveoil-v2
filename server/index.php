@@ -49,6 +49,11 @@ function avo_routes(): array
         ['POST', '#^/api/auth/reset$#', fn () => avo_reset_password($b()), false],
         ['GET', '#^/api/public/page$#', fn () => avo_public_page(), false],
         ['POST', '#^/api/forms/(\d+)/submit$#', fn ($p) => avo_route_submit((int) $p[1]), false],
+        // online payment (FORGE HITPAY): contract in docs/forge/HITPAY-AV-HANDOFF.md
+        ['GET', '#^/api/pay/config$#', fn () => avo_pay_config_route(), false],
+        ['POST', '#^/api/pay/create$#', fn () => avo_pay_create_route(), false],
+        ['POST', '#^/api/pay/webhook$#', fn () => avo_pay_webhook_route(), false],
+        ['GET', '#^/api/pay/status$#', fn () => avo_pay_status_route(), false],
 
         // signed in
         ['POST', '#^/api/auth/password$#', fn ($p, $s) => avo_change_password($s, $b()), true],
@@ -115,6 +120,12 @@ function avo_routes(): array
         }, true],
         ['GET', '#^/api/settings$#', fn () => avo_settings_get(), true],
         ['POST', '#^/api/settings$#', fn ($p, $s) => avo_settings_save($s, $b()), true],
+        // orders + Payments (HitPay) section; the CMS has no roles, every signed-in user is an admin
+        ['GET', '#^/api/admin/orders$#', fn () => avo_admin_orders(), true],
+        ['POST', '#^/api/admin/orders/((?:AV|NF)-\d{6}-[A-Z2-9]{4})/recheck$#', fn ($p, $s) => avo_admin_order_recheck($s, $p[1]), true],
+        ['GET', '#^/api/admin/payments$#', fn () => avo_admin_payments_get(), true],
+        ['POST', '#^/api/admin/payments$#', fn ($p, $s) => avo_admin_payments_save($s, $b()), true],
+        ['POST', '#^/api/admin/payments/test$#', fn ($p, $s) => avo_admin_payments_test($s), true],
     ];
 }
 

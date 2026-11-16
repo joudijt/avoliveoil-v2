@@ -1,6 +1,8 @@
 /**
- * Checkout (FORGE ORDER-R1), part of the lazy chunk. Three steps in one <dialog>:
- * 1 details form, 2 review (chat mode) or pay panel (transfer mode), 3 sent.
+ * Checkout (FORGE ORDER-R1 + FORGE HITPAY), part of the lazy chunk. Steps in one <dialog>:
+ * 1 details form; 2 "Check and pay" (online mode: Pay RM X securely -> HitPay page), or, only while
+ * online payment is not open yet (chat mode), 2 review + send on WhatsApp and 3 sent.
+ * The return from HitPay lands on /<lang>/order/paid (PaidPage.tsx), not in this dialog.
  * Steps 2 and 3 are painted ONLY from the frozen order snapshot, in the snapshot's language (O-6).
  * The dialog closes only by its buttons: a stray tap or Escape must not hide a half-typed form.
  */
@@ -19,7 +21,7 @@ import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiX } from 'react-icons/fi';
 import { findItem } from './catalog';
-import { ORDER_CONFIG, payReady } from './config';
+import { ORDER_CONFIG } from './config';
 import {
   FIELD_MAX,
   FIELD_ORDER,
@@ -28,7 +30,11 @@ import {
   createOrder,
   fitOrderMessage,
   formatRM,
+  isHitpayCheckoutUrl,
+  isRef,
   lineTotalSen,
+  makeIdem,
+  orderContentKey,
   parseOrder,
   plainChatUrl,
   serializeOrder,
@@ -48,7 +54,6 @@ import {
   BTN_LINE,
   BTN_WA,
   CARD,
-  FOCUS_RING,
   ICON_BTN,
   LABEL,
   LINK,
@@ -58,6 +63,7 @@ import {
 } from './scrollLock';
 import { checkoutIntent, currentCart, orderActions, orderStorage, useOrderRev, useOrderUi } from './store';
 import { UI_STRINGS, fill, type UiStrings } from './uiStrings';
+import { createPayment, forgetPayConfig, loadPayConfig, type PayConfig } from './payApi';
 
 const KEYS = ORDER_CONFIG.keys;
 /** Exactly the fields core.ts takes, nothing else from the site config. */
@@ -69,11 +75,6 @@ const CORE_CFG: CoreConfig = {
   urlCap: ORDER_CONFIG.urlCap,
   orderTtlMs: ORDER_CONFIG.orderTtlMs,
 };
-/**
- * The pay panel asks for an exact amount, so it is used only when the pay values are set AND
- * the delivery fee is known. Otherwise the order goes to chat and the total is confirmed there.
- */
-const transferReady = (): boolean => payReady() && ORDER_CONFIG.deliverySen !== null;
 type Values = Record<DetailField, string>;
 const BLANK: Values = { name: '', phone: '', address: '', postcode: '', city: '', state: '', note: '' };
 
@@ -183,7 +184,6 @@ function useOrderLinks(order: Order | null): { message: string; fits: boolean; h
 
 const FIELD_BOX = `box-border w-full min-h-[50px] rounded-xl border-[1.5px] border-olive-dark/35 bg-cream px-3.5 py-3 text-[17px] leading-snug text-olive-dark aria-[invalid=true]:border-2 aria-[invalid=true]:border-red-700 focus-visible:border-olive-dark focus-visible:outline-[3px] focus-visible:outline-offset-1 focus-visible:outline-gold-ink`;
 const ROW = 'flex items-baseline justify-between gap-4';
-const COPY_BTN = `min-h-[44px] min-w-[76px] shrink-0 cursor-pointer rounded-xl bg-olive-dark px-3.5 font-semibold text-cream transition-colors hover:bg-olive ${FOCUS_RING}`;
 const MONO = 'min-w-0 text-[22px] font-semibold tracking-wide tabular-nums [overflow-wrap:anywhere] select-all';
 
 /* ---------- drawer banner (O-7) ---------- */
@@ -194,7 +194,7 @@ export function OrderBanner() {
   const rev = useOrderRev();
   // Re-read whenever the saved order changes (`rev` is only a trigger).
   const order = useMemo(() => (ui.hasOrder && rev >= 0 ? readOrder() : null), [ui.hasOrder, rev]);
-  const shown = order && (order.step === 3 || (order.step === 2 && order.payMode === 'transfer')) ? order : null;
+  const shown = order && (order.step === 3 || (order.step === 2 && order.payMode === 'online')) ? order : null;
 
   useEffect(() => {
     // The key is there but it does not hold a live order: remove it so the header dot goes too.
@@ -299,7 +299,7 @@ function Summary({ order, s, onEdit }: { order: Order; s: UiStrings; onEdit?: ()
           </dd>
         </div>
       </dl>
-      <p className={SMALL}>{s.review.confirmTotal}</p>
+      {order.payMode === 'chat' && <p className={SMALL}>{s.review.confirmTotal}</p>}
       <p className={`${LABEL} mt-2`}>{s.review.deliverTo}</p>
       <p className="[overflow-wrap:anywhere]">
         {d.name}
@@ -355,12 +355,35 @@ export function Checkout() {
   // false after "Forget my details": nothing is stored again until the form is submitted.
   const remember = useRef(true);
   const lastSend = useRef(0);
+  // FORGE HITPAY: is online payment open (server answer, cached for the page view)?
+  const [payCfg, setPayCfg] = useState<PayConfig | null>(null);
+  const [paying, setPaying] = useState(false);
+  const [payError, setPayError] = useState('');
 
   const step: 1 | 2 | 3 = order ? order.step : 1;
   // O-6: an order that exists is shown in its own language, whatever the site language is now.
   const s = UI_STRINGS[order && step !== 1 ? order.lang : siteLang];
-  const links = useOrderLinks(step === 1 ? null : order);
-  const transfer = order?.payMode === 'transfer';
+  const links = useOrderLinks(step === 1 || order?.payMode === 'online' ? null : order);
+  const online = order ? order.payMode === 'online' : payCfg?.ready === true;
+
+  useEffect(() => {
+    let live = true;
+    void loadPayConfig(ORDER_CONFIG.paySite).then((c) => {
+      if (live) setPayCfg(c);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
+
+  // Back from the HitPay page (back/forward cache): the pay button works again.
+  useEffect(() => {
+    const onShow = (e: PageTransitionEvent): void => {
+      if (e.persisted) setPaying(false);
+    };
+    window.addEventListener('pageshow', onShow);
+    return () => window.removeEventListener('pageshow', onShow);
+  }, []);
 
   // Nothing to check out (empty cart and no order to resume): show the cart instead.
   useEffect(() => {
@@ -409,10 +432,6 @@ export function Checkout() {
     return () => window.clearTimeout(timer);
   }, [status]);
 
-  const copy = (text: string): void => {
-    void copyText(text, ref.current).then((ok) => setStatus(ok ? s.copied : s.copyFailed));
-  };
-
   /** Copies the order message; when that fails the message is opened and selected for a manual copy. */
   const copyMessage = (text: string): void => {
     void copyText(text, ref.current).then((ok) => {
@@ -454,7 +473,7 @@ export function Checkout() {
     setStatus(s.checkout.forgotten);
   };
 
-  const submit = (e: FormEvent): void => {
+  const submit = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
     const result = validateDetails(values, STATES_MY);
     if (!result.ok) {
@@ -480,22 +499,73 @@ export function Checkout() {
       orderActions.openCart();
       return;
     }
+    const cfg = await loadPayConfig(ORDER_CONFIG.paySite);
+    setPayCfg(cfg);
+    const payMode = cfg.ready ? 'online' : 'chat';
     // Going back to the details and forward again keeps the reference; a sent order never lends its own.
     const previous = readOrder();
+    const draft = createOrder({
+      lines,
+      details: result.details,
+      lang: siteLang,
+      payMode,
+      cfg: { ...CORE_CFG, deliverySen: cfg.ready ? cfg.deliverySen : null },
+      now: new Date(),
+      keepRef: previous && previous.step !== 3 ? previous.ref : undefined,
+    });
+    // R17: the same order (same lines, details, language) keeps its idempotency key, ref and token,
+    // so a second "Pay" opens the SAME HitPay request; any change is a new order on the server.
+    const same = previous && previous.step !== 3 && previous.payMode === 'online' && payMode === 'online' && orderContentKey(previous) === orderContentKey(draft);
     const frozen: Order = {
-      ...createOrder({
-        lines,
-        details: result.details,
-        lang: siteLang,
-        payMode: transferReady() ? 'transfer' : 'chat',
-        cfg: CORE_CFG,
-        now: new Date(),
-        keepRef: previous && previous.step !== 3 ? previous.ref : undefined,
-      }),
+      ...draft,
       step: 2,
+      ...(payMode === 'online'
+        ? same && previous.idem
+          ? { idem: previous.idem, ...(previous.token ? { ref: previous.ref, token: previous.token } : {}) }
+          : { idem: makeIdem() }
+        : {}),
     };
+    setPayError('');
     saveOrder(frozen);
     setOrder(frozen);
+  };
+
+  /** Online mode: create (or reuse) the HitPay request on our server, then leave for HitPay. */
+  const pay = async (): Promise<void> => {
+    if (!order || order.payMode !== 'online' || paying) return;
+    setPaying(true);
+    setPayError('');
+    const idem = order.idem ?? makeIdem();
+    const res = await createPayment({ site: ORDER_CONFIG.paySite, lang: order.lang, idem, lines: order.lines, details: order.details });
+    if (res.ok && isRef(res.ref, ORDER_CONFIG.refPrefix)) {
+      const next: Order = { ...order, ref: res.ref, token: res.token, idem };
+      saveOrder(next);
+      setOrder(next);
+      if (res.status === 'paid') {
+        window.location.assign(`/${order.lang}/order/paid?ref=${encodeURIComponent(res.ref)}&t=${res.token}`);
+        return;
+      }
+      // R10: the customer only ever leaves for exactly https://checkout.hit-pay.com.
+      if (isHitpayCheckoutUrl(res.url)) {
+        window.location.assign(res.url);
+        return; // the button stays busy until the page is gone (or comes back from bfcache)
+      }
+    }
+    const o = s.online;
+    const code = res.ok ? 'bad_answer' : res.code;
+    if (code === 'pay_not_ready') forgetPayConfig();
+    setPayError(
+      code === 'invalid'
+        ? o.detailsRefused
+        : code === 'unknown_sku'
+          ? o.cartChanged
+          : code === 'rate_limited'
+            ? o.tooMany
+            : code === 'order_review'
+              ? o.review
+              : o.unavailable
+    );
+    setPaying(false);
   };
 
   /* ----- step 2 and 3 ----- */
@@ -536,8 +606,7 @@ export function Checkout() {
     close();
   };
 
-  const stepNames = [s.checkout.step1, transfer || (!order && transferReady()) ? s.checkout.step2Transfer : s.checkout.step2Chat, s.checkout.step3];
-  const pay = ORDER_CONFIG.pay;
+  const stepNames = online ? [s.checkout.step1, s.checkout.step2Online] : [s.checkout.step1, s.checkout.step2Chat, s.checkout.step3];
   const totalSen = order ? computeTotals(order.lines, order.deliverySen).totalSen : 0;
   const heading = 'text-[26px] leading-tight font-semibold text-olive-dark focus:outline-none';
   const foot =
@@ -597,7 +666,7 @@ export function Checkout() {
             <h2 ref={headingRef} tabIndex={-1} className={heading}>
               {s.checkout.step1}
             </h2>
-            <form ref={formRef} noValidate onSubmit={submit} className="grid gap-4">
+            <form ref={formRef} noValidate onSubmit={(e) => void submit(e)} className="grid gap-4">
               <Field field="name" label={s.checkout.name} error={errors.name && errorText(s, 'name', errors.name)}>
                 {(a) => (
                   <input
@@ -730,74 +799,12 @@ export function Checkout() {
           </section>
         )}
 
-        {step === 2 && order && links && (
-          <section className="grid gap-4 px-4 pt-5 sm:px-5">
+        {step === 2 && order && online && (
+          <section className="grid gap-4 px-4 pt-5 pb-5 sm:px-5" data-pay-mode="online">
             <h2 ref={headingRef} tabIndex={-1} className={heading}>
-              {transfer ? s.review.titleTransfer : s.review.titleChat}
+              {s.review.titleOnline}
             </h2>
-
-            {transfer ? (
-              <>
-                <div className={`${CARD} grid gap-2`}>
-                  <p className={LABEL}>{s.pay.amount}</p>
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-[34px] leading-none font-bold tabular-nums">{formatRM(totalSen)}</p>
-                    <button type="button" aria-label={s.pay.copyAmount} onClick={() => copy(plainAmount(totalSen))} className={COPY_BTN}>
-                      {s.pay.copy}
-                    </button>
-                  </div>
-                  <p className={SMALL}>{s.pay.amountHint}</p>
-                </div>
-                <div className={`${CARD} grid gap-2`}>
-                  <p className={LABEL}>{s.review.refLabel}</p>
-                  <div className="flex items-center justify-between gap-3">
-                    <p data-testid="order-ref" className={MONO}>
-                      {order.ref}
-                    </p>
-                    <button type="button" aria-label={s.pay.copyRef} onClick={() => copy(order.ref)} className={COPY_BTN}>
-                      {s.pay.copy}
-                    </button>
-                  </div>
-                  <p className={SMALL}>{s.pay.refHint}</p>
-                </div>
-                {pay.duitnowNumber && (
-                  <div className={`${CARD} grid gap-2`}>
-                    <p className={LABEL}>{s.pay.duitnowTitle}</p>
-                    <div className="flex items-center justify-between gap-3">
-                      <p className={MONO}>{pay.duitnowNumber}</p>
-                      <button
-                        type="button"
-                        aria-label={s.pay.copyDuitnow}
-                        onClick={() => copy(pay.duitnowNumber ?? '')}
-                        className={COPY_BTN}
-                      >
-                        {s.pay.copy}
-                      </button>
-                    </div>
-                    {pay.accountName && (
-                      <p className="rounded-md border-s-4 border-gold-ink bg-bg px-3 py-2.5 font-semibold">
-                        {fill(s.pay.nameCheck, { name: pay.accountName })}
-                      </p>
-                    )}
-                  </div>
-                )}
-                {pay.tngQrImage && (
-                  <div className={`${CARD} grid justify-items-center gap-2 text-center`}>
-                    <p className={`${LABEL} justify-self-stretch text-start`}>{s.pay.qrTitle}</p>
-                    <img
-                      src={pay.tngQrImage}
-                      alt={s.pay.qrAlt}
-                      width={240}
-                      height={240}
-                      loading="lazy"
-                      decoding="async"
-                      className="aspect-square h-auto w-60 max-w-[calc(100%-2rem)] rounded-xl border border-olive-dark/15 bg-white p-4 [box-sizing:content-box]"
-                    />
-                  </div>
-                )}
-                <p className="text-center text-[17px] font-semibold">{s.pay.receiptLine}</p>
-              </>
-            ) : (
+            {order.token && (
               <div className={`${CARD} grid gap-1`}>
                 <p className={LABEL}>{s.review.refLabel}</p>
                 <p data-testid="order-ref" className={MONO}>
@@ -805,9 +812,57 @@ export function Checkout() {
                 </p>
               </div>
             )}
+            <Summary order={order} s={s} onEdit={paying ? undefined : backToDetails} />
+            <p className={`${SMALL} text-center`} data-testid="pay-methods">
+              {s.online.methods}
+            </p>
+            {payError && (
+              <div role="alert" data-testid="pay-error" className="grid gap-2 rounded-xl border border-red-700/40 bg-cream px-3.5 py-3 text-[15px] font-medium">
+                <p>{payError}</p>
+                <a href={plainChatUrl(ORDER_CONFIG.whatsapp, false)} target="_blank" rel="noopener" className={`${LINK} justify-self-start`}>
+                  {s.online.notReadyAction}
+                </a>
+              </div>
+            )}
+            <div className={foot}>
+              <button
+                type="button"
+                data-testid="pay-hitpay"
+                disabled={paying}
+                aria-busy={paying || undefined}
+                onClick={() => void pay()}
+                className={`${BTN_GOLD} disabled:cursor-wait disabled:opacity-70`}
+              >
+                {paying ? s.online.opening : fill(s.online.pay, { total: plainAmount(totalSen) })}
+              </button>
+              <p className={`${SMALL} text-center`}>{s.online.secureNote}</p>
+            </div>
+            {!paying && (
+              <button type="button" onClick={backToDetails} className={`${LINK} justify-self-center`}>
+                {s.review.back}
+              </button>
+            )}
+          </section>
+        )}
+
+        {step === 2 && order && !online && links && (
+          <section className="grid gap-4 px-4 pt-5 sm:px-5" data-pay-mode="chat">
+            <h2 ref={headingRef} tabIndex={-1} className={heading}>
+              {s.review.titleChat}
+            </h2>
+            {/* HITPAY 5.1: the only state in which ordering on WhatsApp shows. */}
+            <p data-testid="pay-not-ready" className="rounded-xl border border-gold-ink/50 bg-cream px-3.5 py-3 font-semibold">
+              {s.online.notReady}
+            </p>
+            <div className={`${CARD} grid gap-1`}>
+              <p className={LABEL}>{s.review.refLabel}</p>
+              <p data-testid="order-ref" className={MONO}>
+                {order.ref}
+              </p>
+            </div>
 
             <Summary order={order} s={s} onEdit={backToDetails} />
-            {!transfer && <p className="text-center font-semibold">{s.review.confirmChat}</p>}
+            <p className="text-center font-semibold">{s.review.confirmChat}</p>
             <MessagePreview message={links.message} label={s.review.showMessage} />
 
             {!links.fits && (
@@ -829,7 +884,7 @@ export function Checkout() {
                   className={BTN_WA}
                 >
                   <FaWhatsapp className="h-6 w-6 shrink-0" aria-hidden="true" />
-                  <span>{transfer ? s.review.sendPaid : s.review.send}</span>
+                  <span>{s.review.send}</span>
                 </a>
               ) : (
                 <button type="button" data-testid="copy-message" onClick={() => copyMessage(links.message)} className={BTN_GOLD}>
@@ -865,13 +920,7 @@ export function Checkout() {
             <h2 ref={headingRef} tabIndex={-1} className={heading}>
               {s.sent.title}
             </h2>
-            <p className="text-lg">
-              {!links.fits
-                ? `${s.sent.bodyNoFit}${transfer ? ` ${s.sent.attachReceipt}` : ''}`
-                : transfer
-                  ? s.sent.bodyTransfer
-                  : s.sent.bodyChat}
-            </p>
+            <p className="text-lg">{!links.fits ? s.sent.bodyNoFit : s.sent.bodyChat}</p>
 
             <div className={`${CARD} grid gap-1`}>
               <p className={LABEL}>{s.review.refLabel}</p>
