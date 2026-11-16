@@ -420,7 +420,14 @@ function avo_pay_settle(string $requestId, int $timeout = 20): string
     if (!$order) return 'unknown';
     $now = avo_now();
     db_exec('UPDATE orders SET last_fetch_at = ? WHERE ref = ?', [$now, $order['ref']]);
-    $data = avo_hitpay_call('GET', '/payment-requests/' . rawurlencode($requestId), [], $timeout);
+    try {
+        $data = avo_hitpay_call('GET', '/payment-requests/' . rawurlencode($requestId), [], $timeout);
+    } catch (AvoPayError $e) {
+        if ($e->getCode() !== 404) throw $e;
+        // HitPay no longer knows this request (deleted): nothing can ever be paid on it.
+        $data = ['status' => 'canceled'];
+        db_exec('UPDATE pay_requests SET note = COALESCE(note, ?) WHERE id = ?', ['gone at HitPay (404)', $pr['id']]);
+    }
     db_exec('UPDATE pay_requests SET checked_at = ? WHERE id = ?', [$now, $pr['id']]);
     $st = strtolower((string) ($data['status'] ?? ''));
 
@@ -662,9 +669,11 @@ function avo_pay_supersede(array $new): void
             db_exec("UPDATE pay_requests SET status = 'canceled', note = ? WHERE request_id = ? AND status = 'pending'", ['superseded by ' . $new['ref'], $rid]);
         }
         $fresh = db_one('SELECT status, review_at FROM orders WHERE ref = ?', [$ref]);
-        if ($closedAll && $fresh && $fresh['status'] === 'pending' && $fresh['review_at'] === null
+        // 'failed' with no note = closed a moment ago by settle (request gone at HitPay): still record why.
+        if ($closedAll && $fresh && ($fresh['status'] === 'pending' || ($fresh['status'] === 'failed' && db_val('SELECT note FROM orders WHERE ref = ?', [$ref]) === null))
+            && $fresh['review_at'] === null
             && (int) db_val("SELECT COUNT(*) FROM pay_requests WHERE order_ref = ? AND status = 'pending'", [$ref]) === 0) {
-            db_exec("UPDATE orders SET status = 'failed', note = ? WHERE ref = ? AND status = 'pending'", ['superseded by ' . $new['ref'], $ref]);
+            db_exec("UPDATE orders SET status = 'failed', note = ? WHERE ref = ? AND status IN ('pending','failed') AND note IS NULL", ['superseded by ' . $new['ref'], $ref]);
             avo_log('info', 'order superseded', ['ref' => $ref, 'by' => $new['ref']]);
         }
     }
