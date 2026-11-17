@@ -730,6 +730,7 @@ function avo_pay_create_route(): array
 
     if (!avo_pay_ready($site)) avo_fail(503, 'pay_not_ready', 'Online payment is not open yet. Please message us on WhatsApp.');
     $delivery = (int) avo_pay_delivery_sen($site);
+    if (!empty($prices['nodelivery'][$site][$sku])) $delivery = 0; // the RM 1 TEST pack (owner 2026-11-17)
     $total = $subtotal + $delivery;
     if ($total < AVO_PAY_MIN_SEN) avo_fail(422, 'invalid', 'The total is too small to pay online.');
 

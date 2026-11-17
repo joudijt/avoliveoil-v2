@@ -6,7 +6,9 @@
     { "id": "pack2", "sku": "noor-fes:pack2", "bottles": 2, "priceSen": 24900,
       "name": { "en": "Noor Fès, 2 bottles (500 ml each)", "ms": "Noor Fès, 2 botol (500 ml setiap satu)" } },
     { "id": "pack3", "sku": "noor-fes:pack3", "bottles": 3, "priceSen": 34900,
-      "name": { "en": "Noor Fès, 3 bottles (500 ml each)", "ms": "Noor Fès, 3 botol (500 ml setiap satu)" } }
+      "name": { "en": "Noor Fès, 3 bottles (500 ml each)", "ms": "Noor Fès, 3 botol (500 ml setiap satu)" } },
+    { "id": "pack0", "sku": "noor-fes:pack0", "bottles": 1, "priceSen": 100, "noDelivery": true,
+      "name": { "en": "TEST Noor Fès, 1 bottle (RM 1 test order)", "ms": "UJIAN Noor Fès, 1 botol (pesanan ujian RM 1)" } }
   ],
   "aliases": {
     "noor-fes:500": "noor-fes:pack1",

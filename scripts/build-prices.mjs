@@ -93,6 +93,7 @@ export async function buildPrices() {
   if (packs.length < 1) throw new Error('build-prices: noorfes.json needs a non-empty packs array');
   const nfTable = {};
   const bottles = {};
+  const noDelivery = {};
   for (const pk of packs) {
     if (!/^pack\d$/.test(pk.id ?? '') || pk.sku !== `noor-fes:${pk.id}`) throw new Error(`build-prices: bad Noor Fès pack ${JSON.stringify(pk.id)}`);
     if (!Number.isInteger(pk.priceSen) || pk.priceSen <= 0) throw new Error(`build-prices: noorfes.json ${pk.id} priceSen must be a positive integer`);
@@ -100,6 +101,7 @@ export async function buildPrices() {
     nfTable[pk.sku] = pk.priceSen;
     bottles[pk.sku] = pk.bottles;
     names[pk.sku] = pk.name;
+    if (pk.noDelivery === true) noDelivery[pk.sku] = true; // TEST pack (owner 2026-11-17): delivery 0
   }
   for (const [alias, target] of Object.entries(nf.aliases ?? {})) {
     if (!nfTable[target]) throw new Error(`build-prices: alias ${alias} points at unknown sku ${target}`);
@@ -134,6 +136,8 @@ export async function buildPrices() {
       aliases: { av: {}, nf: { ...(nf.aliases ?? {}) } },
       // bottles per NF package sku (qty is always 1 for a pack; BUY-NOW B3)
       packs: { av: {}, nf: bottles },
+      // skus charged with no delivery fee (the RM 1 TEST pack)
+      nodelivery: { av: {}, nf: noDelivery },
       names,
       states: [...strings.STATES_MY],
     },
