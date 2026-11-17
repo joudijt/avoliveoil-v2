@@ -278,7 +278,7 @@ test('pay: good webhook -> fetch -> paid once, one owner email; replay is a no-o
     $new = array_slice(mails(), $mailsBefore);
     eq(count($new), 1, 'one email');
     $m = parse_eml($new[0]);
-    eq($m['headers']['to'][0], 'orders@avoliveoil.com', 'to the notify address');
+    eq($m['headers']['to'][0], 'orders@avoliveoil.com', 'to the notify address only (the Noor Fes inbox gets NF orders only)');
     contains(mb_decode_mimeheader($m['headers']['subject'][0]), 'Paid order ' . $p['ref'] . ' RM 226.00 (Arabian Village)', 'subject');
     foreach (['1. Extra Virgin 500 ml x 2 = RM 218.00', 'Delivery: RM 8.00', 'Total: RM 226.00', 'touch_n_go', 'Phone: +' . pay_intl($p['body']), 'Address: 12 Jalan Mawar, Kajang, 43000, Selangor'] as $line) {
         contains($m['text'], $line, 'email body');
@@ -400,6 +400,7 @@ test('pay: Noor Fès packs (site nf): RM 10 delivery totals 159/259/359, alias =
     $new = array_slice(mails(), $mailsBefore);
     eq(count($new), 1, 'one NF email');
     $m = parse_eml($new[0]);
+    eq($m['headers']['to'][0], 'orders@avoliveoil.com, noorfes-inbox@example.com', 'NF order email: notify address + the Noor Fes inbox from pay-local.php (owner 2026-11-17)');
     foreach (['1. Noor Fès, 2 bottles (500 ml each) = RM 249.00', 'Delivery: RM 10.00', 'Total: RM 259.00', 'No 3, Jalan Bunga, Taman Melati, Kajang, 43000, Selangor'] as $line) {
         contains($m['text'], $line, 'NF email body');
     }

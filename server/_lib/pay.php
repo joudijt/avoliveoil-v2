@@ -173,6 +173,30 @@ function avo_pay_notify_email(): string
     return $v !== '' ? $v : avo_pay_notify_default();
 }
 
+/**
+ * Extra order-email inboxes per site, on top of the notify address (owner 2026-11-17: one for Noor Fès).
+ * Kept OUT of git (the repo is public): `pay-local.php` next to this file returns e.g. ['nf' => ['x@y.com']].
+ * It is uploaded by hand and protected from `ftp-deploy.py --clean`. AVO_PAY_NOTIFY_EXTRA_FILE (tests) wins.
+ * Missing or broken file = no extra inboxes.
+ */
+function avo_pay_site_notify_extra(): array
+{
+    static $map = null;
+    if ($map !== null) return $map;
+    $env = getenv('AVO_PAY_NOTIFY_EXTRA_FILE');
+    $file = is_string($env) && $env !== '' ? $env : __DIR__ . '/pay-local.php';
+    $v = is_file($file) ? (static fn () => include $file)() : null;
+    return $map = is_array($v) ? $v : [];
+}
+
+/** Every valid recipient of the order emails of one site: the notify address + that site's extra inboxes. */
+function avo_pay_notify_list(string $site): array
+{
+    $list = array_merge([avo_pay_notify_email()], (array) (avo_pay_site_notify_extra()[$site] ?? []));
+    $list = array_map(fn ($e) => strtolower(trim((string) $e)), $list);
+    return array_values(array_unique(array_filter($list, 'avo_valid_email')));
+}
+
 /* ---------------------------------------------------------------- money + text helpers */
 
 function avo_sen_str(int $sen): string
@@ -580,12 +604,12 @@ function avo_pay_purpose(string $site, string $ref, array $lines): string
  */
 function avo_pay_notify_paid(int $max = 3): void
 {
-    $to = avo_pay_notify_email();
-    if (!avo_valid_email($to)) return;
     $now = avo_now();
     $rows = db_all("SELECT * FROM orders WHERE status = 'paid' AND notified_at IS NULL AND notify_attempts < ? AND (last_notify_at IS NULL OR last_notify_at <= ?)
         ORDER BY paid_at LIMIT " . (int) $max, [AVO_PAY_NOTIFY_MAX, $now - AVO_PAY_NOTIFY_EVERY]);
     foreach ($rows as $o) {
+        $to = avo_pay_notify_list((string) $o['site']);
+        if (!$to) continue;
         // Claim the row (compare-and-set on notify_attempts): two parallel polls never both send.
         $claimed = db_exec('UPDATE orders SET notify_attempts = notify_attempts + 1, last_notify_at = ?
             WHERE ref = ? AND notified_at IS NULL AND notify_attempts = ? AND (last_notify_at IS NULL OR last_notify_at <= ?)',
@@ -594,7 +618,7 @@ function avo_pay_notify_paid(int $max = 3): void
         $subject = 'Paid order ' . $o['ref'] . ' RM ' . avo_sen_str((int) $o['total_sen']) . ' (' . avo_pay_site_name((string) $o['site']) . ')';
         $text = 'A customer paid online for this order. Payment checked with HitPay.' . "\n\n" . avo_pay_order_text($o) . "\n";
         $html = '<pre style="font:14px/1.5 sans-serif;white-space:pre-wrap">' . htmlspecialchars($text, ENT_QUOTES, 'UTF-8') . '</pre>';
-        $r = avo_mail_send([$to], $subject, $text, $html, null, 'order');
+        $r = avo_mail_send($to, $subject, $text, $html, null, 'order');
         if ($r['status'] === 'sent') db_exec('UPDATE orders SET notified_at = ? WHERE ref = ?', [avo_now(), $o['ref']]);
     }
 }
@@ -602,17 +626,17 @@ function avo_pay_notify_paid(int $max = 3): void
 /** One-off owner alert for a request that needs a human (needs_review / double payment). */
 function avo_pay_alert(string $ref, string $requestId, string $kind, string $why): void
 {
-    $to = avo_pay_notify_email();
-    if (!avo_valid_email($to)) return;
     $o = db_one('SELECT * FROM orders WHERE ref = ?', [$ref]);
     if (!$o) return;
+    $to = avo_pay_notify_list((string) $o['site']);
+    if (!$to) return;
     $subject = ($kind === 'double_paid' ? 'REFUND NEEDED: order ' : 'CHECK payment of order ') . $ref . ' (' . avo_pay_site_name((string) $o['site']) . ')';
     $text = ($kind === 'double_paid'
         ? "This order was paid twice. Refund the second payment in the HitPay dashboard.\n"
         : "HitPay says this payment is completed, but it does not match the order, so the order was NOT marked paid. Check it in the HitPay dashboard.\n")
         . 'Reason: ' . $why . "\nHitPay payment request: " . $requestId . "\n\n" . avo_pay_order_text($o) . "\n";
     $html = '<pre style="font:14px/1.5 sans-serif;white-space:pre-wrap">' . htmlspecialchars($text, ENT_QUOTES, 'UTF-8') . '</pre>';
-    avo_mail_send([$to], $subject, $text, $html, null, 'order');
+    avo_mail_send($to, $subject, $text, $html, null, 'order');
 }
 
 /* ---------------------------------------------------------------- public routes */

@@ -55,7 +55,8 @@ SELFTEST_FILE = os.path.join(REPO, ".cms-selftest")
 # Server-owned; deleting any of these breaks the account, the TLS renewal or the
 # owner's uploaded photos.
 # /noor-fes = a separate site (repo E:\noorfes-lp) living in this docroot since 2026-11-10.
-PROTECTED = {"/cgi-bin", "/.well-known", "/.ftpquota", "/uploads", "/noor-fes"}
+# /api/_lib/pay-local.php = the extra order inboxes, kept out of git (public repo), uploaded by hand.
+PROTECTED = {"/cgi-bin", "/.well-known", "/.ftpquota", "/uploads", "/noor-fes", "/api/_lib/pay-local.php"}
 
 DRY_RUN = "--dry-run" in sys.argv
 CLEAN = "--clean" in sys.argv

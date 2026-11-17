@@ -78,6 +78,11 @@ $env['AVO_CMS_OFFLINE'] = '1';
 $env['AVO_CMS_TEST_HOOKS'] = '1';
 $env['AVO_HITPAY_BASE'] = 'http://127.0.0.1:' . STUB_PORT . '/v1';
 $env['HITPAY_STUB_STATE'] = $stubState;
+// Extra order inboxes come from a file kept out of git (pay.php avo_pay_site_notify_extra); the tests use their own.
+$notifyExtra = "$tmp/pay-local.php";
+file_put_contents($notifyExtra, "<?php return ['nf' => ['noorfes-inbox@example.com']];
+");
+$env['AVO_PAY_NOTIFY_EXTRA_FILE'] = $notifyExtra;
 $log = "$tmp/server.log";
 $proc = proc_open(
     [PHP_BINARY, '-d', 'upload_max_filesize=20M', '-d', 'post_max_size=24M', '-d', 'display_errors=0', '-d', 'log_errors=1',

@@ -43,3 +43,7 @@ docs/press/round-5/gen/
 .harness-shots/
 .harness-walk/
 .order-walk/
+
+# Extra order-email inboxes (private addresses, public repo): server/_lib/pay-local.php, uploaded by hand
+server/_lib/pay-local.php
+dist/api/_lib/pay-local.php
